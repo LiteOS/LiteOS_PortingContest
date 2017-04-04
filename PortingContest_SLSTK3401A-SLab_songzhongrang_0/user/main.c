@@ -7,21 +7,17 @@
 #include "los_bsp_key.h"
 #include "los_bsp_uart.h"
 
+#ifdef EFM32PG1B200F256GM48
 #include "em_device.h"
 #include "em_chip.h"
 #include "em_cmu.h"
 #include "em_emu.h"
 #include "bsp.h"
+#endif
 
 #include "los_inspect_entry.h"
 
 #include <string.h>
-
-#include "display.h"
-#include "textdisplay.h"
-#include "retargettextdisplay.h"
-static DISPLAY_Device_t displayDevice;
-
 
 extern void LOS_EvbSetup(void);
 
@@ -67,11 +63,27 @@ LITE_OS_SEC_TEXT_INIT
 int main(void)
 {
 
-#if 1
     UINT32 uwRet;
 
+#ifdef EFM32PG1B200F256GM48
+	UINT32 freq;
+	EMU_DCDCInit_TypeDef dcdcInit = EMU_DCDCINIT_STK_DEFAULT;
+	CMU_HFXOInit_TypeDef hfxoInit = CMU_HFXOINIT_STK_DEFAULT;
+	
 	/* Chip errata */
 	CHIP_Init();
+
+	/* Init DCDC regulator and HFXO with kit specific parameters */
+	EMU_DCDCInit(&dcdcInit);
+	CMU_HFXOInit(&hfxoInit);
+
+	/* Switch HFCLK to HFXO and disable HFRCO */
+	CMU_ClockSelectSet(cmuClock_HF, cmuSelect_HFXO);
+	CMU_OscillatorEnable(cmuOsc_HFRCO, false, false);
+
+	freq = CMU_ClockFreqGet(cmuClock_CORE);
+
+#endif
 	
 	/*Init LiteOS kernel */
     uwRet = LOS_KernelInit();
@@ -88,11 +100,9 @@ int main(void)
     */
     LOS_EvbSetup();
     //LOS_BoadExampleEntry();
-
-#if 0
-	printf( "\n\n Welcome"
-			"\n\n Lite OS"
-			"\n\n ");
+    
+#ifdef EFM32PG1B200F256GM48
+	printf("freq is %ld\n", freq);
 #endif
 
     LOS_Inspect_Entry();
@@ -101,37 +111,4 @@ int main(void)
     LOS_Start();
     for (;;);
     /* Replace the dots (...) with your own code.  */
-#else
-	CHIP_Init();
-
-        		/* Initialize LCD driver */
-		DISPLAY_Init();
-
-		/* Retrieve the properties of the display. */
-		if (DISPLAY_DeviceGet( 0, &displayDevice ) != DISPLAY_EMSTATUS_OK)
-		{
-		  /* Unable to get display handle. */
-		  while (1);
-		}
-
-		/* Retarget stdio to the display. */
-		if (TEXTDISPLAY_EMSTATUS_OK != RETARGET_TextDisplayInit())
-		{
-		  /* Text display initialization failed. */
-		  while (1);
-		}
-
-		if (TEXTDISPLAY_EMSTATUS_OK == RETARGET_WriteString( "\n\n Welcome"
-			"\n\n Lite OS"
-			"\n\n ")) {
-			printf("sss\n");
-		} else {
-			printf("err\n");
-		}
-                
-	//LOS_EvbLcdInit();
-
-	for (;;);
-	
-#endif
 }

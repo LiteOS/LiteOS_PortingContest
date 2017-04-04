@@ -35,7 +35,10 @@ void LOS_EvbLcdInit(void)
 
 		RETARGET_WriteString( "\n\n Welcome"
 			"\n\n Lite OS"
-			"\n\n ");
+			"\n\n Reginald-szr\n\n"
+			"\n\n "
+			"\n\n press BTN1 Test\n\n"
+			);
 #endif
 
 	return ;

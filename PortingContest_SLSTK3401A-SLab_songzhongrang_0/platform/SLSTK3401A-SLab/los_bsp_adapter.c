@@ -33,7 +33,11 @@
 	global var
  *****************************************************************************/
 /* current system default HZ , should be set according to the microchip */
+#ifdef EFM32PG1B200F256GM48
+const unsigned int sys_clk_freq = 40000000; //3401A max 40MHz
+#else
 const unsigned int sys_clk_freq = 16000000; //3401A max 40MHz
+#endif
 
 /* tick count per second , don't change this */
 const unsigned int tick_per_second = 1000;
