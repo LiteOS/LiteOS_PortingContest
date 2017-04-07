@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>移植LiteOS-Keil</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<p>现在开始基于ATSAM4S-XPRO移植LiteOS。</p>
+<p>PS：以下内容属个人见解，不足之处欢迎批评指正！</p>
+<p>1.首先我们从下面的框图中大概了解一下LiteOS Kernel</p>
+<p><img src="meta/basicframe.png" /></p>
+<p>该图已经很好地描述了LiteOS Kernel的特性，我仅从移植角度再次分块。</p>
+<ul>
+<li>系统时钟：系统内核时钟一般由Systick提供，是系统时间核心，所以移植时必定涉及SysTick_Config配置；</li>
+<li>硬件中断：MCU除了内核中断外还有外设中断，中断响应涉及到中断向量表等相关概念，LiteOS可以接管这些中断，因此会涉及到中断向量表是否重载；</li>
+<li>内存管理：MCU内存由LiteOS接管，因此我们需要知道该MCU的RAM大小等详细内容，重载中断向量表时以便配置分散加载文件；</li>
+<li>任务调度：任务调度的核心的汇编实现，与MCU内核相关（M3/M4/M4F）；</li>
+</ul>
+<p>更详细的内容请直接访问：<a href="https://github.com/LITEOS/LiteOS_Kernel">https://github.com/LITEOS/LiteOS_Kernel</a></p>
+<p>2.明确任务目标</p>
+<p>--参赛者需要适配Key、Led、Uart等基本驱动代码到移植的工程</p>
+<p>从移植流程来说，笔者不是拿到开发板就直接开始移植工作，而是先搭建开发环境，基于裸机完成Key、Led、Uart等驱动的编写和调试，所以我真正开始移植的时候这些模块相关操作代码已经完成，通过这个过程不仅可以加深对MCU的认识，也使以后移植过程事半功倍成为可能。嘿嘿。</p>
+<p>3.开始移植</p>
+<p>首先在github上<a href="https://github.com/LITEOS/LiteOS_Kernel">https://github.com/LITEOS/LiteOS_Kernel</a>获取LiteOS最新的代码和文档获取源码</p>
+<p><img src="meta/git_down.png" /></p>
+<p>解压后大致看一下目录结构</p>
+<p><img src="meta/catal.png" /></p>
+<p>我们需要做的就是：</p>
+<ul>
+<li>project目录下新建工程文件夹存放工程文件</li>
+<li>platform目录下新建工程文件夹存放驱动文件</li>
+</ul>
+<p>不多说，建工程一系列操作走一波...</p>
+<p>然后就成下面这样了：</p>
+<p><img src="meta/catal-proj.png" /></p>
+<p>下面就一些问题说明：</p>
+<ul>
+<li>因为LiteOS已经包含系统启动最小实现los_startup_keil.s，所以不需要pack的Device了，只保留CMSIS，然后user下的system_SAM4S.c是从pack的目录下面拷贝出来的，存放在platform下对应我开发板文件夹ATSAM4S-XPRO-KEIL了，之所添加这个文件是因为我想使用SystemInit这个函数配置系统时钟，而不是用MCU默认的时钟，如果使用默认时钟不要这个文件也是可以的。</li>
+<li>SAM4SD32C是Cortex-M4内核，然而我却使用的cpu/m3/los_dispatch_keil.s是因为这颗U不带FPU，而最新LiteOS内核代码结构调整，m4对应los_dispatch_keil.s使用了几个浮点汇编指令，所以编译不过，只能使用m3的，进一步说，不带浮点的话m3和m4基本是一样的，这一点也和华为LiteOS的工程师沟通过，为了不改动原有LiteOS代码，所以综合评估后使用m3的，在此申明！</li>
+</ul>
+<p>关于是否能够使用浮点功能，在Keil中看有没有这个选项：</p>
+<p><img src="meta/fpu-keil.png" /></p>
+<p>所以这里也提一个小建议吧，建议按m3/m4/m4f分类，才疏学浅，不知道这个问题是不是很小白，见谅...</p>
+<p>4.细节说明</p>
+<ul>
+<li>
+<p>关于C99、Use MicroLIB就不说了，分散加载文件需要根据实际RAM大小配置LiteOS_Migration_Guide_Keil.md文档已经有相关叙述，而且目前已经有一部分移植成功的工程可以参考，不重载中断向量表的话是不用配置的。</p>
+</li>
+<li>
+<p>就bsp驱动来说，可以先拷贝别的工程到自己的平台文件夹，然后只是改写核心实现，函数形式尽量保持不变，以los_bsp_key.c为例：</p>
+</li>
+</ul>
+<pre>
+#ifdef ATSAM4S_XPRO
+#include "sam4s.h"
+#endif
+
+void LOS_EvbKeyInit(void) 
+{
+#ifdef ATSAM4S_XPRO	
+  PMC->PMC_WPMR = 0x504D4300;             /* Disable write protect            */
+
+  PMC->PMC_PCER0 = (1UL << ID_PIOA);      /* enable clock for push button     */
+
+  PIOA->PIO_PUER =
+  PIOA->PIO_IDR  =
+  PIOA->PIO_ODR  =
+  PIOA->PIO_PER  = (PIO_PA2);             /* Setup PA2 for user button SW0    */
+
+  PMC->PMC_WPMR = 0x504D4301;             /* Enable write protect             */
+#endif
+	return;
+}
+</pre>
+<p>los_bsp_adapter.c中也有类似于：</p>
+<pre>
+#ifdef ATSAM4S_XPRO
+		SysTick_Config(g_ucycle_per_tick);
+#else
+</pre>
+<ul>
+<li>
+<p>通过宏定义开关选择配置，我用到的宏定义有：ATSAM4S_XPRO,__SAM4SD32C__，ATSAM4S_XPRO的用途如上，__SAM4SD32C__是sam4s.h需要以包含真正的头文件sam4sd32c.h</p>
+</li>
+<li>
+<p>修改时钟相关配置，在main函数中调用SystemInit后本平台将系统时钟配置到96MHz，相应的：</p>
+</li>
+</ul>
+<p>1.在los_config.h中大致57行位置修改#define OS_SYS_CLOCK 96000000</p>
+<p>2.在los_bsp_adapter.c中大致36行位置修改const unsigned int sys_clk_freq = 96000000</p>
+<h2>总结</h2>
+<p>总的来说要改动的地方不多，只涉及到main.c/bsp系列.c/los_config.h，好像就是这样，那看看效果啊：</p>
+<p><img src="meta/result.png" /></p>
+<p><img src="meta/result-real.png" /></p>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
