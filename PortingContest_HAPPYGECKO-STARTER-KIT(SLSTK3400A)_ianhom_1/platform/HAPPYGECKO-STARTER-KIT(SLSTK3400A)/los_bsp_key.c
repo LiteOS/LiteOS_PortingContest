@@ -1,46 +1,48 @@
 #include "los_bsp_key.h"
 
-#ifdef LOS_STM32F429ZI
-#include "stm32f4xx_hal.h"
-#include "stm32f429i_discovery.h"
+#ifdef EFM32HG322F64
+#include "em_cmu.h"
+#include "em_gpio.h"
+#include "core_cm0plus.h"
+#include "bspconfig.h"
 #endif
 
 void LOS_EvbKeyInit(void)
 {
+#ifdef EFM32HG322F64
+    /* Enable GPIO clock */
+    CMU_ClockEnable(cmuClock_GPIO, true);
 
-#ifdef LOS_STM32F429ZI
-	GPIO_InitTypeDef   GPIO_InitStructure;
-
-	BSP_LED_Init(LED3);
-
-  /* Enable GPIOA clock */
-  __HAL_RCC_GPIOA_CLK_ENABLE();
-  
-  /* Configure PA0 pin as input floating */
-  GPIO_InitStructure.Mode = GPIO_MODE_IT_FALLING;
-  GPIO_InitStructure.Pull = GPIO_NOPULL;
-  GPIO_InitStructure.Pin = GPIO_PIN_0;
-  HAL_GPIO_Init(GPIOA, &GPIO_InitStructure);
-
-  /* Enable and set EXTI Line0 Interrupt to the lowest priority */
-  HAL_NVIC_SetPriority(EXTI0_IRQn, 2, 0);
-  HAL_NVIC_EnableIRQ(EXTI0_IRQn);
+    // Configure PB0, PB1 as inputs
+    GPIO_PinModeSet(BSP_GPIO_PB0_PORT, BSP_GPIO_PB0_PIN, gpioModeInput, 0);
+    GPIO_PinModeSet(BSP_GPIO_PB1_PORT, BSP_GPIO_PB1_PIN, gpioModeInput, 0);
 #endif
 
-	return ;
+    return ;
 }
 
-#ifdef LOS_STM32F429ZI
-/**
-  * @brief EXTI line detection callbacks
-  * @param GPIO_Pin: Specifies the pins connected EXTI line
-  * @retval None
-  */
-void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+
+/*****************************************************************************
+ Function    : LOS_EvbGetKeyVal
+ Description : Get key value
+ Input       : KeyNum
+ Output      : None
+ Return      : None
+ *****************************************************************************/
+uint8_t LOS_EvbGetKeyVal(int KeyNum)
 {
-  if(GPIO_Pin == KEY_BUTTON_PIN)
-  {
-      BSP_LED_Toggle(LED3);
-  }
-}
+#ifdef EFM32HG322F64
+    switch(KeyNum) {
+        case 0:
+            return GPIO_PinInGet(BSP_GPIO_PB0_PORT, BSP_GPIO_PB0_PIN);
+        case 1:
+            return GPIO_PinInGet(BSP_GPIO_PB1_PORT, BSP_GPIO_PB1_PIN);
+        default:
+            break;
+    }
 #endif
+    return LOS_GPIO_ERR;
+
+}
+
+

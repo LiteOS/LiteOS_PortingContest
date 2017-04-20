@@ -3,16 +3,20 @@
 */
 #include <stdio.h>
 #include <string.h>
+
+#ifdef EFM32HG322F64
+#include "em_device.h"
+#include "core_cm0plus.h"
+#endif
+
 /*
 	here include some special hearder file you need
 */
-//#include "cmsis_os.h"
 
 #include "los_bsp_adapter.h"
 #include "los_bsp_led.h"
 #include "los_bsp_key.h"
 #include "los_bsp_uart.h"
-
 
 /* while use bsp code to start system tick, don't use LOS header */
 #define INCLUDE_LOS_HEADER
@@ -28,17 +32,14 @@
 	global var
  *****************************************************************************/
 /* current system default HZ , should be set according to the microchip */
-const unsigned int sys_clk_freq = 16000000;
+#ifdef EFM32HG322F64
+const unsigned int sys_clk_freq = OS_SYS_CLOCK; 
+#endif
 
 /* tick count per second , don't change this */
-const unsigned int tick_per_second = 1000;
+const unsigned int tick_per_second = LOSCFG_BASE_CORE_TICK_PER_SECOND;
 static unsigned int g_ucycle_per_tick = 0;
 
-/*
-    if g_use_ram_vect == 1, we should use sct file STM32F429I-LiteOS.sct
-    and we can use LOS_HwiCreate(), LOS_HwiDelete() dynamically regist a irq func
-    if g_use_ram_vect == 0, we use default vector table in rom start at address 0x00000000
-*/
 const unsigned char g_use_ram_vect = 0;
 
 /*****************************************************************************
@@ -72,8 +73,8 @@ unsigned int osTickStart(void)
       Note: here can be replaced by some function , for example in Stm32 bsp
       you can just call SysTick_Config(sys_clk_freq/tick_per_second);
     */
-#ifdef LOS_STM32F429ZI
-		SysTick_Config(g_ucycle_per_tick);
+#ifdef EFM32HG322F64
+    SysTick_Config(g_ucycle_per_tick);
 #else
     *(volatile UINT32 *)OS_SYSTICK_RELOAD_REG = g_ucycle_per_tick - 1;
     *((volatile UINT8 *)OS_NVIC_EXCPRI_BASE + (((UINT32)(-1) & 0xF) - 4)) = ((7 << 4) & 0xff);

@@ -54,7 +54,7 @@ extern "C" {
  * @ingroup los_config
  * System clock (unit: HZ)
  */
-#define OS_SYS_CLOCK                                    16000000
+#define OS_SYS_CLOCK                                    14000000
 /**
 * @ingroup los_config
 * limit addr range when search for  'func local(frame pointer)' or 'func name'
@@ -69,6 +69,7 @@ extern char __bss_start;
 	RAM_SIZE_LEVEL_1 means kernel ram < 16k, 
 	RAM_SIZE_LEVEL_2 means means kernel ram>=32k 
 */
+#define RAM_SIZE_LEVEL_1
 
 /**
  * @ingroup los_config
@@ -126,7 +127,7 @@ extern char __bss_start;
 #if defined (RAM_SIZE_LEVEL_0)
 #define LOSCFG_BASE_CORE_TSK_IDLE_STACK_SIZE            SIZE(0x2D0)     // IDLE task stack
 #elif defined (RAM_SIZE_LEVEL_1)
-#define LOSCFG_BASE_CORE_TSK_IDLE_STACK_SIZE            SIZE(0x300)     // IDLE task stack
+#define LOSCFG_BASE_CORE_TSK_IDLE_STACK_SIZE            SIZE(0x200)     // IDLE task stack
 #elif defined (RAM_SIZE_LEVEL_2)
 #define LOSCFG_BASE_CORE_TSK_IDLE_STACK_SIZE            SIZE(0x500)     // IDLE task stack
 #else
@@ -137,9 +138,9 @@ extern char __bss_start;
  * Default task stack size
  */
 #if defined (RAM_SIZE_LEVEL_0)
-#define LOSCFG_BASE_CORE_TSK_DEFAULT_STACK_SIZE         SIZE(0x200)     // default stack
-#elif defined (RAM_SIZE_LEVEL_1)
 #define LOSCFG_BASE_CORE_TSK_DEFAULT_STACK_SIZE         SIZE(0x2D0)     // default stack
+#elif defined (RAM_SIZE_LEVEL_1)
+#define LOSCFG_BASE_CORE_TSK_DEFAULT_STACK_SIZE         SIZE(0x200)     // default stack
 #elif defined (RAM_SIZE_LEVEL_2)
 #define LOSCFG_BASE_CORE_TSK_DEFAULT_STACK_SIZE         SIZE(0x2D0)     // default stack
 #else
@@ -301,7 +302,7 @@ extern char _PT0_END;
 #if defined (RAM_SIZE_LEVEL_0)
 #define OS_SYS_MEM_SIZE                                     0x00001800          // 1A00
 #elif defined (RAM_SIZE_LEVEL_1)
-#define OS_SYS_MEM_SIZE                                     0x00002800          // size
+#define OS_SYS_MEM_SIZE                                     0x00001650          // size
 #elif defined (RAM_SIZE_LEVEL_2)
 #define OS_SYS_MEM_SIZE                                     0x00008000          // size
 #else

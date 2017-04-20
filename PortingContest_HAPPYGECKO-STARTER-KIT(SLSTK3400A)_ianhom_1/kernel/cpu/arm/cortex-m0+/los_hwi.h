@@ -112,13 +112,13 @@ extern UINT32  g_vuwIntCount;
  * @ingroup los_hwi
  * Lowest priority of a hardware interrupt.
  */
-#define  OS_HWI_PRIO_LOWEST         15
+#define  OS_HWI_PRIO_LOWEST         3
 
 /**
  * @ingroup los_hwi
  * Maximum number of hardware support for hardware interrupt.
  */
-#define OS_HWI_MAX_NUM              60
+#define OS_HWI_MAX_NUM              48
 
 /**
  * @ingroup los_hwi
@@ -134,21 +134,21 @@ extern UINT32  g_vuwIntCount;
 
 /**
  * @ingroup los_hwi
- * Count of M4 system interrupt vector.
+ * Count of M0+ system interrupt vector.
  */
-#define OS_M4_SYS_VECTOR_CNT        16
+#define OS_M0PLUS_SYS_VECTOR_CNT   16
 
 /**
  * @ingroup los_hwi
- * Count of M4 IRQ interrupt vector.
+ * Count of M0+ IRQ interrupt vector.
  */
-#define OS_M4_IRQ_VECTOR_CNT        240
+#define OS_M0PLUS_IRQ_VECTOR_CNT   32
 
 /**
  * @ingroup los_hwi
- * Count of M4 interrupt vector.
+ * Count of M0+ interrupt vector.
  */
-#define OS_M4_VECTOR_CNT            (OS_M4_SYS_VECTOR_CNT + OS_M4_IRQ_VECTOR_CNT)
+#define OS_M0PLUS_VECTOR_CNT            (OS_M0PLUS_SYS_VECTOR_CNT + OS_M0PLUS_IRQ_VECTOR_CNT)
 
 /**
  * @ingroup los_hwi
@@ -414,13 +414,13 @@ extern UINT32 _BootVectors[];
  * @ingroup los_hwi
  * hardware interrupt form mapping handling function array.
  */
-extern HWI_PROC_FUNC m_pstHwiForm[OS_M4_VECTOR_CNT];
+extern HWI_PROC_FUNC m_pstHwiForm[OS_M0PLUS_VECTOR_CNT];
 
 /**
  * @ingroup los_hwi
  * hardware interrupt Slave form mapping handling function array.
  */
-extern HWI_PROC_FUNC m_pstHwiSlaveForm[OS_M4_VECTOR_CNT];
+extern HWI_PROC_FUNC m_pstHwiSlaveForm[OS_M0PLUS_VECTOR_CNT];
 
 extern VOID Reset_Handler(VOID);
 
@@ -429,8 +429,8 @@ extern VOID Reset_Handler(VOID);
  * Set interrupt vector table.
  */
 #define osSetVector(uwNum, pfnVector)       \
-    m_pstHwiForm[uwNum + OS_M4_SYS_VECTOR_CNT] = osInterrupt;\
-    m_pstHwiSlaveForm[uwNum + OS_M4_SYS_VECTOR_CNT] = pfnVector;
+    m_pstHwiForm[uwNum + OS_M0PLUS_SYS_VECTOR_CNT] = osInterrupt;\
+    m_pstHwiSlaveForm[uwNum + OS_M0PLUS_SYS_VECTOR_CNT] = pfnVector;
 
 
 /**

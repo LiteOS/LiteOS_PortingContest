@@ -40,6 +40,7 @@
 #include "los_event.h"
 #include "los_typedef.h"
 #include "los_api_msgqueue.h"
+#include "los_inspect_entry.h"
 
 
 
@@ -63,7 +64,7 @@ void *send_Entry(UINT32 uwParam1,
     UINT32 i = 0,uwRet = 0;
     UINT32 uwlen = sizeof(abuf);
 
-    while (i <5)
+    while (i < API_MSG_NUM)
     {
         abuf[uwlen -2] = '0' + i;
         i++;
@@ -88,19 +89,24 @@ void *recv_Entry(UINT32 uwParam1,
 {
     UINT32 uwReadbuf;
     UINT32 uwRet = 0;
+	  UINT32 uwMsgCount = 0;
 
     while (1)
     {
 
         /*读取队列里的数据存入uwReadbuf里*/
-        uwRet = LOS_QueueRead(g_uwQueue, &uwReadbuf, 50, 0);
+        uwRet = LOS_QueueRead(g_uwQueue, &uwReadbuf, 24, 0);
         if(uwRet != LOS_OK)
         {
             dprintf("recv message failure,error:%x\n",uwRet);
             break;
         }
-
-        dprintf("recv message:%s\n", (char *)uwReadbuf);
+				else
+				{
+					dprintf("recv message:%s\n", (char *)uwReadbuf);
+					uwMsgCount++;
+				}
+        
         LOS_TaskDelay(5);
     }
     /*删除队列*/
@@ -108,12 +114,22 @@ void *recv_Entry(UINT32 uwParam1,
     {
         LOS_TaskDelay(1);
     }
-
+		
     dprintf("delete the queue success!\n");
+		
+		if(API_MSG_NUM == uwMsgCount)
+		{
+			 LOS_InspectStatusSetByID(LOS_INSPECT_MSG,LOS_INSPECT_STU_SUCCESS);	 
+		}
+		else
+		{
+			 LOS_InspectStatusSetByID(LOS_INSPECT_MSG,LOS_INSPECT_STU_ERROR);
+		}
+			
     return NULL;
 }
 
-int Example_MsgQueue(void)
+UINT32 Example_MsgQueue(void)
 {
     UINT32 uwRet = 0;
     UINT32 uwTask1, uwTask2;
@@ -143,7 +159,7 @@ int Example_MsgQueue(void)
     }
 
     /*创建队列*/
-    uwRet = LOS_QueueCreate("queue", 5, &g_uwQueue, 0, 50);
+    uwRet = LOS_QueueCreate("queue", 5, &g_uwQueue, 0, 24);
     if(uwRet != LOS_OK)
     {
         dprintf("create queue failure!,error:%x\n",uwRet);

@@ -6,12 +6,29 @@
 #include "los_bsp_led.h"
 #include "los_bsp_key.h"
 #include "los_bsp_uart.h"
+#include "los_inspect_entry.h"
+#include "los_demo_entry.h"
 
 #include <string.h>
+
+#ifdef EFM32HG322F64
+#include "cslib.h"
+#include "comm_routines.h"
+#include "device_init.h"
+#endif
 
 extern void LOS_EvbSetup(void);
 
 static UINT32 g_uwboadTaskID;
+
+void HAL_init(void)
+{
+    systemInit();
+    CSLIB_initHardware();
+    CSLIB_initLibrary();
+    return;
+}
+
 LITE_OS_SEC_TEXT VOID LOS_BoadExampleTskfunc(VOID)
 {
     while (1)
@@ -53,18 +70,15 @@ LITE_OS_SEC_TEXT_INIT
 int main(void)
 {
     UINT32 uwRet;
-    /*
-		add you hardware init code here
-		for example flash, i2c , system clock ....
-    */
-	//HAL_init();....
+
+    HAL_init();
 	
-	/*Init LiteOS kernel */
+    /*Init LiteOS kernel */
     uwRet = LOS_KernelInit();
     if (uwRet != LOS_OK) {
         return LOS_NOK;
     }
-	/* Enable LiteOS system tick interrupt */
+    /* Enable LiteOS system tick interrupt */
     LOS_EnableTick();
 	
     /* 
@@ -72,8 +86,9 @@ int main(void)
         here you can create task for your function 
         do some hw init that need after systemtick init
     */
-    LOS_EvbSetup();
-    LOS_BoadExampleEntry();
+    LOS_EvbSetup(); //init the device on the dev baord
+		
+    LOS_Inspect_Entry();
 		
     /* Kernel start to run */
     LOS_Start();
