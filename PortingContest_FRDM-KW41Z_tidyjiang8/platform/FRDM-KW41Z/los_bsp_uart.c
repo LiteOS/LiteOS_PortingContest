@@ -7,7 +7,10 @@
 /******************************************************************************
 	here include some special hearder file you need
 ******************************************************************************/
-
+#include "board.h"
+#include "fsl_port.h"
+#include "fsl_clock.h"
+//#include "fsl_debug_console.h"
 
 
 /*****************************************************************************
@@ -19,8 +22,24 @@
  *****************************************************************************/
 void LOS_EvbUartInit(void)
 {
-	//add you code here.
-
+	/* Initialize LPUART0 pins below */
+	/* Ungate the port clock */
+	CLOCK_EnableClock(kCLOCK_PortC);
+	/* Affects PORTC_PCR6 register */
+	PORT_SetPinMux(PORTC, 6u, kPORT_MuxAlt4);
+	/* Affects PORTC_PCR7 register */
+	PORT_SetPinMux(PORTC, 7u, kPORT_MuxAlt4);
+        
+        BOARD_BootClockRUN();
+        
+        /* SIM_SOPT2[27:26]:
+        *  00: Clock Disabled
+        *  01: MCGFLLCLK
+        *  10: OSCERCLK
+        *  11: MCGIRCCLK
+        */
+        CLOCK_SetLpuartClock(2);
+        DbgConsole_Init(BOARD_DEBUG_UART_BASEADDR, BOARD_DEBUG_UART_BAUDRATE, BOARD_DEBUG_UART_TYPE, BOARD_DEBUG_UART_CLK_FREQ);
 	return;
 }
 
@@ -34,7 +53,7 @@ void LOS_EvbUartInit(void)
 void LOS_EvbUartWriteByte(const char c)
 {
 	//add you code here.
-  
+        LPUART_WriteBlocking(LPUART0, &c, 1);
 	return;
 }
 
@@ -48,9 +67,11 @@ void LOS_EvbUartWriteByte(const char c)
 void LOS_EvbUartReadByte(char* c)
 {
 	//add you code here.
-  
+        
 	return;
 }
+
+static char _buffer[128];
 
 /*****************************************************************************
  Function    : LosUartPrintf
@@ -62,6 +83,16 @@ void LOS_EvbUartReadByte(char* c)
 void LOS_EvbUartPrintf(char* fmt, ...)
 {
 	//add you code here.
+        int i;
+        va_list ap;
+        va_start(ap, fmt);
+        vsprintf(_buffer, fmt, ap);
+        va_end(ap);
+
+        for (i = 0; _buffer[i] != '\0'; i++)
+        {
+            LOS_EvbUartWriteByte(_buffer[i]);
+        }
   
 	return;
 }
@@ -76,7 +107,11 @@ void LOS_EvbUartPrintf(char* fmt, ...)
 void LOS_EvbUartWriteStr(const char* str)
 {
 	//add you code here.
-	
+        while(*str) {
+            LOS_EvbUartWriteByte(*str);
+            str++;
+        }
+	//DbgConsole_Printf(str);
 	return;
 }
 

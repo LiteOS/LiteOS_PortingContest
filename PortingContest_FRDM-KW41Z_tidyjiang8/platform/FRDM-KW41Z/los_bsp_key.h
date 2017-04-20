@@ -3,7 +3,7 @@
 
 #define RESET 0
 
-#define USER_KEY 1
+#define USER_KEY 5
 
 extern void LOS_EvbKeyInit(void);
 
