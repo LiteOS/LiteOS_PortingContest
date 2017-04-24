@@ -42,7 +42,7 @@
 
 ## 2前言
 ### 目的
-本文档介绍基于Huawei LiteOS如何移植到第三方开发板，并成功运行基础示例。
+本文档介如何移植Huawei LiteOS到Arduino M0 Pro，并成功运行基础示例。
 ### 读者对象
 本文档主要适用于Huawei LiteOS Kernel的开发者。
 本文档主要适用于以下对象：
@@ -76,20 +76,15 @@
 	<td>描述</td>
 	</tr>
 	<tr>
-	<td>2017年02月14日</td>
+	<td>2017年04月18日</td>
 	<td>1.0</td>
 	<td>完成初稿</td>
-	</tr>
-    <tr>
-	<td>2017年03月09日</td>
-	<td>1.1</td>
-	<td>根据新增代码及修改代码同步更新</td>
 	</tr>
 </table>
 
 ## 3概述
 
-目前在github上已开源的Huawei LiteOS内核源码已适配好STM32F412、STM32F429、STM32L476、GD32F450、GD32F190芯片，本手册将以GD32F190R8T6芯片为例，介绍基于Cortex M3核芯片的移植过程
+目前在github上已开源的Huawei LiteOS内核源码已适配好STM32F412、STM32F429、STM32L476、GD32F450、GD32F190芯片，本手册将以ATSAMD21G18A为例，介绍基于Contex-M0芯片的移植过程
 
 ## 4环境准备
 基于Huawei LiteOS Kernel开发前，我们首先需要准备好单板运行的环境，包括软件环
@@ -102,8 +97,8 @@
 	<td>描述</td>
 	</tr>
 	<tr>
-	<td>GD32F190R-EVAL单板</td>
-	<td>GD32开发板(芯片型号GD32F190R8T6)</td>
+	<td>Arduino M0 Pro</td>
+	<td>芯片采用的是ATSAMD21G18A，基于Cortex-M0内核的芯片开发板</td>
 	</tr>
 	<tr>
 	<td>PC机</td>
@@ -111,7 +106,7 @@
 	</tr>
 	<tr>
 	<td>电源（5v）</td>
-	<td>开发板供电(使用Mini USB连接线)</td>
+	<td>开发板供电，使用MicroUSB接口</td>
 	</tr>
 </table>
 
@@ -128,15 +123,18 @@
 	<td>安装Keil的操作系统</td>
 	</tr>
 	<tr>
-	<td>Keil(5.18以上版本)</td>
-	<td>用于编译、链接、调试程序代码
-	uVision V5.18.0.0 </td>
+	<td>Keil(5.23)</td>
+	<td>用于编译、链接、调试程序代码 uVision V5.23.0.0 MDK-Lite </td>
+	</tr>
+	<tr>
+	<td>Atmel Studio</td>
+	<td>用于修改ATSAMD21G18A的熔丝位</td>
 	</tr>
 </table>
 
 **说明**
 
-Keil工具需要开发者自行购买，开发板的调试器是GD-Link，GD-Link免驱动安装。
+Keil工具需要开发者自行购买，或者在https://www.keil.com/demo/eval/arm.htm下载试用版。
 
 ## 5获取Huawei LiteOS 源码
 
