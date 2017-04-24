@@ -351,9 +351,14 @@ Arduino M0 Pro上的ATSAMD21G18A的熔丝位BOOTPROT默认为0x1，其含义如�
 ### 修改时钟参数
 
 修改los_bsp_adapter.c中如下：
-	    `const unsigned int sys_clk_freq = 16000000;`
+
+`const unsigned int sys_clk_freq = 16000000;`
+
 改为如下：
-	    const unsigned int sys_clk_freq = 48000000;
+
+`const unsigned int sys_clk_freq = 48000000;`
+
+
 
 
 LiteOS中提供的功能包括如下内容： 任务创建与删除、任务同步（信号量、互斥锁）、动态中断注册机制等等内容，详细内容请参考《HuaweiLiteOSKernelDevGuide》。
