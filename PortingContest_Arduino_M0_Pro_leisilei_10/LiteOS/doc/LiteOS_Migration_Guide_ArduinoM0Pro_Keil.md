@@ -370,7 +370,8 @@ Arduino M0 Pro上的ATSAMD21G18A的熔丝位BOOTPROT默认为0x1，其含义如�
 
 SystemInit函数位于system_samd21.c中，修改如下，其中设置了芯片时钟为48MHz：
 
-`void SystemInit(void)
+```
+void SystemInit(void)
 {
 	// Keep the default device state after reset
 	SystemCoreClock = __SYSTEM_CLOCK;
@@ -380,7 +381,8 @@ SystemInit函数位于system_samd21.c中，修改如下，其中设置了芯片�
 	while(!(REG_SYSCTRL_PCLKSR&(0x1<<4)) );	
 	NVMCTRL->CTRLB.bit.RWS = NVMCTRL_CTRLB_RWS_HALF_Val;	
 	REG_GCLK_GENCTRL = (GCLK_SOURCE_DFLL48M<<8) | (0x1<<16);  
-}`
+}
+```
 
 ### 修改los_bsp_uart.c
 
@@ -440,7 +442,8 @@ uwRet = LOS_QueueCreate("queue", 5, &g_uwQueue, 0, 48);`
 
 修改main函数如下，其中调用巡检函数LOS_Inspect_Entry：
 
-`/*****************************************************************************
+```
+/*****************************************************************************
  Function    : main
  Description : Main function entry
  Input       : None
@@ -459,7 +462,8 @@ int main(void)
     LOS_Inspect_Entry();
     LOS_Start();
     for (;;);
-}`
+}
+```
 
 
 ### 验证移植后的工程
