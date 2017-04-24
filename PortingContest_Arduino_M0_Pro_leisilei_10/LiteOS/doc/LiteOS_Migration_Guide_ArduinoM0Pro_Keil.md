@@ -136,7 +136,31 @@
 
 Keil工具需要开发者自行购买，或者在https://www.keil.com/demo/eval/arm.htm下载试用版。
 
-## 5获取Huawei LiteOS 源码
+## 5修改熔丝位
+
+Arduino M0 Pro上的ATSAMD21G18A的熔丝位BOOTPROT默认为0x1，其含义如下：
+
+图
+
+如果不修改这个熔丝位，直接使用Atmel Studio或者Keil下载程序会出错，分别如下所示：
+
+图
+
+需要修改这个熔丝位BOOTPROT为0x7，才可以取消保护，进行程序下载，修改使用的工具是Atmel Studio自带的工具。首先将Arduino M0 Pro的Programming这个USB口连接计算机，在设备管理器中应该出现如下新设备。
+
+图
+
+打开Atmel Studio，选择Tools菜单下的Device Programming，如下：
+
+图
+
+会出现如下窗口：
+
+图
+
+其中Tool选择EDGB，芯片型号选择ATSAM21G18A，Interface选择SWD，点击Apply，然后点击Read，可以读出当前的设置，也就是出厂默认设置，其中BOOTPROT的值是0x01，将其修改为0x07，然后点击Program即可。
+
+## 6获取Huawei LiteOS 源码
 
 首先我们需要通过网络下载获取Huawei LiteOS开发包。目前Huawei LiteOS的代码已经
 开源，可以直接从网络上获取，步骤如下：
@@ -274,16 +298,21 @@ Keil工具需要开发者自行购买，或者在https://www.keil.com/demo/eval/
 
 获取Huawei LiteOS源代码之后，我们可以将自己本地已有工程的代码适配到LiteOS内核工程中进行应用开发。
 
-## 6如何适配LiteOS内核工程开发
-本章节描述的内容以GD32F190R-EVAL开发板光盘资料中的04_USART_Printf示例工程为基础，适配到LiteOS的GD32F190R-EVAL-KEIL工程中，演示串口输出、按键中断及LED点亮功能。
+## 7创建Huawei LiteOS 工程
 
-### GD32的开发资料获取
-- 从http://gd32mcu.21ic.com/下载相关的开发包
-- 从购买的开发板的光盘中获取相关资料。
+### 创建工程
+获取到LiteOS内核代码后，在project目录下新建文件夹LiteOS_Arduino_M0_Pro_Expand。重命名platform目录下的文件夹LOS_EXPAND_xxx为LOS_EXPAND_Arduino_M0_Pro。
+打开keil，新建工程，保存在project\LiteOS_Arduino_M0_Pro_Expand目录下，工程名为LiteOS，器件选择如下：
 
-注意：光盘上的内容可能比网络上的更全面一些，建议使用光盘上面的内容。
+图
 
-### GD32的开发工具安装
+下一个界面，选择如下：
+
+图
+
+点击OK即可，至此，我们的工程已经创建完成。
+
+### 添加kernel代码到工程
 - 安装keil 5.18或者以上版本
 - 安装Keil.GD32F1x0_DFP.2.0.0.pack或者更高版本的pack文件到keil安装目录
 - 安装MDK-ARM_AddOn_GD32F1x0-V3.0.0到keil安装目录
