@@ -140,23 +140,25 @@ Keil工具需要开发者自行购买，或者在https://www.keil.com/demo/eval/
 
 Arduino M0 Pro上的ATSAMD21G18A的熔丝位BOOTPROT默认为0x1，其含义如下：
 
-![](./meta/keil/samd21g18a/danger.png)
+![](./meta/keil/samd21g18a/BootLoaderSize.png)
 
 如果不修改这个熔丝位，直接使用Atmel Studio或者Keil下载程序会出错，分别如下所示：
 
-![](./meta/keil/samd21g18a/danger.png)
+![](./meta/keil/samd21g18a/AtStudioError.png)
+
+![](./meta/keil/samd21g18a/keilerro.png)
 
 需要修改这个熔丝位BOOTPROT为0x7，才可以取消保护，进行程序下载，修改使用的工具是Atmel Studio自带的工具。首先将Arduino M0 Pro的Programming这个USB口连接计算机，在设备管理器中应该出现如下新设备。
 
-![](./meta/keil/samd21g18a/danger.png)
+![](./meta/keil/samd21g18a/virtualcom.png)
 
 打开Atmel Studio，选择Tools菜单下的Device Programming，如下：
 
-![](./meta/keil/samd21g18a/danger.png)
+![](./meta/keil/samd21g18a/AtStudioMenu.png)
 
 会出现如下窗口：
 
-![](./meta/keil/samd21g18a/danger.png)
+![](./meta/keil/samd21g18a/ChipProgram.png)
 
 其中Tool选择EDGB，芯片型号选择ATSAM21G18A，Interface选择SWD，点击Apply，然后点击Read，可以读出当前的设置，也就是出厂默认设置，其中BOOTPROT的值是0x01，将其修改为0x07，然后点击Program即可。
 
@@ -304,18 +306,18 @@ Arduino M0 Pro上的ATSAMD21G18A的熔丝位BOOTPROT默认为0x1，其含义如�
 获取到LiteOS内核代码后，在project目录下新建文件夹LiteOS_Arduino_M0_Pro_Expand。重命名platform目录下的文件夹LOS_EXPAND_xxx为LOS_EXPAND_Arduino_M0_Pro。
 打开keil，新建工程，保存在project\LiteOS_Arduino_M0_Pro_Expand目录下，工程名为LiteOS，器件选择如下：
 
-![](./meta/keil/samd21g18a/danger.png)
+![](./meta/keil/samd21g18a/ProjectWizard1.png)
 
 下一个界面，选择如下：
 
-![](./meta/keil/samd21g18a/danger.png)
+![](./meta/keil/samd21g18a/ProjectWizard2.png)
 
 点击OK即可，至此，我们的工程已经创建完成。
 
 ### 添加kernel代码到工程
 创建如下目录层级：
 
-![](./meta/keil/samd21g18a/danger.png)
+![](./meta/keil/samd21g18a/ProjectManage.png)
 
 创建完成目录树之后我们添加源代码到目录树中，最终添加完成的内容如下：
 
@@ -327,24 +329,24 @@ Arduino M0 Pro上的ATSAMD21G18A的熔丝位BOOTPROT默认为0x1，其含义如�
 - 将user目录下的所有C文件添加到工程中的user下
 - 添加example/api目录下的所有C文件到工程的example目录下
 
-![](./meta/keil/samd21g18a/danger.png)
+![](./meta/keil/samd21g18a/filelist.png)
 
 ### 配置工程属性
 打开配置文件，如下，在Target界面勾选上“Use MicroLIB”：
 
-![](./meta/keil/samd21g18a/danger.png)
+![](./meta/keil/samd21g18a/target.png)
 
 在C/C++界面，其中的Define输入框中添加宏定义“RAM_SIZE_LEVEL_1”：
 
-![](./meta/keil/samd21g18a/danger.png)
+![](./meta/keil/samd21g18a/C++.png)
 
 点击“Include Paths”后面的省略号，添加如下头文件路径：
 
-![](./meta/keil/samd21g18a/danger.png)
+![](./meta/keil/samd21g18a/path.png)
 
 在Debugger界面，设置如下，大部分都是默认，只有右上角的Use，选择CMSIS-DAP Debugger。
 
-![](./meta/keil/samd21g18a/danger.png)
+![](./meta/keil/samd21g18a/debu.png)
 
 ## 8 适配驱动代码
 
@@ -388,39 +390,41 @@ void SystemInit(void)
 
 其中UART初始化函数如下，其中使用的是SERCOM5，从Arduino M0 Pro的原理图分析，通过EDGB仿真出来的串口对应的SERCOM5，其中BaudRate定义了波特率，默认是9600：
 
-![](./meta/keil/samd21g18a/danger.png)
+![](./meta/keil/samd21g18a/usrtinit.png)
 
 UART读写函数如下：
 
-![](./meta/keil/samd21g18a/danger.png)
+![](./meta/keil/samd21g18a/uartreadwrite.png)
+
+![](./meta/keil/samd21g18a/uartprintf.png)
 
 随后还有一些重定向函数，定义了之后可以使用printf直接从串口输出数据。
 
-![](./meta/keil/samd21g18a/danger.png)
+![](./meta/keil/samd21g18a/fputc.png)
 
 ### 修改los_bsp_led.c
 
 Arduino M0 Pro上的L灯，对应的是数字口13，对应ATSAMD21G18A的PORTA[17]，所以此处设置LED的初始化函数如下，其中设置PORTA[17]为输出口：
 
-![](./meta/keil/samd21g18a/danger.png)
+![](./meta/keil/samd21g18a/ledinit.png)
 
 因为只控制这一个LED，所以修改其控制函数如下，PORTA[17]为高电平的时候，L灯亮，反之，L灯灭：
 
-![](./meta/keil/samd21g18a/danger.png)
+![](./meta/keil/samd21g18a/ledcontrol.png)
 
 ### 修改los_bsp_key.c
 
 Arduino M0 Pro上除了复位按键，没有其他的按键，需要外接一个按键，才可以测试按键中断，此处选择数字口10，对应PORTA[18]，可以复用为EIC[2]，其初始化函数如下：
 
-![](./meta/keil/samd21g18a/danger.png)
+![](./meta/keil/samd21g18a/keyinit.png)
 
 修改startup_SAMD21.s，不再使用默认的EIC_Handler，将其注释掉，然后添加如下代码处理外部中断：
 
-![](./meta/keil/samd21g18a/danger.png)
+![](./meta/keil/samd21g18a/eichandler.png)
 
 上述代码调用了函数EXTInt_IRQHandler进行具体的中断处理，函数EXTInt_IRQHandler在los_bsp_key.c中定义，如下：
 
-![](./meta/keil/samd21g18a/danger.png)
+![](./meta/keil/samd21g18a/irqhandler.png)
 
 其中清除按键中断，然后输出一段信息。
 
@@ -470,7 +474,7 @@ int main(void)
 
 连接Arduino M0 Pro的Programmer接口到计算机，在计算机上会出现一个EDBG虚拟串口的设备，keil编译、下载，打开串口调试工具，选择出现的EDBG虚拟串口，速率选择为9600，然后按下Arduino M0 Pro上的复位按钮，会显示如下结果，表示巡检程序运行正常：
 
-![](./meta/keil/samd21g18a/danger.png)
+![](./meta/keil/samd21g18a/result.png)
 
 此时找到一根跳线，将数字口10与GND口相连，再断开，用来模拟按键按下，此时会引发按键中断，输出相关的信息，如下：
 
