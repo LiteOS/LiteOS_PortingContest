@@ -313,71 +313,48 @@ Arduino M0 Pro上的ATSAMD21G18A的熔丝位BOOTPROT默认为0x1，其含义如�
 点击OK即可，至此，我们的工程已经创建完成。
 
 ### 添加kernel代码到工程
-- 安装keil 5.18或者以上版本
-- 安装Keil.GD32F1x0_DFP.2.0.0.pack或者更高版本的pack文件到keil安装目录
-- 安装MDK-ARM_AddOn_GD32F1x0-V3.0.0到keil安装目录
+创建如下目录层级：
 
-**添加代码到LiteOS工程**
+图
 
-在LiteOS内核代码目录中新建GD32f190R_Library文件夹，将GD示例工程中使用到的代码拷贝到其中。
-![](./meta/keil/gd32f190/add_file_0.png)
+创建完成目录树之后我们添加源代码到目录树中，最终添加完成的内容如下：
 
-拷贝GD示例工程Library文件夹下的子文件夹到GD32f190R_Library文件夹中。
+- 将kernel/base目录下的所有C文件添加到工程中的kernel下
+- 将kernel/cmsis目录下的所有C文件添加到工程中的cmsis下。
+- 将platform\LOS_EXPAND_Arduino_M0_Pro目录下的所有C文件添加到工程中的platform/expand_Arduino_M0_Pro下
+- 根据芯片内核型号，将kernel\cpu\arm\cortex-m4（或者cortex-m3）目录下的所有C文件以及汇编代码添加到工程中的cpu/m4（cpu/m3）下，除了los_vector.s
+- 将kernel\config目录下的所有C文件添加到工程中的config下
+- 将user目录下的所有C文件添加到工程中的user下
+- 添加example/api目录下的所有C文件到工程的example目录下
 
-![](./meta/keil/gd32f190/add_file_1.png)
+图
 
-拷贝GD示例工程04_USART_Printf文件夹下列文件到GD32f190R_Library文件夹中。
+### 配置工程属性
+打开配置文件，如下，在Target界面勾选上“Use MicroLIB”：
 
-![](./meta/keil/gd32f190/add_file_2.png)
+图
 
-拷贝完成后的GD32f190R_Library文件夹内容如下图
+在C/C++界面，其中的Define输入框中添加宏定义“RAM_SIZE_LEVEL_1”：
 
-![](./meta/keil/gd32f190/add_file_3.png)
+图
 
-GD示例工程代码目录结构
+点击“Include Paths”后面的省略号，添加如下头文件路径：
 
-![](./meta/keil/gd32f190/add_file_4.png)
+图
 
-在LiteOS工程添加library目录，将GD示例工程中的源代码文件（main.c、startup_gd32f1x0.s文件除外）添加到library文件夹下。
+在Debugger界面，设置如下，大部分都是默认，只有右上角的Use，选择CMSIS-DAP Debugger。
 
-![](./meta/keil/gd32f190/add_file_5.png)
+图
 
-GD示例工程启动文件startup_gd32f1x0.s
+## 8 适配驱动代码
 
-![](./meta/keil/gd32f190/add_file_6.png)
+### 修改时钟参数
 
-添加GD示例工程中startup_gd32f1x0.s文件到LiteOS工程startup文件夹下。
+修改los_bsp_adapter.c中如下：
+	    const unsigned int sys_clk_freq = 16000000;
+改为如下：
+	    const unsigned int sys_clk_freq = 48000000;
 
-![](./meta/keil/gd32f190/add_file_7.png)
-
-**添加头文件搜索路径**
-
-![](./meta/keil/gd32f190/folder_setup.png)
-
-**添加编译宏选项**
-
-![](./meta/keil/gd32f190/add_macro.png)
-
-LiteOS可直接使用GD示例工程中的启动文件，这样工程中要使用的中断及中断服务函数就注册好了，不需再使用LiteOS接口进行动态注册。在完成了代码添加及工程配置后，开始修改代码，步骤如下：
-
-- 注释掉gd32f1x0_it.c中的PendSV_Handler()及SysTick_Handler()函数，以免重复定义。
-
-![](./meta/keil/gd32f190/code_shield.png)
-
-- GD工程中SYStemSystemInit函数会调用system_clock_config()函数配置系统时钟，我们需要修改los_bsp_adapter.c文件中的sys_clk_freq变量值与实际配置的系统时钟一致。
-
-	    const unsigned int sys_clk_freq = 72000000;
-
-- 将注释掉的SysTick_Handler()函数中的代码添加到los_bsp_adapter.c文件中的SysTick_Handler()函数。
-  
- ![](./meta/keil/gd32f190/add_code.png)
-
-经过以上步骤的修改，完成了代码的初步移植，然后可以编译代码,连接串口线（事先安装相关驱动）并在串口调试工具中打开相应串口，调试运行时可看到串口打印输出，按demo板上的Tamper键，可以调试按键中断及LED。
-
-
-## 7 其他说明
-
-###如何使用LiteOS 开发###
 
 LiteOS中提供的功能包括如下内容： 任务创建与删除、任务同步（信号量、互斥锁）、动态中断注册机制等等内容，详细内容请参考《HuaweiLiteOSKernelDevGuide》。
 
