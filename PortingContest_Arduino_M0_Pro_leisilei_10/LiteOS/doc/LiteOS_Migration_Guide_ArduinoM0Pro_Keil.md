@@ -351,7 +351,7 @@ Arduino M0 Pro上的ATSAMD21G18A的熔丝位BOOTPROT默认为0x1，其含义如�
 ### 修改时钟参数
 
 修改los_bsp_adapter.c中如下：
-	    const unsigned int sys_clk_freq = 16000000;
+	    `const unsigned int sys_clk_freq = 16000000;`
 改为如下：
 	    const unsigned int sys_clk_freq = 48000000;
 
