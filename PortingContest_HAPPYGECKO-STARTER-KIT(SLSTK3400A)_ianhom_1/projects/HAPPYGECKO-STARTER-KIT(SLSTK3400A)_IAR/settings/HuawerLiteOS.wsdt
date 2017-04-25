@@ -2,26 +2,24 @@
 
 <Workspace>
   <ConfigDictionary>
-    <CurrentConfigs>
-      <Project>HuawerLiteOS/Debug</Project>
-    </CurrentConfigs>
-  </ConfigDictionary>
+    
+  <CurrentConfigs><Project>HuawerLiteOS/Debug</Project></CurrentConfigs></ConfigDictionary>
   <Desktop>
     <Static>
       <Workspace>
         <ColumnWidths>
-          <Column0>197</Column0>
-          <Column1>27</Column1>
-          <Column2>27</Column2>
-          <Column3>27</Column3>
-        </ColumnWidths>
+          
+          
+          
+          
+        <Column0>270</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
       </Workspace>
       <Build>
-        <ColumnWidth0>20</ColumnWidth0>
-        <ColumnWidth1>975</ColumnWidth1>
-        <ColumnWidth2>260</ColumnWidth2>
-        <ColumnWidth3>65</ColumnWidth3>
-      </Build>
+        
+        
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>975</ColumnWidth1><ColumnWidth2>260</ColumnWidth2><ColumnWidth3>65</ColumnWidth3></Build>
       <TerminalIO/>
       <Find-in-Files>
         <ColumnWidth0>401</ColumnWidth0>
@@ -31,26 +29,21 @@
       </Find-in-Files>
     </Static>
     <Windows>
-      <Wnd2>
+      
+      
+    <Wnd0>
         <Tabs>
           <Tab>
             <Identity>TabID-16877-3500</Identity>
             <TabName>Workspace</TabName>
             <Factory>Workspace</Factory>
             <Session>
-              <NodeDict>
-                <ExpandedNode>HuawerLiteOS</ExpandedNode>
-                <ExpandedNode>HuawerLiteOS/Huawei_LiteOS</ExpandedNode>
-                <ExpandedNode>HuawerLiteOS/Huawei_LiteOS/config</ExpandedNode>
-                <ExpandedNode>HuawerLiteOS/Huawei_LiteOS/config/los_config.c</ExpandedNode>
-                <ExpandedNode>HuawerLiteOS/Output</ExpandedNode>
-              </NodeDict>
-            </Session>
+              
+            <NodeDict><ExpandedNode>HuawerLiteOS</ExpandedNode><ExpandedNode>HuawerLiteOS/Huawei_LiteOS</ExpandedNode><ExpandedNode>HuawerLiteOS/Huawei_LiteOS/library</ExpandedNode><ExpandedNode>HuawerLiteOS/Huawei_LiteOS/platform</ExpandedNode><ExpandedNode>HuawerLiteOS/Huawei_LiteOS/platform/HAPPYGECKO-STARTER-KIT(SLSTK3400A)</ExpandedNode><ExpandedNode>HuawerLiteOS/Huawei_LiteOS/startup</ExpandedNode><ExpandedNode>HuawerLiteOS/Huawei_LiteOS/user</ExpandedNode><ExpandedNode>HuawerLiteOS/Output</ExpandedNode></NodeDict></Session>
           </Tab>
         </Tabs>
-        <SelectedTab>0</SelectedTab>
-      </Wnd2>
-      <Wnd3>
+        
+      <SelectedTab>0</SelectedTab></Wnd0><Wnd1>
         <Tabs>
           <Tab>
             <Identity>TabID-3347-4163</Identity>
@@ -65,148 +58,21 @@
             <Session/>
           </Tab>
         </Tabs>
-        <SelectedTab>0</SelectedTab>
-      </Wnd3>
-    </Windows>
+        
+      <SelectedTab>0</SelectedTab></Wnd1></Windows>
     <Editor>
-      <Pane>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\..\..\user\main.c</Filename>
-          <XPos>0</XPos>
-          <YPos>0</YPos>
-          <SelStart>0</SelStart>
-          <SelEnd>0</SelEnd>
-          <XPos2>0</XPos2>
-          <YPos2>51</YPos2>
-          <SelStart2>1357</SelStart2>
-          <SelEnd2>1357</SelEnd2>
-        </Tab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\..\..\kernel\cpu\arm\cortex-m0+\los_dispatch_iar.s</Filename>
-          <XPos>0</XPos>
-          <YPos>0</YPos>
-          <SelStart>0</SelStart>
-          <SelEnd>0</SelEnd>
-          <XPos2>0</XPos2>
-          <YPos2>48</YPos2>
-          <SelStart2>3291</SelStart2>
-          <SelEnd2>3291</SelEnd2>
-        </Tab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\..\..\kernel\cpu\arm\cortex-m0+\los_hw.c</Filename>
-          <XPos>0</XPos>
-          <YPos>0</YPos>
-          <SelStart>0</SelStart>
-          <SelEnd>0</SelEnd>
-          <XPos2>0</XPos2>
-          <YPos2>108</YPos2>
-          <SelStart2>0</SelStart2>
-          <SelEnd2>0</SelEnd2>
-        </Tab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\..\..\kernel\config\los_config.c</Filename>
-          <XPos>0</XPos>
-          <YPos>0</YPos>
-          <SelStart>0</SelStart>
-          <SelEnd>0</SelEnd>
-          <XPos2>0</XPos2>
-          <YPos2>132</YPos2>
-          <SelStart2>2847</SelStart2>
-          <SelEnd2>2847</SelEnd2>
-        </Tab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\..\..\kernel\config\los_config.h</Filename>
-          <XPos>0</XPos>
-          <YPos>0</YPos>
-          <SelStart>0</SelStart>
-          <SelEnd>0</SelEnd>
-          <XPos2>0</XPos2>
-          <YPos2>0</YPos2>
-          <SelStart2>0</SelStart2>
-          <SelEnd2>0</SelEnd2>
-        </Tab>
-        <ActiveTab>4</ActiveTab>
-      </Pane>
-      <ActivePane>0</ActivePane>
-      <Sizes>
-        <Pane>
-          <X>1000000</X>
-          <Y>1000000</Y>
-        </Pane>
-      </Sizes>
-      <SplitMode>1</SplitMode>
-    </Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\los_bsp_adapter.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>0</YPos2><SelStart2>0</SelStart2><SelEnd2>0</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\retargetio.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>339</YPos2><SelStart2>9881</SelStart2><SelEnd2>9881</SelEnd2></Tab><ActiveTab>1</ActiveTab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
     <Positions>
-      <Top>
-        <Row0>
-          <Sizes>
-            <Toolbar-010997E0>
-              <key>iaridepm.enu1</key>
-            </Toolbar-010997E0>
-          </Sizes>
-        </Row0>
-        <Row1>
-          <Sizes/>
-        </Row1>
-      </Top>
-      <Left>
-        <Row0>
-          <Sizes>
-            <Wnd2>
-              <Rect>
-                <Top>-2</Top>
-                <Left>-2</Left>
-                <Bottom>611</Bottom>
-                <Right>288</Right>
-                <x>-2</x>
-                <y>-2</y>
-                <xscreen>141</xscreen>
-                <yscreen>136</yscreen>
-                <sizeHorzCX>103676</sizeHorzCX>
-                <sizeHorzCY>198251</sizeHorzCY>
-                <sizeVertCX>213235</sizeVertCX>
-                <sizeVertCY>893586</sizeVertCY>
-              </Rect>
-            </Wnd2>
-          </Sizes>
-        </Row0>
-      </Left>
-      <Right>
-        <Row0>
-          <Sizes/>
-        </Row0>
-      </Right>
-      <Bottom>
-        <Row0>
-          <Sizes>
-            <Wnd3>
-              <Rect>
-                <Top>-2</Top>
-                <Left>-2</Left>
-                <Bottom>30</Bottom>
-                <Right>1362</Right>
-                <x>-2</x>
-                <y>-2</y>
-                <xscreen>1364</xscreen>
-                <yscreen>32</yscreen>
-                <sizeHorzCX>1002941</sizeHorzCX>
-                <sizeHorzCY>46647</sizeHorzCY>
-                <sizeVertCX>103676</sizeVertCX>
-                <sizeVertCY>198251</sizeVertCY>
-              </Rect>
-            </Wnd3>
-          </Sizes>
-        </Row0>
-      </Bottom>
-      <Float>
-        <Sizes/>
-      </Float>
-    </Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-00BC0E48><key>iaridepm.enu1</key></Toolbar-00BC0E48></Sizes></Row0></Top><Left><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>513</Bottom><Right>361</Right><x>-2</x><y>-2</y><xscreen>141</xscreen><yscreen>136</yscreen><sizeHorzCX>103676</sizeHorzCX><sizeHorzCY>198251</sizeHorzCY><sizeVertCX>266912</sizeVertCX><sizeVertCY>750729</sizeVertCY></Rect></Wnd0></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>128</Bottom><Right>1362</Right><x>-2</x><y>-2</y><xscreen>1364</xscreen><yscreen>130</yscreen><sizeHorzCX>1002941</sizeHorzCX><sizeHorzCY>189504</sizeHorzCY><sizeVertCX>103676</sizeVertCX><sizeVertCY>198251</sizeVertCY></Rect></Wnd1></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
   </Desktop>
 </Workspace>
 

@@ -290,7 +290,7 @@ int _write(int file, const char *ptr, int len)
 #include <yfuns.h>
 #include <stdint.h>
 
-_STD_BEGIN
+
 
 /******************************************************************************
  * @brief Transmit buffer to USART1
@@ -372,7 +372,7 @@ size_t __read(int handle, unsigned char * buffer, size_t size)
   return nChars;
 }
 
-_STD_END
+
 
 #endif /* defined( __ICCARM__ ) */
 

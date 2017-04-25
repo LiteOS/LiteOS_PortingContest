@@ -6,1256 +6,455 @@
   <configuration>
     <name>Debug</name>
     <outputs>
-      <file>$PROJ_DIR$\..\..\kernel\cpu\arm\cortex-m0+\los_dispatch_iar.s</file>
-      <file>$PROJ_DIR$\..\..\kernel\cpu\arm\cortex-m0+\los_hw.c</file>
-      <file>$PROJ_DIR$\..\..\kernel\cmsis\cmsis_liteos.c</file>
-      <file>$PROJ_DIR$\..\..\kernel\config\los_config.c</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\hardware_routines.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\system_efm32hg.pbi</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\low_power_config.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\system_efm32hg.o</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\cslib_sensor_descriptors.h</file>
-      <file>$PROJ_DIR$\..\..\example\include\los_api_timer.h</file>
-      <file>$PROJ_DIR$\..\..\example\include\los_api_sem.h</file>
-      <file>$PROJ_DIR$\..\..\example\include\los_api_systick.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\yfuns.h</file>
-      <file>$PROJ_DIR$\..\..\kernel\base\include\los_memory.ph</file>
-      <file>$PROJ_DIR$\..\..\example\include\los_api_mutex.h</file>
-      <file>$PROJ_DIR$\..\..\example\include\los_demo_entry.h</file>
-      <file>$PROJ_DIR$\..\..\kernel\base\include\los_multipledlinkhead.ph</file>
-      <file>$PROJ_DIR$\..\..\example\include\los_api_task.h</file>
-      <file>$PROJ_DIR$\..\..\kernel\base\include\los_memstat.ph</file>
-      <file>$PROJ_DIR$\..\..\kernel\include\los_multipledlinkhead.h</file>
-      <file>$PROJ_DIR$\..\..\kernel\include\los_priqueue.h</file>
-      <file>$PROJ_DIR$\..\..\kernel\base\include\los_priqueue.ph</file>
-      <file>$PROJ_DIR$\..\..\kernel\base\include\los_timeslice.ph</file>
-      <file>$TOOLKIT_DIR$\inc\c\limits.h</file>
-      <file>$PROJ_DIR$\..\..\example\include\los_api_interrupt.h</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_emu.h</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_ebi.h</file>
-      <file>$PROJ_DIR$\..\..\example\include\los_api_event.h</file>
-      <file>$PROJ_DIR$\..\..\example\include\los_api_msgqueue.h</file>
-      <file>$PROJ_DIR$\..\..\example\include\los_api_list.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\bsp_bcc.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\em_ebi.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\em_rtc.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\em_assert.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\bsp_stk_leds.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\bsp_stk.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\bsp_trace.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\comm_routines.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\cslib_config.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\device_init.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\em_emu.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\em_leuart.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\em_gpio.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\em_rtc.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\em_usart.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\hardware_config.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\low_power_config.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\profiler_interface.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\retargetvirtual.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\sensor_descriptors.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\retargetio.pbi</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\bsp.h</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_gpio.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\hardware_routines.pbi</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\retargetvirtualconfig.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\stdbool.h</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_cmu.h</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\bsp_trace.h</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\device_init.h</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\comm_routines.h</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\retargetvirtual.h</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_device.h</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_i2c.h</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_bus.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\system_efm32hg.__cstat.et</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_prs_signals.h</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_prs_ch.h</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_lesense.h</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_usart.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\em_acmp.o</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_acmp.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\em_cmu.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\em_cmu.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\em_core.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\em_emu.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\em_gpio.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\em_leuart.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\em_system.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\em_usart.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\hardware_config.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\hardware_routines.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\profiler_interface.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\retargetio.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\retargetvirtual.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\sensor_descriptors.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\low_power_config.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\bsp_stk.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\bsp_stk_leds.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\bsp_bcc.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\bsp_trace.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\comm_routines.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\cslib_config.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\device_init.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\em_acmp.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\em_core.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\em_assert.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\em_ebi.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\em_system.pbi</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_wdog.h</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_calibrate.h</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_devinfo.h</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_prs.h</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_adc.h</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_leuart.h</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_rtc.h</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_dma_descriptor.h</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_idac.h</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_af_pins.h</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_dmactrl.h</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_acmp.h</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_pcnt.h</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg322f64.h</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_gpio.h</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\system_efm32hg.h</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_gpio_p.h</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_romtable.h</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_vcmp.h</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_dmareq.h</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_af_ports.h</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_mtb.h</file>
-      <file>$PROJ_DIR$\Debug\List\HuawerLiteOS.map</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_usb_doep.h</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_usb_diep.h</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_dma.h</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_msc.h</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_emu.h</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_dma_ch.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\xencoding_limits.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_api_timer.pbi</file>
-      <file>$PROJ_DIR$\..\..\kernel\base\mem\los_memory.inc</file>
-      <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_api_static_mem.pbi</file>
-      <file>$PROJ_DIR$\..\..\kernel\cpu\arm\cortex-m0+\los_hw.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\ymath.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\time.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\xtgmath.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\math.h</file>
-      <file>$PROJ_DIR$\..\..\kernel\base\include\los_tick.ph</file>
-      <file>$PROJ_DIR$\..\..\kernel\include\los_swtmr.h</file>
-      <file>$PROJ_DIR$\..\..\kernel\base\include\los_queue.ph</file>
-      <file>$PROJ_DIR$\..\..\kernel\base\include\los_task.ph</file>
-      <file>$PROJ_DIR$\..\..\kernel\base\include\los_swtmr.ph</file>
-      <file>$PROJ_DIR$\..\..\kernel\include\los_list.h</file>
-      <file>$PROJ_DIR$\..\..\kernel\include\los_tick.h</file>
-      <file>$PROJ_DIR$\..\..\kernel\include\los_event.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
-      <file>$PROJ_DIR$\..\..\kernel\include\los_typedef.h</file>
-      <file>$PROJ_DIR$\..\..\kernel\include\los_membox.h</file>
-      <file>$PROJ_DIR$\..\..\kernel\include\los_base.h</file>
-      <file>$PROJ_DIR$\..\..\kernel\base\include\los_sem.ph</file>
-      <file>$PROJ_DIR$\..\..\kernel\include\los_task.h</file>
-      <file>$PROJ_DIR$\..\..\kernel\base\include\los_mux.ph</file>
-      <file>$PROJ_DIR$\..\..\kernel\base\include\los_sys.ph</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_aes.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_mux.o</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_usb.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_queue.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_event.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_sem.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_event.pbi</file>
-      <file>$PROJ_DIR$\..\..\kernel\base\ipc\los_queue.inc</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_swtmr.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_tick.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_sys.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_priqueue.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\HuawerLiteOS.pbd</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_task.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_timeslice.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_priqueue.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_swtmr.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_sys.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_task.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_tick.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_timeslice.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_memstat.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_memory.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_membox.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_membox.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_multipledlinkhead.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_multipledlinkhead.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_memory.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_bsp_key.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\c\string.h</file>
+      <file>$PROJ_DIR$\..\..\kernel\base\mem\los_multipledlinkhead.inc</file>
+      <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Threads.h</file>
+      <file>$PROJ_DIR$\..\..\kernel\cpu\arm\cortex-m0+\los_hwi.h</file>
+      <file>$PROJ_DIR$\..\..\kernel\cmsis\cmsis_os.h</file>
       <file>$PROJ_DIR$\Debug\Obj\los_memstat.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_api_dynamic_mem.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_queue.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_mux.pbi</file>
-      <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_inspect_entry.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_sem.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\cmsis_liteos.pbi</file>
-      <file>$PROJ_DIR$\..\..\kernel\base\ipc\los_sem.inc</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_system.h</file>
-      <file>$PROJ_DIR$\..\..\kernel\base\ipc\los_event.inc</file>
-      <file>$TOOLKIT_DIR$\inc\c\stdio.h</file>
-      <file>$PROJ_DIR$\..\..\kernel\base\ipc\los_mux.inc</file>
-      <file>$PROJ_DIR$\Debug\Obj\cmsis_liteos.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_misc.pbi</file>
-      <file>$PROJ_DIR$\..\..\kernel\base\mem\los_membox.inc</file>
-      <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_misc.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_bsp_led.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_api_task.pbi</file>
-      <file>$TOOLKIT_DIR$\inc\c\stddef.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_cmsis_main.pbi</file>
-      <file>$PROJ_DIR$\..\..\kernel\base\mem\los_memstat.inc</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_memory.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_multipledlinkhead.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_multipledlinkhead.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_membox.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_bsp_uart.pbi</file>
       <file>$TOOLKIT_DIR$\inc\c\ystdio.h</file>
       <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
-      <file>$PROJ_DIR$\..\..\kernel\cmsis\cmsis_os.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_bsp_uart.pbi</file>
-      <file>$PROJ_DIR$\..\..\kernel\cpu\arm\cortex-m0+\los_hwi.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
-      <file>$PROJ_DIR$\..\..\kernel\base\mem\los_multipledlinkhead.inc</file>
-      <file>$TOOLKIT_DIR$\inc\c\string.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\DLib_Threads.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_bsp_key.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\main.o</file>
-      <file>$TOOLKIT_DIR$\inc\c\stdlib.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_bsp_adapter.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_bsp_uart.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_bsp_key.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_bsp_led.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_bsp_adapter.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_startup_iar.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_api_sem.pbi</file>
-      <file>$PROJ_DIR$\..\..\kernel\config\los_config.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_api_mutex.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_demo_entry.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_inspect_entry.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_api_systick.pbi</file>
-      <file>$PROJ_DIR$\..\..\example\include\los_api_static_mem.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_api_event.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_api_list.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_config.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_api_static_mem.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_api_interrupt.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_api_task.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_dispatch_iar.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_hw.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_cmsis_main.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_hwi.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_hw_tick.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_demo_entry.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_hw.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_hwi.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_api_timer.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_api_systick.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_api_sem.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_hw_tick.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_config.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_api_interrupt.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_api_dynamic_mem.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_api_event.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_api_list.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_api_msgqueue.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_api_mutex.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_api_msgqueue.pbi</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_assert.h</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_common.h</file>
-      <file>$PROJ_DIR$\..\..\kernel\include\los_mux.h</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_core.h</file>
-      <file>$PROJ_DIR$\..\..\kernel\base\include\los_base.ph</file>
-      <file>$PROJ_DIR$\..\..\kernel\include\los_queue.h</file>
-      <file>$PROJ_DIR$\..\..\kernel\include\los_errno.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_api_dynamic_mem.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_api_msgqueue.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_api_sem.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_cmsis_main.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\c\stddef.h</file>
+      <file>$PROJ_DIR$\..\..\kernel\base\mem\los_memstat.inc</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_api_task.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_misc.o</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_bsp_led.pbi</file>
+      <file>$PROJ_DIR$\..\..\kernel\base\mem\los_membox.inc</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_misc.pbi</file>
+      <file>$PROJ_DIR$\..\..\kernel\base\ipc\los_mux.inc</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdio.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\cmsis_liteos.o</file>
+      <file>$PROJ_DIR$\..\..\kernel\base\ipc\los_event.inc</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_system.h</file>
+      <file>$PROJ_DIR$\..\..\kernel\base\ipc\los_sem.inc</file>
+      <file>$PROJ_DIR$\Debug\Obj\cmsis_liteos.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_inspect_entry.o</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_sem.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_mux.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_queue.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_api_dynamic_mem.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_tick.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_priqueue.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_membox.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_memory.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_memstat.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_timeslice.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_tick.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_task.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_sys.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_swtmr.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_priqueue.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_timeslice.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_task.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\HuawerLiteOS.pbd</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_sys.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\em_core.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\em_cmu.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\em_emu.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\em_ebi.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_memstat.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_task.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_api_timer.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_timeslice.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_sys.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_cmsis_main.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_tick.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_membox.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_event.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_queue.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_misc.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\bsp_stk.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_api_task.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_inspect_entry.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_api_systick.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_swtmr.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\bsp_stk_leds.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_hwi.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_hw_tick.__cstat.et</file>
       <file>$PROJ_DIR$\Debug\Obj\los_api_mutex.__cstat.et</file>
       <file>$PROJ_DIR$\..\..\kernel\base\core\los_task.inc</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_hw_tick.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_hwi.__cstat.et</file>
-      <file>$PROJ_DIR$\..\..\kernel\base\core\los_priqueue.inc</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_hw.__cstat.et</file>
-      <file>$PROJ_DIR$\..\..\kernel\base\core\los_swtmr.inc</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_api_list.__cstat.et</file>
-      <file>$PROJ_DIR$\..\..\kernel\base\core\los_sys.inc</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_mux.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_config.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\cmsis_liteos.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_api_event.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_memory.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_api_interrupt.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_priqueue.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\bsp_trace.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\comm_routines.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\bsp_bcc.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\em_assert.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_demo_entry.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_multipledlinkhead.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\em_acmp.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_sem.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_api_static_mem.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\device_init.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_api_sem.__cstat.et</file>
       <file>$PROJ_DIR$\Debug\Obj\cslib_config.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\bsp_stk_leds.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_swtmr.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_api_systick.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_inspect_entry.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_api_task.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\bsp_stk.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_misc.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_queue.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_event.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_membox.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_tick.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_cmsis_main.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_sys.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_timeslice.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_api_timer.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_task.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_memstat.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\em_ebi.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\em_emu.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\em_cmu.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\em_core.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\low_power_config.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_bsp_uart.__cstat.et</file>
-      <file>$PROJ_DIR$\..\..\kernel\cpu\arm\cortex-m0+\los_hw_tick.c</file>
-      <file>$PROJ_DIR$\..\..\example\api\los_api_interrupt.c</file>
-      <file>$PROJ_DIR$\..\..\kernel\cpu\arm\cortex-m0+\los_hwi.c</file>
-      <file>$PROJ_DIR$\..\..\example\api\los_api_event.c</file>
-      <file>$PROJ_DIR$\..\..\example\api\los_api_dynamic_mem.c</file>
-      <file>$PROJ_DIR$\..\..\example\api\los_api_list.c</file>
-      <file>$PROJ_DIR$\..\..\example\api\los_api_msgqueue.c</file>
-      <file>$PROJ_DIR$\..\..\example\api\los_api_mutex.c</file>
-      <file>$PROJ_DIR$\..\..\example\api\los_api_sem.c</file>
-      <file>$PROJ_DIR$\..\..\example\api\los_api_static_mem.c</file>
-      <file>$PROJ_DIR$\..\..\example\api\los_api_systick.c</file>
-      <file>$PROJ_DIR$\..\..\example\api\los_api_task.c</file>
-      <file>$PROJ_DIR$\..\..\example\api\los_api_timer.c</file>
-      <file>$PROJ_DIR$\..\..\example\api\los_cmsis_main.c</file>
-      <file>$PROJ_DIR$\..\..\example\api\los_demo_entry.c</file>
-      <file>$PROJ_DIR$\..\..\example\api\los_inspect_entry.c</file>
-      <file>$PROJ_DIR$\..\..\kernel\base\ipc\los_event.c</file>
-      <file>$PROJ_DIR$\..\..\kernel\base\mem\los_membox.c</file>
-      <file>$PROJ_DIR$\..\..\kernel\base\mem\los_memory.c</file>
-      <file>$PROJ_DIR$\..\..\kernel\base\mem\los_memstat.c</file>
-      <file>$PROJ_DIR$\..\..\kernel\base\misc\los_misc.c</file>
-      <file>$PROJ_DIR$\..\..\kernel\base\mem\los_multipledlinkhead.c</file>
-      <file>$PROJ_DIR$\..\..\kernel\base\ipc\los_mux.c</file>
-      <file>$PROJ_DIR$\..\..\kernel\base\core\los_priqueue.c</file>
-      <file>$PROJ_DIR$\..\..\kernel\base\ipc\los_queue.c</file>
-      <file>$PROJ_DIR$\..\..\kernel\base\ipc\los_sem.c</file>
-      <file>$PROJ_DIR$\..\..\kernel\base\core\los_swtmr.c</file>
-      <file>$PROJ_DIR$\..\..\kernel\base\core\los_sys.c</file>
-      <file>$PROJ_DIR$\..\..\kernel\base\core\los_task.c</file>
-      <file>$PROJ_DIR$\..\..\kernel\base\core\los_tick.c</file>
-      <file>$PROJ_DIR$\..\..\kernel\base\core\los_timeslice.c</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\bsp_bcc.c</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\bsp_stk.c</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\bsp_stk_leds.c</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\bsp_trace.c</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\comm_routines.c</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\cslib_config.c</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\device_init.c</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_acmp.c</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_assert.c</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_cmu.c</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_core.c</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_ebi.c</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_emu.c</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_gpio.c</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_leuart.c</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_rtc.c</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_system.c</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_usart.c</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\hardware_config.c</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\hardware_routines.c</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\low_power_config.c</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\profiler_interface.c</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\retargetio.c</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\retargetvirtual.c</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\sensor_descriptors.c</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\system_efm32hg.c</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\los_bsp_adapter.c</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\los_bsp_adapter.h</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\los_bsp_key.c</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\los_bsp_key.h</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\los_bsp_led.h</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\los_bsp_led.c</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\los_bsp_uart.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\device_init.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_api_static_mem.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_sem.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\em_acmp.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_multipledlinkhead.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_demo_entry.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\em_assert.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\bsp_bcc.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\comm_routines.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\bsp_trace.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_priqueue.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_api_interrupt.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_memory.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_api_event.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\cmsis_liteos.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_config.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_mux.__cstat.et</file>
+      <file>$PROJ_DIR$\..\..\kernel\base\core\los_sys.inc</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_api_list.__cstat.et</file>
+      <file>$PROJ_DIR$\..\..\kernel\base\core\los_swtmr.inc</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_hw.__cstat.et</file>
+      <file>$PROJ_DIR$\..\..\kernel\base\core\los_priqueue.inc</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_device.h</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\retargetvirtual.h</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\comm_routines.h</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\device_init.h</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_cmu.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdbool.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\em_assert.o</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\bsp_trace.h</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\retargetvirtualconfig.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\hardware_routines.pbi</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_gpio.h</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\bsp.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\retargetio.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\sensor_descriptors.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\retargetvirtual.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\profiler_interface.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\low_power_config.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\hardware_config.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\em_usart.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\em_rtc.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\em_gpio.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\em_leuart.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\em_emu.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\device_init.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\cslib_config.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\comm_routines.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\bsp_trace.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\bsp_stk.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\bsp_stk_leds.o</file>
+      <file>$PROJ_DIR$\..\..\example\include\los_demo_entry.h</file>
+      <file>$PROJ_DIR$\..\..\kernel\base\include\los_memory.ph</file>
+      <file>$PROJ_DIR$\Debug\Obj\em_rtc.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\em_ebi.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\bsp_bcc.o</file>
+      <file>$PROJ_DIR$\..\..\example\include\los_api_list.h</file>
+      <file>$PROJ_DIR$\..\..\example\include\los_api_msgqueue.h</file>
+      <file>$PROJ_DIR$\..\..\example\include\los_api_event.h</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_ebi.h</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_emu.h</file>
+      <file>$PROJ_DIR$\..\..\kernel\base\include\los_timeslice.ph</file>
+      <file>$PROJ_DIR$\..\..\example\include\los_api_interrupt.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\limits.h</file>
+      <file>$PROJ_DIR$\..\..\kernel\include\los_multipledlinkhead.h</file>
+      <file>$PROJ_DIR$\..\..\kernel\include\los_priqueue.h</file>
+      <file>$PROJ_DIR$\..\..\example\include\los_api_task.h</file>
+      <file>$PROJ_DIR$\..\..\kernel\base\include\los_memstat.ph</file>
+      <file>$PROJ_DIR$\..\..\kernel\base\include\los_multipledlinkhead.ph</file>
+      <file>$PROJ_DIR$\..\..\example\include\los_api_mutex.h</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\low_power_config.h</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\cslib_sensor_descriptors.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\yfuns.h</file>
+      <file>$PROJ_DIR$\..\..\example\include\los_api_timer.h</file>
+      <file>$PROJ_DIR$\..\..\example\include\los_api_systick.h</file>
+      <file>$PROJ_DIR$\..\..\kernel\base\include\los_priqueue.ph</file>
+      <file>$PROJ_DIR$\..\..\example\include\los_api_sem.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\system_efm32hg.o</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\hardware_routines.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\system_efm32hg.pbi</file>
       <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\los_bsp_uart.h</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\los_startup_iar.s</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\los_bsp_uart.c</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\los_bsp_led.h</file>
       <file>$PROJ_DIR$\..\..\user\main.c</file>
-      <file>$PROJ_DIR$\Debug\Obj\profiler_interface.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_bsp_key.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\main.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_bsp_led.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\em_leuart.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\sensor_descriptors.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\retargetvirtual.__cstat.et</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\cslib.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\retargetio.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\los_bsp_adapter.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\em_rtc.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\em_system.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\hardware_routines.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Exe\HuawerLiteOS.out</file>
-      <file>$PROJ_DIR$\Debug\Obj\hardware_config.__cstat.et</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_chip.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\em_usart.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\em_gpio.__cstat.et</file>
-      <file>$PROJ_DIR$\..\..\kernel\include\los_sem.h</file>
-      <file>$PROJ_DIR$\..\..\kernel\include\los_printf.h</file>
-      <file>$PROJ_DIR$\..\..\kernel\base\core\los_tick.inc</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\core_cm0plus.h</file>
-      <file>$PROJ_DIR$\..\..\kernel\include\los_sys.h</file>
-      <file>$PROJ_DIR$\..\..\kernel\link\iar\los_builddef.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\cmsis_iar.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\cslib_config.h</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\core_cmInstr.h</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\core_cmFunc.h</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\cslib_hwconfig.h</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_usart.h</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\bsp_bcp.h</file>
-      <file>$PROJ_DIR$\..\..\example\include\los_api_dynamic_mem.h</file>
-      <file>$PROJ_DIR$\..\..\kernel\include\los_memory.h</file>
-      <file>$PROJ_DIR$\..\..\example\include\los_demo_debug.h</file>
-      <file>$PROJ_DIR$\..\..\example\include\los_inspect_entry.h</file>
-      <file>$PROJ_DIR$\..\..\kernel\base\include\los_membox.ph</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\los_startup_iar.s</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\los_bsp_led.c</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\los_bsp_key.h</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\los_bsp_key.c</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\los_bsp_adapter.h</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\los_bsp_adapter.c</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\system_efm32hg.c</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\sensor_descriptors.c</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\retargetvirtual.c</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\retargetio.c</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\profiler_interface.c</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\low_power_config.c</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\hardware_routines.c</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\hardware_config.c</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_usart.c</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_system.c</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\comm_routines.c</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\bsp_trace.c</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\bsp_stk_leds.c</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\bsp_stk.c</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\bsp_bcc.c</file>
+      <file>$PROJ_DIR$\..\..\kernel\base\core\los_timeslice.c</file>
+      <file>$PROJ_DIR$\..\..\kernel\base\core\los_tick.c</file>
+      <file>$PROJ_DIR$\..\..\kernel\base\core\los_task.c</file>
+      <file>$PROJ_DIR$\..\..\kernel\base\core\los_sys.c</file>
+      <file>$PROJ_DIR$\..\..\kernel\base\core\los_swtmr.c</file>
+      <file>$PROJ_DIR$\..\..\kernel\base\ipc\los_sem.c</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_ebi.c</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_core.c</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_cmu.c</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_assert.c</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_acmp.c</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\device_init.c</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\cslib_config.c</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_rtc.c</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_leuart.c</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_gpio.c</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_emu.c</file>
+      <file>$PROJ_DIR$\..\..\kernel\base\ipc\los_queue.c</file>
+      <file>$PROJ_DIR$\..\..\kernel\base\core\los_priqueue.c</file>
+      <file>$PROJ_DIR$\..\..\kernel\base\mem\los_multipledlinkhead.c</file>
+      <file>$PROJ_DIR$\..\..\kernel\base\mem\los_memstat.c</file>
+      <file>$PROJ_DIR$\..\..\kernel\base\ipc\los_mux.c</file>
+      <file>$PROJ_DIR$\..\..\kernel\base\misc\los_misc.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_swtmr.o</file>
+      <file>$PROJ_DIR$\..\..\kernel\base\ipc\los_queue.inc</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_event.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_sem.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_event.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_queue.o</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_usb.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_mux.o</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_aes.h</file>
+      <file>$PROJ_DIR$\..\..\kernel\base\include\los_sys.ph</file>
+      <file>$PROJ_DIR$\..\..\kernel\base\include\los_mux.ph</file>
+      <file>$PROJ_DIR$\..\..\kernel\include\los_task.h</file>
+      <file>$PROJ_DIR$\..\..\kernel\base\include\los_sem.ph</file>
+      <file>$PROJ_DIR$\..\..\kernel\include\los_base.h</file>
+      <file>$PROJ_DIR$\..\..\kernel\include\los_membox.h</file>
+      <file>$PROJ_DIR$\..\..\kernel\include\los_typedef.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
+      <file>$PROJ_DIR$\..\..\kernel\include\los_list.h</file>
+      <file>$PROJ_DIR$\..\..\kernel\include\los_tick.h</file>
+      <file>$PROJ_DIR$\..\..\kernel\base\include\los_task.ph</file>
+      <file>$PROJ_DIR$\..\..\kernel\base\include\los_swtmr.ph</file>
+      <file>$PROJ_DIR$\..\..\kernel\base\include\los_queue.ph</file>
+      <file>$PROJ_DIR$\..\..\kernel\base\include\los_tick.ph</file>
+      <file>$PROJ_DIR$\..\..\kernel\include\los_swtmr.h</file>
+      <file>$PROJ_DIR$\..\..\kernel\include\los_event.h</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg322f64.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\math.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\time.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\ymath.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\xtgmath.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_api_static_mem.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+      <file>$PROJ_DIR$\..\..\kernel\cpu\arm\cortex-m0+\los_hw.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_api_timer.pbi</file>
+      <file>$PROJ_DIR$\..\..\kernel\base\mem\los_memory.inc</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\xencoding_limits.h</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_dma_ch.h</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_emu.h</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_msc.h</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_dma.h</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_usb_diep.h</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_usb_doep.h</file>
+      <file>$PROJ_DIR$\Debug\List\HuawerLiteOS.map</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_mtb.h</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_af_ports.h</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_dmareq.h</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_vcmp.h</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_romtable.h</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_gpio_p.h</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_gpio.h</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\system_efm32hg.h</file>
       <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_rmu.h</file>
       <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_cmu.h</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_timer_cc.h</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_timer.h</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_leuart.h</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_rtc.h</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\arm_math.h</file>
-      <file>$TOOLKIT_DIR$\lib\m6M_tl.a</file>
-      <file>$TOOLKIT_DIR$\lib\rt6M_tl.a</file>
-      <file>$TOOLKIT_DIR$\lib\dl6M_tln.a</file>
-      <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
-      <file>$TOOLKIT_DIR$\config\linker\SiliconLaboratories\EFM32HG322F64.icf</file>
-      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\libCSLIB_M0_IAR.a</file>
-      <file>$PROJ_DIR$\..\..\kernel\base\include\los_event.ph</file>
+      <file>$PROJ_DIR$\..\..\kernel\base\core\los_tick.inc</file>
+      <file>$PROJ_DIR$\..\..\kernel\include\los_printf.h</file>
+      <file>$PROJ_DIR$\..\..\kernel\include\los_sem.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\em_gpio.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\em_usart.__cstat.et</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_chip.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\hardware_config.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Exe\HuawerLiteOS.out</file>
+      <file>$PROJ_DIR$\Debug\Obj\hardware_routines.__cstat.et</file>
+      <file>$PROJ_DIR$\..\..\kernel\base\include\los_membox.ph</file>
+      <file>$PROJ_DIR$\..\..\example\include\los_inspect_entry.h</file>
+      <file>$PROJ_DIR$\..\..\example\include\los_demo_debug.h</file>
+      <file>$PROJ_DIR$\..\..\kernel\include\los_memory.h</file>
+      <file>$PROJ_DIR$\..\..\example\include\los_api_dynamic_mem.h</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\bsp_bcp.h</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_usart.h</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\cslib_hwconfig.h</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\core_cmFunc.h</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\cslib_config.h</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\core_cmInstr.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\cmsis_iar.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
+      <file>$PROJ_DIR$\..\..\kernel\link\iar\los_builddef.h</file>
+      <file>$PROJ_DIR$\..\..\kernel\include\los_sys.h</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\core_cm0plus.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\em_system.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\em_rtc.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_bsp_adapter.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\retargetio.__cstat.et</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\cslib.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_bsp_key.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_bsp_led.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_bsp_uart.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\profiler_interface.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\low_power_config.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\retargetvirtual.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\sensor_descriptors.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\em_leuart.__cstat.et</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_prs_signals.h</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_bus.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\system_efm32hg.__cstat.et</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_i2c.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\em_cmu.o</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_prs.h</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_acmp.h</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_devinfo.h</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_adc.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\em_emu.o</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_prs_ch.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\em_system.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\hardware_routines.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\bsp_stk_leds.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\bsp_stk.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\low_power_config.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\hardware_config.o</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_calibrate.h</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_wdog.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\em_usart.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\em_system.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\em_ebi.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\em_core.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\device_init.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\retargetvirtual.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\em_cmu.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\em_acmp.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\cslib_config.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\bsp_trace.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\retargetio.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\profiler_interface.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\em_core.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\em_assert.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\em_acmp.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\bsp_bcc.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\comm_routines.pbi</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_dma_descriptor.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\sensor_descriptors.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\em_gpio.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\em_leuart.o</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_idac.h</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_acmp.h</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_usart.h</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_pcnt.h</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_af_pins.h</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_dmactrl.h</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_lesense.h</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_rtc.h</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_leuart.h</file>
+      <file>$PROJ_DIR$\..\..\kernel\base\include\los_base.ph</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_core.h</file>
+      <file>$PROJ_DIR$\..\..\kernel\include\los_mux.h</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_common.h</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_assert.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_api_msgqueue.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_api_msgqueue.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_api_dynamic_mem.__cstat.et</file>
+      <file>$PROJ_DIR$\..\..\kernel\include\los_errno.h</file>
+      <file>$PROJ_DIR$\..\..\kernel\include\los_queue.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_inspect_entry.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_bsp_key.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_bsp_adapter.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_bsp_uart.o</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdlib.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_api_mutex.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_api_msgqueue.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_api_list.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_api_event.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_api_dynamic_mem.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_api_interrupt.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_config.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_hw_tick.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_api_sem.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_api_systick.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_api_timer.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_hwi.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_hw.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_demo_entry.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_hw_tick.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_hwi.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_cmsis_main.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_hw.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_dispatch_iar.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_api_task.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_api_interrupt.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_api_static_mem.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_config.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_api_list.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_api_event.pbi</file>
+      <file>$PROJ_DIR$\..\..\example\include\los_api_static_mem.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_api_systick.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_demo_entry.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_api_mutex.pbi</file>
+      <file>$PROJ_DIR$\..\..\kernel\config\los_config.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_api_sem.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_startup_iar.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_bsp_adapter.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\los_bsp_led.o</file>
       <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\bspconfig.h</file>
       <file>$PROJ_DIR$\..\..\kernel\base\include\los_typedef.ph</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\libCSLIB_M0_IAR.a</file>
+      <file>$TOOLKIT_DIR$\config\linker\SiliconLaboratories\EFM32HG322F64.icf</file>
+      <file>$PROJ_DIR$\..\..\kernel\base\include\los_event.ph</file>
+      <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
+      <file>$TOOLKIT_DIR$\lib\dl6M_tln.a</file>
+      <file>$TOOLKIT_DIR$\lib\m6M_tl.a</file>
+      <file>$TOOLKIT_DIR$\lib\rt6M_tl.a</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\arm_math.h</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_rtc.h</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_timer.h</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_leuart.h</file>
+      <file>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\efm32hg_timer_cc.h</file>
+      <file>$PROJ_DIR$\..\..\kernel\cmsis\cmsis_liteos.c</file>
+      <file>$PROJ_DIR$\..\..\example\api\los_api_static_mem.c</file>
+      <file>$PROJ_DIR$\..\..\example\api\los_api_sem.c</file>
+      <file>$PROJ_DIR$\..\..\example\api\los_api_mutex.c</file>
+      <file>$PROJ_DIR$\..\..\example\api\los_api_event.c</file>
+      <file>$PROJ_DIR$\..\..\kernel\cpu\arm\cortex-m0+\los_dispatch_iar.s</file>
+      <file>$PROJ_DIR$\..\..\kernel\config\los_config.c</file>
+      <file>$PROJ_DIR$\..\..\example\api\los_api_list.c</file>
+      <file>$PROJ_DIR$\..\..\example\api\los_api_msgqueue.c</file>
+      <file>$PROJ_DIR$\..\..\example\api\los_api_dynamic_mem.c</file>
+      <file>$PROJ_DIR$\..\..\kernel\cpu\arm\cortex-m0+\los_hwi.c</file>
+      <file>$PROJ_DIR$\..\..\example\api\los_api_interrupt.c</file>
+      <file>$PROJ_DIR$\..\..\kernel\cpu\arm\cortex-m0+\los_hw_tick.c</file>
+      <file>$PROJ_DIR$\..\..\kernel\cpu\arm\cortex-m0+\los_hw.c</file>
+      <file>$PROJ_DIR$\..\..\example\api\los_demo_entry.c</file>
+      <file>$PROJ_DIR$\..\..\kernel\base\mem\los_memory.c</file>
+      <file>$PROJ_DIR$\..\..\kernel\base\mem\los_membox.c</file>
+      <file>$PROJ_DIR$\..\..\example\api\los_cmsis_main.c</file>
+      <file>$PROJ_DIR$\..\..\example\api\los_api_timer.c</file>
+      <file>$PROJ_DIR$\..\..\example\api\los_inspect_entry.c</file>
+      <file>$PROJ_DIR$\..\..\kernel\base\ipc\los_event.c</file>
+      <file>$PROJ_DIR$\..\..\example\api\los_api_task.c</file>
+      <file>$PROJ_DIR$\..\..\example\api\los_api_systick.c</file>
     </outputs>
     <file>
-      <name>$PROJ_DIR$\..\..\kernel\cpu\arm\cortex-m0+\los_dispatch_iar.s</name>
+      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\los_bsp_uart.c</name>
       <outputs>
         <tool>
-          <name>AARM</name>
-          <file> 238</file>
+          <name>ICCARM</name>
+          <file> 364</file>
         </tool>
-      </outputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\kernel\cpu\arm\cortex-m0+\los_hw.c</name>
-      <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 244</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 239</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 273</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 404 407 149 212 21 264 135 408 129 130 211 151 143 155 226 145 195 127 207 128 215 147 200 188 153 146 262 20</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 151 408 149 226 404 195 129 127 130 200 188 128 215 212 207 145 264 143 153 407 211 146 147 135 155 262 21 20</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\kernel\cmsis\cmsis_liteos.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 191</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 197</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 279</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 146 155 128 153 151 154 214 129 215 127 145 149 207 150 152 140 133 408 404 141 147 211 142 144 143 195 204 130 212 226 403 407 209 200 188 264 260 263 262 208</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 209 133 129 127 130 200 188 128 215 204 212 147 151 408 149 226 404 195 207 145 264 150 211 407 154 143 153 146 260 142 263 152 403 144 141 155 262 140 214 208</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\kernel\config\los_config.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 250</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 234</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 278</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 211 151 129 404 408 149 188 145 143 264 212 146 226 195 127 207 200 153 407 130 128 215 147</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 407 151 408 149 226 404 195 129 127 130 200 188 128 215 212 207 145 264 211 146 143 153 147</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>[ROOT_NODE]</name>
-      <outputs>
-        <tool>
-          <name>ILINK</name>
-          <file> 398 120</file>
-        </tool>
-      </outputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\kernel\cpu\arm\cortex-m0+\los_hw_tick.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 249</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 242</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 270</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 195 149 226 207 128 151 211 146 215 127 129 143 408 145 141 264 404 212 130 153 407 140 200 188 147</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 140 146 264 149 408 151 226 404 195 129 127 130 200 188 128 215 212 207 145 143 153 407 211 147 141</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\example\api\los_api_interrupt.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 236</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 251</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 282</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 145 129 408 149 127 24 151 226 195 207 130 208 420 407 404 264 212 128 215 211 200 188 419 214</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 211 151 408 149 226 404 195 129 127 130 200 188 128 215 212 207 145 264 407 24 419 214 208 420</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\kernel\cpu\arm\cortex-m0+\los_hwi.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 245</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 241</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 271</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 207 264 407 149 195 129 404 130 188 151 408 226 145 127 128 200 211 212 215</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 211 151 408 149 226 404 195 129 127 130 200 188 128 215 212 207 145 264 407</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\example\api\los_api_event.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 232</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 253</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 280</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 151 408 149 212 128 129 145 215 127 27 226 195 147 419 208 153 420 214 404 264 130 407 211 207 200 188 146</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 147 151 408 149 226 404 195 129 127 130 200 188 128 215 212 207 145 264 153 407 211 146 27 419 214 208 420</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\example\api\los_api_dynamic_mem.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 185</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 252</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 265</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 404 127 420 418 128 130 149 212 226 417 129 215 195 207 151 264 208 218 200 188 408 145 419 214</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 218 129 127 130 200 188 128 215 212 226 149 408 404 195 207 418 151 145 264 417 419 214 208 420</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\example\api\los_api_list.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 233</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 254</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 275</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 188 214 418 264 212 151 129 218 420 149 404 127 208 195 226 29 408 207 200 419 145 130 128 215</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 145 151 408 149 226 404 195 129 127 130 200 188 128 215 212 207 264 218 418 29 419 214 208 420</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\example\api\los_api_msgqueue.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 257</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 255</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 266</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 149 127 420 151 263 264 145 141 404 195 207 129 200 153 211 147 28 408 226 188 146 407 419 214 212 130 128 215 208</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 151 408 149 226 404 195 129 127 130 200 188 128 215 212 207 145 264 153 407 211 146 147 141 263 28 419 214 208 420</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\example\api\los_api_mutex.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 227</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 256</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 268</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 127 215 264 407 129 149 404 212 128 14 153 408 151 145 208 420 214 226 195 130 211 146 419 260 207 200 188 147</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 260 151 408 149 226 404 195 129 127 130 200 188 128 215 212 207 145 264 407 211 153 146 147 14 419 214 208 420</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\example\api\los_api_sem.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 225</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 248</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 267</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 149 151 420 145 264 208 211 214 404 408 195 207 129 200 262 10 153 226 127 188 146 407 419 212 403 130 128 215 147</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 403 151 408 149 226 404 195 129 127 130 200 188 128 215 212 207 145 264 153 407 211 146 147 262 10 419 214 208 420</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\example\api\los_api_static_mem.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 134</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 235</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 292</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 215 127 212 128 129 226 404 231 130 208 150 420 207 200 188 149 195 408 419 214</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 195 129 127 130 200 188 128 215 212 207 150 226 149 408 404 231 419 214 208 420</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\example\api\los_api_systick.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 230</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 247</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 297</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 151 127 129 226 195 11 408 145 149 188 407 208 153 420 211 404 264 207 200 147 212 130 128 215 146 419 214</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 407 151 408 149 226 404 195 129 127 130 200 188 128 215 212 207 145 264 211 153 146 147 11 419 214 208 420</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\example\api\los_api_task.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 203</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 237</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 299</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 145 212 214 420 127 226 151 153 136 146 149 419 137 17 129 138 215 408 404 264 139 130 128 200 188 407 147 195 207 211 208</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 139 129 136 127 130 200 188 128 215 138 137 212 153 151 408 149 226 404 195 207 145 264 407 211 146 147 17 419 214 208 420</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\example\api\los_api_timer.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 131</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 246</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 309</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 407 151 264 214 9 212 128 215 127 149 404 211 129 137 130 408 147 141 420 207 200 188 153 226 145 195 146 419 208</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 195 129 127 130 200 188 128 215 212 207 141 151 408 149 226 404 145 264 153 407 211 146 147 137 9 419 214 208 420</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\example\api\los_cmsis_main.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 205</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 240</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 306</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 204 129 128 215 127 133 130 212 209 200 188</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 209 133 129 127 130 200 188 128 215 204 212</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\example\api\los_demo_entry.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 228</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 243</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 288</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 145 215 404 129 24 419 10 214 226 149 417 27 11 127 146 408 212 151 153 17 231 28 14 9 29 208 130 128 200 188 407 147 264 195 207 211 15</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 15 149 408 419 214 129 127 130 200 188 128 215 212 208 17 417 231 24 28 27 14 10 9 11 29 153 151 226 404 195 207 145 264 407 211 146 147</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\example\api\los_inspect_entry.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 229</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 189</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 298</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 407 130 264 9 17 129 419 376 28 208 127 149 404 211 151 153 378 231 14 29 212 128 215 408 147 207 420 379 382 417 24 27 10 11 200 188 145 146 226 195 214 133</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 214 129 127 130 200 188 128 215 212 208 420 149 408 153 151 226 404 195 207 145 264 407 211 146 147 419 376 379 378 133 382 17 417 231 24 28 27 14 10 9 11 29</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\kernel\base\ipc\los_event.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 162</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 160</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 303</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 211 149 130 188 143 145 404 207 129 407 21 135 264 195 127 128 200 151 147 194 435 408 226 212 215 20 153 146</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 194 435 147 151 408 149 226 404 195 129 127 130 200 188 128 215 212 207 145 264 21 20 143 153 407 211 146 135</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\kernel\base\mem\los_membox.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 180</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 179</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 304</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 264 215 214 404 151 127 211 150 408 212 129 149 262 421 226 407 199 195 207 130 128 200 188 145 208</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 199 421 150 226 149 408 404 195 129 127 130 200 188 128 215 212 207 262 151 145 264 211 407 214 208</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\kernel\base\mem\los_memory.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 183</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 178</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 281</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 407 207 404 149 130 188 127 145 16 264 195 128 200 211 143 214 13 18 418 151 408 226 129 212 215 147 132 19 153 146 208</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 132 13 418 151 408 149 226 404 195 129 127 130 200 188 128 215 212 207 145 264 16 19 18 143 153 407 211 146 147 214 208</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\kernel\base\mem\los_memstat.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 184</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 177</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 311</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 151 146 212 128 149 226 195 215 127 129 145 18 408 153 143 407 147 404 264 130 206 207 200 188 211</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 206 18 149 408 143 153 151 226 404 195 129 127 130 200 188 128 215 212 207 145 264 407 211 146 147</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\kernel\base\misc\los_misc.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 198</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 201</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 301</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 145 129 408 149 127 262 407 143 151 226 195 207 188 211 155 404 264 212 200 147 130 128 215 153 146</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 262 151 408 149 226 404 195 129 127 130 200 188 128 215 212 207 145 264 155 407 211 143 153 146 147</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\kernel\base\mem\los_multipledlinkhead.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 182</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 181</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 289</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 19 149 404 130 188 16 151 264 195 207 129 145 408 226 127 128 200 213 212 215</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 213 16 19 151 408 149 226 404 195 129 127 130 200 188 128 215 212 207 145 264</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\kernel\base\ipc\los_mux.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 187</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 157</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 277</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 145 151 149 127 135 143 408 404 129 21 153 146 226 212 215 211 407 13 154 260 147 264 195 207 130 128 200 188 20 196 418</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 196 154 143 153 151 408 149 226 404 195 129 127 130 200 188 128 215 212 207 145 264 407 211 146 147 260 13 418 21 20 135</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\kernel\base\core\los_priqueue.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 171</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 167</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 283</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 215 127 129 145 211 151 408 149 212 128 143 226 195 407 262 418 21 20 404 264 130 147 272 207 200 188 153 146</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 272 21 20 145 151 408 149 226 404 195 129 127 130 200 188 128 215 212 207 264 262 143 153 407 211 146 147 418</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\kernel\base\ipc\los_queue.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 186</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 159</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 302</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 408 145 263 404 129 214 127 226 143 151 149 13 135 142 212 215 421 21 211 264 195 207 130 128 200 188 150 20 153 146 163 418 407 147 208</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 163 142 263 151 408 149 226 404 195 129 127 130 200 188 128 215 212 207 145 264 421 150 13 418 21 20 143 153 407 211 146 147 135 214 208</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\kernel\base\ipc\los_sem.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 190</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 161</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 291</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 151 149 145 127 147 155 408 404 129 13 135 153 226 212 215 407 211 262 21 143 152 403 264 195 207 130 128 200 188 146 20 192 418</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 192 152 403 151 408 149 226 404 195 129 127 130 200 188 128 215 212 207 145 264 153 407 211 146 147 262 13 418 21 20 155 143 135</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\kernel\base\core\los_swtmr.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 172</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 164</file>
+          <file> 12</file>
         </tool>
         <tool>
           <name>__cstat</name>
@@ -1264,187 +463,25 @@
       </outputs>
       <inputs>
         <tool>
-          <name>BICOMP</name>
-          <file> 226 145 212 214 151 129 142 141 215 149 127 421 211 144 408 404 262 13 143 153 264 195 207 130 128 200 188 146 418 274 407 147 150 263 208</file>
+          <name>ICCARM</name>
+          <file> 159 25 243 244 242 20 32 245 4 3 13 1 14 232 410 287 238 282 283 284 280 233 235 236 260 215 246 249 250 251 213 248 247 261 262 414 412 343 344 312 307 342 258 259 256 310 350 345 305 349 320 253 338 309 257 319 302 255 347 254 346 102 109</file>
         </tool>
         <tool>
-          <name>ICCARM</name>
-          <file> 274 144 141 151 408 149 226 404 195 129 127 130 200 188 128 215 212 207 145 264 153 407 211 146 147 262 421 150 13 418 142 263 143 214 208</file>
+          <name>BICOMP</name>
+          <file> 287 244 319 312 243 242 248 345 283 102 25 249 414 259 253 284 236 3 245 4 215 251 261 343 342 310 349 309 255 346 233 282 232 1 13 20 32 14 410 260 246 250 213 247 262 412 344 307 258 256 350 305 320 338 257 302 347 254 238 280 235 159 109</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\kernel\base\core\los_sys.c</name>
+      <name>$PROJ_DIR$\..\..\user\main.c</name>
       <outputs>
         <tool>
-          <name>BICOMP</name>
-          <file> 173</file>
-        </tool>
-        <tool>
           <name>ICCARM</name>
-          <file> 166</file>
+          <file> 366</file>
         </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 307</file>
-        </tool>
-      </outputs>
-      <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 129 404 408 149 407 264 212 200 127 211 151 140 155 262 226 145 195 207 188 276 130 128 215 146</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 276 155 262 151 408 149 226 404 195 129 127 130 200 188 128 215 212 207 145 264 407 211 140 146</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\kernel\base\core\los_task.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 174</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 169</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 310</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 407 214 264 152 149 195 127 130 188 153 13 135 143 151 147 404 207 129 211 262 21 154 145 146 408 226 212 128 200 418 260 269 215 20 403 208</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 269 143 153 151 408 149 226 404 195 129 127 130 200 188 128 215 212 207 145 264 407 211 146 147 262 13 418 21 20 152 403 154 260 135 214 208</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\kernel\base\core\los_tick.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 175</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 165</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 305</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 404 149 200 141 151 144 195 127 128 129 146 262 143 140 264 408 207 130 188 145 405 22 226 212 215 153 407 147 211</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 405 140 146 264 149 408 262 151 226 404 195 129 127 130 200 188 128 215 212 207 145 144 141 153 407 211 147 143 22</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\kernel\base\core\los_timeslice.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 176</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 170</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 308</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 404 151 149 212 407 264 188 140 408 129 147 143 437 262 226 145 195 127 207 200 211 155 130 128 215 153 146</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 155 262 151 408 149 226 404 195 129 127 130 200 188 128 215 212 207 145 264 407 211 143 153 146 147 140 437</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\bsp_bcc.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 88</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 30</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 286</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 113 118 101 409 125 62 65 214 61 51 129 200 127 122 425 116 105 133 56 188 428 126 158 423 68 114 103 98 115 108 406 413 136 63 55 52 415 212 208 130 128 215 111 156 123 121 124 422 424 109 66 106 112 102 110 104 119 100 99 117 107 139 412 410 138 436 258 416</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 214 129 127 130 200 188 128 215 212 208 61 111 428 406 133 412 409 410 413 139 136 138 113 156 126 123 122 121 158 124 125 422 423 424 425 109 68 66 101 106 114 112 116 102 103 110 62 104 98 119 105 100 115 99 65 117 108 118 107 56 55 258 63 52 51 436 416 415</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\bsp_stk.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 86</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 35</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 300</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 101 409 113 118 125 62 65 214 61 51 129 200 127 122 425 116 105 133 56 188 428 126 158 423 68 114 103 98 115 108 406 413 136 63 55 52 212 208 130 128 215 111 156 123 121 124 422 424 109 66 106 112 102 110 104 119 100 99 117 107 139 412 410 138 436 258 415 416</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 214 129 127 130 200 188 128 215 212 208 61 111 428 406 133 412 409 410 413 139 136 138 113 156 126 123 122 121 158 124 125 422 423 424 425 109 68 66 101 106 114 112 116 102 103 110 62 104 98 119 105 100 115 99 65 117 108 118 107 56 55 258 63 52 51 436 416 415</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\bsp_stk_leds.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 87</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 34</file>
+          <file> 223</file>
         </tool>
         <tool>
           <name>__cstat</name>
@@ -1453,741 +490,12 @@
       </outputs>
       <inputs>
         <tool>
-          <name>BICOMP</name>
-          <file> 116 122 409 425 105 127 129 200 61 113 125 101 62 65 118 214 410 212 138 52 428 126 158 423 68 114 103 98 115 108 406 133 413 188 208 63 55 56 51 111 156 123 121 124 422 424 109 66 106 112 102 110 104 119 100 99 117 107 139 412 130 128 215 136 436 258 415 416</file>
-        </tool>
-        <tool>
           <name>ICCARM</name>
-          <file> 61 111 428 406 133 129 127 130 200 188 128 215 412 409 410 413 214 212 208 139 136 138 113 156 126 123 122 121 158 124 125 422 423 424 425 109 68 66 101 106 114 112 116 102 103 110 62 104 98 119 105 100 115 99 65 117 108 118 107 56 55 258 63 52 51 436 416 415</file>
+          <file> 286 220 285 222 396 264 25 243 244 242 20 32 245 4 3 13 224 359 5 225 226 218 231 161 165 238 159 1 14 273 130 274 145 276 392 141 136 137 148 155 152 153 135 292 103 104</file>
         </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\bsp_trace.c</name>
-      <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 89</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 36</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 284</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 126 114 133 423 98 108 129 208 57 428 158 68 103 115 406 413 188 258 55 52 113 122 125 425 101 116 62 105 65 118 214 127 200 410 409 212 138 61 56 51 111 156 123 121 124 422 424 109 66 106 112 102 110 104 119 100 99 117 107 139 412 130 128 215 136 63 436 415 416</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 55 61 111 428 406 133 129 127 130 200 188 128 215 412 409 410 413 214 212 208 139 136 138 113 156 126 123 122 121 158 124 125 422 423 424 425 109 68 66 101 106 114 112 116 102 103 110 62 104 98 119 105 100 115 99 65 117 108 118 107 52 63 258 56 57 51 436 416 415</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\comm_routines.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 90</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 37</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 285</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 129 62 65 125 214 113 101 118 60 127 200 122 425 116 105 409 218 133 188 207 212 428 126 158 423 68 114 103 98 115 108 406 413 138 195 61 130 128 215 111 156 123 121 124 422 424 109 66 106 112 102 110 104 119 100 99 117 107 139 412 410 208 136 59 54</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 59 133 129 127 130 200 188 128 215 195 212 207 218 61 111 428 406 412 409 410 413 214 208 139 136 138 113 156 126 123 122 121 158 124 125 422 423 424 425 109 68 66 101 106 114 112 116 102 103 110 62 104 98 119 105 100 115 99 65 117 108 118 107 60 54</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\cslib_config.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 91</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 38</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 294</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 129 188 392 133 127 200 411 130 128 215</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 411 392 133 129 127 130 200 188 128 215</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\device_init.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 92</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 39</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 293</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 214 125 127 62 65 129 200 113 101 118 133 409 392 122 425 116 105 413 410 212 138 63 61 57 428 126 158 423 68 114 103 98 115 108 406 188 208 55 400 58 111 156 123 121 124 422 424 109 66 106 112 102 110 104 119 100 99 117 107 139 412 130 128 215 136 193 52 258</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 61 111 428 406 133 129 127 130 200 188 128 215 412 409 410 413 214 212 208 139 136 138 113 156 126 123 122 121 158 124 125 422 423 424 425 109 68 66 101 106 114 112 116 102 103 110 62 104 98 119 105 100 115 99 65 117 108 118 107 400 193 55 52 63 258 57 58 392</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_acmp.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 93</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 69</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 290</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 123 112 128 424 119 129 215 127 63 133 111 406 124 66 110 99 136 156 121 422 109 106 102 104 100 117 107 139 412 130 409 61 55 258 428 113 126 122 158 125 423 425 68 101 114 116 103 62 98 105 115 65 108 118 214 413 200 188 410 212 208 138 70</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 70 61 111 428 406 133 129 127 130 200 188 128 215 412 409 410 413 214 212 208 139 136 138 113 156 126 123 122 121 158 124 125 422 423 424 425 109 68 66 101 106 114 112 116 102 103 110 62 104 98 119 105 100 115 99 65 117 108 118 107 55 63 258</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_assert.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 95</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 33</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 287</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 258 55</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 258 55</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_cmu.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 72</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 71</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 314</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 110 124 127 129 259 111 406 66 99 55 258 123 424 112 119 128 215 204 25 156 121 422 109 106 102 104 100 117 107 139 412 130 409 138 23 63 193 61 428 113 126 122 158 125 423 425 68 101 114 116 103 62 98 105 115 65 108 118 214 133 413 200 188 410 212 208 136 56</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 56 61 111 428 406 133 129 127 130 200 188 128 215 412 409 410 413 214 212 208 139 136 138 113 156 126 123 122 121 158 124 125 422 423 424 425 109 68 66 101 106 114 112 116 102 103 110 62 104 98 119 105 100 115 99 65 117 108 118 107 55 258 63 204 23 25 193 259</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_core.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 94</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 73</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 315</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 105 127 425 129 200 122 116 409 55 113 125 101 62 65 118 214 410 212 138 61 428 126 158 423 68 114 103 98 115 108 406 133 413 188 208 258 259 111 156 123 121 124 422 424 109 66 106 112 102 110 104 119 100 99 117 107 139 412 130 128 215 136 261</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 261 61 111 428 406 133 129 127 130 200 188 128 215 412 409 410 413 214 212 208 139 136 138 113 156 126 123 122 121 158 124 125 422 423 424 425 109 68 66 101 106 114 112 116 102 103 110 62 104 98 119 105 100 115 99 65 117 108 118 107 259 55 258</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_ebi.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 96</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 31</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 312</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 423 208 98 108 129 126 114 133 428 158 68 103 115 406 413 188 61 113 122 125 425 101 116 62 105 65 118 214 127 200 410 409 212 138 111 156 123 121 124 422 424 109 66 106 112 102 110 104 119 100 99 117 107 139 412 130 128 215 136 26</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 26 61 111 428 406 133 129 127 130 200 188 128 215 412 409 410 413 214 212 208 139 136 138 113 156 126 123 122 121 158 124 125 422 423 424 425 109 68 66 101 106 114 112 116 102 103 110 62 104 98 119 105 100 115 99 65 117 108 118 107</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_emu.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 40</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 74</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 313</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 200 129 124 110 409 127 111 406 66 99 55 56 123 424 112 119 410 212 138 259 188 63 156 121 422 109 106 102 104 100 117 107 139 412 208 25 193 258 130 128 215 61 428 113 126 122 158 125 423 425 68 101 114 116 103 62 98 105 115 65 108 118 214 133 413 136 23</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 23 129 127 130 200 188 128 215 25 61 111 428 406 133 412 409 410 413 214 212 208 139 136 138 113 156 126 123 122 121 158 124 125 422 423 424 425 109 68 66 101 106 114 112 116 102 103 110 62 104 98 119 105 100 115 99 65 117 108 118 107 55 63 56 258 193 259</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_gpio.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 42</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 75</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 402</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 114 133 126 423 98 108 129 208 428 158 68 103 115 406 413 188 61 63 113 122 125 425 101 116 62 105 65 118 214 127 200 410 409 212 138 55 258 111 156 123 121 124 422 424 109 66 106 112 102 110 104 119 100 99 117 107 139 412 130 128 215 136 52</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 52 61 111 428 406 133 129 127 130 200 188 128 215 412 409 410 413 214 212 208 139 136 138 113 156 126 123 122 121 158 124 125 422 423 424 425 109 68 66 101 106 114 112 116 102 103 110 62 104 98 119 105 100 115 99 65 117 108 118 107 55 63 258</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_leuart.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 41</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 76</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 389</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 127 425 200 129 105 61 55 122 116 409 258 113 125 101 62 65 118 214 410 212 138 428 126 158 423 68 114 103 98 115 108 406 133 413 188 208 63 56 111 156 123 121 124 422 424 109 66 106 112 102 110 104 119 100 99 117 107 139 412 130 128 215 136 426</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 426 61 111 428 406 133 129 127 130 200 188 128 215 412 409 410 413 214 212 208 139 136 138 113 156 126 123 122 121 158 124 125 422 423 424 425 109 68 66 101 106 114 112 116 102 103 110 62 104 98 119 105 100 115 99 65 117 108 118 107 55 56 258 63</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_rtc.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 43</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 32</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 395</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 214 125 212 138 62 65 127 113 101 118 410 129 63 122 425 116 105 200 409 61 428 126 158 423 68 114 103 98 115 108 406 133 413 188 208 258 55 111 156 123 121 124 422 424 109 66 106 112 102 110 104 119 100 99 117 107 139 412 130 128 215 136 427</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 427 61 111 428 406 133 129 127 130 200 188 128 215 412 409 410 413 214 212 208 139 136 138 113 156 126 123 122 121 158 124 125 422 423 424 425 109 68 66 101 106 114 112 116 102 103 110 62 104 98 119 105 100 115 99 65 117 108 118 107 55 258 63</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_system.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 97</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 77</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 396</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 423 208 133 98 108 129 126 114 428 158 68 103 115 406 413 188 204 55 113 122 125 425 101 116 62 105 65 118 214 127 200 410 409 212 136 258 61 111 156 123 121 124 422 424 109 66 106 112 102 110 104 119 100 99 117 107 139 412 130 128 215 138 193</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 193 55 61 111 428 406 133 129 127 130 200 188 128 215 412 409 410 413 214 212 208 139 136 138 113 156 126 123 122 121 158 124 125 422 423 424 425 109 68 66 101 106 114 112 116 102 103 110 62 104 98 119 105 100 115 99 65 117 108 118 107 258 204</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_usart.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 44</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 78</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 401</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 214 125 212 138 62 65 127 61 113 101 118 410 129 63 122 425 116 105 200 409 428 126 158 423 68 114 103 98 115 108 406 133 413 188 208 56 258 55 111 156 123 121 124 422 424 109 66 106 112 102 110 104 119 100 99 117 107 139 412 130 128 215 136 415</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 415 61 111 428 406 133 129 127 130 200 188 128 215 412 409 410 413 214 212 208 139 136 138 113 156 126 123 122 121 158 124 125 422 423 424 425 109 68 66 101 106 114 112 116 102 103 110 62 104 98 119 105 100 115 99 65 117 108 118 107 55 56 258 63</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\hardware_config.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 45</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 79</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 399</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 103 61 158 406 129 428 68 115 413 188 126 423 114 98 108 133 208 411 67 113 122 125 425 101 116 62 105 65 118 214 127 200 410 409 212 138 63 4 52 111 156 123 121 124 422 424 109 66 106 112 102 110 104 119 100 99 117 107 139 412 130 128 215 136 414 55 258</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 414 67 61 111 428 406 133 129 127 130 200 188 128 215 412 409 410 413 214 212 208 139 136 138 113 156 126 123 122 121 158 124 125 422 423 424 425 109 68 66 101 106 114 112 116 102 103 110 62 104 98 119 105 100 115 99 65 117 108 118 107 52 55 63 258 4 411</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\hardware_routines.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 53</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 80</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 397</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 126 114 129 70 423 98 108 188 392 428 158 68 103 115 406 208 55 411 56 113 122 125 425 101 116 62 105 65 118 214 133 413 127 200 410 409 212 138 414 6 4 25 427 111 156 123 121 124 422 424 109 66 106 112 102 110 104 119 100 99 117 107 139 412 130 128 215 136 67 61 63 258 52</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 61 111 428 406 133 129 127 130 200 188 128 215 412 409 410 413 214 212 208 139 136 138 113 156 126 123 122 121 158 124 125 422 423 424 425 109 68 66 101 106 114 112 116 102 103 110 62 104 98 119 105 100 115 99 65 117 108 118 107 414 67 52 55 63 258 411 6 392 4 56 25 70 427</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\low_power_config.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 46</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 85</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 316</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 105 425 413 410 129 55 258 122 116 212 138 127 133 63 392 67 113 125 101 62 65 118 214 200 409 414 6 25 428 126 158 423 68 114 103 98 115 108 406 188 208 61 52 400 411 4 70 56 427 111 156 123 121 124 422 424 109 66 106 112 102 110 104 119 100 99 117 107 139 412 130 128 215 136 193</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 61 111 428 406 133 129 127 130 200 188 128 215 412 409 410 413 214 212 208 139 136 138 113 156 126 123 122 121 158 124 125 422 423 424 425 109 68 66 101 106 114 112 116 102 103 110 62 104 98 119 105 100 115 99 65 117 108 118 107 400 193 55 52 63 258 414 67 411 392 4 6 70 56 25 427</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\profiler_interface.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 47</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 81</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 385</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 195 133 59 129 128 215 127 212 392 8 130 411 200 188 207</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 411 392 133 129 127 130 200 188 128 215 59 8 195 212 207</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\retargetio.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 50</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 82</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 393</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 200 212 128 129 133 127 130 188 12 215</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 12 212 129 127 130 200 188 128 215 133</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\retargetvirtual.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 48</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 83</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 391</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 425 129 105 127 415 122 116 259 52 130 113 125 101 62 65 118 214 409 55 56 60 212 128 215 428 126 158 423 68 114 103 98 115 108 406 133 413 138 258 61 261 111 207 200 188 156 123 121 124 422 424 109 66 106 112 102 110 104 119 100 99 117 107 139 412 410 208 136 195 63 54</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 195 129 127 130 200 188 128 215 212 207 61 111 428 406 133 412 409 410 413 214 208 139 136 138 113 156 126 123 122 121 158 124 125 422 423 424 425 109 68 66 101 106 114 112 116 102 103 110 62 104 98 119 105 100 115 99 65 117 108 118 107 56 55 258 63 261 259 52 60 54 415</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\sensor_descriptors.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 49</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 84</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 390</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 129 127 133 212 215 195 207 130 128 200 188 411 8</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 411 195 129 127 130 200 188 128 215 212 207 133 8</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\system_efm32hg.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 5</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 7</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 64</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 110 127 124 212 138 129 200 111 406 66 99 410 123 424 112 119 409 188 156 121 422 109 106 102 104 100 117 107 139 412 208 61 130 128 215 428 113 126 122 158 125 423 425 68 101 114 116 103 62 98 105 115 65 108 118 214 133 413 136</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 133 129 127 130 200 188 128 215 61 111 428 406 412 409 410 413 214 212 208 139 136 138 113 156 126 123 122 121 158 124 125 422 423 424 425 109 68 66 101 106 114 112 116 102 103 110 62 104 98 119 105 100 115 99 65 117 108 118 107</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\los_bsp_adapter.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 219</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 223</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 394</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 62 65 409 125 214 145 382 127 113 101 118 406 151 129 130 122 425 116 105 410 138 379 141 212 128 215 428 126 158 423 68 114 103 98 115 108 133 413 408 147 61 376 378 140 143 211 207 200 188 208 111 156 123 121 124 422 424 109 66 106 112 102 110 104 119 100 99 117 107 139 412 136 195 149 226 404 407 146 264 153</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 195 129 127 130 200 188 128 215 212 207 214 208 61 111 428 406 133 412 409 410 413 139 136 138 113 156 126 123 122 121 158 124 125 422 423 424 425 109 68 66 101 106 114 112 116 102 103 110 62 104 98 119 105 100 115 99 65 117 108 118 107 376 379 378 382 140 146 264 149 408 151 226 404 145 143 153 407 211 147 141</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\los_bsp_key.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 216</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 221</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 386</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 409 412 258 100 188 109 121 102 406 129 156 422 106 104 117 107 139 133 55 56 127 200 111 123 124 424 66 112 110 119 99 136 52 436 130 128 215 61 63 428 113 126 122 158 125 423 425 68 101 114 116 103 62 98 105 115 65 108 118 214 413 410 212 208 138 378 416</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 378 133 129 127 130 200 188 128 215 56 61 111 428 406 412 409 410 413 214 212 208 139 136 138 113 156 126 123 122 121 158 124 125 422 423 424 425 109 68 66 101 106 114 112 116 102 103 110 62 104 98 119 105 100 115 99 65 117 108 118 107 55 258 63 52 436 416</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\los_bsp_led.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 202</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 222</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 388</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 98 108 423 129 126 114 133 436 128 215 127 61 428 158 68 103 115 406 413 136 51 415 130 113 122 125 425 101 116 62 105 65 118 214 409 55 416 200 188 111 156 123 121 124 422 424 109 66 106 112 102 110 104 119 100 99 117 107 139 412 410 212 208 138 379</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 379 51 55 436 416 133 129 127 130 200 188 128 215 415 61 111 428 406 412 409 410 413 214 212 208 139 136 138 113 156 126 123 122 121 158 124 125 422 423 424 425 109 68 66 101 106 114 112 116 102 103 110 62 104 98 119 105 100 115 99 65 117 108 118 107</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\los_bsp_uart.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 210</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 220</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 317</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 406 127 99 66 129 130 124 110 409 60 195 123 424 112 119 410 138 212 128 215 156 121 422 109 106 102 104 100 117 107 139 412 111 214 207 200 188 208 428 113 126 122 158 125 423 425 68 101 114 116 103 62 98 105 115 65 108 118 133 413 136 382 54</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 382 195 129 127 130 200 188 128 215 212 207 214 208 111 428 406 133 412 409 410 413 139 136 138 113 156 126 123 122 121 158 124 125 422 423 424 425 109 68 66 101 106 114 112 116 102 103 110 62 104 98 119 105 100 115 99 65 117 108 118 107 60 54</file>
+          <file> 243 264 224 148 130 222 244 25 238 161 103 359 32 1 226 159 5 285 13 20 286 225 392 135 274 396 165 273 292 104 220 3 242 245 4 218 231 145 136 152 14 276 141 137 155 153</file>
         </tool>
       </inputs>
     </file>
@@ -2196,34 +504,1114 @@
       <outputs>
         <tool>
           <name>AARM</name>
-          <file> 224</file>
+          <file> 398</file>
         </tool>
       </outputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\user\main.c</name>
+      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\los_bsp_led.c</name>
       <outputs>
         <tool>
-          <name>BICOMP</name>
-          <file> 148</file>
+          <name>ICCARM</name>
+          <file> 400</file>
         </tool>
         <tool>
-          <name>ICCARM</name>
-          <file> 217</file>
+          <name>BICOMP</name>
+          <file> 21</file>
         </tool>
         <tool>
           <name>__cstat</name>
-          <file> 387</file>
+          <file> 294</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
-          <name>BICOMP</name>
-          <file> 129 404 145 14 15 149 127 195 133 379 59 264 188 214 143 382 211 408 207 200 407 146 231 29 419 226 378 420 392 58 151 212 130 128 215 153 147 17 28 9 208 417 24 27 10 11</file>
+          <name>ICCARM</name>
+          <file> 161 112 106 401 277 238 243 244 242 20 32 245 4 278 101 232 410 287 282 283 284 280 1 3 14 233 235 236 260 215 246 249 250 251 213 248 247 261 262 414 412 343 344 312 307 342 258 259 256 310 350 345 305 349 320 253 338 309 257 319 302 255 347 254 346</file>
         </tool>
         <tool>
+          <name>BICOMP</name>
+          <file> 320 347 262 243 246 258 238 401 245 4 244 101 410 213 344 350 257 287 280 235 112 278 242 260 250 247 412 307 256 305 338 302 254 1 283 106 277 20 32 232 215 249 251 248 261 414 343 312 342 259 310 345 349 253 309 319 255 346 233 282 284 3 14 236 161</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\los_bsp_key.c</name>
+      <outputs>
+        <tool>
           <name>ICCARM</name>
-          <file> 407 151 408 149 226 404 195 129 127 130 200 188 128 215 212 207 145 264 211 146 143 153 147 379 378 133 382 214 208 420 15 419 17 417 231 24 28 27 14 10 9 11 29 392 59 58</file>
+          <file> 362</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 0</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 293</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 165 238 243 244 242 20 32 245 4 105 101 232 410 287 282 283 284 280 1 3 14 233 235 236 260 215 246 249 250 251 213 248 247 261 262 414 412 343 344 312 307 342 258 259 256 310 350 345 305 349 320 253 338 309 257 319 302 255 347 254 346 106 355 303 111 401 277</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 283 282 355 309 32 343 251 310 287 243 215 261 342 349 255 346 233 238 106 105 244 20 232 249 248 414 312 259 345 253 319 235 111 401 242 245 4 101 303 410 260 246 250 213 247 262 412 344 307 258 256 350 305 320 338 257 302 347 254 1 280 284 3 14 236 165 277</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\los_bsp_adapter.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 399</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 363</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 290</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 25 243 244 242 20 32 245 4 3 13 1 14 101 232 410 287 238 282 283 284 280 233 235 236 260 215 246 249 250 251 213 248 247 261 262 414 412 343 344 312 307 342 258 259 256 310 350 345 305 349 320 253 338 309 257 319 302 255 347 254 346 167 161 165 159 229 225 359 222 285 220 396 264 224 226 218 286 5 231 230</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 305 302 283 247 1 224 159 244 260 307 254 287 220 243 242 250 412 256 338 284 236 161 230 3 245 4 410 246 213 262 344 258 350 320 257 347 238 280 285 231 101 167 165 229 226 5 13 20 32 14 232 215 249 251 248 261 414 343 312 342 259 310 345 349 253 309 319 255 346 233 282 235 25 222 396 264 286 225 359 218</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\system_efm32hg.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 156</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 158</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 304</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 238 243 244 242 20 32 245 4 101 232 410 287 282 283 284 280 1 3 14 233 235 236 260 215 246 249 250 251 213 248 247 261 262 414 412 343 344 312 307 342 258 259 256 310 350 345 305 349 320 253 338 309 257 319 302 255 347 254 346</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 345 244 248 3 236 243 20 232 287 312 319 284 249 414 259 253 283 32 215 251 261 343 342 310 349 309 255 346 233 282 14 101 242 245 4 410 260 246 250 213 247 262 412 344 307 258 256 350 305 320 338 257 302 347 254 1 238 280 235</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\sensor_descriptors.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 339</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 114</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 300</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 281 25 243 244 242 20 32 245 4 3 13 238 150</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 243 244 238 3 4 25 13 242 245 20 32 281 150</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\retargetvirtual.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 326</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 115</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 299</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 25 243 244 242 20 32 245 4 3 13 101 232 410 287 238 282 283 284 280 1 14 233 235 236 260 215 246 249 250 251 213 248 247 261 262 414 412 343 344 312 307 342 258 259 256 310 350 345 305 349 320 253 338 309 257 319 302 255 347 254 346 105 106 355 303 352 354 111 102 109 278</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 412 243 338 244 278 250 256 354 111 242 260 247 307 305 302 254 1 283 106 105 102 3 245 4 410 246 213 262 344 258 350 320 257 347 287 238 280 236 355 101 352 232 13 20 32 215 249 251 248 261 414 343 312 342 259 310 345 349 253 309 319 255 346 233 282 284 14 235 25 303 109</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\retargetio.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 331</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 113</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 291</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 151 3 243 244 242 20 32 245 4 238</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 20 3 245 243 238 244 242 32 151 4</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\profiler_interface.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 332</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 116</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 297</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 281 292 238 243 244 242 20 32 245 4 103 150 25 3 13</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 25 238 103 243 245 4 244 3 292 150 242 281 20 32 13</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\low_power_config.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 317</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 117</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 298</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 101 232 410 287 238 243 244 242 20 32 245 4 282 283 284 280 1 3 14 233 235 236 260 215 246 249 250 251 213 248 247 261 262 414 412 343 344 312 307 342 258 259 256 310 350 345 305 349 320 253 338 309 257 319 302 255 347 254 346 268 28 106 111 303 355 279 348 281 292 157 149 308 105 139 411</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 338 412 280 284 243 106 355 250 256 3 236 244 238 303 292 348 260 247 307 305 302 254 1 20 283 279 149 139 410 246 213 262 344 258 350 320 257 347 287 32 14 101 111 268 281 157 308 105 411 232 215 249 251 248 261 414 343 312 342 259 310 345 349 253 309 319 255 346 233 282 242 245 4 235 28</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\hardware_routines.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 314</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 110</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 271</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 101 232 410 287 238 243 244 242 20 32 245 4 282 283 284 280 1 3 14 233 235 236 260 215 246 249 250 251 213 248 247 261 262 414 412 343 344 312 307 342 258 259 256 310 350 345 305 349 320 253 338 309 257 319 302 255 347 254 346 279 348 111 106 303 355 281 149 292 157 105 139 308 411</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 246 258 243 308 262 320 347 32 292 410 213 344 350 257 287 14 106 281 105 260 250 247 412 307 256 305 338 302 254 1 238 280 244 20 284 283 3 236 279 149 157 139 411 232 215 249 251 248 261 414 343 312 342 259 310 345 349 253 309 319 255 346 233 282 242 245 4 235 348 101 303 355 111</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\hardware_config.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 318</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 118</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 269</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 279 348 101 232 410 287 238 243 244 242 20 32 245 4 282 283 284 280 1 3 14 233 235 236 260 215 246 249 250 251 213 248 247 261 262 414 412 343 344 312 307 342 258 259 256 310 350 345 305 349 320 253 338 309 257 319 302 255 347 254 346 111 106 303 355 157 281</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 350 101 213 287 243 410 344 257 280 32 246 262 258 320 347 238 14 281 348 260 250 247 412 307 256 305 338 302 254 1 244 20 284 283 3 236 303 157 111 232 215 249 251 248 261 414 343 312 342 259 310 345 349 253 309 319 255 346 233 282 242 245 4 235 279 106 355</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_usart.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 321</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 119</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 267</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 278 101 232 410 287 238 243 244 242 20 32 245 4 282 283 284 280 1 3 14 233 235 236 260 215 246 249 250 251 213 248 247 261 262 414 412 343 344 312 307 342 258 259 256 310 350 345 305 349 320 253 338 309 257 319 302 255 347 254 346 106 105 355 303</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 1 247 3 236 305 302 244 101 260 307 254 284 243 303 250 412 256 338 20 283 410 246 213 262 344 258 350 320 257 347 287 238 280 32 14 105 355 106 232 215 249 251 248 261 414 343 312 342 259 310 345 349 253 309 319 255 346 233 282 242 245 4 235 278</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_system.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 313</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 322</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 288</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 28 106 101 232 410 287 238 243 244 242 20 32 245 4 282 283 284 280 1 3 14 233 235 236 260 215 246 249 250 251 213 248 247 261 262 414 412 343 344 312 307 342 258 259 256 310 350 345 305 349 320 253 338 309 257 319 302 255 347 254 346 355 16</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 262 14 238 320 347 243 246 258 410 213 344 350 257 287 280 32 16 106 260 250 247 412 307 256 305 338 302 254 1 244 20 284 283 3 235 355 101 232 215 249 251 248 261 414 343 312 342 259 310 345 349 253 309 319 255 346 233 282 242 245 4 236 28</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\comm_routines.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 126</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 337</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 87</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 103 238 243 244 242 20 32 245 4 25 3 13 365 101 232 410 287 282 283 284 280 1 14 233 235 236 260 215 246 249 250 251 213 248 247 261 262 414 412 343 344 312 307 342 258 259 256 310 350 345 305 349 320 253 338 309 257 319 302 255 347 254 346 102 109</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 243 305 302 247 1 260 307 254 102 244 20 250 412 256 338 283 365 238 32 13 3 410 246 213 262 344 258 350 320 257 347 287 280 236 25 101 242 245 4 232 215 249 251 248 261 414 343 312 342 259 310 345 349 253 309 319 255 346 233 282 284 14 235 103 109</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\bsp_trace.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 127</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 330</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 88</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 106 101 232 410 287 238 243 244 242 20 32 245 4 282 283 284 280 1 3 14 233 235 236 260 215 246 249 250 251 213 248 247 261 262 414 412 343 344 312 307 342 258 259 256 310 350 345 305 349 320 253 338 309 257 319 302 255 347 254 346 111 303 355 105 108 112 401 277 278</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 246 258 238 262 320 347 243 14 108 410 213 344 350 257 287 280 32 355 106 111 260 250 247 412 307 256 305 338 302 254 1 244 20 284 283 3 236 101 105 112 232 215 249 251 248 261 414 343 312 342 259 310 345 349 253 309 319 255 346 233 282 242 245 4 235 303 401 278 277</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\bsp_stk_leds.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 129</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 315</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 72</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 101 232 410 287 238 243 244 242 20 32 245 4 282 283 284 280 1 3 14 233 235 236 260 215 246 249 250 251 213 248 247 261 262 414 412 343 344 312 307 342 258 259 256 310 350 345 305 349 320 253 338 309 257 319 302 255 347 254 346 105 106 355 303 111 112 401 277 278</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 256 250 283 412 338 244 243 20 101 260 247 307 305 302 254 1 284 3 236 111 410 246 213 262 344 258 350 320 257 347 287 238 280 32 14 303 106 105 112 232 215 249 251 248 261 414 343 312 342 259 310 345 349 253 309 319 255 346 233 282 242 245 4 235 401 355 278 277</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\bsp_stk.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 128</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 316</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 67</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 1 243 244 242 20 32 245 4 3 14 101 232 410 287 238 282 283 284 280 233 235 236 260 215 246 249 250 251 213 248 247 261 262 414 412 343 344 312 307 342 258 259 256 310 350 345 305 349 320 253 338 309 257 319 302 255 347 254 346 105 106 355 303 111 112 401 277 278</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 307 283 260 254 247 305 302 1 101 112 243 20 244 250 412 256 338 238 105 32 410 246 213 262 344 258 350 320 257 347 287 280 235 303 106 111 3 14 242 245 4 232 215 249 251 248 261 414 343 312 342 259 310 345 349 253 309 319 255 346 233 282 284 236 401 355 278 277</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\bsp_bcc.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 134</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 336</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 86</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 1 243 244 242 20 32 245 4 3 14 101 232 410 287 238 282 283 284 280 233 235 236 260 215 246 249 250 251 213 248 247 261 262 414 412 343 344 312 307 342 258 259 256 310 350 345 305 349 320 253 338 309 257 319 302 255 347 254 346 105 106 355 303 111 112 401 277 278</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 260 254 307 283 247 305 302 1 101 112 243 20 244 250 412 256 338 238 105 32 410 246 213 262 344 258 350 320 257 347 287 280 235 303 106 111 278 3 14 242 245 4 232 215 249 251 248 261 414 343 312 342 259 310 345 349 253 309 319 255 346 233 282 284 236 401 355 277</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\kernel\base\core\los_timeslice.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 48</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 42</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 59</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 216 351 220 285 222 396 264 25 243 244 242 20 32 245 4 3 13 224 359 286 5 226 218 225 231 229 402</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 264 220 222 3 286 359 32 229 285 243 231 226 402 351 396 224 25 244 13 20 5 216 242 245 4 218 225</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\kernel\base\core\los_tick.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 37</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 43</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 62</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 263 229 225 359 222 285 351 220 396 264 25 243 244 242 20 32 245 4 3 13 224 227 230 218 286 5 231 226 140</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 264 222 20 230 220 227 25 244 245 243 225 351 226 229 359 285 13 242 32 224 263 140 396 3 4 218 286 231 5</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\kernel\base\core\los_task.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 49</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 44</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 57</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 76 226 218 220 285 222 396 264 25 243 244 242 20 32 245 4 3 13 224 359 286 5 225 231 351 131 275 154 144 219 265 217 353 239 1 14</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 286 1 359 219 222 25 244 242 32 218 131 239 226 220 231 264 13 243 5 351 154 217 224 225 285 396 3 245 20 275 353 76 4 144 265 14</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\kernel\base\core\los_sys.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 51</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 45</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 60</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 96 216 351 220 285 222 396 264 25 243 244 242 20 32 245 4 3 13 224 359 286 5 229 225</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 243 264 285 222 286 359 3 20 244 5 220 229 216 351 396 224 25 13 32 96 242 245 4 225</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\kernel\base\core\los_swtmr.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 207</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 46</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 71</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 98 227 230 220 285 222 396 264 25 243 244 242 20 32 245 4 3 13 224 359 218 286 5 225 231 351 272 221 131 275 228 360 226 1 14</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 396 224 3 1 220 243 228 230 4 222 244 272 5 227 285 264 351 131 226 218 359 25 13 242 245 20 32 225 275 98 286 231 221 360 14</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\kernel\base\ipc\los_sem.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 210</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 33</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 81</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 29 219 265 220 285 222 396 264 25 243 244 242 20 32 245 4 3 13 224 359 218 286 5 225 231 351 131 275 154 144 216 226 239</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 220 222 224 244 231 216 285 264 243 131 239 218 396 3 4 286 5 351 154 226 219 265 359 25 13 242 245 20 32 225 144 29 275</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_ebi.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 133</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 323</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 55</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 138 101 232 410 287 238 243 244 242 20 32 245 4 282 283 284 280 1 3 14 233 235 236 260 215 246 249 250 251 213 248 247 261 262 414 412 343 344 312 307 342 258 259 256 310 350 345 305 349 320 253 338 309 257 319 302 255 347 254 346</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 262 14 320 347 243 246 258 238 410 213 344 350 257 287 280 32 101 260 250 247 412 307 256 305 338 302 254 1 244 20 284 283 3 236 232 215 249 251 248 261 414 343 312 342 259 310 345 349 253 309 319 255 346 233 282 242 245 4 235 138</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_core.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 324</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 333</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 52</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 352 101 232 410 287 238 243 244 242 20 32 245 4 282 283 284 280 1 3 14 233 235 236 260 215 246 249 250 251 213 248 247 261 262 414 412 343 344 312 307 342 258 259 256 310 350 345 305 349 320 253 338 309 257 319 302 255 347 254 346 354 106 355</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 338 244 412 243 20 250 256 283 106 260 247 307 305 302 254 1 284 3 236 101 410 246 213 262 344 258 350 320 257 347 287 238 280 32 14 355 354 232 215 249 251 248 261 414 343 312 342 259 310 345 349 253 309 319 255 346 233 282 242 245 4 235 352</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_cmu.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 306</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 327</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 53</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 105 101 232 410 287 238 243 244 242 20 32 245 4 282 283 284 280 1 3 14 233 235 236 260 215 246 249 250 251 213 248 247 261 262 414 412 343 344 312 307 342 258 259 256 310 350 345 305 349 320 253 338 309 257 319 302 255 347 254 346 106 355 303 16 142 139 28 354</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 345 248 244 243 354 232 287 312 319 106 355 249 414 259 253 245 4 16 139 215 251 261 343 342 310 349 309 255 346 233 282 242 283 236 142 303 28 101 410 260 246 250 213 247 262 412 344 307 258 256 350 305 320 338 257 302 347 254 1 238 280 20 32 284 3 14 235 105</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_assert.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 107</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 334</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 85</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 355 106</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 355 106</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_acmp.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 335</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 328</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 82</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 308 101 232 410 287 238 243 244 242 20 32 245 4 282 283 284 280 1 3 14 233 235 236 260 215 246 249 250 251 213 248 247 261 262 414 412 343 344 312 307 342 258 259 256 310 350 345 305 349 320 253 338 309 257 319 302 255 347 254 346 106 303 355</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 249 259 245 414 253 243 4 244 303 238 232 287 248 312 345 319 235 215 251 261 343 342 310 349 309 255 346 233 282 242 283 101 106 355 410 260 246 250 213 247 262 412 344 307 258 256 350 305 320 338 257 302 347 254 1 280 20 32 284 3 14 236 308</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\device_init.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 124</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 325</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 79</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 101 232 410 287 238 243 244 242 20 32 245 4 282 283 284 280 1 3 14 233 235 236 260 215 246 249 250 251 213 248 247 261 262 414 412 343 344 312 307 342 258 259 256 310 350 345 305 349 320 253 338 309 257 319 302 255 347 254 346 268 28 106 111 303 355 108 104 292</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 1 247 244 305 302 243 20 260 307 254 238 283 292 250 412 256 338 280 284 3 236 303 101 108 410 246 213 262 344 258 350 320 257 347 287 32 14 106 268 104 232 215 249 251 248 261 414 343 312 342 259 310 345 349 253 309 319 255 346 233 282 242 245 4 235 28 111 355</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\cslib_config.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 125</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 329</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 78</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 281 292 238 243 244 242 20 32 245 4</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 243 32 292 238 244 20 281 242 245 4</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_rtc.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 132</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 120</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 289</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 411 101 232 410 287 238 243 244 242 20 32 245 4 282 283 284 280 1 3 14 233 235 236 260 215 246 249 250 251 213 248 247 261 262 414 412 343 344 312 307 342 258 259 256 310 350 345 305 349 320 253 338 309 257 319 302 255 347 254 346 106 355 303</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 1 247 3 236 305 302 244 260 307 254 284 243 303 250 412 256 338 20 283 101 410 246 213 262 344 258 350 320 257 347 287 238 280 32 14 355 106 232 215 249 251 248 261 414 343 312 342 259 310 345 349 253 309 319 255 346 233 282 242 245 4 235 411</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_leuart.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 341</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 122</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 301</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 413 101 232 410 287 238 243 244 242 20 32 245 4 282 283 284 280 1 3 14 233 235 236 260 215 246 249 250 251 213 248 247 261 262 414 412 343 344 312 307 342 258 259 256 310 350 345 305 349 320 253 338 309 257 319 302 255 347 254 346 106 105 355 303</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 244 412 20 243 338 101 106 250 256 283 355 260 247 307 305 302 254 1 284 3 236 410 246 213 262 344 258 350 320 257 347 287 238 280 32 14 303 105 232 215 249 251 248 261 414 343 312 342 259 310 345 349 253 309 319 255 346 233 282 242 245 4 235 413</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_gpio.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 340</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 121</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 266</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 111 101 232 410 287 238 243 244 242 20 32 245 4 282 283 284 280 1 3 14 233 235 236 260 215 246 249 250 251 213 248 247 261 262 414 412 343 344 312 307 342 258 259 256 310 350 345 305 349 320 253 338 309 257 319 302 255 347 254 346 106 303 355</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 258 238 246 262 320 347 243 14 410 213 344 350 257 287 280 32 101 303 260 250 247 412 307 256 305 338 302 254 1 244 20 284 283 3 236 106 355 232 215 249 251 248 261 414 343 312 342 259 310 345 349 253 309 319 255 346 233 282 242 245 4 235 111</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\em_emu.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 311</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 123</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 54</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 142 243 244 242 20 32 245 4 139 101 232 410 287 238 282 283 284 280 1 3 14 233 235 236 260 215 246 249 250 251 213 248 247 261 262 414 412 343 344 312 307 342 258 259 256 310 350 345 305 349 320 253 338 309 257 319 302 255 347 254 346 106 303 105 355 28 354</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 20 243 248 345 283 244 232 287 312 319 106 105 249 414 259 253 284 3 236 354 32 303 215 251 261 343 342 310 349 309 255 346 233 282 14 139 28 355 242 245 4 101 410 260 246 250 213 247 262 412 344 307 258 256 350 305 320 338 257 302 347 254 1 238 280 235 142</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\kernel\base\ipc\los_queue.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 212</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 35</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 65</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 208 228 360 220 285 222 396 264 25 243 244 242 20 32 245 4 3 13 224 359 272 221 131 275 154 144 226 218 286 5 225 231 239 1 14</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 285 224 360 264 243 1 244 396 226 220 222 131 239 228 3 4 272 154 5 359 25 13 242 245 20 32 221 144 218 225 208 275 286 231 14</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\kernel\base\core\los_priqueue.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 38</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 47</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 89</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 100 154 144 224 220 285 222 396 264 25 243 244 242 20 32 245 4 3 13 359 351 226 218 286 5 225 231 275</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 4 244 243 224 5 220 285 222 3 245 226 396 25 286 351 275 154 144 264 359 242 231 100 13 20 32 218 225</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\kernel\base\mem\los_multipledlinkhead.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 10</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 9</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 83</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 2 147 143 220 285 222 396 264 25 243 244 242 20 32 245 4 3 13 224 359</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 143 222 264 242 32 147 220 359 25 13 243 224 285 396 244 245 20 2 3 4</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\kernel\base\mem\los_memstat.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 41</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 7</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 56</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 17 146 222 285 226 218 220 396 264 25 243 244 242 20 32 245 4 3 13 224 359 286 5 225 231</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 220 225 3 245 222 396 25 4 244 243 224 146 285 218 226 286 231 264 359 242 17 13 20 32 5</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\kernel\base\ipc\los_mux.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 214</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 34</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 95</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 24 217 226 218 220 285 222 396 264 25 243 244 242 20 32 245 4 3 13 224 359 286 5 225 231 353 131 275 154 144 239</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 224 220 222 244 239 226 285 264 243 154 218 225 396 3 4 5 286 131 217 353 231 359 25 13 242 245 20 32 144 24 275</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\kernel\base\misc\los_misc.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 19</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 23</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 66</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 351 220 285 222 396 264 25 243 244 242 20 32 245 4 3 13 224 359 216 286 5 226 218 225 231</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 224 243 285 222 244 351 286 226 220 396 25 13 32 5 216 264 359 3 20 231 242 245 4 218 225</file>
         </tool>
       </inputs>
     </file>
@@ -2232,15 +1620,627 @@
       <outputs>
         <tool>
           <name>ILINK</name>
-          <file> 120</file>
+          <file> 252</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ILINK</name>
-          <file> 433 30 35 34 36 197 37 38 39 69 33 71 73 31 74 75 76 32 77 78 79 80 252 253 251 254 255 256 248 235 247 237 246 223 221 222 220 240 234 243 238 160 239 242 241 189 179 178 177 201 181 157 167 159 161 224 164 166 169 165 170 85 217 81 82 83 84 7 434 432 430 429 431</file>
+          <file> 404 134 128 129 127 26 126 125 124 335 107 306 324 133 311 340 341 132 313 321 318 314 371 370 372 369 368 367 375 388 376 386 377 399 362 400 364 383 389 380 385 211 384 381 382 31 39 40 41 19 10 214 38 212 210 398 207 51 49 37 48 317 366 332 331 326 339 156 403 406 409 408 407</file>
         </tool>
       </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\kernel\cmsis\cmsis_liteos.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 26</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 30</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 93</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 6 238 243 244 242 20 32 245 4 16 3 231 220 285 222 396 264 25 13 224 359 221 5 286 217 226 218 225 353 228 360 219 265 227 230 216 351 229 1 14</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 225 216 245 218 220 217 1 243 4 244 224 222 13 221 219 229 238 285 264 230 231 5 228 227 226 25 16 242 3 396 265 286 6 20 32 359 353 360 351 14</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\example\api\los_api_static_mem.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 388</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 237</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 80</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 25 243 244 242 20 32 245 4 3 13 221 396 222 285 264 392 274 1 14 273</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 4 244 3 245 243 396 264 392 242 14 221 273 13 20 32 222 25 285 274 1</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\example\api\los_api_sem.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 375</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 397</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 77</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 265 220 285 222 396 264 25 243 244 242 20 32 245 4 3 13 224 359 218 286 5 225 231 351 155 274 1 14 273</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 222 220 273 224 359 14 5 1 264 285 25 13 243 20 351 155 218 396 244 32 225 286 274 3 265 242 245 4 231</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\example\api\los_api_mutex.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 367</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 395</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 75</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 353 220 285 222 396 264 25 243 244 242 20 32 245 4 3 13 224 359 286 5 218 225 231 148 274 1 14 273</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 244 4 359 286 243 222 264 3 245 148 218 285 220 224 14 273 1 396 25 242 5 225 274 353 13 20 32 231</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\example\api\los_api_event.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 370</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 391</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 92</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 231 220 285 222 396 264 25 243 244 242 20 32 245 4 3 13 224 359 218 286 5 225 137 274 1 14 273</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 220 285 222 3 245 243 224 4 244 137 396 25 231 274 14 218 273 1 264 359 242 286 5 13 20 32 225</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\kernel\cpu\arm\cortex-m0+\los_dispatch_iar.s</name>
+      <outputs>
+        <tool>
+          <name>AARM</name>
+          <file> 385</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\kernel\config\los_config.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 389</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 373</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 94</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 286 220 285 222 396 264 25 243 244 242 20 32 245 4 3 13 224 359 5 225 226 218 231</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 5 220 243 264 285 222 32 224 226 359 3 225 396 25 244 13 20 218 286 242 245 4 231</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\example\api\los_api_list.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 369</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 390</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 97</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 224 220 285 222 396 264 25 243 244 242 20 32 245 4 3 13 359 365 275 135 274 1 14 273</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 32 1 275 359 3 220 243 365 273 222 264 244 14 25 396 135 285 13 20 274 224 242 245 4</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\example\api\los_api_msgqueue.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 368</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 356</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 357</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 220 285 222 396 264 25 243 244 242 20 32 245 4 3 13 224 359 218 286 5 225 231 230 360 136 274 1 14 273</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 222 244 273 220 360 359 224 230 264 25 13 243 20 218 5 231 136 285 396 32 225 286 274 1 3 242 245 4 14</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\example\api\los_api_dynamic_mem.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 371</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 36</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 358</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 365 243 244 242 20 32 245 4 3 396 222 285 264 25 13 275 220 224 359 276 274 1 14 273</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 264 244 273 275 245 242 222 3 396 276 243 4 25 13 220 359 14 365 20 32 285 224 274 1</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\kernel\cpu\arm\cortex-m0+\los_hwi.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 382</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 378</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 73</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 5 220 285 222 396 264 25 243 244 242 20 32 245 4 3 13 224 359 286</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 13 359 286 222 25 243 264 242 32 220 285 396 224 244 245 20 5 3 4</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\example\api\los_api_interrupt.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 372</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 387</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 90</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 5 220 285 222 396 264 25 243 244 242 20 32 245 4 3 13 224 359 286 141 274 1 14 273</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 224 243 285 222 244 141 220 396 25 13 242 14 273 286 264 359 3 245 4 5 20 32 274 1</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\kernel\cpu\arm\cortex-m0+\los_hw_tick.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 381</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 374</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 74</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 229 225 359 222 285 220 396 264 25 243 244 242 20 32 245 4 3 13 224 226 218 286 5 231 230</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 25 222 396 13 245 220 5 225 4 244 243 226 285 224 230 359 264 3 242 218 286 229 20 32 231</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\kernel\cpu\arm\cortex-m0+\los_hw.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 384</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 379</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 99</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 220 285 222 396 264 25 243 244 242 20 32 245 4 3 13 224 359 226 218 286 5 225 231 239 216 351 154 144</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 264 286 222 3 154 359 239 285 243 242 5 220 226 216 396 224 25 244 13 245 4 231 20 32 218 225 351 144</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\example\api\los_demo_entry.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 380</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 394</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 84</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 130 222 285 274 1 243 244 242 20 32 245 4 3 14 145 276 392 141 136 137 148 155 152 153 135 218 220 396 264 25 13 224 359 286 5 225 231</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 224 4 264 243 141 274 155 1 396 222 276 137 153 244 225 285 3 220 218 145 392 136 148 152 135 14 242 245 20 32 286 231 359 25 13 5 130</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\kernel\base\mem\los_memory.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 40</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 8</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 91</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 241 131 275 220 285 222 396 264 25 243 244 242 20 32 245 4 3 13 224 359 147 143 146 226 218 286 5 225 231 1 14</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 286 13 264 222 242 32 244 224 147 359 25 245 20 5 226 1 131 146 275 220 285 396 243 3 4 231 241 143 218 225 14</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\kernel\base\mem\los_membox.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 39</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 11</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 63</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 22 272 221 396 222 285 264 25 243 244 242 20 32 245 4 3 13 351 220 224 359 5 286 1 14</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 359 4 1 264 220 244 5 221 285 3 243 222 351 272 396 286 22 25 13 242 245 20 32 224 14</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\example\api\los_cmsis_main.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 383</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 15</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 61</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 6 238 243 244 242 20 32 245 4 16 3</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 16 243 245 4 244 238 242 3 6 20 32</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\example\api\los_api_timer.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 377</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 240</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 58</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 25 243 244 242 20 32 245 4 3 13 230 220 285 222 396 264 224 359 218 286 5 225 231 234 152 274 1 14 273</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 286 220 359 1 152 3 245 4 244 222 264 5 243 234 242 285 231 230 273 13 20 32 218 396 224 25 225 274 14</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\example\api\los_inspect_entry.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 31</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 361</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 69</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 1 243 244 242 20 32 245 4 3 14 273 222 285 218 220 396 264 25 13 224 359 286 5 225 231 274 167 161 165 238 159 145 276 392 141 136 137 148 155 152 153 135</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 286 242 359 152 145 243 274 167 136 14 244 222 264 5 220 218 165 392 148 135 3 245 4 285 231 13 273 161 159 276 141 137 155 153 20 32 224 225 396 25 1 238</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\kernel\base\ipc\los_event.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 211</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 209</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 64</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 27 405 231 220 285 222 396 264 25 243 244 242 20 32 245 4 3 13 224 359 154 144 226 218 286 5 225 239</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 5 222 242 32 226 224 264 13 243 286 154 239 359 25 244 245 20 220 231 27 405 285 396 3 4 144 218 225</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\example\api\los_api_task.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 386</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 18</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 68</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 233 243 235 244 242 20 32 245 4 236 234 3 218 220 285 222 396 264 25 13 224 359 286 5 225 231 145 274 1 14 273</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 224 3 1 273 244 396 220 218 235 225 222 274 234 145 243 236 4 285 264 359 233 242 245 20 32 286 231 25 13 5 14</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\example\api\los_api_systick.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 376</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 393</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 70</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 286 220 285 222 396 264 25 243 244 242 20 32 245 4 3 13 224 359 5 218 225 231 153 274 1 14 273</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 220 244 243 396 25 153 285 224 222 32 286 14 218 273 5 264 359 13 20 231 3 242 245 4 225 274 1</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 270 252</file>
+        </tool>
+      </outputs>
     </file>
   </configuration>
   <configuration>

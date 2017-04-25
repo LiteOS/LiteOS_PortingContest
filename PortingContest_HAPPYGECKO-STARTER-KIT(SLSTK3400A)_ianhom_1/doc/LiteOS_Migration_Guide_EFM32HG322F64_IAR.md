@@ -285,9 +285,10 @@ IAR工具需要开发者自行购买，HAPPYGECKO START-KIT(3400A)自带板载J-
 ### 获取EFM32HG软件开发包
 
 - 登录Silicon Labs官网下载[Simplicity Studio](http://www.silabs.com/products/development-tools/software/simplicity-studio)并安装。Simplicity Studio工具中选择对应的开发板，即可获得对应的资料及IAR例程。   
+- **注意：EFM32HG系列在高版本的IAR中才得到支持，建议使用IAR for ARM 7.4或以上版本进行移植！本文档中采用的是7.4版本，若误使用低版本打开本移植工程会破坏IAR工程，需要重新下载工程并使用正确版本打开**    
 ![](./meta/iar/HAPPYGECKO-STARTER_KIT(SLSTK3400A)/Simplicity_Studio_1.jpg)
 
-- HAPPYGECKO-STARTER-KIT(SLSTK3400A)具有半载J-Link支持虚拟串口，所以我们使用基于有串口打印的cslib例程进行移植修改。路径为xxx\Silicon\developer\sdks\exx32\v5.0.0.0\hardware\kit\SLSTK3400A_EFM32HG\examples   
+- HAPPYGECKO-STARTER-KIT(SLSTK3400A)具有板载J-Link支持虚拟串口，所以我们使用基于有串口打印的cslib例程进行移植修改。路径为xxx\Silicon\developer\sdks\exx32\v5.0.0.0\hardware\kit\SLSTK3400A_EFM32HG\examples   
 ![](./meta/iar/HAPPYGECKO-STARTER_KIT(SLSTK3400A)/IAR_project_path_1.jpg)
 
 ### 添加LiteOS源码
@@ -358,6 +359,143 @@ IAR工具需要开发者自行购买，HAPPYGECKO START-KIT(3400A)自带板载J-
   - 修改swtmr和其他任务的默认stack size为0x200
   - 任务创建删除测试中的任务1,2的stack size建议修改为0x150
   - 消息测试中LOS_QueueCreate的usMaxMsgSize参数修改为24。此外，若使用旧版本LiteOS代码，M0+内核下usMaxMsgSize参数必须是4的倍数（M0+不支持不对齐访问）
+
+### 移植成功后巡检结果
+- 串口打印内容
+        
+
+               Los Inspect start.
+              
+              LOS_TaskLock() Success!
+              
+              Example_TaskHi create Success!
+              
+              Example_TaskLo create Success!
+              
+              Enter TaskHi Handler.
+              
+              Enter TaskLo Handler.
+              
+              TaskHi LOS_TaskDelay Done.
+              
+              TaskHi LOS_TaskSuspend Success.
+              
+              TaskHi LOS_TaskResume Success.
+              
+              Inspect TASK success
+              
+
+              Example_Event wait event 0x1 
+              Example_TaskEntry_Event write event .
+              Example_Event,read event :0x1
+              EventMask:1
+              EventMask:0
+              Inspect EVENT success
+              
+
+              create the queue success!
+              recv message:test is message 0
+              recv message:test is message 1
+              recv message:test is message 2
+              recv message:test is message 3
+              recv message:test is message 4
+              recv message failure,error:200061d
+              delete the queue success!
+              Inspect MSG success
+              
+
+              Example_SemTask2 try get sem g_usSemID wait forever.
+              Example_SemTask1 try get sem g_usSemID ,timeout 10 ticks.
+              Example_SemTask2 get sem g_usSemID and then delay 20ticks .
+              Example_SemTask1 timeout and try get sem g_usSemID wait forever.
+              Example_SemTask2 post sem g_usSemID .
+              Example_SemTask1 wait_forever and got sem g_usSemID success.
+              Inspect SEM success
+              
+
+              task2 try to get mutex, wait forever.
+              task2 get mutex g_Testmux01 and suspend 100 Tick.
+              task1 try to get mutex, wait 10 Tick.
+              task1 timeout and try to get  mutex, wait forever.
+              task2 resumed and post the g_Testmux01
+              task1 wait forever,got mutex g_Testmux01 success.
+              Inspect MUTEX success
+              
+
+              LOS_CyclePerTickGet = 14000 
+              LOS_TickCountGet = 1106 
+              LOS_TickCountGet after delay = 1309 
+              Inspect SYSTIC success
+              
+
+              create Timer1 success
+              start Timer1 sucess
+              stop Timer1 sucess
+              g_timercount1=1
+              tick_last1=2619
+              delete Timer1 sucess
+              start Timer2
+              g_timercount2=1
+              tick_last2=2724
+              g_timercount2=2
+              tick_last2=2824
+              g_timercount2=3
+              tick_last2=2924
+              g_timercount2=4
+              tick_last2=3024
+              g_timercount2=5
+              tick_last2=3124
+              g_timercount2=6
+              tick_last2=3224
+              g_timercount2=7
+              tick_last2=3324
+              g_timercount2=8
+              tick_last2=3424
+              g_timercount2=9
+              tick_last2=3524
+              g_timercount2=10
+              tick_last2=3624
+              Inspect TIMER success
+              
+              
+              initial......
+              node add and tail add......
+              add node success
+              add tail success
+              delete node......
+              delete node success
+              Inspect LIST success
+              
+              
+              Mem box init ok!
+              Mem box alloc ok
+              *p_num = 828
+              clear data ok
+               *p_num = 0
+              Mem box free ok!
+              Inspect S_MEM success
+              
+
+              mempool init ok!
+              mem alloc ok
+              *p_num = 828
+              mem free ok!
+              Inspect D_MEM success
+              
+
+              Inspect completed,gInspectErrCnt = [0]
+              
+              
+               Los Key example: please press the UserKey key 
+              
+
+               Key test example 
+
+
+- 按键&LED
+![](./meta/iar/HAPPYGECKO-STARTER_KIT(SLSTK3400A)/Result_LED_OFF.png)      
+
+![](./meta/iar/HAPPYGECKO-STARTER_KIT(SLSTK3400A)/Result_LED_ON.png)
 
 ## 7 其他说明
 
