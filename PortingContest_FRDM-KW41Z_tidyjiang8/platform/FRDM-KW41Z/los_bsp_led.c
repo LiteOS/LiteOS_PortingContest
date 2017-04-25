@@ -7,7 +7,6 @@
 #include "fsl_port.h"
 #include "fsl_clock.h"
 
-
 /*****************************************************************************
  Function    : LOS_EvbLedInit
  Description : Init LED device
@@ -17,7 +16,6 @@
  *****************************************************************************/
 void LOS_EvbLedInit(void)
 {
-	//add you code here.
 	CLOCK_EnableClock(kCLOCK_PortA);
 	CLOCK_EnableClock(kCLOCK_PortB);
 	
@@ -36,7 +34,7 @@ void LOS_EvbLedInit(void)
 	GPIO_PinInit(GPIOB, 0u, &config);		
 	GPIO_PinInit(GPIOC, 1u, &config);
         
-    GPIO_WritePinOutput(GPIOB, LED3_B0, 1);
+        GPIO_WritePinOutput(GPIOB, LED3_B0, 1);
 	GPIO_WritePinOutput(GPIOA, LED_GREEN_A19, 1);
 	GPIO_WritePinOutput(GPIOA, LED_BLUE_A18 , 1);
 	GPIO_WritePinOutput(GPIOC, LED_RED_C1, 1);
@@ -60,16 +58,16 @@ void LOS_EvbLedControl(int index, int cmd)
         {
             if (cmd == LED_ON)
             {
-							 //add you code here.   
-                       /*led1 on */
-				GPIO_WritePinOutput(GPIOB, LED3_B0, 0);
+		//add you code here.   
+                /*led1 on */
+		GPIO_WritePinOutput(GPIOB, LED3_B0, 0);
             }
             else
             {
-							//add you code here.
-										 /*led1 off */
-				GPIO_WritePinOutput(GPIOB, LED3_B0, 1);
-			}
+		//add you code here.
+		/*led1 off */
+		GPIO_WritePinOutput(GPIOB, LED3_B0, 1);
+            }
             break;
         }
         case LOS_LED2:

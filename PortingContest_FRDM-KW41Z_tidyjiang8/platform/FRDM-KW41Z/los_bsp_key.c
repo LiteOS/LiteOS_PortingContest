@@ -6,10 +6,6 @@
 #include "board.h"
 #include "fsl_port.h"
 #include "fsl_clock.h"
-//#include "fsl_debug_console.h"
-
-
-
 
 /*****************************************************************************
  Function    : LOS_EvbKeyInit
@@ -44,7 +40,6 @@ unsigned int LOS_EvbGetKeyVal(int KeyNum)
 {
 	unsigned int KeyVal = 0xFFFFFFFF; 
 	
-	//add you code here.
 	KeyVal = GPIO_ReadPinInput(GPIOC, KeyNum);
 	return KeyVal;
 }

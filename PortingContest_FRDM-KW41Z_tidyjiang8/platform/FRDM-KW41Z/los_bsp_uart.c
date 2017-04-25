@@ -10,8 +10,7 @@
 #include "board.h"
 #include "fsl_port.h"
 #include "fsl_clock.h"
-//#include "fsl_debug_console.h"
-
+#include "fsl_lpuart.h"
 
 /*****************************************************************************
  Function    : LOS_EvbUartInit
@@ -39,6 +38,13 @@ void LOS_EvbUartInit(void)
         *  11: MCGIRCCLK
         */
         CLOCK_SetLpuartClock(2);
+	//	lpuart_config_t lpuart_config;
+        //LPUART_GetDefaultConfig(&lpuart_config);
+        //lpuart_config.baudRate_Bps = BOARD_DEBUG_UART_BAUDRATE;
+        /* Enable clock and initial UART module follow user configure structure. */
+        //LPUART_Init(LPUART0, &lpuart_config, BOARD_DEBUG_UART_CLK_FREQ);
+        //LPUART_EnableTx(LPUART0, true);
+        //LPUART_EnableRx(LPUART0, true);
         DbgConsole_Init(BOARD_DEBUG_UART_BASEADDR, BOARD_DEBUG_UART_BAUDRATE, BOARD_DEBUG_UART_TYPE, BOARD_DEBUG_UART_CLK_FREQ);
 	return;
 }
@@ -52,8 +58,7 @@ void LOS_EvbUartInit(void)
  *****************************************************************************/
 void LOS_EvbUartWriteByte(const char c)
 {
-	//add you code here.
-        LPUART_WriteBlocking(LPUART0, &c, 1);
+        LPUART_WriteBlocking(LPUART0, (const uint8_t *)&c, 1);
 	return;
 }
 

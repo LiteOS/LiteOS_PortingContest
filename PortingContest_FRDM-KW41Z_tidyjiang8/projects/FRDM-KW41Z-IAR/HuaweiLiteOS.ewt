@@ -2441,12 +2441,6 @@
         <group>
             <name>library</name>
             <group>
-                <name>CMSIS</name>
-            </group>
-            <group>
-                <name>device</name>
-            </group>
-            <group>
                 <name>drivers</name>
                 <file>
                     <name>$PROJ_DIR$\..\..\platform\FRDM-KW41Z\drivers\fsl_adc16.c</name>

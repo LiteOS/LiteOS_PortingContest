@@ -159,7 +159,7 @@ UINT32 Example_MsgQueue(void)
     }
 
     /*创建队列*/
-    uwRet = LOS_QueueCreate("queue", 5, &g_uwQueue, 0, 50);
+    uwRet = LOS_QueueCreate("queue", 5, &g_uwQueue, 0, 48);
     if(uwRet != LOS_OK)
     {
         dprintf("create queue failure!,error:%x\n",uwRet);
