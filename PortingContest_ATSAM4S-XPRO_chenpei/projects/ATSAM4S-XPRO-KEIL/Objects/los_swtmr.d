@@ -13,7 +13,7 @@
 .\objects\los_swtmr.o: ..\..\kernel\include\los_errno.h
 .\objects\los_swtmr.o: ..\..\kernel\include\los_task.h
 .\objects\los_swtmr.o: ..\..\kernel\include\los_sys.h
-.\objects\los_swtmr.o: ..\..\kernel\cpu\arm\cortex-m4\los_hwi.h
+.\objects\los_swtmr.o: ..\..\kernel\cpu\arm\cortex-m3\los_hwi.h
 .\objects\los_swtmr.o: ..\..\kernel\include\los_sys.h
 .\objects\los_swtmr.o: ..\..\kernel\include\los_tick.h
 .\objects\los_swtmr.o: ..\..\kernel\include\los_event.h

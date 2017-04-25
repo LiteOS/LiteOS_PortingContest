@@ -1820,82 +1820,82 @@ Memory Map of the image
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x00400000   0x0000005c   Code   RO         2452    RESET               los_startup_keil.o
-    0x0040005c   0x00000000   Code   RO         2520  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x0040005c   0x00000004   Code   RO         2826    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x00400060   0x00000004   Code   RO         2829    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x00400064   0x00000000   Code   RO         2831    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x00400064   0x00000000   Code   RO         2833    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x00400064   0x00000008   Code   RO         2834    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x0040006c   0x00000000   Code   RO         2836    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
-    0x0040006c   0x00000000   Code   RO         2838    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
-    0x0040006c   0x00000004   Code   RO         2827    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x00400000   0x0000005c   Code   RO         2449    RESET               los_startup_keil.o
+    0x0040005c   0x00000000   Code   RO         2517  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x0040005c   0x00000004   Code   RO         2823    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x00400060   0x00000004   Code   RO         2826    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x00400064   0x00000000   Code   RO         2828    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x00400064   0x00000000   Code   RO         2830    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x00400064   0x00000008   Code   RO         2831    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x0040006c   0x00000000   Code   RO         2833    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x0040006c   0x00000000   Code   RO         2835    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x0040006c   0x00000004   Code   RO         2824    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
     0x00400070   0x0000005c   Code   RO         1106    .text               los_dispatch_keil.o
-    0x004000cc   0x00000062   Code   RO         2523    .text               mc_w.l(uldiv.o)
-    0x0040012e   0x00000024   Code   RO         2527    .text               mc_w.l(memseta.o)
-    0x00400152   0x000000de   Code   RO         2820    .text               mf_w.l(ddiv.o)
-    0x00400230   0x00000030   Code   RO         2824    .text               mf_w.l(dfixul.o)
-    0x00400260   0x0000002c   Code   RO         2841    .text               mc_w.l(uidiv.o)
-    0x0040028c   0x0000001e   Code   RO         2843    .text               mc_w.l(llshl.o)
-    0x004002aa   0x00000020   Code   RO         2845    .text               mc_w.l(llushr.o)
-    0x004002ca   0x00000000   Code   RO         2849    .text               mc_w.l(iusefp.o)
-    0x004002ca   0x000000ba   Code   RO         2850    .text               mf_w.l(depilogue.o)
-    0x00400384   0x0000014e   Code   RO         2852    .text               mf_w.l(dadd.o)
-    0x004004d2   0x000000e4   Code   RO         2854    .text               mf_w.l(dmul.o)
+    0x004000cc   0x00000062   Code   RO         2520    .text               mc_w.l(uldiv.o)
+    0x0040012e   0x00000024   Code   RO         2524    .text               mc_w.l(memseta.o)
+    0x00400152   0x000000de   Code   RO         2817    .text               mf_w.l(ddiv.o)
+    0x00400230   0x00000030   Code   RO         2821    .text               mf_w.l(dfixul.o)
+    0x00400260   0x0000002c   Code   RO         2838    .text               mc_w.l(uidiv.o)
+    0x0040028c   0x0000001e   Code   RO         2840    .text               mc_w.l(llshl.o)
+    0x004002aa   0x00000020   Code   RO         2842    .text               mc_w.l(llushr.o)
+    0x004002ca   0x00000000   Code   RO         2846    .text               mc_w.l(iusefp.o)
+    0x004002ca   0x000000ba   Code   RO         2847    .text               mf_w.l(depilogue.o)
+    0x00400384   0x0000014e   Code   RO         2849    .text               mf_w.l(dadd.o)
+    0x004004d2   0x000000e4   Code   RO         2851    .text               mf_w.l(dmul.o)
     0x004005b6   0x00000002   PAD
-    0x004005b8   0x00000030   Code   RO         2856    .text               mf_w.l(cdrcmple.o)
-    0x004005e8   0x00000024   Code   RO         2858    .text               mc_w.l(init.o)
-    0x0040060c   0x00000024   Code   RO         2860    .text               mc_w.l(llsshr.o)
-    0x00400630   0x00000056   Code   RO         2870    .text               mc_w.l(__dczerorl2.o)
+    0x004005b8   0x00000030   Code   RO         2853    .text               mf_w.l(cdrcmple.o)
+    0x004005e8   0x00000024   Code   RO         2855    .text               mc_w.l(init.o)
+    0x0040060c   0x00000024   Code   RO         2857    .text               mc_w.l(llsshr.o)
+    0x00400630   0x00000056   Code   RO         2867    .text               mc_w.l(__dczerorl2.o)
     0x00400686   0x00000002   PAD
     0x00400688   0x00000088   Code   RO         1107    KERNEL              los_dispatch_keil.o
-    0x00400710   0x00000110   Code   RO         2039    i.Example_Dyn_Mem   los_api_dynamic_mem.o
-    0x00400820   0x000000a8   Code   RO         2073    i.Example_Event     los_api_event.o
-    0x004008c8   0x000000d8   Code   RO         2254    i.Example_GetTick   los_api_systick.o
-    0x004009a0   0x00000120   Code   RO         2146    i.Example_MsgQueue  los_api_msgqueue.o
-    0x00400ac0   0x00000144   Code   RO         2176    i.Example_MutexLock  los_api_mutex.o
-    0x00400c04   0x00000118   Code   RO         2177    i.Example_MutexTask1  los_api_mutex.o
-    0x00400d1c   0x000000e4   Code   RO         2178    i.Example_MutexTask2  los_api_mutex.o
-    0x00400e00   0x000000e0   Code   RO         2206    i.Example_SemTask1  los_api_sem.o
-    0x00400ee0   0x000000d8   Code   RO         2207    i.Example_SemTask2  los_api_sem.o
-    0x00400fb8   0x00000158   Code   RO         2208    i.Example_Semphore  los_api_sem.o
-    0x00401110   0x00000154   Code   RO         2074    i.Example_SndRcvEvent  los_api_event.o
-    0x00401264   0x00000144   Code   RO         2236    i.Example_StaticMem  los_api_static_mem.o
-    0x004013a8   0x00000114   Code   RO         2275    i.Example_TaskHi    los_api_task.o
-    0x004014bc   0x000000e4   Code   RO         2276    i.Example_TaskLo    los_api_task.o
-    0x004015a0   0x0000017c   Code   RO         2277    i.Example_TskCaseEntry  los_api_task.o
-    0x0040171c   0x00000194   Code   RO         2126    i.Example_list      los_api_list.o
-    0x004018b0   0x00000108   Code   RO         2319    i.Example_swTimer   los_api_timer.o
+    0x00400710   0x00000110   Code   RO         2036    i.Example_Dyn_Mem   los_api_dynamic_mem.o
+    0x00400820   0x000000a8   Code   RO         2070    i.Example_Event     los_api_event.o
+    0x004008c8   0x000000d8   Code   RO         2251    i.Example_GetTick   los_api_systick.o
+    0x004009a0   0x00000120   Code   RO         2143    i.Example_MsgQueue  los_api_msgqueue.o
+    0x00400ac0   0x00000144   Code   RO         2173    i.Example_MutexLock  los_api_mutex.o
+    0x00400c04   0x00000118   Code   RO         2174    i.Example_MutexTask1  los_api_mutex.o
+    0x00400d1c   0x000000e4   Code   RO         2175    i.Example_MutexTask2  los_api_mutex.o
+    0x00400e00   0x000000e0   Code   RO         2203    i.Example_SemTask1  los_api_sem.o
+    0x00400ee0   0x000000d8   Code   RO         2204    i.Example_SemTask2  los_api_sem.o
+    0x00400fb8   0x00000158   Code   RO         2205    i.Example_Semphore  los_api_sem.o
+    0x00401110   0x00000154   Code   RO         2071    i.Example_SndRcvEvent  los_api_event.o
+    0x00401264   0x00000144   Code   RO         2233    i.Example_StaticMem  los_api_static_mem.o
+    0x004013a8   0x00000114   Code   RO         2272    i.Example_TaskHi    los_api_task.o
+    0x004014bc   0x000000e4   Code   RO         2273    i.Example_TaskLo    los_api_task.o
+    0x004015a0   0x0000017c   Code   RO         2274    i.Example_TskCaseEntry  los_api_task.o
+    0x0040171c   0x00000194   Code   RO         2123    i.Example_list      los_api_list.o
+    0x004018b0   0x00000108   Code   RO         2316    i.Example_swTimer   los_api_timer.o
     0x004019b8   0x0000001c   Code   RO         1088    i.LOS_Align         los_misc.o
     0x004019d4   0x00000008   Code   RO          248    i.LOS_CyclePerTickGet  los_sys.o
     0x004019dc   0x0000001e   Code   RO         1056    i.LOS_DLnkInitMultiHead  los_multipledlinkhead.o
     0x004019fa   0x0000002a   Code   RO         1057    i.LOS_DLnkMultiHead  los_multipledlinkhead.o
-    0x00401a24   0x00000012   Code   RO         1230    i.LOS_EnableTick    los_config.o
+    0x00401a24   0x00000012   Code   RO         1227    i.LOS_EnableTick    los_config.o
     0x00401a36   0x00000002   PAD
-    0x00401a38   0x00000018   Code   RO         1912    i.LOS_EvbGetKeyVal  los_bsp_key.o
-    0x00401a50   0x00000040   Code   RO         1913    i.LOS_EvbKeyInit    los_bsp_key.o
-    0x00401a90   0x0000001c   Code   RO         1946    i.LOS_EvbLedControl  los_bsp_led.o
-    0x00401aac   0x0000004c   Code   RO         1947    i.LOS_EvbLedInit    los_bsp_led.o
-    0x00401af8   0x00000010   Code   RO         1627    i.LOS_EvbSetup      los_bsp_adapter.o
-    0x00401b08   0x00000084   Code   RO         1977    i.LOS_EvbUartInit   los_bsp_uart.o
-    0x00401b8c   0x0000001c   Code   RO         1979    i.LOS_EvbUartWriteByte  los_bsp_uart.o
+    0x00401a38   0x00000018   Code   RO         1909    i.LOS_EvbGetKeyVal  los_bsp_key.o
+    0x00401a50   0x00000040   Code   RO         1910    i.LOS_EvbKeyInit    los_bsp_key.o
+    0x00401a90   0x0000001c   Code   RO         1943    i.LOS_EvbLedControl  los_bsp_led.o
+    0x00401aac   0x0000004c   Code   RO         1944    i.LOS_EvbLedInit    los_bsp_led.o
+    0x00401af8   0x00000010   Code   RO         1624    i.LOS_EvbSetup      los_bsp_adapter.o
+    0x00401b08   0x00000084   Code   RO         1974    i.LOS_EvbUartInit   los_bsp_uart.o
+    0x00401b8c   0x0000001c   Code   RO         1976    i.LOS_EvbUartWriteByte  los_bsp_uart.o
     0x00401ba8   0x00000028   Code   RO          572    i.LOS_EventClear    los_event.o
     0x00401bd0   0x0000001c   Code   RO          574    i.LOS_EventInit     los_event.o
     0x00401bec   0x00000050   Code   RO          575    i.LOS_EventPoll     los_event.o
     0x00401c3c   0x0000015c   Code   RO          576    i.LOS_EventRead     los_event.o
     0x00401d98   0x000000f8   Code   RO          577    i.LOS_EventWrite    los_event.o
-    0x00401e90   0x00000164   Code   RO         2413    i.LOS_InspectByID   los_inspect_entry.o
-    0x00401ff4   0x00000060   Code   RO         2414    i.LOS_InspectStatusSetByID  los_inspect_entry.o
-    0x00402054   0x00000048   Code   RO         2415    i.LOS_Inspect_Entry  los_inspect_entry.o
-    0x0040209c   0x00000058   Code   RO         2416    i.LOS_Inspect_KeyAndLed  los_inspect_entry.o
-    0x004020f4   0x000000cc   Code   RO         2417    i.LOS_Inspect_TskDeal  los_inspect_entry.o
-    0x004021c0   0x00000012   Code   RO         1231    i.LOS_KernelInit    los_config.o
+    0x00401e90   0x00000164   Code   RO         2410    i.LOS_InspectByID   los_inspect_entry.o
+    0x00401ff4   0x00000060   Code   RO         2411    i.LOS_InspectStatusSetByID  los_inspect_entry.o
+    0x00402054   0x00000048   Code   RO         2412    i.LOS_Inspect_Entry  los_inspect_entry.o
+    0x0040209c   0x00000058   Code   RO         2413    i.LOS_Inspect_KeyAndLed  los_inspect_entry.o
+    0x004020f4   0x000000cc   Code   RO         2414    i.LOS_Inspect_TskDeal  los_inspect_entry.o
+    0x004021c0   0x00000012   Code   RO         1228    i.LOS_KernelInit    los_config.o
     0x004021d2   0x0000000e   Code   RO          320    i.LOS_ListAdd       los_task.o
     0x004021e0   0x0000000e   Code   RO          620    i.LOS_ListAdd       los_mux.o
     0x004021ee   0x0000000e   Code   RO          694    i.LOS_ListAdd       los_queue.o
     0x004021fc   0x0000000e   Code   RO          799    i.LOS_ListAdd       los_sem.o
     0x0040220a   0x0000000e   Code   RO          902    i.LOS_ListAdd       los_memory.o
-    0x00402218   0x0000000e   Code   RO         2127    i.LOS_ListAdd       los_api_list.o
+    0x00402218   0x0000000e   Code   RO         2124    i.LOS_ListAdd       los_api_list.o
     0x00402226   0x00000014   Code   RO          321    i.LOS_ListDelete    los_task.o
     0x0040223a   0x00000014   Code   RO          621    i.LOS_ListDelete    los_mux.o
     0x0040224e   0x00000014   Code   RO          800    i.LOS_ListDelete    los_sem.o
@@ -1938,8 +1938,8 @@ Memory Map of the image
     0x00402f5c   0x00000060   Code   RO          805    i.LOS_SemDelete     los_sem.o
     0x00402fbc   0x00000100   Code   RO          806    i.LOS_SemPend       los_sem.o
     0x004030bc   0x000000b8   Code   RO          807    i.LOS_SemPost       los_sem.o
-    0x00403174   0x0000000c   Code   RO         1147    i.LOS_SetTickSycle  los_hw_tick.o
-    0x00403180   0x0000000c   Code   RO         1232    i.LOS_Start         los_config.o
+    0x00403174   0x0000000c   Code   RO         1144    i.LOS_SetTickSycle  los_hw_tick.o
+    0x00403180   0x0000000c   Code   RO         1229    i.LOS_Start         los_config.o
     0x0040318c   0x0000008c   Code   RO          111    i.LOS_SwtmrCreate   los_swtmr.o
     0x00403218   0x00000084   Code   RO          112    i.LOS_SwtmrDelete   los_swtmr.o
     0x0040329c   0x00000084   Code   RO          113    i.LOS_SwtmrStart    los_swtmr.o
@@ -1954,34 +1954,34 @@ Memory Map of the image
     0x0040395c   0x0000003c   Code   RO          334    i.LOS_TaskUnlock    los_task.o
     0x00403998   0x00000084   Code   RO          335    i.LOS_TaskYield     los_task.o
     0x00403a1c   0x0000000c   Code   RO          252    i.LOS_TickCountGet  los_sys.o
-    0x00403a28   0x00000038   Code   RO         1148    i.LOS_TickHandler   los_hw_tick.o
-    0x00403a60   0x00000002   Code   RO         1629    i.LosAdapIntInit    los_bsp_adapter.o
-    0x00403a62   0x00000008   Code   RO         1632    i.SysTick_Handler   los_bsp_adapter.o
+    0x00403a28   0x00000038   Code   RO         1145    i.LOS_TickHandler   los_hw_tick.o
+    0x00403a60   0x00000002   Code   RO         1626    i.LosAdapIntInit    los_bsp_adapter.o
+    0x00403a62   0x00000008   Code   RO         1629    i.SysTick_Handler   los_bsp_adapter.o
     0x00403a6a   0x00000002   PAD
-    0x00403a6c   0x00000184   Code   RO         2484    i.SystemCoreClockUpdate  system_sam4s.o
-    0x00403bf0   0x00000150   Code   RO         2485    i.SystemInit        system_sam4s.o
-    0x00403d40   0x00000050   Code   RO         2320    i.Timer1_Callback   los_api_timer.o
-    0x00403d90   0x00000058   Code   RO         2321    i.Timer2_Callback   los_api_timer.o
-    0x00403de8   0x00000020   Code   RO         2764    i.__0printf         mc_w.l(printfa.o)
-    0x00403e08   0x0000000e   Code   RO         2864    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x00403e16   0x00000002   Code   RO         2865    i.__scatterload_null  mc_w.l(handlers.o)
-    0x00403e18   0x0000000e   Code   RO         2866    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x00403a6c   0x00000184   Code   RO         2481    i.SystemCoreClockUpdate  system_sam4s.o
+    0x00403bf0   0x00000150   Code   RO         2482    i.SystemInit        system_sam4s.o
+    0x00403d40   0x00000050   Code   RO         2317    i.Timer1_Callback   los_api_timer.o
+    0x00403d90   0x00000058   Code   RO         2318    i.Timer2_Callback   los_api_timer.o
+    0x00403de8   0x00000020   Code   RO         2761    i.__0printf         mc_w.l(printfa.o)
+    0x00403e08   0x0000000e   Code   RO         2861    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x00403e16   0x00000002   Code   RO         2862    i.__scatterload_null  mc_w.l(handlers.o)
+    0x00403e18   0x0000000e   Code   RO         2863    i.__scatterload_zeroinit  mc_w.l(handlers.o)
     0x00403e26   0x00000002   PAD
-    0x00403e28   0x00000164   Code   RO         2771    i._fp_digits        mc_w.l(printfa.o)
-    0x00403f8c   0x000006dc   Code   RO         2772    i._printf_core      mc_w.l(printfa.o)
-    0x00404668   0x00000024   Code   RO         2773    i._printf_post_padding  mc_w.l(printfa.o)
-    0x0040468c   0x0000002e   Code   RO         2774    i._printf_pre_padding  mc_w.l(printfa.o)
-    0x004046ba   0x00000010   Code   RO         1981    i.fputc             los_bsp_uart.o
+    0x00403e28   0x00000164   Code   RO         2768    i._fp_digits        mc_w.l(printfa.o)
+    0x00403f8c   0x000006dc   Code   RO         2769    i._printf_core      mc_w.l(printfa.o)
+    0x00404668   0x00000024   Code   RO         2770    i._printf_post_padding  mc_w.l(printfa.o)
+    0x0040468c   0x0000002e   Code   RO         2771    i._printf_pre_padding  mc_w.l(printfa.o)
+    0x004046ba   0x00000010   Code   RO         1978    i.fputc             los_bsp_uart.o
     0x004046ca   0x00000002   PAD
-    0x004046cc   0x00000050   Code   RO         2792    i.free              mc_w.l(malloc.o)
-    0x0040471c   0x0000002a   Code   RO         2457    i.main              main.o
-    0x00404746   0x00000008   Code   RO         1176    i.osHwiDefaultHandler  los_hwi.o
+    0x004046cc   0x00000050   Code   RO         2789    i.free              mc_w.l(malloc.o)
+    0x0040471c   0x0000002a   Code   RO         2454    i.main              main.o
+    0x00404746   0x00000008   Code   RO         1173    i.osHwiDefaultHandler  los_hwi.o
     0x0040474e   0x00000002   PAD
-    0x00404750   0x00000024   Code   RO         1177    i.osHwiInit         los_hwi.o
+    0x00404750   0x00000024   Code   RO         1174    i.osHwiInit         los_hwi.o
     0x00404774   0x00000004   Code   RO          336    i.osIdleTask        los_task.o
     0x00404778   0x0000004c   Code   RO          337    i.osIdleTaskCreate  los_task.o
-    0x004047c4   0x0000000c   Code   RO         1178    i.osIntNumGet       los_hwi.o
-    0x004047d0   0x00000070   Code   RO         1235    i.osMain            los_config.o
+    0x004047c4   0x0000000c   Code   RO         1175    i.osIntNumGet       los_hwi.o
+    0x004047d0   0x00000070   Code   RO         1232    i.osMain            los_config.o
     0x00404840   0x0000005c   Code   RO          909    i.osMemAllocWithCheck  los_memory.o
     0x0040489c   0x00000098   Code   RO          910    i.osMemCheckUsedNode  los_memory.o
     0x00404934   0x00000050   Code   RO          911    i.osMemFindSuitableFreeBlock  los_memory.o
@@ -1998,7 +1998,7 @@ Memory Map of the image
     0x00404c84   0x00000084   Code   RO          705    i.osQueuePend       los_queue.o
     0x00404d08   0x0000005a   Code   RO          706    i.osQueueWakeUp     los_queue.o
     0x00404d62   0x00000002   PAD
-    0x00404d64   0x0000001c   Code   RO         1236    i.osRegister        los_config.o
+    0x00404d64   0x0000001c   Code   RO         1233    i.osRegister        los_config.o
     0x00404d80   0x00000008   Code   RO         1114    i.osSchedule        los_hw.o
     0x00404d88   0x00000058   Code   RO          808    i.osSemInit         los_sem.o
     0x00404de0   0x000000ac   Code   RO          117    i.osSwTmrInit       los_swtmr.o
@@ -2019,25 +2019,25 @@ Memory Map of the image
     0x004053cc   0x000000dc   Code   RO          342    i.osTaskScan        los_task.o
     0x004054a8   0x000000fc   Code   RO          343    i.osTaskSelfDelete  los_task.o
     0x004055a4   0x00000028   Code   RO          520    i.osTickHandler     los_tick.o
-    0x004055cc   0x0000006c   Code   RO         1633    i.osTickStart       los_bsp_adapter.o
+    0x004055cc   0x0000006c   Code   RO         1630    i.osTickStart       los_bsp_adapter.o
     0x00405638   0x00000048   Code   RO          344    i.osTimerListDelete  los_task.o
     0x00405680   0x0000004c   Code   RO          548    i.osTimesliceCheck  los_timeslice.o
     0x004056cc   0x00000010   Code   RO          549    i.osTimesliceInit   los_timeslice.o
     0x004056dc   0x00000088   Code   RO         1116    i.osTskStackInit    los_hw.o
-    0x00405764   0x000000cc   Code   RO         2147    i.recv_Entry        los_api_msgqueue.o
-    0x00405830   0x00000074   Code   RO         2148    i.send_Entry        los_api_msgqueue.o
-    0x004058a4   0x00000009   Data   RO         1634    .constdata          los_bsp_adapter.o
+    0x00405764   0x000000cc   Code   RO         2144    i.recv_Entry        los_api_msgqueue.o
+    0x00405830   0x00000074   Code   RO         2145    i.send_Entry        los_api_msgqueue.o
+    0x004058a4   0x00000009   Data   RO         1631    .constdata          los_bsp_adapter.o
     0x004058ad   0x00000003   PAD
-    0x004058b0   0x00000042   Data   RO         2209    .conststring        los_api_sem.o
+    0x004058b0   0x00000042   Data   RO         2206    .conststring        los_api_sem.o
     0x004058f2   0x00000002   PAD
-    0x004058f4   0x00000030   Data   RO         2862    Region$$Table       anon$$obj.o
+    0x004058f4   0x00000030   Data   RO         2859    Region$$Table       anon$$obj.o
 
 
     Execution Region VECTOR (Base: 0x20000000, Size: 0x00000400, Max: 0x00000400, ABSOLUTE, COMPRESSED[0x00000020])
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x00000400   Data   RW         1182    .vector.bss         los_hwi.o
+    0x20000000   0x00000400   Data   RW         1179    .vector.bss         los_hwi.o
 
 
     Execution Region RW_IRAM1 (Base: 0x20000400, Size: 0x00008910, Max: 0x00028400, ABSOLUTE, COMPRESSED[0x00000090])
@@ -2052,27 +2052,27 @@ Memory Map of the image
     0x20000470   0x0000000c   Data   RW          630    .data               los_mux.o
     0x2000047c   0x00000004   Data   RW          707    .data               los_queue.o
     0x20000480   0x0000000c   Data   RW          809    .data               los_sem.o
-    0x2000048c   0x00000004   Data   RW         1149    .data               los_hw_tick.o
-    0x20000490   0x00000004   Data   RW         1181    .data               los_hwi.o
-    0x20000494   0x00000008   Data   RW         1237    .data               los_config.o
-    0x2000049c   0x00000004   Data   RW         1635    .data               los_bsp_adapter.o
-    0x200004a0   0x00000008   Data   RW         2076    .data               los_api_event.o
-    0x200004a8   0x00000016   Data   RW         2149    .data               los_api_msgqueue.o
+    0x2000048c   0x00000004   Data   RW         1146    .data               los_hw_tick.o
+    0x20000490   0x00000004   Data   RW         1178    .data               los_hwi.o
+    0x20000494   0x00000008   Data   RW         1234    .data               los_config.o
+    0x2000049c   0x00000004   Data   RW         1632    .data               los_bsp_adapter.o
+    0x200004a0   0x00000008   Data   RW         2073    .data               los_api_event.o
+    0x200004a8   0x00000016   Data   RW         2146    .data               los_api_msgqueue.o
     0x200004be   0x00000002   PAD
-    0x200004c0   0x0000000c   Data   RW         2179    .data               los_api_mutex.o
-    0x200004cc   0x0000000c   Data   RW         2210    .data               los_api_sem.o
-    0x200004d8   0x00000008   Data   RW         2278    .data               los_api_task.o
-    0x200004e0   0x00000008   Data   RW         2322    .data               los_api_timer.o
-    0x200004e8   0x000000a8   Data   RW         2418    .data               los_inspect_entry.o
-    0x20000590   0x00000004   Data   RW         2486    .data               system_sam4s.o
-    0x20000594   0x00000004   Data   RW         2840    .data               mc_w.l(stdout.o)
-    0x20000598   0x00000004   Data   RW         2847    .data               mc_w.l(mvars.o)
+    0x200004c0   0x0000000c   Data   RW         2176    .data               los_api_mutex.o
+    0x200004cc   0x0000000c   Data   RW         2207    .data               los_api_sem.o
+    0x200004d8   0x00000008   Data   RW         2275    .data               los_api_task.o
+    0x200004e0   0x00000008   Data   RW         2319    .data               los_api_timer.o
+    0x200004e8   0x000000a8   Data   RW         2415    .data               los_inspect_entry.o
+    0x20000590   0x00000004   Data   RW         2483    .data               system_sam4s.o
+    0x20000594   0x00000004   Data   RW         2837    .data               mc_w.l(stdout.o)
+    0x20000598   0x00000004   Data   RW         2844    .data               mc_w.l(mvars.o)
     0x2000059c   0x000000d0   Zero   RW          125    .bss                los_swtmr.o
     0x2000066c   0x00008000   Zero   RW          918    .bss                los_memory.o
     0x2000866c   0x00000040   Zero   RW         1029    .bss                los_memstat.o
-    0x200086ac   0x0000000c   Zero   RW         2075    .bss                los_api_event.o
-    0x200086b8   0x00000258   Zero   RW         2237    .bss                los_api_static_mem.o
-    0x20008910   0x00000400   Zero   RW         2450    STACK               los_startup_keil.o
+    0x200086ac   0x0000000c   Zero   RW         2072    .bss                los_api_event.o
+    0x200086b8   0x00000258   Zero   RW         2234    .bss                los_api_static_mem.o
+    0x20008910   0x00000400   Zero   RW         2447    STACK               los_startup_keil.o
 
 
 ==============================================================================
@@ -2082,48 +2082,48 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-         0          0          0          0          0      10316   cmsis_liteos.o
-       272        138          0          0          0       2106   los_api_dynamic_mem.o
-       508        284          0          8         12       1667   los_api_event.o
-       418        172          0          0          0       1595   los_api_list.o
-       608        282          0         22          0       3300   los_api_msgqueue.o
-       832        492          0         12          0       2310   los_api_mutex.o
-       784        440         66         12          0       2189   los_api_sem.o
-       324        180          0          0        600       1578   los_api_static_mem.o
-       216         90          0          0          0        750   los_api_systick.o
-       884        542          0          8          0       2347   los_api_task.o
-       432        196          0          8          0       2104   los_api_timer.o
-       134         16          9          4          0      34277   los_bsp_adapter.o
-        88         18          0          0          0       1092   los_bsp_key.o
-       104         20          0          0          0       1097   los_bsp_led.o
-       176         26          0          0          0       3573   los_bsp_uart.o
-       188         18          0          8          0       3708   los_config.o
-       228         30          0          0          0        764   los_dispatch_keil.o
-       744         32          0          0          0       5090   los_event.o
-       216         16          0          0          0       3574   los_hw.o
-        68         10          0          4          0       1369   los_hw_tick.o
-        56         10          0       1028          0       5122   los_hwi.o
-       816        352          0        168          0       4687   los_inspect_entry.o
-       384         10          0          0          0       4544   los_membox.o
-      1210         14          0          0      32768      15480   los_memory.o
-       112         24          0          0         64       1969   los_memstat.o
-        28          0          0          0          0        604   los_misc.o
-       396          4          0          0          0       5116   los_multipledlinkhead.o
-       952         80          0         12          0      10308   los_mux.o
-       232         22          0          4          0      15198   los_priqueue.o
-      1346         86          0          4          0      19039   los_queue.o
-       804         70          0         12          0       7980   los_sem.o
-        92         74          0          0       1024        328   los_startup_keil.o
-      1220        128          0         16        208      21406   los_swtmr.o
-        20         10          0          0          0        993   los_sys.o
-      3064        276          0         68          0      27045   los_task.o
-        40          6          0         16          0        865   los_tick.o
-        92         16          0          8          0       1289   los_timeslice.o
-        42          0          0          0          0        567   main.o
-       724         58          0          4          0       1547   system_sam4s.o
+         0          0          0          0          0      10352   cmsis_liteos.o
+       272        138          0          0          0       2134   los_api_dynamic_mem.o
+       508        284          0          8         12       1695   los_api_event.o
+       418        172          0          0          0       1615   los_api_list.o
+       608        282          0         22          0       3344   los_api_msgqueue.o
+       832        492          0         12          0       2342   los_api_mutex.o
+       784        440         66         12          0       2221   los_api_sem.o
+       324        180          0          0        600       1606   los_api_static_mem.o
+       216         90          0          0          0        758   los_api_systick.o
+       884        542          0          8          0       2379   los_api_task.o
+       432        196          0          8          0       2136   los_api_timer.o
+       134         16          9          4          0      34325   los_bsp_adapter.o
+        88         18          0          0          0       1112   los_bsp_key.o
+       104         20          0          0          0       1113   los_bsp_led.o
+       176         26          0          0          0       3605   los_bsp_uart.o
+       188         18          0          8          0       3768   los_config.o
+       228         30          0          0          0        788   los_dispatch_keil.o
+       744         32          0          0          0       5150   los_event.o
+       216         16          0          0          0       2874   los_hw.o
+        68         10          0          4          0       1397   los_hw_tick.o
+        56         10          0       1028          0       5170   los_hwi.o
+       816        352          0        168          0       4747   los_inspect_entry.o
+       384         10          0          0          0       4588   los_membox.o
+      1210         14          0          0      32768      15648   los_memory.o
+       112         24          0          0         64       2009   los_memstat.o
+        28          0          0          0          0        612   los_misc.o
+       396          4          0          0          0       5164   los_multipledlinkhead.o
+       952         80          0         12          0      10440   los_mux.o
+       232         22          0          4          0      15306   los_priqueue.o
+      1346         86          0          4          0      19191   los_queue.o
+       804         70          0         12          0       8104   los_sem.o
+        92         74          0          0       1024        340   los_startup_keil.o
+      1220        128          0         16        208      21590   los_swtmr.o
+        20         10          0          0          0       1009   los_sys.o
+      3064        276          0         68          0      28073   los_task.o
+        40          6          0         16          0        881   los_tick.o
+        92         16          0          8          0       1317   los_timeslice.o
+        42          0          0          0          0        575   main.o
+       724         58          0          4          0       1575   system_sam4s.o
 
     ----------------------------------------------------------------------
-     18866       4242        128       1428      34676     228893   Object Totals
+     18866       4242        128       1428      34676     231053   Object Totals
          0          0         48          0          0          0   (incl. Generated)
         12          0          5          2          0          0   (incl. Padding)
 
@@ -2181,8 +2181,8 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     22692       4352        128       1436      34676     221857   Grand Totals
-     22692       4352        128        176      34676     221857   ELF Image Totals (compressed)
+     22692       4352        128       1436      34676     224017   Grand Totals
+     22692       4352        128        176      34676     224017   ELF Image Totals (compressed)
      22692       4352        128        176          0          0   ROM Totals
 
 ==============================================================================

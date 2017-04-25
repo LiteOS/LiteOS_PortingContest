@@ -16,7 +16,7 @@
 .\objects\los_event.o: ..\..\kernel\base\include\los_task.ph
 .\objects\los_event.o: ..\..\kernel\include\los_task.h
 .\objects\los_event.o: ..\..\kernel\include\los_sys.h
-.\objects\los_event.o: ..\..\kernel\cpu\arm\cortex-m4\los_hwi.h
+.\objects\los_event.o: ..\..\kernel\cpu\arm\cortex-m3\los_hwi.h
 .\objects\los_event.o: ..\..\kernel\include\los_sys.h
 .\objects\los_event.o: ..\..\kernel\include\los_tick.h
-.\objects\los_event.o: ..\..\kernel\cpu\arm\cortex-m4\los_hw.h
+.\objects\los_event.o: ..\..\kernel\cpu\arm\cortex-m3\los_hw.h

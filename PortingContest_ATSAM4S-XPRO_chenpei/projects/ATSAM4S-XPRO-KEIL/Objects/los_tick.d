@@ -16,7 +16,7 @@
 .\objects\los_tick.o: ..\..\kernel\include\los_swtmr.h
 .\objects\los_tick.o: ..\..\kernel\include\los_task.h
 .\objects\los_tick.o: ..\..\kernel\include\los_sys.h
-.\objects\los_tick.o: ..\..\kernel\cpu\arm\cortex-m4\los_hwi.h
+.\objects\los_tick.o: ..\..\kernel\cpu\arm\cortex-m3\los_hwi.h
 .\objects\los_tick.o: ..\..\kernel\include\los_sys.h
 .\objects\los_tick.o: ..\..\kernel\include\los_event.h
 .\objects\los_tick.o: ..\..\kernel\base\include\los_task.ph

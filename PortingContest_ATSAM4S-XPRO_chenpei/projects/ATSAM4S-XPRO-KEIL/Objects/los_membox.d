@@ -12,7 +12,7 @@
 .\objects\los_membox.o: ..\..\kernel\include\los_list.h
 .\objects\los_membox.o: ..\..\kernel\include\los_base.h
 .\objects\los_membox.o: ..\..\kernel\include\los_errno.h
-.\objects\los_membox.o: ..\..\kernel\cpu\arm\cortex-m4\los_hwi.h
+.\objects\los_membox.o: ..\..\kernel\cpu\arm\cortex-m3\los_hwi.h
 .\objects\los_membox.o: ..\..\kernel\include\los_sys.h
-.\objects\los_membox.o: ..\..\kernel\cpu\arm\cortex-m4\los_hwi.h
+.\objects\los_membox.o: ..\..\kernel\cpu\arm\cortex-m3\los_hwi.h
 .\objects\los_membox.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

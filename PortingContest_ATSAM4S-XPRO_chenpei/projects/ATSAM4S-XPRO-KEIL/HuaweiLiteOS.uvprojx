@@ -334,7 +334,7 @@
               <MiscControls></MiscControls>
               <Define>ATSAM4S_XPRO,__SAM4SD32C__</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\kernel\base\include;..\..\kernel\include;..\..\kernel\config;..\..\kernel\cmsis;..\..\kernel\link\keil;..\..\kernel\cpu\arm\cortex-m4;..\..\example\include;..\..\platform\ATSAM4S-XPRO</IncludePath>
+              <IncludePath>..\..\kernel\base\include;..\..\kernel\include;..\..\kernel\config;..\..\kernel\cmsis;..\..\kernel\link\keil;..\..\kernel\cpu\arm\cortex-m3;..\..\example\include;..\..\platform\ATSAM4S-XPRO</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>

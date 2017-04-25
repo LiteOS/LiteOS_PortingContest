@@ -12,7 +12,7 @@
 .\objects\los_task.o: ..\..\kernel\include\los_base.h
 .\objects\los_task.o: ..\..\kernel\include\los_errno.h
 .\objects\los_task.o: ..\..\kernel\include\los_sys.h
-.\objects\los_task.o: ..\..\kernel\cpu\arm\cortex-m4\los_hwi.h
+.\objects\los_task.o: ..\..\kernel\cpu\arm\cortex-m3\los_hwi.h
 .\objects\los_task.o: ..\..\kernel\include\los_sys.h
 .\objects\los_task.o: ..\..\kernel\include\los_tick.h
 .\objects\los_task.o: ..\..\kernel\include\los_event.h
@@ -25,5 +25,5 @@
 .\objects\los_task.o: ..\..\kernel\include\los_sem.h
 .\objects\los_task.o: ..\..\kernel\base\include\los_mux.ph
 .\objects\los_task.o: ..\..\kernel\include\los_mux.h
-.\objects\los_task.o: ..\..\kernel\cpu\arm\cortex-m4\los_hw.h
+.\objects\los_task.o: ..\..\kernel\cpu\arm\cortex-m3\los_hw.h
 .\objects\los_task.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

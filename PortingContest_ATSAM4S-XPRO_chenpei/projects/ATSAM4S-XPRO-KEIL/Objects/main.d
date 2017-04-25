@@ -9,7 +9,7 @@
 .\objects\main.o: ..\..\kernel\include\los_list.h
 .\objects\main.o: ..\..\kernel\include\los_base.h
 .\objects\main.o: ..\..\kernel\include\los_errno.h
-.\objects\main.o: ..\..\kernel\cpu\arm\cortex-m4\los_hwi.h
+.\objects\main.o: ..\..\kernel\cpu\arm\cortex-m3\los_hwi.h
 .\objects\main.o: ..\..\kernel\include\los_sys.h
 .\objects\main.o: ..\..\kernel\include\los_tick.h
 .\objects\main.o: ..\..\kernel\base\include\los_task.ph

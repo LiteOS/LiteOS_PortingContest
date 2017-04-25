@@ -13,7 +13,7 @@
 .\objects\los_mux.o: ..\..\kernel\include\los_base.h
 .\objects\los_mux.o: ..\..\kernel\include\los_errno.h
 .\objects\los_mux.o: ..\..\kernel\include\los_sys.h
-.\objects\los_mux.o: ..\..\kernel\cpu\arm\cortex-m4\los_hwi.h
+.\objects\los_mux.o: ..\..\kernel\cpu\arm\cortex-m3\los_hwi.h
 .\objects\los_mux.o: ..\..\kernel\include\los_sys.h
 .\objects\los_mux.o: ..\..\kernel\include\los_tick.h
 .\objects\los_mux.o: ..\..\kernel\include\los_event.h
@@ -22,4 +22,4 @@
 .\objects\los_mux.o: ..\..\kernel\include\los_memory.h
 .\objects\los_mux.o: ..\..\kernel\base\include\los_priqueue.ph
 .\objects\los_mux.o: ..\..\kernel\include\los_priqueue.h
-.\objects\los_mux.o: ..\..\kernel\cpu\arm\cortex-m4\los_hw.h
+.\objects\los_mux.o: ..\..\kernel\cpu\arm\cortex-m3\los_hw.h

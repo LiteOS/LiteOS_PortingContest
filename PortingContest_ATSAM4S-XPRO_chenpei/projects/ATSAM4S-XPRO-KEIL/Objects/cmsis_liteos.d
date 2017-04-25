@@ -13,9 +13,9 @@
 .\objects\cmsis_liteos.o: ..\..\kernel\include\los_base.h
 .\objects\cmsis_liteos.o: ..\..\kernel\include\los_errno.h
 .\objects\cmsis_liteos.o: ..\..\kernel\include\los_membox.h
-.\objects\cmsis_liteos.o: ..\..\kernel\cpu\arm\cortex-m4\los_hwi.h
+.\objects\cmsis_liteos.o: ..\..\kernel\cpu\arm\cortex-m3\los_hwi.h
 .\objects\cmsis_liteos.o: ..\..\kernel\include\los_sys.h
-.\objects\cmsis_liteos.o: ..\..\kernel\cpu\arm\cortex-m4\los_hwi.h
+.\objects\cmsis_liteos.o: ..\..\kernel\cpu\arm\cortex-m3\los_hwi.h
 .\objects\cmsis_liteos.o: ..\..\kernel\base\include\los_mux.ph
 .\objects\cmsis_liteos.o: ..\..\kernel\base\include\los_task.ph
 .\objects\cmsis_liteos.o: ..\..\kernel\include\los_task.h

@@ -10,4 +10,4 @@
 .\objects\los_hwi.o: ..\..\kernel\include\los_base.h
 .\objects\los_hwi.o: ..\..\kernel\include\los_errno.h
 .\objects\los_hwi.o: ..\..\kernel\include\los_sys.h
-.\objects\los_hwi.o: ..\..\kernel\cpu\arm\cortex-m4\los_hwi.h
+.\objects\los_hwi.o: ..\..\kernel\cpu\arm\cortex-m3\los_hwi.h

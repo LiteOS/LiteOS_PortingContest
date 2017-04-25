@@ -12,7 +12,7 @@
 .\objects\los_sys.o: ..\..\kernel\include\los_base.h
 .\objects\los_sys.o: ..\..\kernel\include\los_errno.h
 .\objects\los_sys.o: ..\..\kernel\include\los_sys.h
-.\objects\los_sys.o: ..\..\kernel\cpu\arm\cortex-m4\los_hwi.h
+.\objects\los_sys.o: ..\..\kernel\cpu\arm\cortex-m3\los_hwi.h
 .\objects\los_sys.o: ..\..\kernel\include\los_sys.h
 .\objects\los_sys.o: ..\..\kernel\base\include\los_tick.ph
 .\objects\los_sys.o: ..\..\kernel\include\los_tick.h

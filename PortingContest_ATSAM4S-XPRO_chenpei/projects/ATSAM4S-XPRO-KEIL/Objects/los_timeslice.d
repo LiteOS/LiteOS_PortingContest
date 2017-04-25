@@ -11,7 +11,7 @@
 .\objects\los_timeslice.o: ..\..\kernel\include\los_base.h
 .\objects\los_timeslice.o: ..\..\kernel\include\los_errno.h
 .\objects\los_timeslice.o: ..\..\kernel\include\los_sys.h
-.\objects\los_timeslice.o: ..\..\kernel\cpu\arm\cortex-m4\los_hwi.h
+.\objects\los_timeslice.o: ..\..\kernel\cpu\arm\cortex-m3\los_hwi.h
 .\objects\los_timeslice.o: ..\..\kernel\include\los_sys.h
 .\objects\los_timeslice.o: ..\..\kernel\base\include\los_task.ph
 .\objects\los_timeslice.o: ..\..\kernel\include\los_task.h

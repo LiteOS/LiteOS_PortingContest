@@ -11,7 +11,7 @@
 .\objects\los_misc.o: ..\..\kernel\include\los_errno.h
 .\objects\los_misc.o: ..\..\kernel\base\include\los_sys.ph
 .\objects\los_misc.o: ..\..\kernel\include\los_sys.h
-.\objects\los_misc.o: ..\..\kernel\cpu\arm\cortex-m4\los_hwi.h
+.\objects\los_misc.o: ..\..\kernel\cpu\arm\cortex-m3\los_hwi.h
 .\objects\los_misc.o: ..\..\kernel\include\los_sys.h
 .\objects\los_misc.o: ..\..\kernel\base\include\los_task.ph
 .\objects\los_misc.o: ..\..\kernel\include\los_task.h

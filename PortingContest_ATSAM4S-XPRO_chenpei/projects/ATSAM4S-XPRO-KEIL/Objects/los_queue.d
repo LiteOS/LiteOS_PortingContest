@@ -20,9 +20,9 @@
 .\objects\los_queue.o: ..\..\kernel\base\include\los_task.ph
 .\objects\los_queue.o: ..\..\kernel\include\los_task.h
 .\objects\los_queue.o: ..\..\kernel\include\los_sys.h
-.\objects\los_queue.o: ..\..\kernel\cpu\arm\cortex-m4\los_hwi.h
+.\objects\los_queue.o: ..\..\kernel\cpu\arm\cortex-m3\los_hwi.h
 .\objects\los_queue.o: ..\..\kernel\include\los_sys.h
 .\objects\los_queue.o: ..\..\kernel\include\los_tick.h
 .\objects\los_queue.o: ..\..\kernel\include\los_event.h
-.\objects\los_queue.o: ..\..\kernel\cpu\arm\cortex-m4\los_hw.h
+.\objects\los_queue.o: ..\..\kernel\cpu\arm\cortex-m3\los_hw.h
 .\objects\los_queue.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

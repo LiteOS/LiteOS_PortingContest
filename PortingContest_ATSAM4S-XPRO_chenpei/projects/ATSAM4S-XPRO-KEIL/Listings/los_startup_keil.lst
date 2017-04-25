@@ -97,14 +97,14 @@ ARM Macro Assembler    Page 2
               E000ED88 
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4 --apcs=interw
-ork --depend=.\objects\los_startup_keil.d -o.\objects\los_startup_keil.o -I"E:\
-Huawei LiteOS\SAM4S\Project\LiteOS_Kernel-master\projects\ATSAM4S-XPRO-KEIL\RTE
-" -I"D:\Program Files (x86)\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include" -I"
-D:\Program Files (x86)\Keil_v5\ARM\PACK\Keil\SAM4_DFP\1.5.0\Device\Include\SAM4
-S" -I"D:\Program Files (x86)\Keil_v5\ARM\PACK\Keil\SAM4_DFP\1.5.0" --predefine=
-"__MICROLIB SETA 1" --predefine="__UVISION_VERSION SETA 520" --predefine="_RTE_
- SETA 1" --predefine="__SAM4SD32C__ SETA 1" --list=.\listings\los_startup_keil.
-lst ..\..\platform\ATSAM4S-XPRO\los_startup_keil.s
+ork --depend=.\objects\los_startup_keil.d -o.\objects\los_startup_keil.o -IF:\G
+itHub\PortingContest\PortingContest_ATSAM4S-XPRO_chenpei\projects\ATSAM4S-XPRO-
+KEIL\RTE -I"D:\Program Files (x86)\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Inclu
+de" -I"D:\Program Files (x86)\Keil_v5\ARM\PACK\Keil\SAM4_DFP\1.5.0\Device\Inclu
+de\SAM4S" -I"D:\Program Files (x86)\Keil_v5\ARM\PACK\Keil\SAM4_DFP\1.5.0" --pre
+define="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SETA 520" --predefine
+="_RTE_ SETA 1" --predefine="__SAM4SD32C__ SETA 1" --list=.\listings\los_startu
+p_keil.lst ..\..\platform\ATSAM4S-XPRO\los_startup_keil.s
 
 
 
