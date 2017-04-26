@@ -71,7 +71,7 @@ void LOS_EvbUartWriteByte(const char c)
  *****************************************************************************/
 void LOS_EvbUartReadByte(char* c)
 {
-    LPUART_WriteBlocking(LPUART0, c, 1);
+    LPUART_ReadBlocking(LPUART0, c, 1);
     return;
 }
 
