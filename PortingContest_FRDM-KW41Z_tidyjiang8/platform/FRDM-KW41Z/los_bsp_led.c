@@ -16,28 +16,26 @@
  *****************************************************************************/
 void LOS_EvbLedInit(void)
 {
+
+    /* Port C clock is ungated at LOS_EvbUartInit, so here only enable A/B. */
     CLOCK_EnableClock(kCLOCK_PortA);
     CLOCK_EnableClock(kCLOCK_PortB);
 
-    PORT_SetPinMux(PORTA, 19u, kPORT_MuxAsGpio);
-    PORT_SetPinMux(PORTA, 18u, kPORT_MuxAsGpio);
-    PORT_SetPinMux(PORTB, 0u, kPORT_MuxAsGpio);
-    PORT_SetPinMux(PORTC, 1u, kPORT_MuxAsGpio);
+    PORT_SetPinMux(LED_RED_PORT, LED_RED_PIN, kPORT_MuxAsGpio);
+    PORT_SetPinMux(LED_GREEN_PORT, LED_GREEN_PIN, kPORT_MuxAsGpio);
+    PORT_SetPinMux(LED_BLUE_PORT, LED_BLUE_PIN, kPORT_MuxAsGpio);
+    PORT_SetPinMux(LED3_PORT, LED3_PIN, kPORT_MuxAsGpio);
 
     gpio_pin_config_t config =
     {
         kGPIO_DigitalOutput,
         0,
     };
-    GPIO_PinInit(GPIOA, 19u, &config);
-    GPIO_PinInit(GPIOA, 18u, &config);		
-    GPIO_PinInit(GPIOB, 0u, &config);		
-    GPIO_PinInit(GPIOC, 1u, &config);
+    GPIO_PinInit(LED_RED_GPIO, LED_RED_PIN, &config);
+    GPIO_PinInit(LED_GREEN_GPIO, LED_GREEN_PIN, &config);		
+    GPIO_PinInit(LED_BLUE_GPIO, LED_BLUE_PIN, &config);		
+    GPIO_PinInit(LED3_GPIO, LED3_PIN, &config);
 
-    GPIO_WritePinOutput(GPIOB, LED3_B0, 1);
-    GPIO_WritePinOutput(GPIOA, LED_GREEN_A19, 1);
-    GPIO_WritePinOutput(GPIOA, LED_BLUE_A18 , 1);
-    GPIO_WritePinOutput(GPIOC, LED_RED_C1, 1);
     return ;
 }
 
@@ -58,15 +56,11 @@ void LOS_EvbLedControl(int index, int cmd)
         {
             if (cmd == LED_ON)
             {
-                //add you code here.   
-                /*led1 on */
-                GPIO_WritePinOutput(GPIOB, LED3_B0, 0);
+                GPIO_WritePinOutput(LED_RED_GPIO, LED_RED_PIN, 0);
             }
             else
             {
-                //add you code here.
-                /*led1 off */
-                GPIO_WritePinOutput(GPIOB, LED3_B0, 1);
+                GPIO_WritePinOutput(LED_RED_GPIO, LED_RED_PIN, 1);
             }
             break;
         }
@@ -74,12 +68,11 @@ void LOS_EvbLedControl(int index, int cmd)
         {
             if (cmd == LED_ON)
             {
-                //add you code here.
-                /*led2 on */
+                GPIO_WritePinOutput(LED_GREEN_GPIO, LED_GREEN_PIN, 0);
             }
             else
             {
-                /*led2 off */
+                GPIO_WritePinOutput(LED_GREEN_GPIO, LED_GREEN_PIN, 1);
             }
             break;
         }
@@ -87,11 +80,11 @@ void LOS_EvbLedControl(int index, int cmd)
         {
             if (cmd == LED_ON)
             {
-                      /*led3 on */
+                GPIO_WritePinOutput(LED_GREEN_GPIO, LED_BLUE_PIN, 0);
             }
             else
             {
-                     /*led3 off */
+                GPIO_WritePinOutput(LED_GREEN_GPIO, LED_BLUE_PIN, 1);
             }
             break;
         }
