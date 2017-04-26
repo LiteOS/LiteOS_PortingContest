@@ -36,6 +36,12 @@ void LOS_EvbLedInit(void)
     GPIO_PinInit(LED_BLUE_GPIO, LED_BLUE_PIN, &config);		
     GPIO_PinInit(LED3_GPIO, LED3_PIN, &config);
 
+    /* turn off all leds */
+    GPIO_WritePinOutput(LED_RED_GPIO, LED_RED_PIN, 1);
+    GPIO_WritePinOutput(LED_GREEN_GPIO, LED_GREEN_PIN, 1);
+    GPIO_WritePinOutput(LED_BLUE_GPIO, LED_BLUE_PIN, 1);
+    GPIO_WritePinOutput(LED3_GPIO, LED3_PIN, 1);
+
     return ;
 }
 
