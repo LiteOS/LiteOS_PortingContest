@@ -412,4 +412,6 @@ _RTE_
 
 ## 8其它
 
-frdm-kw41z的内核是cortex-m0+，不支持非对齐访问，移植过程中遇到访问内存不对其而出错的问题，详见[liteos porting issue 2](https://github.com/LITEOS/PortingContest/issues/2)。
+* frdm-kw41z的内核是cortex-m0+，不支持非对齐访问，移植过程中遇到访问内存不对其而出错的问题，详见[liteos porting issue 2](https://github.com/LITEOS/PortingContest/issues/2)。
+
+* 移植过程中，在测试按键时，发现只要按下一次，程序就会检测到gpio一直为0（即key一直被按下），后来发现gpio的上拉寄存器默认没有使能，配置其使能后就正常了。
