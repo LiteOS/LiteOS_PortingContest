@@ -2168,6 +2168,12 @@
         <group>
             <name>library</name>
             <group>
+                <name>device</name>
+                <file>
+                    <name>$PROJ_DIR$\..\..\platform\FRDM-KW41Z\device\clock_config.c</name>
+                </file>
+            </group>
+            <group>
                 <name>drivers</name>
                 <file>
                     <name>$PROJ_DIR$\..\..\platform\FRDM-KW41Z\drivers\fsl_adc16.c</name>
@@ -2278,9 +2284,6 @@
                     <name>$PROJ_DIR$\..\..\platform\FRDM-KW41Z\utilities\fsl_sbrk.c</name>
                 </file>
             </group>
-            <file>
-                <name>$PROJ_DIR$\..\..\platform\FRDM-KW41Z\src\clock_config.c</name>
-            </file>
         </group>
         <group>
             <name>platform</name>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
     <fileVersion>2</fileVersion>
-    <fileChecksum>446291350</fileChecksum>
+    <fileChecksum>3999957958</fileChecksum>
     <configuration>
         <name>Debug</name>
         <outputs>
@@ -403,7 +403,7 @@
             <file>$PROJ_DIR$\..\..\platform\FRDM-KW41Z\drivers\fsl_tsi_v4.c</file>
             <file>$PROJ_DIR$\..\..\platform\FRDM-KW41Z\drivers\fsl_vref.c</file>
             <file>$PROJ_DIR$\..\..\platform\FRDM-KW41Z\src\board.c</file>
-            <file>$PROJ_DIR$\..\..\platform\FRDM-KW41Z\src\clock_config.c</file>
+            <file>$PROJ_DIR$\..\..\PLATFORM\FRDM-KW41Z\SRC\clock_config.c</file>
             <file>$PROJ_DIR$\..\..\platform\FRDM-KW41Z\src\hello_world.c</file>
             <file>$PROJ_DIR$\..\..\platform\FRDM-KW41Z\src\pin_mux.c</file>
             <file>$PROJ_DIR$\..\..\platform\FRDM-KW41Z\utilities\fsl_debug_console.c</file>
@@ -468,6 +468,8 @@
             <file>$PROJ_DIR$\Debug\Obj\los_api_sem.o</file>
             <file>$PROJ_DIR$\Debug\Obj\los_api_static_mem.o</file>
             <file>$PROJ_DIR$\Debug\Obj\los_api_systick.o</file>
+            <file>$PROJ_DIR$\..\..\platform\FRDM-KW41Z\device\clock_config.c</file>
+            <file>$PROJ_DIR$\..\..\platform\FRDM-KW41Z\device\clock_config.h</file>
         </outputs>
         <file>
             <name>[ROOT_NODE]</name>
@@ -2316,7 +2318,7 @@
             </inputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\platform\FRDM-KW41Z\src\clock_config.c</name>
+            <name>$PROJ_DIR$\..\..\PLATFORM\FRDM-KW41Z\SRC\clock_config.c</name>
             <outputs>
                 <tool>
                     <name>BICOMP</name>
@@ -2513,11 +2515,11 @@
             <inputs>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 318 185 317 205 203 184 316 207 212 204 187 43 186 320 55 323 24 313 321 213 208 210 262 209 211</file>
+                    <file> 317 212 316 211 207 184 43 185 318 205 187 186 320 55 323 24 313 321 213 208 209 262 210</file>
                 </tool>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 262 204 203 43 184 186 317 318 323 237 24 185 320 316 313 321 55 207 208 209 210 211 212 213 187 205</file>
+                    <file> 262 205 184 186 317 318 323 237 24 185 320 316 313 321 55 207 208 209 210 211 212 213 187 43</file>
                 </tool>
             </inputs>
         </file>
@@ -2540,11 +2542,11 @@
             <inputs>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 43 55 318 317 187 186 321 213 205 320 323 24 313 208 204 203 184 185 316 207 212 210 263 209 211</file>
+                    <file> 184 43 205 187</file>
                 </tool>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 263 204 203 43 184 186 317 318 323 237 24 185 320 316 313 321 55 207 208 209 210 211 212 213 187 205</file>
+                    <file> 263 205 184 186 317 318 323 237 24 185 320 316 313 321 55 207 208 209 210 211 212 213 187 43</file>
                 </tool>
             </inputs>
         </file>
@@ -2567,11 +2569,11 @@
             <inputs>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 213 48 313 55 21 318 319 187 320 233 205 317 321 279 203 186 209 39 264 204 323 24 316 43 184 208 211 185 207 212 210</file>
+                    <file> 464 318 317 212 21 321 421 279 184 233 187 313 319 316 207 39 264 205 48 323 24 185 320 210 186 55 213 208 209 211</file>
                 </tool>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 319 317 318 323 237 24 313 39 264 316 321 21 421 279 204 203 43 184 186 185 320 55 207 208 209 210 211 212 213 187 205 48</file>
+                    <file> 319 317 318 323 237 24 313 39 264 316 321 21 421 279 205 184 186 185 320 55 207 208 209 210 211 212 213 187 48 464</file>
                 </tool>
             </inputs>
         </file>
@@ -2635,6 +2637,33 @@
                 <tool>
                     <name>ICCARM</name>
                     <file> 426 293 279 421 294 434 319 317 318 323 237 24 313 433 420 251 298 432 428 429 263 262 264 316 321 23 437 21 448 22 446 417 419 416 444 445 449 447 418</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\platform\FRDM-KW41Z\device\clock_config.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 67</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 130</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 68</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 24 318 185 323 313 184 464 316 317 321 58 186 320 55 187</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 184 186 317 318 323 237 24 185 320 316 313 321 55 207 208 209 210 211 212 213 187 58 464</file>
                 </tool>
             </inputs>
         </file>
