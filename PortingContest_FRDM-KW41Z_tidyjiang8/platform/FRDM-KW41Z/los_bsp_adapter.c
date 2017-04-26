@@ -191,18 +191,18 @@ void LosAdapIrqDisable(unsigned int irqnum)
  *****************************************************************************/
 void LOS_EvbSetup(void)
 {
-	LOS_EvbUartInit();
-	LOS_EvbLedInit();
-	LOS_EvbKeyInit();
-	return ;
+    LOS_EvbUartInit();
+    LOS_EvbLedInit();
+    LOS_EvbKeyInit();
+    return ;
 }
 
 
 void LOS_EvbTrace(const char *str)
 {
-	LOS_EvbUartWriteStr(str);
-		
-	return ;
+    LOS_EvbUartWriteStr(str);
+
+    return ;
 }
 
 

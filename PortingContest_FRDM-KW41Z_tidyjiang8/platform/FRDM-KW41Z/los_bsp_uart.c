@@ -21,32 +21,32 @@
  *****************************************************************************/
 void LOS_EvbUartInit(void)
 {
-	/* Initialize LPUART0 pins below */
-	/* Ungate the port clock */
-	CLOCK_EnableClock(kCLOCK_PortC);
-	/* Affects PORTC_PCR6 register */
-	PORT_SetPinMux(PORTC, 6u, kPORT_MuxAlt4);
-	/* Affects PORTC_PCR7 register */
-	PORT_SetPinMux(PORTC, 7u, kPORT_MuxAlt4);
-        
-        BOARD_BootClockRUN();
-        
-        /* SIM_SOPT2[27:26]:
-        *  00: Clock Disabled
-        *  01: MCGFLLCLK
-        *  10: OSCERCLK
-        *  11: MCGIRCCLK
-        */
-        CLOCK_SetLpuartClock(2);
-	//	lpuart_config_t lpuart_config;
-        //LPUART_GetDefaultConfig(&lpuart_config);
-        //lpuart_config.baudRate_Bps = BOARD_DEBUG_UART_BAUDRATE;
-        /* Enable clock and initial UART module follow user configure structure. */
-        //LPUART_Init(LPUART0, &lpuart_config, BOARD_DEBUG_UART_CLK_FREQ);
-        //LPUART_EnableTx(LPUART0, true);
-        //LPUART_EnableRx(LPUART0, true);
-        DbgConsole_Init(BOARD_DEBUG_UART_BASEADDR, BOARD_DEBUG_UART_BAUDRATE, BOARD_DEBUG_UART_TYPE, BOARD_DEBUG_UART_CLK_FREQ);
-	return;
+    /* Initialize LPUART0 pins below */
+    /* Ungate the port clock */
+    CLOCK_EnableClock(kCLOCK_PortC);
+
+    PORT_SetPinMux(LPUART_DEBUG_PORT, LPUART_DEBUG_RX_PIN, kPORT_MuxAlt4);
+    PORT_SetPinMux(LPUART_DEBUG_PORT, LPUART_DEBUG_TX_PIN, kPORT_MuxAlt4);
+
+    BOARD_BootClockRUN();
+
+    /* SIM_SOPT2[27:26]:
+     *  00: Clock Disabled
+     *  01: MCGFLLCLK
+     *  10: OSCERCLK
+     *  11: MCGIRCCLK
+     */
+    CLOCK_SetLpuartClock(2);
+    //	lpuart_config_t lpuart_config;
+    //LPUART_GetDefaultConfig(&lpuart_config);
+    //lpuart_config.baudRate_Bps = BOARD_DEBUG_UART_BAUDRATE;
+    /* Enable clock and initial UART module follow user configure structure. */
+    //LPUART_Init(LPUART0, &lpuart_config, BOARD_DEBUG_UART_CLK_FREQ);
+    //LPUART_EnableTx(LPUART0, true);
+    //LPUART_EnableRx(LPUART0, true);
+    DbgConsole_Init(BOARD_DEBUG_UART_BASEADDR, BOARD_DEBUG_UART_BAUDRATE, BOARD_DEBUG_UART_TYPE, BOARD_DEBUG_UART_CLK_FREQ);
+
+    return;
 }
 
 /*****************************************************************************
@@ -58,8 +58,8 @@ void LOS_EvbUartInit(void)
  *****************************************************************************/
 void LOS_EvbUartWriteByte(const char c)
 {
-        LPUART_WriteBlocking(LPUART0, (const uint8_t *)&c, 1);
-	return;
+    LPUART_WriteBlocking(LPUART0, (const uint8_t *)&c, 1);
+    return;
 }
 
 /*****************************************************************************
@@ -71,9 +71,8 @@ void LOS_EvbUartWriteByte(const char c)
  *****************************************************************************/
 void LOS_EvbUartReadByte(char* c)
 {
-	//add you code here.
-        
-	return;
+    LPUART_WriteBlocking(LPUART0, c, 1);
+    return;
 }
 
 static char _buffer[128];
@@ -87,19 +86,18 @@ static char _buffer[128];
  *****************************************************************************/
 void LOS_EvbUartPrintf(char* fmt, ...)
 {
-	//add you code here.
-        int i;
-        va_list ap;
-        va_start(ap, fmt);
-        vsprintf(_buffer, fmt, ap);
-        va_end(ap);
+    int i;
+    va_list ap;
+    va_start(ap, fmt);
+    vsprintf(_buffer, fmt, ap);
+    va_end(ap);
 
-        for (i = 0; _buffer[i] != '\0'; i++)
-        {
-            LOS_EvbUartWriteByte(_buffer[i]);
-        }
-  
-	return;
+    for (i = 0; _buffer[i] != '\0'; i++)
+    {
+        LOS_EvbUartWriteByte(_buffer[i]);
+    }
+
+    return;
 }
 
 /*****************************************************************************
@@ -111,22 +109,21 @@ void LOS_EvbUartPrintf(char* fmt, ...)
  *****************************************************************************/
 void LOS_EvbUartWriteStr(const char* str)
 {
-	//add you code here.
-        while(*str) {
-            LOS_EvbUartWriteByte(*str);
-            str++;
-        }
-	//DbgConsole_Printf(str);
-	return;
+    while(*str) {
+        LOS_EvbUartWriteByte(*str);
+        str++;
+    }
+
+    return;
 }
 
 #ifndef LOS_KERNEL_TEST_KEIL_SWSIMU
 ///重定向c库函数printf到串口，重定向后可使用printf函数
 int fputc(int ch/*, FILE *f*/)
 {
-		/* 发送一个字节数据到串口USART */
-		LOS_EvbUartWriteByte((char)ch);	
-	
-		return (ch);
+    /* 发送一个字节数据到串口USART */
+    LOS_EvbUartWriteByte((char)ch);
+    
+    return (ch);
 }
 #endif

@@ -1,9 +1,19 @@
 #ifndef _LOS_BSP_KEY_H
 #define _LOS_BSP_KEY_H
 
-#define RESET 0
+/* SW3 -- PTC4 */
+#define SW3_PORT   ((PORT_Type *)PORTC_BASE)
+#define SW3_GPIO   ((GPIO_Type *)GPIOC_BASE)
+#define SW3_PIN    (4U)
 
-#define USER_KEY 5
+/* SW4 -- PTC5 */
+#define SW4_PORT   ((PORT_Type *)PORTC_BASE)
+#define SW4_GPIO   ((GPIO_Type *)GPIOC_BASE)
+#define SW4_PIN    (5U)
+
+#define RESET      (0)
+
+#define USER_KEY   SW4_PIN
 
 extern void LOS_EvbKeyInit(void);
 

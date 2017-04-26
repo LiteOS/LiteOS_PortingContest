@@ -1,19 +1,34 @@
 #ifndef _LOS_BSP_LED_H
 #define _LOS_BSP_LED_H
 
-#define LED3_B0 		0  // PORTB0
-#define LED_RED_C1 		1  // PORTC1
-#define LED_GREEN_A19 	19 // PORTA19
-#define LED_BLUE_A18 	18 // PORTA18
-#define LED_4
+/* LED RED -- PTC1 */
+#define LED_RED_PORT    ((PORT_Type *)PORTC_BASE)
+#define LED_RED_GPIO    ((GPIO_Type *)GPIOC_BASE)
+#define LED_RED_PIN     (1U)
 
-#define LED_ON	(1)
-#define LED_OFF	(0)
-#define LOS_LED1	(0)
-#define LOS_LED2	(1)
-#define LOS_LED3	(2)
-#define LOS_LED4	(3)
-#define LOS_LEDX	(4)
+/* LED GREEN -- PTA19 */
+#define LED_GREEN_PORT  ((PORT_Type *)PORTA_BASE)
+#define LED_GREEN_GPIO  ((GPIO_Type *)GPIOA_BASE)
+#define lED_GREEN_PIN   (19U)
+
+/* LED BLUE -- PTA18 */
+#define LED_BLUE_PORT   ((PORT_Type *)PORTA_BASE)
+#define LED_BLUE_GPIO   ((GPIO_Type *)GPIOA_BASE)
+#define LED_BLUE_PIN    (18U)
+
+/* LED3 -- TPB0 */
+#define LED3   ((PORT_Type *)PORTB_BASE)
+#define LED3   ((GPIO_Type *)GPIOB_BASE)
+#define LED3    (0U)
+
+
+#define LED_ON          (1)
+#define LED_OFF         (0)
+#define LOS_LED1        (LED_RED_PIN)
+#define LOS_LED2        (lED_GREEN_PIN)
+#define LOS_LED3        (LED_BLUE_PIN)
+#define LOS_LED4        (3)
+#define LOS_LEDX        (4)
 
 
 void LOS_EvbLedInit(void);

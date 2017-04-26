@@ -15,18 +15,28 @@
  Return      : None
  *****************************************************************************/
 void LOS_EvbKeyInit(void)
-{	
-	//add you code here.
-	PORT_SetPinMux(PORTC, 5u, kPORT_MuxAsGpio);
+{
+    /* Port C clock is ungated at LOS_EvbUartInit, so here do nothing. */
 
-	gpio_pin_config_t config =
- 	{
-  		kGPIO_DigitalInput,
-   		0,
- 	};
-	GPIO_PinInit(GPIOC, 5u, &config);
-	
-	return ;
+    /* Set pin config, includes pull up & pinmux */
+    port_pin_config_t pinConfig = {0};
+    pinConfig.pullSelect = kPORT_PullUp; /* it must be set as Pull Up and enabled */
+    pinConfig.slewRate = kPORT_SlowSlewRate;
+    pinConfig.passiveFilterEnable = kPORT_PassiveFilterDisable;
+    pinConfig.driveStrength = kPORT_LowDriveStrength;
+    pinConfig.mux = kPORT_MuxAsGpio;/* set pinmux as GPIO */
+    PORT_SetPinConfig(SW3_PORT, SW3_PIN, &pinConfig);
+    PORT_SetPinConfig(SW4_PORT, SW4_PIN, &pinConfig);
+
+    gpio_pin_config_t gpioConfig =
+    {
+        kGPIO_DigitalInput,
+        0,
+    };
+    GPIO_PinInit(SW3_GPIO, SW3_PIN, &gpioConfig);
+    GPIO_PinInit(SW4_GPIO, SW4_PIN, &gpioConfig);
+
+    return ;
 }
 
 /*****************************************************************************
@@ -38,10 +48,10 @@ void LOS_EvbKeyInit(void)
  *****************************************************************************/
 unsigned int LOS_EvbGetKeyVal(int KeyNum)
 {
-	unsigned int KeyVal = 0xFFFFFFFF; 
-	
-	KeyVal = GPIO_ReadPinInput(GPIOC, KeyNum);
-	return KeyVal;
+    unsigned int KeyVal = 0xFFFFFFFF; 
+
+    KeyVal = GPIO_ReadPinInput(GPIOC, KeyNum);
+    return KeyVal;
 }
 
 /*****************************************************************************
@@ -53,9 +63,7 @@ unsigned int LOS_EvbGetKeyVal(int KeyNum)
  *****************************************************************************/
 void EXTIxxx_IRQHandler(void)
 {
-	//add you code here.
-	
-	return;
+    return;
 }
 
 
