@@ -2267,21 +2267,6 @@
                 </file>
             </group>
             <group>
-                <name>src</name>
-                <file>
-                    <name>$PROJ_DIR$\..\..\platform\FRDM-KW41Z\src\board.c</name>
-                </file>
-                <file>
-                    <name>$PROJ_DIR$\..\..\platform\FRDM-KW41Z\src\clock_config.c</name>
-                </file>
-                <file>
-                    <name>$PROJ_DIR$\..\..\platform\FRDM-KW41Z\src\hello_world.c</name>
-                </file>
-                <file>
-                    <name>$PROJ_DIR$\..\..\platform\FRDM-KW41Z\src\pin_mux.c</name>
-                </file>
-            </group>
-            <group>
                 <name>utilities</name>
                 <file>
                     <name>$PROJ_DIR$\..\..\platform\FRDM-KW41Z\utilities\fsl_debug_console.c</name>
@@ -2293,6 +2278,9 @@
                     <name>$PROJ_DIR$\..\..\platform\FRDM-KW41Z\utilities\fsl_sbrk.c</name>
                 </file>
             </group>
+            <file>
+                <name>$PROJ_DIR$\..\..\platform\FRDM-KW41Z\src\clock_config.c</name>
+            </file>
         </group>
         <group>
             <name>platform</name>
