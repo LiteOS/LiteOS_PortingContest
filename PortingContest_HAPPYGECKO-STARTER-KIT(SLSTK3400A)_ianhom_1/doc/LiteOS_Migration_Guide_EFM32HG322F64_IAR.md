@@ -285,7 +285,10 @@ IAR工具需要开发者自行购买，HAPPYGECKO START-KIT(3400A)自带板载J-
 ### 获取EFM32HG软件开发包
 
 - 登录Silicon Labs官网下载[Simplicity Studio](http://www.silabs.com/products/development-tools/software/simplicity-studio)并安装。Simplicity Studio工具中选择对应的开发板，即可获得对应的资料及IAR例程。   
-- **注意：EFM32HG系列在高版本的IAR中才得到支持，建议使用IAR for ARM 7.4或以上版本进行移植！本文档中采用的是7.4版本，若误使用低版本打开本移植工程会破坏IAR工程，需要重新下载工程并使用正确版本打开**    
+- **注意：EFM32HG系列在高版本的IAR中才得到支持，建议使用IAR for ARM 7.4或以上版本进行移植！本文档中采用的是7.4版本，若误使用低版本打开本移植工程会破坏IAR工程，需要重新下载工程并使用正确版本打开；另外需要注意IAR工程及源码路径不宜过长，会导致工程打开失败**    
+    
+ 
+
 ![](./meta/iar/HAPPYGECKO-STARTER_KIT(SLSTK3400A)/Simplicity_Studio_1.jpg)
 
 - HAPPYGECKO-STARTER-KIT(SLSTK3400A)具有板载J-Link支持虚拟串口，所以我们使用基于有串口打印的cslib例程进行移植修改。路径为xxx\Silicon\developer\sdks\exx32\v5.0.0.0\hardware\kit\SLSTK3400A_EFM32HG\examples   

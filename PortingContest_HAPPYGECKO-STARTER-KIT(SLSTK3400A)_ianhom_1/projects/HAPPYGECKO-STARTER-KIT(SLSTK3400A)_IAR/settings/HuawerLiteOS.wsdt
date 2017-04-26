@@ -12,7 +12,7 @@
           
           
           
-        <Column0>270</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+        <Column0>175</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
       </Workspace>
       <Build>
         
@@ -65,14 +65,14 @@
       
       
       
-    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\los_bsp_adapter.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>0</YPos2><SelStart2>0</SelStart2><SelEnd2>0</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\retargetio.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>339</YPos2><SelStart2>9881</SelStart2><SelEnd2>9881</SelEnd2></Tab><ActiveTab>1</ActiveTab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\los_bsp_adapter.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>0</YPos2><SelStart2>0</SelStart2><SelEnd2>0</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\platform\HAPPYGECKO-STARTER-KIT(SLSTK3400A)\Library\retargetio.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>339</YPos2><SelStart2>9881</SelStart2><SelEnd2>9881</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\user\main.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>60</YPos2><SelStart2>1740</SelStart2><SelEnd2>1740</SelEnd2></Tab><ActiveTab>2</ActiveTab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
     <Positions>
       
       
       
       
       
-    <Top><Row0><Sizes><Toolbar-00BC0E48><key>iaridepm.enu1</key></Toolbar-00BC0E48></Sizes></Row0></Top><Left><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>513</Bottom><Right>361</Right><x>-2</x><y>-2</y><xscreen>141</xscreen><yscreen>136</yscreen><sizeHorzCX>103676</sizeHorzCX><sizeHorzCY>198251</sizeHorzCY><sizeVertCX>266912</sizeVertCX><sizeVertCY>750729</sizeVertCY></Rect></Wnd0></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>128</Bottom><Right>1362</Right><x>-2</x><y>-2</y><xscreen>1364</xscreen><yscreen>130</yscreen><sizeHorzCX>1002941</sizeHorzCX><sizeHorzCY>189504</sizeHorzCY><sizeVertCX>103676</sizeVertCX><sizeVertCY>198251</sizeVertCY></Rect></Wnd1></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+    <Top><Row0><Sizes><Toolbar-00BC0E48><key>iaridepm.enu1</key></Toolbar-00BC0E48></Sizes></Row0><Row1><Sizes/></Row1></Top><Left><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>336</Bottom><Right>266</Right><x>-2</x><y>-2</y><xscreen>104</xscreen><yscreen>93</yscreen><sizeHorzCX>103586</sizeHorzCX><sizeHorzCY>198718</sizeHorzCY><sizeVertCX>266932</sizeVertCX><sizeVertCY>722222</sizeVertCY></Rect></Wnd0></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>87</Bottom><Right>1006</Right><x>-2</x><y>-2</y><xscreen>1008</xscreen><yscreen>89</yscreen><sizeHorzCX>1003984</sizeHorzCX><sizeHorzCY>190171</sizeHorzCY><sizeVertCX>103586</sizeVertCX><sizeVertCY>198718</sizeVertCY></Rect></Wnd1></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
   </Desktop>
 </Workspace>
 
