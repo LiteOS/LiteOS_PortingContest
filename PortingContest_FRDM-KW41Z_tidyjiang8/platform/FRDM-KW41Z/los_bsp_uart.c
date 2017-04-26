@@ -37,13 +37,6 @@ void LOS_EvbUartInit(void)
      *  11: MCGIRCCLK
      */
     CLOCK_SetLpuartClock(2);
-    //	lpuart_config_t lpuart_config;
-    //LPUART_GetDefaultConfig(&lpuart_config);
-    //lpuart_config.baudRate_Bps = 115200;
-    /* Enable clock and initial UART module follow user configure structure. */
-    //LPUART_Init(LPUART0, &lpuart_config, CLOCK_GetOsc0ErClkFreq());
-    //LPUART_EnableTx(LPUART0, true);
-    //LPUART_EnableRx(LPUART0, true);
     DbgConsole_Init(LPUART0, 115200, DEBUG_CONSOLE_DEVICE_TYPE_LPUART, CLOCK_GetOsc0ErClkFreq());
 
     return;
