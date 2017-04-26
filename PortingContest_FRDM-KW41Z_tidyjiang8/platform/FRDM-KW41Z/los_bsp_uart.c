@@ -7,10 +7,10 @@
 /******************************************************************************
 	here include some special hearder file you need
 ******************************************************************************/
-#include "board.h"
 #include "fsl_port.h"
 #include "fsl_clock.h"
 #include "fsl_lpuart.h"
+#include "clock_config.h"
 
 /*****************************************************************************
  Function    : LOS_EvbUartInit
@@ -39,12 +39,12 @@ void LOS_EvbUartInit(void)
     CLOCK_SetLpuartClock(2);
     //	lpuart_config_t lpuart_config;
     //LPUART_GetDefaultConfig(&lpuart_config);
-    //lpuart_config.baudRate_Bps = BOARD_DEBUG_UART_BAUDRATE;
+    //lpuart_config.baudRate_Bps = 115200;
     /* Enable clock and initial UART module follow user configure structure. */
-    //LPUART_Init(LPUART0, &lpuart_config, BOARD_DEBUG_UART_CLK_FREQ);
+    //LPUART_Init(LPUART0, &lpuart_config, CLOCK_GetOsc0ErClkFreq());
     //LPUART_EnableTx(LPUART0, true);
     //LPUART_EnableRx(LPUART0, true);
-    DbgConsole_Init(BOARD_DEBUG_UART_BASEADDR, BOARD_DEBUG_UART_BAUDRATE, BOARD_DEBUG_UART_TYPE, BOARD_DEBUG_UART_CLK_FREQ);
+    DbgConsole_Init(LPUART0, 115200, DEBUG_CONSOLE_DEVICE_TYPE_LPUART, CLOCK_GetOsc0ErClkFreq());
 
     return;
 }
@@ -71,7 +71,7 @@ void LOS_EvbUartWriteByte(const char c)
  *****************************************************************************/
 void LOS_EvbUartReadByte(char* c)
 {
-    LPUART_ReadBlocking(LPUART0, c, 1);
+    LPUART_ReadBlocking(LPUART0, (uint8_t *)c, 1);
     return;
 }
 
