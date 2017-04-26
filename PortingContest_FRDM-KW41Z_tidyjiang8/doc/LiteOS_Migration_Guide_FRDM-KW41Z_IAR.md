@@ -281,7 +281,12 @@ IAR工具需要开发者自行购买，Link驱动程序需根据具体使用的�
 
 ### 6.1 获取 SDK
 
-FRDM-KW41Z的SDK又叫做连接软件，它提供了MKW41Z系列芯片的驱动程序和协议栈，我们主要借助它里面提供的驱动程序来适配LiteOS内核。进入FRDM-KW41Z的官网进行下载。下载下来后可以看到它是一个以.exe为后缀的可执行文件，我们直接像安装普通软件一样安装它。默认的安装路径是`C:\NXP\MKW41Z_ConnSw_1.0.2\`（注：今后的版本号可能会变更）。
+FRDM-KW41Z的SDK又叫做连接软件，它提供了MKW41Z系列芯片的驱动程序和协议栈，我们主要借助它里面提供的驱动程序来适配LiteOS内核。进入FRDM-KW41Z的[官网](http://www.nxp.com/cn/products/microcontrollers-and-processors/%E5%85%B6%E4%BB%96%E5%A4%84%E7%90%86%E5%99%A8/application-specific-mcus-mpus/bluetooth-low-energy-ble/nxp-freedom-development-kit-for-kinetis-kw41z-31z-21z-mcus:FRDM-KW41Z?&tab=In-Depth_Tab&tid=van/frdm-kw41z/startnow)进行下载。下载下来后可以看到它是一个以.exe为后缀的可执行文件，我们直接像安装普通软件一样安装它。默认的安装路径是`C:\NXP\MKW41Z_ConnSw_1.0.2\`（注：今后的版本号可能会变更）。
+
+![](./meta/iar/frdm-kw41z/down_sdk.png)
+
+<center>图 - 下载连接软件</center>
+
 
 安装完成后，先浏览安装文件夹下的内容，了解该文件夹中各个子目录的作用，确定我们需要用到哪些内容。主要用到的文件夹包括：
 ```
@@ -320,261 +325,91 @@ FRDM-KW41Z的SDK又叫做连接软件，它提供了MKW41Z系列芯片的驱动�
 
 基本了解完整个目录架构后，用 IAR 打开 hello_world 示例代码(`C:\NXP\MKW41Z_ConnSw_1.0.2\boards\frdmkw41z\hello_world\iar\`)，再详细查看该工程中所使用到的文件。
 
-### 6.2 创建工程
+### 6.2 创建工程&添加代码&配置属性
 
-获取到LiteOS内核代码后，如果您本地有开发板相关的驱动代码，可以先将您本地的驱动代码库拷贝到platform\LOS_EXPAND_XXX目录下，以便添加到工程中。
+按照[LiteOS_Migration_Guide_IAR.md
+](https://github.com/LITEOS/LiteOS_Kernel/blob/master/doc/LiteOS_Migration_Guide_IAR.md)所述方法创建好IAR的基本工程，并添加好源码。
 
-![](./meta/keil/expand/copy_file.png)
+**说明**：
 
+* 添加工程代码前，将前面所述的相关代码拷贝至LiteOS源码的`platform/frdm-kw41z/`目录下作为库目录。
 
-在安装好IAR等开发工具后，我们使用IAR集成开发环境创建Huawei LiteOS工程，步骤如下：
+* 配置工程属性时，在C/C++ Compiler->PreProcessor->Defined symbols 下面添加如下宏定义：
+```
+DEBUG
+CPU_MKW41Z512VHT4
+PRINTF_FLOAT_ENABLE=0
+SCANF_FLOAT_ENABLE=0
+PRINTF_ADVANCED_ENABLE=0
+SCANF_ADVANCED_ENABLE=0
+FRDM_KW41Z
+FREEDOM
+_RTE_
+```
+这些宏定义是从 hello_world 工程中拷贝过来的，如果不添加这些宏定义，则会在编译时报错。
 
-- 打开IAR， 然后点击File->New->Workspace创建一个新的工作空间
+![](./meta/iar/frdm-kw41z/add_define.png)
 
-![](./meta/iar/newworkspace.png)
+<center>图 - 添加宏定义</center>
 
-- 然后点击Project->Create New Project...创建一个新的project
+* 配置工程属性时，勾选上 General Options->Library Configuration->Use CMSIS。我在拷贝库文件的时候没有拷贝 CMSIS 文件夹，所以需要勾选上。如果你将 CMSIS 目录拷贝到工程中了，则不需要勾选此选项。
 
-![](./meta/iar/newproject.png)
+![](./meta/iar/frdm-kw41z/cmsis.png)
 
-- 创建一个空的工程
+<center>图 - CMSIS</center>
 
-![](./meta/iar/newproject_2.png)
+* 配置工程时，勾选上 Output Converter->Output->generate additonal ooutput，并在 Output format 下拉栏中选择 Raw binary，这样可以直接产生 .bin 镜像。
 
-- 保存工程名，比如HuaweiLiteOS
+![](./meta/iar/frdm-kw41z/gen_bin.png)
 
-![](./meta/iar/newproject_3.png)
-
-### 6.2 添加kernel代码到工程
-
-- 创建工程中的目录结构
-
-![](./meta/iar/add_group.png)
-
-如上图所示，通过add Group 操作来创建一个在工程中显示的目录树，方便我们区分代码功能，比如我们创建如下结构的目录树
-
-![](./meta/iar/add_group_2.png)
-
-创建完成目录树之后我们添加源代码到目录树中，最终添加完成的内容如下：
-
-- 将kernel/base目录下的所有C文件添加到工程中的kernel下
-- 将kernel/cmsis目录下的所有C文件添加到工程中的cmsis下。
-- 将platform\LOS_EXPAND_XXX目录下的所有C文件添加到工程中的platform/expand_xxx下(expand_xxx文件夹名字可自行修改)
-- 根据芯片内核型号，将kernel\cpu\arm\cortex-m4（或者cortex-m3）目录下的所有C文件以及汇编代码添加到工程中的cpu/m4（cpu/m3）下
-- 将kernel\config目录下的所有C文件添加到工程中的config下
-- 将user目录下的所有C文件添加到工程中的user下
-- 如果需要使用中断动态注册功能或者本地没有可用的启动文件，可以将platform\LOS_EXPAND_XXX目录下的los_startup_keil.s汇编文件添加到工程中的startup目录下，或者添加芯片官方提供的启动文件，比如您使用的是stm32f429zi芯片，可添加startup_stm32f429xx.s文件
-- 将\platform\LOS_EXPAND_XXX\Library目录下的驱动文件添加到工程的library目录下
-- 添加example/api目录下的所有C文件到工程的example目录下
-
-![](./meta/iar/add_files.png)
-
-完成代码添加后的工程目录如下图
-
-![](./meta/iar/add_files_1.png)
-
-
-- 完成上面内容后我们先保存一下
-
-![](./meta/iar/save_workspace.png)
-![](./meta/iar/save_workspace_2.png)
-
-### 6.3 配置工程属性
-
-- 完成添加文件之后，需要对工程进行详细的配置，配置内容步骤如下所示：
-
-![](./meta/iar/config_1.png)
-
-- 配置芯片型号,假如您使用的是STM32F249ZI芯片
-
-![](./meta/iar/config_2.png)
-
-- 配置C编译选项，使用C99语法
-
-![](./meta/iar/config_3.png)
-
-- 配置C文件头文件搜索路径，需要将所有的头文件路径都包含进来
-
-![](./meta/iar/config_4.png)
-![](./meta/iar/config_5.png)
-
-- 配置分散加载文件
-
-![](./meta/iar/config_6.png)
-
-如果您需要使用中断动态注册功能，则需要配套使用分散机制。本示例中未使用分散加载机制，可参考源码中其他工程的分散加载文件自己编写。
-
-其他适配工程中的分散加载文件存放在platform目录下每个开发板自己的文件夹中，比如：\platform\STM32F429I_DISCO\STM32F429I-LiteOS.sct
-
-stm32f429的配置文件内容如下：
-
-![](./meta/iar/sct_file.png)
-
-说明：分散配置文件中增加的是vector（中断向量表）的内容，LiteOS的中断向量表在stm32f429ZI这个芯片中定义的是0x400大小。如果不了解分散加载文件可以参考IDE的help中sct文件的说明。或者baidu、google分散加载文件相关内容。
-
-- 配置debug相关选项，比如您使用的是stm32f429zi芯片，则使用选择ST-Link。
-
-![](./meta/iar/config_7.png)
-![](./meta/iar/config_8.png)
+<center>图 - 生成.bin</center>
 
 ## 7适配驱动代码
 
-如果您不需要适配驱动代码到工程，可忽略此章。
+### 适配 bsp_adapter
 
-- 内核代码中提供了bsp适配的框架代码，存放在LOS_EXPAND_XXX文件夹下
+将 los_bsp_adapter.c 中的变量 sys_clk_freq 设置为系统的时钟频率 40000000。
 
-![](./meta/iar/add_src_Expand.png)
+![](./meta/iar/frdm-kw41z/clock_mod.png)
 
-- 前面已经完成了驱动适配代码及驱动代码的添加(驱动代码可根据您需要使用的具体功能来添加)，祥见下图
+<center>图 - 修改clock</center>
 
-![](./meta/iar/add_src_platform.png)
+系统的时钟频率是在 clock_clock.c 文件中设置的。
 
-- 根据本地Library代码提供的接口函数，来实现LiteOS中相关的bsp接口函数
+![](./meta/iar/frdm-kw41z/clock_set.png)
 
-（1）修改los_bsp_adapter.c文件，配置系统时钟及SysTick，适配sysTick_Handler函数；
+<center>图 - 设置clock</center>
 
-（2）实现los_bsp_led.c、los_bsp_key.c、los_bsp_uart.c等文件中提供的空函数。
+### 适配 bsp_uart
 
-- 空函数的具体实现可参考源码中已适配的其他工程中同名的文件，如有其他需要增加的驱动功能，可以在同级目录下添加相关文件。
-  
-- 将驱动代码添加到内核工程更详细的过程可参考源码doc目录下其他开发板的移植指南文档。
+先在 los_bsp_uart.h 中定义一些与 uart 相关的宏，在适配 uart 的代码时会用到。这里只定义了与lpurat相关的 port、gpio和pin相关的宏。
 
-## 8如何验证移植后的工程
+![](./meta/iar/frdm-kw41z/macro_uart.png)
 
-如果您需要验证移植后的LiteOS内核功能，可以参考本章内容。
+<center>图 - 定义uart宏</center>
 
-### 8.1 API测试代码使用
+然后依次适配 uart 的初始化函数，读写数据的函数。具体代码请参考工程中的源文件。
 
-- 目前LiteOS提供了单独测试每个功能的api代码，可在main()函数中调用los_demo_entry.c文件中的LOS_Demo_Entry()函数，并放开相应的宏定义。
+### 适配 bsp_key
 
-- 如果需要一次测试内核所有的功能，则可调用los_inspect_entry.c文件中的LOS_Inspect_Entry()函数。
+根据 frdm-kw41z 板载的按键资源，在los_bsp_key.h中定义一些与key相关的宏，在适配key的代码时会用到。这里定义了SW3/SW4两个开关相关的port、gpio和pin相关的宏。
 
-- LiteOS最小需要占用8K的RAM,使用Inspect巡检功能需要再增加1k RAM，不满足此要求的芯片请使用API单项测试功能。
+![](./meta/iar/frdm-kw41z/macro_key.png)
 
-![](./meta/iar/add_src_example.png) 
+<center>图 - 定义key宏</center>
 
-示例代码如下：
+然后依次适配key的初始化函数，读取key引脚的函数。具体代码请参考工程中的源文件。
 
-    extern void LOS_Demo_Entry(void)；
-    int main(void)
-    {
-        UINT32 uwRet;
-        /*
-        	add you hardware init code here
-        	for example flash, i2c , system clock ....
-        */
-    	//HAL_init();....
-    	
-    	/*Init LiteOS kernel */
-        uwRet = LOS_KernelInit();
-        if (uwRet != LOS_OK) {
-            return LOS_NOK;
-        }
-        /* Enable LiteOS system tick interrupt */
-        LOS_EnableTick();
-    		
-    		
-        /* 
-            Notice: add your code here
-            here you can create task for your function 
-            do some hw init that need after systemtick init
-        */
-        LOS_EvbSetup(); 
-    
-        LOS_Demo_Entry();	
-        
-        //LOS_Inspect_Entry();
-        
-    	//LOS_BoadExampleEntry();	
-    		
-        /* Kernel start to run */
-        LOS_Start();
-        for (;;);
-        /* Replace the dots (...) with your own code.  */
-    }
+### 适配 bsp_led
 
-**如何选择测试的功能：**
+根据 frdm-kw41z 板载的LED资源，在los_bsp_led.h中定义一些与led相关的宏，在适配led的代码时会用到。这里定义了三色红、绿、蓝LED灯以及led3相关的port、gpio和pin相关的宏。
 
-- 在example/include/los_demo_entry.h 打开要测试的功能的宏开关LOS_KERNEL_TEST_xxx，比如测试task调度打开 LOS_KERNEL_TEST_TASK 即可（//#define LOS_KERNEL_TEST_TASK 修改为 #define LOS_KERNEL_TEST_TASK）。
+![](./meta/iar/frdm-kw41z/macro_led.png)
 
-- 中断测试无法在软件仿真的情况下测试, 如需进行中断功能测试，请自行添加中断初始化相关内容到Example_Exti0_Init函数。
+<center>图 - 定义led宏</center>
 
-**使用printf打印的方法**
+然后依次适配led的初始化函数，控制led的函数。具体代码请参考工程中的源文件。
 
-- 将printf重定向到uart输出，需要uart驱动支持，如果没有适配串口驱动代码，则不建议使用该方法。
+## 8其它
 
-- 将los_demo_debug.h中的LOS_KERNEL_DEBUG_OUT宏定义打开（IAR工程不需要打开LOS_KERNEL_TEST_KEIL_SWSIMU宏），在IAR IDE的Terminal I/O窗口中直接可以在看到printf的log输出。
-
-### 8.2编译调试
-- 打开工程后，菜单栏Project→Clean 、Rebuild All，可clean和build 文件。这里点
-击Rebuild All，编译全部文件
-
-![](./meta/iar/build_1.png)
-
-- 调试运行代码，查看测试结果输出：
-
-(1)如果调用LOS_Demo_Entry()函数进行测试，可根据《HuaweiLiteOSKernelDevGuide》文档中列出每项API功能测试结果来进行对比判断。
-
-(2)如果调用LOS_Inspect_Entry()函数进行功能巡检，gInspectErrCnt值为0则代表移植成功。
-
-![](./meta/iar/inspect_result.png)
-
-## 9 如何使用LiteOS 开发
-
-LiteOS中提供的功能包括如下内容： 任务创建与删除、任务同步（信号量、互斥锁）、动态中断注册机制 等等内容，更详细的内容可以参考“HuaweiLiteOSKernelDevGuide”中描述的相关内容。下面章节将对任务和中断进行说明。
-
-### 9.1 创建任务
-
-- 用户使用LOS_TaskCreate(...)等接口来进行任务的创建。具体可以参考example/api/los_api_task.c中的使用方法来创建管理任务。
-
-### 9.2 中断处理
-#### Huawei LiteOS 的中断使用
-在驱动开发的过程中我们通常会使用到中断，Huawei LiteOS有一套自己的中断的逻辑，在使用每个中断前需要为其注册相关的中断处理程序。
-
-- OS启动后，RAM起始地址是0x20000000到0x20000400，用来存放中断向量表，系统启动的汇编代码中只将reset功能写入到了对应的区域，系统使用一个全局的m_pstHwiForm[ ]来管理中断。m3以及m4核的前16个异常处理程序都是直接写入m_pstHwiForm[]这个数组的。
-
-- 开发者需要使用某些中断(m3以及m4中非前16个异常)时，可以通过LOS_HwiCreate (…)接口来注册自己的中断处理函数。如果驱动卸载还可以通过LOS_HwiDelete(….)来删除已注册的中断处理函数。系统还提供了LOS_IntLock()关中断及LOS_IntRestore()恢复到中断前状态等接口。详细的使用方法可以参考LiteOS中已经使用的地方。
-
-- LiteOS中断机制会额外地使用2K的RAM，跟大部分开发板bsp代码包中的机制不一样。如果没有动态修改中断处理函数的需要，用户可以选择不使用该中断机制，简单的方法是在los_bsp_adapter.c中将g_use_ram_vect变量设置为0，并且在配置工程时不配置分散加载文件。这样就可以使用demo板bsp包中提供的中断方式。
-
-- 如果使用LiteOS的中断机制，那么在启动LiteOS之前，请先将所有用到的中断都用LOS_HwiCreate()完成注册，否则在完成中断注册前就初始化了相关的硬件以及中断会直接进入osHwiDefaultHandler()导致程序无法正常运行。
-- los_bsp_adapter.c中LosAdapIntInit() LosAdapIrpEnable() LosAdapIrqDisable（）等接口都可以调用BSP包中的接口实现。
-
-
-**关于中断向量位置选择**
-
-- 在los_bsp_adapter.c中，g_use_ram_vect变量控制了LiteOS中是否使用vector向量表（中断向量表）重定向功能。如果g_use_ram_vect设置为 1 ，则需要在配置分散加载文件，如果配置为0，则不配置分散加载文件（即在上面的配置步骤中可以不进行分散加载文件配置），系统启动后默认中断向量表在Rom的0x00000000地址。
-
-###  9.3 系统tick中断配置修改
-
-- los_bsp_adapter.c中修改后的osTickStart()函数，比如在该函数中直接调用BSP包中的接口配置system tick，在stm32中可以调用SysTick_Config(g_ucycle_per_tick);
-- 根据实际配置的system clock 修改sys_clk_freq的值，工程中给出的值都是默认时钟频率。比如stm32f429的默认时钟是16M HZ。
-
-### 9.4 LiteOS资源配置
-
-- 对于嵌入式系统来说，内存都是比较宝贵的资源，因此一般的程序都会严格管理内存使用，LiteOS也一样。在LiteOS中系统资源使用g_ucMemStart[OS_SYS_MEM_SIZE]作为内存池，来管理任务、信号量等等资源的创建，总共是32K。而留给用户创建的task的的个数则是LOSCFG_BASE_CORE_TSK_LIMIT（15）.
-
-- LiteOS中的内存使用都是在los_config.h中进行配置的，需要使用多大的内存，可以根据实际的task个数、信号量、互斥锁、timer、消息队列、链表等内容的个数来决定的（根据各自的结构体大小以及个数计算），总的内存池的大小是OS_SYS_MEM_SIZE来定义的。
-
-- LiteOS的中断机制，目前使用了2K的内存。
-
-###  9.5 移植cortex-m3/m4以外其他内核的芯片
-
-- 移植LiteOS到其他内核的芯片时，需要在kernel\cpu下去添加一个芯片所属系列的目录，并且在该新增加的目录下添加los_dispatch，los_hw.c、los_hw_tick、los_hwi这些文件。dispatch文件主要实现task调度相关的处理以及开关中断获取中断号等内容，los_hw.c中实现的task调度时需要保存的寄存器等内容，los_hwi则是中断的相关内容，los_hw_tick则是系统tick中断处理以及获取tick等的实现。
-
-
-## 其他说明
-
-- 对于RAM较小的芯片，请参照los_config.h文件中的注释，在工程中定义相关的编译宏，否则会出现编译失败（RAM大于32k可不定义）。
-
-		/* default LiteOS ram size level 
-			RAM_SIZE_LEVEL_0 means kernel ram < 8k  , 
-			RAM_SIZE_LEVEL_1 means kernel ram < 16k, 
-			RAM_SIZE_LEVEL_2 means means kernel ram>=32k 
-		*/
-
-- 目前在LiteOS的源代码中有一些已经创建好了的工程，移植到新的开发板(芯片)时可参考源码中的这些工程。
-
-- 详细的应用编程API请参考《HuaweiLiteOSKernelDevGuide》。
-
-- FatFs文件系统移植请参考《LiteOS_Migration_Guide_FatFs_Keil.md》。
+frdm-kw41z的内核是cortex-m0+，不支持非对齐访问，移植过程中遇到访问内存不对其而出错的问题，详见[liteos porting issue 2](https://github.com/LITEOS/PortingContest/issues/2)。
