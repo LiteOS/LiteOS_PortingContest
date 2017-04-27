@@ -770,7 +770,7 @@
                 </option>
                 <option>
                     <name>IlinkIcfFile</name>
-                    <state>X:\port\PortingContest_FRDM-KW41Z_tidyjiang8\platform\FRDM-KW41Z\MKW41Z512xxx4_flash.icf</state>
+                    <state>$PROJ_DIR$\..\..\platform\FRDM-KW41Z\MKW41Z512xxx4_flash.icf</state>
                 </option>
                 <option>
                     <name>IlinkIcfFileSlave</name>
