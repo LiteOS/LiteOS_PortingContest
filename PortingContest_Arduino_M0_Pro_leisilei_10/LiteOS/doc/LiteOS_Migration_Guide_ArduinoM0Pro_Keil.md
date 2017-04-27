@@ -481,3 +481,15 @@ int main(void)
 ![](./meta/keil/samd21g18a/keypress.png)
 
 
+Atmel Stduio下载地址：
+
+http://www.atmel.com/zh/cn/tools/atmelstudio.aspx?tab=overview
+
+ATSAMD21G18A的手册下载地址：
+
+http://www.atmel.com/zh/cn/devices/ATSAMD21G18.aspx?tab=documents
+
+
+Arduino M0 Pro电路图下载地址：
+
+http://www.arduino.org/products/boards/arduino-m0-pro
