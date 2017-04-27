@@ -156,17 +156,11 @@ Arduino M0 Pro上的ATSAMD21G18A的熔丝位BOOTPROT默认为0x1，其含义如�
 
 ![](./meta/keil/samd21g18a/AtStudioMenu.png)
 
-
-
-其中Tool选择EDGB，芯片型号选择ATSAM21G18A，Interface选择SWD，点击Apply，然后点击Read，可以读出当前的设置，也就是出厂默认设置，首先擦除芯片，如下：
-
-
-![](./meta/keil/samd21g18a/erasechip.jpg)
-
-
-接着在如下窗口修改BOOTPROT的值，默认是0x01，将其修改为0x07，然后点击Program即可。
+会出现如下窗口：
 
 ![](./meta/keil/samd21g18a/ChipProgram.png)
+
+其中Tool选择EDGB，芯片型号选择ATSAM21G18A，Interface选择SWD，点击Apply，然后点击Read，可以读出当前的设置，也就是出厂默认设置，其中BOOTPROT的值是0x01，将其修改为0x07，然后点击Program即可。
 
 ## 6获取Huawei LiteOS 源码
 
