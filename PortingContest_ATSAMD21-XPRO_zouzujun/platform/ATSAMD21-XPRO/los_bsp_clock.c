@@ -76,7 +76,6 @@ void _system_clock_dfll_setting(void)
 	NVMCTRL->CTRLB.bit.RWS = 3;
 }
 
-#if 1
 /*************************************************************************************************
  *  功能：GCLK GEN参数设置                                                                       *
  *  参数：                                                                                       *
@@ -114,53 +113,6 @@ void _system_clock_gclkgen_setting(void) {
 	reg |= GCLK_GENCTRL_GENEN;
 	GCLK->GENCTRL.reg = reg;
 }
-#else
-void configure_gclk(GCLK_GENCTRL_Type genctrl)
-{
-	uint32_t reg;
-	
-	while (GCLK->STATUS.reg & GCLK_STATUS_SYNCBUSY) {
-		/* Wait for synchronization */
-	};
-
-	/* Select the correct generator */
-	GCLK->GENDIV.bit.ID = GCLK_CLKCTRL_GEN_GCLK0_Val;
-
-	/* Write the new generator configuration */
-	while (GCLK->STATUS.reg & GCLK_STATUS_SYNCBUSY) {
-		/* Wait for synchronization */
-	};
-	reg = GCLK_GENDIV_ID(GCLK_CLKCTRL_GEN_GCLK0_Val) | GCLK_GENDIV_DIV(0);
-	GCLK->GENDIV.reg = reg;
-
-	while (GCLK->STATUS.reg & GCLK_STATUS_SYNCBUSY) {
-		/* Wait for synchronization */
-	};
-	genctrl.bit.GENEN = GCLK->GENCTRL.bit.GENEN;
-	GCLK->GENCTRL = genctrl;
-
-	//cpu_irq_leave_critical();
-}
-
-void _system_clock_gclkgen_setting(void)
-{
-	/* Change system clock to DFLL */	
-	GCLK_GENCTRL_Type genctrl;
-	
-	genctrl.reg = 0;
-
-	genctrl.bit.ID = GCLK_CLKCTRL_GEN_GCLK0_Val;
-	
-	genctrl.bit.SRC = GCLK_SOURCE_DFLL48M;
-	genctrl.bit.DIVSEL = 0;
-	genctrl.bit.IDC = 0;
-	genctrl.bit.OOV = 0;
-	genctrl.bit.RUNSTDBY = 0;
-	genctrl.bit.OE = 0;
-	
-	configure_gclk(genctrl);
-}
-#endif
 
 int SystemClockInit(void) {
 	_system_clock_source_setting();
