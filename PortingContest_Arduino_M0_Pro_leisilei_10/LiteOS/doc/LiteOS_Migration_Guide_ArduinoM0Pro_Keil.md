@@ -324,7 +324,7 @@ Arduino M0 Pro上的ATSAMD21G18A的熔丝位BOOTPROT默认为0x1，其含义如�
 - 将kernel/base目录下的所有C文件添加到工程中的kernel下
 - 将kernel/cmsis目录下的所有C文件添加到工程中的cmsis下。
 - 将platform\LOS_EXPAND_Arduino_M0_Pro目录下的所有C文件添加到工程中的platform/expand_Arduino_M0_Pro下
-- 根据芯片内核型号，将kernel\cpu\arm\cortex-m4（或者cortex-m3）目录下的所有C文件以及汇编代码添加到工程中的cpu/m4（cpu/m3）下，除了los_vector.s
+- 根据芯片内核型号，将kernel\cpu\arm\cortex-m0目录下的所有C文件以及汇编代码添加到工程中的cpu/m4（cpu/m3）下，除了los_vector.s
 - 将kernel\config目录下的所有C文件添加到工程中的config下
 - 将user目录下的所有C文件添加到工程中的user下
 - 添加example/api目录下的所有C文件到工程的example目录下
