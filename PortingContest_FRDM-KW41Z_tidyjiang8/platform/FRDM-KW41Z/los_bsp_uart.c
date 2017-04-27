@@ -11,6 +11,7 @@
 #include "fsl_clock.h"
 #include "fsl_lpuart.h"
 #include "clock_config.h"
+#include "fsl_debug_console.h"
 
 /*****************************************************************************
  Function    : LOS_EvbUartInit
@@ -37,7 +38,7 @@ void LOS_EvbUartInit(void)
      *  11: MCGIRCCLK
      */
     CLOCK_SetLpuartClock(2);
-    DbgConsole_Init(LPUART0, 115200, DEBUG_CONSOLE_DEVICE_TYPE_LPUART, CLOCK_GetOsc0ErClkFreq());
+    DbgConsole_Init((uint32_t)LPUART0_BASE, 115200, DEBUG_CONSOLE_DEVICE_TYPE_LPUART, CLOCK_GetOsc0ErClkFreq());
 
     return;
 }
