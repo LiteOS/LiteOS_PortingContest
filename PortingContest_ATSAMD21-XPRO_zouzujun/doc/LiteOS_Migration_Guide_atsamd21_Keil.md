@@ -388,13 +388,35 @@ Xplained Pro开发板上有一个复位按键和一个用户按键，用户按�
 ## 修改LiteOS部分代码
 在测试的时候发现Example_MsgQueue这个测试始终通过不了，
 
-`/*创建队列*/
-uwRet = LOS_QueueCreate("queue", 5, &g_uwQueue, 0, 50);`
+`/*队列Write*/
+*((UINT32 *)pucQueueNode) = (UINT32)pBufferAddr;`
 
 改为如下：
 
-`/*创建队列*/
-uwRet = LOS_QueueCreate("queue", 5, &g_uwQueue, 0, 48);`
+`/*队列Write*/
+for(i=0; i<uwBufferSize; i++) {
+		UINT8 *ptData = (UINT8 *)pBufferAddr;
+		
+		pucQueueNode[i] = ptData[i];
+	}
+	pucQueueNode[uwBufferSize] = 0;`
+
+`/*队列Read*/
+*(UINT32*)pBufferAddr = *(UINT32*)(pucQueueNode);`
+
+改为如下：
+
+`/*队列Read*/
+*(UINT32*)pBufferAddr = (UINT32)pucQueueNode;`
+
+在los_config.h中，做相应配置：
+#define OS_SYS_CLOCK                                    16000000
+改为：
+#define OS_SYS_CLOCK                                    48000000
+
+#define OS_SYS_MEM_SIZE                                     0x00008000          // size
+改为：
+#define OS_SYS_MEM_SIZE                                     0x00007400          // size
 
 ### main函数修改
 
