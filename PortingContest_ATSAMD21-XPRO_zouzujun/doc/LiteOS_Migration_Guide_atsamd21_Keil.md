@@ -76,15 +76,15 @@
 	<td>描述</td>
 	</tr>
 	<tr>
-	<td>2017年3月23日</td>
-	<td>1.0</td>
-	<td>完成初稿</td>
+	<td>2017年4月28日</td>
+	<td>2.0</td>
+	<td>修正稿</td>
 	</tr>
 </table>
 
 ## 3概述
 
-目前在github上已开源的Huawei LiteOS内核源码已适配好STM32F412、STM32F429、STM32L476、GD32F450、GD32F190、LPC824、LPC54114芯片，本手册将以ATSAMD21芯片为例，介绍基于Cortex-M0+核芯片的移植过程。
+目前在github上已开源的Huawei LiteOS内核源码已适配好STM32F412、STM32F429、STM32L476、GD32F450、GD32F190、LPC824、LPC54114芯片，本手册将以ATSAMD21J18A芯片为例，介绍基于Cortex-M0+核芯片的移植过程。
 
 ## 4环境准备
 基于Huawei LiteOS Kernel开发前，我们首先需要准备好单板运行的环境，包括软件环
@@ -153,8 +153,11 @@ Keil工具需要开发者自行购买，EDBG驱动程序可以从网络获取，
 
 - 点击”clone or download”按钮,下载源代码
 
+
 - 目录结构如下：Huawei LiteOS的源代码目录的各子目录包含的内容如下：
 ![](./meta/keil/catal.png)
+
+
 
 关于代码树中各个目录存放的源代码的相关内容简介如下：
 
@@ -207,15 +210,10 @@ Keil工具需要开发者自行购买，EDBG驱动程序可以从网络获取，
 <tr>
 	<td></td>
 	<td>link</td>
-	<td>与IDE相关的编译链接相关宏定义</td>
+	<td>IDE相关宏定义</td>
 </tr>
 <tr>
 	<td>platform</td>
-	<td>ATSAMD21-XPRO</td>
-	<td>ATSAMD21开发板systick及驱动相关代码</td>
-</tr>
-<tr>
-	<td></td>
 	<td>GD32F190R-EVAL</td>
 	<td>GD190开发板systick及驱动相关代码</td>
 </tr>
@@ -241,26 +239,11 @@ Keil工具需要开发者自行购买，EDBG驱动程序可以从网络获取，
 </tr>
 <tr>
 	<td></td>
-	<td>LPC824_LITE</td>
-	<td>LPC824Lite开发板systick及驱动相关代码</td>
-</tr>
-<tr>
-	<td></td>
-	<td>LPC54110_BOARD</td>
-	<td>LPC54110开发板systick及驱动相关代码</td>
-</tr>
-<tr>
-	<td></td>
 	<td>LOS_EXPAND_XXX</td>
 	<td>用于新扩展的开发板systick以及led、uart、key驱动bsp适配代码</td>
 </tr>
 <tr>
 	<td>projects</td>
-	<td>ATSAMD21-XPRO-KEIL</td>
-	<td>atsamd21j18a开发板的keil工程目录</td>
-</tr>
-<tr>
-	<td></td>
 	<td>STM32F412ZG-NUCLEO-KEIL</td>
 	<td>stm32f412开发板的keil工程目录</td>
 </tr>
@@ -290,16 +273,6 @@ Keil工具需要开发者自行购买，EDBG驱动程序可以从网络获取，
 	<td>gd32f450开发板的keil工程目录</td>
 </tr>
 <tr>
-	<td></td>
-	<td>LPC824_LITE_KEIL</td>
-	<td>lpc824Lite开发板的keil工程目录</td>
-</tr>
-<tr>
-	<td></td>
-	<td>LPC54110_BOARD_KEIL</td>
-	<td>lpc54110开发板的keil工程目录</td>
-</tr>
-<tr>
 	<td>user</td>
 	<td></td>
 	<td>此目录存放用户代码，LiteOS启动代码在main()函数中</td>
@@ -309,69 +282,156 @@ Keil工具需要开发者自行购买，EDBG驱动程序可以从网络获取，
 获取Huawei LiteOS源代码之后，我们可以将自己本地工程的驱动代码适配到LiteOS内核工程中进行应用开发。
 
 ## 6如何适配LiteOS内核工程开发
-本章节描述的内容以ATSAMD21 datasheet寄存器设置为基础，参考Atmel Studio example工程，适配到LiteOS的ATSAMD21-XPRO-KEIL工程中，演示串口输出、按键及LED灯点亮功能。
 
-### ATSAMD21-XPRO开发资料获取
+### 创建工程
+获取到LiteOS内核代码后，在project目录下新建文件夹ATSAMD21-XPRO-KEIL。重命名platform目录下的文件夹LOS_EXPAND_xxx为ATSAMD21-XPRO。
+打开keil，新建工程，保存在project\LiteOS_Arduino_M0_Pro_Expand目录下，工程名为LiteOS，器件选择如下：
 
-- 从开发板官网获取开发包资料，网址为：http://www.microchip.com/wwwproducts/en/atsamd21j18
+![](./meta/keil/samd21j18a/ProjectWizard1.png)
+
+下一个界面，选择如下：
+
+![](./meta/keil/samd21j18a/ProjectWizard2.png)
+
+点击OK即可，至此，我们的工程已经创建完成。
+
+### 添加kernel代码到工程
+创建如下目录层级：
+
+![](./meta/keil/samd21j18a/ProjectManage.png)
+
+创建完成目录树之后我们添加源代码到目录树中，最终添加完成的内容如下：
+
+- 将kernel/base目录下的所有C文件添加到工程中的kernel下
+- 将kernel/cmsis目录下的所有C文件添加到工程中的cmsis下。
+- 将platform\ATSAMD21-XPRO目录下的所有C文件添加到工程中的platform/atsamd21下
+- 根据芯片内核型号，将kernel\cpu\arm\cortex-m0目录下的所有C文件以及汇编代码添加到工程中的cpu/m0下，除了los_vector.s
+- 将kernel\config目录下的所有C文件添加到工程中的config下
+- 将user目录下的所有C文件添加到工程中的user下
+- 添加example/api目录下的所有C文件到工程的example目录下
+
+![](./meta/keil/samd21j18a/filelist.png)
+
+### 配置工程属性
+打开配置文件，如下，在Target界面勾选上“Use MicroLIB”：
+
+![](./meta/keil/samd21j18a/target.png)
+
+点击“Include Paths”后面的省略号，添加如下头文件路径：
+
+![](./meta/keil/samd21j18a/path.png)
+
+在Debugger界面，设置如下，大部分都是默认，只有右上角的Use，选择CMSIS-DAP Debugger。
+
+![](./meta/keil/samd21j18a/debug.png)
+
+## 8 适配驱动代码
+
+### 修改时钟参数
+
+修改los_bsp_adapter.c中如下：
+
+`const unsigned int sys_clk_freq = 16000000;`
+
+改为如下：
+
+
+`const unsigned int sys_clk_freq = 48000000;`
+
+### 修改系统时钟接口
+参考网络上ATSAMD21时钟初始化的文章：http://bbs.eeworld.com.cn/thread-448782-1-1.html及Atmel Studio样例工程：
+新增los_bsp_clock.c文件，修改设置芯片时钟为48MHz:
+
+```
+int SystemClockInit(void) {
+	_system_clock_source_setting();
+	_system_clock_dfll_setting();
+	_system_clock_gclkgen_setting();
+	
+	return 0;
+}
+
+### 修改串口初始化接口
+参考Atmel Studio样例程序的串口初始化：
+	Quick Start for the SAM D20/D21 SERCOM USART Driver (Callback) – SAM D21 Xplained Pro
+新增uart.c文件，增加串口初始化及读写函数：
+其中UART初始化函数如下，由于使用的是SERCOM3，参数为N 8 1，波特率9600：
+
+![](./meta/keil/samd21j18a/uartinit.png)
+
+UART读写函数如下：
+
+![](./meta/keil/samd21j18a/uartreadwrite.png)
+
+![](./meta/keil/samd21j18a/uartprintf.png)
+
+随后还有一些重定向函数，定义了之后可以使用printf直接从串口输出数据。
+
+![](./meta/keil/samd21j18a/fputc.png)
+
+### 修改los_bsp_led.c
+
+Xplained Pro开发板上的LED灯，对应ATSAMD21J18A的PB30，所以此处设置LED的初始化函数如下，其中设置PB30为输出口：
+
+![](./meta/keil/samd21j18a/ledinit.png)
+
+因为只控制这一个LED，所以修改其控制函数如下，PB30为低电平的时候，L灯亮，反之，L灯灭：
+
+![](./meta/keil/samd21j18a/ledcontrol.png)
+
+### 修改los_bsp_key.c
+
+Xplained Pro开发板上有一个复位按键和一个用户按键，用户按键对应PA15，其初始化函数如下：
+
+![](./meta/keil/samd21j18a/keyinit.png)
+
+## 修改LiteOS部分代码
+在测试的时候发现Example_MsgQueue这个测试始终通过不了，
+
+`/*创建队列*/
+uwRet = LOS_QueueCreate("queue", 5, &g_uwQueue, 0, 50);`
+
+改为如下：
+
+`/*创建队列*/
+uwRet = LOS_QueueCreate("queue", 5, &g_uwQueue, 0, 48);`
+
+### main函数修改
+
+修改main函数如下，其中调用巡检函数LOS_Inspect_Entry：
+
+```
+/*****************************************************************************
+ Function    : main
+ Description : Main function entry
+ Input       : None
+ Output      : None
+ Return      : None
+ *****************************************************************************/
+int main(void)
+{
+    UINT32 uwRet;
+    uwRet = LOS_KernelInit();
+    if (uwRet != LOS_OK) {
+        return LOS_NOK;
+    }
+    LOS_EnableTick();
+    LOS_EvbSetup(); 
+    LOS_Inspect_Entry();
+    LOS_Start();
+    for (;;);
+}
+```
+
+
+### 验证移植后的工程
+
+连接Xplained Pro开发板的Programmer接口到计算机，在计算机上会出现一个EDBG虚拟串口的设备，keil编译、下载，打开串口调试工具，选择出现的EDBG虚拟串口，速率选择为9600，然后按下Xplained Pro开发板上的复位按钮，会显示如下结果，表示巡检程序运行正常：
+
+![](./meta/keil/samd21j18a/result.png)
+
+- 从Atmel官网获取Atmel Stduio，网址为：http://www.atmel.com/zh/cn/tools/atmelstudio.aspx?tab=overview
+
+- 从开发板官网获取开发板资料，网址为：http://www.microchip.com/wwwproducts/en/atsamd21j18
 
 - 从keil官网下载PACK包，网址为：http://www.keil.com/dd2/atmel/atsamd21j18a/
-
-### ATSAMD21-XPRO的开发包安装
-
-  安装Keil.SAMD21_DFP.1.2.0.pack文件到keil安装目录。
-
-**添加代码到LiteOS工程**
-
-在内核代码platform\ATSAMD21-XPRO文件夹中，添加串口驱动文件、系统时钟设置文件。添加完成后，platform\ATSAMD21-XPRO文件夹内容如下：
-
-![](./meta/keil/atsamd21/add_file_1.png)
-
-**添加头文件搜索路径**
-
-![](./meta/keil/atsamd21/folder_setup.png)
-
-**替换启动文件**
-
-LiteOS可直接使用Keil5新建工程时，生成的启动文件los_startup_keil.s。
-
-![](./meta/keil/atsamd21/startup.png)
-
-**修改相关代码**
-1) 在los_config.h中配置CPU时钟频率为48000000
-        #define OS_SYS_CLOCK        48000000
-2) 在los_config.h中配置内存使用，根据资源情况，修改为如下值：
-        #define OS_SYS_MEM_SIZE     0x00007400          // size
-
-3) 修改los_bsp_adapter.c文件中sys_clk_freq变量的值，使之与SystemCoreClockUpdate()函数实际配置的时钟频率保持一致。
-	    const unsigned int sys_clk_freq = 48000000;
-4) 时钟驱动、串口驱动，参考Atmel Studio样例程序的串口初始化：
-	Quick Start for the SAM D20/D21 SERCOM USART Driver (Callback) – SAM D21 Xplained Pro
-
-经过以上步骤的修改，完成了代码的初步移植，可以编译代码,连接串口线（事先安装相关驱动），并在串口调试工具中打开相应串口，调试运行时可看到串口有打印输出，按下按键时，LED灯亮。
-
-## 7 其他说明
-
-###如何使用LiteOS 开发###
-
-LiteOS中提供的功能包括如下内容： 任务创建与删除、任务同步（信号量、互斥锁）、动态中断注册机制等等内容，详细内容请参考《HuaweiLiteOSKernelDevGuide》。
-
-###从零开始创建LiteOS工程###
-
-目前在LiteOS的源代码的projects目录下已附带一些开发板的内核示例工程，用户可以直接使用，如果您所使用的开发板（芯片型号）与在示例工程中找不到，您可以从零开始创建LiteOS工程，创建流程请参考《LiteOS_Migration_Guide_Keil》。
-
-###关于中断向量位置选择###
-
-如果您需要使用LiteOS的中断注册机制，详细内容请参考《LiteOS_Migration_Guide_Keil》。
-
-### kernel API测试代码 ###
-
-如果您需要测试LiteOS内核工程运行情况，详细内容请参考《LiteOS_Migration_Guide_Keil》。
-
-
-
-
-
-
-
-
