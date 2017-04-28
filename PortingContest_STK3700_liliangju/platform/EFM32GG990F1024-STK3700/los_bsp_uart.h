@@ -6,7 +6,7 @@
 
 
 extern void LOS_EvbUartInit(void);
-extern char LOS_EvbUartReadByte(void);
+extern void LOS_EvbUartReadByte(char* c);
 extern void LOS_EvbUartWriteByte(const char c);
 extern void LOS_EvbUartWriteStr(const char* str);
 

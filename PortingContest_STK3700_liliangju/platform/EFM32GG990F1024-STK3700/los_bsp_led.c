@@ -4,7 +4,7 @@
 	here include some special hearder file you need
 ******************************************************************************/
 
-
+#include "Board_LED.h"
 
 /*****************************************************************************
  Function    : LOS_EvbLedInit
@@ -16,7 +16,7 @@
 void LOS_EvbLedInit(void)
 {
 	//add you code here.
-  BSP_LedsInit();
+  LED_Initialize();
 	return ;
 }
 
@@ -39,13 +39,13 @@ void LOS_EvbLedControl(int index, int cmd)
             {
 							 //add you code here.   
                /*led1 on */
-							BSP_LedSet(0);
+							LED_On(0);
             }
             else
             {
 							//add you code here.
 										 /*led1 off */
-							BSP_LedClear(0);
+							LED_Off(0);
             }
             break;
         }
@@ -55,13 +55,13 @@ void LOS_EvbLedControl(int index, int cmd)
             {
 							//add you code here.
                       /*led2 on */
-							BSP_LedSet(1);
+							LED_On(1);
             }
             else
             {
 							//add you code here.
                      /*led2 off */
-							BSP_LedClear(1);
+							LED_Off(1);
             }
             break;
         }

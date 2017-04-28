@@ -1,12 +1,12 @@
 .\objects\bsp_stk_ioexp.o: ..\..\platform\EFM32GG990F1024-STK3700\library\bsp\bsp_stk_ioexp.c
 .\objects\bsp_stk_ioexp.o: ..\..\platform\EFM32GG990F1024-STK3700\library\emlib\inc\em_device.h
-.\objects\bsp_stk_ioexp.o: ..\..\platform\EFM32GG990F1024-STK3700\library\cmsis\efm32gg990f1024.h
-.\objects\bsp_stk_ioexp.o: ..\..\platform\EFM32GG990F1024-STK3700\library\cmsis\core_cm3.h
+.\objects\bsp_stk_ioexp.o: ..\..\platform\EFM32GG990F1024-STK3700\library\emlib\inc\efm32gg990f1024.h
+.\objects\bsp_stk_ioexp.o: ..\..\platform\EFM32GG990F1024-STK3700\library\CMSIS\Include\core_cm3.h
 .\objects\bsp_stk_ioexp.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
-.\objects\bsp_stk_ioexp.o: ..\..\platform\EFM32GG990F1024-STK3700\library\cmsis\core_cmInstr.h
-.\objects\bsp_stk_ioexp.o: ..\..\platform\EFM32GG990F1024-STK3700\library\cmsis\cmsis_armcc.h
-.\objects\bsp_stk_ioexp.o: ..\..\platform\EFM32GG990F1024-STK3700\library\cmsis\core_cmFunc.h
-.\objects\bsp_stk_ioexp.o: ..\..\platform\EFM32GG990F1024-STK3700\library\cmsis\system_efm32gg.h
+.\objects\bsp_stk_ioexp.o: ..\..\platform\EFM32GG990F1024-STK3700\library\CMSIS\Include\core_cmInstr.h
+.\objects\bsp_stk_ioexp.o: ..\..\platform\EFM32GG990F1024-STK3700\library\CMSIS\Include\cmsis_armcc.h
+.\objects\bsp_stk_ioexp.o: ..\..\platform\EFM32GG990F1024-STK3700\library\CMSIS\Include\core_cmFunc.h
+.\objects\bsp_stk_ioexp.o: ..\..\platform\EFM32GG990F1024-STK3700\library\emlib\inc\system_efm32gg.h
 .\objects\bsp_stk_ioexp.o: D:\Keil_v5\ARM\PACK\Keil\EFM32GGxxx_DFP\2.3.0\Device\EFM32GG\Include\efm32gg_dma_ch.h
 .\objects\bsp_stk_ioexp.o: D:\Keil_v5\ARM\PACK\Keil\EFM32GGxxx_DFP\2.3.0\Device\EFM32GG\Include\efm32gg_dma.h
 .\objects\bsp_stk_ioexp.o: D:\Keil_v5\ARM\PACK\Keil\EFM32GGxxx_DFP\2.3.0\Device\EFM32GG\Include\efm32gg_aes.h
@@ -65,3 +65,6 @@
 .\objects\bsp_stk_ioexp.o: ..\..\platform\EFM32GG990F1024-STK3700\library\bsp\bspconfig.h
 .\objects\bsp_stk_ioexp.o: ..\..\platform\EFM32GG990F1024-STK3700\library\emlib\inc\em_usart.h
 .\objects\bsp_stk_ioexp.o: ..\..\platform\EFM32GG990F1024-STK3700\library\bsp\bsp_stk_ioexp.h
+.\objects\bsp_stk_ioexp.o: ..\..\platform\EFM32GG990F1024-STK3700\library\bsp\i2cspm.h
+.\objects\bsp_stk_ioexp.o: ..\..\platform\EFM32GG990F1024-STK3700\library\bsp\i2cspmconfig.h
+.\objects\bsp_stk_ioexp.o: ..\..\platform\EFM32GG990F1024-STK3700\library\emlib\inc\em_i2c.h

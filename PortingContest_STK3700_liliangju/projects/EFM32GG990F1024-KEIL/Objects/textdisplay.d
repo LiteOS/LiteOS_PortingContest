@@ -1,0 +1,16 @@
+.\objects\textdisplay.o: D:\Keil_v5\ARM\PACK\Keil\EFM32GGxxx_DFP\2.3.0\Boards\SiliconLabs\common\drivers\textdisplay.c
+.\objects\textdisplay.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\textdisplay.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\textdisplay.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\textdisplay.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\textdisplay.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\textdisplay.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\ctype.h
+.\objects\textdisplay.o: D:\Keil_v5\ARM\PACK\Keil\EFM32GGxxx_DFP\2.3.0\Boards\SiliconLabs\common\drivers\displayconfigall.h
+.\objects\textdisplay.o: ..\..\platform\EFM32GG990F1024-STK3700\library\bsp\displaypalconfig.h
+.\objects\textdisplay.o: ..\..\platform\EFM32GG990F1024-STK3700\library\bsp\displayconfig.h
+.\objects\textdisplay.o: ..\..\platform\EFM32GG990F1024-STK3700\library\bsp\displayls013b7dh03config.h
+.\objects\textdisplay.o: D:\Keil_v5\ARM\PACK\Keil\EFM32GGxxx_DFP\2.3.0\Boards\SiliconLabs\common\drivers\displayls013b7dh03.h
+.\objects\textdisplay.o: D:\Keil_v5\ARM\PACK\Keil\EFM32GGxxx_DFP\2.3.0\Boards\SiliconLabs\common\drivers\emstatus.h
+.\objects\textdisplay.o: D:\Keil_v5\ARM\PACK\Keil\EFM32GGxxx_DFP\2.3.0\glib\em_types.h
+.\objects\textdisplay.o: D:\Keil_v5\ARM\PACK\Keil\EFM32GGxxx_DFP\2.3.0\Boards\SiliconLabs\common\drivers\display.h
+.\objects\textdisplay.o: D:\Keil_v5\ARM\PACK\Keil\EFM32GGxxx_DFP\2.3.0\Boards\SiliconLabs\common\drivers\textdisplay.h

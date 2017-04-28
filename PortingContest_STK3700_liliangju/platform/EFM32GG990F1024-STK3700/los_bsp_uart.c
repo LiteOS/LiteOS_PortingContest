@@ -7,13 +7,7 @@
 /******************************************************************************
 	here include some special hearder file you need
 ******************************************************************************/
-#include <string.h>
-#include "em_usart.h"
-#include "em_device.h"
-#include "em_cmu.h"
-#include "em_gpio.h"
-
-#include "bsp.h"
+#include "retargetserial.h"
 /*****************************************************************************
  Function    : LOS_EvbUartInit
  Description : Init uart device
@@ -24,32 +18,8 @@
 void LOS_EvbUartInit(void)
 {
 	//add you code here.
-  USART_InitAsync_TypeDef usartInit = USART_INITASYNC_DEFAULT;
-
-  /* Enable High Frequency Peripherals */
-  CMU_ClockEnable(cmuClock_HFPER, true);
-
-  /* Enable clocks to GPIO */
-  CMU_ClockEnable(cmuClock_GPIO, true);
-
-  /* Enable UART clock */
-  CMU_ClockEnable( BSP_BCC_CLK, true );
-	
-	/* Initialize USART */
-  USART_InitAsync( BSP_BCC_USART, &usartInit );
-
-  /* Initialize UART pins */
-    /* Configure GPIO pin for UART TX */
-    /* To avoid false start, configure output as high. */
-    GPIO_PinModeSet( gpioPortD, 0, gpioModePushPull, 1 );
-
-    /* Configure GPIO pin for UART RX */
-    GPIO_PinModeSet( gpioPortD, 1, gpioModeInput, 1 );
-
-    /* Enable the switch that enables UART communication. */
-    GPIO_PinModeSet( BSP_BCC_ENABLE_PORT, BSP_BCC_ENABLE_PIN, gpioModePushPull, 1 );
-
-    BSP_BCC_USART->ROUTE |= USART_ROUTE_RXPEN | USART_ROUTE_TXPEN | BSP_BCC_LOCATION;
+  RETARGET_SerialInit();
+	RETARGET_SerialCrLf(1);
 	return;
 }
 
@@ -63,11 +33,9 @@ void LOS_EvbUartInit(void)
 void LOS_EvbUartWriteByte(const char c)
 {
 	//add you code here.
-  //while (!(BSP_BCC_USART->STATUS & USART_STATUS_TXBL)) ;
-  BSP_BCC_USART->TXDATA = (uint32_t) c;
+	RETARGET_WriteChar(c);
 	return;
 }
-
 /*****************************************************************************
  Function    : LOS_EvbUartReadByte
  Description : Uart reaad one byte
@@ -75,13 +43,11 @@ void LOS_EvbUartWriteByte(const char c)
  Output      : None
  Return      : None
  *****************************************************************************/
-char LOS_EvbUartReadByte(void)
+void LOS_EvbUartReadByte(char* c)
 {
 	//add you code here.
-	char c;
-  while (!(BSP_BCC_USART->STATUS & USART_STATUS_RXDATAV)) ;
-  c = BSP_BCC_USART->RXDATA;
-	return c;
+	*c = RETARGET_ReadChar();
+	return ;
 }
 
 static char _buffer[128];

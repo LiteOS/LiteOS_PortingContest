@@ -335,7 +335,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\kernel\base\include;..\..\kernel\include;..\..\kernel\link\keil;..\..\kernel\config;..\..\kernel\cmsis;..\..\kernel\cpu\arm\cortex-m3;..\..\example\include;..\..\platform\EFM32GG990F1024-STK3700;..\..\platform\EFM32GG990F1024-STK3700\library\bsp</IncludePath>
+              <IncludePath>..\..\kernel\base\include;..\..\kernel\include;..\..\kernel\link\keil;..\..\kernel\config;..\..\kernel\cmsis;..\..\kernel\cpu\arm\cortex-m3;..\..\example\include;..\..\platform\EFM32GG990F1024-STK3700;..\..\platform\EFM32GG990F1024-STK3700\library\bsp;..\..\platform\EFM32GG990F1024-STK3700\library\emlib\inc;..\..\platform\EFM32GG990F1024-STK3700\library\CMSIS\Include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -454,6 +454,21 @@
               <FileType>1</FileType>
               <FilePath>..\..\kernel\base\misc\los_misc.c</FilePath>
             </File>
+            <File>
+              <FileName>em_usart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\platform\EFM32GG990F1024-STK3700\library\emlib\src\em_usart.c</FilePath>
+            </File>
+            <File>
+              <FileName>em_rtc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\platform\EFM32GG990F1024-STK3700\library\emlib\src\em_rtc.c</FilePath>
+            </File>
+            <File>
+              <FileName>em_prs.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\platform\EFM32GG990F1024-STK3700\library\emlib\src\em_prs.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -508,6 +523,41 @@
               <FileName>segmentlcd.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\platform\EFM32GG990F1024-STK3700\library\bsp\segmentlcd.c</FilePath>
+            </File>
+            <File>
+              <FileName>retargetserial.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\platform\EFM32GG990F1024-STK3700\library\bsp\retargetserial.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_bcc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\platform\EFM32GG990F1024-STK3700\library\bsp\bsp_bcc.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_stk.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\platform\EFM32GG990F1024-STK3700\library\bsp\bsp_stk.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_stk_leds.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\platform\EFM32GG990F1024-STK3700\library\bsp\bsp_stk_leds.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_trace.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\platform\EFM32GG990F1024-STK3700\library\bsp\bsp_trace.c</FilePath>
+            </File>
+            <File>
+              <FileName>Buttons_STK3700.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\platform\EFM32GG990F1024-STK3700\library\bsp\Buttons_STK3700.c</FilePath>
+            </File>
+            <File>
+              <FileName>LED_STK3700.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\platform\EFM32GG990F1024-STK3700\library\bsp\LED_STK3700.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -617,155 +667,110 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>::Board Support</GroupName>
+          <GroupName>library/emlib</GroupName>
+          <Files>
+            <File>
+              <FileName>em_core.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\platform\EFM32GG990F1024-STK3700\library\emlib\src\em_core.c</FilePath>
+            </File>
+            <File>
+              <FileName>em_assert.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\platform\EFM32GG990F1024-STK3700\library\emlib\src\em_assert.c</FilePath>
+            </File>
+            <File>
+              <FileName>em_cmu.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\platform\EFM32GG990F1024-STK3700\library\emlib\src\em_cmu.c</FilePath>
+            </File>
+            <File>
+              <FileName>em_ebi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\platform\EFM32GG990F1024-STK3700\library\emlib\src\em_ebi.c</FilePath>
+            </File>
+            <File>
+              <FileName>em_emu.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\platform\EFM32GG990F1024-STK3700\library\emlib\src\em_emu.c</FilePath>
+            </File>
+            <File>
+              <FileName>em_gpio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\platform\EFM32GG990F1024-STK3700\library\emlib\src\em_gpio.c</FilePath>
+            </File>
+            <File>
+              <FileName>em_int.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\platform\EFM32GG990F1024-STK3700\library\emlib\src\em_int.c</FilePath>
+            </File>
+            <File>
+              <FileName>em_lcd.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\platform\EFM32GG990F1024-STK3700\library\emlib\src\em_lcd.c</FilePath>
+            </File>
+            <File>
+              <FileName>em_leuart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\platform\EFM32GG990F1024-STK3700\library\emlib\src\em_leuart.c</FilePath>
+            </File>
+            <File>
+              <FileName>em_msc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\platform\EFM32GG990F1024-STK3700\library\emlib\src\em_msc.c</FilePath>
+            </File>
+            <File>
+              <FileName>em_system.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\platform\EFM32GG990F1024-STK3700\library\emlib\src\em_system.c</FilePath>
+            </File>
+            <File>
+              <FileName>em_usart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\platform\EFM32GG990F1024-STK3700\library\emlib\src\em_usart.c</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
-          <GroupName>::CMSIS</GroupName>
-        </Group>
-        <Group>
-          <GroupName>::Device</GroupName>
+          <GroupName>startup</GroupName>
+          <Files>
+            <File>
+              <FileName>los_startup_keil.s</FileName>
+              <FileType>2</FileType>
+              <FilePath>..\..\platform\EFM32GG990F1024-STK3700\los_startup_keil.s</FilePath>
+            </File>
+            <File>
+              <FileName>system_efm32gg.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\platform\EFM32GG990F1024-STK3700\library\emlib\src\system_efm32gg.c</FilePath>
+            </File>
+          </Files>
         </Group>
       </Groups>
     </Target>
   </Targets>
 
   <RTE>
-    <apis>
-      <api Capiversion="1.0.0" Cclass="Board Support" Cgroup="Buttons" exclusive="0">
-        <package name="MDK-Middleware" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="7.4.0"/>
-        <targetInfos>
-          <targetInfo name="LiteOS"/>
-        </targetInfos>
-      </api>
-      <api Capiversion="1.0.0" Cclass="Board Support" Cgroup="LED" exclusive="0">
-        <package name="MDK-Middleware" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="7.4.0"/>
-        <targetInfos>
-          <targetInfo name="LiteOS"/>
-        </targetInfos>
-      </api>
-    </apis>
-    <components>
-      <component Cclass="CMSIS" Cgroup="CORE" Cvendor="ARM" Cversion="5.0.1" condition="ARMv6_7_8-M Device">
-        <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="5.0.1"/>
-        <targetInfos>
-          <targetInfo name="LiteOS"/>
-        </targetInfos>
-      </component>
-      <component Capiversion="1.00" Cbundle="EFM32GG-STK3700" Cclass="Board Support" Cgroup="Buttons" Cvendor="Keil" Cversion="4.2.1" condition="EFM32GG BSP">
-        <package name="EFM32GGxxx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="Keil" version="2.3.0"/>
-        <targetInfos>
-          <targetInfo name="LiteOS"/>
-        </targetInfos>
-      </component>
-      <component Cbundle="EFM32GG-STK3700" Cclass="Board Support" Cgroup="CORE" Cvendor="Keil" Cversion="4.2.1" condition="EFM32GG STK3700">
-        <package name="EFM32GGxxx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="Keil" version="2.3.0"/>
-        <targetInfos>
-          <targetInfo name="LiteOS"/>
-        </targetInfos>
-      </component>
-      <component Capiversion="1.00" Cbundle="EFM32GG-STK3700" Cclass="Board Support" Cgroup="LED" Cvendor="Keil" Cversion="4.2.1" condition="EFM32GG BSP">
-        <package name="EFM32GGxxx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="Keil" version="2.3.0"/>
-        <targetInfos>
-          <targetInfo name="LiteOS"/>
-        </targetInfos>
-      </component>
-      <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="4.2.1" condition="EFM32GG CMSIS">
-        <package name="EFM32GGxxx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="Keil" version="2.3.0"/>
-        <targetInfos>
-          <targetInfo name="LiteOS"/>
-        </targetInfos>
-      </component>
-      <component Cclass="Device" Cgroup="emlib" Csub="CMU" Cvendor="Keil" Cversion="4.2.1" condition="emlib EMU">
-        <package name="EFM32GGxxx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="Keil" version="2.3.0"/>
-        <targetInfos>
-          <targetInfo name="LiteOS"/>
-        </targetInfos>
-      </component>
-      <component Cclass="Device" Cgroup="emlib" Csub="EBI" Cvendor="Keil" Cversion="4.2.1" condition="emlib Framework">
-        <package name="EFM32GGxxx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="Keil" version="2.3.0"/>
-        <targetInfos>
-          <targetInfo name="LiteOS"/>
-        </targetInfos>
-      </component>
-      <component Cclass="Device" Cgroup="emlib" Csub="EMU" Cvendor="Keil" Cversion="4.2.1" condition="emlib CMU SYSTEM">
-        <package name="EFM32GGxxx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="Keil" version="2.3.0"/>
-        <targetInfos>
-          <targetInfo name="LiteOS"/>
-        </targetInfos>
-      </component>
-      <component Cclass="Device" Cgroup="emlib" Csub="Framework" Cvendor="Keil" Cversion="4.2.1" condition="EFM32GG">
-        <package name="EFM32GGxxx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="Keil" version="2.3.0"/>
-        <targetInfos>
-          <targetInfo name="LiteOS"/>
-        </targetInfos>
-      </component>
-      <component Cclass="Device" Cgroup="emlib" Csub="GPIO" Cvendor="Keil" Cversion="4.2.1" condition="emlib Framework">
-        <package name="EFM32GGxxx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="Keil" version="2.3.0"/>
-        <targetInfos>
-          <targetInfo name="LiteOS"/>
-        </targetInfos>
-      </component>
-      <component Cclass="Device" Cgroup="emlib" Csub="INT" Cvendor="Keil" Cversion="4.2.1" condition="emlib Framework">
-        <package name="EFM32GGxxx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="Keil" version="2.3.0"/>
-        <targetInfos>
-          <targetInfo name="LiteOS"/>
-        </targetInfos>
-      </component>
-      <component Cclass="Device" Cgroup="emlib" Csub="LCD" Cvendor="Keil" Cversion="4.2.1" condition="emlib Framework">
-        <package name="EFM32GGxxx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="Keil" version="2.3.0"/>
-        <targetInfos>
-          <targetInfo name="LiteOS"/>
-        </targetInfos>
-      </component>
-      <component Cclass="Device" Cgroup="emlib" Csub="LEUART" Cvendor="Keil" Cversion="4.2.1" condition="emlib CMU">
-        <package name="EFM32GGxxx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="Keil" version="2.3.0"/>
-        <targetInfos>
-          <targetInfo name="LiteOS"/>
-        </targetInfos>
-      </component>
-      <component Cclass="Device" Cgroup="emlib" Csub="MSC" Cvendor="Keil" Cversion="4.2.1" condition="emlib CMU INT">
-        <package name="EFM32GGxxx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="Keil" version="2.3.0"/>
-        <targetInfos>
-          <targetInfo name="LiteOS"/>
-        </targetInfos>
-      </component>
-      <component Cclass="Device" Cgroup="emlib" Csub="SYSTEM" Cvendor="Keil" Cversion="4.2.1" condition="emlib Framework">
-        <package name="EFM32GGxxx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="Keil" version="2.3.0"/>
-        <targetInfos>
-          <targetInfo name="LiteOS"/>
-        </targetInfos>
-      </component>
-      <component Cclass="Device" Cgroup="emlib" Csub="USART" Cvendor="Keil" Cversion="4.2.1" condition="emlib CMU">
-        <package name="EFM32GGxxx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="Keil" version="2.3.0"/>
-        <targetInfos>
-          <targetInfo name="LiteOS"/>
-        </targetInfos>
-      </component>
-    </components>
+    <apis/>
+    <components/>
     <files>
       <file attr="config" category="header" name="RTE_Driver\Config\RTE_Device.h" version="2.0.1">
-        <instance index="0">RTE\Device\EFM32GG990F1024\RTE_Device.h</instance>
+        <instance index="0" removed="1">RTE\Device\EFM32GG990F1024\RTE_Device.h</instance>
         <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="4.2.1" condition="EFM32GG CMSIS"/>
         <package name="EFM32GGxxx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="Keil" version="2.3.0"/>
-        <targetInfos>
-          <targetInfo name="LiteOS"/>
-        </targetInfos>
+        <targetInfos/>
       </file>
       <file attr="config" category="source" condition="Compiler ARMCC" name="Device\EFM32GG\Source\ARM\startup_efm32gg.s" version="4.2.1">
-        <instance index="0">RTE\Device\EFM32GG990F1024\startup_efm32gg.s</instance>
+        <instance index="0" removed="1">RTE\Device\EFM32GG990F1024\startup_efm32gg.s</instance>
         <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="4.2.1" condition="EFM32GG CMSIS"/>
         <package name="EFM32GGxxx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="Keil" version="2.3.0"/>
-        <targetInfos>
-          <targetInfo name="LiteOS"/>
-        </targetInfos>
+        <targetInfos/>
       </file>
       <file attr="config" category="source" name="Device\EFM32GG\Source\system_efm32gg.c" version="4.2.1">
-        <instance index="0">RTE\Device\EFM32GG990F1024\system_efm32gg.c</instance>
+        <instance index="0" removed="1">RTE\Device\EFM32GG990F1024\system_efm32gg.c</instance>
         <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="4.2.1" condition="EFM32GG CMSIS"/>
         <package name="EFM32GGxxx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="Keil" version="2.3.0"/>
-        <targetInfos>
-          <targetInfo name="LiteOS"/>
-        </targetInfos>
+        <targetInfos/>
       </file>
     </files>
   </RTE>

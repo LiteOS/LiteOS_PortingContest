@@ -6,13 +6,14 @@
 .\objects\los_bsp_led.o: ..\..\platform\EFM32GG990F1024-STK3700\library\bsp\bsp_bcp.h
 .\objects\los_bsp_led.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\los_bsp_led.o: ..\..\platform\EFM32GG990F1024-STK3700\library\bsp\bspconfig.h
-.\objects\los_bsp_led.o: D:\Keil_v5\ARM\PACK\Keil\EFM32GGxxx_DFP\2.3.0\emlib\inc\em_usart.h
-.\objects\los_bsp_led.o: D:\Keil_v5\ARM\PACK\Keil\EFM32GGxxx_DFP\2.3.0\Device\EFM32GG\Include\em_device.h
-.\objects\los_bsp_led.o: D:\Keil_v5\ARM\PACK\Keil\EFM32GGxxx_DFP\2.3.0\Device\EFM32GG\Include\efm32gg990f1024.h
-.\objects\los_bsp_led.o: D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm3.h
-.\objects\los_bsp_led.o: D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h
-.\objects\los_bsp_led.o: D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h
-.\objects\los_bsp_led.o: D:\Keil_v5\ARM\PACK\Keil\EFM32GGxxx_DFP\2.3.0\Device\EFM32GG\Include\system_efm32gg.h
+.\objects\los_bsp_led.o: ..\..\platform\EFM32GG990F1024-STK3700\library\emlib\inc\em_usart.h
+.\objects\los_bsp_led.o: ..\..\platform\EFM32GG990F1024-STK3700\library\emlib\inc\em_device.h
+.\objects\los_bsp_led.o: ..\..\platform\EFM32GG990F1024-STK3700\library\emlib\inc\efm32gg990f1024.h
+.\objects\los_bsp_led.o: ..\..\platform\EFM32GG990F1024-STK3700\library\CMSIS\Include\core_cm3.h
+.\objects\los_bsp_led.o: ..\..\platform\EFM32GG990F1024-STK3700\library\CMSIS\Include\core_cmInstr.h
+.\objects\los_bsp_led.o: ..\..\platform\EFM32GG990F1024-STK3700\library\CMSIS\Include\cmsis_armcc.h
+.\objects\los_bsp_led.o: ..\..\platform\EFM32GG990F1024-STK3700\library\CMSIS\Include\core_cmFunc.h
+.\objects\los_bsp_led.o: ..\..\platform\EFM32GG990F1024-STK3700\library\emlib\inc\system_efm32gg.h
 .\objects\los_bsp_led.o: D:\Keil_v5\ARM\PACK\Keil\EFM32GGxxx_DFP\2.3.0\Device\EFM32GG\Include\efm32gg_dma_ch.h
 .\objects\los_bsp_led.o: D:\Keil_v5\ARM\PACK\Keil\EFM32GGxxx_DFP\2.3.0\Device\EFM32GG\Include\efm32gg_dma.h
 .\objects\los_bsp_led.o: D:\Keil_v5\ARM\PACK\Keil\EFM32GGxxx_DFP\2.3.0\Device\EFM32GG\Include\efm32gg_aes.h
@@ -60,3 +61,4 @@
 .\objects\los_bsp_led.o: D:\Keil_v5\ARM\PACK\Keil\EFM32GGxxx_DFP\2.3.0\Device\EFM32GG\Include\efm32gg_uart.h
 .\objects\los_bsp_led.o: D:\Keil_v5\ARM\PACK\Keil\EFM32GGxxx_DFP\2.3.0\Device\EFM32GG\Include\efm32gg_af_ports.h
 .\objects\los_bsp_led.o: D:\Keil_v5\ARM\PACK\Keil\EFM32GGxxx_DFP\2.3.0\Device\EFM32GG\Include\efm32gg_af_pins.h
+.\objects\los_bsp_led.o: ..\..\platform\EFM32GG990F1024-STK3700\library\bsp\Board_LED.h

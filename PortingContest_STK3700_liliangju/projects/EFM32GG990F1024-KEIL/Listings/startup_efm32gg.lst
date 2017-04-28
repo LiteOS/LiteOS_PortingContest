@@ -439,11 +439,10 @@ Device\EFM32GG990F1024 -I.\RTE\_LiteOS -ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CM
 SIS\Include -ID:\Keil_v5\ARM\PACK\Keil\EFM32GGxxx_DFP\2.3.0\Boards\SiliconLabs\
 EFM32GG_STK3700\config -ID:\Keil_v5\ARM\PACK\Keil\EFM32GGxxx_DFP\2.3.0\Boards\S
 iliconLabs\common\bsp -ID:\Keil_v5\ARM\PACK\Keil\EFM32GGxxx_DFP\2.3.0\Device\EF
-M32GG\Include -ID:\Keil_v5\ARM\PACK\Keil\EFM32GGxxx_DFP\2.3.0\emlib\inc -ID:\Ke
-il_v5\ARM\PACK\Keil\MDK-Middleware\7.4.0\Board --predefine="__MICROLIB SETA 1" 
---predefine="__UVISION_VERSION SETA 523" --predefine="_RTE_ SETA 1" --predefine
-="EFM32GG990F1024 SETA 1" --list=.\listings\startup_efm32gg.lst RTE\Device\EFM3
-2GG990F1024\startup_efm32gg.s
+M32GG\Include -ID:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.4.0\Board --predefine
+="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SETA 523" --predefine="_RTE
+_ SETA 1" --predefine="EFM32GG990F1024 SETA 1" --list=.\listings\startup_efm32g
+g.lst RTE\Device\EFM32GG990F1024\startup_efm32gg.s
 
 
 

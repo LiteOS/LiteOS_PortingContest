@@ -46,7 +46,7 @@ extern "C" {
 #define UINT32_MAX ((uint32_t)(0xFFFFFFFF))
 #endif
 
-#warning "The INT module is deprecated and marked for removal in a later release. Please use the new CORE module instead. See \"Porting from em_int\" in the CORE documentation for instructions."
+//#warning "The INT module is deprecated and marked for removal in a later release. Please use the new CORE module instead. See \"Porting from em_int\" in the CORE documentation for instructions."
 
 /** @endcond */
 

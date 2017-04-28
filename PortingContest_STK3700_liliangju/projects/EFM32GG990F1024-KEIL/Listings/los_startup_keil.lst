@@ -435,15 +435,11 @@ ARM Macro Assembler    Page 7
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
 ork --depend=.\objects\los_startup_keil.d -o.\objects\los_startup_keil.o -I.\RT
-E\_LiteOS -ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include -ID:\Keil_v5\ARM\
-PACK\Keil\EFM32GGxxx_DFP\2.3.0\Boards\SiliconLabs\EFM32GG_STK3700\config -ID:\K
-eil_v5\ARM\PACK\Keil\EFM32GGxxx_DFP\2.3.0\Boards\SiliconLabs\common\bsp -ID:\Ke
-il_v5\ARM\PACK\Keil\EFM32GGxxx_DFP\2.3.0\Device\EFM32GG\Include -ID:\Keil_v5\AR
-M\PACK\Keil\EFM32GGxxx_DFP\2.3.0\emlib\inc -ID:\Keil_v5\ARM\PACK\Keil\MDK-Middl
-eware\7.4.0\Board --predefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSIO
-N SETA 523" --predefine="_RTE_ SETA 1" --predefine="EFM32GG990F1024 SETA 1" --l
-ist=.\listings\los_startup_keil.lst ..\..\platform\EFM32GG990F1024-STK3700\los_
-startup_keil.s
+E\_LiteOS -ID:\Keil_v5\ARM\PACK\Keil\EFM32GGxxx_DFP\2.3.0\Device\EFM32GG\Includ
+e -ID:\Keil_v5\ARM\CMSIS\Include --predefine="__MICROLIB SETA 1" --predefine="_
+_UVISION_VERSION SETA 523" --predefine="EFM32GG990F1024 SETA 1" --list=.\listin
+gs\los_startup_keil.lst ..\..\platform\EFM32GG990F1024-STK3700\los_startup_keil
+.s
 
 
 
@@ -1293,4 +1289,4 @@ il.s
 il.s
 Comment: __main used once
 1 symbol
-401 symbols in table
+400 symbols in table
