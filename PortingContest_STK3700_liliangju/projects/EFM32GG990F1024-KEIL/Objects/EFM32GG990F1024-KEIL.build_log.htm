@@ -1,0 +1,219 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.23.0.0
+Copyright (C) 2017 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: li LockinLi, zx, LIC=3UUCX-HML54-59VGZ-JPX6J-CGL9C-G87JC
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.23
+Toolchain Path:  D:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 4 (build 422)
+Assembler:       Armasm.exe V5.06 update 4 (build 422)
+Linker/Locator:  ArmLink.exe V5.06 update 4 (build 422)
+Library Manager: ArmAr.exe V5.06 update 4 (build 422)
+Hex Converter:   FromElf.exe V5.06 update 4 (build 422)
+CPU DLL:         SARMCM3.DLL V5.23
+Dialog DLL:      DCM.DLL V1.15.0.0
+Target DLL:      Segger\JL2CM3.dll V2.99.23.0
+Dialog DLL:      TCM.DLL V1.27.0.0
+ 
+<h2>Project:</h2>
+D:\ARM\LiteOS_Kernel\projects\EFM32GG990F1024-KEIL\EFM32GG990F1024-KEIL.uvprojx
+Project File Date:  04/27/2017
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 4 (build 422)', folder: 'D:\Keil_v5\ARM\ARMCC\Bin'
+Rebuild target 'LiteOS'
+compiling los_priqueue.c...
+compiling los_sys.c...
+compiling los_tick.c...
+compiling los_event.c...
+compiling los_timeslice.c...
+compiling los_swtmr.c...
+compiling los_task.c...
+compiling los_mux.c...
+compiling los_queue.c...
+compiling los_membox.c...
+compiling los_memstat.c...
+compiling los_sem.c...
+compiling los_memory.c...
+compiling los_multipledlinkhead.c...
+assembling los_dispatch_keil.s...
+compiling los_hw_tick.c...
+compiling los_misc.c...
+compiling los_hw.c...
+compiling los_hwi.c...
+compiling los_config.c...
+compiling cmsis_liteos.c...
+compiling los_api_dynamic_mem.c...
+compiling los_api_event.c...
+compiling los_api_interrupt.c...
+compiling los_api_list.c...
+compiling los_api_msgqueue.c...
+compiling los_api_mutex.c...
+compiling los_api_sem.c...
+compiling los_api_static_mem.c...
+compiling los_api_systick.c...
+compiling los_api_task.c...
+compiling los_api_timer.c...
+compiling los_cmsis_main.c...
+compiling los_demo_entry.c...
+compiling los_inspect_entry.c...
+compiling main.c...
+compiling los_bsp_key.c...
+compiling los_bsp_uart.c...
+compiling los_bsp_led.c...
+compiling los_bsp_adapter.c...
+compiling segmentlcd.c...
+compiling em_assert.c...
+compiling LED_STK3700.c...
+compiling Buttons_STK3700.c...
+compiling bsp_bcc.c...
+compiling bsp_stk_leds.c...
+compiling bsp_stk.c...
+compiling bsp_trace.c...
+compiling em_cmu.c...
+compiling em_ebi.c...
+compiling em_emu.c...
+compiling em_gpio.c...
+assembling startup_efm32gg.s...
+compiling em_lcd.c...
+compiling em_int.c...
+compiling em_leuart.c...
+compiling em_msc.c...
+compiling em_system.c...
+compiling em_usart.c...
+compiling system_efm32gg.c...
+linking...
+Program Size: Code=24564 RO-data=388 RW-data=1460 ZI-data=35188  
+".\Objects\EFM32GG990F1024-KEIL.axf" - 0 Error(s), 0 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.0.1.pack
+                ARM::CMSIS:CORE:5.0.1
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.0.1
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.EFM32GGxxx_DFP.2.3.0.pack
+                Keil::Device:emlib:EMU:4.2.1
+                Silicon Labs EFM32 Giant Gecko Series Device Support, Drivers and Examples
+   * Component: EMU Version: 4.2.1
+   * Component: LEUART Version: 4.2.1
+   * Component: MSC Version: 4.2.1
+   * Component: Startup Version: 4.2.1
+   * Component: GPIO Version: 4.2.1
+   * Component: EBI Version: 4.2.1
+   * Component: LCD Version: 4.2.1
+   * Component: INT Version: 4.2.1
+   * Component: SYSTEM Version: 4.2.1
+   * Component: CMU Version: 4.2.1
+   * Component: Framework Version: 4.2.1
+   * Component: USART Version: 4.2.1
+   * Component: CORE Version: 4.2.1
+   * Component: LED Version: 4.2.1
+   * Component: Buttons Version: 4.2.1
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.MDK-Middleware.7.4.0.pack
+                ::Board Support:Buttons:1.0.0 (API)
+                Middleware for Keil MDK-Professional and MDK-Plus
+   * Component: Buttons Version: 1.0.0
+   * Component: LED Version: 1.0.0
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\Device\EFM32GG990F1024
+  .\RTE\_LiteOS
+  D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include
+  D:\Keil_v5\ARM\PACK\Keil\EFM32GGxxx_DFP\2.3.0\Boards\SiliconLabs\EFM32GG_STK3700\config
+  D:\Keil_v5\ARM\PACK\Keil\EFM32GGxxx_DFP\2.3.0\Boards\SiliconLabs\common\bsp
+  D:\Keil_v5\ARM\PACK\Keil\EFM32GGxxx_DFP\2.3.0\Device\EFM32GG\Include
+  D:\Keil_v5\ARM\PACK\Keil\EFM32GGxxx_DFP\2.3.0\emlib\inc
+  D:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.4.0\Board
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.0.1
+
+   * Component: Keil::Device:emlib:EMU:4.2.1
+      Source file:   emlib\src\em_emu.c
+      Include file:  emlib\inc\em_emu.h
+
+   * Component: Keil::Device:emlib:LEUART:4.2.1
+      Source file:   emlib\src\em_leuart.c
+      Include file:  emlib\inc\em_leuart.h
+
+   * Component: Keil::Device:emlib:MSC:4.2.1
+      Include file:  emlib\inc\em_msc.h
+      Source file:   emlib\src\em_msc.c
+
+   * Component: Keil::Device:Startup:4.2.1
+      Include file:  RTE_Driver\Config\RTE_Device.h
+      Source file:   Device\EFM32GG\Source\system_efm32gg.c
+      Source file:   Device\EFM32GG\Source\ARM\startup_efm32gg.s
+
+   * Component: Keil::Device:emlib:GPIO:4.2.1
+      Include file:  emlib\inc\em_gpio.h
+      Source file:   emlib\src\em_gpio.c
+
+   * Component: Keil::Device:emlib:EBI:4.2.1
+      Source file:   emlib\src\em_ebi.c
+      Include file:  emlib\inc\em_ebi.h
+
+   * Component: Keil::Device:emlib:LCD:4.2.1
+      Source file:   emlib\src\em_lcd.c
+      Include file:  emlib\inc\em_lcd.h
+
+   * Component: Keil::Device:emlib:INT:4.2.1
+      Include file:  emlib\inc\em_int.h
+      Source file:   emlib\src\em_int.c
+
+   * Component: Keil::Device:emlib:SYSTEM:4.2.1
+      Include file:  emlib\inc\em_system.h
+      Source file:   emlib\src\em_system.c
+
+   * Component: Keil::Device:emlib:CMU:4.2.1
+      Source file:   emlib\src\em_cmu.c
+      Include file:  emlib\inc\em_cmu.h
+
+   * Component: Keil::Device:emlib:Framework:4.2.1
+      Include file:  emlib\inc\em_bus.h
+      Include file:  emlib\inc\em_assert.h
+      Include file:  emlib\inc\em_version.h
+      Include file:  emlib\inc\em_common.h
+      Include file:  emlib\inc\em_chip.h
+      Source file:   emlib\src\em_assert.c
+      Include file:  emlib\inc\em_bitband.h
+
+   * Component: Keil::Device:emlib:USART:4.2.1
+      Include file:  emlib\inc\em_usart.h
+      Source file:   emlib\src\em_usart.c
+
+   * Component: Keil.EFM32GG-STK3700::Board Support:CORE:4.2.1
+      Include file:  Boards\SiliconLabs\common\bsp\bsp.h
+      Source file:   Boards\SiliconLabs\common\bsp\bsp_stk_leds.c
+      Include file:  Boards\SiliconLabs\common\bsp\bsp_trace.h
+      Source file:   Boards\SiliconLabs\common\bsp\bsp_bcc.c
+      Source file:   Boards\SiliconLabs\common\bsp\bsp_stk.c
+      Source file:   Boards\SiliconLabs\common\bsp\bsp_trace.c
+
+   * Component: Keil.EFM32GG-STK3700::Board Support:LED:4.2.1
+      Source file:   Boards\SiliconLabs\EFM32GG_STK3700\Common\LED_STK3700.c
+
+   * Component: Keil.EFM32GG-STK3700::Board Support:Buttons:4.2.1
+      Source file:   Boards\SiliconLabs\EFM32GG_STK3700\Common\Buttons_STK3700.c
+
+   * Component: ::Board Support:Buttons:1.0.0 (API)
+      Include file:  Board\Board_Buttons.h
+
+   * Component: ::Board Support:LED:1.0.0 (API)
+      Include file:  Board\Board_LED.h
+Build Time Elapsed:  00:00:49
+</pre>
+</body>
+</html>

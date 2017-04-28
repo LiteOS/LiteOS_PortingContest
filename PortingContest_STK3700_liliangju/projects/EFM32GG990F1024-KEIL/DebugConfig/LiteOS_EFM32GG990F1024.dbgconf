@@ -1,0 +1,38 @@
+// <<< Use Configuration Wizard in Context Menu >>>
+
+// <h>Trace Setup
+// <o> Trace Clock Source
+//   <0=> High Frequency Clock (HFCLK)
+//   <1=> Auxiliary Clock (AUXHFRCO)
+// <i> Select source for trace clock
+TraceClkSrc = 0;
+
+// <o> TPIU Pin Routing
+//   <0=> Pin Location 0
+//   <1=> Pin Location 1
+//   <2=> Pin Location 2
+//   <3=> Pin Location 3
+// <i> Select TPIU pin routing for your board configuration:
+// <i> - Pin Location 0 (TRACECLK: PD7, TRACEDATA0: PD6, TRACEDATA1: PD3,  TRACEDATA2: PD4,  TRACEDATA3: PD5)
+// <i> - Pin Location 1 (TRACECLK: PF8, TRACEDATA0: PF9, TRACEDATA1: PD13, TRACEDATA2: PB15, TRACEDATA3: PF3)
+// <i> - Pin Location 2 (TRACECLK: PC6, TRACEDATA0: PC7, TRACEDATA1: PD3,  TRACEDATA2: PD4,  TRACEDATA3: PD5)
+// <i> - Pin Location 3 (TRACECLK: PA6, TRACEDATA0: PA2, TRACEDATA1: PA3,  TRACEDATA2: PA4,  TRACEDATA3: PA5)
+// <i> Default: Pin Location 0
+PinLocationTPIU = 0;
+
+
+// <o> SWO Pin Routing
+//   <0=> Pin Location 0
+//   <1=> Pin Location 1
+//   <2=> Pin Location 2
+//   <3=> Pin Location 3
+// <i> Select SWO pin routing for your board configuration:
+// <i> - Pin Location 0 (SWO: PF2)
+// <i> - Pin Location 1 (SWO: PC15)
+// <i> - Pin Location 2 (SWO: PD1)
+// <i> - Pin Location 3 (SWO: PD2)
+// <i> Default: Pin Location 0
+PinLocationSWO = 0;
+// </h>
+
+// <<< end of configuration section >>>
