@@ -114,3 +114,4 @@ void SystemLFXOClockSet(uint32_t freq);
 }
 #endif
 #endif /* SYSTEM_EFM32HG_H */
+

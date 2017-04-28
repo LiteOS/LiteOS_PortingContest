@@ -19,8 +19,14 @@
 
 extern void LOS_EvbSetup(void);
 
-static UINT32 g_uwboadTaskID;
 
+/*****************************************************************************
+ Function    : HAL_init
+ Description : Init for HAL
+ Input       : None
+ Output      : None
+ Return      : None
+ *****************************************************************************/
 void HAL_init(void)
 {
     systemInit();
@@ -29,35 +35,6 @@ void HAL_init(void)
     return;
 }
 
-LITE_OS_SEC_TEXT VOID LOS_BoadExampleTskfunc(VOID)
-{
-    while (1)
-    {
-        LOS_EvbLedControl(LOS_LED2, LED_ON);
-        LOS_EvbUartWriteStr("Board Test\n");
-        LOS_TaskDelay(500);
-        LOS_EvbLedControl(LOS_LED2, LED_OFF);
-        LOS_TaskDelay(500);
-    }
-}
-void LOS_BoadExampleEntry(void)
-{
-    UINT32 uwRet;
-    TSK_INIT_PARAM_S stTaskInitParam;
-
-    (VOID)memset((void *)(&stTaskInitParam), 0, sizeof(TSK_INIT_PARAM_S));
-    stTaskInitParam.pfnTaskEntry = (TSK_ENTRY_FUNC)LOS_BoadExampleTskfunc;
-    stTaskInitParam.uwStackSize = LOSCFG_BASE_CORE_TSK_IDLE_STACK_SIZE;
-    stTaskInitParam.pcName = "BoardDemo";
-    stTaskInitParam.usTaskPrio = 10;
-    uwRet = LOS_TaskCreate(&g_uwboadTaskID, &stTaskInitParam);
-
-    if (uwRet != LOS_OK)
-    {
-        return ;
-    }
-    return ;
-}
 
 /*****************************************************************************
  Function    : main
@@ -72,7 +49,7 @@ int main(void)
     UINT32 uwRet;
 
     HAL_init();
-	
+
     /*Init LiteOS kernel */
     uwRet = LOS_KernelInit();
     if (uwRet != LOS_OK) {
@@ -80,18 +57,18 @@ int main(void)
     }
     /* Enable LiteOS system tick interrupt */
     LOS_EnableTick();
-	
-    /* 
-        Notice: add your code here
-        here you can create task for your function 
-        do some hw init that need after systemtick init
-    */
-    LOS_EvbSetup(); //init the device on the dev baord
-		
+
+    /* Init the device on the dev board */
+    LOS_EvbSetup(); 
+
+    /* init the device on the dev board */
     LOS_Inspect_Entry();
-		
+
     /* Kernel start to run */
     LOS_Start();
     for (;;);
     /* Replace the dots (...) with your own code.  */
 }
+
+/* End of file */
+

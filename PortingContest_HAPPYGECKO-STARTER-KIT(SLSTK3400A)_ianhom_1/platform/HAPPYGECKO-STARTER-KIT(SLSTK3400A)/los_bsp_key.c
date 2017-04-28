@@ -7,6 +7,13 @@
 #include "bspconfig.h"
 #endif
 
+/*****************************************************************************
+ Function    : LOS_EvbKeyInit
+ Description : Init keys
+ Input       : None
+ Output      : None
+ Return      : None
+ *****************************************************************************/
 void LOS_EvbKeyInit(void)
 {
 #ifdef EFM32HG322F64
@@ -45,4 +52,5 @@ uint8_t LOS_EvbGetKeyVal(int KeyNum)
 
 }
 
+/* End of file */
 

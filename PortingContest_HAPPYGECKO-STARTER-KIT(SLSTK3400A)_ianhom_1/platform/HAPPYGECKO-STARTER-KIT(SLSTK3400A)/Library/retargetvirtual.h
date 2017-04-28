@@ -43,3 +43,4 @@ void RETARGET_BlockOnTX(void);
 /** @} (end group Drivers) */
 
 #endif // __RETARGET_VIRTUAL_H__
+

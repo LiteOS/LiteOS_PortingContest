@@ -65,112 +65,112 @@ typedef enum
 {
 /* New style family #defines */
 #if defined(_DEVINFO_PART_DEVICE_FAMILY_EFM32G)
-  systemPartFamilyEfm32Gecko   = _DEVINFO_PART_DEVICE_FAMILY_EFM32G,      /**< EFM32 Gecko Device Family */
+    systemPartFamilyEfm32Gecko   = _DEVINFO_PART_DEVICE_FAMILY_EFM32G,      /**< EFM32 Gecko Device Family */
 #endif
 #if defined(_DEVINFO_PART_DEVICE_FAMILY_EFM32GG)
-  systemPartFamilyEfm32Giant   = _DEVINFO_PART_DEVICE_FAMILY_EFM32GG,     /**< EFM32 Giant Gecko Device Family */
+    systemPartFamilyEfm32Giant   = _DEVINFO_PART_DEVICE_FAMILY_EFM32GG,     /**< EFM32 Giant Gecko Device Family */
 #endif
 #if defined(_DEVINFO_PART_DEVICE_FAMILY_EFM32TG)
-  systemPartFamilyEfm32Tiny    = _DEVINFO_PART_DEVICE_FAMILY_EFM32TG,     /**< EFM32 Tiny Gecko Device Family */
+    systemPartFamilyEfm32Tiny    = _DEVINFO_PART_DEVICE_FAMILY_EFM32TG,     /**< EFM32 Tiny Gecko Device Family */
 #endif
 #if defined(_DEVINFO_PART_DEVICE_FAMILY_EFM32LG)
-  systemPartFamilyEfm32Leopard = _DEVINFO_PART_DEVICE_FAMILY_EFM32LG,     /**< EFM32 Leopard Gecko Device Family */
+    systemPartFamilyEfm32Leopard = _DEVINFO_PART_DEVICE_FAMILY_EFM32LG,     /**< EFM32 Leopard Gecko Device Family */
 #endif
 #if defined(_DEVINFO_PART_DEVICE_FAMILY_EFM32WG)
-  systemPartFamilyEfm32Wonder  = _DEVINFO_PART_DEVICE_FAMILY_EFM32WG,     /**< EFM32 Wonder Gecko Device Family */
+    systemPartFamilyEfm32Wonder  = _DEVINFO_PART_DEVICE_FAMILY_EFM32WG,     /**< EFM32 Wonder Gecko Device Family */
 #endif
 #if defined(_DEVINFO_PART_DEVICE_FAMILY_EFM32ZG)
-  systemPartFamilyEfm32Zero    = _DEVINFO_PART_DEVICE_FAMILY_EFM32ZG,     /**< EFM32 Zero Gecko Device Family */
+    systemPartFamilyEfm32Zero    = _DEVINFO_PART_DEVICE_FAMILY_EFM32ZG,     /**< EFM32 Zero Gecko Device Family */
 #endif
 #if defined(_DEVINFO_PART_DEVICE_FAMILY_EFM32HG)
-  systemPartFamilyEfm32Happy   = _DEVINFO_PART_DEVICE_FAMILY_EFM32HG,     /**< EFM32 Happy Gecko Device Family */
+    systemPartFamilyEfm32Happy   = _DEVINFO_PART_DEVICE_FAMILY_EFM32HG,     /**< EFM32 Happy Gecko Device Family */
 #endif
 #if defined(_DEVINFO_PART_DEVICE_FAMILY_EFM32PG1B)
-  systemPartFamilyEfm32Pearl1B = _DEVINFO_PART_DEVICE_FAMILY_EFM32PG1B,   /**< EFM32 Pearl Gecko Gen1 Basic Device Family */
+    systemPartFamilyEfm32Pearl1B = _DEVINFO_PART_DEVICE_FAMILY_EFM32PG1B,   /**< EFM32 Pearl Gecko Gen1 Basic Device Family */
 #endif
 #if defined(_DEVINFO_PART_DEVICE_FAMILY_EFM32JG1B)
-  systemPartFamilyEfm32Jade1B  = _DEVINFO_PART_DEVICE_FAMILY_EFM32JG1B,   /**< EFM32 Jade Gecko Gen1 Basic Device Family */
+    systemPartFamilyEfm32Jade1B  = _DEVINFO_PART_DEVICE_FAMILY_EFM32JG1B,   /**< EFM32 Jade Gecko Gen1 Basic Device Family */
 #endif
 #if defined(_DEVINFO_PART_DEVICE_FAMILY_EZR32WG)
-  systemPartFamilyEzr32Wonder  = _DEVINFO_PART_DEVICE_FAMILY_EZR32WG,     /**< EZR32 Wonder Device Family */
+    systemPartFamilyEzr32Wonder  = _DEVINFO_PART_DEVICE_FAMILY_EZR32WG,     /**< EZR32 Wonder Device Family */
 #endif
 #if defined(_DEVINFO_PART_DEVICE_FAMILY_EZR32LG)
-  systemPartFamilyEzr32Leopard = _DEVINFO_PART_DEVICE_FAMILY_EZR32LG,     /**< EZR32 Leopard Device Family */
+    systemPartFamilyEzr32Leopard = _DEVINFO_PART_DEVICE_FAMILY_EZR32LG,     /**< EZR32 Leopard Device Family */
 #endif
 #if defined(_DEVINFO_PART_DEVICE_FAMILY_EZR32HG)
-  systemPartFamilyEzr32Happy   = _DEVINFO_PART_DEVICE_FAMILY_EZR32HG,     /**< EZR32 Happy Device Family */
+    systemPartFamilyEzr32Happy   = _DEVINFO_PART_DEVICE_FAMILY_EZR32HG,     /**< EZR32 Happy Device Family */
 #endif
 #if defined(_DEVINFO_PART_DEVICE_FAMILY_EFR32MG1P)
-  systemPartFamilyMighty1P = _DEVINFO_PART_DEVICE_FAMILY_EFR32MG1P,       /**< EFR32 Mighty Gecko Gen1 Premium Device Family */
+    systemPartFamilyMighty1P = _DEVINFO_PART_DEVICE_FAMILY_EFR32MG1P,       /**< EFR32 Mighty Gecko Gen1 Premium Device Family */
 #endif
 #if defined(_DEVINFO_PART_DEVICE_FAMILY_EFR32MG1B)
-  systemPartFamilyMighty1B = _DEVINFO_PART_DEVICE_FAMILY_EFR32MG1B,       /**< EFR32 Mighty Gecko Gen1 Basic Device Family */
+    systemPartFamilyMighty1B = _DEVINFO_PART_DEVICE_FAMILY_EFR32MG1B,       /**< EFR32 Mighty Gecko Gen1 Basic Device Family */
 #endif
 #if defined(_DEVINFO_PART_DEVICE_FAMILY_EFR32MG1V)
-  systemPartFamilyMighty1V = _DEVINFO_PART_DEVICE_FAMILY_EFR32MG1V,       /**< EFR32 Mighty Gecko Gen1 Value Device Family */
+    systemPartFamilyMighty1V = _DEVINFO_PART_DEVICE_FAMILY_EFR32MG1V,       /**< EFR32 Mighty Gecko Gen1 Value Device Family */
 #endif
 #if defined(_DEVINFO_PART_DEVICE_FAMILY_EFR32BG1P)
-  systemPartFamilyBlue1P   = _DEVINFO_PART_DEVICE_FAMILY_EFR32BG1P,       /**< EFR32 Blue Gecko Gen1 Premium Device Family */
+    systemPartFamilyBlue1P   = _DEVINFO_PART_DEVICE_FAMILY_EFR32BG1P,       /**< EFR32 Blue Gecko Gen1 Premium Device Family */
 #endif
 #if defined(_DEVINFO_PART_DEVICE_FAMILY_EFR32BG1B)
-  systemPartFamilyBlue1B   = _DEVINFO_PART_DEVICE_FAMILY_EFR32BG1B,       /**< EFR32 Blue Gecko Gen1 Basic Device Family */
+    systemPartFamilyBlue1B   = _DEVINFO_PART_DEVICE_FAMILY_EFR32BG1B,       /**< EFR32 Blue Gecko Gen1 Basic Device Family */
 #endif
 #if defined(_DEVINFO_PART_DEVICE_FAMILY_EFR32BG1V)
-  systemPartFamilyBlue1V   = _DEVINFO_PART_DEVICE_FAMILY_EFR32BG1V,       /**< EFR32 Blue Gecko Gen1 Value Device Family */
+    systemPartFamilyBlue1V   = _DEVINFO_PART_DEVICE_FAMILY_EFR32BG1V,       /**< EFR32 Blue Gecko Gen1 Value Device Family */
 #endif
 #if defined(_DEVINFO_PART_DEVICE_FAMILY_EFR32ZG1P)
-  systemPartFamilyZappy1P = _DEVINFO_PART_DEVICE_FAMILY_EFR32ZG1P,        /**< EFR32 Zappy Gecko Gen1 Premium Device Family */
+    systemPartFamilyZappy1P = _DEVINFO_PART_DEVICE_FAMILY_EFR32ZG1P,        /**< EFR32 Zappy Gecko Gen1 Premium Device Family */
 #endif
 #if defined(_DEVINFO_PART_DEVICE_FAMILY_EFR32ZG1B)
-  systemPartFamilyZappy1B = _DEVINFO_PART_DEVICE_FAMILY_EFR32ZG1B,        /**< EFR32 Zappy Gecko Gen1 Basic Device Family */
+    systemPartFamilyZappy1B = _DEVINFO_PART_DEVICE_FAMILY_EFR32ZG1B,        /**< EFR32 Zappy Gecko Gen1 Basic Device Family */
 #endif
 #if defined(_DEVINFO_PART_DEVICE_FAMILY_EFR32ZG1V)
-  systemPartFamilyZappy1V = _DEVINFO_PART_DEVICE_FAMILY_EFR32ZG1V,        /**< EFR32 Zappy Gecko Gen1 Value Device Family */
+    systemPartFamilyZappy1V = _DEVINFO_PART_DEVICE_FAMILY_EFR32ZG1V,        /**< EFR32 Zappy Gecko Gen1 Value Device Family */
 #endif
 #if defined(_DEVINFO_PART_DEVICE_FAMILY_EFR32FG1P)
-  systemPartFamilyFlex1P   = _DEVINFO_PART_DEVICE_FAMILY_EFR32FG1P,       /**< EFR32 Flex Gecko Gen1 Premium Device Family */
+    systemPartFamilyFlex1P   = _DEVINFO_PART_DEVICE_FAMILY_EFR32FG1P,       /**< EFR32 Flex Gecko Gen1 Premium Device Family */
 #endif
 #if defined(_DEVINFO_PART_DEVICE_FAMILY_EFR32FG1B)
-  systemPartFamilyFlex1B   = _DEVINFO_PART_DEVICE_FAMILY_EFR32FG1B,       /**< EFR32 Flex Gecko Gen1 Basic Device Family */
+    systemPartFamilyFlex1B   = _DEVINFO_PART_DEVICE_FAMILY_EFR32FG1B,       /**< EFR32 Flex Gecko Gen1 Basic Device Family */
 #endif
 #if defined(_DEVINFO_PART_DEVICE_FAMILY_EFR32FG1V)
-  systemPartFamilyFlex1V   = _DEVINFO_PART_DEVICE_FAMILY_EFR32FG1V,       /**< EFR32 Flex Gecko Gen1 Value Device Family */
+    systemPartFamilyFlex1V   = _DEVINFO_PART_DEVICE_FAMILY_EFR32FG1V,       /**< EFR32 Flex Gecko Gen1 Value Device Family */
 #endif
 #if defined(_DEVINFO_PART_DEVICE_FAMILY_EFR32MG2P)
-  systemPartFamilyMighty2P = _DEVINFO_PART_DEVICE_FAMILY_EFR32MG2P,       /**< EFR32 Mighty Gecko Gen2 Premium Device Family */
+    systemPartFamilyMighty2P = _DEVINFO_PART_DEVICE_FAMILY_EFR32MG2P,       /**< EFR32 Mighty Gecko Gen2 Premium Device Family */
 #endif
 #if defined(_DEVINFO_PART_DEVICE_FAMILY_EFR32MG2B)
-  systemPartFamilyMighty2B = _DEVINFO_PART_DEVICE_FAMILY_EFR32MG2B,       /**< EFR32 Mighty Gecko Gen2 Basic Device Family */
+    systemPartFamilyMighty2B = _DEVINFO_PART_DEVICE_FAMILY_EFR32MG2B,       /**< EFR32 Mighty Gecko Gen2 Basic Device Family */
 #endif
 #if defined(_DEVINFO_PART_DEVICE_FAMILY_EFR32MG2V)
-  systemPartFamilyMighty2V = _DEVINFO_PART_DEVICE_FAMILY_EFR32MG2V,       /**< EFR32 Mighty Gecko Gen2 Value Device Family */
+    systemPartFamilyMighty2V = _DEVINFO_PART_DEVICE_FAMILY_EFR32MG2V,       /**< EFR32 Mighty Gecko Gen2 Value Device Family */
 #endif
 #if defined(_DEVINFO_PART_DEVICE_FAMILY_EFR32BG2P)
-  systemPartFamilyBlue2P   = _DEVINFO_PART_DEVICE_FAMILY_EFR32BG2P,       /**< EFR32 Blue Gecko Gen2 Premium Device Family */
+    systemPartFamilyBlue2P   = _DEVINFO_PART_DEVICE_FAMILY_EFR32BG2P,       /**< EFR32 Blue Gecko Gen2 Premium Device Family */
 #endif
 #if defined(_DEVINFO_PART_DEVICE_FAMILY_EFR32BG2B)
-  systemPartFamilyBlue2B   = _DEVINFO_PART_DEVICE_FAMILY_EFR32BG2B,       /**< EFR32 Blue Gecko Gen2 Basic Device Family */
+    systemPartFamilyBlue2B   = _DEVINFO_PART_DEVICE_FAMILY_EFR32BG2B,       /**< EFR32 Blue Gecko Gen2 Basic Device Family */
 #endif
 #if defined(_DEVINFO_PART_DEVICE_FAMILY_EFR32BG2V)
-  systemPartFamilyBlue2V   = _DEVINFO_PART_DEVICE_FAMILY_EFR32BG2V,       /**< EFR32 Blue Gecko Gen2 Value Device Family */
+    systemPartFamilyBlue2V   = _DEVINFO_PART_DEVICE_FAMILY_EFR32BG2V,       /**< EFR32 Blue Gecko Gen2 Value Device Family */
 #endif
 #if defined(_DEVINFO_PART_DEVICE_FAMILY_EFR32ZG2P)
-  systemPartFamilyZappy2P = _DEVINFO_PART_DEVICE_FAMILY_EFR32ZG2P,        /**< EFR32 Zappy Gecko Gen2 Premium Device Family */
+    systemPartFamilyZappy2P = _DEVINFO_PART_DEVICE_FAMILY_EFR32ZG2P,        /**< EFR32 Zappy Gecko Gen2 Premium Device Family */
 #endif
 #if defined(_DEVINFO_PART_DEVICE_FAMILY_EFR32ZG2B)
-  systemPartFamilyZappy2B = _DEVINFO_PART_DEVICE_FAMILY_EFR32ZG2B,        /**< EFR32 Zappy Gecko Gen2 Basic Device Family */
+    systemPartFamilyZappy2B = _DEVINFO_PART_DEVICE_FAMILY_EFR32ZG2B,        /**< EFR32 Zappy Gecko Gen2 Basic Device Family */
 #endif
 #if defined(_DEVINFO_PART_DEVICE_FAMILY_EFR32ZG2V)
-  systemPartFamilyZappy2V = _DEVINFO_PART_DEVICE_FAMILY_EFR32ZG2V,        /**< EFR32 Zappy Gecko Gen2 Value Device Family */
+    systemPartFamilyZappy2V = _DEVINFO_PART_DEVICE_FAMILY_EFR32ZG2V,        /**< EFR32 Zappy Gecko Gen2 Value Device Family */
 #endif
 #if defined(_DEVINFO_PART_DEVICE_FAMILY_EFR32FG2P)
-  systemPartFamilyFlex2P   = _DEVINFO_PART_DEVICE_FAMILY_EFR32FG2P,       /**< EFR32 Flex Gecko Gen2 Premium Device Family */
+    systemPartFamilyFlex2P   = _DEVINFO_PART_DEVICE_FAMILY_EFR32FG2P,       /**< EFR32 Flex Gecko Gen2 Premium Device Family */
 #endif
 #if defined(_DEVINFO_PART_DEVICE_FAMILY_EFR32FG2B)
-  systemPartFamilyFlex2B   = _DEVINFO_PART_DEVICE_FAMILY_EFR32FG2B,       /**< EFR32 Flex Gecko Gen2 Basic Device Family */
+    systemPartFamilyFlex2B   = _DEVINFO_PART_DEVICE_FAMILY_EFR32FG2B,       /**< EFR32 Flex Gecko Gen2 Basic Device Family */
 #endif
 #if defined(_DEVINFO_PART_DEVICE_FAMILY_EFR32FG2V)
-  systemPartFamilyFlex2V   = _DEVINFO_PART_DEVICE_FAMILY_EFR32FG2V,       /**< EFR32 Flex Gecko Gen2 Value Device Family */
+    systemPartFamilyFlex2V   = _DEVINFO_PART_DEVICE_FAMILY_EFR32FG2V,       /**< EFR32 Flex Gecko Gen2 Value Device Family */
 #endif
 
 
@@ -178,29 +178,29 @@ typedef enum
 
 /* Deprecated family #defines */
 #if defined(_DEVINFO_PART_DEVICE_FAMILY_G)
-  systemPartFamilyGecko   = _DEVINFO_PART_DEVICE_FAMILY_G,   /**< Gecko Device Family */
+    systemPartFamilyGecko   = _DEVINFO_PART_DEVICE_FAMILY_G,   /**< Gecko Device Family */
 #endif
 #if defined(_DEVINFO_PART_DEVICE_FAMILY_GG)
-  systemPartFamilyGiant   = _DEVINFO_PART_DEVICE_FAMILY_GG,  /**< Giant Gecko Device Family */
+    systemPartFamilyGiant   = _DEVINFO_PART_DEVICE_FAMILY_GG,  /**< Giant Gecko Device Family */
 #endif
 #if defined(_DEVINFO_PART_DEVICE_FAMILY_TG)
-  systemPartFamilyTiny    = _DEVINFO_PART_DEVICE_FAMILY_TG,  /**< Tiny Gecko Device Family */
+    systemPartFamilyTiny    = _DEVINFO_PART_DEVICE_FAMILY_TG,  /**< Tiny Gecko Device Family */
 #endif
 #if defined(_DEVINFO_PART_DEVICE_FAMILY_LG)
-  systemPartFamilyLeopard = _DEVINFO_PART_DEVICE_FAMILY_LG,  /**< Leopard Gecko Device Family */
+    systemPartFamilyLeopard = _DEVINFO_PART_DEVICE_FAMILY_LG,  /**< Leopard Gecko Device Family */
 #endif
 #if defined(_DEVINFO_PART_DEVICE_FAMILY_WG)
-  systemPartFamilyWonder  = _DEVINFO_PART_DEVICE_FAMILY_WG,  /**< Wonder Gecko Device Family */
+    systemPartFamilyWonder  = _DEVINFO_PART_DEVICE_FAMILY_WG,  /**< Wonder Gecko Device Family */
 #endif
 #if defined(_DEVINFO_PART_DEVICE_FAMILY_ZG)
-  systemPartFamilyZero    = _DEVINFO_PART_DEVICE_FAMILY_ZG,  /**< Zero Gecko Device Family */
+    systemPartFamilyZero    = _DEVINFO_PART_DEVICE_FAMILY_ZG,  /**< Zero Gecko Device Family */
 #endif
 #if defined(_DEVINFO_PART_DEVICE_FAMILY_HG)
-  systemPartFamilyHappy   = _DEVINFO_PART_DEVICE_FAMILY_HG,  /**< Happy Gecko Device Family */
+    systemPartFamilyHappy   = _DEVINFO_PART_DEVICE_FAMILY_HG,  /**< Happy Gecko Device Family */
 #endif
-  systemPartFamilyUnknown = 0xFF                             /**< Unknown Device Family.
-                                                                  The family id is missing
-                                                                  on unprogrammed parts. */
+    systemPartFamilyUnknown = 0xFF                             /**< Unknown Device Family.
+                                                                    The family id is missing
+                                                                    on unprogrammed parts. */
 } SYSTEM_PartFamily_TypeDef;
 
 
@@ -211,27 +211,27 @@ typedef enum
 /** Chip revision details */
 typedef struct
 {
-  uint8_t minor; /**< Minor revision number */
-  uint8_t major; /**< Major revision number */
-  uint8_t family;/**< Device family number  */
+    uint8_t minor; /**< Minor revision number */
+    uint8_t major; /**< Major revision number */
+    uint8_t family;/**< Device family number  */
 } SYSTEM_ChipRevision_TypeDef;
 
 #if defined(__FPU_PRESENT) && (__FPU_PRESENT == 1)
 /** Floating point coprocessor access modes. */
 typedef enum
 {
-  fpuAccessDenied         = (0x0 << 20),  /**< Access denied, any attempted access generates a NOCP UsageFault. */
-  fpuAccessPrivilegedOnly = (0x5 << 20),  /**< Privileged access only, an unprivileged access generates a NOCP UsageFault. */
-  fpuAccessReserved       = (0xA << 20),  /**< Reserved. */
-  fpuAccessFull           = (0xF << 20)   /**< Full access. */
+    fpuAccessDenied         = (0x0 << 20),  /**< Access denied, any attempted access generates a NOCP UsageFault. */
+    fpuAccessPrivilegedOnly = (0x5 << 20),  /**< Privileged access only, an unprivileged access generates a NOCP UsageFault. */
+    fpuAccessReserved       = (0xA << 20),  /**< Reserved. */
+    fpuAccessFull           = (0xF << 20)   /**< Full access. */
 } SYSTEM_FpuAccess_TypeDef;
 #endif
 
 /** DEVINFO calibration address/value pair */
 typedef struct
 {
-  uint32_t address;                       /**< Peripheral calibration register address */
-  uint32_t calValue;                      /**< Calibration value for register at address */
+    uint32_t address;                       /**< Peripheral calibration register address */
+    uint32_t calValue;                      /**< Calibration value for register at address */
 }
 SYSTEM_CalAddrVal_TypeDef;
 
@@ -253,7 +253,7 @@ bool SYSTEM_GetCalibrationValue(volatile uint32_t *regAddress);
  ******************************************************************************/
 __STATIC_INLINE void SYSTEM_FpuAccessModeSet(SYSTEM_FpuAccess_TypeDef accessMode)
 {
-  SCB->CPACR = (SCB->CPACR & ~(0xF << 20)) | accessMode;
+    SCB->CPACR = (SCB->CPACR & ~(0xF << 20)) | accessMode;
 }
 #endif
 
@@ -266,8 +266,8 @@ __STATIC_INLINE void SYSTEM_FpuAccessModeSet(SYSTEM_FpuAccess_TypeDef accessMode
  ******************************************************************************/
 __STATIC_INLINE uint64_t SYSTEM_GetUnique(void)
 {
-  uint32_t tmp = DEVINFO->UNIQUEL;
-  return (uint64_t)((uint64_t)DEVINFO->UNIQUEH << 32) | tmp;
+    uint32_t tmp = DEVINFO->UNIQUEL;
+    return (uint64_t)((uint64_t)DEVINFO->UNIQUEH << 32) | tmp;
 }
 
 /*******************************************************************************
@@ -279,8 +279,8 @@ __STATIC_INLINE uint64_t SYSTEM_GetUnique(void)
  ******************************************************************************/
 __STATIC_INLINE uint8_t SYSTEM_GetProdRev(void)
 {
-  return (DEVINFO->PART & _DEVINFO_PART_PROD_REV_MASK)
-         >> _DEVINFO_PART_PROD_REV_SHIFT;
+    return (DEVINFO->PART & _DEVINFO_PART_PROD_REV_MASK)
+           >> _DEVINFO_PART_PROD_REV_SHIFT;
 }
 
 /*******************************************************************************
@@ -298,15 +298,15 @@ __STATIC_INLINE uint8_t SYSTEM_GetProdRev(void)
 __STATIC_INLINE uint16_t SYSTEM_GetSRAMSize(void)
 {
 #if defined(_EFM32_GECKO_FAMILY)
-  /* Early Gecko devices had a bug where SRAM and Flash size were swapped. */
-  if (SYSTEM_GetProdRev() < 5)
-  {
-    return (DEVINFO->MSIZE & _DEVINFO_MSIZE_FLASH_MASK)
-           >> _DEVINFO_MSIZE_FLASH_SHIFT;
-  }
+    /* Early Gecko devices had a bug where SRAM and Flash size were swapped. */
+    if (SYSTEM_GetProdRev() < 5)
+    {
+        return (DEVINFO->MSIZE & _DEVINFO_MSIZE_FLASH_MASK)
+               >> _DEVINFO_MSIZE_FLASH_SHIFT;
+    }
 #endif
-  return (DEVINFO->MSIZE & _DEVINFO_MSIZE_SRAM_MASK)
-         >> _DEVINFO_MSIZE_SRAM_SHIFT;
+    return (DEVINFO->MSIZE & _DEVINFO_MSIZE_SRAM_MASK)
+             >> _DEVINFO_MSIZE_SRAM_SHIFT;
 }
 
 /*******************************************************************************
@@ -324,15 +324,15 @@ __STATIC_INLINE uint16_t SYSTEM_GetSRAMSize(void)
 __STATIC_INLINE uint16_t SYSTEM_GetFlashSize(void)
 {
 #if defined(_EFM32_GECKO_FAMILY)
-  /* Early Gecko devices had a bug where SRAM and Flash size were swapped. */
-  if (SYSTEM_GetProdRev() < 5)
-  {
-    return (DEVINFO->MSIZE & _DEVINFO_MSIZE_SRAM_MASK)
-           >> _DEVINFO_MSIZE_SRAM_SHIFT;
-  }
+    /* Early Gecko devices had a bug where SRAM and Flash size were swapped. */
+    if (SYSTEM_GetProdRev() < 5)
+    {
+        return (DEVINFO->MSIZE & _DEVINFO_MSIZE_SRAM_MASK)
+               >> _DEVINFO_MSIZE_SRAM_SHIFT;
+    }
 #endif
-  return (DEVINFO->MSIZE & _DEVINFO_MSIZE_FLASH_MASK)
-         >> _DEVINFO_MSIZE_FLASH_SHIFT;
+    return (DEVINFO->MSIZE & _DEVINFO_MSIZE_FLASH_MASK)
+           >> _DEVINFO_MSIZE_FLASH_SHIFT;
 }
 
 
@@ -350,26 +350,26 @@ __STATIC_INLINE uint16_t SYSTEM_GetFlashSize(void)
  ******************************************************************************/
 __STATIC_INLINE uint32_t SYSTEM_GetFlashPageSize(void)
 {
-  uint32_t tmp;
+    uint32_t tmp;
 
 #if defined(_EFM32_GIANT_FAMILY)
-  if (SYSTEM_GetProdRev() < 18)
-  {
-    /* Early Giant/Leopard devices did not have MEMINFO in DEVINFO. */
-    return FLASH_PAGE_SIZE;
-  }
+    if (SYSTEM_GetProdRev() < 18)
+    {
+        /* Early Giant/Leopard devices did not have MEMINFO in DEVINFO. */
+        return FLASH_PAGE_SIZE;
+    }
 #elif defined(_EFM32_ZERO_FAMILY)
-  if (SYSTEM_GetProdRev() < 24)
-  {
-    /* Early Zero devices have an incorrect DEVINFO flash page size */
-    return FLASH_PAGE_SIZE;
-  }
+    if (SYSTEM_GetProdRev() < 24)
+    {
+        /* Early Zero devices have an incorrect DEVINFO flash page size */
+        return FLASH_PAGE_SIZE;
+    }
 #endif
 
-  tmp = (DEVINFO->MEMINFO & _DEVINFO_MEMINFO_FLASH_PAGE_SIZE_MASK)
-        >> _DEVINFO_MEMINFO_FLASH_PAGE_SIZE_SHIFT;
+    tmp = (DEVINFO->MEMINFO & _DEVINFO_MEMINFO_FLASH_PAGE_SIZE_MASK)
+          >> _DEVINFO_MEMINFO_FLASH_PAGE_SIZE_SHIFT;
 
-  return 1 << ((tmp + 10) & 0xFF);
+    return 1 << ((tmp + 10) & 0xFF);
 }
 
 
@@ -383,8 +383,8 @@ __STATIC_INLINE uint32_t SYSTEM_GetFlashPageSize(void)
  ******************************************************************************/
 __STATIC_INLINE uint8_t SYSTEM_GetDevinfoRev(void)
 {
-  return (DEVINFO->DEVINFOREV & _DEVINFO_DEVINFOREV_DEVINFOREV_MASK)
-          >> _DEVINFO_DEVINFOREV_DEVINFOREV_SHIFT;
+    return (DEVINFO->DEVINFOREV & _DEVINFO_DEVINFOREV_DEVINFOREV_MASK)
+            >> _DEVINFO_DEVINFOREV_DEVINFOREV_SHIFT;
 }
 #endif
 
@@ -398,8 +398,8 @@ __STATIC_INLINE uint8_t SYSTEM_GetDevinfoRev(void)
  ******************************************************************************/
 __STATIC_INLINE uint16_t SYSTEM_GetPartNumber(void)
 {
-  return (DEVINFO->PART & _DEVINFO_PART_DEVICE_NUMBER_MASK)
-         >> _DEVINFO_PART_DEVICE_NUMBER_SHIFT;
+    return (DEVINFO->PART & _DEVINFO_PART_DEVICE_NUMBER_MASK)
+           >> _DEVINFO_PART_DEVICE_NUMBER_SHIFT;
 }
 
 /*******************************************************************************
@@ -418,9 +418,9 @@ __STATIC_INLINE uint16_t SYSTEM_GetPartNumber(void)
  ******************************************************************************/
 __STATIC_INLINE SYSTEM_PartFamily_TypeDef SYSTEM_GetFamily(void)
 {
-  return (SYSTEM_PartFamily_TypeDef)
-         ((DEVINFO->PART & _DEVINFO_PART_DEVICE_FAMILY_MASK)
-          >> _DEVINFO_PART_DEVICE_FAMILY_SHIFT);
+    return (SYSTEM_PartFamily_TypeDef)
+           ((DEVINFO->PART & _DEVINFO_PART_DEVICE_FAMILY_MASK)
+            >> _DEVINFO_PART_DEVICE_FAMILY_SHIFT);
 }
 
 
@@ -433,8 +433,8 @@ __STATIC_INLINE SYSTEM_PartFamily_TypeDef SYSTEM_GetFamily(void)
  ******************************************************************************/
 __STATIC_INLINE uint8_t SYSTEM_GetCalibrationTemperature(void)
 {
-  return (DEVINFO->CAL & _DEVINFO_CAL_TEMP_MASK)
-         >> _DEVINFO_CAL_TEMP_SHIFT;
+    return (DEVINFO->CAL & _DEVINFO_CAL_TEMP_MASK)
+           >> _DEVINFO_CAL_TEMP_SHIFT;
 }
 
 /** @} (end addtogroup SYSTEM) */
@@ -445,3 +445,6 @@ __STATIC_INLINE uint8_t SYSTEM_GetCalibrationTemperature(void)
 #endif
 
 #endif /* EM_SYSTEM_H */
+
+/* End of file */
+

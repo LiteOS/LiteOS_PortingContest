@@ -13,7 +13,7 @@ void LOS_EvbLedInit(void)
     BSP_LedClear(1);
 #endif
 
-	return ;
+    return ;
 }
 
 void LOS_EvbLedControl(int index, int cmd)
@@ -51,7 +51,8 @@ void LOS_EvbLedControl(int index, int cmd)
         }
     }
 #endif
-	return ;
+    return ;
 }
 
+/* End of file */
 

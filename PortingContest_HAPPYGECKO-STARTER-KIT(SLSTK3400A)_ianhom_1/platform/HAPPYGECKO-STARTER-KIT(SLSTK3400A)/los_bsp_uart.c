@@ -7,27 +7,27 @@
 
 void Error_Handler(void)
 {
-  while(1);
+    while(1);
 }
 #endif
 
 void LOS_EvbUartInit(void)
 {
 #ifdef EFM32HG322F64
-  /* Initialize LEUART/USART and map LF to CRLF */
-  RETARGET_SerialInit();
-  RETARGET_SerialCrLf(1);
+    /* Initialize LEUART/USART and map LF to CRLF */
+    RETARGET_SerialInit();
+    RETARGET_SerialCrLf(1);
 #endif
-	
-	return ;
+    
+    return ;
 }
 
 void LOS_EvbUartWriteByte(char c)
 {
 #ifdef EFM32HG322F64
-	USART_RETARGET_WriteChar(c);
+    USART_RETARGET_WriteChar(c);
 #endif
-	return ;
+    return ;
 }
 
 void LOS_EvbUartWriteStr(const char* str)
@@ -39,16 +39,16 @@ void LOS_EvbUartWriteStr(const char* str)
         str++;
     }
 #endif
-	return ;
+    return ;
 }
 
 
 void LOS_EvbUartReadByte(char* c)
 {
 #ifdef EFM32HG322F64
-	*c = USART_RETARGET_ReadChar();
+    *c = USART_RETARGET_ReadChar();
 #endif
-	return ;
+    return ;
 }
 
 #ifdef EFM32HG322F64
@@ -68,5 +68,8 @@ void LOS_EvbUartPrintf(char* fmt, ...)
         LOS_EvbUartWriteByte(_buffer[i]);
     }
 #endif
-	return ;
+    return ;
 }
+
+/* End of file */
+

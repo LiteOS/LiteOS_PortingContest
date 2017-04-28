@@ -19,15 +19,15 @@ extern uint8_t CSLIB_activeThreshold[DEF_NUM_SENSORS];
 /// @brief Defines each data type and count for that type
 const HeaderStruct_t headerEntries[HEADER_TYPE_COUNT] =
 {
- {"BASELINE", DEF_NUM_SENSORS},
- {"RAW", DEF_NUM_SENSORS},
- {"SINGACT", DEF_NUM_SENSORS},
- {"DEBACT", DEF_NUM_SENSORS},
- {"TDELTA", DEF_NUM_SENSORS},
- {"EXPVAL", DEF_NUM_SENSORS},
- {"NOISEEST", 1},
- {"C_ACTTHR", DEF_NUM_SENSORS},
- {"C_INACTTHR", DEF_NUM_SENSORS}
+    {"BASELINE", DEF_NUM_SENSORS},
+    {"RAW", DEF_NUM_SENSORS},
+    {"SINGACT", DEF_NUM_SENSORS},
+    {"DEBACT", DEF_NUM_SENSORS},
+    {"TDELTA", DEF_NUM_SENSORS},
+    {"EXPVAL", DEF_NUM_SENSORS},
+    {"NOISEEST", 1},
+    {"C_ACTTHR", DEF_NUM_SENSORS},
+    {"C_INACTTHR", DEF_NUM_SENSORS}
 };
 
 /// @brief One-shot flag triggering output of header line
@@ -52,83 +52,84 @@ void printHeader(void);
  ******************************************************************************/
 void CSLIB_commUpdate(void)
 {
-  uint16_t index;
-
-  // If first execution, sendHeader will be set.  Clear and output header
-  if(sendHeader == 1) {
-    printHeader();
-    sendHeader = 0;
-  }
-
-  // Output baselines
-  for(index = 0; index < DEF_NUM_SENSORS; index++)
-  {
-    printf("%d ", CSLIB_node[index].currentBaseline);
-  }
-
-  // Output raw data
-  for(index = 0; index < DEF_NUM_SENSORS; index++)
-  {
-    printf("%d ", CSLIB_node[index].rawBuffer[0]);
-  }
-
-  // Output single/candidate active state for sensors
-  for(index = 0; index < DEF_NUM_SENSORS; index++)
-  {
-    if(CSLIB_isSensorSingleActive(index) == 1)
+    uint16_t index;
+  
+    // If first execution, sendHeader will be set.  Clear and output header
+    if(sendHeader == 1) {
+        printHeader();
+        sendHeader = 0;
+    }
+  
+    // Output baselines
+    for(index = 0; index < DEF_NUM_SENSORS; index++)
     {
-      printf("1 ");
+        printf("%d ", CSLIB_node[index].currentBaseline);
     }
-    else
+  
+    // Output raw data
+    for(index = 0; index < DEF_NUM_SENSORS; index++)
     {
-      printf("0 ");
+        printf("%d ", CSLIB_node[index].rawBuffer[0]);
     }
-  }
-
-  // Output debounce/qualified touch state for each sensor
-  for(index = 0; index < DEF_NUM_SENSORS; index++)
-  {
-    if(CSLIB_isSensorDebounceActive(index) == 1)
+  
+    // Output single/candidate active state for sensors
+    for(index = 0; index < DEF_NUM_SENSORS; index++)
     {
-      printf("1 ");
+        if(CSLIB_isSensorSingleActive(index) == 1)
+        {
+            printf("1 ");
+        }
+        else
+        {
+            printf("0 ");
+        }
     }
-    else {
-      printf("0 ");
+  
+    // Output debounce/qualified touch state for each sensor
+    for(index = 0; index < DEF_NUM_SENSORS; index++)
+    {
+        if(CSLIB_isSensorDebounceActive(index) == 1)
+        {
+            printf("1 ");
+        }
+        else 
+        {
+            printf("0 ");
+        }
     }
-  }
-
-  // Output touch delta for each sensor
-  for(index = 0; index < DEF_NUM_SENSORS; index++)
-  {
-    printf("%d ", -1* CSLIB_getUnpackedTouchDelta(index));
-  }
-
-  // Output filtered data for each sensor
-  for(index = 0; index < DEF_NUM_SENSORS; index++)
-  {
-    printf("%d ", CSLIB_node[index].expValue.u16[0]);
-  }
-
-  // Output global noise estimation
-  printf("%d ", CSLIB_systemNoiseAverage);
-
-  // Output active threshold percentages
-  for(index = 0; index < DEF_NUM_SENSORS; index++)
-  {
-    printf("%d ", CSLIB_activeThreshold[index]);
-  }
-
-  // Output inactive threshold percentages
-  for(index = 0; index < DEF_NUM_SENSORS; index++)
-  {
-    printf("%d ", CSLIB_inactiveThreshold[index]);
-  }
-
-  outputNewLine();
-
-  // Wait until all bytes have been transmitted
-  BlockWhileTX();
-
+  
+    // Output touch delta for each sensor
+    for(index = 0; index < DEF_NUM_SENSORS; index++)
+    {
+        printf("%d ", -1* CSLIB_getUnpackedTouchDelta(index));
+    }
+  
+    // Output filtered data for each sensor
+    for(index = 0; index < DEF_NUM_SENSORS; index++)
+    {
+        printf("%d ", CSLIB_node[index].expValue.u16[0]);
+    }
+  
+    // Output global noise estimation
+    printf("%d ", CSLIB_systemNoiseAverage);
+  
+    // Output active threshold percentages
+    for(index = 0; index < DEF_NUM_SENSORS; index++)
+    {
+        printf("%d ", CSLIB_activeThreshold[index]);
+    }
+  
+    // Output inactive threshold percentages
+    for(index = 0; index < DEF_NUM_SENSORS; index++)
+    {
+        printf("%d ", CSLIB_inactiveThreshold[index]);
+    }
+  
+    outputNewLine();
+  
+    // Wait until all bytes have been transmitted
+    BlockWhileTX();
+  
 }
 
 
@@ -139,23 +140,25 @@ void CSLIB_commUpdate(void)
  ******************************************************************************/
 void printHeader(void)
 {
-  uint8_t index;
+    uint8_t index;
 
-  outputNewLine();
+    outputNewLine();
 
-  // Outputs user-defined sensor names from sensor_descriptors.c
-  outputsensorDescriptors();
+    // Outputs user-defined sensor names from sensor_descriptors.c
+    outputsensorDescriptors();
 
-  // Outputs protocol command showing that line contains the header
-  outputBeginHeader();
+    // Outputs protocol command showing that line contains the header
+    outputBeginHeader();
 
-  // For each defined data type, transmit header information and then
-  // a break character
-  for(index = 0; index < HEADER_TYPE_COUNT; index++)
-  {
-    outputHeaderCount(headerEntries[index]);
-    outputBreak();
-  }
-  outputNewLine();
+    // For each defined data type, transmit header information and then
+    // a break character
+    for(index = 0; index < HEADER_TYPE_COUNT; index++)
+    {
+        outputHeaderCount(headerEntries[index]);
+        outputBreak();
+    }
+    outputNewLine();
 }
+
+/* End of file */
 

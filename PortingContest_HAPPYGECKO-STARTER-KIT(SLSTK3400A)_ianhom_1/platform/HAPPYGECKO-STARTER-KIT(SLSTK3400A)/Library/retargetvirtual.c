@@ -32,8 +32,8 @@ static volatile int     rxReadIndex  = 0;       /**< Index in buffer to be read 
 static volatile int     rxWriteIndex = 0;       /**< Index in buffer to be written to */
 static volatile int     rxCount      = 0;       /**< Keeps track of how much data which are stored in the buffer */
 static volatile uint8_t rxBuffer[RXBUFSIZE];    /**< Buffer to store data */
-static uint8_t          LFtoCRLF    = 0;        /**< LF to CRLF conversion disabled */
-static bool             initialized = false;    /**< Initialize UART/LEUART */
+static uint8_t          LFtoCRLF     = 0;       /**< LF to CRLF conversion disabled */
+static bool             initialized  = false;   /**< Initialize UART/LEUART */
 
 /******************************************************************************
  * @brief UART/LEUART IRQ Handler
@@ -41,29 +41,29 @@ static bool             initialized = false;    /**< Initialize UART/LEUART */
 void RETARGET_IRQ_NAME(void)
 {
 #if defined(RETARGET_USART)
-  if (RETARGET_UART->STATUS & USART_STATUS_RXDATAV)
-  {
+    if (RETARGET_UART->STATUS & USART_STATUS_RXDATAV)
+    {
 #else
-  if (RETARGET_UART->IF & LEUART_IF_RXDATAV)
-  {
+    if (RETARGET_UART->IF & LEUART_IF_RXDATAV)
+    {
 #endif
 
-    // Store Data
-    rxBuffer[rxWriteIndex] = RETARGET_RX(RETARGET_UART);
-    rxWriteIndex++;
-    rxCount++;
-    if (rxWriteIndex == RXBUFSIZE)
-    {
-      rxWriteIndex = 0;
+        // Store Data
+        rxBuffer[rxWriteIndex] = RETARGET_RX(RETARGET_UART);
+        rxWriteIndex++;
+        rxCount++;
+        if (rxWriteIndex == RXBUFSIZE)
+        {
+            rxWriteIndex = 0;
+        }
+        // Check for overflow - flush buffer
+        if (rxCount > RXBUFSIZE)
+        {
+            rxWriteIndex = 0;
+            rxCount      = 0;
+            rxReadIndex  = 0;
+        }
     }
-    // Check for overflow - flush buffer
-    if (rxCount > RXBUFSIZE)
-    {
-      rxWriteIndex = 0;
-      rxCount      = 0;
-      rxReadIndex  = 0;
-    }
-  }
 }
 
 /** @} (end group RetargetIo) */
@@ -74,20 +74,18 @@ void RETARGET_IRQ_NAME(void)
  *****************************************************************************/
 void RETARGET_SerialCrLf(int on)
 {
-  if (on)
-    LFtoCRLF = 1;
-  else
-    LFtoCRLF = 0;
+    if (on)
+        LFtoCRLF = 1;
+    else
+        LFtoCRLF = 0;
 }
 
 void RETARGET_BlockOnTX()
 {
 #if defined(RETARGET_USART)
-	while (!(RETARGET_UART->STATUS & USART_STATUS_TXC))
-		;
+    while(!(RETARGET_UART->STATUS & USART_STATUS_TXC));
 #else
-	while(!(RETARGET_UART->STATUS & LEUART_STATUS_TXC));
-
+    while(!(RETARGET_UART->STATUS & LEUART_STATUS_TXC));
 #endif
 
 }
@@ -97,90 +95,90 @@ void RETARGET_BlockOnTX()
  *****************************************************************************/
 void RETARGET_SerialInit(void)
 {
-  // Configure GPIO pins
-  CMU_ClockEnable(cmuClock_GPIO, true);
-  // To avoid false start, configure output as high
-  GPIO_PinModeSet(RETARGET_TXPORT, RETARGET_TXPIN, gpioModePushPull, 1);
-  GPIO_PinModeSet(RETARGET_RXPORT, RETARGET_RXPIN, gpioModeInput, 0);
-  // Enable STK virtual COM part
-  GPIO_PinModeSet(RETARGET_ENPORT, RETARGET_ENPIN, gpioModePushPull, 1);
+    // Configure GPIO pins
+    CMU_ClockEnable(cmuClock_GPIO, true);
+    // To avoid false start, configure output as high
+    GPIO_PinModeSet(RETARGET_TXPORT, RETARGET_TXPIN, gpioModePushPull, 1);
+    GPIO_PinModeSet(RETARGET_RXPORT, RETARGET_RXPIN, gpioModeInput, 0);
+    // Enable STK virtual COM part
+    GPIO_PinModeSet(RETARGET_ENPORT, RETARGET_ENPIN, gpioModePushPull, 1);
 
 #if defined(RETARGET_USART)
-  USART_TypeDef           *usart = RETARGET_UART;
-  USART_InitAsync_TypeDef init   = USART_INITASYNC_DEFAULT;
+    USART_TypeDef           *usart = RETARGET_UART;
+    USART_InitAsync_TypeDef init   = USART_INITASYNC_DEFAULT;
 
-  // Enable peripheral clocks
-  CMU_ClockEnable(cmuClock_HFPER, true);
-  CMU_ClockEnable(RETARGET_CLK, true);
+    // Enable peripheral clocks
+    CMU_ClockEnable(cmuClock_HFPER, true);
+    CMU_ClockEnable(RETARGET_CLK, true);
 
-  // Configure USART for basic async operation
-  init.enable = usartDisable;
-  USART_InitAsync(usart, &init);
+    // Configure USART for basic async operation
+    init.enable = usartDisable;
+    USART_InitAsync(usart, &init);
 
-  // Enable pins at correct UART/USART location.
-  #if defined( USART_ROUTEPEN_RXPEN )
-  usart->ROUTEPEN = USART_ROUTEPEN_RXPEN | USART_ROUTEPEN_TXPEN;
-  usart->ROUTELOC0 = ( usart->ROUTELOC0 &
-                       ~( _USART_ROUTELOC0_TXLOC_MASK
-                          | _USART_ROUTELOC0_RXLOC_MASK ) )
-                     | ( RETARGET_TX_LOCATION << _USART_ROUTELOC0_TXLOC_SHIFT )
-                     | ( RETARGET_RX_LOCATION << _USART_ROUTELOC0_RXLOC_SHIFT );
-  #else
-  usart->ROUTE = USART_ROUTE_RXPEN | USART_ROUTE_TXPEN | RETARGET_LOCATION;
-  #endif
+    // Enable pins at correct UART/USART location.
+#if defined( USART_ROUTEPEN_RXPEN )
+    usart->ROUTEPEN = USART_ROUTEPEN_RXPEN | USART_ROUTEPEN_TXPEN;
+    usart->ROUTELOC0 = ( usart->ROUTELOC0 &
+                      ~( _USART_ROUTELOC0_TXLOC_MASK
+                       | _USART_ROUTELOC0_RXLOC_MASK ) )
+                       | ( RETARGET_TX_LOCATION << _USART_ROUTELOC0_TXLOC_SHIFT )
+                       | ( RETARGET_RX_LOCATION << _USART_ROUTELOC0_RXLOC_SHIFT );
+#else
+    usart->ROUTE = USART_ROUTE_RXPEN | USART_ROUTE_TXPEN | RETARGET_LOCATION;
+#endif
 
-  // Clear previous RX interrupts
-  USART_IntClear(RETARGET_UART, USART_IF_RXDATAV);
-  NVIC_ClearPendingIRQ(RETARGET_IRQn);
+    // Clear previous RX interrupts
+    USART_IntClear(RETARGET_UART, USART_IF_RXDATAV);
+    NVIC_ClearPendingIRQ(RETARGET_IRQn);
 
-  // Enable RX interrupts
-  USART_IntEnable(RETARGET_UART, USART_IF_RXDATAV);
-  NVIC_EnableIRQ(RETARGET_IRQn);
+    // Enable RX interrupts
+    USART_IntEnable(RETARGET_UART, USART_IF_RXDATAV);
+    NVIC_EnableIRQ(RETARGET_IRQn);
 
-  // Finally enable it
-  USART_Enable(usart, usartEnable);
+    // Finally enable it
+    USART_Enable(usart, usartEnable);
 
 #else
-  LEUART_TypeDef      *leuart = RETARGET_UART;
-  LEUART_Init_TypeDef init    = LEUART_INIT_DEFAULT;
+    LEUART_TypeDef      *leuart = RETARGET_UART;
+    LEUART_Init_TypeDef init    = LEUART_INIT_DEFAULT;
 
-  // Enable CORE LE clock in order to access LE modules
-  CMU_ClockEnable(cmuClock_CORELE, true);
+    // Enable CORE LE clock in order to access LE modules
+    CMU_ClockEnable(cmuClock_CORELE, true);
 
-  // Select HFLE/2 for LEUARTs
-  CMU_ClockSelectSet(cmuClock_LFB, cmuSelect_CORELEDIV2);
+    // Select HFLE/2 for LEUARTs
+    CMU_ClockSelectSet(cmuClock_LFB, cmuSelect_CORELEDIV2);
 
-  CMU_ClockEnable(RETARGET_CLK, true);
+    CMU_ClockEnable(RETARGET_CLK, true);
 
-  // Do not prescale clock
-  CMU_ClockDivSet(RETARGET_CLK, cmuClkDiv_1);
+    // Do not prescale clock
+    CMU_ClockDivSet(RETARGET_CLK, cmuClkDiv_1);
 
-  // Configure LEUART
-  init.enable = leuartDisable;
-  // Virtual COM port fix at 115200
-  init.baudrate = 115200;
-  LEUART_Init(leuart, &init);
-  // Enable pins at default location
-  leuart->ROUTE = LEUART_ROUTE_RXPEN | LEUART_ROUTE_TXPEN | RETARGET_LOCATION;
+    // Configure LEUART
+    init.enable = leuartDisable;
+    // Virtual COM port fix at 115200
+    init.baudrate = 115200;
+    LEUART_Init(leuart, &init);
+    // Enable pins at default location
+    leuart->ROUTE = LEUART_ROUTE_RXPEN | LEUART_ROUTE_TXPEN | RETARGET_LOCATION;
 
-  // Clear previous RX interrupts
-  LEUART_IntClear(RETARGET_UART, LEUART_IF_RXDATAV);
-  NVIC_ClearPendingIRQ(RETARGET_IRQn);
+    // Clear previous RX interrupts
+    LEUART_IntClear(RETARGET_UART, LEUART_IF_RXDATAV);
+    NVIC_ClearPendingIRQ(RETARGET_IRQn);
 
-  // Enable RX interrupts
-  LEUART_IntEnable(RETARGET_UART, LEUART_IF_RXDATAV);
-  NVIC_EnableIRQ(RETARGET_IRQn);
+    // Enable RX interrupts
+    LEUART_IntEnable(RETARGET_UART, LEUART_IF_RXDATAV);
+    NVIC_EnableIRQ(RETARGET_IRQn);
 
-  // Finally enable it
-  LEUART_Enable(leuart, leuartEnable);
+    // Finally enable it
+    LEUART_Enable(leuart, leuartEnable);
 #endif
 
 #if !defined(__CROSSWORKS_ARM) && defined(__GNUC__)
-  // Set unbuffered mode for stdout (newlib)
-  setvbuf(stdout, NULL, _IONBF, 0);
+    // Set unbuffered mode for stdout (newlib)
+    setvbuf(stdout, NULL, _IONBF, 0);
 #endif
 
-  initialized = true;
+    initialized = true;
 }
 
 
@@ -190,28 +188,28 @@ void RETARGET_SerialInit(void)
  *****************************************************************************/
 int RETARGET_ReadChar(void)
 {
-  int c = -1;
-  CORE_DECLARE_IRQ_STATE;
+    int c = -1;
+    CORE_DECLARE_IRQ_STATE;
 
-  if (initialized == false)
-  {
-    RETARGET_SerialInit();
-  }
-
-  CORE_ENTER_ATOMIC();
-  if (rxCount > 0)
-  {
-    c = rxBuffer[rxReadIndex];
-    rxReadIndex++;
-    if (rxReadIndex == RXBUFSIZE)
+    if (initialized == false)
     {
-      rxReadIndex = 0;
+        RETARGET_SerialInit();
     }
-    rxCount--;
-  }
-  CORE_EXIT_ATOMIC();
 
-  return c;
+    CORE_ENTER_ATOMIC();
+    if (rxCount > 0)
+    {
+        c = rxBuffer[rxReadIndex];
+        rxReadIndex++;
+        if (rxReadIndex == RXBUFSIZE)
+        {
+            rxReadIndex = 0;
+        }
+        rxCount--;
+    }
+    CORE_EXIT_ATOMIC();
+
+    return c;
 }
 
 
@@ -222,22 +220,25 @@ int RETARGET_ReadChar(void)
  *****************************************************************************/
 int RETARGET_WriteChar(char c)
 {
-  if (initialized == false)
-  {
-    RETARGET_SerialInit();
-  }
+    if (initialized == false)
+    {
+        RETARGET_SerialInit();
+    }
 
-  // Add CR or LF to CRLF if enabled
-  if (LFtoCRLF && (c == '\n'))
-  {
-    RETARGET_TX(RETARGET_UART, '\r');
-  }
-  RETARGET_TX(RETARGET_UART, c);
+    // Add CR or LF to CRLF if enabled
+    if (LFtoCRLF && (c == '\n'))
+    {
+        RETARGET_TX(RETARGET_UART, '\r');
+    }
+    RETARGET_TX(RETARGET_UART, c);
 
-  if (LFtoCRLF && (c == '\r'))
-  {
-    RETARGET_TX(RETARGET_UART, '\n');
-  }
+    if (LFtoCRLF && (c == '\r'))
+    {
+        RETARGET_TX(RETARGET_UART, '\n');
+    }
 
-  return c;
+    return c;
 }
+
+/* End of file */
+

@@ -12,7 +12,7 @@
 /// @brief Contains string names for each defined sensor
 const char* sensorDescriptors[DEF_NUM_SENSORS] =
 {
- SENSOR_DESCRIPTOR_LIST
+    SENSOR_DESCRIPTOR_LIST
 };
 
 /*******************************************************************************
@@ -22,14 +22,16 @@ const char* sensorDescriptors[DEF_NUM_SENSORS] =
  ******************************************************************************/
 void outputsensorDescriptors(void)
 {
-  uint8_t index;
-  // Output control word showing Profiler that line contains sensor names
-  printf("*SENSOR_DESCRIPTORS ");
+    uint8_t index;
+    // Output control word showing Profiler that line contains sensor names
+    printf("*SENSOR_DESCRIPTORS ");
 
-  for(index = 0; index < DEF_NUM_SENSORS; index++)
-  {
-    printf("%s | ",sensorDescriptors[index]);
-  }
-  printf("\n");
+    for(index = 0; index < DEF_NUM_SENSORS; index++)
+    {
+        printf("%s | ",sensorDescriptors[index]);
+    }
+    printf("\n");
 }
+
+/* End of file */
 

@@ -1,5 +1,5 @@
 /*
-	here we can include some standard header file
+    here we can include some standard header file
 */
 #include <stdio.h>
 #include <string.h>
@@ -10,7 +10,7 @@
 #endif
 
 /*
-	here include some special hearder file you need
+    here include some special hearder file you need
 */
 
 #include "los_bsp_adapter.h"
@@ -29,7 +29,7 @@
 #endif
 
 /*****************************************************************************
-	global var
+    global var
  *****************************************************************************/
 /* current system default HZ , should be set according to the microchip */
 #ifdef EFM32HG322F64
@@ -43,7 +43,7 @@ static unsigned int g_ucycle_per_tick = 0;
 const unsigned char g_use_ram_vect = 0;
 
 /*****************************************************************************
-	LOS function extern 
+    LOS function extern 
  *****************************************************************************/
 extern void LOS_SetTickSycle(unsigned int);
 extern void LOS_TickHandler(void);
@@ -62,7 +62,7 @@ extern unsigned int osGetVectorAddr(void);
 unsigned int osTickStart(void)
 {
     unsigned int uwRet = 0;
-	
+    
     /* This code section LOS need, so don't change it */
     g_ucycle_per_tick = sys_clk_freq / tick_per_second;
     LOS_SetTickSycle(g_ucycle_per_tick);
@@ -100,9 +100,9 @@ void SysTick_Handler(void)
         otherwise, LiteOS will not work.
     */
     LOS_TickHandler();
-	
+    
     /*add your code here */
-	
+    
 
     return ;
 }
@@ -190,10 +190,10 @@ void LosAdapIrqDisable(unsigned int irqnum)
  *****************************************************************************/
 void LOS_EvbSetup(void)
 {
-	LOS_EvbUartInit();
-	LOS_EvbLedInit();
-	LOS_EvbKeyInit();
-	return ;
+    LOS_EvbUartInit();
+    LOS_EvbLedInit();
+    LOS_EvbKeyInit();
+    return ;
 }
 
 /*****************************************************************************
@@ -205,7 +205,9 @@ void LOS_EvbSetup(void)
  *****************************************************************************/
 void LOS_EvbTrace(const char *str)
 {
-	LOS_EvbUartWriteStr(str);
-	return ;
+    LOS_EvbUartWriteStr(str);
+    return ;
 }
+
+/* End of file */
 

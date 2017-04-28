@@ -148,7 +148,7 @@ extern UINT32  g_vuwIntCount;
  * @ingroup los_hwi
  * Count of M0+ interrupt vector.
  */
-#define OS_M0PLUS_VECTOR_CNT            (OS_M0PLUS_SYS_VECTOR_CNT + OS_M0PLUS_IRQ_VECTOR_CNT)
+#define OS_M0PLUS_VECTOR_CNT       (OS_M0PLUS_SYS_VECTOR_CNT + OS_M0PLUS_IRQ_VECTOR_CNT)
 
 /**
  * @ingroup los_hwi

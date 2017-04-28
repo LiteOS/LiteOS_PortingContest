@@ -89,7 +89,7 @@ LITE_OS_SEC_TEXT_INIT UINT32 LOS_EnableTick(void)
         PRINT_ERR("osTickStart error\n");
         return uwRet;
     }
-		
+
     return uwRet;
 }
 /*****************************************************************************
@@ -205,7 +205,7 @@ LITE_OS_SEC_TEXT_INIT int LOS_KernelInit(void)
     if (uwRet != LOS_OK) {
         return LOS_NOK;
     }
-		return LOS_OK;
+        return LOS_OK;
 }
 
 
@@ -216,3 +216,4 @@ void osBackTrace(VOID){}
 }
 #endif /* __cpluscplus */
 #endif /* __cpluscplus */
+

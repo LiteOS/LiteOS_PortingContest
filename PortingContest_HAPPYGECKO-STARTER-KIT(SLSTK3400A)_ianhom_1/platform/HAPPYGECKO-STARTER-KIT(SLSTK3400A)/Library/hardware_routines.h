@@ -22,3 +22,4 @@ void rtcSetup(uint16_t frequency);
 #endif
 
 #endif // __HARDWARE_ROUTINES_H__
+

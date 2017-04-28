@@ -36,7 +36,7 @@ void rtcSetup(uint16_t frequency);
  *****************************************************************************/
 void configureSensorForSleepMode(void)
 {
-   CAPSENSE_Init();
+    CAPSENSE_Init();
 }
 
 
@@ -48,7 +48,7 @@ void configureSensorForSleepMode(void)
  *****************************************************************************/
 void readyRegistersForSleep(void)
 {
-   // stub function called in sleep mode state machine
+    // stub function called in sleep mode state machine
 }
 
 /******************************************************************************
@@ -59,7 +59,7 @@ void readyRegistersForSleep(void)
  *****************************************************************************/
 void restoreRegistersFromSleep(void)
 {
-   // stub function called in sleep mode state machine
+    // stub function called in sleep mode state machine
 }
 
 
@@ -71,7 +71,7 @@ void restoreRegistersFromSleep(void)
  *****************************************************************************/
 void enterLowPowerState(void)
 {
-   EMU_EnterEM2(true);
+    EMU_EnterEM2(true);
 }
 
 
@@ -87,9 +87,9 @@ void enterLowPowerState(void)
 void configureTimerForActiveMode(void)
 {
 #if (defined(_EFM32_PEARL_FAMILY))
-	rtccSetup(1000/DEF_ACTIVE_MODE_PERIOD);
+    rtccSetup(1000/DEF_ACTIVE_MODE_PERIOD);
 #else
-	rtcSetup(1000/DEF_ACTIVE_MODE_PERIOD);
+    rtcSetup(1000/DEF_ACTIVE_MODE_PERIOD);
 #endif
 }
 
@@ -104,9 +104,9 @@ void configureTimerForActiveMode(void)
 void configureTimerForSleepMode(void)
 {
 #if (defined(_EFM32_PEARL_FAMILY))
-	rtccSetup(1000/DEF_SLEEP_MODE_PERIOD);
+    rtccSetup(1000/DEF_SLEEP_MODE_PERIOD);
 #else
-	rtcSetup(1000/DEF_SLEEP_MODE_PERIOD);
+    rtcSetup(1000/DEF_SLEEP_MODE_PERIOD);
 #endif
 }
 
@@ -116,7 +116,8 @@ void configureTimerForSleepMode(void)
  *****************************************************************************/
 void checkTimer(void)
 {
-   // Stub function because EFM32 code sets flag inside RTC ISR
+    // Stub function because EFM32 code sets flag inside RTC ISR
 }
 
+/* End of file */
 

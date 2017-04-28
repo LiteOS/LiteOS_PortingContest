@@ -12,3 +12,4 @@ extern void LOS_EvbUartWriteStr(const char* str);
 extern void LOS_EvbUartPrintf(char* fmt, ...);
 
 #endif
+
