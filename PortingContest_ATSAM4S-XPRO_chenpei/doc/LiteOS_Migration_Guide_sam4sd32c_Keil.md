@@ -288,21 +288,163 @@ Keil工具需要开发者自行安装，开发板的调试器是为板载调试�
 - 安装Keil.SAM4_DFP.1.6.0或者更高版本的pack文件到keil安装目录
 - 相关资源可以从http://www.keil.com/dd2/atmel/atsam4sd32c/下载
 
+### Keil开发环境搭建与裸机驱动编写
+
+1.在最新的Keil5环境中，器件以pack形式管理，在开发前，我们需要先安装对应pack，所以先去keil官网搜索MCU相关信息，查找相关资源；
+
+[http://www.keil.com/dd2/atmel/atsam4sd32c/](http://www.keil.com/dd2/atmel/atsam4sd32c/ "atsam4sd32c")
+
+![](./meta/keil/sam4sd32c/ATSAM4SD32C-keil.PNG)
+
+点击download下载安装即可，安装后效果如下：
+
+![](./meta/keil/sam4sd32c/ATSAM4SD32C-pack.png)
+
+2.接下来就可以创建新的工程了
+
+project->New uVision Project...->工程路径及工程名->选择器件：ATSAM4SD32C->选择包：CMSIS+DEVICE
+
+![](./meta/keil/sam4sd32c/create-proj.png)
+
+![](./meta/keil/sam4sd32c/select-device.png)
+
+![](./meta/keil/sam4sd32c/select-pack.png)
+
+整个过程完成后，我们可以看到如下工程目录树：
+
+![](./meta/keil/sam4sd32c/proj-file.png)
+
+可以看到启动汇编文件和系统函数C文件已经加入，我们再加入main函数，完成入门实验：点亮LED
+
+3.点亮LED灯
+
+新建main.c systick.c led.c文件，源码如下：
+
+main.c:
+
+<pre>
+#include "sam4s.h"
+#include "systick.h"
+#include "led.h"
+
+int main(void)
+{
+	SystemInit();
+	SystemCoreClockUpdate();
+	SysTick_Config(SystemCoreClock/1000); //1ms
+	
+	LED_Init();
+	
+	while(1)
+	{
+		LED_On();
+		delay_ms(500);
+		LED_Off();
+		delay_ms(500);
+	}
+}
+</pre>
+
+systick.c:
+
+<pre>
+#include "sam4s.h"                    
+#include "systick.h" 
+
+static volatile unsigned int TIME_DELAY=0;
+
+void delay_ms(unsigned int n)
+{
+  TIME_DELAY = n;
+  while(TIME_DELAY != 0x00);
+}
+
+void SysTick_Handler()
+{
+   if(TIME_DELAY !=0x00 )
+    {
+        TIME_DELAY--;
+    }
+}
+</pre>
+
+led.c:
+
+<pre>
+#include "sam4s.h"                    
+#include "led.h"                 
+
+void LED_Init(void) 
+{
+  PMC->PMC_WPMR = 0x504D4300;             /* Disable write protect            */
+
+  PMC->PMC_PCER0 = (1UL << ID_PIOC);      /* enable PIOC clock                */
+
+  PIOC->PIO_PER  =
+  PIOC->PIO_OER  =
+  PIOC->PIO_PUDR =
+  PIOC->PIO_OWER = (PIO_PC23);            /* Setup PC23 for LEDs              */
+	
+  LED_Off();
+
+  PMC->PMC_WPMR = 0x504D4301;             /* Enable write protect             */
+}
+
+void LED_On(void)
+{
+    PIOC->PIO_CODR = PIO_PC23;
+}
+
+void LED_Off(void)
+{
+    PIOC->PIO_SODR = PIO_PC23;
+}
+</pre>
+
+最终效果如下：
+
+![](./meta/keil/sam4sd32c/src-led.png)
+
+以上程序中时钟部分是Keil的Device中system_SAM4S.c已经写好的，LED相关的PIO寄存器操作需要参考上面提到的ASF或者pack中自带的LED例程，也就是选择CMSIS的时候勾选Board Support，学习其源码。
+
+4.编译无误后，通过USB插到开发板DEBUG_USB口，等待板载仿真器安装驱动后，进行如下设置：
+
+![](./meta/keil/sam4sd32c/setting-led.png)
+
+选择CMSIS-DAP仿真器，可以发现仿真器信息已经自动识别。
+
+5.下载程序，LED点亮了呢...
+
+6.在此基础之上，再依次编写key和uart的驱动程序完成测试，最终有如下工程结构
+
+![](./meta/keil/sam4sd32c/proj-file-all.png)
+
+PS：相关驱动源码已打包放在 platform\ATSAM4S-XPRO 目录下
+
 ### 添加代码到LiteOS工程
 
-**注意：在此之前，需要完成LED，KEY，UART的裸机驱动程序编写，以便移植**
+**在此之前，我们已完成环境搭建与LED，KEY，UART的裸机驱动程序编写，接下来移植LiteOS**
+
+1.相关文件、目录准备
 
 - 在project目录下新建工程文件夹ATSAM4S-XPRO-KEIL存放工程文件
 - 在platform目录下新建平台文件夹ATSAM4S-XPRO存放驱动文件
 
-由于已有相关平台的移植参考，这里以GD32F450为参考，直接拷贝对应文件到上面创建的文件夹，后面再做修改
+由于已有相关平台的移植可以参考，为快速进行，这里以相近M4F内核的GD32F450为参考，直接拷贝对应文件到上面创建的文件夹，后面再做修改，也就是说：
 
-然后新建工程，添加对应文件，最终形成如下工程代码目录结构：
+先直接拷贝 platform\GD32F450i-EVAL 目录下的 los_bsp_xxx.c/los_bsp_xxx.h/los_startup_xxx.s 等文件到 platform\ATSAM4S-XPRO 目录下，相关文件(.sct)重命名，后面再修改具体内容，如下图所示：
+
+![](./meta/keil/sam4sd32c/file-copy.png)
+
+2.新建工程
+
+参考各已有工程的文件组织结构，新建工程，添加对应文件，最终形成如下工程代码目录结构：
 
 ![](./meta/keil/sam4sd32c/catal-proj.png)
 
 下面就一些问题说明：
 
+- 因为LiteOS已经包含系统启动最小实现los_startup_keil.s，所以不需要pack的Device了，只保留CMSIS
 - user下的system_SAM4S.c是从keil安装目录下Keil.SAM4_DFP.1.6.0的目录下面拷贝出来的，存放在platform下对应我开发板文件夹ATSAM4S-XPRO-KEIL了，之所添加这个文件是因为我想使用SystemInit这个函数配置系统时钟，而不是用MCU默认的时钟，如果使用默认时钟不要这个文件也是可以的
 - SAM4SD32C是Cortex-M4内核，然而我却使用的cpu/m3/los_dispatch_keil.s是因为这颗U不带FPU，而最新LiteOS内核代码结构调整，m4对应los_dispatch_keil.s使用了几个浮点汇编指令，所以编译不过，只能使用m3的，进一步说，不带浮点的话m3和m4基本是一样的，这一点也和华为LiteOS的工程师沟通过，为了不改动原有LiteOS代码，所以综合评估后使用m3的，在此申明！
 
@@ -310,32 +452,40 @@ Keil工具需要开发者自行安装，开发板的调试器是为板载调试�
 
 ![](./meta/keil/sam4sd32c/fpu-keil.png)
 
-**添加头文件搜索路径**
+3.添加头文件搜索路径
 
 ![](./meta/keil/sam4sd32c/folder_setup.png)
 
-**添加编译宏选项**
+4.添加编译宏选项
 
 ![](./meta/keil/sam4sd32c/add_macro.png)
 
 用到的宏定义有：ATSAM4S_XPRO,__SAM4SD32C__，ATSAM4S_XPRO用用于外设驱动程序，__SAM4SD32C__是sam4s.h需要以包含真正的头文件sam4sd32c.h
 
-**修改时钟相关配置**
+5.修改时钟相关配置
 
 本工程中SystemInit函数会配置系统时钟到96MHz，我们需要修改LiteOS的时钟与之一致
 
 - 1.在los_config.h中大致57行位置修改#define OS_SYS_CLOCK 96000000
 - 2.在los_bsp_adapter.c中大致36行位置修改const unsigned int sys_clk_freq = 96000000
 
-**修改外设驱动**
+6.修改外设驱动
 
-由于当前的驱动是直接拷贝的GD32F4驱动，我们需要适配为自己的开发板驱动，根据已有的裸机驱动，直接替换函数实现即可
+由于当前的驱动是直接拷贝的GD32F450i-EVAL的驱动，我们需要适配为自己的开发板驱动，根据已有的裸机驱动，直接替换函数实现即可
 
 以los_bsp_key.c为例：
 
-![](./meta/keil/sam4sd32c/bsp_led.png)
+![](./meta/keil/sam4sd32c/file-cmp.png)
 
-**编译下载**
+其余驱动完成类似替换即可...
+
+分散加载文件(目前暂未使用)也完成如下修改，其中具体参数计算请自行搜索分散加载文件相关资料
+
+FLASH 2048 KB // SRAM 160 KB
+
+![](./meta/keil/sam4sd32c/sct-file.png)
+
+7.编译下载
 
 经过上述步骤后就可以编译下载了，无误的话可以看到如下效果：
 
