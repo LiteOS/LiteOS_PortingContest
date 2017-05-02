@@ -534,11 +534,11 @@ I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (..\..\kernel\include\los_list.h)(0x58F1BF41)
 I (..\..\kernel\include\los_errno.h)(0x58F1BF41)
 I (..\..\kernel\include\los_sys.h)(0x58F1BF41)
-F (..\..\platform\EFM32GG990F1024-STK3700\los_bsp_adapter.c)(0x5907E6E3)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m3 -I ..\..\example\include -I ..\..\platform\EFM32GG990F1024-STK3700 -I ..\..\platform\EFM32GG990F1024-STK3700\library\bsp -I ..\..\platform\EFM32GG990F1024-STK3700\library\emlib\inc -I ..\..\platform\EFM32GG990F1024-STK3700\library\CMSIS\Include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\EFM32GGxxx_DFP\2.3.0\Device\EFM32GG\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DEFM32GG990F1024-o .\objects\los_bsp_adapter.o --omf_browse .\objects\los_bsp_adapter.crf --depend .\objects\los_bsp_adapter.d)
+F (..\..\platform\EFM32GG990F1024-STK3700\los_bsp_adapter.c)(0x5907E7FA)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m3 -I ..\..\example\include -I ..\..\platform\EFM32GG990F1024-STK3700 -I ..\..\platform\EFM32GG990F1024-STK3700\library\bsp -I ..\..\platform\EFM32GG990F1024-STK3700\library\emlib\inc -I ..\..\platform\EFM32GG990F1024-STK3700\library\CMSIS\Include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\EFM32GGxxx_DFP\2.3.0\Device\EFM32GG\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DEFM32GG990F1024-o .\objects\los_bsp_adapter.o --omf_browse .\objects\los_bsp_adapter.crf --depend .\objects\los_bsp_adapter.d)
 I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (..\..\platform\EFM32GG990F1024-STK3700\los_bsp_adapter.h)(0x58F1BF41)
-I (..\..\platform\EFM32GG990F1024-STK3700\los_bsp_key.h)(0x58F1BF41)
+I (..\..\platform\EFM32GG990F1024-STK3700\los_bsp_key.h)(0x590832FD)
 I (..\..\platform\EFM32GG990F1024-STK3700\los_bsp_led.h)(0x58F1BF41)
 I (..\..\platform\EFM32GG990F1024-STK3700\los_bsp_uart.h)(0x5902C29B)
 I (..\..\platform\EFM32GG990F1024-STK3700\library\emlib\inc\em_cmu.h)(0x58C231AA)
@@ -619,7 +619,7 @@ I (..\..\platform\EFM32GG990F1024-STK3700\library\emlib\inc\em_chip.h)(0x58C231A
 I (..\..\platform\EFM32GG990F1024-STK3700\library\emlib\inc\em_system.h)(0x58C231AA)
 I (..\..\platform\EFM32GG990F1024-STK3700\library\emlib\inc\em_gpio.h)(0x58C231AA)
 F (..\..\platform\EFM32GG990F1024-STK3700\los_bsp_key.c)(0x59018A48)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m3 -I ..\..\example\include -I ..\..\platform\EFM32GG990F1024-STK3700 -I ..\..\platform\EFM32GG990F1024-STK3700\library\bsp -I ..\..\platform\EFM32GG990F1024-STK3700\library\emlib\inc -I ..\..\platform\EFM32GG990F1024-STK3700\library\CMSIS\Include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\EFM32GGxxx_DFP\2.3.0\Device\EFM32GG\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DEFM32GG990F1024-o .\objects\los_bsp_key.o --omf_browse .\objects\los_bsp_key.crf --depend .\objects\los_bsp_key.d)
-I (..\..\platform\EFM32GG990F1024-STK3700\los_bsp_key.h)(0x58F1BF41)
+I (..\..\platform\EFM32GG990F1024-STK3700\los_bsp_key.h)(0x590832FD)
 I (..\..\platform\EFM32GG990F1024-STK3700\library\bsp\bsp.h)(0x58C2319C)
 I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
 I (..\..\platform\EFM32GG990F1024-STK3700\library\bsp\bspconfig.h)(0x590195C3)
@@ -750,7 +750,7 @@ I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
 I (D:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
 I (..\..\platform\EFM32GG990F1024-STK3700\los_bsp_uart.h)(0x5902C29B)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (..\..\example\include\los_demo_debug.h)(0x5901AFDF)
+I (..\..\example\include\los_demo_debug.h)(0x59082F44)
 I (..\..\kernel\include\los_typedef.h)(0x58F1BF41)
 I (..\..\kernel\link\keil\los_builddef.h)(0x58F1BF41)
 I (..\..\platform\EFM32GG990F1024-STK3700\library\bsp\retargetserial.h)(0x58C2319C)
@@ -1342,7 +1342,7 @@ I (..\..\kernel\include\los_base.h)(0x58F1BF41)
 I (..\..\kernel\include\los_list.h)(0x58F1BF41)
 I (..\..\kernel\include\los_errno.h)(0x58F1BF41)
 I (..\..\example\include\los_api_dynamic_mem.h)(0x58F1BF41)
-I (..\..\example\include\los_demo_debug.h)(0x5901AFDF)
+I (..\..\example\include\los_demo_debug.h)(0x59082F44)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (..\..\example\include\los_inspect_entry.h)(0x58F1BF41)
 F (..\..\example\api\los_api_event.c)(0x58F1BF41)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m3 -I ..\..\example\include -I ..\..\platform\EFM32GG990F1024-STK3700 -I ..\..\platform\EFM32GG990F1024-STK3700\library\bsp -I ..\..\platform\EFM32GG990F1024-STK3700\library\emlib\inc -I ..\..\platform\EFM32GG990F1024-STK3700\library\CMSIS\Include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\EFM32GGxxx_DFP\2.3.0\Device\EFM32GG\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DEFM32GG990F1024-o .\objects\los_api_event.o --omf_browse .\objects\los_api_event.crf --depend .\objects\los_api_event.d)
@@ -1360,7 +1360,7 @@ I (..\..\kernel\include\los_sys.h)(0x58F1BF41)
 I (..\..\kernel\cpu\arm\cortex-m3\los_hwi.h)(0x58F1BF41)
 I (..\..\kernel\include\los_tick.h)(0x58F1BF41)
 I (..\..\example\include\los_api_event.h)(0x58F1BF41)
-I (..\..\example\include\los_demo_debug.h)(0x5901AFDF)
+I (..\..\example\include\los_demo_debug.h)(0x59082F44)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (..\..\example\include\los_inspect_entry.h)(0x58F1BF41)
 F (..\..\example\api\los_api_interrupt.c)(0x58F1BF41)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m3 -I ..\..\example\include -I ..\..\platform\EFM32GG990F1024-STK3700 -I ..\..\platform\EFM32GG990F1024-STK3700\library\bsp -I ..\..\platform\EFM32GG990F1024-STK3700\library\emlib\inc -I ..\..\platform\EFM32GG990F1024-STK3700\library\CMSIS\Include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\EFM32GGxxx_DFP\2.3.0\Device\EFM32GG\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DEFM32GG990F1024-o .\objects\los_api_interrupt.o --omf_browse .\objects\los_api_interrupt.crf --depend .\objects\los_api_interrupt.d)
@@ -1375,7 +1375,7 @@ I (..\..\kernel\include\los_list.h)(0x58F1BF41)
 I (..\..\kernel\include\los_errno.h)(0x58F1BF41)
 I (..\..\kernel\include\los_sys.h)(0x58F1BF41)
 I (..\..\example\include\los_api_interrupt.h)(0x58F1BF41)
-I (..\..\example\include\los_demo_debug.h)(0x5901AFDF)
+I (..\..\example\include\los_demo_debug.h)(0x59082F44)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (..\..\example\include\los_inspect_entry.h)(0x58F1BF41)
 F (..\..\example\api\los_api_list.c)(0x58F1BF41)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m3 -I ..\..\example\include -I ..\..\platform\EFM32GG990F1024-STK3700 -I ..\..\platform\EFM32GG990F1024-STK3700\library\bsp -I ..\..\platform\EFM32GG990F1024-STK3700\library\emlib\inc -I ..\..\platform\EFM32GG990F1024-STK3700\library\CMSIS\Include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\EFM32GGxxx_DFP\2.3.0\Device\EFM32GG\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DEFM32GG990F1024-o .\objects\los_api_list.o --omf_browse .\objects\los_api_list.crf --depend .\objects\los_api_list.d)
@@ -1390,7 +1390,7 @@ I (..\..\kernel\include\los_errno.h)(0x58F1BF41)
 I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
 I (..\..\kernel\include\los_memory.h)(0x58F1BF41)
 I (..\..\example\include\los_api_list.h)(0x58F1BF41)
-I (..\..\example\include\los_demo_debug.h)(0x5901AFDF)
+I (..\..\example\include\los_demo_debug.h)(0x59082F44)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (..\..\example\include\los_inspect_entry.h)(0x58F1BF41)
 F (..\..\example\api\los_api_msgqueue.c)(0x58F1BF41)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m3 -I ..\..\example\include -I ..\..\platform\EFM32GG990F1024-STK3700 -I ..\..\platform\EFM32GG990F1024-STK3700\library\bsp -I ..\..\platform\EFM32GG990F1024-STK3700\library\emlib\inc -I ..\..\platform\EFM32GG990F1024-STK3700\library\CMSIS\Include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\EFM32GGxxx_DFP\2.3.0\Device\EFM32GG\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DEFM32GG990F1024-o .\objects\los_api_msgqueue.o --omf_browse .\objects\los_api_msgqueue.crf --depend .\objects\los_api_msgqueue.d)
@@ -1410,7 +1410,7 @@ I (..\..\kernel\include\los_event.h)(0x58F1BF41)
 I (..\..\kernel\include\los_swtmr.h)(0x58F1BF41)
 I (..\..\kernel\include\los_queue.h)(0x58F1BF41)
 I (..\..\example\include\los_api_msgqueue.h)(0x58F1BF41)
-I (..\..\example\include\los_demo_debug.h)(0x5901AFDF)
+I (..\..\example\include\los_demo_debug.h)(0x59082F44)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (..\..\example\include\los_inspect_entry.h)(0x58F1BF41)
 F (..\..\example\api\los_api_mutex.c)(0x58F1BF41)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m3 -I ..\..\example\include -I ..\..\platform\EFM32GG990F1024-STK3700 -I ..\..\platform\EFM32GG990F1024-STK3700\library\bsp -I ..\..\platform\EFM32GG990F1024-STK3700\library\emlib\inc -I ..\..\platform\EFM32GG990F1024-STK3700\library\CMSIS\Include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\EFM32GGxxx_DFP\2.3.0\Device\EFM32GG\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DEFM32GG990F1024-o .\objects\los_api_mutex.o --omf_browse .\objects\los_api_mutex.crf --depend .\objects\los_api_mutex.d)
@@ -1429,7 +1429,7 @@ I (..\..\kernel\include\los_task.h)(0x58F1BF41)
 I (..\..\kernel\include\los_tick.h)(0x58F1BF41)
 I (..\..\kernel\include\los_event.h)(0x58F1BF41)
 I (..\..\example\include\los_api_mutex.h)(0x58F1BF41)
-I (..\..\example\include\los_demo_debug.h)(0x5901AFDF)
+I (..\..\example\include\los_demo_debug.h)(0x59082F44)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (..\..\example\include\los_inspect_entry.h)(0x58F1BF41)
 F (..\..\example\api\los_api_sem.c)(0x58F1BF41)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m3 -I ..\..\example\include -I ..\..\platform\EFM32GG990F1024-STK3700 -I ..\..\platform\EFM32GG990F1024-STK3700\library\bsp -I ..\..\platform\EFM32GG990F1024-STK3700\library\emlib\inc -I ..\..\platform\EFM32GG990F1024-STK3700\library\CMSIS\Include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\EFM32GGxxx_DFP\2.3.0\Device\EFM32GG\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DEFM32GG990F1024-o .\objects\los_api_sem.o --omf_browse .\objects\los_api_sem.crf --depend .\objects\los_api_sem.d)
@@ -1449,7 +1449,7 @@ I (..\..\kernel\include\los_tick.h)(0x58F1BF41)
 I (..\..\kernel\include\los_event.h)(0x58F1BF41)
 I (..\..\kernel\base\include\los_base.ph)(0x58F1BF41)
 I (..\..\example\include\los_api_sem.h)(0x58F1BF41)
-I (..\..\example\include\los_demo_debug.h)(0x5901AFDF)
+I (..\..\example\include\los_demo_debug.h)(0x59082F44)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (..\..\example\include\los_inspect_entry.h)(0x58F1BF41)
 F (..\..\example\api\los_api_static_mem.c)(0x58F1BF41)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m3 -I ..\..\example\include -I ..\..\platform\EFM32GG990F1024-STK3700 -I ..\..\platform\EFM32GG990F1024-STK3700\library\bsp -I ..\..\platform\EFM32GG990F1024-STK3700\library\emlib\inc -I ..\..\platform\EFM32GG990F1024-STK3700\library\CMSIS\Include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\EFM32GGxxx_DFP\2.3.0\Device\EFM32GG\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DEFM32GG990F1024-o .\objects\los_api_static_mem.o --omf_browse .\objects\los_api_static_mem.crf --depend .\objects\los_api_static_mem.d)
@@ -1460,7 +1460,7 @@ I (..\..\kernel\include\los_typedef.h)(0x58F1BF41)
 I (..\..\kernel\link\keil\los_builddef.h)(0x58F1BF41)
 I (..\..\kernel\include\los_printf.h)(0x58F1BF41)
 I (..\..\example\include\los_api_static_mem.h)(0x58F1BF41)
-I (..\..\example\include\los_demo_debug.h)(0x5901AFDF)
+I (..\..\example\include\los_demo_debug.h)(0x59082F44)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (..\..\example\include\los_inspect_entry.h)(0x58F1BF41)
 F (..\..\example\api\los_api_systick.c)(0x58F1BF41)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m3 -I ..\..\example\include -I ..\..\platform\EFM32GG990F1024-STK3700 -I ..\..\platform\EFM32GG990F1024-STK3700\library\bsp -I ..\..\platform\EFM32GG990F1024-STK3700\library\emlib\inc -I ..\..\platform\EFM32GG990F1024-STK3700\library\CMSIS\Include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\EFM32GGxxx_DFP\2.3.0\Device\EFM32GG\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DEFM32GG990F1024-o .\objects\los_api_systick.o --omf_browse .\objects\los_api_systick.crf --depend .\objects\los_api_systick.d)
@@ -1478,7 +1478,7 @@ I (..\..\kernel\include\los_task.h)(0x58F1BF41)
 I (..\..\kernel\include\los_tick.h)(0x58F1BF41)
 I (..\..\kernel\include\los_event.h)(0x58F1BF41)
 I (..\..\example\include\los_api_systick.h)(0x58F1BF41)
-I (..\..\example\include\los_demo_debug.h)(0x5901AFDF)
+I (..\..\example\include\los_demo_debug.h)(0x59082F44)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (..\..\example\include\los_inspect_entry.h)(0x58F1BF41)
 F (..\..\example\api\los_api_task.c)(0x58F1BF41)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m3 -I ..\..\example\include -I ..\..\platform\EFM32GG990F1024-STK3700 -I ..\..\platform\EFM32GG990F1024-STK3700\library\bsp -I ..\..\platform\EFM32GG990F1024-STK3700\library\emlib\inc -I ..\..\platform\EFM32GG990F1024-STK3700\library\CMSIS\Include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\EFM32GGxxx_DFP\2.3.0\Device\EFM32GG\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DEFM32GG990F1024-o .\objects\los_api_task.o --omf_browse .\objects\los_api_task.crf --depend .\objects\los_api_task.d)
@@ -1498,7 +1498,7 @@ I (..\..\kernel\cpu\arm\cortex-m3\los_hwi.h)(0x58F1BF41)
 I (..\..\kernel\include\los_tick.h)(0x58F1BF41)
 I (..\..\kernel\include\los_event.h)(0x58F1BF41)
 I (..\..\example\include\los_api_task.h)(0x58F1BF41)
-I (..\..\example\include\los_demo_debug.h)(0x5901AFDF)
+I (..\..\example\include\los_demo_debug.h)(0x59082F44)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (..\..\example\include\los_inspect_entry.h)(0x58F1BF41)
 F (..\..\example\api\los_api_timer.c)(0x58F1BF41)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m3 -I ..\..\example\include -I ..\..\platform\EFM32GG990F1024-STK3700 -I ..\..\platform\EFM32GG990F1024-STK3700\library\bsp -I ..\..\platform\EFM32GG990F1024-STK3700\library\emlib\inc -I ..\..\platform\EFM32GG990F1024-STK3700\library\CMSIS\Include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\EFM32GGxxx_DFP\2.3.0\Device\EFM32GG\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DEFM32GG990F1024-o .\objects\los_api_timer.o --omf_browse .\objects\los_api_timer.crf --depend .\objects\los_api_timer.d)
@@ -1518,7 +1518,7 @@ I (..\..\kernel\include\los_tick.h)(0x58F1BF41)
 I (..\..\kernel\include\los_event.h)(0x58F1BF41)
 I (D:\Keil_v5\ARM\ARMCC\include\time.h)(0x57F606B8)
 I (..\..\example\include\los_api_timer.h)(0x58F1BF41)
-I (..\..\example\include\los_demo_debug.h)(0x5901AFDF)
+I (..\..\example\include\los_demo_debug.h)(0x59082F44)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (..\..\example\include\los_inspect_entry.h)(0x58F1BF41)
 F (..\..\example\api\los_cmsis_main.c)(0x58F1BF41)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m3 -I ..\..\example\include -I ..\..\platform\EFM32GG990F1024-STK3700 -I ..\..\platform\EFM32GG990F1024-STK3700\library\bsp -I ..\..\platform\EFM32GG990F1024-STK3700\library\emlib\inc -I ..\..\platform\EFM32GG990F1024-STK3700\library\CMSIS\Include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\EFM32GGxxx_DFP\2.3.0\Device\EFM32GG\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DEFM32GG990F1024-o .\objects\los_cmsis_main.o --omf_browse .\objects\los_cmsis_main.crf --depend .\objects\los_cmsis_main.d)
@@ -1529,7 +1529,7 @@ F (..\..\example\api\los_demo_entry.c)(0x59017B3D)(--c99 -c --cpu Cortex-M3 -D__
 I (..\..\example\include\los_demo_entry.h)(0x5901669D)
 I (..\..\kernel\include\los_typedef.h)(0x58F1BF41)
 I (..\..\kernel\link\keil\los_builddef.h)(0x58F1BF41)
-I (..\..\example\include\los_demo_debug.h)(0x5901AFDF)
+I (..\..\example\include\los_demo_debug.h)(0x59082F44)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (..\..\example\include\los_api_task.h)(0x58F1BF41)
 I (..\..\example\include\los_api_dynamic_mem.h)(0x58F1BF41)
@@ -1553,7 +1553,7 @@ I (..\..\kernel\include\los_sys.h)(0x58F1BF41)
 I (..\..\kernel\cpu\arm\cortex-m3\los_hwi.h)(0x58F1BF41)
 I (..\..\kernel\include\los_tick.h)(0x58F1BF41)
 I (..\..\kernel\include\los_event.h)(0x58F1BF41)
-F (..\..\example\api\los_inspect_entry.c)(0x5901ACF2)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m3 -I ..\..\example\include -I ..\..\platform\EFM32GG990F1024-STK3700 -I ..\..\platform\EFM32GG990F1024-STK3700\library\bsp -I ..\..\platform\EFM32GG990F1024-STK3700\library\emlib\inc -I ..\..\platform\EFM32GG990F1024-STK3700\library\CMSIS\Include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\EFM32GGxxx_DFP\2.3.0\Device\EFM32GG\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DEFM32GG990F1024-o .\objects\los_inspect_entry.o --omf_browse .\objects\los_inspect_entry.crf --depend .\objects\los_inspect_entry.d)
+F (..\..\example\api\los_inspect_entry.c)(0x59083263)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m3 -I ..\..\example\include -I ..\..\platform\EFM32GG990F1024-STK3700 -I ..\..\platform\EFM32GG990F1024-STK3700\library\bsp -I ..\..\platform\EFM32GG990F1024-STK3700\library\emlib\inc -I ..\..\platform\EFM32GG990F1024-STK3700\library\CMSIS\Include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\EFM32GGxxx_DFP\2.3.0\Device\EFM32GG\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DEFM32GG990F1024-o .\objects\los_inspect_entry.o --omf_browse .\objects\los_inspect_entry.crf --depend .\objects\los_inspect_entry.d)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (..\..\example\include\los_inspect_entry.h)(0x58F1BF41)
 I (..\..\kernel\include\los_typedef.h)(0x58F1BF41)
@@ -1569,10 +1569,10 @@ I (..\..\kernel\include\los_sys.h)(0x58F1BF41)
 I (..\..\kernel\cpu\arm\cortex-m3\los_hwi.h)(0x58F1BF41)
 I (..\..\kernel\include\los_tick.h)(0x58F1BF41)
 I (..\..\kernel\include\los_event.h)(0x58F1BF41)
-I (..\..\example\include\los_demo_debug.h)(0x5901AFDF)
+I (..\..\example\include\los_demo_debug.h)(0x59082F44)
 I (..\..\platform\EFM32GG990F1024-STK3700\los_bsp_adapter.h)(0x58F1BF41)
 I (..\..\platform\EFM32GG990F1024-STK3700\los_bsp_led.h)(0x58F1BF41)
-I (..\..\platform\EFM32GG990F1024-STK3700\los_bsp_key.h)(0x58F1BF41)
+I (..\..\platform\EFM32GG990F1024-STK3700\los_bsp_key.h)(0x590832FD)
 I (..\..\platform\EFM32GG990F1024-STK3700\los_bsp_uart.h)(0x5902C29B)
 I (..\..\example\include\los_api_task.h)(0x58F1BF41)
 I (..\..\example\include\los_api_dynamic_mem.h)(0x58F1BF41)
@@ -1585,7 +1585,7 @@ I (..\..\example\include\los_api_sem.h)(0x58F1BF41)
 I (..\..\example\include\los_api_timer.h)(0x58F1BF41)
 I (..\..\example\include\los_api_systick.h)(0x58F1BF41)
 I (..\..\example\include\los_api_list.h)(0x58F1BF41)
-F (..\..\user\main.c)(0x5901A4BF)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m3 -I ..\..\example\include -I ..\..\platform\EFM32GG990F1024-STK3700 -I ..\..\platform\EFM32GG990F1024-STK3700\library\bsp -I ..\..\platform\EFM32GG990F1024-STK3700\library\emlib\inc -I ..\..\platform\EFM32GG990F1024-STK3700\library\CMSIS\Include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\EFM32GGxxx_DFP\2.3.0\Device\EFM32GG\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DEFM32GG990F1024-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+F (..\..\user\main.c)(0x59082FD8)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m3 -I ..\..\example\include -I ..\..\platform\EFM32GG990F1024-STK3700 -I ..\..\platform\EFM32GG990F1024-STK3700\library\bsp -I ..\..\platform\EFM32GG990F1024-STK3700\library\emlib\inc -I ..\..\platform\EFM32GG990F1024-STK3700\library\CMSIS\Include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\EFM32GGxxx_DFP\2.3.0\Device\EFM32GG\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DEFM32GG990F1024-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
 I (..\..\kernel\include\los_sys.h)(0x58F1BF41)
 I (..\..\kernel\include\los_base.h)(0x58F1BF41)
 I (..\..\kernel\link\keil\los_builddef.h)(0x58F1BF41)
@@ -1601,12 +1601,12 @@ I (..\..\kernel\base\include\los_task.ph)(0x58F1BF41)
 I (..\..\kernel\include\los_task.h)(0x58F1BF41)
 I (..\..\kernel\include\los_event.h)(0x58F1BF41)
 I (..\..\platform\EFM32GG990F1024-STK3700\los_bsp_led.h)(0x58F1BF41)
-I (..\..\platform\EFM32GG990F1024-STK3700\los_bsp_key.h)(0x58F1BF41)
+I (..\..\platform\EFM32GG990F1024-STK3700\los_bsp_key.h)(0x590832FD)
 I (..\..\platform\EFM32GG990F1024-STK3700\los_bsp_uart.h)(0x5902C29B)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (..\..\example\include\los_inspect_entry.h)(0x58F1BF41)
 I (..\..\example\include\los_demo_entry.h)(0x5901669D)
-I (..\..\example\include\los_demo_debug.h)(0x5901AFDF)
+I (..\..\example\include\los_demo_debug.h)(0x59082F44)
 I (..\..\example\include\los_api_task.h)(0x58F1BF41)
 I (..\..\example\include\los_api_dynamic_mem.h)(0x58F1BF41)
 I (..\..\example\include\los_api_static_mem.h)(0x58F1BF41)

@@ -80,7 +80,7 @@ int main(void)
 		
     LOS_Inspect_Entry();
     
-    LOS_BoadExampleEntry();	
+    //LOS_BoadExampleEntry();	
 		
     /* Kernel start to run */
     LOS_Start();
