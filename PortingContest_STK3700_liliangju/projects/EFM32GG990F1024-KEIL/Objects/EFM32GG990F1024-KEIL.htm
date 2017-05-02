@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\EFM32GG990F1024-KEIL.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\EFM32GG990F1024-KEIL.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060422: Last Updated: Fri Apr 28 15:36:36 2017
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060422: Last Updated: Tue May 02 09:58:37 2017
 <BR><P>
 <H3>Maximum Stack Usage =        288 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -12,13 +12,13 @@ main &rArr; LOS_KernelInit &rArr; osMain &rArr; osSwTmrInit &rArr; osSwTmrTaskCr
 <H3>
 Functions with no stack information
 </H3><UL>
- <LI><a href="#[e0]">LOS_StartToRun</a>
- <LI><a href="#[106]">LOS_IntNumGet</a>
- <LI><a href="#[11c]">osDisableIRQ</a>
- <LI><a href="#[b4]">LOS_IntLock</a>
- <LI><a href="#[134]">LOS_IntUnLock</a>
- <LI><a href="#[b5]">LOS_IntRestore</a>
- <LI><a href="#[db]">osTaskSchedule</a>
+ <LI><a href="#[e1]">LOS_StartToRun</a>
+ <LI><a href="#[107]">LOS_IntNumGet</a>
+ <LI><a href="#[11d]">osDisableIRQ</a>
+ <LI><a href="#[b5]">LOS_IntLock</a>
+ <LI><a href="#[135]">LOS_IntUnLock</a>
+ <LI><a href="#[b6]">LOS_IntRestore</a>
+ <LI><a href="#[dc]">osTaskSchedule</a>
  <LI><a href="#[2]">PendSV_Handler</a>
 </UL>
 </UL>
@@ -131,7 +131,7 @@ Global Symbols
 <P><STRONG><a name="[3d]"></a>__main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry.o(.ARM.Collect$$$$00000000))
 <BR>[Address Reference Count : 1]<UL><LI> los_startup_keil.o(.text)
 </UL>
-<P><STRONG><a name="[121]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry3.o(.ARM.Collect$$$$00000002))
+<P><STRONG><a name="[122]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry3.o(.ARM.Collect$$$$00000002))
 
 <P><STRONG><a name="[51]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
 <BR><BR>[Calls]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
@@ -141,18 +141,18 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
-<P><STRONG><a name="[122]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
+<P><STRONG><a name="[123]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
 
-<P><STRONG><a name="[123]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
+<P><STRONG><a name="[124]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
 
-<P><STRONG><a name="[124]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
+<P><STRONG><a name="[125]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
 
-<P><STRONG><a name="[125]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
+<P><STRONG><a name="[126]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
 
-<P><STRONG><a name="[126]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
+<P><STRONG><a name="[127]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
 
-<P><STRONG><a name="[e0]"></a>LOS_StartToRun</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, los_dispatch_keil.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Start
+<P><STRONG><a name="[e1]"></a>LOS_StartToRun</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, los_dispatch_keil.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Start
 </UL>
 
 <P><STRONG><a name="[0]"></a>Reset_Handler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, los_startup_keil.o(.text))
@@ -330,26 +330,26 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsr
 <LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl
 </UL>
-<BR>[Called By]<UL><LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
-<LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
+<BR>[Called By]<UL><LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
+<LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
 </UL>
 
-<P><STRONG><a name="[127]"></a>__aeabi_memcpy</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, memcpya.o(.text), UNUSED)
+<P><STRONG><a name="[128]"></a>__aeabi_memcpy</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, memcpya.o(.text), UNUSED)
 
-<P><STRONG><a name="[ee]"></a>__aeabi_memcpy4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RETARGET_SerialInit
+<P><STRONG><a name="[ef]"></a>__aeabi_memcpy4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RETARGET_SerialInit
 </UL>
 
-<P><STRONG><a name="[128]"></a>__aeabi_memcpy8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text), UNUSED)
+<P><STRONG><a name="[129]"></a>__aeabi_memcpy8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text), UNUSED)
 
 <P><STRONG><a name="[57]"></a>__aeabi_memset</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, memseta.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_memset$wrapper
 <LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
 </UL>
 
-<P><STRONG><a name="[129]"></a>__aeabi_memset4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<P><STRONG><a name="[12a]"></a>__aeabi_memset4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
-<P><STRONG><a name="[12a]"></a>__aeabi_memset8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<P><STRONG><a name="[12b]"></a>__aeabi_memset8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
 <P><STRONG><a name="[56]"></a>__aeabi_memclr</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, memseta.o(.text))
 <BR><BR>[Calls]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
@@ -358,21 +358,21 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[85]"></a>__aeabi_memclr4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskInit
-<LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osIdleTaskCreate
-<LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrTaskCreate
-<LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrInit
-<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueInit
-<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueCreate
+<BR><BR>[Called By]<UL><LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskInit
+<LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osIdleTaskCreate
+<LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrTaskCreate
+<LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrInit
+<LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueInit
+<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueCreate
 <LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_Semphore
 <LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_MutexLock
 <LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_SndRcvEvent
 <LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_BoadExampleEntry
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Inspect_Entry
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Inspect_Entry
 <LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Demo_Entry
 </UL>
 
-<P><STRONG><a name="[12b]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<P><STRONG><a name="[12c]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
 <P><STRONG><a name="[58]"></a>_memset$wrapper</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, memseta.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
@@ -381,20 +381,20 @@ Global Symbols
 <P><STRONG><a name="[59]"></a>__aeabi_ddiv</STRONG> (Thumb, 222 bytes, Stack size 32 bytes, ddiv.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_round
 </UL>
-<BR>[Called By]<UL><LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
+<BR>[Called By]<UL><LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
 </UL>
 
 <P><STRONG><a name="[5b]"></a>__aeabi_d2ulz</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, dfixul.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsr
 <LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl
 </UL>
-<BR>[Called By]<UL><LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
+<BR>[Called By]<UL><LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
 </UL>
 
-<P><STRONG><a name="[12c]"></a>__aeabi_uidiv</STRONG> (Thumb, 0 bytes, Stack size 12 bytes, uidiv.o(.text), UNUSED)
+<P><STRONG><a name="[12d]"></a>__aeabi_uidiv</STRONG> (Thumb, 0 bytes, Stack size 12 bytes, uidiv.o(.text), UNUSED)
 
-<P><STRONG><a name="[fb]"></a>__aeabi_uidivmod</STRONG> (Thumb, 44 bytes, Stack size 12 bytes, uidiv.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
+<P><STRONG><a name="[fc]"></a>__aeabi_uidivmod</STRONG> (Thumb, 44 bytes, Stack size 12 bytes, uidiv.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
 </UL>
 
 <P><STRONG><a name="[55]"></a>__aeabi_llsl</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, llshl.o(.text), UNUSED)
@@ -404,7 +404,7 @@ Global Symbols
 <LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 </UL>
 
-<P><STRONG><a name="[12d]"></a>_ll_shift_l</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llshl.o(.text), UNUSED)
+<P><STRONG><a name="[12e]"></a>_ll_shift_l</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llshl.o(.text), UNUSED)
 
 <P><STRONG><a name="[54]"></a>__aeabi_llsr</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, llushr.o(.text), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2ulz
@@ -412,9 +412,9 @@ Global Symbols
 <LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
 </UL>
 
-<P><STRONG><a name="[12e]"></a>_ll_ushift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llushr.o(.text), UNUSED)
+<P><STRONG><a name="[12f]"></a>_ll_ushift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llushr.o(.text), UNUSED)
 
-<P><STRONG><a name="[12f]"></a>__I$use$fp</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, iusefp.o(.text), UNUSED)
+<P><STRONG><a name="[130]"></a>__I$use$fp</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, iusefp.o(.text), UNUSED)
 
 <P><STRONG><a name="[5a]"></a>_double_round</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, depilogue.o(.text), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
@@ -439,7 +439,7 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_drsub
 <LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dsub
-<LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
+<LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
 </UL>
 
 <P><STRONG><a name="[5f]"></a>__aeabi_dsub</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, dadd.o(.text), UNUSED)
@@ -453,11 +453,11 @@ Global Symbols
 <P><STRONG><a name="[61]"></a>__aeabi_dmul</STRONG> (Thumb, 228 bytes, Stack size 48 bytes, dmul.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
 </UL>
-<BR>[Called By]<UL><LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
+<BR>[Called By]<UL><LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
 </UL>
 
-<P><STRONG><a name="[f8]"></a>__aeabi_cdrcmple</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, cdrcmple.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
+<P><STRONG><a name="[f9]"></a>__aeabi_cdrcmple</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, cdrcmple.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
 </UL>
 
 <P><STRONG><a name="[52]"></a>__scatterload</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, init.o(.text))
@@ -466,51 +466,51 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
 </UL>
 
-<P><STRONG><a name="[130]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
+<P><STRONG><a name="[131]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
 
 <P><STRONG><a name="[5e]"></a>__aeabi_lasr</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, llsshr.o(.text), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 </UL>
 
-<P><STRONG><a name="[131]"></a>_ll_sshift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llsshr.o(.text), UNUSED)
+<P><STRONG><a name="[132]"></a>_ll_sshift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llsshr.o(.text), UNUSED)
 
-<P><STRONG><a name="[132]"></a>__decompress</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __dczerorl2.o(.text), UNUSED)
+<P><STRONG><a name="[133]"></a>__decompress</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __dczerorl2.o(.text), UNUSED)
 
-<P><STRONG><a name="[133]"></a>__decompress1</STRONG> (Thumb, 86 bytes, Stack size unknown bytes, __dczerorl2.o(.text), UNUSED)
+<P><STRONG><a name="[134]"></a>__decompress1</STRONG> (Thumb, 86 bytes, Stack size unknown bytes, __dczerorl2.o(.text), UNUSED)
 
-<P><STRONG><a name="[106]"></a>LOS_IntNumGet</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, los_dispatch_keil.o(KERNEL))
-<BR><BR>[Called By]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osIntNumGet
+<P><STRONG><a name="[107]"></a>LOS_IntNumGet</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, los_dispatch_keil.o(KERNEL))
+<BR><BR>[Called By]<UL><LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osIntNumGet
 </UL>
 
-<P><STRONG><a name="[11c]"></a>osDisableIRQ</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, los_dispatch_keil.o(KERNEL))
+<P><STRONG><a name="[11d]"></a>osDisableIRQ</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, los_dispatch_keil.o(KERNEL))
 <BR><BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskExit
 </UL>
 
-<P><STRONG><a name="[b4]"></a>LOS_IntLock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, los_dispatch_keil.o(KERNEL))
+<P><STRONG><a name="[b5]"></a>LOS_IntLock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, los_dispatch_keil.o(KERNEL))
 <BR><BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MuxPost
 <LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MuxPend
 <LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MuxDelete
 <LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MuxCreate
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_EventWrite
 <LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_EventRead
-<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_EventPoll
+<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_EventPoll
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_EventClear
 <LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_SemPost
-<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Schedule
+<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Schedule
 <LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemFree
-<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemAllocAlign
+<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemAllocAlign
 <LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskEntry
-<LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskYield
+<LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskYield
 <LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskUnlock
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskSuspend
 <LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskResume
 <LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskLock
 <LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelete
 <LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelay
-<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreateOnly
+<LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreateOnly
 <LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreate
-<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueWrite
-<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueRead
+<LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueWrite
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueRead
 <LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueCreate
 <LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemboxInit
 <LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemboxFree
@@ -520,42 +520,42 @@ Global Symbols
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_SwtmrDelete
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_SwtmrCreate
 <LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemAlloc
-<LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TickHandler
+<LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TickHandler
 <LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemInit
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_SemPend
 <LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_SemDelete
 <LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_SemCreate
-<LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueDelete
+<LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueDelete
 </UL>
 
-<P><STRONG><a name="[134]"></a>LOS_IntUnLock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, los_dispatch_keil.o(KERNEL), UNUSED)
+<P><STRONG><a name="[135]"></a>LOS_IntUnLock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, los_dispatch_keil.o(KERNEL), UNUSED)
 
-<P><STRONG><a name="[b5]"></a>LOS_IntRestore</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, los_dispatch_keil.o(KERNEL))
+<P><STRONG><a name="[b6]"></a>LOS_IntRestore</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, los_dispatch_keil.o(KERNEL))
 <BR><BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MuxPost
 <LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MuxPend
 <LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MuxDelete
 <LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MuxCreate
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_EventWrite
 <LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_EventRead
-<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_EventPoll
+<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_EventPoll
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_EventClear
 <LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_SemPost
-<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Schedule
+<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Schedule
 <LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemFree
-<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemAllocAlign
-<LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskSelfDelete
+<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemAllocAlign
+<LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskSelfDelete
 <LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskEntry
-<LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskYield
+<LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskYield
 <LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskUnlock
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskSuspend
 <LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskResume
 <LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskLock
 <LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelete
 <LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelay
-<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreateOnly
+<LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreateOnly
 <LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreate
-<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueWrite
-<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueRead
+<LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueWrite
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueRead
 <LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueCreate
 <LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemboxInit
 <LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemboxFree
@@ -565,17 +565,17 @@ Global Symbols
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_SwtmrDelete
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_SwtmrCreate
 <LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemAlloc
-<LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TickHandler
+<LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TickHandler
 <LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemInit
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_SemPend
 <LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_SemDelete
 <LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_SemCreate
-<LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueDelete
+<LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueDelete
 </UL>
 
-<P><STRONG><a name="[db]"></a>osTaskSchedule</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, los_dispatch_keil.o(KERNEL))
-<BR><BR>[Called By]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSchedule
-<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Schedule
+<P><STRONG><a name="[dc]"></a>osTaskSchedule</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, los_dispatch_keil.o(KERNEL))
+<BR><BR>[Called By]<UL><LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSchedule
+<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Schedule
 </UL>
 
 <P><STRONG><a name="[2]"></a>PendSV_Handler</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, los_dispatch_keil.o(KERNEL))
@@ -632,7 +632,7 @@ Global Symbols
 <LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUS_RegBitWrite
 </UL>
 <BR>[Called By]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_LedsInit
-<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RETARGET_SerialInit
+<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RETARGET_SerialInit
 <LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Buttons_Initialize
 </UL>
 
@@ -647,11 +647,11 @@ Global Symbols
 <LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;auxClkGet
 <LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMU_DivToLog2
 </UL>
-<BR>[Called By]<UL><LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_BaudrateAsyncSet
+<BR>[Called By]<UL><LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_BaudrateAsyncSet
 <LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMU_ClockEnable
 </UL>
 
-<P><STRONG><a name="[fc]"></a>CMU_ClockSelectGet</STRONG> (Thumb, 266 bytes, Stack size 0 bytes, em_cmu.o(i.CMU_ClockSelectGet))
+<P><STRONG><a name="[fd]"></a>CMU_ClockSelectGet</STRONG> (Thumb, 266 bytes, Stack size 0 bytes, em_cmu.o(i.CMU_ClockSelectGet))
 <BR><BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usbCClkGet
 <LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lfClkGet
 <LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dbgClkGet
@@ -875,7 +875,7 @@ Global Symbols
 <LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_PinOutClear
 </UL>
 <BR>[Called By]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_LedsInit
-<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RETARGET_SerialInit
+<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RETARGET_SerialInit
 <LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Buttons_Initialize
 </UL>
 
@@ -903,8 +903,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_EvbLedControl
 </UL>
 
-<P><STRONG><a name="[e6]"></a>LOS_Align</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, los_misc.o(i.LOS_Align))
-<BR><BR>[Called By]<UL><LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreateOnly
+<P><STRONG><a name="[e7]"></a>LOS_Align</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, los_misc.o(i.LOS_Align))
+<BR><BR>[Called By]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreateOnly
 </UL>
 
 <P><STRONG><a name="[a2]"></a>LOS_BoadExampleEntry</STRONG> (Thumb, 52 bytes, Stack size 48 bytes, main.o(i.LOS_BoadExampleEntry))
@@ -931,7 +931,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_GetTick
 </UL>
 
-<P><STRONG><a name="[cb]"></a>LOS_DLnkInitMultiHead</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, los_multipledlinkhead.o(i.LOS_DLnkInitMultiHead))
+<P><STRONG><a name="[cc]"></a>LOS_DLnkInitMultiHead</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, los_multipledlinkhead.o(i.LOS_DLnkInitMultiHead))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LOS_DLnkInitMultiHead
 </UL>
 <BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemInit
@@ -943,9 +943,9 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Log2
 </UL>
 <BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemInit
-<LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemSpitNode
-<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemFreeNode
-<LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemFindSuitableFreeBlock
+<LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemSpitNode
+<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemFreeNode
+<LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemFindSuitableFreeBlock
 </UL>
 
 <P><STRONG><a name="[a7]"></a>LOS_Demo_Entry</STRONG> (Thumb, 58 bytes, Stack size 48 bytes, los_demo_entry.o(i.LOS_Demo_Entry))
@@ -980,7 +980,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Buttons_GetState
 </UL>
-<BR>[Called By]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Inspect_KeyAndLed
+<BR>[Called By]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Inspect_KeyAndLed
 </UL>
 
 <P><STRONG><a name="[ac]"></a>LOS_EvbKeyInit</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, los_bsp_key.o(i.LOS_EvbKeyInit))
@@ -999,7 +999,7 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_BoadExampleTskfunc
 <LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Inspect_TskDeal
-<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Inspect_KeyAndLed
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Inspect_KeyAndLed
 </UL>
 
 <P><STRONG><a name="[ad]"></a>LOS_EvbLedInit</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, los_bsp_led.o(i.LOS_EvbLedInit))
@@ -1010,29 +1010,30 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_EvbSetup
 </UL>
 
-<P><STRONG><a name="[ae]"></a>LOS_EvbSetup</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, los_bsp_adapter.o(i.LOS_EvbSetup))
-<BR><BR>[Stack]<UL><LI>Max Depth = 160<LI>Call Chain = LOS_EvbSetup &rArr; LOS_EvbUartInit &rArr; RETARGET_SerialInit &rArr; USART_InitAsync &rArr; USART_BaudrateAsyncSet &rArr; CMU_ClockFreqGet &rArr; lfClkGet &rArr; getHfLeConfig &rArr; BUS_RegBitRead
+<P><STRONG><a name="[ae]"></a>LOS_EvbSetup</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, los_bsp_adapter.o(i.LOS_EvbSetup))
+<BR><BR>[Stack]<UL><LI>Max Depth = 168<LI>Call Chain = LOS_EvbSetup &rArr; LOS_EvbUartInit &rArr; RETARGET_SerialInit &rArr; USART_InitAsync &rArr; USART_BaudrateAsyncSet &rArr; CMU_ClockFreqGet &rArr; lfClkGet &rArr; getHfLeConfig &rArr; BUS_RegBitRead
 </UL>
-<BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_EvbUartInit
+<BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSTEM_ChipRevisionGet
+<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_EvbUartInit
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_EvbLedInit
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_EvbKeyInit
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[af]"></a>LOS_EvbUartInit</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, los_bsp_uart.o(i.LOS_EvbUartInit))
+<P><STRONG><a name="[b0]"></a>LOS_EvbUartInit</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, los_bsp_uart.o(i.LOS_EvbUartInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = LOS_EvbUartInit &rArr; RETARGET_SerialInit &rArr; USART_InitAsync &rArr; USART_BaudrateAsyncSet &rArr; CMU_ClockFreqGet &rArr; lfClkGet &rArr; getHfLeConfig &rArr; BUS_RegBitRead
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RETARGET_SerialInit
-<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RETARGET_SerialCrLf
+<BR>[Calls]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RETARGET_SerialInit
+<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RETARGET_SerialCrLf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_EvbSetup
 </UL>
 
-<P><STRONG><a name="[b2]"></a>LOS_EvbUartWriteByte</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, los_bsp_uart.o(i.LOS_EvbUartWriteByte))
+<P><STRONG><a name="[b3]"></a>LOS_EvbUartWriteByte</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, los_bsp_uart.o(i.LOS_EvbUartWriteByte))
 <BR><BR>[Stack]<UL><LI>Max Depth = 160<LI>Call Chain = LOS_EvbUartWriteByte &rArr; RETARGET_WriteChar &rArr; RETARGET_SerialInit &rArr; USART_InitAsync &rArr; USART_BaudrateAsyncSet &rArr; CMU_ClockFreqGet &rArr; lfClkGet &rArr; getHfLeConfig &rArr; BUS_RegBitRead
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RETARGET_WriteChar
+<BR>[Calls]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RETARGET_WriteChar
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_EvbUartWriteStr
 </UL>
@@ -1040,7 +1041,7 @@ Global Symbols
 <P><STRONG><a name="[a4]"></a>LOS_EvbUartWriteStr</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, los_bsp_uart.o(i.LOS_EvbUartWriteStr))
 <BR><BR>[Stack]<UL><LI>Max Depth = 168<LI>Call Chain = LOS_EvbUartWriteStr &rArr; LOS_EvbUartWriteByte &rArr; RETARGET_WriteChar &rArr; RETARGET_SerialInit &rArr; USART_InitAsync &rArr; USART_BaudrateAsyncSet &rArr; CMU_ClockFreqGet &rArr; lfClkGet &rArr; getHfLeConfig &rArr; BUS_RegBitRead
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_EvbUartWriteByte
+<BR>[Calls]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_EvbUartWriteByte
 </UL>
 <BR>[Called By]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_BoadExampleTskfunc
 </UL>
@@ -1049,8 +1050,8 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 16 + Unknown Stack Size
 <LI>Call Chain = LOS_EventClear
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
+<BR>[Calls]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_SndRcvEvent
 </UL>
@@ -1059,12 +1060,12 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_SndRcvEvent
 </UL>
 
-<P><STRONG><a name="[b6]"></a>LOS_EventPoll</STRONG> (Thumb, 80 bytes, Stack size 24 bytes, los_event.o(i.LOS_EventPoll))
+<P><STRONG><a name="[b7]"></a>LOS_EventPoll</STRONG> (Thumb, 80 bytes, Stack size 24 bytes, los_event.o(i.LOS_EventPoll))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24 + Unknown Stack Size
 <LI>Call Chain = LOS_EventPoll
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
+<BR>[Calls]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_EventRead
 </UL>
@@ -1073,12 +1074,12 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 88 + Unknown Stack Size
 <LI>Call Chain = LOS_EventRead &rArr; osTaskAdd2TimerList &rArr; LOS_ListTailInsert
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_EventPoll
-<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Schedule
-<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskAdd2TimerList
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
-<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_PriqueueDequeue
+<BR>[Calls]<UL><LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_EventPoll
+<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Schedule
+<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskAdd2TimerList
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
+<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_PriqueueDequeue
 </UL>
 <BR>[Called By]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_Event
 </UL>
@@ -1087,16 +1088,16 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 56 + Unknown Stack Size
 <LI>Call Chain = LOS_EventWrite &rArr; osTimerListDelete
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Schedule
-<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTimerListDelete
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_PriqueueEnqueue
+<BR>[Calls]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Schedule
+<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTimerListDelete
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
+<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_PriqueueEnqueue
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_SndRcvEvent
 </UL>
 
-<P><STRONG><a name="[bc]"></a>LOS_InspectByID</STRONG> (Thumb, 204 bytes, Stack size 24 bytes, los_inspect_entry.o(i.LOS_InspectByID))
+<P><STRONG><a name="[bd]"></a>LOS_InspectByID</STRONG> (Thumb, 204 bytes, Stack size 24 bytes, los_inspect_entry.o(i.LOS_InspectByID))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88 + Unknown Stack Size
 <LI>Call Chain = LOS_InspectByID &rArr; LOS_TaskDelay &rArr; osTaskAdd2TimerList &rArr; LOS_ListTailInsert
 </UL>
@@ -1124,7 +1125,7 @@ Global Symbols
 <LI><a href="#[d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_Dyn_Mem
 </UL>
 
-<P><STRONG><a name="[bd]"></a>LOS_Inspect_Entry</STRONG> (Thumb, 52 bytes, Stack size 48 bytes, los_inspect_entry.o(i.LOS_Inspect_Entry))
+<P><STRONG><a name="[be]"></a>LOS_Inspect_Entry</STRONG> (Thumb, 52 bytes, Stack size 48 bytes, los_inspect_entry.o(i.LOS_Inspect_Entry))
 <BR><BR>[Stack]<UL><LI>Max Depth = 232 + Unknown Stack Size
 <LI>Call Chain = LOS_Inspect_Entry &rArr; LOS_TaskCreate &rArr; LOS_TaskCreateOnly &rArr; LOS_MemAllocAlign &rArr; osMemAllocWithCheck &rArr; osMemSpitNode &rArr; LOS_DLnkMultiHead
 </UL>
@@ -1139,17 +1140,17 @@ Global Symbols
 <LI>Call Chain = LOS_Inspect_TskDeal &rArr; LOS_InspectByID &rArr; LOS_TaskDelay &rArr; osTaskAdd2TimerList &rArr; LOS_ListTailInsert
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_EvbLedControl
-<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_InspectByID
-<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Inspect_KeyAndLed
+<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_InspectByID
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Inspect_KeyAndLed
 <LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> los_inspect_entry.o(i.LOS_Inspect_Entry)
 </UL>
-<P><STRONG><a name="[bf]"></a>LOS_KernelInit</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, los_config.o(i.LOS_KernelInit))
+<P><STRONG><a name="[c0]"></a>LOS_KernelInit</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, los_config.o(i.LOS_KernelInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 280 + Unknown Stack Size
 <LI>Call Chain = LOS_KernelInit &rArr; osMain &rArr; osSwTmrInit &rArr; osSwTmrTaskCreate &rArr; LOS_TaskCreate &rArr; LOS_TaskCreateOnly &rArr; LOS_MemAllocAlign &rArr; osMemAllocWithCheck &rArr; osMemSpitNode &rArr; LOS_DLnkMultiHead
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMain
+<BR>[Calls]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMain
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -1158,44 +1159,44 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 104 + Unknown Stack Size
 <LI>Call Chain = LOS_MemAlloc &rArr; osMemAllocWithCheck &rArr; osMemSpitNode &rArr; LOS_DLnkMultiHead
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
-<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemAllocWithCheck
+<BR>[Calls]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
+<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemAllocWithCheck
 </UL>
-<BR>[Called By]<UL><LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMuxInit
-<LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskInit
-<LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrInit
-<LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osPriqueueInit
-<LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSemInit
-<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueInit
-<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueCreate
+<BR>[Called By]<UL><LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMuxInit
+<LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskInit
+<LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrInit
+<LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osPriqueueInit
+<LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSemInit
+<LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueInit
+<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueCreate
 <LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_list
 <LI><a href="#[d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_Dyn_Mem
 </UL>
 
-<P><STRONG><a name="[c8]"></a>LOS_MemAllocAlign</STRONG> (Thumb, 108 bytes, Stack size 40 bytes, los_memory.o(i.LOS_MemAllocAlign))
+<P><STRONG><a name="[c9]"></a>LOS_MemAllocAlign</STRONG> (Thumb, 108 bytes, Stack size 40 bytes, los_memory.o(i.LOS_MemAllocAlign))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120 + Unknown Stack Size
 <LI>Call Chain = LOS_MemAllocAlign &rArr; osMemAllocWithCheck &rArr; osMemSpitNode &rArr; LOS_DLnkMultiHead
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
-<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemAllocWithCheck
+<BR>[Calls]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
+<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemAllocWithCheck
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreateOnly
+<BR>[Called By]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreateOnly
 </UL>
 
 <P><STRONG><a name="[7a]"></a>LOS_MemFree</STRONG> (Thumb, 84 bytes, Stack size 32 bytes, los_memory.o(i.LOS_MemFree))
 <BR><BR>[Stack]<UL><LI>Max Depth = 84 + Unknown Stack Size
 <LI>Call Chain = LOS_MemFree &rArr; osMemCheckUsedNode &rArr; osMemIsNodeValid
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
-<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemFreeNode
-<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemCheckUsedNode
+<BR>[Calls]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
+<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemFreeNode
+<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemCheckUsedNode
 </UL>
 <BR>[Called By]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelete
-<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreateOnly
-<LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueDelete
+<LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreateOnly
+<LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueDelete
 <LI><a href="#[d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_Dyn_Mem
 </UL>
 
@@ -1203,14 +1204,14 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 56 + Unknown Stack Size
 <LI>Call Chain = LOS_MemInit &rArr; LOS_DLnkMultiHead
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
+<BR>[Calls]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
 <LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_DLnkMultiHead
-<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_DLnkInitMultiHead
-<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemSetMagicNumAndTaskid
-<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListAdd
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_DLnkInitMultiHead
+<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemSetMagicNumAndTaskid
+<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListAdd
 </UL>
-<BR>[Called By]<UL><LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemSystemInit
+<BR>[Called By]<UL><LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemSystemInit
 <LI><a href="#[d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_Dyn_Mem
 </UL>
 
@@ -1218,10 +1219,10 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 24 + Unknown Stack Size
 <LI>Call Chain = LOS_MemboxAlloc
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
+<BR>[Calls]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
 </UL>
-<BR>[Called By]<UL><LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrTimeoutHandle
+<BR>[Called By]<UL><LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrTimeoutHandle
 <LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_StaticMem
 </UL>
 
@@ -1237,11 +1238,11 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 32 + Unknown Stack Size
 <LI>Call Chain = LOS_MemboxFree
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
+<BR>[Calls]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrTask
-<LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrTimeoutHandle
+<LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrTimeoutHandle
 <LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_StaticMem
 </UL>
 
@@ -1249,10 +1250,10 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 32 + Unknown Stack Size
 <LI>Call Chain = LOS_MemboxInit
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
+<BR>[Calls]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
 </UL>
-<BR>[Called By]<UL><LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrInit
+<BR>[Called By]<UL><LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrInit
 <LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_StaticMem
 </UL>
 
@@ -1260,11 +1261,11 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 24 + Unknown Stack Size
 <LI>Call Chain = LOS_MuxCreate
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListInit
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListEmpty
-<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListDelete
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
+<BR>[Calls]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListInit
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListEmpty
+<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListDelete
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_MutexLock
 </UL>
@@ -1273,10 +1274,10 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 16 + Unknown Stack Size
 <LI>Call Chain = LOS_MuxDelete
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListEmpty
-<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListAdd
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
+<BR>[Calls]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListEmpty
+<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListAdd
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_MutexLock
 </UL>
@@ -1285,13 +1286,13 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 80 + Unknown Stack Size
 <LI>Call Chain = LOS_MuxPend &rArr; osTaskAdd2TimerList &rArr; LOS_ListTailInsert
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListTailInsert
-<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Schedule
-<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskPriModify
-<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskAdd2TimerList
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
-<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_PriqueueDequeue
+<BR>[Calls]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListTailInsert
+<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Schedule
+<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskPriModify
+<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskAdd2TimerList
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
+<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_PriqueueDequeue
 </UL>
 <BR>[Called By]<UL><LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_MutexTask2
 <LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_MutexTask1
@@ -1301,25 +1302,25 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 48 + Unknown Stack Size
 <LI>Call Chain = LOS_MuxPost &rArr; osTimerListDelete
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListEmpty
-<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListDelete
-<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Schedule
-<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTimerListDelete
-<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskPriModify
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_PriqueueEnqueue
+<BR>[Calls]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListEmpty
+<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListDelete
+<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Schedule
+<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTimerListDelete
+<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskPriModify
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
+<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_PriqueueEnqueue
 </UL>
 <BR>[Called By]<UL><LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_MutexTask2
 <LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_MutexTask1
 </UL>
 
-<P><STRONG><a name="[b7]"></a>LOS_PriqueueDequeue</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, los_priqueue.o(i.LOS_PriqueueDequeue))
-<BR><BR>[Called By]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueuePend
+<P><STRONG><a name="[b8]"></a>LOS_PriqueueDequeue</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, los_priqueue.o(i.LOS_PriqueueDequeue))
+<BR><BR>[Called By]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueuePend
 <LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MuxPend
 <LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_EventRead
-<LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskSelfDelete
-<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskPriModify
+<LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskSelfDelete
+<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskPriModify
 <LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskEntry
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskSuspend
 <LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelete
@@ -1327,27 +1328,27 @@ Global Symbols
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_SemPend
 </UL>
 
-<P><STRONG><a name="[bb]"></a>LOS_PriqueueEnqueue</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, los_priqueue.o(i.LOS_PriqueueEnqueue))
+<P><STRONG><a name="[bc]"></a>LOS_PriqueueEnqueue</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, los_priqueue.o(i.LOS_PriqueueEnqueue))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LOS_PriqueueEnqueue
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueWakeUp
+<BR>[Called By]<UL><LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueWakeUp
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MuxPost
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_EventWrite
 <LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_SemPost
-<LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskScan
-<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskPriModify
-<LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskYield
+<LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskScan
+<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskPriModify
+<LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskYield
 <LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskResume
 <LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreate
 </UL>
 
-<P><STRONG><a name="[eb]"></a>LOS_PriqueueSize</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, los_priqueue.o(i.LOS_PriqueueSize))
-<BR><BR>[Called By]<UL><LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskYield
+<P><STRONG><a name="[ec]"></a>LOS_PriqueueSize</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, los_priqueue.o(i.LOS_PriqueueSize))
+<BR><BR>[Called By]<UL><LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskYield
 </UL>
 
-<P><STRONG><a name="[da]"></a>LOS_PriqueueTop</STRONG> (Thumb, 54 bytes, Stack size 0 bytes, los_priqueue.o(i.LOS_PriqueueTop))
-<BR><BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Schedule
-<LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskSelfDelete
+<P><STRONG><a name="[db]"></a>LOS_PriqueueTop</STRONG> (Thumb, 54 bytes, Stack size 0 bytes, los_priqueue.o(i.LOS_PriqueueTop))
+<BR><BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Schedule
+<LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskSelfDelete
 <LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskResume
 <LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelete
 <LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreate
@@ -1357,80 +1358,80 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 176 + Unknown Stack Size
 <LI>Call Chain = LOS_QueueCreate &rArr; osQueueCreate &rArr; LOS_MemAlloc &rArr; osMemAllocWithCheck &rArr; osMemSpitNode &rArr; LOS_DLnkMultiHead
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListInit
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
-<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueCreate
+<BR>[Calls]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListInit
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
+<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueCreate
 </UL>
-<BR>[Called By]<UL><LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrInit
+<BR>[Called By]<UL><LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrInit
 <LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_MsgQueue
 </UL>
 
-<P><STRONG><a name="[d4]"></a>LOS_QueueDelete</STRONG> (Thumb, 162 bytes, Stack size 24 bytes, los_queue.o(i.LOS_QueueDelete))
+<P><STRONG><a name="[d5]"></a>LOS_QueueDelete</STRONG> (Thumb, 162 bytes, Stack size 24 bytes, los_queue.o(i.LOS_QueueDelete))
 <BR><BR>[Stack]<UL><LI>Max Depth = 108 + Unknown Stack Size
 <LI>Call Chain = LOS_QueueDelete &rArr; LOS_MemFree &rArr; osMemCheckUsedNode &rArr; osMemIsNodeValid
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListEmpty
+<BR>[Calls]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListEmpty
 <LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemFree
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;recv_Entry
 </UL>
 
-<P><STRONG><a name="[d6]"></a>LOS_QueueRead</STRONG> (Thumb, 282 bytes, Stack size 48 bytes, los_queue.o(i.LOS_QueueRead))
+<P><STRONG><a name="[d7]"></a>LOS_QueueRead</STRONG> (Thumb, 282 bytes, Stack size 48 bytes, los_queue.o(i.LOS_QueueRead))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120 + Unknown Stack Size
 <LI>Call Chain = LOS_QueueRead &rArr; osQueuePend &rArr; osTaskAdd2TimerList &rArr; LOS_ListTailInsert
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueWakeUp
-<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueuePend
-<LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListEmpty
-<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Schedule
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
+<BR>[Calls]<UL><LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueWakeUp
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueuePend
+<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListEmpty
+<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Schedule
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrTask
 <LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;recv_Entry
 </UL>
 
-<P><STRONG><a name="[d9]"></a>LOS_QueueWrite</STRONG> (Thumb, 296 bytes, Stack size 48 bytes, los_queue.o(i.LOS_QueueWrite))
+<P><STRONG><a name="[da]"></a>LOS_QueueWrite</STRONG> (Thumb, 296 bytes, Stack size 48 bytes, los_queue.o(i.LOS_QueueWrite))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120 + Unknown Stack Size
 <LI>Call Chain = LOS_QueueWrite &rArr; osQueuePend &rArr; osTaskAdd2TimerList &rArr; LOS_ListTailInsert
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueWakeUp
-<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueuePend
-<LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListEmpty
-<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Schedule
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
+<BR>[Calls]<UL><LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueWakeUp
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueuePend
+<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListEmpty
+<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Schedule
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
 </UL>
-<BR>[Called By]<UL><LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrTimeoutHandle
+<BR>[Called By]<UL><LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrTimeoutHandle
 <LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_Entry
 </UL>
 
-<P><STRONG><a name="[b9]"></a>LOS_Schedule</STRONG> (Thumb, 56 bytes, Stack size 8 bytes, los_hw.o(i.LOS_Schedule))
+<P><STRONG><a name="[ba]"></a>LOS_Schedule</STRONG> (Thumb, 56 bytes, Stack size 8 bytes, los_hw.o(i.LOS_Schedule))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8 + Unknown Stack Size
 <LI>Call Chain = LOS_Schedule
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
-<LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_PriqueueTop
-<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskSchedule
+<BR>[Calls]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
+<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_PriqueueTop
+<LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskSchedule
 </UL>
 <BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MuxPost
 <LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MuxPend
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_EventWrite
 <LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_EventRead
 <LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_SemPost
-<LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskScan
+<LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskScan
 <LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskEntry
-<LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskYield
+<LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskYield
 <LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskUnlock
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskSuspend
 <LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskResume
 <LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelay
-<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueWrite
-<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueRead
+<LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueWrite
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueRead
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_SemPend
 </UL>
 
@@ -1438,11 +1439,11 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 24 + Unknown Stack Size
 <LI>Call Chain = LOS_SemCreate
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
-<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListInit
-<LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListEmpty
-<LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListDelete
+<BR>[Calls]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
+<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListInit
+<LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListEmpty
+<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListDelete
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_Semphore
 </UL>
@@ -1451,10 +1452,10 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 16 + Unknown Stack Size
 <LI>Call Chain = LOS_SemDelete
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
-<LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListEmpty
-<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListAdd
+<BR>[Calls]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
+<LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListEmpty
+<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListAdd
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_Semphore
 </UL>
@@ -1463,12 +1464,12 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 80 + Unknown Stack Size
 <LI>Call Chain = LOS_SemPend &rArr; osTaskAdd2TimerList &rArr; LOS_ListTailInsert
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Schedule
-<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskAdd2TimerList
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
-<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_PriqueueDequeue
-<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListTailInsert
+<BR>[Calls]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Schedule
+<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskAdd2TimerList
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
+<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_PriqueueDequeue
+<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListTailInsert
 </UL>
 <BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_SemTask2
 <LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_SemTask1
@@ -1478,13 +1479,13 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 48 + Unknown Stack Size
 <LI>Call Chain = LOS_SemPost &rArr; osTimerListDelete
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Schedule
-<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTimerListDelete
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_PriqueueEnqueue
-<LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListEmpty
-<LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListDelete
+<BR>[Calls]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Schedule
+<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTimerListDelete
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
+<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_PriqueueEnqueue
+<LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListEmpty
+<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListDelete
 </UL>
 <BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskEntry
 <LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_Semphore
@@ -1492,15 +1493,15 @@ Global Symbols
 <LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_SemTask1
 </UL>
 
-<P><STRONG><a name="[120]"></a>LOS_SetTickSycle</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, los_hw_tick.o(i.LOS_SetTickSycle))
+<P><STRONG><a name="[121]"></a>LOS_SetTickSycle</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, los_hw_tick.o(i.LOS_SetTickSycle))
 <BR><BR>[Called By]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTickStart
 </UL>
 
-<P><STRONG><a name="[df]"></a>LOS_Start</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, los_config.o(i.LOS_Start))
+<P><STRONG><a name="[e0]"></a>LOS_Start</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, los_config.o(i.LOS_Start))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8 + Unknown Stack Size
 <LI>Call Chain = LOS_Start
 </UL>
-<BR>[Calls]<UL><LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_StartToRun
+<BR>[Calls]<UL><LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_StartToRun
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -1509,8 +1510,8 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 32 + Unknown Stack Size
 <LI>Call Chain = LOS_SwtmrCreate
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
+<BR>[Calls]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_swTimer
 </UL>
@@ -1519,10 +1520,10 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 32 + Unknown Stack Size
 <LI>Call Chain = LOS_SwtmrDelete &rArr; osSwtmrStop
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
-<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwtmrStop
-<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwtmrDelete
+<BR>[Calls]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
+<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwtmrStop
+<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwtmrDelete
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_swTimer
 </UL>
@@ -1531,10 +1532,10 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 32 + Unknown Stack Size
 <LI>Call Chain = LOS_SwtmrStart &rArr; osSwtmrStop
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
-<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwtmrStop
-<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrStart
+<BR>[Calls]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
+<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwtmrStop
+<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrStart
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_swTimer
 </UL>
@@ -1543,9 +1544,9 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 32 + Unknown Stack Size
 <LI>Call Chain = LOS_SwtmrStop &rArr; osSwtmrStop
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
-<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwtmrStop
+<BR>[Calls]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
+<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwtmrStop
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_swTimer
 </UL>
@@ -1554,38 +1555,38 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 184 + Unknown Stack Size
 <LI>Call Chain = LOS_TaskCreate &rArr; LOS_TaskCreateOnly &rArr; LOS_MemAllocAlign &rArr; osMemAllocWithCheck &rArr; osMemSpitNode &rArr; LOS_DLnkMultiHead
 </UL>
-<BR>[Calls]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSchedule
-<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreateOnly
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
-<LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_PriqueueTop
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_PriqueueEnqueue
+<BR>[Calls]<UL><LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSchedule
+<LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreateOnly
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
+<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_PriqueueTop
+<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_PriqueueEnqueue
 </UL>
-<BR>[Called By]<UL><LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osIdleTaskCreate
-<LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrTaskCreate
+<BR>[Called By]<UL><LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osIdleTaskCreate
+<LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrTaskCreate
 <LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_TskCaseEntry
 <LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_Semphore
 <LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_MutexLock
 <LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_MsgQueue
 <LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_SndRcvEvent
 <LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_BoadExampleEntry
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Inspect_Entry
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Inspect_Entry
 <LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Demo_Entry
 </UL>
 
-<P><STRONG><a name="[e4]"></a>LOS_TaskCreateOnly</STRONG> (Thumb, 368 bytes, Stack size 40 bytes, los_task.o(i.LOS_TaskCreateOnly))
+<P><STRONG><a name="[e5]"></a>LOS_TaskCreateOnly</STRONG> (Thumb, 368 bytes, Stack size 40 bytes, los_task.o(i.LOS_TaskCreateOnly))
 <BR><BR>[Stack]<UL><LI>Max Depth = 160 + Unknown Stack Size
 <LI>Call Chain = LOS_TaskCreateOnly &rArr; LOS_MemAllocAlign &rArr; osMemAllocWithCheck &rArr; osMemSpitNode &rArr; LOS_DLnkMultiHead
 </UL>
-<BR>[Calls]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTskStackInit
+<BR>[Calls]<UL><LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTskStackInit
 <LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemFree
-<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemAllocAlign
-<LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Align
-<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListEmpty
-<LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListDelete
-<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListAdd
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
+<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemAllocAlign
+<LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Align
+<LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListEmpty
+<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListDelete
+<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListAdd
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
 </UL>
 <BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreate
 </UL>
@@ -1594,12 +1595,12 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 64 + Unknown Stack Size
 <LI>Call Chain = LOS_TaskDelay &rArr; osTaskAdd2TimerList &rArr; LOS_ListTailInsert
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Schedule
-<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskAdd2TimerList
-<LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskYield
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
-<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_PriqueueDequeue
+<BR>[Calls]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Schedule
+<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskAdd2TimerList
+<LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskYield
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
+<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_PriqueueDequeue
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_swTimer
 <LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_TaskLo
@@ -1612,8 +1613,8 @@ Global Symbols
 <LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_Entry
 <LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;recv_Entry
 <LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_BoadExampleTskfunc
-<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_InspectByID
-<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Inspect_KeyAndLed
+<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_InspectByID
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Inspect_KeyAndLed
 <LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Demo_Tskfunc
 </UL>
 
@@ -1621,16 +1622,16 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 108 + Unknown Stack Size
 <LI>Call Chain = LOS_TaskDelete &rArr; LOS_MemFree &rArr; osMemCheckUsedNode &rArr; osMemIsNodeValid
 </UL>
-<BR>[Calls]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSchedule
+<BR>[Calls]<UL><LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSchedule
 <LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemFree
-<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTimerListDelete
-<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListTailInsert
-<LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListDelete
-<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListAdd
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
-<LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_PriqueueTop
-<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_PriqueueDequeue
+<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTimerListDelete
+<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListTailInsert
+<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListDelete
+<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListAdd
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
+<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_PriqueueTop
+<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_PriqueueDequeue
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_TskCaseEntry
 <LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_TaskLo
@@ -1644,8 +1645,8 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 8 + Unknown Stack Size
 <LI>Call Chain = LOS_TaskLock
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
+<BR>[Calls]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
 </UL>
 <BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskEntry
 <LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_TskCaseEntry
@@ -1658,11 +1659,11 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 32 + Unknown Stack Size
 <LI>Call Chain = LOS_TaskResume &rArr; LOS_Schedule
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Schedule
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
-<LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_PriqueueTop
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_PriqueueEnqueue
+<BR>[Calls]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Schedule
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
+<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_PriqueueTop
+<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_PriqueueEnqueue
 </UL>
 <BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_TaskLo
 </UL>
@@ -1671,10 +1672,10 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 32 + Unknown Stack Size
 <LI>Call Chain = LOS_TaskSuspend &rArr; LOS_Schedule
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Schedule
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
-<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_PriqueueDequeue
+<BR>[Calls]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Schedule
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
+<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_PriqueueDequeue
 </UL>
 <BR>[Called By]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_TaskHi
 </UL>
@@ -1683,9 +1684,9 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 16 + Unknown Stack Size
 <LI>Call Chain = LOS_TaskUnlock &rArr; LOS_Schedule
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Schedule
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
+<BR>[Calls]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Schedule
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
 </UL>
 <BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskEntry
 <LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_TskCaseEntry
@@ -1694,18 +1695,18 @@ Global Symbols
 <LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_MsgQueue
 </UL>
 
-<P><STRONG><a name="[ea]"></a>LOS_TaskYield</STRONG> (Thumb, 118 bytes, Stack size 16 bytes, los_task.o(i.LOS_TaskYield))
+<P><STRONG><a name="[eb]"></a>LOS_TaskYield</STRONG> (Thumb, 118 bytes, Stack size 16 bytes, los_task.o(i.LOS_TaskYield))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24 + Unknown Stack Size
 <LI>Call Chain = LOS_TaskYield &rArr; LOS_Schedule
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Schedule
-<LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListDelete
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
-<LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_PriqueueSize
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_PriqueueEnqueue
+<BR>[Calls]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Schedule
+<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListDelete
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
+<LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_PriqueueSize
+<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_PriqueueEnqueue
 </UL>
-<BR>[Called By]<UL><LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTimesliceCheck
+<BR>[Called By]<UL><LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTimesliceCheck
 <LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelay
 </UL>
 
@@ -1715,52 +1716,56 @@ Global Symbols
 <LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_GetTick
 </UL>
 
-<P><STRONG><a name="[ec]"></a>LOS_TickHandler</STRONG> (Thumb, 52 bytes, Stack size 8 bytes, los_hw_tick.o(i.LOS_TickHandler))
+<P><STRONG><a name="[ed]"></a>LOS_TickHandler</STRONG> (Thumb, 52 bytes, Stack size 8 bytes, los_hw_tick.o(i.LOS_TickHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 160 + Unknown Stack Size
 <LI>Call Chain = LOS_TickHandler &rArr; osTickHandler &rArr; osSwtmrScan &rArr; osSwTmrTimeoutHandle &rArr; LOS_QueueWrite &rArr; osQueuePend &rArr; osTaskAdd2TimerList &rArr; LOS_ListTailInsert
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTickHandler
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
+<BR>[Calls]<UL><LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTickHandler
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Handler
 </UL>
 
-<P><STRONG><a name="[104]"></a>LosAdapIntInit</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, los_bsp_adapter.o(i.LosAdapIntInit))
-<BR><BR>[Called By]<UL><LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osHwiInit
+<P><STRONG><a name="[105]"></a>LosAdapIntInit</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, los_bsp_adapter.o(i.LosAdapIntInit))
+<BR><BR>[Called By]<UL><LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osHwiInit
 </UL>
 
-<P><STRONG><a name="[b1]"></a>RETARGET_SerialCrLf</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, retargetserial.o(i.RETARGET_SerialCrLf))
-<BR><BR>[Called By]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_EvbUartInit
+<P><STRONG><a name="[b2]"></a>RETARGET_SerialCrLf</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, retargetserial.o(i.RETARGET_SerialCrLf))
+<BR><BR>[Called By]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_EvbUartInit
 </UL>
 
-<P><STRONG><a name="[b0]"></a>RETARGET_SerialInit</STRONG> (Thumb, 160 bytes, Stack size 32 bytes, retargetserial.o(i.RETARGET_SerialInit))
+<P><STRONG><a name="[b1]"></a>RETARGET_SerialInit</STRONG> (Thumb, 160 bytes, Stack size 32 bytes, retargetserial.o(i.RETARGET_SerialInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = RETARGET_SerialInit &rArr; USART_InitAsync &rArr; USART_BaudrateAsyncSet &rArr; CMU_ClockFreqGet &rArr; lfClkGet &rArr; getHfLeConfig &rArr; BUS_RegBitRead
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_InitAsync
-<LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Enable
+<BR>[Calls]<UL><LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_InitAsync
+<LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Enable
 <LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_PinModeSet
 <LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMU_ClockEnable
-<LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
+<LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RETARGET_WriteChar
-<LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_EvbUartInit
+<BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RETARGET_WriteChar
+<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_EvbUartInit
 </UL>
 
-<P><STRONG><a name="[b3]"></a>RETARGET_WriteChar</STRONG> (Thumb, 62 bytes, Stack size 8 bytes, retargetserial.o(i.RETARGET_WriteChar))
+<P><STRONG><a name="[b4]"></a>RETARGET_WriteChar</STRONG> (Thumb, 62 bytes, Stack size 8 bytes, retargetserial.o(i.RETARGET_WriteChar))
 <BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = RETARGET_WriteChar &rArr; RETARGET_SerialInit &rArr; USART_InitAsync &rArr; USART_BaudrateAsyncSet &rArr; CMU_ClockFreqGet &rArr; lfClkGet &rArr; getHfLeConfig &rArr; BUS_RegBitRead
 </UL>
-<BR>[Calls]<UL><LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Tx
-<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RETARGET_SerialInit
+<BR>[Calls]<UL><LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Tx
+<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RETARGET_SerialInit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_EvbUartWriteByte
+<BR>[Called By]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_EvbUartWriteByte
+</UL>
+
+<P><STRONG><a name="[af]"></a>SYSTEM_ChipRevisionGet</STRONG> (Thumb, 62 bytes, Stack size 0 bytes, em_system.o(i.SYSTEM_ChipRevisionGet))
+<BR><BR>[Called By]<UL><LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_EvbSetup
 </UL>
 
 <P><STRONG><a name="[3]"></a>SysTick_Handler</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, los_bsp_adapter.o(i.SysTick_Handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 168 + Unknown Stack Size
 <LI>Call Chain = SysTick_Handler &rArr; LOS_TickHandler &rArr; osTickHandler &rArr; osSwtmrScan &rArr; osSwTmrTimeoutHandle &rArr; LOS_QueueWrite &rArr; osQueuePend &rArr; osTaskAdd2TimerList &rArr; LOS_ListTailInsert
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TickHandler
+<BR>[Calls]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TickHandler
 </UL>
 <BR>[Address Reference Count : 2]<UL><LI> los_hwi.o(.vector.bss)
 <LI> los_startup_keil.o(RESET)
@@ -1781,17 +1786,17 @@ Global Symbols
 <LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dbgClkGet
 </UL>
 
-<P><STRONG><a name="[ff]"></a>SystemLFRCOClockGet</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, system_efm32gg.o(i.SystemLFRCOClockGet))
+<P><STRONG><a name="[100]"></a>SystemLFRCOClockGet</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, system_efm32gg.o(i.SystemLFRCOClockGet))
 <BR><BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usbCClkGet
 <LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lfClkGet
 </UL>
 
-<P><STRONG><a name="[100]"></a>SystemLFXOClockGet</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, system_efm32gg.o(i.SystemLFXOClockGet))
+<P><STRONG><a name="[101]"></a>SystemLFXOClockGet</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, system_efm32gg.o(i.SystemLFXOClockGet))
 <BR><BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usbCClkGet
 <LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lfClkGet
 </UL>
 
-<P><STRONG><a name="[101]"></a>SystemULFRCOClockGet</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, system_efm32gg.o(i.SystemULFRCOClockGet))
+<P><STRONG><a name="[102]"></a>SystemULFRCOClockGet</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, system_efm32gg.o(i.SystemULFRCOClockGet))
 <BR><BR>[Called By]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lfClkGet
 </UL>
 
@@ -1815,48 +1820,48 @@ Global Symbols
 <P><STRONG><a name="[24]"></a>USART1_RX_IRQHandler</STRONG> (Thumb, 86 bytes, Stack size 8 bytes, retargetserial.o(i.USART1_RX_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = USART1_RX_IRQHandler
 </UL>
-<BR>[Calls]<UL><LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Rx
+<BR>[Calls]<UL><LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Rx
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> los_startup_keil.o(RESET)
 </UL>
-<P><STRONG><a name="[f3]"></a>USART_BaudrateAsyncSet</STRONG> (Thumb, 118 bytes, Stack size 32 bytes, em_usart_1.o(i.USART_BaudrateAsyncSet))
+<P><STRONG><a name="[f4]"></a>USART_BaudrateAsyncSet</STRONG> (Thumb, 118 bytes, Stack size 32 bytes, em_usart_1.o(i.USART_BaudrateAsyncSet))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = USART_BaudrateAsyncSet &rArr; CMU_ClockFreqGet &rArr; lfClkGet &rArr; getHfLeConfig &rArr; BUS_RegBitRead
 </UL>
 <BR>[Calls]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMU_ClockFreqGet
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_InitAsync
+<BR>[Called By]<UL><LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_InitAsync
 </UL>
 
-<P><STRONG><a name="[f0]"></a>USART_Enable</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, em_usart_1.o(i.USART_Enable))
-<BR><BR>[Called By]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RETARGET_SerialInit
+<P><STRONG><a name="[f1]"></a>USART_Enable</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, em_usart_1.o(i.USART_Enable))
+<BR><BR>[Called By]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RETARGET_SerialInit
 </UL>
 
-<P><STRONG><a name="[ef]"></a>USART_InitAsync</STRONG> (Thumb, 66 bytes, Stack size 16 bytes, em_usart_1.o(i.USART_InitAsync))
+<P><STRONG><a name="[f0]"></a>USART_InitAsync</STRONG> (Thumb, 66 bytes, Stack size 16 bytes, em_usart_1.o(i.USART_InitAsync))
 <BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = USART_InitAsync &rArr; USART_BaudrateAsyncSet &rArr; CMU_ClockFreqGet &rArr; lfClkGet &rArr; getHfLeConfig &rArr; BUS_RegBitRead
 </UL>
-<BR>[Calls]<UL><LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Reset
-<LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_BaudrateAsyncSet
+<BR>[Calls]<UL><LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Reset
+<LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_BaudrateAsyncSet
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RETARGET_SerialInit
-</UL>
-
-<P><STRONG><a name="[f4]"></a>USART_Reset</STRONG> (Thumb, 66 bytes, Stack size 0 bytes, em_usart_1.o(i.USART_Reset))
-<BR><BR>[Called By]<UL><LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_InitAsync
+<BR>[Called By]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RETARGET_SerialInit
 </UL>
 
-<P><STRONG><a name="[f2]"></a>USART_Rx</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, em_usart_1.o(i.USART_Rx))
+<P><STRONG><a name="[f5]"></a>USART_Reset</STRONG> (Thumb, 66 bytes, Stack size 0 bytes, em_usart_1.o(i.USART_Reset))
+<BR><BR>[Called By]<UL><LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_InitAsync
+</UL>
+
+<P><STRONG><a name="[f3]"></a>USART_Rx</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, em_usart_1.o(i.USART_Rx))
 <BR><BR>[Called By]<UL><LI><a href="#[24]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART1_RX_IRQHandler
 </UL>
 
-<P><STRONG><a name="[f1]"></a>USART_Tx</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, em_usart_1.o(i.USART_Tx))
-<BR><BR>[Called By]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RETARGET_WriteChar
+<P><STRONG><a name="[f2]"></a>USART_Tx</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, em_usart_1.o(i.USART_Tx))
+<BR><BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RETARGET_WriteChar
 </UL>
 
-<P><STRONG><a name="[f5]"></a>__0printf</STRONG> (Thumb, 22 bytes, Stack size 24 bytes, printfa.o(i.__0printf), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
+<P><STRONG><a name="[f6]"></a>__0printf</STRONG> (Thumb, 22 bytes, Stack size 24 bytes, printfa.o(i.__0printf), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
 </UL>
 
-<P><STRONG><a name="[135]"></a>__1printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf), UNUSED)
+<P><STRONG><a name="[136]"></a>__1printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf), UNUSED)
 
 <P><STRONG><a name="[78]"></a>__2printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = __2printf
@@ -1884,14 +1889,14 @@ Global Symbols
 <LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_InspectStatusSetByID
 <LI><a href="#[d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_Dyn_Mem
 <LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Inspect_TskDeal
-<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_InspectByID
-<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Inspect_KeyAndLed
+<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_InspectByID
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Inspect_KeyAndLed
 <LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Demo_Entry
 </UL>
 
-<P><STRONG><a name="[136]"></a>__c89printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf), UNUSED)
+<P><STRONG><a name="[137]"></a>__c89printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf), UNUSED)
 
-<P><STRONG><a name="[137]"></a>printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf), UNUSED)
+<P><STRONG><a name="[138]"></a>printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf), UNUSED)
 
 <P><STRONG><a name="[98]"></a>free</STRONG> (Thumb, 76 bytes, Stack size 8 bytes, malloc1.o(i.__free$1region))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = free
@@ -1899,11 +1904,11 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_list
 </UL>
 
-<P><STRONG><a name="[138]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
+<P><STRONG><a name="[139]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
 
-<P><STRONG><a name="[139]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
+<P><STRONG><a name="[13a]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
 
-<P><STRONG><a name="[13a]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
+<P><STRONG><a name="[13b]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
 
 <P><STRONG><a name="[4c]"></a>fputc</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, los_demo_entry.o(i.fputc))
 <BR>[Address Reference Count : 1]<UL><LI> printfa.o(i.__0printf)
@@ -1913,11 +1918,11 @@ Global Symbols
 <LI>Call Chain = main &rArr; LOS_KernelInit &rArr; osMain &rArr; osSwTmrInit &rArr; osSwTmrTaskCreate &rArr; LOS_TaskCreate &rArr; LOS_TaskCreateOnly &rArr; LOS_MemAllocAlign &rArr; osMemAllocWithCheck &rArr; osMemSpitNode &rArr; LOS_DLnkMultiHead
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_EvbSetup
-<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Start
-<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_KernelInit
+<LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Start
+<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_KernelInit
 <LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_EnableTick
 <LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_BoadExampleEntry
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Inspect_Entry
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Inspect_Entry
 <LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Demo_Entry
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
@@ -1926,89 +1931,89 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 8 + Unknown Stack Size
 <LI>Call Chain = osHwiDefaultHandler &rArr; osIntNumGet
 </UL>
-<BR>[Calls]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osIntNumGet
+<BR>[Calls]<UL><LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osIntNumGet
 </UL>
 <BR>[Address Reference Count : 2]<UL><LI> los_hwi.o(.vector.bss)
 <LI> los_hwi.o(i.osHwiInit)
 </UL>
-<P><STRONG><a name="[103]"></a>osHwiInit</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, los_hwi.o(i.osHwiInit))
+<P><STRONG><a name="[104]"></a>osHwiInit</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, los_hwi.o(i.osHwiInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = osHwiInit
 </UL>
-<BR>[Calls]<UL><LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LosAdapIntInit
+<BR>[Calls]<UL><LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LosAdapIntInit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMain
+<BR>[Called By]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMain
 </UL>
 
 <P><STRONG><a name="[4d]"></a>osIdleTask</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, los_task.o(i.osIdleTask))
 <BR>[Address Reference Count : 1]<UL><LI> los_task.o(i.osIdleTaskCreate)
 </UL>
-<P><STRONG><a name="[105]"></a>osIdleTaskCreate</STRONG> (Thumb, 54 bytes, Stack size 48 bytes, los_task.o(i.osIdleTaskCreate))
+<P><STRONG><a name="[106]"></a>osIdleTaskCreate</STRONG> (Thumb, 54 bytes, Stack size 48 bytes, los_task.o(i.osIdleTaskCreate))
 <BR><BR>[Stack]<UL><LI>Max Depth = 232 + Unknown Stack Size
 <LI>Call Chain = osIdleTaskCreate &rArr; LOS_TaskCreate &rArr; LOS_TaskCreateOnly &rArr; LOS_MemAllocAlign &rArr; osMemAllocWithCheck &rArr; osMemSpitNode &rArr; LOS_DLnkMultiHead
 </UL>
 <BR>[Calls]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreate
 <LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMain
+<BR>[Called By]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMain
 </UL>
 
-<P><STRONG><a name="[102]"></a>osIntNumGet</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, los_hwi.o(i.osIntNumGet))
+<P><STRONG><a name="[103]"></a>osIntNumGet</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, los_hwi.o(i.osIntNumGet))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8 + Unknown Stack Size
 <LI>Call Chain = osIntNumGet
 </UL>
-<BR>[Calls]<UL><LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntNumGet
+<BR>[Calls]<UL><LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntNumGet
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osHwiDefaultHandler
 </UL>
 
-<P><STRONG><a name="[c0]"></a>osMain</STRONG> (Thumb, 108 bytes, Stack size 8 bytes, los_config.o(i.osMain))
+<P><STRONG><a name="[c1]"></a>osMain</STRONG> (Thumb, 108 bytes, Stack size 8 bytes, los_config.o(i.osMain))
 <BR><BR>[Stack]<UL><LI>Max Depth = 272 + Unknown Stack Size
 <LI>Call Chain = osMain &rArr; osSwTmrInit &rArr; osSwTmrTaskCreate &rArr; LOS_TaskCreate &rArr; LOS_TaskCreateOnly &rArr; LOS_MemAllocAlign &rArr; osMemAllocWithCheck &rArr; osMemSpitNode &rArr; LOS_DLnkMultiHead
 </UL>
-<BR>[Calls]<UL><LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMuxInit
-<LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTimesliceInit
-<LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskInit
-<LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osIdleTaskCreate
-<LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrInit
-<LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemSystemInit
-<LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSemInit
-<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueInit
-<LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osHwiInit
-<LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRegister
+<BR>[Calls]<UL><LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMuxInit
+<LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTimesliceInit
+<LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskInit
+<LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osIdleTaskCreate
+<LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrInit
+<LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemSystemInit
+<LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSemInit
+<LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueInit
+<LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osHwiInit
+<LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRegister
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_KernelInit
+<BR>[Called By]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_KernelInit
 </UL>
 
-<P><STRONG><a name="[108]"></a>osMemSystemInit</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, los_memory.o(i.osMemSystemInit))
+<P><STRONG><a name="[109]"></a>osMemSystemInit</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, los_memory.o(i.osMemSystemInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64 + Unknown Stack Size
 <LI>Call Chain = osMemSystemInit &rArr; LOS_MemInit &rArr; LOS_DLnkMultiHead
 </UL>
 <BR>[Calls]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemInit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMain
+<BR>[Called By]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMain
 </UL>
 
-<P><STRONG><a name="[10b]"></a>osMuxInit</STRONG> (Thumb, 74 bytes, Stack size 16 bytes, los_mux.o(i.osMuxInit))
+<P><STRONG><a name="[10c]"></a>osMuxInit</STRONG> (Thumb, 74 bytes, Stack size 16 bytes, los_mux.o(i.osMuxInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120 + Unknown Stack Size
 <LI>Call Chain = osMuxInit &rArr; LOS_MemAlloc &rArr; osMemAllocWithCheck &rArr; osMemSpitNode &rArr; LOS_DLnkMultiHead
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListTailInsert
-<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListInit
+<BR>[Calls]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListTailInsert
+<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListInit
 <LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemAlloc
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMain
+<BR>[Called By]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMain
 </UL>
 
-<P><STRONG><a name="[116]"></a>osPriqueueInit</STRONG> (Thumb, 64 bytes, Stack size 16 bytes, los_priqueue.o(i.osPriqueueInit))
+<P><STRONG><a name="[117]"></a>osPriqueueInit</STRONG> (Thumb, 64 bytes, Stack size 16 bytes, los_priqueue.o(i.osPriqueueInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120 + Unknown Stack Size
 <LI>Call Chain = osPriqueueInit &rArr; LOS_MemAlloc &rArr; osMemAllocWithCheck &rArr; osMemSpitNode &rArr; LOS_DLnkMultiHead
 </UL>
 <BR>[Calls]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemAlloc
 </UL>
-<BR>[Called By]<UL><LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskInit
+<BR>[Called By]<UL><LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskInit
 </UL>
 
-<P><STRONG><a name="[d2]"></a>osQueueCreate</STRONG> (Thumb, 100 bytes, Stack size 32 bytes, los_queue.o(i.osQueueCreate))
+<P><STRONG><a name="[d3]"></a>osQueueCreate</STRONG> (Thumb, 100 bytes, Stack size 32 bytes, los_queue.o(i.osQueueCreate))
 <BR><BR>[Stack]<UL><LI>Max Depth = 136 + Unknown Stack Size
 <LI>Call Chain = osQueueCreate &rArr; LOS_MemAlloc &rArr; osMemAllocWithCheck &rArr; osMemSpitNode &rArr; LOS_DLnkMultiHead
 </UL>
@@ -2018,91 +2023,91 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueCreate
 </UL>
 
-<P><STRONG><a name="[10c]"></a>osQueueInit</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, los_queue.o(i.osQueueInit))
+<P><STRONG><a name="[10d]"></a>osQueueInit</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, los_queue.o(i.osQueueInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 112 + Unknown Stack Size
 <LI>Call Chain = osQueueInit &rArr; LOS_MemAlloc &rArr; osMemAllocWithCheck &rArr; osMemSpitNode &rArr; LOS_DLnkMultiHead
 </UL>
 <BR>[Calls]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemAlloc
 <LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMain
+<BR>[Called By]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMain
 </UL>
 
-<P><STRONG><a name="[107]"></a>osRegister</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, los_config.o(i.osRegister))
-<BR><BR>[Called By]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMain
+<P><STRONG><a name="[108]"></a>osRegister</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, los_config.o(i.osRegister))
+<BR><BR>[Called By]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMain
 </UL>
 
-<P><STRONG><a name="[e5]"></a>osSchedule</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, los_hw.o(i.osSchedule))
+<P><STRONG><a name="[e6]"></a>osSchedule</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, los_hw.o(i.osSchedule))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8 + Unknown Stack Size
 <LI>Call Chain = osSchedule
 </UL>
-<BR>[Calls]<UL><LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskSchedule
+<BR>[Calls]<UL><LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskSchedule
 </UL>
-<BR>[Called By]<UL><LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskSelfDelete
+<BR>[Called By]<UL><LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskSelfDelete
 <LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelete
 <LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreate
 </UL>
 
-<P><STRONG><a name="[10a]"></a>osSemInit</STRONG> (Thumb, 70 bytes, Stack size 16 bytes, los_sem.o(i.osSemInit))
+<P><STRONG><a name="[10b]"></a>osSemInit</STRONG> (Thumb, 70 bytes, Stack size 16 bytes, los_sem.o(i.osSemInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120 + Unknown Stack Size
 <LI>Call Chain = osSemInit &rArr; LOS_MemAlloc &rArr; osMemAllocWithCheck &rArr; osMemSpitNode &rArr; LOS_DLnkMultiHead
 </UL>
 <BR>[Calls]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemAlloc
-<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListTailInsert
-<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListInit
+<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListTailInsert
+<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListInit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMain
+<BR>[Called By]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMain
 </UL>
 
-<P><STRONG><a name="[10d]"></a>osSwTmrInit</STRONG> (Thumb, 142 bytes, Stack size 32 bytes, los_swtmr.o(i.osSwTmrInit))
+<P><STRONG><a name="[10e]"></a>osSwTmrInit</STRONG> (Thumb, 142 bytes, Stack size 32 bytes, los_swtmr.o(i.osSwTmrInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 264 + Unknown Stack Size
 <LI>Call Chain = osSwTmrInit &rArr; osSwTmrTaskCreate &rArr; LOS_TaskCreate &rArr; LOS_TaskCreateOnly &rArr; LOS_MemAllocAlign &rArr; osMemAllocWithCheck &rArr; osMemSpitNode &rArr; LOS_DLnkMultiHead
 </UL>
 <BR>[Calls]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueCreate
 <LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemboxInit
-<LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrTaskCreate
+<LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrTaskCreate
 <LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemAlloc
 <LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMain
+<BR>[Called By]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMain
 </UL>
 
-<P><STRONG><a name="[e3]"></a>osSwTmrStart</STRONG> (Thumb, 92 bytes, Stack size 8 bytes, los_swtmr.o(i.osSwTmrStart))
+<P><STRONG><a name="[e4]"></a>osSwTmrStart</STRONG> (Thumb, 92 bytes, Stack size 8 bytes, los_swtmr.o(i.osSwTmrStart))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = osSwTmrStart
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_SwtmrStart
-<LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrTimeoutHandle
+<LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrTimeoutHandle
 </UL>
 
 <P><STRONG><a name="[4e]"></a>osSwTmrTask</STRONG> (Thumb, 70 bytes, Stack size 16 bytes, los_swtmr.o(i.osSwTmrTask))
 <BR><BR>[Stack]<UL><LI>Max Depth = 136 + Unknown Stack Size
 <LI>Call Chain = osSwTmrTask &rArr; LOS_QueueRead &rArr; osQueuePend &rArr; osTaskAdd2TimerList &rArr; LOS_ListTailInsert
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueRead
+<BR>[Calls]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueRead
 <LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemboxFree
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> los_swtmr.o(i.osSwTmrTaskCreate)
 </UL>
-<P><STRONG><a name="[118]"></a>osSwTmrTaskCreate</STRONG> (Thumb, 52 bytes, Stack size 48 bytes, los_swtmr.o(i.osSwTmrTaskCreate))
+<P><STRONG><a name="[119]"></a>osSwTmrTaskCreate</STRONG> (Thumb, 52 bytes, Stack size 48 bytes, los_swtmr.o(i.osSwTmrTaskCreate))
 <BR><BR>[Stack]<UL><LI>Max Depth = 232 + Unknown Stack Size
 <LI>Call Chain = osSwTmrTaskCreate &rArr; LOS_TaskCreate &rArr; LOS_TaskCreateOnly &rArr; LOS_MemAllocAlign &rArr; osMemAllocWithCheck &rArr; osMemSpitNode &rArr; LOS_DLnkMultiHead
 </UL>
 <BR>[Calls]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreate
 <LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
-<BR>[Called By]<UL><LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrInit
+<BR>[Called By]<UL><LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrInit
 </UL>
 
-<P><STRONG><a name="[11a]"></a>osSwtmrScan</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, los_swtmr.o(i.osSwtmrScan))
+<P><STRONG><a name="[11b]"></a>osSwtmrScan</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, los_swtmr.o(i.osSwtmrScan))
 <BR><BR>[Stack]<UL><LI>Max Depth = 144 + Unknown Stack Size
 <LI>Call Chain = osSwtmrScan &rArr; osSwTmrTimeoutHandle &rArr; LOS_QueueWrite &rArr; osQueuePend &rArr; osTaskAdd2TimerList &rArr; LOS_ListTailInsert
 </UL>
-<BR>[Calls]<UL><LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrTimeoutHandle
+<BR>[Calls]<UL><LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrTimeoutHandle
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTickHandler
+<BR>[Called By]<UL><LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTickHandler
 </UL>
 
-<P><STRONG><a name="[e1]"></a>osSwtmrStop</STRONG> (Thumb, 66 bytes, Stack size 8 bytes, los_swtmr.o(i.osSwtmrStop))
+<P><STRONG><a name="[e2]"></a>osSwtmrStop</STRONG> (Thumb, 66 bytes, Stack size 8 bytes, los_swtmr.o(i.osSwtmrStop))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = osSwtmrStop
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_SwtmrStop
@@ -2110,12 +2115,12 @@ Global Symbols
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_SwtmrDelete
 </UL>
 
-<P><STRONG><a name="[b8]"></a>osTaskAdd2TimerList</STRONG> (Thumb, 188 bytes, Stack size 32 bytes, los_task.o(i.osTaskAdd2TimerList))
+<P><STRONG><a name="[b9]"></a>osTaskAdd2TimerList</STRONG> (Thumb, 188 bytes, Stack size 32 bytes, los_task.o(i.osTaskAdd2TimerList))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = osTaskAdd2TimerList &rArr; LOS_ListTailInsert
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListTailInsert
+<BR>[Calls]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListTailInsert
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueuePend
+<BR>[Called By]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueuePend
 <LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MuxPend
 <LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_EventRead
 <LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelay
@@ -2127,127 +2132,127 @@ Global Symbols
 <LI>Call Chain = osTaskEntry &rArr; LOS_SemPost &rArr; osTimerListDelete
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_SemPost
-<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Schedule
-<LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskSelfDelete
+<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Schedule
+<LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskSelfDelete
 <LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskUnlock
 <LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskLock
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
-<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_PriqueueDequeue
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
+<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_PriqueueDequeue
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> los_hw.o(i.osTskStackInit)
 </UL>
 <P><STRONG><a name="[4f]"></a>osTaskExit</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, los_hw.o(i.osTaskExit))
-<BR><BR>[Calls]<UL><LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osDisableIRQ
+<BR><BR>[Calls]<UL><LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osDisableIRQ
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> los_hw.o(i.osTskStackInit)
 </UL>
-<P><STRONG><a name="[109]"></a>osTaskInit</STRONG> (Thumb, 258 bytes, Stack size 16 bytes, los_task.o(i.osTaskInit))
+<P><STRONG><a name="[10a]"></a>osTaskInit</STRONG> (Thumb, 258 bytes, Stack size 16 bytes, los_task.o(i.osTaskInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 136 + Unknown Stack Size
 <LI>Call Chain = osTaskInit &rArr; osPriqueueInit &rArr; LOS_MemAlloc &rArr; osMemAllocWithCheck &rArr; osMemSpitNode &rArr; LOS_DLnkMultiHead
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListTailInsert
-<LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListInit
+<BR>[Calls]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListTailInsert
+<LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListInit
 <LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemAlloc
-<LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osPriqueueInit
+<LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osPriqueueInit
 <LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMain
+<BR>[Called By]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMain
 </UL>
 
-<P><STRONG><a name="[114]"></a>osTaskMemUsedDec</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, los_memstat.o(i.osTaskMemUsedDec))
-<BR><BR>[Called By]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemFreeNode
+<P><STRONG><a name="[115]"></a>osTaskMemUsedDec</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, los_memstat.o(i.osTaskMemUsedDec))
+<BR><BR>[Called By]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemFreeNode
 </UL>
 
-<P><STRONG><a name="[112]"></a>osTaskMemUsedInc</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, los_memstat.o(i.osTaskMemUsedInc))
-<BR><BR>[Called By]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemAllocWithCheck
+<P><STRONG><a name="[113]"></a>osTaskMemUsedInc</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, los_memstat.o(i.osTaskMemUsedInc))
+<BR><BR>[Called By]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemAllocWithCheck
 </UL>
 
-<P><STRONG><a name="[d1]"></a>osTaskPriModify</STRONG> (Thumb, 56 bytes, Stack size 16 bytes, los_task.o(i.osTaskPriModify))
+<P><STRONG><a name="[d2]"></a>osTaskPriModify</STRONG> (Thumb, 56 bytes, Stack size 16 bytes, los_task.o(i.osTaskPriModify))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = osTaskPriModify &rArr; LOS_PriqueueEnqueue
 </UL>
-<BR>[Calls]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_PriqueueEnqueue
-<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_PriqueueDequeue
+<BR>[Calls]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_PriqueueEnqueue
+<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_PriqueueDequeue
 </UL>
 <BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MuxPost
 <LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MuxPend
 </UL>
 
-<P><STRONG><a name="[11e]"></a>osTaskScan</STRONG> (Thumb, 214 bytes, Stack size 24 bytes, los_task.o(i.osTaskScan))
+<P><STRONG><a name="[11f]"></a>osTaskScan</STRONG> (Thumb, 214 bytes, Stack size 24 bytes, los_task.o(i.osTaskScan))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32 + Unknown Stack Size
 <LI>Call Chain = osTaskScan &rArr; LOS_Schedule
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Schedule
-<LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListDelete
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_PriqueueEnqueue
+<BR>[Calls]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Schedule
+<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListDelete
+<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_PriqueueEnqueue
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTickHandler
+<BR>[Called By]<UL><LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTickHandler
 </UL>
 
-<P><STRONG><a name="[11b]"></a>osTaskSelfDelete</STRONG> (Thumb, 236 bytes, Stack size 24 bytes, los_task.o(i.osTaskSelfDelete))
+<P><STRONG><a name="[11c]"></a>osTaskSelfDelete</STRONG> (Thumb, 236 bytes, Stack size 24 bytes, los_task.o(i.osTaskSelfDelete))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48 + Unknown Stack Size
 <LI>Call Chain = osTaskSelfDelete &rArr; osTimerListDelete
 </UL>
-<BR>[Calls]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSchedule
-<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTimerListDelete
-<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListTailInsert
-<LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListDelete
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
-<LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_PriqueueTop
-<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_PriqueueDequeue
+<BR>[Calls]<UL><LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSchedule
+<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTimerListDelete
+<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListTailInsert
+<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListDelete
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
+<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_PriqueueTop
+<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_PriqueueDequeue
 </UL>
 <BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskEntry
 </UL>
 
-<P><STRONG><a name="[ed]"></a>osTickHandler</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, los_tick.o(i.osTickHandler))
+<P><STRONG><a name="[ee]"></a>osTickHandler</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, los_tick.o(i.osTickHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 152 + Unknown Stack Size
 <LI>Call Chain = osTickHandler &rArr; osSwtmrScan &rArr; osSwTmrTimeoutHandle &rArr; LOS_QueueWrite &rArr; osQueuePend &rArr; osTaskAdd2TimerList &rArr; LOS_ListTailInsert
 </UL>
-<BR>[Calls]<UL><LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTimesliceCheck
-<LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskScan
-<LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwtmrScan
+<BR>[Calls]<UL><LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTimesliceCheck
+<LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskScan
+<LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwtmrScan
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TickHandler
+<BR>[Called By]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TickHandler
 </UL>
 
 <P><STRONG><a name="[a9]"></a>osTickStart</STRONG> (Thumb, 54 bytes, Stack size 8 bytes, los_bsp_adapter.o(i.osTickStart))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = osTickStart
 </UL>
-<BR>[Calls]<UL><LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_SetTickSycle
+<BR>[Calls]<UL><LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_SetTickSycle
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_EnableTick
 </UL>
 
-<P><STRONG><a name="[ba]"></a>osTimerListDelete</STRONG> (Thumb, 66 bytes, Stack size 24 bytes, los_task.o(i.osTimerListDelete))
+<P><STRONG><a name="[bb]"></a>osTimerListDelete</STRONG> (Thumb, 66 bytes, Stack size 24 bytes, los_task.o(i.osTimerListDelete))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = osTimerListDelete
 </UL>
-<BR>[Calls]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListDelete
+<BR>[Calls]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListDelete
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueWakeUp
+<BR>[Called By]<UL><LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueWakeUp
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MuxPost
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_EventWrite
 <LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_SemPost
-<LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskSelfDelete
+<LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskSelfDelete
 <LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelete
 </UL>
 
-<P><STRONG><a name="[11f]"></a>osTimesliceCheck</STRONG> (Thumb, 64 bytes, Stack size 8 bytes, los_timeslice.o(i.osTimesliceCheck))
+<P><STRONG><a name="[120]"></a>osTimesliceCheck</STRONG> (Thumb, 64 bytes, Stack size 8 bytes, los_timeslice.o(i.osTimesliceCheck))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32 + Unknown Stack Size
 <LI>Call Chain = osTimesliceCheck &rArr; LOS_TaskYield &rArr; LOS_Schedule
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskYield
+<BR>[Calls]<UL><LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskYield
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTickHandler
-</UL>
-
-<P><STRONG><a name="[10e]"></a>osTimesliceInit</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, los_timeslice.o(i.osTimesliceInit))
-<BR><BR>[Called By]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMain
+<BR>[Called By]<UL><LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTickHandler
 </UL>
 
-<P><STRONG><a name="[e9]"></a>osTskStackInit</STRONG> (Thumb, 128 bytes, Stack size 12 bytes, los_hw.o(i.osTskStackInit))
+<P><STRONG><a name="[10f]"></a>osTimesliceInit</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, los_timeslice.o(i.osTimesliceInit))
+<BR><BR>[Called By]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMain
+</UL>
+
+<P><STRONG><a name="[ea]"></a>osTskStackInit</STRONG> (Thumb, 128 bytes, Stack size 12 bytes, los_hw.o(i.osTskStackInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = osTskStackInit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreateOnly
+<BR>[Called By]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreateOnly
 </UL>
 
 <P><STRONG><a name="[3f]"></a>recv_Entry</STRONG> (Thumb, 120 bytes, Stack size 32 bytes, los_api_msgqueue.o(i.recv_Entry))
@@ -2255,8 +2260,8 @@ Global Symbols
 <LI>Call Chain = recv_Entry &rArr; LOS_QueueRead &rArr; osQueuePend &rArr; osTaskAdd2TimerList &rArr; LOS_ListTailInsert
 </UL>
 <BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelay
-<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueRead
-<LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueDelete
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueRead
+<LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueDelete
 <LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_InspectStatusSetByID
 <LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
@@ -2267,7 +2272,7 @@ Global Symbols
 <LI>Call Chain = send_Entry &rArr; LOS_QueueWrite &rArr; osQueuePend &rArr; osTaskAdd2TimerList &rArr; LOS_ListTailInsert
 </UL>
 <BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelay
-<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueWrite
+<LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueWrite
 <LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> los_api_msgqueue.o(i.Example_MsgQueue)
@@ -2275,233 +2280,233 @@ Global Symbols
 <H3>
 Local Symbols
 </H3>
-<P><STRONG><a name="[119]"></a>osSwTmrTimeoutHandle</STRONG> (Thumb, 128 bytes, Stack size 16 bytes, los_swtmr.o(i.osSwTmrTimeoutHandle))
+<P><STRONG><a name="[11a]"></a>osSwTmrTimeoutHandle</STRONG> (Thumb, 128 bytes, Stack size 16 bytes, los_swtmr.o(i.osSwTmrTimeoutHandle))
 <BR><BR>[Stack]<UL><LI>Max Depth = 136 + Unknown Stack Size
 <LI>Call Chain = osSwTmrTimeoutHandle &rArr; LOS_QueueWrite &rArr; osQueuePend &rArr; osTaskAdd2TimerList &rArr; LOS_ListTailInsert
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueWrite
+<BR>[Calls]<UL><LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueWrite
 <LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemboxFree
 <LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemboxAlloc
-<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrStart
-<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwtmrDelete
+<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrStart
+<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwtmrDelete
 </UL>
-<BR>[Called By]<UL><LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwtmrScan
+<BR>[Called By]<UL><LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwtmrScan
 </UL>
 
-<P><STRONG><a name="[e2]"></a>osSwtmrDelete</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, los_swtmr.o(i.osSwtmrDelete))
+<P><STRONG><a name="[e3]"></a>osSwtmrDelete</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, los_swtmr.o(i.osSwtmrDelete))
 <BR><BR>[Called By]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_SwtmrDelete
-<LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrTimeoutHandle
+<LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrTimeoutHandle
 </UL>
 
-<P><STRONG><a name="[c2]"></a>LOS_ListAdd</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, los_task.o(i.LOS_ListAdd))
+<P><STRONG><a name="[c3]"></a>LOS_ListAdd</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, los_task.o(i.LOS_ListAdd))
 <BR><BR>[Called By]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelete
-<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreateOnly
-<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListTailInsert
+<LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreateOnly
+<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListTailInsert
 </UL>
 
-<P><STRONG><a name="[e7]"></a>LOS_ListDelete</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, los_task.o(i.LOS_ListDelete))
-<BR><BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTimerListDelete
-<LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskSelfDelete
-<LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskScan
-<LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskYield
+<P><STRONG><a name="[e8]"></a>LOS_ListDelete</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, los_task.o(i.LOS_ListDelete))
+<BR><BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTimerListDelete
+<LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskSelfDelete
+<LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskScan
+<LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskYield
 <LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelete
-<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreateOnly
+<LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreateOnly
 </UL>
 
-<P><STRONG><a name="[e8]"></a>LOS_ListEmpty</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, los_task.o(i.LOS_ListEmpty))
-<BR><BR>[Called By]<UL><LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreateOnly
+<P><STRONG><a name="[e9]"></a>LOS_ListEmpty</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, los_task.o(i.LOS_ListEmpty))
+<BR><BR>[Called By]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreateOnly
 </UL>
 
-<P><STRONG><a name="[11d]"></a>LOS_ListInit</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, los_task.o(i.LOS_ListInit))
-<BR><BR>[Called By]<UL><LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskInit
+<P><STRONG><a name="[11e]"></a>LOS_ListInit</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, los_task.o(i.LOS_ListInit))
+<BR><BR>[Called By]<UL><LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskInit
 </UL>
 
-<P><STRONG><a name="[c1]"></a>LOS_ListTailInsert</STRONG> (Thumb, 16 bytes, Stack size 16 bytes, los_task.o(i.LOS_ListTailInsert))
+<P><STRONG><a name="[c2]"></a>LOS_ListTailInsert</STRONG> (Thumb, 16 bytes, Stack size 16 bytes, los_task.o(i.LOS_ListTailInsert))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = LOS_ListTailInsert
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListAdd
+<BR>[Calls]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListAdd
 </UL>
-<BR>[Called By]<UL><LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskSelfDelete
-<LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskInit
-<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskAdd2TimerList
+<BR>[Called By]<UL><LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskSelfDelete
+<LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskInit
+<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskAdd2TimerList
 <LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelete
 </UL>
 
-<P><STRONG><a name="[c4]"></a>LOS_ListAdd</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, los_mux.o(i.LOS_ListAdd))
+<P><STRONG><a name="[c5]"></a>LOS_ListAdd</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, los_mux.o(i.LOS_ListAdd))
 <BR><BR>[Called By]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MuxDelete
-<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListTailInsert
+<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListTailInsert
 </UL>
 
-<P><STRONG><a name="[cf]"></a>LOS_ListDelete</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, los_mux.o(i.LOS_ListDelete))
+<P><STRONG><a name="[d0]"></a>LOS_ListDelete</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, los_mux.o(i.LOS_ListDelete))
 <BR><BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MuxPost
 <LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MuxCreate
 </UL>
 
-<P><STRONG><a name="[ce]"></a>LOS_ListEmpty</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, los_mux.o(i.LOS_ListEmpty))
+<P><STRONG><a name="[cf]"></a>LOS_ListEmpty</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, los_mux.o(i.LOS_ListEmpty))
 <BR><BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MuxPost
 <LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MuxDelete
 <LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MuxCreate
 </UL>
 
-<P><STRONG><a name="[d0]"></a>LOS_ListInit</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, los_mux.o(i.LOS_ListInit))
-<BR><BR>[Called By]<UL><LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMuxInit
+<P><STRONG><a name="[d1]"></a>LOS_ListInit</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, los_mux.o(i.LOS_ListInit))
+<BR><BR>[Called By]<UL><LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMuxInit
 <LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MuxCreate
 </UL>
 
-<P><STRONG><a name="[c3]"></a>LOS_ListTailInsert</STRONG> (Thumb, 16 bytes, Stack size 16 bytes, los_mux.o(i.LOS_ListTailInsert))
+<P><STRONG><a name="[c4]"></a>LOS_ListTailInsert</STRONG> (Thumb, 16 bytes, Stack size 16 bytes, los_mux.o(i.LOS_ListTailInsert))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = LOS_ListTailInsert
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListAdd
+<BR>[Calls]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListAdd
 </UL>
-<BR>[Called By]<UL><LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMuxInit
+<BR>[Called By]<UL><LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMuxInit
 <LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MuxPend
 </UL>
 
-<P><STRONG><a name="[117]"></a>LOS_ListAdd</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, los_queue.o(i.LOS_ListAdd))
-<BR><BR>[Called By]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueuePend
+<P><STRONG><a name="[118]"></a>LOS_ListAdd</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, los_queue.o(i.LOS_ListAdd))
+<BR><BR>[Called By]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueuePend
 </UL>
 
-<P><STRONG><a name="[d5]"></a>LOS_ListEmpty</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, los_queue.o(i.LOS_ListEmpty))
-<BR><BR>[Called By]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueuePend
-<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueWrite
-<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueRead
-<LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueDelete
+<P><STRONG><a name="[d6]"></a>LOS_ListEmpty</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, los_queue.o(i.LOS_ListEmpty))
+<BR><BR>[Called By]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueuePend
+<LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueWrite
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueRead
+<LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueDelete
 </UL>
 
-<P><STRONG><a name="[d3]"></a>LOS_ListInit</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, los_queue.o(i.LOS_ListInit))
+<P><STRONG><a name="[d4]"></a>LOS_ListInit</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, los_queue.o(i.LOS_ListInit))
 <BR><BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueCreate
 </UL>
 
-<P><STRONG><a name="[d7]"></a>osQueuePend</STRONG> (Thumb, 132 bytes, Stack size 24 bytes, los_queue.o(i.osQueuePend))
+<P><STRONG><a name="[d8]"></a>osQueuePend</STRONG> (Thumb, 132 bytes, Stack size 24 bytes, los_queue.o(i.osQueuePend))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = osQueuePend &rArr; osTaskAdd2TimerList &rArr; LOS_ListTailInsert
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListEmpty
-<LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListAdd
-<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskAdd2TimerList
-<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_PriqueueDequeue
+<BR>[Calls]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListEmpty
+<LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListAdd
+<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskAdd2TimerList
+<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_PriqueueDequeue
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueWrite
-<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueRead
+<BR>[Called By]<UL><LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueWrite
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueRead
 </UL>
 
-<P><STRONG><a name="[d8]"></a>osQueueWakeUp</STRONG> (Thumb, 90 bytes, Stack size 16 bytes, los_queue.o(i.osQueueWakeUp))
+<P><STRONG><a name="[d9]"></a>osQueueWakeUp</STRONG> (Thumb, 90 bytes, Stack size 16 bytes, los_queue.o(i.osQueueWakeUp))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = osQueueWakeUp &rArr; osTimerListDelete
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTimerListDelete
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_PriqueueEnqueue
+<BR>[Calls]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTimerListDelete
+<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_PriqueueEnqueue
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueWrite
-<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueRead
+<BR>[Called By]<UL><LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueWrite
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueRead
 </UL>
 
-<P><STRONG><a name="[c6]"></a>LOS_ListAdd</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, los_sem.o(i.LOS_ListAdd))
+<P><STRONG><a name="[c7]"></a>LOS_ListAdd</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, los_sem.o(i.LOS_ListAdd))
 <BR><BR>[Called By]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_SemDelete
-<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListTailInsert
+<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListTailInsert
 </UL>
 
-<P><STRONG><a name="[dd]"></a>LOS_ListDelete</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, los_sem.o(i.LOS_ListDelete))
+<P><STRONG><a name="[de]"></a>LOS_ListDelete</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, los_sem.o(i.LOS_ListDelete))
 <BR><BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_SemPost
 <LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_SemCreate
 </UL>
 
-<P><STRONG><a name="[dc]"></a>LOS_ListEmpty</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, los_sem.o(i.LOS_ListEmpty))
+<P><STRONG><a name="[dd]"></a>LOS_ListEmpty</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, los_sem.o(i.LOS_ListEmpty))
 <BR><BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_SemPost
 <LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_SemDelete
 <LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_SemCreate
 </UL>
 
-<P><STRONG><a name="[de]"></a>LOS_ListInit</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, los_sem.o(i.LOS_ListInit))
-<BR><BR>[Called By]<UL><LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSemInit
+<P><STRONG><a name="[df]"></a>LOS_ListInit</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, los_sem.o(i.LOS_ListInit))
+<BR><BR>[Called By]<UL><LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSemInit
 <LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_SemCreate
 </UL>
 
-<P><STRONG><a name="[c5]"></a>LOS_ListTailInsert</STRONG> (Thumb, 16 bytes, Stack size 16 bytes, los_sem.o(i.LOS_ListTailInsert))
+<P><STRONG><a name="[c6]"></a>LOS_ListTailInsert</STRONG> (Thumb, 16 bytes, Stack size 16 bytes, los_sem.o(i.LOS_ListTailInsert))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = LOS_ListTailInsert
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListAdd
+<BR>[Calls]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListAdd
 </UL>
-<BR>[Called By]<UL><LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSemInit
+<BR>[Called By]<UL><LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSemInit
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_SemPend
 </UL>
 
-<P><STRONG><a name="[cc]"></a>LOS_ListAdd</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, los_memory.o(i.LOS_ListAdd))
+<P><STRONG><a name="[cd]"></a>LOS_ListAdd</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, los_memory.o(i.LOS_ListAdd))
 <BR><BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemInit
-<LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemSpitNode
-<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemFreeNode
+<LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemSpitNode
+<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemFreeNode
 </UL>
 
-<P><STRONG><a name="[111]"></a>LOS_ListDelete</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, los_memory.o(i.LOS_ListDelete))
-<BR><BR>[Called By]<UL><LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemSpitNode
-<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemFreeNode
-<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemAllocWithCheck
+<P><STRONG><a name="[112]"></a>LOS_ListDelete</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, los_memory.o(i.LOS_ListDelete))
+<BR><BR>[Called By]<UL><LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemSpitNode
+<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemFreeNode
+<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemAllocWithCheck
 </UL>
 
-<P><STRONG><a name="[c7]"></a>osMemAllocWithCheck</STRONG> (Thumb, 92 bytes, Stack size 24 bytes, los_memory.o(i.osMemAllocWithCheck))
+<P><STRONG><a name="[c8]"></a>osMemAllocWithCheck</STRONG> (Thumb, 92 bytes, Stack size 24 bytes, los_memory.o(i.osMemAllocWithCheck))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = osMemAllocWithCheck &rArr; osMemSpitNode &rArr; LOS_DLnkMultiHead
 </UL>
-<BR>[Calls]<UL><LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskMemUsedInc
-<LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemSpitNode
-<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemSetMagicNumAndTaskid
-<LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemFindSuitableFreeBlock
-<LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListDelete
+<BR>[Calls]<UL><LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskMemUsedInc
+<LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemSpitNode
+<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemSetMagicNumAndTaskid
+<LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemFindSuitableFreeBlock
+<LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListDelete
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemAllocAlign
+<BR>[Called By]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemAllocAlign
 <LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemAlloc
 </UL>
 
-<P><STRONG><a name="[c9]"></a>osMemCheckUsedNode</STRONG> (Thumb, 152 bytes, Stack size 40 bytes, los_memory.o(i.osMemCheckUsedNode))
+<P><STRONG><a name="[ca]"></a>osMemCheckUsedNode</STRONG> (Thumb, 152 bytes, Stack size 40 bytes, los_memory.o(i.osMemCheckUsedNode))
 <BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = osMemCheckUsedNode &rArr; osMemIsNodeValid
 </UL>
-<BR>[Calls]<UL><LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemIsNodeValid
+<BR>[Calls]<UL><LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemIsNodeValid
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemFree
 </UL>
 
-<P><STRONG><a name="[10f]"></a>osMemFindSuitableFreeBlock</STRONG> (Thumb, 80 bytes, Stack size 16 bytes, los_memory.o(i.osMemFindSuitableFreeBlock))
+<P><STRONG><a name="[110]"></a>osMemFindSuitableFreeBlock</STRONG> (Thumb, 80 bytes, Stack size 16 bytes, los_memory.o(i.osMemFindSuitableFreeBlock))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = osMemFindSuitableFreeBlock &rArr; LOS_DLnkMultiHead
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_DLnkMultiHead
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemAllocWithCheck
+<BR>[Called By]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemAllocWithCheck
 </UL>
 
-<P><STRONG><a name="[ca]"></a>osMemFreeNode</STRONG> (Thumb, 178 bytes, Stack size 24 bytes, los_memory.o(i.osMemFreeNode))
+<P><STRONG><a name="[cb]"></a>osMemFreeNode</STRONG> (Thumb, 178 bytes, Stack size 24 bytes, los_memory.o(i.osMemFreeNode))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = osMemFreeNode &rArr; LOS_DLnkMultiHead
 </UL>
-<BR>[Calls]<UL><LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskMemUsedDec
+<BR>[Calls]<UL><LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskMemUsedDec
 <LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_DLnkMultiHead
-<LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemMergeNode
-<LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListDelete
-<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListAdd
+<LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemMergeNode
+<LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListDelete
+<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListAdd
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemFree
 </UL>
 
-<P><STRONG><a name="[113]"></a>osMemIsNodeValid</STRONG> (Thumb, 62 bytes, Stack size 12 bytes, los_memory.o(i.osMemIsNodeValid))
+<P><STRONG><a name="[114]"></a>osMemIsNodeValid</STRONG> (Thumb, 62 bytes, Stack size 12 bytes, los_memory.o(i.osMemIsNodeValid))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = osMemIsNodeValid
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemCheckUsedNode
+<BR>[Called By]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemCheckUsedNode
 </UL>
 
-<P><STRONG><a name="[115]"></a>osMemMergeNode</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, los_memory.o(i.osMemMergeNode))
-<BR><BR>[Called By]<UL><LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemSpitNode
-<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemFreeNode
+<P><STRONG><a name="[116]"></a>osMemMergeNode</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, los_memory.o(i.osMemMergeNode))
+<BR><BR>[Called By]<UL><LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemSpitNode
+<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemFreeNode
 </UL>
 
-<P><STRONG><a name="[cd]"></a>osMemSetMagicNumAndTaskid</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, los_memory.o(i.osMemSetMagicNumAndTaskid))
+<P><STRONG><a name="[ce]"></a>osMemSetMagicNumAndTaskid</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, los_memory.o(i.osMemSetMagicNumAndTaskid))
 <BR><BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_MemInit
-<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemAllocWithCheck
+<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemAllocWithCheck
 </UL>
 
-<P><STRONG><a name="[110]"></a>osMemSpitNode</STRONG> (Thumb, 92 bytes, Stack size 32 bytes, los_memory.o(i.osMemSpitNode))
+<P><STRONG><a name="[111]"></a>osMemSpitNode</STRONG> (Thumb, 92 bytes, Stack size 32 bytes, los_memory.o(i.osMemSpitNode))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = osMemSpitNode &rArr; LOS_DLnkMultiHead
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_DLnkMultiHead
-<LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemMergeNode
-<LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListDelete
-<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListAdd
+<LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemMergeNode
+<LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListDelete
+<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListAdd
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemAllocWithCheck
+<BR>[Called By]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemAllocWithCheck
 </UL>
 
 <P><STRONG><a name="[a6]"></a>LOS_Log2</STRONG> (Thumb, 320 bytes, Stack size 0 bytes, los_multipledlinkhead.o(i.LOS_Log2))
@@ -2524,7 +2529,7 @@ Local Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_list
 </UL>
 
-<P><STRONG><a name="[be]"></a>LOS_Inspect_KeyAndLed</STRONG> (Thumb, 64 bytes, Stack size 16 bytes, los_inspect_entry.o(i.LOS_Inspect_KeyAndLed))
+<P><STRONG><a name="[bf]"></a>LOS_Inspect_KeyAndLed</STRONG> (Thumb, 64 bytes, Stack size 16 bytes, los_inspect_entry.o(i.LOS_Inspect_KeyAndLed))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80 + Unknown Stack Size
 <LI>Call Chain = LOS_Inspect_KeyAndLed &rArr; LOS_TaskDelay &rArr; osTaskAdd2TimerList &rArr; LOS_ListTailInsert
 </UL>
@@ -2536,10 +2541,10 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Inspect_TskDeal
 </UL>
 
-<P><STRONG><a name="[fe]"></a>BUS_RegBitRead</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, em_cmu.o(i.BUS_RegBitRead))
+<P><STRONG><a name="[ff]"></a>BUS_RegBitRead</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, em_cmu.o(i.BUS_RegBitRead))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = BUS_RegBitRead
 </UL>
-<BR>[Called By]<UL><LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getHfLeConfig
+<BR>[Called By]<UL><LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getHfLeConfig
 </UL>
 
 <P><STRONG><a name="[6f]"></a>BUS_RegBitWrite</STRONG> (Thumb, 18 bytes, Stack size 12 bytes, em_cmu.o(i.BUS_RegBitWrite))
@@ -2562,16 +2567,16 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = dbgClkGet
 </UL>
 <BR>[Calls]<UL><LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemHFClockGet
-<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMU_ClockSelectGet
+<LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMU_ClockSelectGet
 <LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;auxClkGet
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMU_ClockFreqGet
 </UL>
 
-<P><STRONG><a name="[fd]"></a>getHfLeConfig</STRONG> (Thumb, 28 bytes, Stack size 16 bytes, em_cmu.o(i.getHfLeConfig))
+<P><STRONG><a name="[fe]"></a>getHfLeConfig</STRONG> (Thumb, 28 bytes, Stack size 16 bytes, em_cmu.o(i.getHfLeConfig))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = getHfLeConfig &rArr; BUS_RegBitRead
 </UL>
-<BR>[Calls]<UL><LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUS_RegBitRead
+<BR>[Calls]<UL><LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUS_RegBitRead
 </UL>
 <BR>[Called By]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lfClkGet
 </UL>
@@ -2579,12 +2584,12 @@ Local Symbols
 <P><STRONG><a name="[72]"></a>lfClkGet</STRONG> (Thumb, 192 bytes, Stack size 24 bytes, em_cmu.o(i.lfClkGet))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = lfClkGet &rArr; getHfLeConfig &rArr; BUS_RegBitRead
 </UL>
-<BR>[Calls]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemULFRCOClockGet
-<LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemLFXOClockGet
-<LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemLFRCOClockGet
+<BR>[Calls]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemULFRCOClockGet
+<LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemLFXOClockGet
+<LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemLFRCOClockGet
 <LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemCoreClockGet
-<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMU_ClockSelectGet
-<LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getHfLeConfig
+<LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMU_ClockSelectGet
+<LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getHfLeConfig
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMU_ClockFreqGet
 </UL>
@@ -2608,10 +2613,10 @@ Local Symbols
 <P><STRONG><a name="[76]"></a>usbCClkGet</STRONG> (Thumb, 58 bytes, Stack size 16 bytes, em_cmu.o(i.usbCClkGet))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = usbCClkGet
 </UL>
-<BR>[Calls]<UL><LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemLFXOClockGet
-<LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemLFRCOClockGet
+<BR>[Calls]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemLFXOClockGet
+<LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemLFRCOClockGet
 <LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemHFClockGet
-<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMU_ClockSelectGet
+<LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMU_ClockSelectGet
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMU_ClockFreqGet
 </UL>
@@ -2628,33 +2633,33 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_PinModeSet
 </UL>
 
-<P><STRONG><a name="[f7]"></a>_fp_digits</STRONG> (Thumb, 366 bytes, Stack size 64 bytes, printfa.o(i._fp_digits), UNUSED)
+<P><STRONG><a name="[f8]"></a>_fp_digits</STRONG> (Thumb, 366 bytes, Stack size 64 bytes, printfa.o(i._fp_digits), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
 <LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2ulz
 <LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
 <LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
 <LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
-<LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_cdrcmple
+<LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_cdrcmple
 </UL>
-<BR>[Called By]<UL><LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
+<BR>[Called By]<UL><LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
 </UL>
 
-<P><STRONG><a name="[f6]"></a>_printf_core</STRONG> (Thumb, 1744 bytes, Stack size 136 bytes, printfa.o(i._printf_core), UNUSED)
+<P><STRONG><a name="[f7]"></a>_printf_core</STRONG> (Thumb, 1744 bytes, Stack size 136 bytes, printfa.o(i._printf_core), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
-<LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
-<LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_pre_padding
-<LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_post_padding
-<LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
+<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_pre_padding
+<LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_post_padding
+<LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
 </UL>
-<BR>[Called By]<UL><LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__0printf
-</UL>
-
-<P><STRONG><a name="[fa]"></a>_printf_post_padding</STRONG> (Thumb, 36 bytes, Stack size 24 bytes, printfa.o(i._printf_post_padding), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
+<BR>[Called By]<UL><LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__0printf
 </UL>
 
-<P><STRONG><a name="[f9]"></a>_printf_pre_padding</STRONG> (Thumb, 46 bytes, Stack size 24 bytes, printfa.o(i._printf_pre_padding), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
+<P><STRONG><a name="[fb]"></a>_printf_post_padding</STRONG> (Thumb, 36 bytes, Stack size 24 bytes, printfa.o(i._printf_post_padding), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
+</UL>
+
+<P><STRONG><a name="[fa]"></a>_printf_pre_padding</STRONG> (Thumb, 46 bytes, Stack size 24 bytes, printfa.o(i._printf_pre_padding), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
 </UL>
 <P>
 <H3>

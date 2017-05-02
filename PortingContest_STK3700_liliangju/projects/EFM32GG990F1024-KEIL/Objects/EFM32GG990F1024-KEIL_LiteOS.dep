@@ -534,7 +534,7 @@ I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (..\..\kernel\include\los_list.h)(0x58F1BF41)
 I (..\..\kernel\include\los_errno.h)(0x58F1BF41)
 I (..\..\kernel\include\los_sys.h)(0x58F1BF41)
-F (..\..\platform\EFM32GG990F1024-STK3700\los_bsp_adapter.c)(0x5901B55F)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m3 -I ..\..\example\include -I ..\..\platform\EFM32GG990F1024-STK3700 -I ..\..\platform\EFM32GG990F1024-STK3700\library\bsp -I ..\..\platform\EFM32GG990F1024-STK3700\library\emlib\inc -I ..\..\platform\EFM32GG990F1024-STK3700\library\CMSIS\Include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\EFM32GGxxx_DFP\2.3.0\Device\EFM32GG\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DEFM32GG990F1024-o .\objects\los_bsp_adapter.o --omf_browse .\objects\los_bsp_adapter.crf --depend .\objects\los_bsp_adapter.d)
+F (..\..\platform\EFM32GG990F1024-STK3700\los_bsp_adapter.c)(0x5907E6E3)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m3 -I ..\..\example\include -I ..\..\platform\EFM32GG990F1024-STK3700 -I ..\..\platform\EFM32GG990F1024-STK3700\library\bsp -I ..\..\platform\EFM32GG990F1024-STK3700\library\emlib\inc -I ..\..\platform\EFM32GG990F1024-STK3700\library\CMSIS\Include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\EFM32GGxxx_DFP\2.3.0\Device\EFM32GG\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DEFM32GG990F1024-o .\objects\los_bsp_adapter.o --omf_browse .\objects\los_bsp_adapter.crf --depend .\objects\los_bsp_adapter.d)
 I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (..\..\platform\EFM32GG990F1024-STK3700\los_bsp_adapter.h)(0x58F1BF41)
@@ -615,6 +615,9 @@ I (..\..\kernel\include\los_sys.h)(0x58F1BF41)
 I (..\..\kernel\cpu\arm\cortex-m3\los_hwi.h)(0x58F1BF41)
 I (..\..\kernel\include\los_event.h)(0x58F1BF41)
 I (..\..\kernel\include\los_swtmr.h)(0x58F1BF41)
+I (..\..\platform\EFM32GG990F1024-STK3700\library\emlib\inc\em_chip.h)(0x58C231AA)
+I (..\..\platform\EFM32GG990F1024-STK3700\library\emlib\inc\em_system.h)(0x58C231AA)
+I (..\..\platform\EFM32GG990F1024-STK3700\library\emlib\inc\em_gpio.h)(0x58C231AA)
 F (..\..\platform\EFM32GG990F1024-STK3700\los_bsp_key.c)(0x59018A48)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m3 -I ..\..\example\include -I ..\..\platform\EFM32GG990F1024-STK3700 -I ..\..\platform\EFM32GG990F1024-STK3700\library\bsp -I ..\..\platform\EFM32GG990F1024-STK3700\library\emlib\inc -I ..\..\platform\EFM32GG990F1024-STK3700\library\CMSIS\Include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\EFM32GGxxx_DFP\2.3.0\Device\EFM32GG\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DEFM32GG990F1024-o .\objects\los_bsp_key.o --omf_browse .\objects\los_bsp_key.crf --depend .\objects\los_bsp_key.d)
 I (..\..\platform\EFM32GG990F1024-STK3700\los_bsp_key.h)(0x58F1BF41)
 I (..\..\platform\EFM32GG990F1024-STK3700\library\bsp\bsp.h)(0x58C2319C)

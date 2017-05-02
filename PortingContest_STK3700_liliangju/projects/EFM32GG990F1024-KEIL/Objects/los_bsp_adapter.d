@@ -81,3 +81,6 @@
 .\objects\los_bsp_adapter.o: ..\..\kernel\include\los_sys.h
 .\objects\los_bsp_adapter.o: ..\..\kernel\include\los_event.h
 .\objects\los_bsp_adapter.o: ..\..\kernel\include\los_swtmr.h
+.\objects\los_bsp_adapter.o: ..\..\platform\EFM32GG990F1024-STK3700\library\emlib\inc\em_chip.h
+.\objects\los_bsp_adapter.o: ..\..\platform\EFM32GG990F1024-STK3700\library\emlib\inc\em_system.h
+.\objects\los_bsp_adapter.o: ..\..\platform\EFM32GG990F1024-STK3700\library\emlib\inc\em_gpio.h

@@ -21,9 +21,8 @@
 /******************************************************************************
 	here include some special hearder file you need
 ******************************************************************************/
-
-
-
+#include "em_device.h"
+#include "em_chip.h"
 
 /*****************************************************************************
 	global var
@@ -203,7 +202,7 @@ void LosAdapIrqDisable(unsigned int irqnum)
 void LOS_EvbSetup(void)
 {
 	/* Chip errata */
-  //CHIP_Init();	
+  CHIP_Init();	
 	LOS_EvbUartInit();
 	LOS_EvbLedInit();
 	LOS_EvbKeyInit();
