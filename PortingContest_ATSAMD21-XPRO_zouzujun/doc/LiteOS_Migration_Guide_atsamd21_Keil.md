@@ -343,12 +343,11 @@ Keil工具需要开发者自行购买，EDBG驱动程序可以从网络获取，
 新增los_bsp_clock.c文件，修改设置芯片时钟为48MHz:
 
 `
-int SystemClockInit(void) {
-	_system_clock_source_setting();
-	_system_clock_dfll_setting();
-	_system_clock_gclkgen_setting();
-	
-	return 0;
+int SystemClockInit(void) {		
+　　_system_clock_source_setting();		
+　　_system_clock_dfll_setting();		
+　　_system_clock_gclkgen_setting();		
+　　return 0;		
 }`
 
 ### 修改串口初始化接口
@@ -388,59 +387,59 @@ Xplained Pro开发板上有一个复位按键和一个用户按键，用户按�
 ## 修改LiteOS部分代码
 在测试的时候发现Example_MsgQueue这个测试始终通过不了，
 
-`/*队列Write*/
+`/*队列Write*/		
 *((UINT32 *)pucQueueNode) = (UINT32)pBufferAddr;`
 
 改为如下：
 
-`/*队列Write*/
-for(i=0; i<uwBufferSize; i++) {
-		UINT8 *ptData = (UINT8 *)pBufferAddr;
-		
-		pucQueueNode[i] = ptData[i];
-	}
-	pucQueueNode[uwBufferSize] = 0;`
+`/*队列Write*/		
+for(i=0; i<uwBufferSize; i++) {		
+　　UINT8 *ptData = (UINT8 *)pBufferAddr;		
+　　pucQueueNode[i] = ptData[i];	
+}	
+pucQueueNode[uwBufferSize] = 0;`
 
-`/*队列Read*/
+
+`/*队列Read*/		
 *(UINT32*)pBufferAddr = *(UINT32*)(pucQueueNode);`
 
 改为如下：
 
-`/*队列Read*/
+`/*队列Read*/		
 *(UINT32*)pBufferAddr = (UINT32)pucQueueNode;`
 
-在los_config.h中，做相应配置：
-`#define OS_SYS_CLOCK                                    16000000`
-改为：
-`#define OS_SYS_CLOCK                                    48000000`
+在los_config.h中，做相应配置：		
+`#define OS_SYS_CLOCK                                    16000000`		
+改为：		
+`#define OS_SYS_CLOCK                                    48000000`		
 
-`#define OS_SYS_MEM_SIZE                                     0x00008000          // size`
-改为：
+`#define OS_SYS_MEM_SIZE                                     0x00008000          // size`		
+改为：		
 `#define OS_SYS_MEM_SIZE                                     0x00007400          // size`
 
 ### main函数修改
 
 修改main函数如下，其中调用巡检函数LOS_Inspect_Entry：
 
-`/*****************************************************************************
- Function    : main
- Description : Main function entry
- Input       : None
- Output      : None
- Return      : None
- *****************************************************************************/
-int main(void)
-{
-	UINT32 uwRet;
-	uwRet = LOS_KernelInit();
-	if (uwRet != LOS_OK) {
-		return LOS_NOK;
-	}
-	LOS_EnableTick();
-	LOS_EvbSetup(); 
-	LOS_Inspect_Entry();
-	LOS_Start();
-	for (;;);
+`/*****************************************************************************		
+ Function    : main		
+ Description : Main function entry		
+ Input       : None		
+ Output      : None		
+ Return      : None		
+ *****************************************************************************/		
+int main(void)		
+{		
+　　UINT32 uwRet;		
+　　uwRet = LOS_KernelInit();		
+　　if (uwRet != LOS_OK) {		
+　　　　return LOS_NOK;		
+　　}		
+　　LOS_EnableTick();		
+　　LOS_EvbSetup();		
+　　LOS_Inspect_Entry();		
+　　LOS_Start();		
+　　for (;;);		
 }`
 
 ### 验证移植后的工程
