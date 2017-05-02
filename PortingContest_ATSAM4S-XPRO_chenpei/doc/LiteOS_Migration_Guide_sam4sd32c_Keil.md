@@ -294,7 +294,7 @@ Keil工具需要开发者自行安装，开发板的调试器是为板载调试�
 
 [http://www.keil.com/dd2/atmel/atsam4sd32c/](http://www.keil.com/dd2/atmel/atsam4sd32c/ "atsam4sd32c")
 
-![](./meta/keil/sam4sd32c/ATSAM4SD32C-keil.PNG)
+![](./meta/keil/sam4sd32c/ATSAM4SD32C-keil.png)
 
 点击download下载安装即可，安装后效果如下：
 
