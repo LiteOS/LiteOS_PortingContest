@@ -287,18 +287,18 @@ Keil工具需要开发者自行购买，EDBG驱动程序可以从网络获取，
 获取到LiteOS内核代码后，在project目录下新建文件夹ATSAMD21-XPRO-KEIL。重命名platform目录下的文件夹LOS_EXPAND_xxx为ATSAMD21-XPRO。
 打开keil，新建工程，保存在project\LiteOS_Arduino_M0_Pro_Expand目录下，工程名为LiteOS，器件选择如下：
 
-![](./meta/keil/samd21j18a/ProjectWizard1.png)
+![](./meta/keil/atsamd21j18a/ProjectWizard1.png)
 
 下一个界面，选择如下：
 
-![](./meta/keil/samd21j18a/ProjectWizard2.png)
+![](./meta/keil/atsamd21j18a/ProjectWizard2.png)
 
 点击OK即可，至此，我们的工程已经创建完成。
 
 ### 添加kernel代码到工程
 创建如下目录层级：
 
-![](./meta/keil/samd21j18a/ProjectManage.png)
+![](./meta/keil/atsamd21j18a/ProjectManage.png)
 
 创建完成目录树之后我们添加源代码到目录树中，最终添加完成的内容如下：
 
@@ -310,20 +310,20 @@ Keil工具需要开发者自行购买，EDBG驱动程序可以从网络获取，
 - 将user目录下的所有C文件添加到工程中的user下
 - 添加example/api目录下的所有C文件到工程的example目录下
 
-![](./meta/keil/samd21j18a/filelist.png)
+![](./meta/keil/atsamd21j18a/filelist.png)
 
 ### 配置工程属性
 打开配置文件，如下，在Target界面勾选上“Use MicroLIB”：
 
-![](./meta/keil/samd21j18a/target.png)
+![](./meta/keil/atsamd21j18a/target.png)
 
 点击“Include Paths”后面的省略号，添加如下头文件路径：
 
-![](./meta/keil/samd21j18a/path.png)
+![](./meta/keil/atsamd21j18a/path.png)
 
 在Debugger界面，设置如下，大部分都是默认，只有右上角的Use，选择CMSIS-DAP Debugger。
 
-![](./meta/keil/samd21j18a/debug.png)
+![](./meta/keil/atsamd21j18a/debug.png)
 
 ## 8 适配驱动代码
 
@@ -342,14 +342,14 @@ Keil工具需要开发者自行购买，EDBG驱动程序可以从网络获取，
 参考网络上ATSAMD21时钟初始化的文章：http://bbs.eeworld.com.cn/thread-448782-1-1.html及Atmel Studio样例工程：
 新增los_bsp_clock.c文件，修改设置芯片时钟为48MHz:
 
-```
+`
 int SystemClockInit(void) {
 	_system_clock_source_setting();
 	_system_clock_dfll_setting();
 	_system_clock_gclkgen_setting();
 	
 	return 0;
-}
+}`
 
 ### 修改串口初始化接口
 参考Atmel Studio样例程序的串口初始化：
@@ -357,33 +357,33 @@ int SystemClockInit(void) {
 新增uart.c文件，增加串口初始化及读写函数：
 其中UART初始化函数如下，由于使用的是SERCOM3，参数为N 8 1，波特率9600：
 
-![](./meta/keil/samd21j18a/uartinit.png)
+![](./meta/keil/atsamd21j18a/uartinit.png)
 
 UART读写函数如下：
 
-![](./meta/keil/samd21j18a/uartreadwrite.png)
+![](./meta/keil/atsamd21j18a/uartreadwrite.png)
 
-![](./meta/keil/samd21j18a/uartprintf.png)
+![](./meta/keil/atsamd21j18a/uartprintf.png)
 
 随后还有一些重定向函数，定义了之后可以使用printf直接从串口输出数据。
 
-![](./meta/keil/samd21j18a/fputc.png)
+![](./meta/keil/atsamd21j18a/fputc.png)
 
 ### 修改los_bsp_led.c
 
 Xplained Pro开发板上的LED灯，对应ATSAMD21J18A的PB30，所以此处设置LED的初始化函数如下，其中设置PB30为输出口：
 
-![](./meta/keil/samd21j18a/ledinit.png)
+![](./meta/keil/atsamd21j18a/ledinit.png)
 
 因为只控制这一个LED，所以修改其控制函数如下，PB30为低电平的时候，L灯亮，反之，L灯灭：
 
-![](./meta/keil/samd21j18a/ledcontrol.png)
+![](./meta/keil/atsamd21j18a/ledcontrol.png)
 
 ### 修改los_bsp_key.c
 
 Xplained Pro开发板上有一个复位按键和一个用户按键，用户按键对应PA15，其初始化函数如下：
 
-![](./meta/keil/samd21j18a/keyinit.png)
+![](./meta/keil/atsamd21j18a/keyinit.png)
 
 ## 修改LiteOS部分代码
 在测试的时候发现Example_MsgQueue这个测试始终通过不了，
@@ -410,20 +410,19 @@ for(i=0; i<uwBufferSize; i++) {
 *(UINT32*)pBufferAddr = (UINT32)pucQueueNode;`
 
 在los_config.h中，做相应配置：
-#define OS_SYS_CLOCK                                    16000000
+`#define OS_SYS_CLOCK                                    16000000`
 改为：
-#define OS_SYS_CLOCK                                    48000000
+`#define OS_SYS_CLOCK                                    48000000`
 
-#define OS_SYS_MEM_SIZE                                     0x00008000          // size
+`#define OS_SYS_MEM_SIZE                                     0x00008000          // size`
 改为：
-#define OS_SYS_MEM_SIZE                                     0x00007400          // size
+`#define OS_SYS_MEM_SIZE                                     0x00007400          // size`
 
 ### main函数修改
 
 修改main函数如下，其中调用巡检函数LOS_Inspect_Entry：
 
-```
-/*****************************************************************************
+`/*****************************************************************************
  Function    : main
  Description : Main function entry
  Input       : None
@@ -432,25 +431,23 @@ for(i=0; i<uwBufferSize; i++) {
  *****************************************************************************/
 int main(void)
 {
-    UINT32 uwRet;
-    uwRet = LOS_KernelInit();
-    if (uwRet != LOS_OK) {
-        return LOS_NOK;
-    }
-    LOS_EnableTick();
-    LOS_EvbSetup(); 
-    LOS_Inspect_Entry();
-    LOS_Start();
-    for (;;);
-}
-```
-
+	UINT32 uwRet;
+	uwRet = LOS_KernelInit();
+	if (uwRet != LOS_OK) {
+		return LOS_NOK;
+	}
+	LOS_EnableTick();
+	LOS_EvbSetup(); 
+	LOS_Inspect_Entry();
+	LOS_Start();
+	for (;;);
+}`
 
 ### 验证移植后的工程
 
 连接Xplained Pro开发板的Programmer接口到计算机，在计算机上会出现一个EDBG虚拟串口的设备，keil编译、下载，打开串口调试工具，选择出现的EDBG虚拟串口，速率选择为9600，然后按下Xplained Pro开发板上的复位按钮，会显示如下结果，表示巡检程序运行正常：
 
-![](./meta/keil/samd21j18a/result.png)
+![](./meta/keil/atsamd21j18a/result.png)
 
 - 从Atmel官网获取Atmel Stduio，网址为：http://www.atmel.com/zh/cn/tools/atmelstudio.aspx?tab=overview
 
