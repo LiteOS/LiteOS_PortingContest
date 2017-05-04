@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\EFM32GG990F1024-KEIL.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\EFM32GG990F1024-KEIL.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060422: Last Updated: Tue May 02 15:20:28 2017
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060422: Last Updated: Thu May 04 11:33:00 2017
 <BR><P>
 <H3>Maximum Stack Usage =        288 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -363,11 +363,11 @@ Global Symbols
 <LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrInit
 <LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueInit
 <LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueCreate
+<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Inspect_Entry
+<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Demo_Entry
 <LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_Semphore
 <LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_MutexLock
 <LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_SndRcvEvent
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Inspect_Entry
-<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Demo_Entry
 </UL>
 
 <P><STRONG><a name="[129]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
@@ -629,9 +629,9 @@ Global Symbols
 <LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;maxFreqHfle
 <LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUS_RegBitWrite
 </UL>
-<BR>[Called By]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_LedsInit
+<BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Buttons_Initialize
+<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_LedsInit
 <LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RETARGET_SerialInit
-<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Buttons_Initialize
 </UL>
 
 <P><STRONG><a name="[6b]"></a>CMU_ClockFreqGet</STRONG> (Thumb, 300 bytes, Stack size 16 bytes, em_cmu.o(i.CMU_ClockFreqGet))
@@ -645,8 +645,8 @@ Global Symbols
 <LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;auxClkGet
 <LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMU_DivToLog2
 </UL>
-<BR>[Called By]<UL><LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_BaudrateAsyncSet
-<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMU_ClockEnable
+<BR>[Called By]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMU_ClockEnable
+<LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_BaudrateAsyncSet
 </UL>
 
 <P><STRONG><a name="[fa]"></a>CMU_ClockSelectGet</STRONG> (Thumb, 266 bytes, Stack size 0 bytes, em_cmu.o(i.CMU_ClockSelectGet))
@@ -872,9 +872,9 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_PinOutSet
 <LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_PinOutClear
 </UL>
-<BR>[Called By]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_LedsInit
+<BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Buttons_Initialize
+<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_LedsInit
 <LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RETARGET_SerialInit
-<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Buttons_Initialize
 </UL>
 
 <P><STRONG><a name="[9e]"></a>LED_Initialize</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, led_stk3700.o(i.LED_Initialize))
@@ -1533,13 +1533,13 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osIdleTaskCreate
 <LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrTaskCreate
+<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Inspect_Entry
+<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Demo_Entry
 <LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_TskCaseEntry
 <LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_Semphore
 <LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_MutexLock
 <LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_MsgQueue
 <LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_SndRcvEvent
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Inspect_Entry
-<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Demo_Entry
 </UL>
 
 <P><STRONG><a name="[e2]"></a>LOS_TaskCreateOnly</STRONG> (Thumb, 368 bytes, Stack size 40 bytes, los_task.o(i.LOS_TaskCreateOnly))
@@ -1570,7 +1570,10 @@ Global Symbols
 <LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
 <LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_PriqueueDequeue
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_swTimer
+<BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_InspectByID
+<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Inspect_KeyAndLed
+<LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Demo_Tskfunc
+<LI><a href="#[a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_swTimer
 <LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_TaskLo
 <LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_TaskHi
 <LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_GetTick
@@ -1580,9 +1583,6 @@ Global Symbols
 <LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_MutexLock
 <LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_Entry
 <LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;recv_Entry
-<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_InspectByID
-<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Inspect_KeyAndLed
-<LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Demo_Tskfunc
 </UL>
 
 <P><STRONG><a name="[86]"></a>LOS_TaskDelete</STRONG> (Thumb, 320 bytes, Stack size 24 bytes, los_task.o(i.LOS_TaskDelete))
@@ -1711,8 +1711,8 @@ Global Symbols
 <LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMU_ClockEnable
 <LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RETARGET_WriteChar
-<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_EvbUartInit
+<BR>[Called By]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_EvbUartInit
+<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RETARGET_WriteChar
 </UL>
 
 <P><STRONG><a name="[b1]"></a>RETARGET_WriteChar</STRONG> (Thumb, 62 bytes, Stack size 8 bytes, retargetserial.o(i.RETARGET_WriteChar))
@@ -1791,7 +1791,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> los_startup_keil.o(RESET)
 </UL>
-<P><STRONG><a name="[f1]"></a>USART_BaudrateAsyncSet</STRONG> (Thumb, 118 bytes, Stack size 32 bytes, em_usart_1.o(i.USART_BaudrateAsyncSet))
+<P><STRONG><a name="[f1]"></a>USART_BaudrateAsyncSet</STRONG> (Thumb, 118 bytes, Stack size 32 bytes, em_usart.o(i.USART_BaudrateAsyncSet))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = USART_BaudrateAsyncSet &rArr; CMU_ClockFreqGet &rArr; lfClkGet &rArr; getHfLeConfig &rArr; BUS_RegBitRead
 </UL>
 <BR>[Calls]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMU_ClockFreqGet
@@ -1799,11 +1799,11 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_InitAsync
 </UL>
 
-<P><STRONG><a name="[ee]"></a>USART_Enable</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, em_usart_1.o(i.USART_Enable))
+<P><STRONG><a name="[ee]"></a>USART_Enable</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, em_usart.o(i.USART_Enable))
 <BR><BR>[Called By]<UL><LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RETARGET_SerialInit
 </UL>
 
-<P><STRONG><a name="[ed]"></a>USART_InitAsync</STRONG> (Thumb, 66 bytes, Stack size 16 bytes, em_usart_1.o(i.USART_InitAsync))
+<P><STRONG><a name="[ed]"></a>USART_InitAsync</STRONG> (Thumb, 66 bytes, Stack size 16 bytes, em_usart.o(i.USART_InitAsync))
 <BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = USART_InitAsync &rArr; USART_BaudrateAsyncSet &rArr; CMU_ClockFreqGet &rArr; lfClkGet &rArr; getHfLeConfig &rArr; BUS_RegBitRead
 </UL>
 <BR>[Calls]<UL><LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Reset
@@ -1812,15 +1812,15 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RETARGET_SerialInit
 </UL>
 
-<P><STRONG><a name="[f2]"></a>USART_Reset</STRONG> (Thumb, 66 bytes, Stack size 0 bytes, em_usart_1.o(i.USART_Reset))
+<P><STRONG><a name="[f2]"></a>USART_Reset</STRONG> (Thumb, 66 bytes, Stack size 0 bytes, em_usart.o(i.USART_Reset))
 <BR><BR>[Called By]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_InitAsync
 </UL>
 
-<P><STRONG><a name="[f0]"></a>USART_Rx</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, em_usart_1.o(i.USART_Rx))
+<P><STRONG><a name="[f0]"></a>USART_Rx</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, em_usart.o(i.USART_Rx))
 <BR><BR>[Called By]<UL><LI><a href="#[24]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART1_RX_IRQHandler
 </UL>
 
-<P><STRONG><a name="[ef]"></a>USART_Tx</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, em_usart_1.o(i.USART_Tx))
+<P><STRONG><a name="[ef]"></a>USART_Tx</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, em_usart.o(i.USART_Tx))
 <BR><BR>[Called By]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RETARGET_WriteChar
 </UL>
 
@@ -1833,7 +1833,11 @@ Global Symbols
 <P><STRONG><a name="[77]"></a>__2printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = __2printf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer2_Callback
+<BR>[Called By]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Inspect_TskDeal
+<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_InspectByID
+<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Inspect_KeyAndLed
+<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Demo_Entry
+<LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer2_Callback
 <LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer1_Callback
 <LI><a href="#[a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_swTimer
 <LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_TskCaseEntry
@@ -1855,10 +1859,6 @@ Global Symbols
 <LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_Event
 <LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_InspectStatusSetByID
 <LI><a href="#[d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_Dyn_Mem
-<LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Inspect_TskDeal
-<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_InspectByID
-<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Inspect_KeyAndLed
-<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Demo_Entry
 </UL>
 
 <P><STRONG><a name="[134]"></a>__c89printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf), UNUSED)
@@ -1945,10 +1945,10 @@ Global Symbols
 <LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskInit
 <LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osIdleTaskCreate
 <LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrInit
+<LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osHwiInit
 <LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemSystemInit
 <LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSemInit
 <LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueInit
-<LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osHwiInit
 <LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRegister
 </UL>
 <BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_KernelInit
@@ -2504,8 +2504,8 @@ Local Symbols
 <LI>Call Chain = LOS_Inspect_KeyAndLed &rArr; LOS_TaskDelay &rArr; osTaskAdd2TimerList &rArr; LOS_ListTailInsert
 </UL>
 <BR>[Calls]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelay
-<LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_EvbLedControl
 <LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_EvbGetKeyVal
+<LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_EvbLedControl
 <LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Inspect_TskDeal

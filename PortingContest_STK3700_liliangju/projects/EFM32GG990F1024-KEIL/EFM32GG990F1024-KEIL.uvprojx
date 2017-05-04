@@ -454,21 +454,6 @@
               <FileType>1</FileType>
               <FilePath>..\..\kernel\base\misc\los_misc.c</FilePath>
             </File>
-            <File>
-              <FileName>em_usart.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\platform\EFM32GG990F1024-STK3700\library\emlib\src\em_usart.c</FilePath>
-            </File>
-            <File>
-              <FileName>em_rtc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\platform\EFM32GG990F1024-STK3700\library\emlib\src\em_rtc.c</FilePath>
-            </File>
-            <File>
-              <FileName>em_prs.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\platform\EFM32GG990F1024-STK3700\library\emlib\src\em_prs.c</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>

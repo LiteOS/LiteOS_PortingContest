@@ -366,19 +366,6 @@ Section Cross References
     los_misc.o(i.LOS_Msleep) refers to los_sys.o(i.LOS_MS2Tick) for LOS_MS2Tick
     los_misc.o(i.LOS_Msleep) refers to los_task.o(i.LOS_TaskDelay) for LOS_TaskDelay
     los_misc.o(i.LOS_Msleep) refers to los_hwi.o(.data) for g_vuwIntCount
-    em_usart_1.o(i.USART_BaudrateAsyncSet) refers to em_cmu.o(i.CMU_ClockFreqGet) for CMU_ClockFreqGet
-    em_usart_1.o(i.USART_BaudrateCalc) refers to uldiv.o(.text) for __aeabi_uldivmod
-    em_usart_1.o(i.USART_BaudrateGet) refers to em_cmu.o(i.CMU_ClockFreqGet) for CMU_ClockFreqGet
-    em_usart_1.o(i.USART_BaudrateGet) refers to em_usart_1.o(i.USART_BaudrateCalc) for USART_BaudrateCalc
-    em_usart_1.o(i.USART_BaudrateSyncSet) refers to em_cmu.o(i.CMU_ClockFreqGet) for CMU_ClockFreqGet
-    em_usart_1.o(i.USART_InitAsync) refers to em_usart_1.o(i.USART_Reset) for USART_Reset
-    em_usart_1.o(i.USART_InitAsync) refers to em_usart_1.o(i.USART_BaudrateAsyncSet) for USART_BaudrateAsyncSet
-    em_usart_1.o(i.USART_InitI2s) refers to em_usart_1.o(i.USART_InitSync) for USART_InitSync
-    em_usart_1.o(i.USART_InitI2s) refers to em_usart_1.o(i.USART_Enable) for USART_Enable
-    em_usart_1.o(i.USART_InitSync) refers to em_usart_1.o(i.USART_Reset) for USART_Reset
-    em_usart_1.o(i.USART_InitSync) refers to em_usart_1.o(i.USART_BaudrateSyncSet) for USART_BaudrateSyncSet
-    em_usart_1.o(i.USARTn_InitIrDA) refers to em_usart_1.o(i.USART_InitAsync) for USART_InitAsync
-    em_rtc.o(i.RTC_CounterReset) refers to em_rtc.o(i.RTC_Enable) for RTC_Enable
     los_dispatch_keil.o(.text) refers to los_task.o(.data) for g_bTaskScheduled
     los_dispatch_keil.o(KERNEL) refers to los_task.o(.data) for g_pfnTskSwitchHook
     los_hw.o(i.LOS_Schedule) refers to los_dispatch_keil.o(KERNEL) for LOS_IntLock
@@ -503,22 +490,22 @@ Section Cross References
     retargetserial.o(i.RETARGET_SerialInit) refers to em_cmu.o(i.CMU_ClockEnable) for CMU_ClockEnable
     retargetserial.o(i.RETARGET_SerialInit) refers to em_gpio.o(i.GPIO_PinModeSet) for GPIO_PinModeSet
     retargetserial.o(i.RETARGET_SerialInit) refers to memcpya.o(.text) for __aeabi_memcpy4
-    retargetserial.o(i.RETARGET_SerialInit) refers to em_usart_1.o(i.USART_InitAsync) for USART_InitAsync
-    retargetserial.o(i.RETARGET_SerialInit) refers to em_usart_1.o(i.USART_Enable) for USART_Enable
+    retargetserial.o(i.RETARGET_SerialInit) refers to em_usart.o(i.USART_InitAsync) for USART_InitAsync
+    retargetserial.o(i.RETARGET_SerialInit) refers to em_usart.o(i.USART_Enable) for USART_Enable
     retargetserial.o(i.RETARGET_SerialInit) refers to retargetserial.o(.constdata) for .constdata
     retargetserial.o(i.RETARGET_SerialInit) refers to retargetserial.o(.data) for initialized
     retargetserial.o(i.RETARGET_WriteChar) refers to retargetserial.o(i.RETARGET_SerialInit) for RETARGET_SerialInit
-    retargetserial.o(i.RETARGET_WriteChar) refers to em_usart_1.o(i.USART_Tx) for USART_Tx
+    retargetserial.o(i.RETARGET_WriteChar) refers to em_usart.o(i.USART_Tx) for USART_Tx
     retargetserial.o(i.RETARGET_WriteChar) refers to retargetserial.o(.data) for initialized
-    retargetserial.o(i.USART1_RX_IRQHandler) refers to em_usart_1.o(i.USART_Rx) for USART_Rx
+    retargetserial.o(i.USART1_RX_IRQHandler) refers to em_usart.o(i.USART_Rx) for USART_Rx
     retargetserial.o(i.USART1_RX_IRQHandler) refers to retargetserial.o(.data) for rxBuffer
     bsp_bcc.o(i.BSP_BccDeInit) refers to bsp_bcc.o(i.BSP_BccPinsEnable) for BSP_BccPinsEnable
-    bsp_bcc.o(i.BSP_BccDeInit) refers to em_usart_1.o(i.USART_Reset) for USART_Reset
+    bsp_bcc.o(i.BSP_BccDeInit) refers to em_usart.o(i.USART_Reset) for USART_Reset
     bsp_bcc.o(i.BSP_BccDeInit) refers to em_cmu.o(i.CMU_ClockEnable) for CMU_ClockEnable
     bsp_bcc.o(i.BSP_BccDeInit) refers to bsp_bcc.o(.data) for rxByteCount
     bsp_bcc.o(i.BSP_BccInit) refers to memcpya.o(.text) for __aeabi_memcpy4
     bsp_bcc.o(i.BSP_BccInit) refers to em_cmu.o(i.CMU_ClockEnable) for CMU_ClockEnable
-    bsp_bcc.o(i.BSP_BccInit) refers to em_usart_1.o(i.USART_InitAsync) for USART_InitAsync
+    bsp_bcc.o(i.BSP_BccInit) refers to em_usart.o(i.USART_InitAsync) for USART_InitAsync
     bsp_bcc.o(i.BSP_BccInit) refers to bsp_bcc.o(i.BSP_BccPinsEnable) for BSP_BccPinsEnable
     bsp_bcc.o(i.BSP_BccInit) refers to bsp_bcc.o(.constdata) for .constdata
     bsp_bcc.o(i.BSP_BccInit) refers to bsp_bcc.o(.data) for rxByteCount
@@ -996,6 +983,18 @@ Section Cross References
     em_leuart.o(i.LEUART_TxExt) refers to em_leuart.o(i.LEUART_Sync) for LEUART_Sync
     em_msc.o(i.MSC_Init) refers to system_efm32gg.o(i.SystemCoreClockGet) for SystemCoreClockGet
     em_msc.o(i.MSC_Init) refers to em_cmu.o(i.CMU_ClockFreqGet) for CMU_ClockFreqGet
+    em_usart.o(i.USART_BaudrateAsyncSet) refers to em_cmu.o(i.CMU_ClockFreqGet) for CMU_ClockFreqGet
+    em_usart.o(i.USART_BaudrateCalc) refers to uldiv.o(.text) for __aeabi_uldivmod
+    em_usart.o(i.USART_BaudrateGet) refers to em_cmu.o(i.CMU_ClockFreqGet) for CMU_ClockFreqGet
+    em_usart.o(i.USART_BaudrateGet) refers to em_usart.o(i.USART_BaudrateCalc) for USART_BaudrateCalc
+    em_usart.o(i.USART_BaudrateSyncSet) refers to em_cmu.o(i.CMU_ClockFreqGet) for CMU_ClockFreqGet
+    em_usart.o(i.USART_InitAsync) refers to em_usart.o(i.USART_Reset) for USART_Reset
+    em_usart.o(i.USART_InitAsync) refers to em_usart.o(i.USART_BaudrateAsyncSet) for USART_BaudrateAsyncSet
+    em_usart.o(i.USART_InitI2s) refers to em_usart.o(i.USART_InitSync) for USART_InitSync
+    em_usart.o(i.USART_InitI2s) refers to em_usart.o(i.USART_Enable) for USART_Enable
+    em_usart.o(i.USART_InitSync) refers to em_usart.o(i.USART_Reset) for USART_Reset
+    em_usart.o(i.USART_InitSync) refers to em_usart.o(i.USART_BaudrateSyncSet) for USART_BaudrateSyncSet
+    em_usart.o(i.USARTn_InitIrDA) refers to em_usart.o(i.USART_InitAsync) for USART_InitAsync
     los_startup_keil.o(RESET) refers to los_startup_keil.o(STACK) for __initial_sp
     los_startup_keil.o(RESET) refers to los_startup_keil.o(.text) for Reset_Handler
     los_startup_keil.o(RESET) refers to los_dispatch_keil.o(KERNEL) for PendSV_Handler
@@ -1329,38 +1328,6 @@ Removing Unused input sections from the image.
     Removing los_memory.o(i.LOS_MemRealloc), (346 bytes).
     Removing los_memstat.o(i.osTaskMemUsage), (24 bytes).
     Removing los_misc.o(i.LOS_Msleep), (48 bytes).
-    Removing em_usart_1.o(.rev16_text), (4 bytes).
-    Removing em_usart_1.o(.revsh_text), (4 bytes).
-    Removing em_usart_1.o(.rrx_text), (6 bytes).
-    Removing em_usart_1.o(i.USART_BaudrateCalc), (180 bytes).
-    Removing em_usart_1.o(i.USART_BaudrateGet), (56 bytes).
-    Removing em_usart_1.o(i.USART_BaudrateSyncSet), (60 bytes).
-    Removing em_usart_1.o(i.USART_InitI2s), (80 bytes).
-    Removing em_usart_1.o(i.USART_InitPrsTrigger), (40 bytes).
-    Removing em_usart_1.o(i.USART_InitSync), (100 bytes).
-    Removing em_usart_1.o(i.USART_RxDouble), (20 bytes).
-    Removing em_usart_1.o(i.USART_RxDoubleExt), (18 bytes).
-    Removing em_usart_1.o(i.USART_RxExt), (20 bytes).
-    Removing em_usart_1.o(i.USART_SpiTransfer), (34 bytes).
-    Removing em_usart_1.o(i.USART_TxDouble), (16 bytes).
-    Removing em_usart_1.o(i.USART_TxDoubleExt), (16 bytes).
-    Removing em_usart_1.o(i.USART_TxExt), (16 bytes).
-    Removing em_usart_1.o(i.USARTn_InitIrDA), (68 bytes).
-    Removing em_rtc.o(.rev16_text), (4 bytes).
-    Removing em_rtc.o(.revsh_text), (4 bytes).
-    Removing em_rtc.o(.rrx_text), (6 bytes).
-    Removing em_rtc.o(i.RTC_CompareGet), (36 bytes).
-    Removing em_rtc.o(i.RTC_CompareSet), (36 bytes).
-    Removing em_rtc.o(i.RTC_CounterReset), (16 bytes).
-    Removing em_rtc.o(i.RTC_Enable), (28 bytes).
-    Removing em_rtc.o(i.RTC_FreezeEnable), (24 bytes).
-    Removing em_rtc.o(i.RTC_Init), (40 bytes).
-    Removing em_rtc.o(i.RTC_Reset), (24 bytes).
-    Removing em_prs.o(.rev16_text), (4 bytes).
-    Removing em_prs.o(.revsh_text), (4 bytes).
-    Removing em_prs.o(.rrx_text), (6 bytes).
-    Removing em_prs.o(i.PRS_SourceAsyncSignalSet), (28 bytes).
-    Removing em_prs.o(i.PRS_SourceSignalSet), (28 bytes).
     Removing los_hw_tick.o(i.LOS_GetCpuCycle), (116 bytes).
     Removing los_hwi.o(i.LOS_HwiCreate), (128 bytes).
     Removing los_hwi.o(i.LOS_HwiDelete), (60 bytes).
@@ -1679,6 +1646,23 @@ Removing Unused input sections from the image.
     Removing em_system.o(.revsh_text), (4 bytes).
     Removing em_system.o(.rrx_text), (6 bytes).
     Removing em_system.o(i.SYSTEM_GetCalibrationValue), (52 bytes).
+    Removing em_usart.o(.rev16_text), (4 bytes).
+    Removing em_usart.o(.revsh_text), (4 bytes).
+    Removing em_usart.o(.rrx_text), (6 bytes).
+    Removing em_usart.o(i.USART_BaudrateCalc), (180 bytes).
+    Removing em_usart.o(i.USART_BaudrateGet), (56 bytes).
+    Removing em_usart.o(i.USART_BaudrateSyncSet), (60 bytes).
+    Removing em_usart.o(i.USART_InitI2s), (80 bytes).
+    Removing em_usart.o(i.USART_InitPrsTrigger), (40 bytes).
+    Removing em_usart.o(i.USART_InitSync), (100 bytes).
+    Removing em_usart.o(i.USART_RxDouble), (20 bytes).
+    Removing em_usart.o(i.USART_RxDoubleExt), (18 bytes).
+    Removing em_usart.o(i.USART_RxExt), (20 bytes).
+    Removing em_usart.o(i.USART_SpiTransfer), (34 bytes).
+    Removing em_usart.o(i.USART_TxDouble), (16 bytes).
+    Removing em_usart.o(i.USART_TxDoubleExt), (16 bytes).
+    Removing em_usart.o(i.USART_TxExt), (16 bytes).
+    Removing em_usart.o(i.USARTn_InitIrDA), (68 bytes).
     Removing los_startup_keil.o(HEAP), (3072 bytes).
     Removing system_efm32gg.o(.rev16_text), (4 bytes).
     Removing system_efm32gg.o(.revsh_text), (4 bytes).
@@ -1690,7 +1674,7 @@ Removing Unused input sections from the image.
     Removing system_efm32gg.o(i.SystemMaxCoreClockGet), (8 bytes).
     Removing dfltul.o(.text), (24 bytes).
 
-380 unused section(s) (total 25503 bytes) removed from the image.
+365 unused section(s) (total 25215 bytes) removed from the image.
 
 ==============================================================================
 
@@ -1702,44 +1686,44 @@ Image Symbol Table
 
     RESET                                    0x00000000   Section      220  los_startup_keil.o(RESET)
     ../clib/../cmprslib/zerorunl2.c          0x00000000   Number         0  __dczerorl2.o ABSOLUTE
-    ../clib/microlib/division.c              0x00000000   Number         0  uidiv.o ABSOLUTE
     ../clib/microlib/division.c              0x00000000   Number         0  uldiv.o ABSOLUTE
+    ../clib/microlib/division.c              0x00000000   Number         0  uidiv.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry3.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
-    ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
-    ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry3.o ABSOLUTE
     ../clib/microlib/longlong.c              0x00000000   Number         0  llsshr.o ABSOLUTE
-    ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  malloca1.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
+    ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  mallocr1.o ABSOLUTE
     ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  mallocra1.o ABSOLUTE
     ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  malloc1.o ABSOLUTE
-    ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  mallocr1.o ABSOLUTE
+    ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  malloca1.o ABSOLUTE
     ../clib/microlib/malloc/mvars.c          0x00000000   Number         0  mvars.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfb.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfa.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf8.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf7.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf1.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf6.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf3.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf5.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf4.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfb.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf0.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf2.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf3.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf4.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf5.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf1.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf6.o ABSOLUTE
     ../clib/microlib/printf/stubs.s          0x00000000   Number         0  stubs.o ABSOLUTE
     ../clib/microlib/stdio/streams.c         0x00000000   Number         0  stdout.o ABSOLUTE
-    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpya.o ABSOLUTE
     ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpyb.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpya.o ABSOLUTE
     ../clib/microlib/string/memset.c         0x00000000   Number         0  memseta.o ABSOLUTE
     ../clib/microlib/string/strlen.c         0x00000000   Number         0  strlen.o ABSOLUTE
     ../clib/microlib/stubs.s                 0x00000000   Number         0  iusefp.o ABSOLUTE
@@ -1802,10 +1786,8 @@ Image Symbol Table
     ..\..\platform\EFM32GG990F1024-STK3700\library\emlib\src\em_lcd.c 0x00000000   Number         0  em_lcd.o ABSOLUTE
     ..\..\platform\EFM32GG990F1024-STK3700\library\emlib\src\em_leuart.c 0x00000000   Number         0  em_leuart.o ABSOLUTE
     ..\..\platform\EFM32GG990F1024-STK3700\library\emlib\src\em_msc.c 0x00000000   Number         0  em_msc.o ABSOLUTE
-    ..\..\platform\EFM32GG990F1024-STK3700\library\emlib\src\em_prs.c 0x00000000   Number         0  em_prs.o ABSOLUTE
-    ..\..\platform\EFM32GG990F1024-STK3700\library\emlib\src\em_rtc.c 0x00000000   Number         0  em_rtc.o ABSOLUTE
     ..\..\platform\EFM32GG990F1024-STK3700\library\emlib\src\em_system.c 0x00000000   Number         0  em_system.o ABSOLUTE
-    ..\..\platform\EFM32GG990F1024-STK3700\library\emlib\src\em_usart.c 0x00000000   Number         0  em_usart_1.o ABSOLUTE
+    ..\..\platform\EFM32GG990F1024-STK3700\library\emlib\src\em_usart.c 0x00000000   Number         0  em_usart.o ABSOLUTE
     ..\..\platform\EFM32GG990F1024-STK3700\library\emlib\src\system_efm32gg.c 0x00000000   Number         0  system_efm32gg.o ABSOLUTE
     ..\..\platform\EFM32GG990F1024-STK3700\los_bsp_adapter.c 0x00000000   Number         0  los_bsp_adapter.o ABSOLUTE
     ..\..\platform\EFM32GG990F1024-STK3700\los_bsp_key.c 0x00000000   Number         0  los_bsp_key.o ABSOLUTE
@@ -1830,10 +1812,8 @@ Image Symbol Table
     ..\\..\\platform\\EFM32GG990F1024-STK3700\\library\\emlib\\src\\em_lcd.c 0x00000000   Number         0  em_lcd.o ABSOLUTE
     ..\\..\\platform\\EFM32GG990F1024-STK3700\\library\\emlib\\src\\em_leuart.c 0x00000000   Number         0  em_leuart.o ABSOLUTE
     ..\\..\\platform\\EFM32GG990F1024-STK3700\\library\\emlib\\src\\em_msc.c 0x00000000   Number         0  em_msc.o ABSOLUTE
-    ..\\..\\platform\\EFM32GG990F1024-STK3700\\library\\emlib\\src\\em_prs.c 0x00000000   Number         0  em_prs.o ABSOLUTE
-    ..\\..\\platform\\EFM32GG990F1024-STK3700\\library\\emlib\\src\\em_rtc.c 0x00000000   Number         0  em_rtc.o ABSOLUTE
     ..\\..\\platform\\EFM32GG990F1024-STK3700\\library\\emlib\\src\\em_system.c 0x00000000   Number         0  em_system.o ABSOLUTE
-    ..\\..\\platform\\EFM32GG990F1024-STK3700\\library\\emlib\\src\\em_usart.c 0x00000000   Number         0  em_usart_1.o ABSOLUTE
+    ..\\..\\platform\\EFM32GG990F1024-STK3700\\library\\emlib\\src\\em_usart.c 0x00000000   Number         0  em_usart.o ABSOLUTE
     ..\\..\\platform\\EFM32GG990F1024-STK3700\\library\\emlib\\src\\system_efm32gg.c 0x00000000   Number         0  system_efm32gg.o ABSOLUTE
     ..\\..\\platform\\EFM32GG990F1024-STK3700\\los_bsp_adapter.c 0x00000000   Number         0  los_bsp_adapter.o ABSOLUTE
     ..\\..\\platform\\EFM32GG990F1024-STK3700\\los_bsp_key.c 0x00000000   Number         0  los_bsp_key.o ABSOLUTE
@@ -2040,12 +2020,12 @@ Image Symbol Table
     i.Timer1_Callback                        0x000042c8   Section        0  los_api_timer.o(i.Timer1_Callback)
     i.Timer2_Callback                        0x00004318   Section        0  los_api_timer.o(i.Timer2_Callback)
     i.USART1_RX_IRQHandler                   0x00004370   Section        0  retargetserial.o(i.USART1_RX_IRQHandler)
-    i.USART_BaudrateAsyncSet                 0x000043dc   Section        0  em_usart_1.o(i.USART_BaudrateAsyncSet)
-    i.USART_Enable                           0x0000445c   Section        0  em_usart_1.o(i.USART_Enable)
-    i.USART_InitAsync                        0x0000446a   Section        0  em_usart_1.o(i.USART_InitAsync)
-    i.USART_Reset                            0x000044ac   Section        0  em_usart_1.o(i.USART_Reset)
-    i.USART_Rx                               0x000044fc   Section        0  em_usart_1.o(i.USART_Rx)
-    i.USART_Tx                               0x00004510   Section        0  em_usart_1.o(i.USART_Tx)
+    i.USART_BaudrateAsyncSet                 0x000043dc   Section        0  em_usart.o(i.USART_BaudrateAsyncSet)
+    i.USART_Enable                           0x0000445c   Section        0  em_usart.o(i.USART_Enable)
+    i.USART_InitAsync                        0x0000446a   Section        0  em_usart.o(i.USART_InitAsync)
+    i.USART_Reset                            0x000044ac   Section        0  em_usart.o(i.USART_Reset)
+    i.USART_Rx                               0x000044fc   Section        0  em_usart.o(i.USART_Rx)
+    i.USART_Tx                               0x00004510   Section        0  em_usart.o(i.USART_Tx)
     i.__0printf                              0x00004520   Section        0  printfa.o(i.__0printf)
     i.__free$1region                         0x00004540   Section        0  malloc1.o(i.__free$1region)
     i.__scatterload_copy                     0x00004590   Section       14  handlers.o(i.__scatterload_copy)
@@ -2451,12 +2431,12 @@ Image Symbol Table
     Timer1_Callback                          0x000042c9   Thumb Code    40  los_api_timer.o(i.Timer1_Callback)
     Timer2_Callback                          0x00004319   Thumb Code    48  los_api_timer.o(i.Timer2_Callback)
     USART1_RX_IRQHandler                     0x00004371   Thumb Code    86  retargetserial.o(i.USART1_RX_IRQHandler)
-    USART_BaudrateAsyncSet                   0x000043dd   Thumb Code   118  em_usart_1.o(i.USART_BaudrateAsyncSet)
-    USART_Enable                             0x0000445d   Thumb Code    14  em_usart_1.o(i.USART_Enable)
-    USART_InitAsync                          0x0000446b   Thumb Code    66  em_usart_1.o(i.USART_InitAsync)
-    USART_Reset                              0x000044ad   Thumb Code    66  em_usart_1.o(i.USART_Reset)
-    USART_Rx                                 0x000044fd   Thumb Code    20  em_usart_1.o(i.USART_Rx)
-    USART_Tx                                 0x00004511   Thumb Code    16  em_usart_1.o(i.USART_Tx)
+    USART_BaudrateAsyncSet                   0x000043dd   Thumb Code   118  em_usart.o(i.USART_BaudrateAsyncSet)
+    USART_Enable                             0x0000445d   Thumb Code    14  em_usart.o(i.USART_Enable)
+    USART_InitAsync                          0x0000446b   Thumb Code    66  em_usart.o(i.USART_InitAsync)
+    USART_Reset                              0x000044ad   Thumb Code    66  em_usart.o(i.USART_Reset)
+    USART_Rx                                 0x000044fd   Thumb Code    20  em_usart.o(i.USART_Rx)
+    USART_Tx                                 0x00004511   Thumb Code    16  em_usart.o(i.USART_Tx)
     __0printf                                0x00004521   Thumb Code    22  printfa.o(i.__0printf)
     __1printf                                0x00004521   Thumb Code     0  printfa.o(i.__0printf)
     __2printf                                0x00004521   Thumb Code     0  printfa.o(i.__0printf)
@@ -2578,106 +2558,106 @@ Memory Map of the image
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x00000000   0x000000dc   Data   RO         4419    RESET               los_startup_keil.o
-    0x000000dc   0x00000000   Code   RO         4508  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x000000dc   0x00000004   Code   RO         4816    .ARM.Collect$$$$00000002  mc_w.l(entry3.o)
-    0x000000e0   0x00000004   Code   RO         4819    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x000000e4   0x00000000   Code   RO         4821    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x000000e4   0x00000000   Code   RO         4823    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x000000e4   0x00000008   Code   RO         4824    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x000000ec   0x00000000   Code   RO         4826    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
-    0x000000ec   0x00000000   Code   RO         4828    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
-    0x000000ec   0x00000004   Code   RO         4817    .ARM.Collect$$$$00002713  mc_w.l(entry3.o)
-    0x000000f0   0x0000005c   Code   RO         1515    .text               los_dispatch_keil.o
-    0x0000014c   0x0000001c   Code   RO         4420    .text               los_startup_keil.o
-    0x00000168   0x00000062   Code   RO         4511    .text               mc_w.l(uldiv.o)
-    0x000001ca   0x00000024   Code   RO         4513    .text               mc_w.l(memcpya.o)
-    0x000001ee   0x00000024   Code   RO         4515    .text               mc_w.l(memseta.o)
-    0x00000212   0x000000de   Code   RO         4810    .text               mf_w.l(ddiv.o)
-    0x000002f0   0x00000030   Code   RO         4814    .text               mf_w.l(dfixul.o)
-    0x00000320   0x0000002c   Code   RO         4831    .text               mc_w.l(uidiv.o)
-    0x0000034c   0x0000001e   Code   RO         4833    .text               mc_w.l(llshl.o)
-    0x0000036a   0x00000020   Code   RO         4835    .text               mc_w.l(llushr.o)
-    0x0000038a   0x00000000   Code   RO         4839    .text               mc_w.l(iusefp.o)
-    0x0000038a   0x000000ba   Code   RO         4840    .text               mf_w.l(depilogue.o)
-    0x00000444   0x0000014e   Code   RO         4842    .text               mf_w.l(dadd.o)
-    0x00000592   0x000000e4   Code   RO         4844    .text               mf_w.l(dmul.o)
+    0x00000000   0x000000dc   Data   RO         4320    RESET               los_startup_keil.o
+    0x000000dc   0x00000000   Code   RO         4409  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x000000dc   0x00000004   Code   RO         4717    .ARM.Collect$$$$00000002  mc_w.l(entry3.o)
+    0x000000e0   0x00000004   Code   RO         4720    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x000000e4   0x00000000   Code   RO         4722    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x000000e4   0x00000000   Code   RO         4724    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x000000e4   0x00000008   Code   RO         4725    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x000000ec   0x00000000   Code   RO         4727    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x000000ec   0x00000000   Code   RO         4729    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x000000ec   0x00000004   Code   RO         4718    .ARM.Collect$$$$00002713  mc_w.l(entry3.o)
+    0x000000f0   0x0000005c   Code   RO         1107    .text               los_dispatch_keil.o
+    0x0000014c   0x0000001c   Code   RO         4321    .text               los_startup_keil.o
+    0x00000168   0x00000062   Code   RO         4412    .text               mc_w.l(uldiv.o)
+    0x000001ca   0x00000024   Code   RO         4414    .text               mc_w.l(memcpya.o)
+    0x000001ee   0x00000024   Code   RO         4416    .text               mc_w.l(memseta.o)
+    0x00000212   0x000000de   Code   RO         4711    .text               mf_w.l(ddiv.o)
+    0x000002f0   0x00000030   Code   RO         4715    .text               mf_w.l(dfixul.o)
+    0x00000320   0x0000002c   Code   RO         4732    .text               mc_w.l(uidiv.o)
+    0x0000034c   0x0000001e   Code   RO         4734    .text               mc_w.l(llshl.o)
+    0x0000036a   0x00000020   Code   RO         4736    .text               mc_w.l(llushr.o)
+    0x0000038a   0x00000000   Code   RO         4740    .text               mc_w.l(iusefp.o)
+    0x0000038a   0x000000ba   Code   RO         4741    .text               mf_w.l(depilogue.o)
+    0x00000444   0x0000014e   Code   RO         4743    .text               mf_w.l(dadd.o)
+    0x00000592   0x000000e4   Code   RO         4745    .text               mf_w.l(dmul.o)
     0x00000676   0x00000002   PAD
-    0x00000678   0x00000030   Code   RO         4846    .text               mf_w.l(cdrcmple.o)
-    0x000006a8   0x00000024   Code   RO         4848    .text               mc_w.l(init.o)
-    0x000006cc   0x00000024   Code   RO         4850    .text               mc_w.l(llsshr.o)
-    0x000006f0   0x00000056   Code   RO         4860    .text               mc_w.l(__dczerorl2.o)
+    0x00000678   0x00000030   Code   RO         4747    .text               mf_w.l(cdrcmple.o)
+    0x000006a8   0x00000024   Code   RO         4749    .text               mc_w.l(init.o)
+    0x000006cc   0x00000024   Code   RO         4751    .text               mc_w.l(llsshr.o)
+    0x000006f0   0x00000056   Code   RO         4761    .text               mc_w.l(__dczerorl2.o)
     0x00000746   0x00000002   PAD
-    0x00000748   0x00000088   Code   RO         1516    KERNEL              los_dispatch_keil.o
-    0x000007d0   0x0000002c   Code   RO         2250    i.BSP_LedClear      bsp_stk_leds.o
-    0x000007fc   0x0000002c   Code   RO         2252    i.BSP_LedSet        bsp_stk_leds.o
-    0x00000828   0x00000044   Code   RO         2255    i.BSP_LedsInit      bsp_stk_leds.o
-    0x0000086c   0x00000014   Code   RO         3484    i.BUS_RegBitRead    em_cmu.o
-    0x00000880   0x00000012   Code   RO         3485    i.BUS_RegBitWrite   em_cmu.o
+    0x00000748   0x00000088   Code   RO         1108    KERNEL              los_dispatch_keil.o
+    0x000007d0   0x0000002c   Code   RO         2010    i.BSP_LedClear      bsp_stk_leds.o
+    0x000007fc   0x0000002c   Code   RO         2012    i.BSP_LedSet        bsp_stk_leds.o
+    0x00000828   0x00000044   Code   RO         2015    i.BSP_LedsInit      bsp_stk_leds.o
+    0x0000086c   0x00000014   Code   RO         3244    i.BUS_RegBitRead    em_cmu.o
+    0x00000880   0x00000012   Code   RO         3245    i.BUS_RegBitWrite   em_cmu.o
     0x00000892   0x00000002   PAD
-    0x00000894   0x00000030   Code   RO         2376    i.Buttons_GetState  buttons_stk3700.o
-    0x000008c4   0x0000002c   Code   RO         2377    i.Buttons_Initialize  buttons_stk3700.o
-    0x000008f0   0x00000090   Code   RO         3494    i.CMU_ClockEnable   em_cmu.o
-    0x00000980   0x00000138   Code   RO         3495    i.CMU_ClockFreqGet  em_cmu.o
-    0x00000ab8   0x00000110   Code   RO         3496    i.CMU_ClockSelectGet  em_cmu.o
-    0x00000bc8   0x0000000c   Code   RO         3498    i.CMU_DivToLog2     em_cmu.o
-    0x00000bd4   0x00000110   Code   RO         2859    i.Example_Dyn_Mem   los_api_dynamic_mem.o
-    0x00000ce4   0x000000a8   Code   RO         2890    i.Example_Event     los_api_event.o
-    0x00000d8c   0x000000d8   Code   RO         3071    i.Example_GetTick   los_api_systick.o
-    0x00000e64   0x00000120   Code   RO         2963    i.Example_MsgQueue  los_api_msgqueue.o
-    0x00000f84   0x00000144   Code   RO         2993    i.Example_MutexLock  los_api_mutex.o
-    0x000010c8   0x00000118   Code   RO         2994    i.Example_MutexTask1  los_api_mutex.o
-    0x000011e0   0x000000e4   Code   RO         2995    i.Example_MutexTask2  los_api_mutex.o
-    0x000012c4   0x000000e0   Code   RO         3023    i.Example_SemTask1  los_api_sem.o
-    0x000013a4   0x000000d8   Code   RO         3024    i.Example_SemTask2  los_api_sem.o
-    0x0000147c   0x00000158   Code   RO         3025    i.Example_Semphore  los_api_sem.o
-    0x000015d4   0x00000154   Code   RO         2891    i.Example_SndRcvEvent  los_api_event.o
-    0x00001728   0x00000144   Code   RO         3053    i.Example_StaticMem  los_api_static_mem.o
-    0x0000186c   0x00000114   Code   RO         3092    i.Example_TaskHi    los_api_task.o
-    0x00001980   0x000000e4   Code   RO         3093    i.Example_TaskLo    los_api_task.o
-    0x00001a64   0x0000017c   Code   RO         3094    i.Example_TskCaseEntry  los_api_task.o
-    0x00001be0   0x00000194   Code   RO         2943    i.Example_list      los_api_list.o
-    0x00001d74   0x00000108   Code   RO         3136    i.Example_swTimer   los_api_timer.o
-    0x00001e7c   0x000000a0   Code   RO         4035    i.GPIO_PinModeSet   em_gpio.o
-    0x00001f1c   0x00000018   Code   RO         2257    i.GPIO_PinOutClear  bsp_stk_leds.o
-    0x00001f34   0x00000018   Code   RO         4036    i.GPIO_PinOutClear  em_gpio.o
-    0x00001f4c   0x00000018   Code   RO         2259    i.GPIO_PinOutSet    bsp_stk_leds.o
-    0x00001f64   0x00000018   Code   RO         4037    i.GPIO_PinOutSet    em_gpio.o
-    0x00001f7c   0x0000000a   Code   RO         2421    i.LED_Initialize    led_stk3700.o
-    0x00001f86   0x00000014   Code   RO         2422    i.LED_Off           led_stk3700.o
-    0x00001f9a   0x00000014   Code   RO         2423    i.LED_On            led_stk3700.o
+    0x00000894   0x00000030   Code   RO         2136    i.Buttons_GetState  buttons_stk3700.o
+    0x000008c4   0x0000002c   Code   RO         2137    i.Buttons_Initialize  buttons_stk3700.o
+    0x000008f0   0x00000090   Code   RO         3254    i.CMU_ClockEnable   em_cmu.o
+    0x00000980   0x00000138   Code   RO         3255    i.CMU_ClockFreqGet  em_cmu.o
+    0x00000ab8   0x00000110   Code   RO         3256    i.CMU_ClockSelectGet  em_cmu.o
+    0x00000bc8   0x0000000c   Code   RO         3258    i.CMU_DivToLog2     em_cmu.o
+    0x00000bd4   0x00000110   Code   RO         2619    i.Example_Dyn_Mem   los_api_dynamic_mem.o
+    0x00000ce4   0x000000a8   Code   RO         2650    i.Example_Event     los_api_event.o
+    0x00000d8c   0x000000d8   Code   RO         2831    i.Example_GetTick   los_api_systick.o
+    0x00000e64   0x00000120   Code   RO         2723    i.Example_MsgQueue  los_api_msgqueue.o
+    0x00000f84   0x00000144   Code   RO         2753    i.Example_MutexLock  los_api_mutex.o
+    0x000010c8   0x00000118   Code   RO         2754    i.Example_MutexTask1  los_api_mutex.o
+    0x000011e0   0x000000e4   Code   RO         2755    i.Example_MutexTask2  los_api_mutex.o
+    0x000012c4   0x000000e0   Code   RO         2783    i.Example_SemTask1  los_api_sem.o
+    0x000013a4   0x000000d8   Code   RO         2784    i.Example_SemTask2  los_api_sem.o
+    0x0000147c   0x00000158   Code   RO         2785    i.Example_Semphore  los_api_sem.o
+    0x000015d4   0x00000154   Code   RO         2651    i.Example_SndRcvEvent  los_api_event.o
+    0x00001728   0x00000144   Code   RO         2813    i.Example_StaticMem  los_api_static_mem.o
+    0x0000186c   0x00000114   Code   RO         2852    i.Example_TaskHi    los_api_task.o
+    0x00001980   0x000000e4   Code   RO         2853    i.Example_TaskLo    los_api_task.o
+    0x00001a64   0x0000017c   Code   RO         2854    i.Example_TskCaseEntry  los_api_task.o
+    0x00001be0   0x00000194   Code   RO         2703    i.Example_list      los_api_list.o
+    0x00001d74   0x00000108   Code   RO         2896    i.Example_swTimer   los_api_timer.o
+    0x00001e7c   0x000000a0   Code   RO         3795    i.GPIO_PinModeSet   em_gpio.o
+    0x00001f1c   0x00000018   Code   RO         2017    i.GPIO_PinOutClear  bsp_stk_leds.o
+    0x00001f34   0x00000018   Code   RO         3796    i.GPIO_PinOutClear  em_gpio.o
+    0x00001f4c   0x00000018   Code   RO         2019    i.GPIO_PinOutSet    bsp_stk_leds.o
+    0x00001f64   0x00000018   Code   RO         3797    i.GPIO_PinOutSet    em_gpio.o
+    0x00001f7c   0x0000000a   Code   RO         2181    i.LED_Initialize    led_stk3700.o
+    0x00001f86   0x00000014   Code   RO         2182    i.LED_Off           led_stk3700.o
+    0x00001f9a   0x00000014   Code   RO         2183    i.LED_On            led_stk3700.o
     0x00001fae   0x0000001c   Code   RO         1089    i.LOS_Align         los_misc.o
     0x00001fca   0x00000006   Code   RO          249    i.LOS_CyclePerTickGet  los_sys.o
     0x00001fd0   0x0000001e   Code   RO         1057    i.LOS_DLnkInitMultiHead  los_multipledlinkhead.o
     0x00001fee   0x0000002a   Code   RO         1058    i.LOS_DLnkMultiHead  los_multipledlinkhead.o
-    0x00002018   0x00000070   Code   RO         3194    i.LOS_Demo_Entry    los_demo_entry.o
-    0x00002088   0x0000000a   Code   RO         3195    i.LOS_Demo_Tskfunc  los_demo_entry.o
-    0x00002092   0x00000012   Code   RO         2471    i.LOS_EnableTick    los_config.o
-    0x000020a4   0x00000012   Code   RO         1766    i.LOS_EvbGetKeyVal  los_bsp_key.o
-    0x000020b6   0x00000008   Code   RO         1767    i.LOS_EvbKeyInit    los_bsp_key.o
-    0x000020be   0x00000042   Code   RO         1813    i.LOS_EvbLedControl  los_bsp_led.o
-    0x00002100   0x00000008   Code   RO         1814    i.LOS_EvbLedInit    los_bsp_led.o
-    0x00002108   0x0000004c   Code   RO         1638    i.LOS_EvbSetup      los_bsp_adapter.o
-    0x00002154   0x0000000e   Code   RO         1843    i.LOS_EvbUartInit   los_bsp_uart.o
-    0x00002162   0x0000000c   Code   RO         1846    i.LOS_EvbUartWriteByte  los_bsp_uart.o
+    0x00002018   0x00000070   Code   RO         2954    i.LOS_Demo_Entry    los_demo_entry.o
+    0x00002088   0x0000000a   Code   RO         2955    i.LOS_Demo_Tskfunc  los_demo_entry.o
+    0x00002092   0x00000012   Code   RO         2231    i.LOS_EnableTick    los_config.o
+    0x000020a4   0x00000012   Code   RO         1523    i.LOS_EvbGetKeyVal  los_bsp_key.o
+    0x000020b6   0x00000008   Code   RO         1524    i.LOS_EvbKeyInit    los_bsp_key.o
+    0x000020be   0x00000042   Code   RO         1573    i.LOS_EvbLedControl  los_bsp_led.o
+    0x00002100   0x00000008   Code   RO         1574    i.LOS_EvbLedInit    los_bsp_led.o
+    0x00002108   0x0000004c   Code   RO         1231    i.LOS_EvbSetup      los_bsp_adapter.o
+    0x00002154   0x0000000e   Code   RO         1603    i.LOS_EvbUartInit   los_bsp_uart.o
+    0x00002162   0x0000000c   Code   RO         1606    i.LOS_EvbUartWriteByte  los_bsp_uart.o
     0x0000216e   0x00000002   PAD
     0x00002170   0x00000028   Code   RO          573    i.LOS_EventClear    los_event.o
     0x00002198   0x0000001c   Code   RO          575    i.LOS_EventInit     los_event.o
     0x000021b4   0x00000050   Code   RO          576    i.LOS_EventPoll     los_event.o
     0x00002204   0x0000015c   Code   RO          577    i.LOS_EventRead     los_event.o
     0x00002360   0x000000f8   Code   RO          578    i.LOS_EventWrite    los_event.o
-    0x00002458   0x00000164   Code   RO         3227    i.LOS_InspectByID   los_inspect_entry.o
-    0x000025bc   0x00000060   Code   RO         3228    i.LOS_InspectStatusSetByID  los_inspect_entry.o
-    0x0000261c   0x00000048   Code   RO         3229    i.LOS_Inspect_Entry  los_inspect_entry.o
-    0x00002664   0x0000005c   Code   RO         3230    i.LOS_Inspect_KeyAndLed  los_inspect_entry.o
-    0x000026c0   0x000000cc   Code   RO         3231    i.LOS_Inspect_TskDeal  los_inspect_entry.o
-    0x0000278c   0x00000012   Code   RO         2472    i.LOS_KernelInit    los_config.o
+    0x00002458   0x00000164   Code   RO         2987    i.LOS_InspectByID   los_inspect_entry.o
+    0x000025bc   0x00000060   Code   RO         2988    i.LOS_InspectStatusSetByID  los_inspect_entry.o
+    0x0000261c   0x00000048   Code   RO         2989    i.LOS_Inspect_Entry  los_inspect_entry.o
+    0x00002664   0x0000005c   Code   RO         2990    i.LOS_Inspect_KeyAndLed  los_inspect_entry.o
+    0x000026c0   0x000000cc   Code   RO         2991    i.LOS_Inspect_TskDeal  los_inspect_entry.o
+    0x0000278c   0x00000012   Code   RO         2232    i.LOS_KernelInit    los_config.o
     0x0000279e   0x0000000e   Code   RO          321    i.LOS_ListAdd       los_task.o
     0x000027ac   0x0000000e   Code   RO          621    i.LOS_ListAdd       los_mux.o
     0x000027ba   0x0000000e   Code   RO          695    i.LOS_ListAdd       los_queue.o
     0x000027c8   0x0000000e   Code   RO          800    i.LOS_ListAdd       los_sem.o
     0x000027d6   0x0000000e   Code   RO          903    i.LOS_ListAdd       los_memory.o
-    0x000027e4   0x0000000e   Code   RO         2944    i.LOS_ListAdd       los_api_list.o
+    0x000027e4   0x0000000e   Code   RO         2704    i.LOS_ListAdd       los_api_list.o
     0x000027f2   0x00000014   Code   RO          322    i.LOS_ListDelete    los_task.o
     0x00002806   0x00000014   Code   RO          622    i.LOS_ListDelete    los_mux.o
     0x0000281a   0x00000014   Code   RO          801    i.LOS_ListDelete    los_sem.o
@@ -2715,13 +2695,13 @@ Memory Map of the image
     0x00003160   0x000000b0   Code   RO          699    i.LOS_QueueDelete   los_queue.o
     0x00003210   0x00000130   Code   RO          700    i.LOS_QueueRead     los_queue.o
     0x00003340   0x0000013c   Code   RO          701    i.LOS_QueueWrite    los_queue.o
-    0x0000347c   0x00000040   Code   RO         1521    i.LOS_Schedule      los_hw.o
+    0x0000347c   0x00000040   Code   RO         1114    i.LOS_Schedule      los_hw.o
     0x000034bc   0x0000006c   Code   RO          805    i.LOS_SemCreate     los_sem.o
     0x00003528   0x00000060   Code   RO          806    i.LOS_SemDelete     los_sem.o
     0x00003588   0x00000100   Code   RO          807    i.LOS_SemPend       los_sem.o
     0x00003688   0x000000b8   Code   RO          808    i.LOS_SemPost       los_sem.o
-    0x00003740   0x0000000c   Code   RO         1552    i.LOS_SetTickSycle  los_hw_tick.o
-    0x0000374c   0x0000000c   Code   RO         2473    i.LOS_Start         los_config.o
+    0x00003740   0x0000000c   Code   RO         1145    i.LOS_SetTickSycle  los_hw_tick.o
+    0x0000374c   0x0000000c   Code   RO         2233    i.LOS_Start         los_config.o
     0x00003758   0x0000008c   Code   RO          112    i.LOS_SwtmrCreate   los_swtmr.o
     0x000037e4   0x00000084   Code   RO          113    i.LOS_SwtmrDelete   los_swtmr.o
     0x00003868   0x00000084   Code   RO          114    i.LOS_SwtmrStart    los_swtmr.o
@@ -2736,55 +2716,55 @@ Memory Map of the image
     0x00003f28   0x0000003c   Code   RO          335    i.LOS_TaskUnlock    los_task.o
     0x00003f64   0x00000084   Code   RO          336    i.LOS_TaskYield     los_task.o
     0x00003fe8   0x0000000c   Code   RO          253    i.LOS_TickCountGet  los_sys.o
-    0x00003ff4   0x00000038   Code   RO         1553    i.LOS_TickHandler   los_hw_tick.o
-    0x0000402c   0x00000002   Code   RO         1640    i.LosAdapIntInit    los_bsp_adapter.o
+    0x00003ff4   0x00000038   Code   RO         1146    i.LOS_TickHandler   los_hw_tick.o
+    0x0000402c   0x00000002   Code   RO         1233    i.LosAdapIntInit    los_bsp_adapter.o
     0x0000402e   0x00000002   PAD
-    0x00004030   0x00000018   Code   RO         2053    i.RETARGET_SerialCrLf  retargetserial.o
-    0x00004048   0x000000bc   Code   RO         2054    i.RETARGET_SerialInit  retargetserial.o
-    0x00004104   0x0000004c   Code   RO         2055    i.RETARGET_WriteChar  retargetserial.o
-    0x00004150   0x00000044   Code   RO         4390    i.SYSTEM_ChipRevisionGet  em_system.o
-    0x00004194   0x00000018   Code   RO         1643    i.SysTick_Handler   los_bsp_adapter.o
-    0x000041ac   0x00000024   Code   RO         4427    i.SystemCoreClockGet  system_efm32gg.o
-    0x000041d0   0x000000dc   Code   RO         4428    i.SystemHFClockGet  system_efm32gg.o
-    0x000042ac   0x00000006   Code   RO         4432    i.SystemLFRCOClockGet  system_efm32gg.o
+    0x00004030   0x00000018   Code   RO         1813    i.RETARGET_SerialCrLf  retargetserial.o
+    0x00004048   0x000000bc   Code   RO         1814    i.RETARGET_SerialInit  retargetserial.o
+    0x00004104   0x0000004c   Code   RO         1815    i.RETARGET_WriteChar  retargetserial.o
+    0x00004150   0x00000044   Code   RO         4150    i.SYSTEM_ChipRevisionGet  em_system.o
+    0x00004194   0x00000018   Code   RO         1236    i.SysTick_Handler   los_bsp_adapter.o
+    0x000041ac   0x00000024   Code   RO         4328    i.SystemCoreClockGet  system_efm32gg.o
+    0x000041d0   0x000000dc   Code   RO         4329    i.SystemHFClockGet  system_efm32gg.o
+    0x000042ac   0x00000006   Code   RO         4333    i.SystemLFRCOClockGet  system_efm32gg.o
     0x000042b2   0x00000002   PAD
-    0x000042b4   0x0000000c   Code   RO         4433    i.SystemLFXOClockGet  system_efm32gg.o
-    0x000042c0   0x00000006   Code   RO         4436    i.SystemULFRCOClockGet  system_efm32gg.o
+    0x000042b4   0x0000000c   Code   RO         4334    i.SystemLFXOClockGet  system_efm32gg.o
+    0x000042c0   0x00000006   Code   RO         4337    i.SystemULFRCOClockGet  system_efm32gg.o
     0x000042c6   0x00000002   PAD
-    0x000042c8   0x00000050   Code   RO         3137    i.Timer1_Callback   los_api_timer.o
-    0x00004318   0x00000058   Code   RO         3138    i.Timer2_Callback   los_api_timer.o
-    0x00004370   0x0000006c   Code   RO         2056    i.USART1_RX_IRQHandler  retargetserial.o
-    0x000043dc   0x00000080   Code   RO         1110    i.USART_BaudrateAsyncSet  em_usart_1.o
-    0x0000445c   0x0000000e   Code   RO         1114    i.USART_Enable      em_usart_1.o
-    0x0000446a   0x00000042   Code   RO         1115    i.USART_InitAsync   em_usart_1.o
-    0x000044ac   0x00000050   Code   RO         1119    i.USART_Reset       em_usart_1.o
-    0x000044fc   0x00000014   Code   RO         1120    i.USART_Rx          em_usart_1.o
-    0x00004510   0x00000010   Code   RO         1125    i.USART_Tx          em_usart_1.o
-    0x00004520   0x00000020   Code   RO         4754    i.__0printf         mc_w.l(printfa.o)
-    0x00004540   0x00000050   Code   RO         4782    i.__free$1region    mc_w.l(malloc1.o)
-    0x00004590   0x0000000e   Code   RO         4854    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x0000459e   0x00000002   Code   RO         4855    i.__scatterload_null  mc_w.l(handlers.o)
-    0x000045a0   0x0000000e   Code   RO         4856    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x000042c8   0x00000050   Code   RO         2897    i.Timer1_Callback   los_api_timer.o
+    0x00004318   0x00000058   Code   RO         2898    i.Timer2_Callback   los_api_timer.o
+    0x00004370   0x0000006c   Code   RO         1816    i.USART1_RX_IRQHandler  retargetserial.o
+    0x000043dc   0x00000080   Code   RO         4180    i.USART_BaudrateAsyncSet  em_usart.o
+    0x0000445c   0x0000000e   Code   RO         4184    i.USART_Enable      em_usart.o
+    0x0000446a   0x00000042   Code   RO         4185    i.USART_InitAsync   em_usart.o
+    0x000044ac   0x00000050   Code   RO         4189    i.USART_Reset       em_usart.o
+    0x000044fc   0x00000014   Code   RO         4190    i.USART_Rx          em_usart.o
+    0x00004510   0x00000010   Code   RO         4195    i.USART_Tx          em_usart.o
+    0x00004520   0x00000020   Code   RO         4655    i.__0printf         mc_w.l(printfa.o)
+    0x00004540   0x00000050   Code   RO         4683    i.__free$1region    mc_w.l(malloc1.o)
+    0x00004590   0x0000000e   Code   RO         4755    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x0000459e   0x00000002   Code   RO         4756    i.__scatterload_null  mc_w.l(handlers.o)
+    0x000045a0   0x0000000e   Code   RO         4757    i.__scatterload_zeroinit  mc_w.l(handlers.o)
     0x000045ae   0x00000002   PAD
-    0x000045b0   0x00000184   Code   RO         4761    i._fp_digits        mc_w.l(printfa.o)
-    0x00004734   0x000006dc   Code   RO         4762    i._printf_core      mc_w.l(printfa.o)
-    0x00004e10   0x00000024   Code   RO         4763    i._printf_post_padding  mc_w.l(printfa.o)
-    0x00004e34   0x0000002e   Code   RO         4764    i._printf_pre_padding  mc_w.l(printfa.o)
+    0x000045b0   0x00000184   Code   RO         4662    i._fp_digits        mc_w.l(printfa.o)
+    0x00004734   0x000006dc   Code   RO         4663    i._printf_core      mc_w.l(printfa.o)
+    0x00004e10   0x00000024   Code   RO         4664    i._printf_post_padding  mc_w.l(printfa.o)
+    0x00004e34   0x0000002e   Code   RO         4665    i._printf_pre_padding  mc_w.l(printfa.o)
     0x00004e62   0x00000002   PAD
-    0x00004e64   0x00000098   Code   RO         3514    i.auxClkGet         em_cmu.o
-    0x00004efc   0x00000030   Code   RO         3515    i.dbgClkGet         em_cmu.o
-    0x00004f2c   0x00000010   Code   RO         1848    i.fputc             los_bsp_uart.o
-    0x00004f3c   0x00000020   Code   RO         3518    i.getHfLeConfig     em_cmu.o
-    0x00004f5c   0x000000cc   Code   RO         3519    i.lfClkGet          em_cmu.o
-    0x00005028   0x00000026   Code   RO         3266    i.main              main.o
+    0x00004e64   0x00000098   Code   RO         3274    i.auxClkGet         em_cmu.o
+    0x00004efc   0x00000030   Code   RO         3275    i.dbgClkGet         em_cmu.o
+    0x00004f2c   0x00000010   Code   RO         1608    i.fputc             los_bsp_uart.o
+    0x00004f3c   0x00000020   Code   RO         3278    i.getHfLeConfig     em_cmu.o
+    0x00004f5c   0x000000cc   Code   RO         3279    i.lfClkGet          em_cmu.o
+    0x00005028   0x00000026   Code   RO         3026    i.main              main.o
     0x0000504e   0x00000002   PAD
-    0x00005050   0x00000064   Code   RO         3520    i.maxFreqHfle       em_cmu.o
-    0x000050b4   0x00000008   Code   RO         1581    i.osHwiDefaultHandler  los_hwi.o
-    0x000050bc   0x00000024   Code   RO         1582    i.osHwiInit         los_hwi.o
+    0x00005050   0x00000064   Code   RO         3280    i.maxFreqHfle       em_cmu.o
+    0x000050b4   0x00000008   Code   RO         1174    i.osHwiDefaultHandler  los_hwi.o
+    0x000050bc   0x00000024   Code   RO         1175    i.osHwiInit         los_hwi.o
     0x000050e0   0x00000004   Code   RO          337    i.osIdleTask        los_task.o
     0x000050e4   0x0000004c   Code   RO          338    i.osIdleTaskCreate  los_task.o
-    0x00005130   0x0000000c   Code   RO         1583    i.osIntNumGet       los_hwi.o
-    0x0000513c   0x00000070   Code   RO         2476    i.osMain            los_config.o
+    0x00005130   0x0000000c   Code   RO         1176    i.osIntNumGet       los_hwi.o
+    0x0000513c   0x00000070   Code   RO         2236    i.osMain            los_config.o
     0x000051ac   0x0000005c   Code   RO          910    i.osMemAllocWithCheck  los_memory.o
     0x00005208   0x00000098   Code   RO          911    i.osMemCheckUsedNode  los_memory.o
     0x000052a0   0x00000050   Code   RO          912    i.osMemFindSuitableFreeBlock  los_memory.o
@@ -2801,8 +2781,8 @@ Memory Map of the image
     0x000055f0   0x00000084   Code   RO          706    i.osQueuePend       los_queue.o
     0x00005674   0x0000005a   Code   RO          707    i.osQueueWakeUp     los_queue.o
     0x000056ce   0x00000002   PAD
-    0x000056d0   0x0000001c   Code   RO         2477    i.osRegister        los_config.o
-    0x000056ec   0x00000008   Code   RO         1522    i.osSchedule        los_hw.o
+    0x000056d0   0x0000001c   Code   RO         2237    i.osRegister        los_config.o
+    0x000056ec   0x00000008   Code   RO         1115    i.osSchedule        los_hw.o
     0x000056f4   0x00000058   Code   RO          809    i.osSemInit         los_sem.o
     0x0000574c   0x000000ac   Code   RO          118    i.osSwTmrInit       los_swtmr.o
     0x000057f8   0x00000060   Code   RO          119    i.osSwTmrStart      los_swtmr.o
@@ -2814,7 +2794,7 @@ Memory Map of the image
     0x000059b4   0x00000048   Code   RO          125    i.osSwtmrStop       los_swtmr.o
     0x000059fc   0x000000c0   Code   RO          339    i.osTaskAdd2TimerList  los_task.o
     0x00005abc   0x000000a4   Code   RO          340    i.osTaskEntry       los_task.o
-    0x00005b60   0x00000008   Code   RO         1523    i.osTaskExit        los_hw.o
+    0x00005b60   0x00000008   Code   RO         1116    i.osTaskExit        los_hw.o
     0x00005b68   0x00000128   Code   RO          341    i.osTaskInit        los_task.o
     0x00005c90   0x00000034   Code   RO         1028    i.osTaskMemUsedDec  los_memstat.o
     0x00005cc4   0x0000003c   Code   RO         1029    i.osTaskMemUsedInc  los_memstat.o
@@ -2822,30 +2802,30 @@ Memory Map of the image
     0x00005d38   0x000000dc   Code   RO          343    i.osTaskScan        los_task.o
     0x00005e14   0x000000fc   Code   RO          344    i.osTaskSelfDelete  los_task.o
     0x00005f10   0x00000028   Code   RO          521    i.osTickHandler     los_tick.o
-    0x00005f38   0x00000040   Code   RO         1644    i.osTickStart       los_bsp_adapter.o
+    0x00005f38   0x00000040   Code   RO         1237    i.osTickStart       los_bsp_adapter.o
     0x00005f78   0x00000048   Code   RO          345    i.osTimerListDelete  los_task.o
     0x00005fc0   0x0000004c   Code   RO          549    i.osTimesliceCheck  los_timeslice.o
     0x0000600c   0x00000010   Code   RO          550    i.osTimesliceInit   los_timeslice.o
-    0x0000601c   0x00000088   Code   RO         1524    i.osTskStackInit    los_hw.o
-    0x000060a4   0x000000cc   Code   RO         2964    i.recv_Entry        los_api_msgqueue.o
-    0x00006170   0x00000074   Code   RO         2965    i.send_Entry        los_api_msgqueue.o
-    0x000061e4   0x00000030   Code   RO         3521    i.setHfLeConfig     em_cmu.o
-    0x00006214   0x00000020   Code   RO         3522    i.syncReg           em_cmu.o
-    0x00006234   0x00000040   Code   RO         3523    i.usbCClkGet        em_cmu.o
-    0x00006274   0x00000009   Data   RO         1645    .constdata          los_bsp_adapter.o
+    0x0000601c   0x00000088   Code   RO         1117    i.osTskStackInit    los_hw.o
+    0x000060a4   0x000000cc   Code   RO         2724    i.recv_Entry        los_api_msgqueue.o
+    0x00006170   0x00000074   Code   RO         2725    i.send_Entry        los_api_msgqueue.o
+    0x000061e4   0x00000030   Code   RO         3281    i.setHfLeConfig     em_cmu.o
+    0x00006214   0x00000020   Code   RO         3282    i.syncReg           em_cmu.o
+    0x00006234   0x00000040   Code   RO         3283    i.usbCClkGet        em_cmu.o
+    0x00006274   0x00000009   Data   RO         1238    .constdata          los_bsp_adapter.o
     0x0000627d   0x00000003   PAD
-    0x00006280   0x00000018   Data   RO         2057    .constdata          retargetserial.o
-    0x00006298   0x00000010   Data   RO         2260    .constdata          bsp_stk_leds.o
-    0x000062a8   0x00000042   Data   RO         3026    .conststring        los_api_sem.o
+    0x00006280   0x00000018   Data   RO         1817    .constdata          retargetserial.o
+    0x00006298   0x00000010   Data   RO         2020    .constdata          bsp_stk_leds.o
+    0x000062a8   0x00000042   Data   RO         2786    .conststring        los_api_sem.o
     0x000062ea   0x00000002   PAD
-    0x000062ec   0x00000030   Data   RO         4852    Region$$Table       anon$$obj.o
+    0x000062ec   0x00000030   Data   RO         4753    Region$$Table       anon$$obj.o
 
 
     Execution Region VECTOR (Base: 0x20000000, Size: 0x00000400, Max: 0x00000400, ABSOLUTE, COMPRESSED[0x0000001c])
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x00000400   Data   RW         1587    .vector.bss         los_hwi.o
+    0x20000000   0x00000400   Data   RW         1180    .vector.bss         los_hwi.o
 
 
     Execution Region ARM_LIB_STACKHEAP (Base: 0x20000400, Size: 0x00000200, Max: 0x00000200, ABSOLUTE)
@@ -2867,30 +2847,30 @@ Memory Map of the image
     0x20000670   0x0000000c   Data   RW          631    .data               los_mux.o
     0x2000067c   0x00000004   Data   RW          708    .data               los_queue.o
     0x20000680   0x0000000c   Data   RW          810    .data               los_sem.o
-    0x2000068c   0x00000004   Data   RW         1554    .data               los_hw_tick.o
-    0x20000690   0x00000004   Data   RW         1586    .data               los_hwi.o
-    0x20000694   0x00000008   Data   RW         1646    .data               los_bsp_adapter.o
-    0x2000069c   0x00000016   Data   RW         2058    .data               retargetserial.o
+    0x2000068c   0x00000004   Data   RW         1147    .data               los_hw_tick.o
+    0x20000690   0x00000004   Data   RW         1179    .data               los_hwi.o
+    0x20000694   0x00000008   Data   RW         1239    .data               los_bsp_adapter.o
+    0x2000069c   0x00000016   Data   RW         1818    .data               retargetserial.o
     0x200006b2   0x00000002   PAD
-    0x200006b4   0x00000008   Data   RW         2478    .data               los_config.o
-    0x200006bc   0x00000008   Data   RW         2893    .data               los_api_event.o
-    0x200006c4   0x00000016   Data   RW         2966    .data               los_api_msgqueue.o
+    0x200006b4   0x00000008   Data   RW         2238    .data               los_config.o
+    0x200006bc   0x00000008   Data   RW         2653    .data               los_api_event.o
+    0x200006c4   0x00000016   Data   RW         2726    .data               los_api_msgqueue.o
     0x200006da   0x00000002   PAD
-    0x200006dc   0x0000000c   Data   RW         2996    .data               los_api_mutex.o
-    0x200006e8   0x0000000c   Data   RW         3027    .data               los_api_sem.o
-    0x200006f4   0x00000008   Data   RW         3095    .data               los_api_task.o
-    0x200006fc   0x00000008   Data   RW         3139    .data               los_api_timer.o
-    0x20000704   0x00000004   Data   RW         3197    .data               los_demo_entry.o
-    0x20000708   0x000000a8   Data   RW         3232    .data               los_inspect_entry.o
-    0x200007b0   0x0000000c   Data   RW         4437    .data               system_efm32gg.o
-    0x200007bc   0x00000004   Data   RW         4830    .data               mc_w.l(stdout.o)
-    0x200007c0   0x00000004   Data   RW         4837    .data               mc_w.l(mvars.o)
+    0x200006dc   0x0000000c   Data   RW         2756    .data               los_api_mutex.o
+    0x200006e8   0x0000000c   Data   RW         2787    .data               los_api_sem.o
+    0x200006f4   0x00000008   Data   RW         2855    .data               los_api_task.o
+    0x200006fc   0x00000008   Data   RW         2899    .data               los_api_timer.o
+    0x20000704   0x00000004   Data   RW         2957    .data               los_demo_entry.o
+    0x20000708   0x000000a8   Data   RW         2992    .data               los_inspect_entry.o
+    0x200007b0   0x0000000c   Data   RW         4338    .data               system_efm32gg.o
+    0x200007bc   0x00000004   Data   RW         4731    .data               mc_w.l(stdout.o)
+    0x200007c0   0x00000004   Data   RW         4738    .data               mc_w.l(mvars.o)
     0x200007c4   0x000000d0   Zero   RW          126    .bss                los_swtmr.o
     0x20000894   0x00008000   Zero   RW          919    .bss                los_memory.o
     0x20008894   0x00000040   Zero   RW         1030    .bss                los_memstat.o
-    0x200088d4   0x0000000c   Zero   RW         2892    .bss                los_api_event.o
-    0x200088e0   0x00000258   Zero   RW         3054    .bss                los_api_static_mem.o
-    0x20008b38   0x00000400   Zero   RW         4417    STACK               los_startup_keil.o
+    0x200088d4   0x0000000c   Zero   RW         2652    .bss                los_api_event.o
+    0x200088e0   0x00000258   Zero   RW         2814    .bss                los_api_static_mem.o
+    0x20008b38   0x00000400   Zero   RW         4318    STACK               los_startup_keil.o
 
 
 ==============================================================================
@@ -2907,7 +2887,7 @@ Image component sizes
          0          0          0          0          0       1628   em_emu.o
        208         14          0          0          0       6238   em_gpio.o
         68          6          0          0          0       1229   em_system.o
-       324         24          0          0          0      67570   em_usart_1.o
+       324         24          0          0          0       5150   em_usart.o
         50          0          0          0          0       1968   led_stk3700.o
        272        138          0          0          0       2202   los_api_dynamic_mem.o
        508        284          0          8         12       1779   los_api_event.o
@@ -2919,13 +2899,13 @@ Image component sizes
        216         90          0          0          0        786   los_api_systick.o
        884        542          0          8          0       2503   los_api_task.o
        432        196          0          8          0       2252   los_api_timer.o
-       166         24          9          8          0       6174   los_bsp_adapter.o
-        26          0          0          0          0       1252   los_bsp_key.o
+       166         24          9          8          0      64050   los_bsp_adapter.o
+        26          0          0          0          0       5764   los_bsp_key.o
         74          0          0          0          0       1285   los_bsp_led.o
         42          0          0          0          0       4765   los_bsp_uart.o
        188         18          0          8          0       3976   los_config.o
        122         54          0          4          0       1464   los_demo_entry.o
-       228         30          0          0          0        812   los_dispatch_keil.o
+       228         30          0          0          0        844   los_dispatch_keil.o
        744         32          0          0          0       5322   los_event.o
        216         16          0          0          0       3018   los_hw.o
         68         10          0          4          0       1481   los_hw_tick.o
