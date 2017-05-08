@@ -12,24 +12,24 @@
 
 void BSP_LED_Init(uint8_t led)
 {
-	SIM_SCGC5 |= SIM_SCGC5_LED1_MASK | SIM_SCGC5_LED2_MASK | SIM_SCGC5_LED3_MASK;
+    SIM_SCGC5 |= SIM_SCGC5_LED1_MASK | SIM_SCGC5_LED2_MASK | SIM_SCGC5_LED3_MASK;
 	
     switch(led)
     {
         case LED1: LED1_PORT_PCR  &=	~(0x07<<8);            
                    LED1_PORT_PCR  |=	 0x01<<8;                 //GPIO mode
                    LED1_GPIO_PDOR |= (1U << LED1_PIN);           //high
-		           LED1_GPIO_PDDR |= (1U << LED1_PIN);           //output
+                   LED1_GPIO_PDDR |= (1U << LED1_PIN);           //output
             break; 
         case LED2: LED2_PORT_PCR  &=	~(0x07<<8);            
                    LED2_PORT_PCR  |=	 0x01<<8;                 //GPIO mode
                    LED2_GPIO_PDOR |= (1U << LED2_PIN);           //high
-		           LED2_GPIO_PDDR |= (1U << LED2_PIN);           //output
+                   LED2_GPIO_PDDR |= (1U << LED2_PIN);           //output
             break;
         case LED3: LED3_PORT_PCR  &=	~(0x07<<8);            
                    LED3_PORT_PCR  |=	 0x01<<8;                 //GPIO mode
                    LED3_GPIO_PDOR |= (1U << LED3_PIN);           //high
-		           LED3_GPIO_PDDR |= (1U << LED3_PIN);           //output
+                   LED3_GPIO_PDDR |= (1U << LED3_PIN);           //output
             break;
         default:
             break;
@@ -72,9 +72,9 @@ void BSP_LED_Off(uint8_t led)
 void LOS_EvbLedInit(void)
 {
 #if (defined FRDM_KL25Z) || (defined FRDM_KL26Z)
-	BSP_LED_Init(LED1);
-	BSP_LED_Init(LED2);
-	BSP_LED_Init(LED3);
+    BSP_LED_Init(LED1);
+    BSP_LED_Init(LED2);
+    BSP_LED_Init(LED3);
 #endif
 	return ;
 }

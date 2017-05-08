@@ -109,10 +109,10 @@ void BSP_UART_Init (uint32_t baud)
 uint8_t byte;
 void UART0_IRQHandler(void)
 {
-	if (UART0_S1&UART_S1_RDRF_MASK)
-	{
-		byte = UART0_D;
-	}
+    if (UART0_S1&UART_S1_RDRF_MASK)
+    {
+        byte = UART0_D;
+    }
 }
 
 int fputc(int ch,FILE *f)
@@ -120,14 +120,14 @@ int fputc(int ch,FILE *f)
     while(!(UART0_S1&UART_S1_TDRE_MASK) && !(UART0_S1&UART_S1_TC_MASK));
     UART0_D  = ch;
 	
-	return(ch);
+    return(ch);
 }
 #endif
 
 void LOS_EvbUartInit(void)
 {
 #if (defined FRDM_KL25Z) || (defined FRDM_KL26Z)
-	 BSP_UART_Init(115200);
+    BSP_UART_Init(115200);
 #endif
 	
 	return ;
@@ -162,10 +162,10 @@ void LOS_EvbUartWriteStr(const char* str)
     {
         while(!(UART0_S1&UART_S1_TDRE_MASK) && !(UART0_S1&UART_S1_TC_MASK));
         UART0_D  = *str;
-	    str++;
+        str++;
     }
 #endif
-	return ;
+    return ;
 }
 
 
@@ -184,7 +184,7 @@ void LOS_EvbUartReadByte(char* c)
     /* Return the 8-bit data from the receiver */
     *c = UART0_D;
 #endif
-	return ;
+    return ;
 }
 
 #if (defined FRDM_KL25Z) || (defined FRDM_KL26Z)

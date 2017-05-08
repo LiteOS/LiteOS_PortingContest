@@ -11,23 +11,23 @@
 #if (defined FRDM_KL25Z) || (defined FRDM_KL26Z)
 void BSP_KEY_Init(void)
 {
-	SIM_SCGC5 |= SIM_SCGC5_PORTC_MASK; 
+    SIM_SCGC5 |= SIM_SCGC5_PORTC_MASK; 
 	
     PORTC_PCR3  &= ~(0x07<<8);            
     PORTC_PCR3  |=	 0x01<<8;                  //GPIO mode
     PORTC_PCR3  |=	 0x03;                     //pullup
-	GPIOC_PDDR  &= ~(1U << 3);                 //input
+    GPIOC_PDDR  &= ~(1U << 3);                 //input
 }
 
 uint16_t BSP_KEY_Get(void)
 {
-	uint16_t KeyVal=LOS_GPIO_ERR;
+    uint16_t KeyVal=LOS_GPIO_ERR;
 	
-	if(!((GPIOC_PDIR >> 3) & 1))
-	{
-		KeyVal = 0;
-	}
-	return KeyVal;
+    if(!((GPIOC_PDIR >> 3) & 1))
+    {
+        KeyVal = 0;
+    }
+    return KeyVal;
 }
 #endif
 
@@ -35,7 +35,7 @@ void LOS_EvbKeyInit(void)
 {
 
 #if (defined FRDM_KL25Z) || (defined FRDM_KL26Z)
-	BSP_KEY_Init();
+    BSP_KEY_Init();
 #endif
 }
 
@@ -49,12 +49,12 @@ void LOS_EvbKeyInit(void)
  *****************************************************************************/
 unsigned int LOS_EvbGetKeyVal(int KeyNum)
 {
-	unsigned int KeyVal = LOS_GPIO_ERR; 
+    unsigned int KeyVal = LOS_GPIO_ERR; 
 
 #if (defined FRDM_KL25Z) || (defined FRDM_KL26Z)	
-	if(KeyNum == USER_KEY)
+    if(KeyNum == USER_KEY)
     {
-		KeyVal = BSP_KEY_Get();
+        KeyVal = BSP_KEY_Get();
     }
 #endif
 	
