@@ -320,7 +320,7 @@ Keil工具需要开发者自行购买，OpenSDA驱动程序和固件可以从htt
 
 - 从开发板官网获取开发包资料，网址为：http://www.nxp.com/cn/products/software-and-tools/hardware-development-tools/freedom-development-boards:FREDEVPLA
 
-- 从keil官网下载PACK包，网址为：https://keilpack.azureedge.net/pack/Keil.Kinetis_KLxx_DFP.1.13.0.pack
+- 从keil官网下载PACK包，网址为：http://www.keil.com/dd2/Pack/
 
 - 从官网下载OpenSDA驱动程序，网址为：http://www.pemicro.com/opensda/
 
