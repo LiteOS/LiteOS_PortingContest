@@ -316,23 +316,35 @@ Keil工具需要开发者自行购买，OpenSDA驱动程序和固件可以从htt
 ## 6如何适配LiteOS内核工程开发
 本章节描述的内容以开发板SDK中的uart_basic示例工程为基础，适配到LiteOS的FRDM-KL26Z-KEIL工程中，演示串口输出、按键及LED灯点亮功能。
 
-### FRDM-KL25Z开发资料获取
+### FRDM-KL26Z开发资料获取
 
 - 从开发板官网获取开发包资料，网址为：http://www.nxp.com/cn/products/software-and-tools/hardware-development-tools/freedom-development-boards:FREDEVPLA
 
 - 从keil官网下载PACK包，网址为：http://www.keil.com/dd2/Pack/
 
-- 从官网下载OpenSDA驱动程序，网址为：http://www.pemicro.com/opensda/
+- 从官网下载OpenSDA驱动程序和固件升级包，网址为：http://www.pemicro.com/opensda/
 
 ### 安装KL系列单片机的的keil支持包
 
   安装Keil.Kinetis_KLxx_DFP.1.13.0.pack或者更高版本的pack文件到keil安装目录。
 
+### 安装OpenSDA驱动并升级OpenSDA固件
+
+  安装OpenSDA驱动程序PEDrivers_install.exe。
+
+  将下载好的固件Pemicro_OpenSDA_Debug_MSD_Update_Apps_2017_01_31.zip解压。
+
+  1、把USB先插入SDA口，按住SDA口旁边的按键不放，将USB线插入电脑的USB口，此时进入Bootloader模式，黄灯闪烁，电脑上显示BOOOTLOADER的磁盘。
+  
+  2、把DEBUG-APP_Pemicro_v108.SDA文件复制到磁盘中，然后断开USB链接，并重新插上USB线，黄灯常亮表示升级完成。
+  
+  3、按照上述步骤升级MSD-DEBUG-FRDM-KL26Z_Pemicro_v118.SDA和OpenSDA_Bootloader_Update_App_v111_2013_12_11文件夹下的BOOTUPDATEAPP_Pemicro_v111.SDA。至此，OpenSDA可以正常使用。
+
+  OpenSDA也可以通过升级固件方式变成Jlink仿真器，可以在SEGGER官网下载固件，按照上述步骤升级固件。
+
 **添加代码到LiteOS工程**
 
   按照LiteOS_Migration_Guide_Keil.md的步骤建立工程，并添加文件。
-
-**添加代码到LiteOS工程**
 
 拷贝keil安装目录和开发板资料中的文件到platform\FRDM-KL26Z文件夹中。
 
@@ -368,15 +380,15 @@ LiteOS可直接使用官方的启动文件startup_MKL26Z4.s，这样就为芯片
 
 ![](./meta/keil/kl26z/add_file_6.png)
 
-在los_config.h中添加宏RAM_SIZE_LEVEL_1。
+将los_api_msgqueue.c中的void *recv_Entry()函数中的uwRet = LOS_QueueRead(g_uwQueue, &uwReadbuf, 50, 0);改成uwRet = LOS_QueueRead(g_uwQueue, &uwReadbuf, 48, 0);将UINT32 Example_MsgQueue(void)中的uwRet = LOS_QueueCreate("queue", 5, &g_uwQueue, 0, 50);改成uwRet = LOS_QueueCreate("queue", 5, &g_uwQueue, 0, 48);以避免因费对其访问进入HardFault_Handler中断。
 
 ![](./meta/keil/kl26z/add_file_7.png)
 
-将los_api_task.c中的UINT32 Example_TaskHi(VOID)函数里的第一个延时时间改成5。
+将los_api_task.c中的UINT32 Example_TaskHi(VOID)函数里的第一个延时时间改成5。（增加串口打印时间，防止打印数据乱序）
 
 ![](./meta/keil/kl26z/add_file_8.png)
 
-将los_api_task.c中的UINT32 Example_TaskLo(VOID)函数里的第一个延时时间改成5。
+将los_api_task.c中的UINT32 Example_TaskLo(VOID)函数里的第一个延时时间改成5。（增加串口打印时间，防止打印数据乱序）
 
 ![](./meta/keil/kl26z/add_file_9.png)
 

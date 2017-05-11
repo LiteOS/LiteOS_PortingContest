@@ -69,7 +69,6 @@ extern char __bss_start;
 	RAM_SIZE_LEVEL_1 means kernel ram < 16k, 
 	RAM_SIZE_LEVEL_2 means means kernel ram>=32k 
 */
-#define RAM_SIZE_LEVEL_1
 
 /**
  * @ingroup los_config

@@ -558,12 +558,13 @@ ARM Macro Assembler    Page 9
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M0+ --apcs=inter
 work --depend=.\objects\startup_mkl26z4.d -o.\objects\startup_mkl26z4.o -IC:\Us
-ers\Hotriver\Desktop\PortingContest_FRDM-KL25Z_FRDM-KL26Z_forlock\LiteOS_Kernel
--master\projects\FRDM-KL26Z-KEIL\RTE -I"D:\Program Files (x86)\Keil\MDK\PACK\Ke
-il\Kinetis_KLxx_DFP\1.10.0\Device\Include" -I"D:\Program Files (x86)\Keil\MDK\A
-RM\CMSIS\Include" --predefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSIO
-N SETA 517" --predefine="MKL26Z128xxx4 SETA 1" --list=.\listings\startup_mkl26z
-4.lst ..\..\platform\FRDM-KL26Z\library\startup_MKL26Z4.s
+ers\Hotriver\Desktop\PortingContest\PortingContest\PortingContest_FRDM-KL25Z_FR
+DM-KL26Z_forlock\LiteOS_Kernel-master\projects\FRDM-KL26Z-KEIL\RTE -I"D:\Progra
+m Files (x86)\Keil\MDK\PACK\Keil\Kinetis_KLxx_DFP\1.10.0\Device\Include" -I"D:\
+Program Files (x86)\Keil\MDK\ARM\CMSIS\Include" --predefine="__MICROLIB SETA 1"
+ --predefine="__UVISION_VERSION SETA 517" --predefine="MKL26Z128xxx4 SETA 1" --
+list=.\listings\startup_mkl26z4.lst ..\..\platform\FRDM-KL26Z\library\startup_M
+KL26Z4.s
 
 
 

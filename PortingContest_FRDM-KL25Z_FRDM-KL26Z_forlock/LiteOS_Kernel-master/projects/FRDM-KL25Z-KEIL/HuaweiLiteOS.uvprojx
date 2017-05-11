@@ -371,7 +371,7 @@
             <vShortWch>0</vShortWch>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>DEBUG, FRDM_KL25Z, FREEDOM</Define>
+              <Define>DEBUG, FRDM_KL25Z, FREEDOM,RAM_SIZE_LEVEL_1</Define>
               <Undefine></Undefine>
               <IncludePath>..\..\example\include;..\..\kernel\include;..\..\kernel\base\include;..\..\kernel\cmsis;..\..\kernel\config;..\..\kernel\link\keil;..\..\kernel\cpu\arm\cortex-m0;..\..\platform\FRDM-KL25Z;..\..\platform\FRDM-KL25Z\bsp\inc;..\..\platform\FRDM-KL25Z\library</IncludePath>
             </VariousControls>
