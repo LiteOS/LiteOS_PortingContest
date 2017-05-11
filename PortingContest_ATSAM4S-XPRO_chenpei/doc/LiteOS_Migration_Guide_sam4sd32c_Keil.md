@@ -485,7 +485,17 @@ FLASH 2048 KB // SRAM 160 KB
 
 ![](./meta/keil/sam4sd32c/sct-file.png)
 
-7.编译下载
+7.修改main函数
+
+包含测试头文件： #include "los_inspect_entry.h"
+
+配置时钟： SystemInit();
+
+修改测试任务入口函数： LOS_Inspect_Entry();
+
+![](./meta/keil/sam4sd32c/main.png)
+
+8.编译下载
 
 经过上述步骤后就可以编译下载了，无误的话可以看到如下效果：
 
