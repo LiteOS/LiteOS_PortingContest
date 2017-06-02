@@ -1,0 +1,15 @@
+"E:\software\IAR\install\IAR Systems\Embedded Workbench 8.0\arm\bin\armproc.dll" 
+
+"E:\software\IAR\install\IAR Systems\Embedded Workbench 8.0\arm\bin\armjlink2.dll" 
+
+"E:\workspace\liteos\PortingContest_SLSTK3401A-SLab_songzhongrang_0\projects\SLSTK3401A-SLab-IAR\Debug\Exe\HuaweiLiteOS_slstk3401a.out" 
+
+--plugin "E:\software\IAR\install\IAR Systems\Embedded Workbench 8.0\arm\bin\armbat.dll" 
+
+--device_macro "E:\software\IAR\install\IAR Systems\Embedded Workbench 8.0\arm\config\debugger\SiliconLaboratories\Trace_EFM32JG.dmac" 
+
+--flash_loader "E:\software\IAR\install\IAR Systems\Embedded Workbench 8.0\arm\config\flashloader\SiliconLaboratories\FlashGECKOP2.board" 
+
+
+
+
