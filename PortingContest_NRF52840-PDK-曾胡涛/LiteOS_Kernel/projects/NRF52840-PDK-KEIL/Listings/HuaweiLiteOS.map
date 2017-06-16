@@ -1349,211 +1349,211 @@ Image Symbol Table
     i.LOS_InspectStatusSetByID               0x000020b8   Section        0  los_inspect_entry.o(i.LOS_InspectStatusSetByID)
     i.LOS_Inspect_Entry                      0x00002118   Section        0  los_inspect_entry.o(i.LOS_Inspect_Entry)
     i.LOS_Inspect_KeyAndLed                  0x00002160   Section        0  los_inspect_entry.o(i.LOS_Inspect_KeyAndLed)
-    LOS_Inspect_KeyAndLed                    0x00002161   Thumb Code    76  los_inspect_entry.o(i.LOS_Inspect_KeyAndLed)
-    i.LOS_Inspect_TskDeal                    0x000021c8   Section        0  los_inspect_entry.o(i.LOS_Inspect_TskDeal)
-    i.LOS_KernelInit                         0x00002294   Section        0  los_config.o(i.LOS_KernelInit)
-    i.LOS_ListAdd                            0x000022a6   Section        0  los_task.o(i.LOS_ListAdd)
-    LOS_ListAdd                              0x000022a7   Thumb Code    14  los_task.o(i.LOS_ListAdd)
-    i.LOS_ListAdd                            0x000022b4   Section        0  los_mux.o(i.LOS_ListAdd)
-    LOS_ListAdd                              0x000022b5   Thumb Code    14  los_mux.o(i.LOS_ListAdd)
-    i.LOS_ListAdd                            0x000022c2   Section        0  los_queue.o(i.LOS_ListAdd)
-    LOS_ListAdd                              0x000022c3   Thumb Code    14  los_queue.o(i.LOS_ListAdd)
-    i.LOS_ListAdd                            0x000022d0   Section        0  los_sem.o(i.LOS_ListAdd)
-    LOS_ListAdd                              0x000022d1   Thumb Code    14  los_sem.o(i.LOS_ListAdd)
-    i.LOS_ListAdd                            0x000022de   Section        0  los_memory.o(i.LOS_ListAdd)
-    LOS_ListAdd                              0x000022df   Thumb Code    14  los_memory.o(i.LOS_ListAdd)
-    i.LOS_ListAdd                            0x000022ec   Section        0  los_api_list.o(i.LOS_ListAdd)
-    LOS_ListAdd                              0x000022ed   Thumb Code    14  los_api_list.o(i.LOS_ListAdd)
-    i.LOS_ListDelete                         0x000022fa   Section        0  los_task.o(i.LOS_ListDelete)
-    LOS_ListDelete                           0x000022fb   Thumb Code    20  los_task.o(i.LOS_ListDelete)
-    i.LOS_ListDelete                         0x0000230e   Section        0  los_mux.o(i.LOS_ListDelete)
-    LOS_ListDelete                           0x0000230f   Thumb Code    20  los_mux.o(i.LOS_ListDelete)
-    i.LOS_ListDelete                         0x00002322   Section        0  los_sem.o(i.LOS_ListDelete)
-    LOS_ListDelete                           0x00002323   Thumb Code    20  los_sem.o(i.LOS_ListDelete)
-    i.LOS_ListDelete                         0x00002336   Section        0  los_memory.o(i.LOS_ListDelete)
-    LOS_ListDelete                           0x00002337   Thumb Code    20  los_memory.o(i.LOS_ListDelete)
-    i.LOS_ListEmpty                          0x0000234a   Section        0  los_task.o(i.LOS_ListEmpty)
-    LOS_ListEmpty                            0x0000234b   Thumb Code    16  los_task.o(i.LOS_ListEmpty)
-    i.LOS_ListEmpty                          0x0000235a   Section        0  los_mux.o(i.LOS_ListEmpty)
-    LOS_ListEmpty                            0x0000235b   Thumb Code    16  los_mux.o(i.LOS_ListEmpty)
-    i.LOS_ListEmpty                          0x0000236a   Section        0  los_queue.o(i.LOS_ListEmpty)
-    LOS_ListEmpty                            0x0000236b   Thumb Code    16  los_queue.o(i.LOS_ListEmpty)
-    i.LOS_ListEmpty                          0x0000237a   Section        0  los_sem.o(i.LOS_ListEmpty)
-    LOS_ListEmpty                            0x0000237b   Thumb Code    16  los_sem.o(i.LOS_ListEmpty)
-    i.LOS_ListInit                           0x0000238a   Section        0  los_task.o(i.LOS_ListInit)
-    LOS_ListInit                             0x0000238b   Thumb Code     6  los_task.o(i.LOS_ListInit)
-    i.LOS_ListInit                           0x00002390   Section        0  los_mux.o(i.LOS_ListInit)
-    LOS_ListInit                             0x00002391   Thumb Code     6  los_mux.o(i.LOS_ListInit)
-    i.LOS_ListInit                           0x00002396   Section        0  los_queue.o(i.LOS_ListInit)
-    LOS_ListInit                             0x00002397   Thumb Code     6  los_queue.o(i.LOS_ListInit)
-    i.LOS_ListInit                           0x0000239c   Section        0  los_sem.o(i.LOS_ListInit)
-    LOS_ListInit                             0x0000239d   Thumb Code     6  los_sem.o(i.LOS_ListInit)
-    i.LOS_ListTailInsert                     0x000023a2   Section        0  los_task.o(i.LOS_ListTailInsert)
-    LOS_ListTailInsert                       0x000023a3   Thumb Code    16  los_task.o(i.LOS_ListTailInsert)
-    i.LOS_ListTailInsert                     0x000023b2   Section        0  los_mux.o(i.LOS_ListTailInsert)
-    LOS_ListTailInsert                       0x000023b3   Thumb Code    16  los_mux.o(i.LOS_ListTailInsert)
-    i.LOS_ListTailInsert                     0x000023c2   Section        0  los_sem.o(i.LOS_ListTailInsert)
-    LOS_ListTailInsert                       0x000023c3   Thumb Code    16  los_sem.o(i.LOS_ListTailInsert)
-    i.LOS_Log2                               0x000023d4   Section        0  los_multipledlinkhead.o(i.LOS_Log2)
-    LOS_Log2                                 0x000023d5   Thumb Code   320  los_multipledlinkhead.o(i.LOS_Log2)
-    i.LOS_MemAlloc                           0x00002518   Section        0  los_memory.o(i.LOS_MemAlloc)
-    i.LOS_MemAllocAlign                      0x00002552   Section        0  los_memory.o(i.LOS_MemAllocAlign)
-    i.LOS_MemFree                            0x000025be   Section        0  los_memory.o(i.LOS_MemFree)
-    i.LOS_MemInit                            0x00002612   Section        0  los_memory.o(i.LOS_MemInit)
-    i.LOS_MemboxAlloc                        0x000026b8   Section        0  los_membox.o(i.LOS_MemboxAlloc)
-    i.LOS_MemboxClr                          0x000026f8   Section        0  los_membox.o(i.LOS_MemboxClr)
-    i.LOS_MemboxFree                         0x00002714   Section        0  los_membox.o(i.LOS_MemboxFree)
-    i.LOS_MemboxInit                         0x000027b8   Section        0  los_membox.o(i.LOS_MemboxInit)
-    i.LOS_MuxCreate                          0x00002838   Section        0  los_mux.o(i.LOS_MuxCreate)
-    i.LOS_MuxDelete                          0x0000289c   Section        0  los_mux.o(i.LOS_MuxDelete)
-    i.LOS_MuxPend                            0x00002904   Section        0  los_mux.o(i.LOS_MuxPend)
-    i.LOS_MuxPost                            0x00002a4c   Section        0  los_mux.o(i.LOS_MuxPost)
-    i.LOS_PriqueueDequeue                    0x00002b4c   Section        0  los_priqueue.o(i.LOS_PriqueueDequeue)
-    i.LOS_PriqueueEnqueue                    0x00002b64   Section        0  los_priqueue.o(i.LOS_PriqueueEnqueue)
-    i.LOS_PriqueueSize                       0x00002b88   Section        0  los_priqueue.o(i.LOS_PriqueueSize)
-    i.LOS_PriqueueTop                        0x00002bb0   Section        0  los_priqueue.o(i.LOS_PriqueueTop)
-    i.LOS_QueueCreate                        0x00002bec   Section        0  los_queue.o(i.LOS_QueueCreate)
-    i.LOS_QueueDelete                        0x00002c68   Section        0  los_queue.o(i.LOS_QueueDelete)
-    i.LOS_QueueRead                          0x00002d18   Section        0  los_queue.o(i.LOS_QueueRead)
-    i.LOS_QueueWrite                         0x00002e48   Section        0  los_queue.o(i.LOS_QueueWrite)
-    i.LOS_Schedule                           0x00002f84   Section        0  los_hw.o(i.LOS_Schedule)
-    i.LOS_SemCreate                          0x00002fc4   Section        0  los_sem.o(i.LOS_SemCreate)
-    i.LOS_SemDelete                          0x00003030   Section        0  los_sem.o(i.LOS_SemDelete)
-    i.LOS_SemPend                            0x00003090   Section        0  los_sem.o(i.LOS_SemPend)
-    i.LOS_SemPost                            0x00003190   Section        0  los_sem.o(i.LOS_SemPost)
-    i.LOS_SetTickSycle                       0x00003248   Section        0  los_hw_tick.o(i.LOS_SetTickSycle)
-    i.LOS_Start                              0x00003254   Section        0  los_config.o(i.LOS_Start)
-    i.LOS_SwtmrCreate                        0x00003260   Section        0  los_swtmr.o(i.LOS_SwtmrCreate)
-    i.LOS_SwtmrDelete                        0x000032ec   Section        0  los_swtmr.o(i.LOS_SwtmrDelete)
-    i.LOS_SwtmrStart                         0x00003370   Section        0  los_swtmr.o(i.LOS_SwtmrStart)
-    i.LOS_SwtmrStop                          0x000033f4   Section        0  los_swtmr.o(i.LOS_SwtmrStop)
-    i.LOS_TaskCreate                         0x00003474   Section        0  los_task.o(i.LOS_TaskCreate)
-    i.LOS_TaskCreateOnly                     0x00003510   Section        0  los_task.o(i.LOS_TaskCreateOnly)
-    i.LOS_TaskDelay                          0x00003694   Section        0  los_task.o(i.LOS_TaskDelay)
-    i.LOS_TaskDelete                         0x00003714   Section        0  los_task.o(i.LOS_TaskDelete)
-    i.LOS_TaskLock                           0x0000387c   Section        0  los_task.o(i.LOS_TaskLock)
-    i.LOS_TaskResume                         0x0000389c   Section        0  los_task.o(i.LOS_TaskResume)
-    i.LOS_TaskSuspend                        0x0000394c   Section        0  los_task.o(i.LOS_TaskSuspend)
-    i.LOS_TaskUnlock                         0x00003a30   Section        0  los_task.o(i.LOS_TaskUnlock)
-    i.LOS_TaskYield                          0x00003a6c   Section        0  los_task.o(i.LOS_TaskYield)
-    i.LOS_TickCountGet                       0x00003af0   Section        0  los_sys.o(i.LOS_TickCountGet)
-    i.LOS_TickHandler                        0x00003afc   Section        0  los_hw_tick.o(i.LOS_TickHandler)
-    i.LosAdapIntInit                         0x00003b34   Section        0  los_bsp_adapter.o(i.LosAdapIntInit)
-    i.SysTick_Handler                        0x00003b36   Section        0  los_bsp_adapter.o(i.SysTick_Handler)
-    i.SystemCoreClockUpdate                  0x00003b40   Section        0  system_nrf52840.o(i.SystemCoreClockUpdate)
-    i.SystemInit                             0x00003b50   Section        0  system_nrf52840.o(i.SystemInit)
-    i.Timer1_Callback                        0x00003d64   Section        0  los_api_timer.o(i.Timer1_Callback)
-    i.Timer2_Callback                        0x00003db4   Section        0  los_api_timer.o(i.Timer2_Callback)
-    i.__0printf                              0x00003e0c   Section        0  printfa.o(i.__0printf)
-    i.__scatterload_copy                     0x00003e2c   Section       14  handlers.o(i.__scatterload_copy)
-    i.__scatterload_null                     0x00003e3a   Section        2  handlers.o(i.__scatterload_null)
-    i.__scatterload_zeroinit                 0x00003e3c   Section       14  handlers.o(i.__scatterload_zeroinit)
-    i._fp_digits                             0x00003e4c   Section        0  printfa.o(i._fp_digits)
-    _fp_digits                               0x00003e4d   Thumb Code   334  printfa.o(i._fp_digits)
-    i._printf_core                           0x00003fb0   Section        0  printfa.o(i._printf_core)
-    _printf_core                             0x00003fb1   Thumb Code  1744  printfa.o(i._printf_core)
-    i._printf_post_padding                   0x0000468c   Section        0  printfa.o(i._printf_post_padding)
-    _printf_post_padding                     0x0000468d   Thumb Code    36  printfa.o(i._printf_post_padding)
-    i._printf_pre_padding                    0x000046b0   Section        0  printfa.o(i._printf_pre_padding)
-    _printf_pre_padding                      0x000046b1   Thumb Code    46  printfa.o(i._printf_pre_padding)
-    i.bsp_board_button_state_get             0x000046e0   Section        0  los_bsp_key.o(i.bsp_board_button_state_get)
-    i.bsp_board_buttons_init                 0x00004714   Section        0  los_bsp_key.o(i.bsp_board_buttons_init)
-    i.bsp_board_led_off                      0x00004760   Section        0  los_bsp_led.o(i.bsp_board_led_off)
-    i.bsp_board_led_on                       0x00004774   Section        0  los_bsp_led.o(i.bsp_board_led_on)
-    i.bsp_board_leds_init                    0x00004788   Section        0  los_bsp_led.o(i.bsp_board_leds_init)
-    i.bsp_board_leds_off                     0x000047dc   Section        0  los_bsp_led.o(i.bsp_board_leds_off)
-    i.errata_103                             0x000047f0   Section        0  system_nrf52840.o(i.errata_103)
-    errata_103                               0x000047f1   Thumb Code    24  system_nrf52840.o(i.errata_103)
-    i.errata_115                             0x0000480c   Section        0  system_nrf52840.o(i.errata_115)
-    errata_115                               0x0000480d   Thumb Code    24  system_nrf52840.o(i.errata_115)
-    i.errata_120                             0x00004828   Section        0  system_nrf52840.o(i.errata_120)
-    errata_120                               0x00004829   Thumb Code    24  system_nrf52840.o(i.errata_120)
-    i.errata_36                              0x00004844   Section        0  system_nrf52840.o(i.errata_36)
-    errata_36                                0x00004845   Thumb Code    24  system_nrf52840.o(i.errata_36)
-    i.errata_66                              0x00004860   Section        0  system_nrf52840.o(i.errata_66)
-    errata_66                                0x00004861   Thumb Code    24  system_nrf52840.o(i.errata_66)
-    i.errata_98                              0x0000487c   Section        0  system_nrf52840.o(i.errata_98)
-    errata_98                                0x0000487d   Thumb Code    24  system_nrf52840.o(i.errata_98)
-    i.fputc                                  0x00004898   Section        0  los_bsp_uart.o(i.fputc)
-    i.free                                   0x000048a8   Section        0  malloc.o(i.free)
-    i.main                                   0x000048f8   Section        0  main.o(i.main)
-    i.nrf_gpio_cfg                           0x0000491c   Section        0  los_bsp_uart.o(i.nrf_gpio_cfg)
-    nrf_gpio_cfg                             0x0000491d   Thumb Code    52  los_bsp_uart.o(i.nrf_gpio_cfg)
-    i.nrf_gpio_pin_port_decode               0x00004954   Section        0  los_bsp_key.o(i.nrf_gpio_pin_port_decode)
-    nrf_gpio_pin_port_decode                 0x00004955   Thumb Code    26  los_bsp_key.o(i.nrf_gpio_pin_port_decode)
-    i.nrf_gpio_pin_port_decode               0x00004974   Section        0  los_bsp_led.o(i.nrf_gpio_pin_port_decode)
-    nrf_gpio_pin_port_decode                 0x00004975   Thumb Code    26  los_bsp_led.o(i.nrf_gpio_pin_port_decode)
-    i.nrf_gpio_pin_write                     0x00004994   Section        0  los_bsp_led.o(i.nrf_gpio_pin_write)
-    nrf_gpio_pin_write                       0x00004995   Thumb Code    66  los_bsp_led.o(i.nrf_gpio_pin_write)
-    i.osHwiDefaultHandler                    0x000049d6   Section        0  los_hwi.o(i.osHwiDefaultHandler)
-    i.osHwiInit                              0x000049e0   Section        0  los_hwi.o(i.osHwiInit)
-    i.osIdleTask                             0x00004a04   Section        0  los_task.o(i.osIdleTask)
-    i.osIdleTaskCreate                       0x00004a08   Section        0  los_task.o(i.osIdleTaskCreate)
-    i.osIntNumGet                            0x00004a54   Section        0  los_hwi.o(i.osIntNumGet)
-    i.osMain                                 0x00004a60   Section        0  los_config.o(i.osMain)
-    i.osMemAllocWithCheck                    0x00004ad0   Section        0  los_memory.o(i.osMemAllocWithCheck)
-    osMemAllocWithCheck                      0x00004ad1   Thumb Code    92  los_memory.o(i.osMemAllocWithCheck)
-    i.osMemCheckUsedNode                     0x00004b2c   Section        0  los_memory.o(i.osMemCheckUsedNode)
-    osMemCheckUsedNode                       0x00004b2d   Thumb Code   152  los_memory.o(i.osMemCheckUsedNode)
-    i.osMemFindSuitableFreeBlock             0x00004bc4   Section        0  los_memory.o(i.osMemFindSuitableFreeBlock)
-    osMemFindSuitableFreeBlock               0x00004bc5   Thumb Code    80  los_memory.o(i.osMemFindSuitableFreeBlock)
-    i.osMemFreeNode                          0x00004c14   Section        0  los_memory.o(i.osMemFreeNode)
-    osMemFreeNode                            0x00004c15   Thumb Code   178  los_memory.o(i.osMemFreeNode)
-    i.osMemIsNodeValid                       0x00004cc6   Section        0  los_memory.o(i.osMemIsNodeValid)
-    osMemIsNodeValid                         0x00004cc7   Thumb Code    62  los_memory.o(i.osMemIsNodeValid)
-    i.osMemMergeNode                         0x00004d04   Section        0  los_memory.o(i.osMemMergeNode)
-    osMemMergeNode                           0x00004d05   Thumb Code    36  los_memory.o(i.osMemMergeNode)
-    i.osMemSetMagicNumAndTaskid              0x00004d28   Section        0  los_memory.o(i.osMemSetMagicNumAndTaskid)
-    osMemSetMagicNumAndTaskid                0x00004d29   Thumb Code    28  los_memory.o(i.osMemSetMagicNumAndTaskid)
-    i.osMemSpitNode                          0x00004d48   Section        0  los_memory.o(i.osMemSpitNode)
-    osMemSpitNode                            0x00004d49   Thumb Code    92  los_memory.o(i.osMemSpitNode)
-    i.osMemSystemInit                        0x00004da4   Section        0  los_memory.o(i.osMemSystemInit)
-    i.osMuxInit                              0x00004dc8   Section        0  los_mux.o(i.osMuxInit)
-    i.osPriqueueInit                         0x00004e24   Section        0  los_priqueue.o(i.osPriqueueInit)
-    i.osQueueCreate                          0x00004e6c   Section        0  los_queue.o(i.osQueueCreate)
-    i.osQueueInit                            0x00004edc   Section        0  los_queue.o(i.osQueueInit)
-    i.osQueuePend                            0x00004f14   Section        0  los_queue.o(i.osQueuePend)
-    osQueuePend                              0x00004f15   Thumb Code   132  los_queue.o(i.osQueuePend)
-    i.osQueueWakeUp                          0x00004f98   Section        0  los_queue.o(i.osQueueWakeUp)
-    osQueueWakeUp                            0x00004f99   Thumb Code    90  los_queue.o(i.osQueueWakeUp)
-    i.osRegister                             0x00004ff4   Section        0  los_config.o(i.osRegister)
-    i.osSchedule                             0x00005010   Section        0  los_hw.o(i.osSchedule)
-    i.osSemInit                              0x00005018   Section        0  los_sem.o(i.osSemInit)
-    i.osSwTmrInit                            0x00005070   Section        0  los_swtmr.o(i.osSwTmrInit)
-    i.osSwTmrStart                           0x0000511c   Section        0  los_swtmr.o(i.osSwTmrStart)
-    i.osSwTmrTask                            0x0000517c   Section        0  los_swtmr.o(i.osSwTmrTask)
-    i.osSwTmrTaskCreate                      0x000051cc   Section        0  los_swtmr.o(i.osSwTmrTaskCreate)
-    i.osSwTmrTimeoutHandle                   0x00005214   Section        0  los_swtmr.o(i.osSwTmrTimeoutHandle)
-    osSwTmrTimeoutHandle                     0x00005215   Thumb Code   128  los_swtmr.o(i.osSwTmrTimeoutHandle)
-    i.osSwtmrDelete                          0x000052a0   Section        0  los_swtmr.o(i.osSwtmrDelete)
-    osSwtmrDelete                            0x000052a1   Thumb Code    16  los_swtmr.o(i.osSwtmrDelete)
-    i.osSwtmrScan                            0x000052b4   Section        0  los_swtmr.o(i.osSwtmrScan)
-    i.osSwtmrStop                            0x000052d8   Section        0  los_swtmr.o(i.osSwtmrStop)
-    i.osTaskAdd2TimerList                    0x00005320   Section        0  los_task.o(i.osTaskAdd2TimerList)
-    i.osTaskEntry                            0x000053e0   Section        0  los_task.o(i.osTaskEntry)
-    i.osTaskExit                             0x00005484   Section        0  los_hw.o(i.osTaskExit)
-    i.osTaskInit                             0x0000548c   Section        0  los_task.o(i.osTaskInit)
-    i.osTaskMemUsedDec                       0x000055b4   Section        0  los_memstat.o(i.osTaskMemUsedDec)
-    i.osTaskMemUsedInc                       0x000055e8   Section        0  los_memstat.o(i.osTaskMemUsedInc)
-    i.osTaskPriModify                        0x00005624   Section        0  los_task.o(i.osTaskPriModify)
-    i.osTaskScan                             0x0000565c   Section        0  los_task.o(i.osTaskScan)
-    i.osTaskSelfDelete                       0x00005738   Section        0  los_task.o(i.osTaskSelfDelete)
-    i.osTickHandler                          0x00005834   Section        0  los_tick.o(i.osTickHandler)
-    i.osTickStart                            0x0000585c   Section        0  los_bsp_adapter.o(i.osTickStart)
-    i.osTimerListDelete                      0x000058c8   Section        0  los_task.o(i.osTimerListDelete)
-    i.osTimesliceCheck                       0x00005910   Section        0  los_timeslice.o(i.osTimesliceCheck)
-    i.osTimesliceInit                        0x0000595c   Section        0  los_timeslice.o(i.osTimesliceInit)
-    i.osTskStackInit                         0x0000596c   Section        0  los_hw.o(i.osTskStackInit)
-    i.recv_Entry                             0x00005aac   Section        0  los_api_msgqueue.o(i.recv_Entry)
-    i.send_Entry                             0x00005b78   Section        0  los_api_msgqueue.o(i.send_Entry)
-    i.uart_init                              0x00005bec   Section        0  los_bsp_uart.o(i.uart_init)
-    i.uart_send                              0x00005c5c   Section        0  los_bsp_uart.o(i.uart_send)
-    .constdata                               0x00005c7c   Section        9  los_bsp_adapter.o(.constdata)
-    .constdata                               0x00005c85   Section        4  los_bsp_key.o(.constdata)
-    m_board_btn_list                         0x00005c85   Data           4  los_bsp_key.o(.constdata)
-    .constdata                               0x00005c89   Section        4  los_bsp_led.o(.constdata)
-    m_board_led_list                         0x00005c89   Data           4  los_bsp_led.o(.constdata)
-    .conststring                             0x00005c90   Section       66  los_api_sem.o(.conststring)
+    LOS_Inspect_KeyAndLed                    0x00002161   Thumb Code    80  los_inspect_entry.o(i.LOS_Inspect_KeyAndLed)
+    i.LOS_Inspect_TskDeal                    0x000021cc   Section        0  los_inspect_entry.o(i.LOS_Inspect_TskDeal)
+    i.LOS_KernelInit                         0x00002298   Section        0  los_config.o(i.LOS_KernelInit)
+    i.LOS_ListAdd                            0x000022aa   Section        0  los_task.o(i.LOS_ListAdd)
+    LOS_ListAdd                              0x000022ab   Thumb Code    14  los_task.o(i.LOS_ListAdd)
+    i.LOS_ListAdd                            0x000022b8   Section        0  los_mux.o(i.LOS_ListAdd)
+    LOS_ListAdd                              0x000022b9   Thumb Code    14  los_mux.o(i.LOS_ListAdd)
+    i.LOS_ListAdd                            0x000022c6   Section        0  los_queue.o(i.LOS_ListAdd)
+    LOS_ListAdd                              0x000022c7   Thumb Code    14  los_queue.o(i.LOS_ListAdd)
+    i.LOS_ListAdd                            0x000022d4   Section        0  los_sem.o(i.LOS_ListAdd)
+    LOS_ListAdd                              0x000022d5   Thumb Code    14  los_sem.o(i.LOS_ListAdd)
+    i.LOS_ListAdd                            0x000022e2   Section        0  los_memory.o(i.LOS_ListAdd)
+    LOS_ListAdd                              0x000022e3   Thumb Code    14  los_memory.o(i.LOS_ListAdd)
+    i.LOS_ListAdd                            0x000022f0   Section        0  los_api_list.o(i.LOS_ListAdd)
+    LOS_ListAdd                              0x000022f1   Thumb Code    14  los_api_list.o(i.LOS_ListAdd)
+    i.LOS_ListDelete                         0x000022fe   Section        0  los_task.o(i.LOS_ListDelete)
+    LOS_ListDelete                           0x000022ff   Thumb Code    20  los_task.o(i.LOS_ListDelete)
+    i.LOS_ListDelete                         0x00002312   Section        0  los_mux.o(i.LOS_ListDelete)
+    LOS_ListDelete                           0x00002313   Thumb Code    20  los_mux.o(i.LOS_ListDelete)
+    i.LOS_ListDelete                         0x00002326   Section        0  los_sem.o(i.LOS_ListDelete)
+    LOS_ListDelete                           0x00002327   Thumb Code    20  los_sem.o(i.LOS_ListDelete)
+    i.LOS_ListDelete                         0x0000233a   Section        0  los_memory.o(i.LOS_ListDelete)
+    LOS_ListDelete                           0x0000233b   Thumb Code    20  los_memory.o(i.LOS_ListDelete)
+    i.LOS_ListEmpty                          0x0000234e   Section        0  los_task.o(i.LOS_ListEmpty)
+    LOS_ListEmpty                            0x0000234f   Thumb Code    16  los_task.o(i.LOS_ListEmpty)
+    i.LOS_ListEmpty                          0x0000235e   Section        0  los_mux.o(i.LOS_ListEmpty)
+    LOS_ListEmpty                            0x0000235f   Thumb Code    16  los_mux.o(i.LOS_ListEmpty)
+    i.LOS_ListEmpty                          0x0000236e   Section        0  los_queue.o(i.LOS_ListEmpty)
+    LOS_ListEmpty                            0x0000236f   Thumb Code    16  los_queue.o(i.LOS_ListEmpty)
+    i.LOS_ListEmpty                          0x0000237e   Section        0  los_sem.o(i.LOS_ListEmpty)
+    LOS_ListEmpty                            0x0000237f   Thumb Code    16  los_sem.o(i.LOS_ListEmpty)
+    i.LOS_ListInit                           0x0000238e   Section        0  los_task.o(i.LOS_ListInit)
+    LOS_ListInit                             0x0000238f   Thumb Code     6  los_task.o(i.LOS_ListInit)
+    i.LOS_ListInit                           0x00002394   Section        0  los_mux.o(i.LOS_ListInit)
+    LOS_ListInit                             0x00002395   Thumb Code     6  los_mux.o(i.LOS_ListInit)
+    i.LOS_ListInit                           0x0000239a   Section        0  los_queue.o(i.LOS_ListInit)
+    LOS_ListInit                             0x0000239b   Thumb Code     6  los_queue.o(i.LOS_ListInit)
+    i.LOS_ListInit                           0x000023a0   Section        0  los_sem.o(i.LOS_ListInit)
+    LOS_ListInit                             0x000023a1   Thumb Code     6  los_sem.o(i.LOS_ListInit)
+    i.LOS_ListTailInsert                     0x000023a6   Section        0  los_task.o(i.LOS_ListTailInsert)
+    LOS_ListTailInsert                       0x000023a7   Thumb Code    16  los_task.o(i.LOS_ListTailInsert)
+    i.LOS_ListTailInsert                     0x000023b6   Section        0  los_mux.o(i.LOS_ListTailInsert)
+    LOS_ListTailInsert                       0x000023b7   Thumb Code    16  los_mux.o(i.LOS_ListTailInsert)
+    i.LOS_ListTailInsert                     0x000023c6   Section        0  los_sem.o(i.LOS_ListTailInsert)
+    LOS_ListTailInsert                       0x000023c7   Thumb Code    16  los_sem.o(i.LOS_ListTailInsert)
+    i.LOS_Log2                               0x000023d8   Section        0  los_multipledlinkhead.o(i.LOS_Log2)
+    LOS_Log2                                 0x000023d9   Thumb Code   320  los_multipledlinkhead.o(i.LOS_Log2)
+    i.LOS_MemAlloc                           0x0000251c   Section        0  los_memory.o(i.LOS_MemAlloc)
+    i.LOS_MemAllocAlign                      0x00002556   Section        0  los_memory.o(i.LOS_MemAllocAlign)
+    i.LOS_MemFree                            0x000025c2   Section        0  los_memory.o(i.LOS_MemFree)
+    i.LOS_MemInit                            0x00002616   Section        0  los_memory.o(i.LOS_MemInit)
+    i.LOS_MemboxAlloc                        0x000026bc   Section        0  los_membox.o(i.LOS_MemboxAlloc)
+    i.LOS_MemboxClr                          0x000026fc   Section        0  los_membox.o(i.LOS_MemboxClr)
+    i.LOS_MemboxFree                         0x00002718   Section        0  los_membox.o(i.LOS_MemboxFree)
+    i.LOS_MemboxInit                         0x000027bc   Section        0  los_membox.o(i.LOS_MemboxInit)
+    i.LOS_MuxCreate                          0x0000283c   Section        0  los_mux.o(i.LOS_MuxCreate)
+    i.LOS_MuxDelete                          0x000028a0   Section        0  los_mux.o(i.LOS_MuxDelete)
+    i.LOS_MuxPend                            0x00002908   Section        0  los_mux.o(i.LOS_MuxPend)
+    i.LOS_MuxPost                            0x00002a50   Section        0  los_mux.o(i.LOS_MuxPost)
+    i.LOS_PriqueueDequeue                    0x00002b50   Section        0  los_priqueue.o(i.LOS_PriqueueDequeue)
+    i.LOS_PriqueueEnqueue                    0x00002b68   Section        0  los_priqueue.o(i.LOS_PriqueueEnqueue)
+    i.LOS_PriqueueSize                       0x00002b8c   Section        0  los_priqueue.o(i.LOS_PriqueueSize)
+    i.LOS_PriqueueTop                        0x00002bb4   Section        0  los_priqueue.o(i.LOS_PriqueueTop)
+    i.LOS_QueueCreate                        0x00002bf0   Section        0  los_queue.o(i.LOS_QueueCreate)
+    i.LOS_QueueDelete                        0x00002c6c   Section        0  los_queue.o(i.LOS_QueueDelete)
+    i.LOS_QueueRead                          0x00002d1c   Section        0  los_queue.o(i.LOS_QueueRead)
+    i.LOS_QueueWrite                         0x00002e4c   Section        0  los_queue.o(i.LOS_QueueWrite)
+    i.LOS_Schedule                           0x00002f88   Section        0  los_hw.o(i.LOS_Schedule)
+    i.LOS_SemCreate                          0x00002fc8   Section        0  los_sem.o(i.LOS_SemCreate)
+    i.LOS_SemDelete                          0x00003034   Section        0  los_sem.o(i.LOS_SemDelete)
+    i.LOS_SemPend                            0x00003094   Section        0  los_sem.o(i.LOS_SemPend)
+    i.LOS_SemPost                            0x00003194   Section        0  los_sem.o(i.LOS_SemPost)
+    i.LOS_SetTickSycle                       0x0000324c   Section        0  los_hw_tick.o(i.LOS_SetTickSycle)
+    i.LOS_Start                              0x00003258   Section        0  los_config.o(i.LOS_Start)
+    i.LOS_SwtmrCreate                        0x00003264   Section        0  los_swtmr.o(i.LOS_SwtmrCreate)
+    i.LOS_SwtmrDelete                        0x000032f0   Section        0  los_swtmr.o(i.LOS_SwtmrDelete)
+    i.LOS_SwtmrStart                         0x00003374   Section        0  los_swtmr.o(i.LOS_SwtmrStart)
+    i.LOS_SwtmrStop                          0x000033f8   Section        0  los_swtmr.o(i.LOS_SwtmrStop)
+    i.LOS_TaskCreate                         0x00003478   Section        0  los_task.o(i.LOS_TaskCreate)
+    i.LOS_TaskCreateOnly                     0x00003514   Section        0  los_task.o(i.LOS_TaskCreateOnly)
+    i.LOS_TaskDelay                          0x00003698   Section        0  los_task.o(i.LOS_TaskDelay)
+    i.LOS_TaskDelete                         0x00003718   Section        0  los_task.o(i.LOS_TaskDelete)
+    i.LOS_TaskLock                           0x00003880   Section        0  los_task.o(i.LOS_TaskLock)
+    i.LOS_TaskResume                         0x000038a0   Section        0  los_task.o(i.LOS_TaskResume)
+    i.LOS_TaskSuspend                        0x00003950   Section        0  los_task.o(i.LOS_TaskSuspend)
+    i.LOS_TaskUnlock                         0x00003a34   Section        0  los_task.o(i.LOS_TaskUnlock)
+    i.LOS_TaskYield                          0x00003a70   Section        0  los_task.o(i.LOS_TaskYield)
+    i.LOS_TickCountGet                       0x00003af4   Section        0  los_sys.o(i.LOS_TickCountGet)
+    i.LOS_TickHandler                        0x00003b00   Section        0  los_hw_tick.o(i.LOS_TickHandler)
+    i.LosAdapIntInit                         0x00003b38   Section        0  los_bsp_adapter.o(i.LosAdapIntInit)
+    i.SysTick_Handler                        0x00003b3a   Section        0  los_bsp_adapter.o(i.SysTick_Handler)
+    i.SystemCoreClockUpdate                  0x00003b44   Section        0  system_nrf52840.o(i.SystemCoreClockUpdate)
+    i.SystemInit                             0x00003b54   Section        0  system_nrf52840.o(i.SystemInit)
+    i.Timer1_Callback                        0x00003d68   Section        0  los_api_timer.o(i.Timer1_Callback)
+    i.Timer2_Callback                        0x00003db8   Section        0  los_api_timer.o(i.Timer2_Callback)
+    i.__0printf                              0x00003e10   Section        0  printfa.o(i.__0printf)
+    i.__scatterload_copy                     0x00003e30   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x00003e3e   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x00003e40   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i._fp_digits                             0x00003e50   Section        0  printfa.o(i._fp_digits)
+    _fp_digits                               0x00003e51   Thumb Code   334  printfa.o(i._fp_digits)
+    i._printf_core                           0x00003fb4   Section        0  printfa.o(i._printf_core)
+    _printf_core                             0x00003fb5   Thumb Code  1744  printfa.o(i._printf_core)
+    i._printf_post_padding                   0x00004690   Section        0  printfa.o(i._printf_post_padding)
+    _printf_post_padding                     0x00004691   Thumb Code    36  printfa.o(i._printf_post_padding)
+    i._printf_pre_padding                    0x000046b4   Section        0  printfa.o(i._printf_pre_padding)
+    _printf_pre_padding                      0x000046b5   Thumb Code    46  printfa.o(i._printf_pre_padding)
+    i.bsp_board_button_state_get             0x000046e4   Section        0  los_bsp_key.o(i.bsp_board_button_state_get)
+    i.bsp_board_buttons_init                 0x00004718   Section        0  los_bsp_key.o(i.bsp_board_buttons_init)
+    i.bsp_board_led_off                      0x00004764   Section        0  los_bsp_led.o(i.bsp_board_led_off)
+    i.bsp_board_led_on                       0x00004778   Section        0  los_bsp_led.o(i.bsp_board_led_on)
+    i.bsp_board_leds_init                    0x0000478c   Section        0  los_bsp_led.o(i.bsp_board_leds_init)
+    i.bsp_board_leds_off                     0x000047e0   Section        0  los_bsp_led.o(i.bsp_board_leds_off)
+    i.errata_103                             0x000047f4   Section        0  system_nrf52840.o(i.errata_103)
+    errata_103                               0x000047f5   Thumb Code    24  system_nrf52840.o(i.errata_103)
+    i.errata_115                             0x00004810   Section        0  system_nrf52840.o(i.errata_115)
+    errata_115                               0x00004811   Thumb Code    24  system_nrf52840.o(i.errata_115)
+    i.errata_120                             0x0000482c   Section        0  system_nrf52840.o(i.errata_120)
+    errata_120                               0x0000482d   Thumb Code    24  system_nrf52840.o(i.errata_120)
+    i.errata_36                              0x00004848   Section        0  system_nrf52840.o(i.errata_36)
+    errata_36                                0x00004849   Thumb Code    24  system_nrf52840.o(i.errata_36)
+    i.errata_66                              0x00004864   Section        0  system_nrf52840.o(i.errata_66)
+    errata_66                                0x00004865   Thumb Code    24  system_nrf52840.o(i.errata_66)
+    i.errata_98                              0x00004880   Section        0  system_nrf52840.o(i.errata_98)
+    errata_98                                0x00004881   Thumb Code    24  system_nrf52840.o(i.errata_98)
+    i.fputc                                  0x0000489c   Section        0  los_bsp_uart.o(i.fputc)
+    i.free                                   0x000048ac   Section        0  malloc.o(i.free)
+    i.main                                   0x000048fc   Section        0  main.o(i.main)
+    i.nrf_gpio_cfg                           0x00004920   Section        0  los_bsp_uart.o(i.nrf_gpio_cfg)
+    nrf_gpio_cfg                             0x00004921   Thumb Code    52  los_bsp_uart.o(i.nrf_gpio_cfg)
+    i.nrf_gpio_pin_port_decode               0x00004958   Section        0  los_bsp_key.o(i.nrf_gpio_pin_port_decode)
+    nrf_gpio_pin_port_decode                 0x00004959   Thumb Code    26  los_bsp_key.o(i.nrf_gpio_pin_port_decode)
+    i.nrf_gpio_pin_port_decode               0x00004978   Section        0  los_bsp_led.o(i.nrf_gpio_pin_port_decode)
+    nrf_gpio_pin_port_decode                 0x00004979   Thumb Code    26  los_bsp_led.o(i.nrf_gpio_pin_port_decode)
+    i.nrf_gpio_pin_write                     0x00004998   Section        0  los_bsp_led.o(i.nrf_gpio_pin_write)
+    nrf_gpio_pin_write                       0x00004999   Thumb Code    66  los_bsp_led.o(i.nrf_gpio_pin_write)
+    i.osHwiDefaultHandler                    0x000049da   Section        0  los_hwi.o(i.osHwiDefaultHandler)
+    i.osHwiInit                              0x000049e4   Section        0  los_hwi.o(i.osHwiInit)
+    i.osIdleTask                             0x00004a08   Section        0  los_task.o(i.osIdleTask)
+    i.osIdleTaskCreate                       0x00004a0c   Section        0  los_task.o(i.osIdleTaskCreate)
+    i.osIntNumGet                            0x00004a58   Section        0  los_hwi.o(i.osIntNumGet)
+    i.osMain                                 0x00004a64   Section        0  los_config.o(i.osMain)
+    i.osMemAllocWithCheck                    0x00004ad4   Section        0  los_memory.o(i.osMemAllocWithCheck)
+    osMemAllocWithCheck                      0x00004ad5   Thumb Code    92  los_memory.o(i.osMemAllocWithCheck)
+    i.osMemCheckUsedNode                     0x00004b30   Section        0  los_memory.o(i.osMemCheckUsedNode)
+    osMemCheckUsedNode                       0x00004b31   Thumb Code   152  los_memory.o(i.osMemCheckUsedNode)
+    i.osMemFindSuitableFreeBlock             0x00004bc8   Section        0  los_memory.o(i.osMemFindSuitableFreeBlock)
+    osMemFindSuitableFreeBlock               0x00004bc9   Thumb Code    80  los_memory.o(i.osMemFindSuitableFreeBlock)
+    i.osMemFreeNode                          0x00004c18   Section        0  los_memory.o(i.osMemFreeNode)
+    osMemFreeNode                            0x00004c19   Thumb Code   178  los_memory.o(i.osMemFreeNode)
+    i.osMemIsNodeValid                       0x00004cca   Section        0  los_memory.o(i.osMemIsNodeValid)
+    osMemIsNodeValid                         0x00004ccb   Thumb Code    62  los_memory.o(i.osMemIsNodeValid)
+    i.osMemMergeNode                         0x00004d08   Section        0  los_memory.o(i.osMemMergeNode)
+    osMemMergeNode                           0x00004d09   Thumb Code    36  los_memory.o(i.osMemMergeNode)
+    i.osMemSetMagicNumAndTaskid              0x00004d2c   Section        0  los_memory.o(i.osMemSetMagicNumAndTaskid)
+    osMemSetMagicNumAndTaskid                0x00004d2d   Thumb Code    28  los_memory.o(i.osMemSetMagicNumAndTaskid)
+    i.osMemSpitNode                          0x00004d4c   Section        0  los_memory.o(i.osMemSpitNode)
+    osMemSpitNode                            0x00004d4d   Thumb Code    92  los_memory.o(i.osMemSpitNode)
+    i.osMemSystemInit                        0x00004da8   Section        0  los_memory.o(i.osMemSystemInit)
+    i.osMuxInit                              0x00004dcc   Section        0  los_mux.o(i.osMuxInit)
+    i.osPriqueueInit                         0x00004e28   Section        0  los_priqueue.o(i.osPriqueueInit)
+    i.osQueueCreate                          0x00004e70   Section        0  los_queue.o(i.osQueueCreate)
+    i.osQueueInit                            0x00004ee0   Section        0  los_queue.o(i.osQueueInit)
+    i.osQueuePend                            0x00004f18   Section        0  los_queue.o(i.osQueuePend)
+    osQueuePend                              0x00004f19   Thumb Code   132  los_queue.o(i.osQueuePend)
+    i.osQueueWakeUp                          0x00004f9c   Section        0  los_queue.o(i.osQueueWakeUp)
+    osQueueWakeUp                            0x00004f9d   Thumb Code    90  los_queue.o(i.osQueueWakeUp)
+    i.osRegister                             0x00004ff8   Section        0  los_config.o(i.osRegister)
+    i.osSchedule                             0x00005014   Section        0  los_hw.o(i.osSchedule)
+    i.osSemInit                              0x0000501c   Section        0  los_sem.o(i.osSemInit)
+    i.osSwTmrInit                            0x00005074   Section        0  los_swtmr.o(i.osSwTmrInit)
+    i.osSwTmrStart                           0x00005120   Section        0  los_swtmr.o(i.osSwTmrStart)
+    i.osSwTmrTask                            0x00005180   Section        0  los_swtmr.o(i.osSwTmrTask)
+    i.osSwTmrTaskCreate                      0x000051d0   Section        0  los_swtmr.o(i.osSwTmrTaskCreate)
+    i.osSwTmrTimeoutHandle                   0x00005218   Section        0  los_swtmr.o(i.osSwTmrTimeoutHandle)
+    osSwTmrTimeoutHandle                     0x00005219   Thumb Code   128  los_swtmr.o(i.osSwTmrTimeoutHandle)
+    i.osSwtmrDelete                          0x000052a4   Section        0  los_swtmr.o(i.osSwtmrDelete)
+    osSwtmrDelete                            0x000052a5   Thumb Code    16  los_swtmr.o(i.osSwtmrDelete)
+    i.osSwtmrScan                            0x000052b8   Section        0  los_swtmr.o(i.osSwtmrScan)
+    i.osSwtmrStop                            0x000052dc   Section        0  los_swtmr.o(i.osSwtmrStop)
+    i.osTaskAdd2TimerList                    0x00005324   Section        0  los_task.o(i.osTaskAdd2TimerList)
+    i.osTaskEntry                            0x000053e4   Section        0  los_task.o(i.osTaskEntry)
+    i.osTaskExit                             0x00005488   Section        0  los_hw.o(i.osTaskExit)
+    i.osTaskInit                             0x00005490   Section        0  los_task.o(i.osTaskInit)
+    i.osTaskMemUsedDec                       0x000055b8   Section        0  los_memstat.o(i.osTaskMemUsedDec)
+    i.osTaskMemUsedInc                       0x000055ec   Section        0  los_memstat.o(i.osTaskMemUsedInc)
+    i.osTaskPriModify                        0x00005628   Section        0  los_task.o(i.osTaskPriModify)
+    i.osTaskScan                             0x00005660   Section        0  los_task.o(i.osTaskScan)
+    i.osTaskSelfDelete                       0x0000573c   Section        0  los_task.o(i.osTaskSelfDelete)
+    i.osTickHandler                          0x00005838   Section        0  los_tick.o(i.osTickHandler)
+    i.osTickStart                            0x00005860   Section        0  los_bsp_adapter.o(i.osTickStart)
+    i.osTimerListDelete                      0x000058cc   Section        0  los_task.o(i.osTimerListDelete)
+    i.osTimesliceCheck                       0x00005914   Section        0  los_timeslice.o(i.osTimesliceCheck)
+    i.osTimesliceInit                        0x00005960   Section        0  los_timeslice.o(i.osTimesliceInit)
+    i.osTskStackInit                         0x00005970   Section        0  los_hw.o(i.osTskStackInit)
+    i.recv_Entry                             0x00005ab0   Section        0  los_api_msgqueue.o(i.recv_Entry)
+    i.send_Entry                             0x00005b7c   Section        0  los_api_msgqueue.o(i.send_Entry)
+    i.uart_init                              0x00005bf0   Section        0  los_bsp_uart.o(i.uart_init)
+    i.uart_send                              0x00005c60   Section        0  los_bsp_uart.o(i.uart_send)
+    .constdata                               0x00005c80   Section        9  los_bsp_adapter.o(.constdata)
+    .constdata                               0x00005c89   Section        4  los_bsp_key.o(.constdata)
+    m_board_btn_list                         0x00005c89   Data           4  los_bsp_key.o(.constdata)
+    .constdata                               0x00005c8d   Section        4  los_bsp_led.o(.constdata)
+    m_board_led_list                         0x00005c8d   Data           4  los_bsp_led.o(.constdata)
+    .conststring                             0x00005c94   Section       66  los_api_sem.o(.conststring)
     .data                                    0x20000000   Section        4  los_priqueue.o(.data)
     .data                                    0x20000004   Section       16  los_swtmr.o(.data)
     .data                                    0x20000014   Section       68  los_task.o(.data)
@@ -1782,117 +1782,117 @@ Image Symbol Table
     LOS_InspectByID                          0x00001f55   Thumb Code   204  los_inspect_entry.o(i.LOS_InspectByID)
     LOS_InspectStatusSetByID                 0x000020b9   Thumb Code    64  los_inspect_entry.o(i.LOS_InspectStatusSetByID)
     LOS_Inspect_Entry                        0x00002119   Thumb Code    52  los_inspect_entry.o(i.LOS_Inspect_Entry)
-    LOS_Inspect_TskDeal                      0x000021c9   Thumb Code    80  los_inspect_entry.o(i.LOS_Inspect_TskDeal)
-    LOS_KernelInit                           0x00002295   Thumb Code    18  los_config.o(i.LOS_KernelInit)
-    LOS_MemAlloc                             0x00002519   Thumb Code    58  los_memory.o(i.LOS_MemAlloc)
-    LOS_MemAllocAlign                        0x00002553   Thumb Code   108  los_memory.o(i.LOS_MemAllocAlign)
-    LOS_MemFree                              0x000025bf   Thumb Code    84  los_memory.o(i.LOS_MemFree)
-    LOS_MemInit                              0x00002613   Thumb Code   166  los_memory.o(i.LOS_MemInit)
-    LOS_MemboxAlloc                          0x000026b9   Thumb Code    60  los_membox.o(i.LOS_MemboxAlloc)
-    LOS_MemboxClr                            0x000026f9   Thumb Code    28  los_membox.o(i.LOS_MemboxClr)
-    LOS_MemboxFree                           0x00002715   Thumb Code   158  los_membox.o(i.LOS_MemboxFree)
-    LOS_MemboxInit                           0x000027b9   Thumb Code   128  los_membox.o(i.LOS_MemboxInit)
-    LOS_MuxCreate                            0x00002839   Thumb Code    90  los_mux.o(i.LOS_MuxCreate)
-    LOS_MuxDelete                            0x0000289d   Thumb Code    90  los_mux.o(i.LOS_MuxDelete)
-    LOS_MuxPend                              0x00002905   Thumb Code   308  los_mux.o(i.LOS_MuxPend)
-    LOS_MuxPost                              0x00002a4d   Thumb Code   238  los_mux.o(i.LOS_MuxPost)
-    LOS_PriqueueDequeue                      0x00002b4d   Thumb Code    24  los_priqueue.o(i.LOS_PriqueueDequeue)
-    LOS_PriqueueEnqueue                      0x00002b65   Thumb Code    32  los_priqueue.o(i.LOS_PriqueueEnqueue)
-    LOS_PriqueueSize                         0x00002b89   Thumb Code    36  los_priqueue.o(i.LOS_PriqueueSize)
-    LOS_PriqueueTop                          0x00002bb1   Thumb Code    54  los_priqueue.o(i.LOS_PriqueueTop)
-    LOS_QueueCreate                          0x00002bed   Thumb Code   118  los_queue.o(i.LOS_QueueCreate)
-    LOS_QueueDelete                          0x00002c69   Thumb Code   162  los_queue.o(i.LOS_QueueDelete)
-    LOS_QueueRead                            0x00002d19   Thumb Code   282  los_queue.o(i.LOS_QueueRead)
-    LOS_QueueWrite                           0x00002e49   Thumb Code   296  los_queue.o(i.LOS_QueueWrite)
-    LOS_Schedule                             0x00002f85   Thumb Code    56  los_hw.o(i.LOS_Schedule)
-    LOS_SemCreate                            0x00002fc5   Thumb Code    98  los_sem.o(i.LOS_SemCreate)
-    LOS_SemDelete                            0x00003031   Thumb Code    82  los_sem.o(i.LOS_SemDelete)
-    LOS_SemPend                              0x00003091   Thumb Code   236  los_sem.o(i.LOS_SemPend)
-    LOS_SemPost                              0x00003191   Thumb Code   176  los_sem.o(i.LOS_SemPost)
-    LOS_SetTickSycle                         0x00003249   Thumb Code     6  los_hw_tick.o(i.LOS_SetTickSycle)
-    LOS_Start                                0x00003255   Thumb Code    12  los_config.o(i.LOS_Start)
-    LOS_SwtmrCreate                          0x00003261   Thumb Code   130  los_swtmr.o(i.LOS_SwtmrCreate)
-    LOS_SwtmrDelete                          0x000032ed   Thumb Code   122  los_swtmr.o(i.LOS_SwtmrDelete)
-    LOS_SwtmrStart                           0x00003371   Thumb Code   122  los_swtmr.o(i.LOS_SwtmrStart)
-    LOS_SwtmrStop                            0x000033f5   Thumb Code   120  los_swtmr.o(i.LOS_SwtmrStop)
-    LOS_TaskCreate                           0x00003475   Thumb Code   140  los_task.o(i.LOS_TaskCreate)
-    LOS_TaskCreateOnly                       0x00003511   Thumb Code   368  los_task.o(i.LOS_TaskCreateOnly)
-    LOS_TaskDelay                            0x00003695   Thumb Code   106  los_task.o(i.LOS_TaskDelay)
-    LOS_TaskDelete                           0x00003715   Thumb Code   320  los_task.o(i.LOS_TaskDelete)
-    LOS_TaskLock                             0x0000387d   Thumb Code    26  los_task.o(i.LOS_TaskLock)
-    LOS_TaskResume                           0x0000389d   Thumb Code   158  los_task.o(i.LOS_TaskResume)
-    LOS_TaskSuspend                          0x0000394d   Thumb Code   196  los_task.o(i.LOS_TaskSuspend)
-    LOS_TaskUnlock                           0x00003a31   Thumb Code    54  los_task.o(i.LOS_TaskUnlock)
-    LOS_TaskYield                            0x00003a6d   Thumb Code   118  los_task.o(i.LOS_TaskYield)
-    LOS_TickCountGet                         0x00003af1   Thumb Code     6  los_sys.o(i.LOS_TickCountGet)
-    LOS_TickHandler                          0x00003afd   Thumb Code    52  los_hw_tick.o(i.LOS_TickHandler)
-    LosAdapIntInit                           0x00003b35   Thumb Code     2  los_bsp_adapter.o(i.LosAdapIntInit)
-    SysTick_Handler                          0x00003b37   Thumb Code     8  los_bsp_adapter.o(i.SysTick_Handler)
-    SystemCoreClockUpdate                    0x00003b41   Thumb Code     8  system_nrf52840.o(i.SystemCoreClockUpdate)
-    SystemInit                               0x00003b51   Thumb Code   470  system_nrf52840.o(i.SystemInit)
-    Timer1_Callback                          0x00003d65   Thumb Code    40  los_api_timer.o(i.Timer1_Callback)
-    Timer2_Callback                          0x00003db5   Thumb Code    48  los_api_timer.o(i.Timer2_Callback)
-    __0printf                                0x00003e0d   Thumb Code    22  printfa.o(i.__0printf)
-    __1printf                                0x00003e0d   Thumb Code     0  printfa.o(i.__0printf)
-    __2printf                                0x00003e0d   Thumb Code     0  printfa.o(i.__0printf)
-    __c89printf                              0x00003e0d   Thumb Code     0  printfa.o(i.__0printf)
-    printf                                   0x00003e0d   Thumb Code     0  printfa.o(i.__0printf)
-    __scatterload_copy                       0x00003e2d   Thumb Code    14  handlers.o(i.__scatterload_copy)
-    __scatterload_null                       0x00003e3b   Thumb Code     2  handlers.o(i.__scatterload_null)
-    __scatterload_zeroinit                   0x00003e3d   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
-    bsp_board_button_state_get               0x000046e1   Thumb Code    48  los_bsp_key.o(i.bsp_board_button_state_get)
-    bsp_board_buttons_init                   0x00004715   Thumb Code    72  los_bsp_key.o(i.bsp_board_buttons_init)
-    bsp_board_led_off                        0x00004761   Thumb Code    16  los_bsp_led.o(i.bsp_board_led_off)
-    bsp_board_led_on                         0x00004775   Thumb Code    16  los_bsp_led.o(i.bsp_board_led_on)
-    bsp_board_leds_init                      0x00004789   Thumb Code    78  los_bsp_led.o(i.bsp_board_leds_init)
-    bsp_board_leds_off                       0x000047dd   Thumb Code    20  los_bsp_led.o(i.bsp_board_leds_off)
-    fputc                                    0x00004899   Thumb Code    16  los_bsp_uart.o(i.fputc)
-    free                                     0x000048a9   Thumb Code    76  malloc.o(i.free)
-    main                                     0x000048f9   Thumb Code    34  main.o(i.main)
-    osHwiDefaultHandler                      0x000049d7   Thumb Code     8  los_hwi.o(i.osHwiDefaultHandler)
-    osHwiInit                                0x000049e1   Thumb Code    26  los_hwi.o(i.osHwiInit)
-    osIdleTask                               0x00004a05   Thumb Code     4  los_task.o(i.osIdleTask)
-    osIdleTaskCreate                         0x00004a09   Thumb Code    54  los_task.o(i.osIdleTaskCreate)
-    osIntNumGet                              0x00004a55   Thumb Code    12  los_hwi.o(i.osIntNumGet)
-    osMain                                   0x00004a61   Thumb Code   108  los_config.o(i.osMain)
-    osMemSystemInit                          0x00004da5   Thumb Code    26  los_memory.o(i.osMemSystemInit)
-    osMuxInit                                0x00004dc9   Thumb Code    74  los_mux.o(i.osMuxInit)
-    osPriqueueInit                           0x00004e25   Thumb Code    64  los_priqueue.o(i.osPriqueueInit)
-    osQueueCreate                            0x00004e6d   Thumb Code   100  los_queue.o(i.osQueueCreate)
-    osQueueInit                              0x00004edd   Thumb Code    44  los_queue.o(i.osQueueInit)
-    osRegister                               0x00004ff5   Thumb Code    14  los_config.o(i.osRegister)
-    osSchedule                               0x00005011   Thumb Code     8  los_hw.o(i.osSchedule)
-    osSemInit                                0x00005019   Thumb Code    70  los_sem.o(i.osSemInit)
-    osSwTmrInit                              0x00005071   Thumb Code   142  los_swtmr.o(i.osSwTmrInit)
-    osSwTmrStart                             0x0000511d   Thumb Code    92  los_swtmr.o(i.osSwTmrStart)
-    osSwTmrTask                              0x0000517d   Thumb Code    70  los_swtmr.o(i.osSwTmrTask)
-    osSwTmrTaskCreate                        0x000051cd   Thumb Code    52  los_swtmr.o(i.osSwTmrTaskCreate)
-    osSwtmrScan                              0x000052b5   Thumb Code    32  los_swtmr.o(i.osSwtmrScan)
-    osSwtmrStop                              0x000052d9   Thumb Code    66  los_swtmr.o(i.osSwtmrStop)
-    osTaskAdd2TimerList                      0x00005321   Thumb Code   188  los_task.o(i.osTaskAdd2TimerList)
-    osTaskEntry                              0x000053e1   Thumb Code   154  los_task.o(i.osTaskEntry)
-    osTaskExit                               0x00005485   Thumb Code     8  los_hw.o(i.osTaskExit)
-    osTaskInit                               0x0000548d   Thumb Code   258  los_task.o(i.osTaskInit)
-    osTaskMemUsedDec                         0x000055b5   Thumb Code    40  los_memstat.o(i.osTaskMemUsedDec)
-    osTaskMemUsedInc                         0x000055e9   Thumb Code    48  los_memstat.o(i.osTaskMemUsedInc)
-    osTaskPriModify                          0x00005625   Thumb Code    56  los_task.o(i.osTaskPriModify)
-    osTaskScan                               0x0000565d   Thumb Code   214  los_task.o(i.osTaskScan)
-    osTaskSelfDelete                         0x00005739   Thumb Code   236  los_task.o(i.osTaskSelfDelete)
-    osTickHandler                            0x00005835   Thumb Code    34  los_tick.o(i.osTickHandler)
-    osTickStart                              0x0000585d   Thumb Code    94  los_bsp_adapter.o(i.osTickStart)
-    osTimerListDelete                        0x000058c9   Thumb Code    66  los_task.o(i.osTimerListDelete)
-    osTimesliceCheck                         0x00005911   Thumb Code    64  los_timeslice.o(i.osTimesliceCheck)
-    osTimesliceInit                          0x0000595d   Thumb Code    12  los_timeslice.o(i.osTimesliceInit)
-    osTskStackInit                           0x0000596d   Thumb Code   306  los_hw.o(i.osTskStackInit)
-    recv_Entry                               0x00005aad   Thumb Code   120  los_api_msgqueue.o(i.recv_Entry)
-    send_Entry                               0x00005b79   Thumb Code    76  los_api_msgqueue.o(i.send_Entry)
-    uart_init                                0x00005bed   Thumb Code    94  los_bsp_uart.o(i.uart_init)
-    uart_send                                0x00005c5d   Thumb Code    22  los_bsp_uart.o(i.uart_send)
-    sys_clk_freq                             0x00005c7c   Data           4  los_bsp_adapter.o(.constdata)
-    tick_per_second                          0x00005c80   Data           4  los_bsp_adapter.o(.constdata)
-    g_use_ram_vect                           0x00005c84   Data           1  los_bsp_adapter.o(.constdata)
-    Region$$Table$$Base                      0x00005cd4   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x00005cf4   Number         0  anon$$obj.o(Region$$Table)
+    LOS_Inspect_TskDeal                      0x000021cd   Thumb Code    80  los_inspect_entry.o(i.LOS_Inspect_TskDeal)
+    LOS_KernelInit                           0x00002299   Thumb Code    18  los_config.o(i.LOS_KernelInit)
+    LOS_MemAlloc                             0x0000251d   Thumb Code    58  los_memory.o(i.LOS_MemAlloc)
+    LOS_MemAllocAlign                        0x00002557   Thumb Code   108  los_memory.o(i.LOS_MemAllocAlign)
+    LOS_MemFree                              0x000025c3   Thumb Code    84  los_memory.o(i.LOS_MemFree)
+    LOS_MemInit                              0x00002617   Thumb Code   166  los_memory.o(i.LOS_MemInit)
+    LOS_MemboxAlloc                          0x000026bd   Thumb Code    60  los_membox.o(i.LOS_MemboxAlloc)
+    LOS_MemboxClr                            0x000026fd   Thumb Code    28  los_membox.o(i.LOS_MemboxClr)
+    LOS_MemboxFree                           0x00002719   Thumb Code   158  los_membox.o(i.LOS_MemboxFree)
+    LOS_MemboxInit                           0x000027bd   Thumb Code   128  los_membox.o(i.LOS_MemboxInit)
+    LOS_MuxCreate                            0x0000283d   Thumb Code    90  los_mux.o(i.LOS_MuxCreate)
+    LOS_MuxDelete                            0x000028a1   Thumb Code    90  los_mux.o(i.LOS_MuxDelete)
+    LOS_MuxPend                              0x00002909   Thumb Code   308  los_mux.o(i.LOS_MuxPend)
+    LOS_MuxPost                              0x00002a51   Thumb Code   238  los_mux.o(i.LOS_MuxPost)
+    LOS_PriqueueDequeue                      0x00002b51   Thumb Code    24  los_priqueue.o(i.LOS_PriqueueDequeue)
+    LOS_PriqueueEnqueue                      0x00002b69   Thumb Code    32  los_priqueue.o(i.LOS_PriqueueEnqueue)
+    LOS_PriqueueSize                         0x00002b8d   Thumb Code    36  los_priqueue.o(i.LOS_PriqueueSize)
+    LOS_PriqueueTop                          0x00002bb5   Thumb Code    54  los_priqueue.o(i.LOS_PriqueueTop)
+    LOS_QueueCreate                          0x00002bf1   Thumb Code   118  los_queue.o(i.LOS_QueueCreate)
+    LOS_QueueDelete                          0x00002c6d   Thumb Code   162  los_queue.o(i.LOS_QueueDelete)
+    LOS_QueueRead                            0x00002d1d   Thumb Code   282  los_queue.o(i.LOS_QueueRead)
+    LOS_QueueWrite                           0x00002e4d   Thumb Code   296  los_queue.o(i.LOS_QueueWrite)
+    LOS_Schedule                             0x00002f89   Thumb Code    56  los_hw.o(i.LOS_Schedule)
+    LOS_SemCreate                            0x00002fc9   Thumb Code    98  los_sem.o(i.LOS_SemCreate)
+    LOS_SemDelete                            0x00003035   Thumb Code    82  los_sem.o(i.LOS_SemDelete)
+    LOS_SemPend                              0x00003095   Thumb Code   236  los_sem.o(i.LOS_SemPend)
+    LOS_SemPost                              0x00003195   Thumb Code   176  los_sem.o(i.LOS_SemPost)
+    LOS_SetTickSycle                         0x0000324d   Thumb Code     6  los_hw_tick.o(i.LOS_SetTickSycle)
+    LOS_Start                                0x00003259   Thumb Code    12  los_config.o(i.LOS_Start)
+    LOS_SwtmrCreate                          0x00003265   Thumb Code   130  los_swtmr.o(i.LOS_SwtmrCreate)
+    LOS_SwtmrDelete                          0x000032f1   Thumb Code   122  los_swtmr.o(i.LOS_SwtmrDelete)
+    LOS_SwtmrStart                           0x00003375   Thumb Code   122  los_swtmr.o(i.LOS_SwtmrStart)
+    LOS_SwtmrStop                            0x000033f9   Thumb Code   120  los_swtmr.o(i.LOS_SwtmrStop)
+    LOS_TaskCreate                           0x00003479   Thumb Code   140  los_task.o(i.LOS_TaskCreate)
+    LOS_TaskCreateOnly                       0x00003515   Thumb Code   368  los_task.o(i.LOS_TaskCreateOnly)
+    LOS_TaskDelay                            0x00003699   Thumb Code   106  los_task.o(i.LOS_TaskDelay)
+    LOS_TaskDelete                           0x00003719   Thumb Code   320  los_task.o(i.LOS_TaskDelete)
+    LOS_TaskLock                             0x00003881   Thumb Code    26  los_task.o(i.LOS_TaskLock)
+    LOS_TaskResume                           0x000038a1   Thumb Code   158  los_task.o(i.LOS_TaskResume)
+    LOS_TaskSuspend                          0x00003951   Thumb Code   196  los_task.o(i.LOS_TaskSuspend)
+    LOS_TaskUnlock                           0x00003a35   Thumb Code    54  los_task.o(i.LOS_TaskUnlock)
+    LOS_TaskYield                            0x00003a71   Thumb Code   118  los_task.o(i.LOS_TaskYield)
+    LOS_TickCountGet                         0x00003af5   Thumb Code     6  los_sys.o(i.LOS_TickCountGet)
+    LOS_TickHandler                          0x00003b01   Thumb Code    52  los_hw_tick.o(i.LOS_TickHandler)
+    LosAdapIntInit                           0x00003b39   Thumb Code     2  los_bsp_adapter.o(i.LosAdapIntInit)
+    SysTick_Handler                          0x00003b3b   Thumb Code     8  los_bsp_adapter.o(i.SysTick_Handler)
+    SystemCoreClockUpdate                    0x00003b45   Thumb Code     8  system_nrf52840.o(i.SystemCoreClockUpdate)
+    SystemInit                               0x00003b55   Thumb Code   470  system_nrf52840.o(i.SystemInit)
+    Timer1_Callback                          0x00003d69   Thumb Code    40  los_api_timer.o(i.Timer1_Callback)
+    Timer2_Callback                          0x00003db9   Thumb Code    48  los_api_timer.o(i.Timer2_Callback)
+    __0printf                                0x00003e11   Thumb Code    22  printfa.o(i.__0printf)
+    __1printf                                0x00003e11   Thumb Code     0  printfa.o(i.__0printf)
+    __2printf                                0x00003e11   Thumb Code     0  printfa.o(i.__0printf)
+    __c89printf                              0x00003e11   Thumb Code     0  printfa.o(i.__0printf)
+    printf                                   0x00003e11   Thumb Code     0  printfa.o(i.__0printf)
+    __scatterload_copy                       0x00003e31   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x00003e3f   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x00003e41   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    bsp_board_button_state_get               0x000046e5   Thumb Code    48  los_bsp_key.o(i.bsp_board_button_state_get)
+    bsp_board_buttons_init                   0x00004719   Thumb Code    72  los_bsp_key.o(i.bsp_board_buttons_init)
+    bsp_board_led_off                        0x00004765   Thumb Code    16  los_bsp_led.o(i.bsp_board_led_off)
+    bsp_board_led_on                         0x00004779   Thumb Code    16  los_bsp_led.o(i.bsp_board_led_on)
+    bsp_board_leds_init                      0x0000478d   Thumb Code    78  los_bsp_led.o(i.bsp_board_leds_init)
+    bsp_board_leds_off                       0x000047e1   Thumb Code    20  los_bsp_led.o(i.bsp_board_leds_off)
+    fputc                                    0x0000489d   Thumb Code    16  los_bsp_uart.o(i.fputc)
+    free                                     0x000048ad   Thumb Code    76  malloc.o(i.free)
+    main                                     0x000048fd   Thumb Code    34  main.o(i.main)
+    osHwiDefaultHandler                      0x000049db   Thumb Code     8  los_hwi.o(i.osHwiDefaultHandler)
+    osHwiInit                                0x000049e5   Thumb Code    26  los_hwi.o(i.osHwiInit)
+    osIdleTask                               0x00004a09   Thumb Code     4  los_task.o(i.osIdleTask)
+    osIdleTaskCreate                         0x00004a0d   Thumb Code    54  los_task.o(i.osIdleTaskCreate)
+    osIntNumGet                              0x00004a59   Thumb Code    12  los_hwi.o(i.osIntNumGet)
+    osMain                                   0x00004a65   Thumb Code   108  los_config.o(i.osMain)
+    osMemSystemInit                          0x00004da9   Thumb Code    26  los_memory.o(i.osMemSystemInit)
+    osMuxInit                                0x00004dcd   Thumb Code    74  los_mux.o(i.osMuxInit)
+    osPriqueueInit                           0x00004e29   Thumb Code    64  los_priqueue.o(i.osPriqueueInit)
+    osQueueCreate                            0x00004e71   Thumb Code   100  los_queue.o(i.osQueueCreate)
+    osQueueInit                              0x00004ee1   Thumb Code    44  los_queue.o(i.osQueueInit)
+    osRegister                               0x00004ff9   Thumb Code    14  los_config.o(i.osRegister)
+    osSchedule                               0x00005015   Thumb Code     8  los_hw.o(i.osSchedule)
+    osSemInit                                0x0000501d   Thumb Code    70  los_sem.o(i.osSemInit)
+    osSwTmrInit                              0x00005075   Thumb Code   142  los_swtmr.o(i.osSwTmrInit)
+    osSwTmrStart                             0x00005121   Thumb Code    92  los_swtmr.o(i.osSwTmrStart)
+    osSwTmrTask                              0x00005181   Thumb Code    70  los_swtmr.o(i.osSwTmrTask)
+    osSwTmrTaskCreate                        0x000051d1   Thumb Code    52  los_swtmr.o(i.osSwTmrTaskCreate)
+    osSwtmrScan                              0x000052b9   Thumb Code    32  los_swtmr.o(i.osSwtmrScan)
+    osSwtmrStop                              0x000052dd   Thumb Code    66  los_swtmr.o(i.osSwtmrStop)
+    osTaskAdd2TimerList                      0x00005325   Thumb Code   188  los_task.o(i.osTaskAdd2TimerList)
+    osTaskEntry                              0x000053e5   Thumb Code   154  los_task.o(i.osTaskEntry)
+    osTaskExit                               0x00005489   Thumb Code     8  los_hw.o(i.osTaskExit)
+    osTaskInit                               0x00005491   Thumb Code   258  los_task.o(i.osTaskInit)
+    osTaskMemUsedDec                         0x000055b9   Thumb Code    40  los_memstat.o(i.osTaskMemUsedDec)
+    osTaskMemUsedInc                         0x000055ed   Thumb Code    48  los_memstat.o(i.osTaskMemUsedInc)
+    osTaskPriModify                          0x00005629   Thumb Code    56  los_task.o(i.osTaskPriModify)
+    osTaskScan                               0x00005661   Thumb Code   214  los_task.o(i.osTaskScan)
+    osTaskSelfDelete                         0x0000573d   Thumb Code   236  los_task.o(i.osTaskSelfDelete)
+    osTickHandler                            0x00005839   Thumb Code    34  los_tick.o(i.osTickHandler)
+    osTickStart                              0x00005861   Thumb Code    94  los_bsp_adapter.o(i.osTickStart)
+    osTimerListDelete                        0x000058cd   Thumb Code    66  los_task.o(i.osTimerListDelete)
+    osTimesliceCheck                         0x00005915   Thumb Code    64  los_timeslice.o(i.osTimesliceCheck)
+    osTimesliceInit                          0x00005961   Thumb Code    12  los_timeslice.o(i.osTimesliceInit)
+    osTskStackInit                           0x00005971   Thumb Code   306  los_hw.o(i.osTskStackInit)
+    recv_Entry                               0x00005ab1   Thumb Code   120  los_api_msgqueue.o(i.recv_Entry)
+    send_Entry                               0x00005b7d   Thumb Code    76  los_api_msgqueue.o(i.send_Entry)
+    uart_init                                0x00005bf1   Thumb Code    94  los_bsp_uart.o(i.uart_init)
+    uart_send                                0x00005c61   Thumb Code    22  los_bsp_uart.o(i.uart_send)
+    sys_clk_freq                             0x00005c80   Data           4  los_bsp_adapter.o(.constdata)
+    tick_per_second                          0x00005c84   Data           4  los_bsp_adapter.o(.constdata)
+    g_use_ram_vect                           0x00005c88   Data           1  los_bsp_adapter.o(.constdata)
+    Region$$Table$$Base                      0x00005cd8   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x00005cf8   Number         0  anon$$obj.o(Region$$Table)
     g_pstLosPriorityQueueList                0x20000000   Data           4  los_priqueue.o(.data)
     m_uwSwTmrHandlerQueue                    0x20000004   Data           4  los_swtmr.o(.data)
     m_pstSwtmrCBArray                        0x20000008   Data           4  los_swtmr.o(.data)
@@ -1952,9 +1952,9 @@ Memory Map of the image
 
   Image Entry point : 0x00000201
 
-  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x00006290, Max: 0x00100000, ABSOLUTE, COMPRESSED[0x00005d98])
+  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x00006294, Max: 0x00100000, ABSOLUTE, COMPRESSED[0x00005d9c])
 
-    Execution Region ER_IROM1 (Base: 0x00000000, Size: 0x00005cf4, Max: 0x00100000, ABSOLUTE)
+    Execution Region ER_IROM1 (Base: 0x00000000, Size: 0x00005cf8, Max: 0x00100000, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -2024,171 +2024,171 @@ Memory Map of the image
     0x00001f54   0x00000164   Code   RO         2431    i.LOS_InspectByID   los_inspect_entry.o
     0x000020b8   0x00000060   Code   RO         2432    i.LOS_InspectStatusSetByID  los_inspect_entry.o
     0x00002118   0x00000048   Code   RO         2433    i.LOS_Inspect_Entry  los_inspect_entry.o
-    0x00002160   0x00000068   Code   RO         2434    i.LOS_Inspect_KeyAndLed  los_inspect_entry.o
-    0x000021c8   0x000000cc   Code   RO         2435    i.LOS_Inspect_TskDeal  los_inspect_entry.o
-    0x00002294   0x00000012   Code   RO         1225    i.LOS_KernelInit    los_config.o
-    0x000022a6   0x0000000e   Code   RO          320    i.LOS_ListAdd       los_task.o
-    0x000022b4   0x0000000e   Code   RO          620    i.LOS_ListAdd       los_mux.o
-    0x000022c2   0x0000000e   Code   RO          694    i.LOS_ListAdd       los_queue.o
-    0x000022d0   0x0000000e   Code   RO          799    i.LOS_ListAdd       los_sem.o
-    0x000022de   0x0000000e   Code   RO          902    i.LOS_ListAdd       los_memory.o
-    0x000022ec   0x0000000e   Code   RO         2149    i.LOS_ListAdd       los_api_list.o
-    0x000022fa   0x00000014   Code   RO          321    i.LOS_ListDelete    los_task.o
-    0x0000230e   0x00000014   Code   RO          621    i.LOS_ListDelete    los_mux.o
-    0x00002322   0x00000014   Code   RO          800    i.LOS_ListDelete    los_sem.o
-    0x00002336   0x00000014   Code   RO          903    i.LOS_ListDelete    los_memory.o
-    0x0000234a   0x00000010   Code   RO          322    i.LOS_ListEmpty     los_task.o
-    0x0000235a   0x00000010   Code   RO          622    i.LOS_ListEmpty     los_mux.o
-    0x0000236a   0x00000010   Code   RO          695    i.LOS_ListEmpty     los_queue.o
-    0x0000237a   0x00000010   Code   RO          801    i.LOS_ListEmpty     los_sem.o
-    0x0000238a   0x00000006   Code   RO          323    i.LOS_ListInit      los_task.o
-    0x00002390   0x00000006   Code   RO          623    i.LOS_ListInit      los_mux.o
-    0x00002396   0x00000006   Code   RO          696    i.LOS_ListInit      los_queue.o
-    0x0000239c   0x00000006   Code   RO          802    i.LOS_ListInit      los_sem.o
-    0x000023a2   0x00000010   Code   RO          324    i.LOS_ListTailInsert  los_task.o
-    0x000023b2   0x00000010   Code   RO          624    i.LOS_ListTailInsert  los_mux.o
-    0x000023c2   0x00000010   Code   RO          803    i.LOS_ListTailInsert  los_sem.o
-    0x000023d2   0x00000002   PAD
-    0x000023d4   0x00000144   Code   RO         1058    i.LOS_Log2          los_multipledlinkhead.o
-    0x00002518   0x0000003a   Code   RO          904    i.LOS_MemAlloc      los_memory.o
-    0x00002552   0x0000006c   Code   RO          905    i.LOS_MemAllocAlign  los_memory.o
-    0x000025be   0x00000054   Code   RO          906    i.LOS_MemFree       los_memory.o
-    0x00002612   0x000000a6   Code   RO          907    i.LOS_MemInit       los_memory.o
-    0x000026b8   0x00000040   Code   RO          869    i.LOS_MemboxAlloc   los_membox.o
-    0x000026f8   0x0000001c   Code   RO          870    i.LOS_MemboxClr     los_membox.o
-    0x00002714   0x000000a4   Code   RO          871    i.LOS_MemboxFree    los_membox.o
-    0x000027b8   0x00000080   Code   RO          872    i.LOS_MemboxInit    los_membox.o
-    0x00002838   0x00000064   Code   RO          625    i.LOS_MuxCreate     los_mux.o
-    0x0000289c   0x00000068   Code   RO          626    i.LOS_MuxDelete     los_mux.o
-    0x00002904   0x00000148   Code   RO          627    i.LOS_MuxPend       los_mux.o
-    0x00002a4c   0x00000100   Code   RO          628    i.LOS_MuxPost       los_mux.o
-    0x00002b4c   0x00000018   Code   RO            1    i.LOS_PriqueueDequeue  los_priqueue.o
-    0x00002b64   0x00000024   Code   RO            2    i.LOS_PriqueueEnqueue  los_priqueue.o
-    0x00002b88   0x00000028   Code   RO            3    i.LOS_PriqueueSize  los_priqueue.o
-    0x00002bb0   0x0000003c   Code   RO            4    i.LOS_PriqueueTop   los_priqueue.o
-    0x00002bec   0x0000007c   Code   RO          697    i.LOS_QueueCreate   los_queue.o
-    0x00002c68   0x000000b0   Code   RO          698    i.LOS_QueueDelete   los_queue.o
-    0x00002d18   0x00000130   Code   RO          699    i.LOS_QueueRead     los_queue.o
-    0x00002e48   0x0000013c   Code   RO          700    i.LOS_QueueWrite    los_queue.o
-    0x00002f84   0x00000040   Code   RO         1110    i.LOS_Schedule      los_hw.o
-    0x00002fc4   0x0000006c   Code   RO          804    i.LOS_SemCreate     los_sem.o
-    0x00003030   0x00000060   Code   RO          805    i.LOS_SemDelete     los_sem.o
-    0x00003090   0x00000100   Code   RO          806    i.LOS_SemPend       los_sem.o
-    0x00003190   0x000000b8   Code   RO          807    i.LOS_SemPost       los_sem.o
-    0x00003248   0x0000000c   Code   RO         1141    i.LOS_SetTickSycle  los_hw_tick.o
-    0x00003254   0x0000000c   Code   RO         1226    i.LOS_Start         los_config.o
-    0x00003260   0x0000008c   Code   RO          111    i.LOS_SwtmrCreate   los_swtmr.o
-    0x000032ec   0x00000084   Code   RO          112    i.LOS_SwtmrDelete   los_swtmr.o
-    0x00003370   0x00000084   Code   RO          113    i.LOS_SwtmrStart    los_swtmr.o
-    0x000033f4   0x00000080   Code   RO          114    i.LOS_SwtmrStop     los_swtmr.o
-    0x00003474   0x0000009c   Code   RO          325    i.LOS_TaskCreate    los_task.o
-    0x00003510   0x00000184   Code   RO          326    i.LOS_TaskCreateOnly  los_task.o
-    0x00003694   0x00000080   Code   RO          327    i.LOS_TaskDelay     los_task.o
-    0x00003714   0x00000168   Code   RO          328    i.LOS_TaskDelete    los_task.o
-    0x0000387c   0x00000020   Code   RO          329    i.LOS_TaskLock      los_task.o
-    0x0000389c   0x000000b0   Code   RO          332    i.LOS_TaskResume    los_task.o
-    0x0000394c   0x000000e4   Code   RO          333    i.LOS_TaskSuspend   los_task.o
-    0x00003a30   0x0000003c   Code   RO          334    i.LOS_TaskUnlock    los_task.o
-    0x00003a6c   0x00000084   Code   RO          335    i.LOS_TaskYield     los_task.o
-    0x00003af0   0x0000000c   Code   RO          252    i.LOS_TickCountGet  los_sys.o
-    0x00003afc   0x00000038   Code   RO         1142    i.LOS_TickHandler   los_hw_tick.o
-    0x00003b34   0x00000002   Code   RO         1623    i.LosAdapIntInit    los_bsp_adapter.o
-    0x00003b36   0x00000008   Code   RO         1626    i.SysTick_Handler   los_bsp_adapter.o
-    0x00003b3e   0x00000002   PAD
-    0x00003b40   0x00000010   Code   RO         2487    i.SystemCoreClockUpdate  system_nrf52840.o
-    0x00003b50   0x00000214   Code   RO         2488    i.SystemInit        system_nrf52840.o
-    0x00003d64   0x00000050   Code   RO         2342    i.Timer1_Callback   los_api_timer.o
-    0x00003db4   0x00000058   Code   RO         2343    i.Timer2_Callback   los_api_timer.o
-    0x00003e0c   0x00000020   Code   RO         2836    i.__0printf         mc_w.l(printfa.o)
-    0x00003e2c   0x0000000e   Code   RO         2936    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x00003e3a   0x00000002   Code   RO         2937    i.__scatterload_null  mc_w.l(handlers.o)
-    0x00003e3c   0x0000000e   Code   RO         2938    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x00003e4a   0x00000002   PAD
-    0x00003e4c   0x00000164   Code   RO         2843    i._fp_digits        mc_w.l(printfa.o)
-    0x00003fb0   0x000006dc   Code   RO         2844    i._printf_core      mc_w.l(printfa.o)
-    0x0000468c   0x00000024   Code   RO         2845    i._printf_post_padding  mc_w.l(printfa.o)
-    0x000046b0   0x0000002e   Code   RO         2846    i._printf_pre_padding  mc_w.l(printfa.o)
-    0x000046de   0x00000002   PAD
-    0x000046e0   0x00000034   Code   RO         1813    i.bsp_board_button_state_get  los_bsp_key.o
-    0x00004714   0x0000004c   Code   RO         1814    i.bsp_board_buttons_init  los_bsp_key.o
-    0x00004760   0x00000014   Code   RO         1874    i.bsp_board_led_off  los_bsp_led.o
-    0x00004774   0x00000014   Code   RO         1875    i.bsp_board_led_on  los_bsp_led.o
-    0x00004788   0x00000054   Code   RO         1876    i.bsp_board_leds_init  los_bsp_led.o
-    0x000047dc   0x00000014   Code   RO         1877    i.bsp_board_leds_off  los_bsp_led.o
-    0x000047f0   0x0000001c   Code   RO         2489    i.errata_103        system_nrf52840.o
-    0x0000480c   0x0000001c   Code   RO         2490    i.errata_115        system_nrf52840.o
-    0x00004828   0x0000001c   Code   RO         2491    i.errata_120        system_nrf52840.o
-    0x00004844   0x0000001c   Code   RO         2492    i.errata_36         system_nrf52840.o
-    0x00004860   0x0000001c   Code   RO         2493    i.errata_66         system_nrf52840.o
-    0x0000487c   0x0000001c   Code   RO         2494    i.errata_98         system_nrf52840.o
-    0x00004898   0x00000010   Code   RO         1952    i.fputc             los_bsp_uart.o
-    0x000048a8   0x00000050   Code   RO         2864    i.free              mc_w.l(malloc.o)
-    0x000048f8   0x00000022   Code   RO         2559    i.main              main.o
-    0x0000491a   0x00000002   PAD
-    0x0000491c   0x00000038   Code   RO         1953    i.nrf_gpio_cfg      los_bsp_uart.o
-    0x00004954   0x00000020   Code   RO         1815    i.nrf_gpio_pin_port_decode  los_bsp_key.o
-    0x00004974   0x00000020   Code   RO         1879    i.nrf_gpio_pin_port_decode  los_bsp_led.o
-    0x00004994   0x00000042   Code   RO         1880    i.nrf_gpio_pin_write  los_bsp_led.o
-    0x000049d6   0x00000008   Code   RO         1170    i.osHwiDefaultHandler  los_hwi.o
-    0x000049de   0x00000002   PAD
-    0x000049e0   0x00000024   Code   RO         1171    i.osHwiInit         los_hwi.o
-    0x00004a04   0x00000004   Code   RO          336    i.osIdleTask        los_task.o
-    0x00004a08   0x0000004c   Code   RO          337    i.osIdleTaskCreate  los_task.o
-    0x00004a54   0x0000000c   Code   RO         1172    i.osIntNumGet       los_hwi.o
-    0x00004a60   0x00000070   Code   RO         1229    i.osMain            los_config.o
-    0x00004ad0   0x0000005c   Code   RO          909    i.osMemAllocWithCheck  los_memory.o
-    0x00004b2c   0x00000098   Code   RO          910    i.osMemCheckUsedNode  los_memory.o
-    0x00004bc4   0x00000050   Code   RO          911    i.osMemFindSuitableFreeBlock  los_memory.o
-    0x00004c14   0x000000b2   Code   RO          912    i.osMemFreeNode     los_memory.o
-    0x00004cc6   0x0000003e   Code   RO          913    i.osMemIsNodeValid  los_memory.o
-    0x00004d04   0x00000024   Code   RO          914    i.osMemMergeNode    los_memory.o
-    0x00004d28   0x00000020   Code   RO          915    i.osMemSetMagicNumAndTaskid  los_memory.o
-    0x00004d48   0x0000005c   Code   RO          916    i.osMemSpitNode     los_memory.o
-    0x00004da4   0x00000024   Code   RO          917    i.osMemSystemInit   los_memory.o
-    0x00004dc8   0x0000005c   Code   RO          629    i.osMuxInit         los_mux.o
-    0x00004e24   0x00000048   Code   RO            6    i.osPriqueueInit    los_priqueue.o
-    0x00004e6c   0x00000070   Code   RO          701    i.osQueueCreate     los_queue.o
-    0x00004edc   0x00000038   Code   RO          702    i.osQueueInit       los_queue.o
-    0x00004f14   0x00000084   Code   RO          705    i.osQueuePend       los_queue.o
-    0x00004f98   0x0000005a   Code   RO          706    i.osQueueWakeUp     los_queue.o
-    0x00004ff2   0x00000002   PAD
-    0x00004ff4   0x0000001c   Code   RO         1230    i.osRegister        los_config.o
-    0x00005010   0x00000008   Code   RO         1111    i.osSchedule        los_hw.o
-    0x00005018   0x00000058   Code   RO          808    i.osSemInit         los_sem.o
-    0x00005070   0x000000ac   Code   RO          117    i.osSwTmrInit       los_swtmr.o
-    0x0000511c   0x00000060   Code   RO          118    i.osSwTmrStart      los_swtmr.o
-    0x0000517c   0x00000050   Code   RO          119    i.osSwTmrTask       los_swtmr.o
-    0x000051cc   0x00000048   Code   RO          120    i.osSwTmrTaskCreate  los_swtmr.o
-    0x00005214   0x0000008c   Code   RO          121    i.osSwTmrTimeoutHandle  los_swtmr.o
-    0x000052a0   0x00000014   Code   RO          122    i.osSwtmrDelete     los_swtmr.o
-    0x000052b4   0x00000024   Code   RO          123    i.osSwtmrScan       los_swtmr.o
-    0x000052d8   0x00000048   Code   RO          124    i.osSwtmrStop       los_swtmr.o
-    0x00005320   0x000000c0   Code   RO          338    i.osTaskAdd2TimerList  los_task.o
-    0x000053e0   0x000000a4   Code   RO          339    i.osTaskEntry       los_task.o
-    0x00005484   0x00000008   Code   RO         1112    i.osTaskExit        los_hw.o
-    0x0000548c   0x00000128   Code   RO          340    i.osTaskInit        los_task.o
-    0x000055b4   0x00000034   Code   RO         1027    i.osTaskMemUsedDec  los_memstat.o
-    0x000055e8   0x0000003c   Code   RO         1028    i.osTaskMemUsedInc  los_memstat.o
-    0x00005624   0x00000038   Code   RO          341    i.osTaskPriModify   los_task.o
-    0x0000565c   0x000000dc   Code   RO          342    i.osTaskScan        los_task.o
-    0x00005738   0x000000fc   Code   RO          343    i.osTaskSelfDelete  los_task.o
-    0x00005834   0x00000028   Code   RO          520    i.osTickHandler     los_tick.o
-    0x0000585c   0x0000006c   Code   RO         1627    i.osTickStart       los_bsp_adapter.o
-    0x000058c8   0x00000048   Code   RO          344    i.osTimerListDelete  los_task.o
-    0x00005910   0x0000004c   Code   RO          548    i.osTimesliceCheck  los_timeslice.o
-    0x0000595c   0x00000010   Code   RO          549    i.osTimesliceInit   los_timeslice.o
-    0x0000596c   0x00000140   Code   RO         1113    i.osTskStackInit    los_hw.o
-    0x00005aac   0x000000cc   Code   RO         2169    i.recv_Entry        los_api_msgqueue.o
-    0x00005b78   0x00000074   Code   RO         2170    i.send_Entry        los_api_msgqueue.o
-    0x00005bec   0x00000070   Code   RO         1955    i.uart_init         los_bsp_uart.o
-    0x00005c5c   0x00000020   Code   RO         1956    i.uart_send         los_bsp_uart.o
-    0x00005c7c   0x00000009   Data   RO         1628    .constdata          los_bsp_adapter.o
-    0x00005c85   0x00000004   Data   RO         1816    .constdata          los_bsp_key.o
-    0x00005c89   0x00000004   Data   RO         1881    .constdata          los_bsp_led.o
-    0x00005c8d   0x00000003   PAD
-    0x00005c90   0x00000042   Data   RO         2231    .conststring        los_api_sem.o
-    0x00005cd2   0x00000002   PAD
-    0x00005cd4   0x00000020   Data   RO         2934    Region$$Table       anon$$obj.o
+    0x00002160   0x0000006c   Code   RO         2434    i.LOS_Inspect_KeyAndLed  los_inspect_entry.o
+    0x000021cc   0x000000cc   Code   RO         2435    i.LOS_Inspect_TskDeal  los_inspect_entry.o
+    0x00002298   0x00000012   Code   RO         1225    i.LOS_KernelInit    los_config.o
+    0x000022aa   0x0000000e   Code   RO          320    i.LOS_ListAdd       los_task.o
+    0x000022b8   0x0000000e   Code   RO          620    i.LOS_ListAdd       los_mux.o
+    0x000022c6   0x0000000e   Code   RO          694    i.LOS_ListAdd       los_queue.o
+    0x000022d4   0x0000000e   Code   RO          799    i.LOS_ListAdd       los_sem.o
+    0x000022e2   0x0000000e   Code   RO          902    i.LOS_ListAdd       los_memory.o
+    0x000022f0   0x0000000e   Code   RO         2149    i.LOS_ListAdd       los_api_list.o
+    0x000022fe   0x00000014   Code   RO          321    i.LOS_ListDelete    los_task.o
+    0x00002312   0x00000014   Code   RO          621    i.LOS_ListDelete    los_mux.o
+    0x00002326   0x00000014   Code   RO          800    i.LOS_ListDelete    los_sem.o
+    0x0000233a   0x00000014   Code   RO          903    i.LOS_ListDelete    los_memory.o
+    0x0000234e   0x00000010   Code   RO          322    i.LOS_ListEmpty     los_task.o
+    0x0000235e   0x00000010   Code   RO          622    i.LOS_ListEmpty     los_mux.o
+    0x0000236e   0x00000010   Code   RO          695    i.LOS_ListEmpty     los_queue.o
+    0x0000237e   0x00000010   Code   RO          801    i.LOS_ListEmpty     los_sem.o
+    0x0000238e   0x00000006   Code   RO          323    i.LOS_ListInit      los_task.o
+    0x00002394   0x00000006   Code   RO          623    i.LOS_ListInit      los_mux.o
+    0x0000239a   0x00000006   Code   RO          696    i.LOS_ListInit      los_queue.o
+    0x000023a0   0x00000006   Code   RO          802    i.LOS_ListInit      los_sem.o
+    0x000023a6   0x00000010   Code   RO          324    i.LOS_ListTailInsert  los_task.o
+    0x000023b6   0x00000010   Code   RO          624    i.LOS_ListTailInsert  los_mux.o
+    0x000023c6   0x00000010   Code   RO          803    i.LOS_ListTailInsert  los_sem.o
+    0x000023d6   0x00000002   PAD
+    0x000023d8   0x00000144   Code   RO         1058    i.LOS_Log2          los_multipledlinkhead.o
+    0x0000251c   0x0000003a   Code   RO          904    i.LOS_MemAlloc      los_memory.o
+    0x00002556   0x0000006c   Code   RO          905    i.LOS_MemAllocAlign  los_memory.o
+    0x000025c2   0x00000054   Code   RO          906    i.LOS_MemFree       los_memory.o
+    0x00002616   0x000000a6   Code   RO          907    i.LOS_MemInit       los_memory.o
+    0x000026bc   0x00000040   Code   RO          869    i.LOS_MemboxAlloc   los_membox.o
+    0x000026fc   0x0000001c   Code   RO          870    i.LOS_MemboxClr     los_membox.o
+    0x00002718   0x000000a4   Code   RO          871    i.LOS_MemboxFree    los_membox.o
+    0x000027bc   0x00000080   Code   RO          872    i.LOS_MemboxInit    los_membox.o
+    0x0000283c   0x00000064   Code   RO          625    i.LOS_MuxCreate     los_mux.o
+    0x000028a0   0x00000068   Code   RO          626    i.LOS_MuxDelete     los_mux.o
+    0x00002908   0x00000148   Code   RO          627    i.LOS_MuxPend       los_mux.o
+    0x00002a50   0x00000100   Code   RO          628    i.LOS_MuxPost       los_mux.o
+    0x00002b50   0x00000018   Code   RO            1    i.LOS_PriqueueDequeue  los_priqueue.o
+    0x00002b68   0x00000024   Code   RO            2    i.LOS_PriqueueEnqueue  los_priqueue.o
+    0x00002b8c   0x00000028   Code   RO            3    i.LOS_PriqueueSize  los_priqueue.o
+    0x00002bb4   0x0000003c   Code   RO            4    i.LOS_PriqueueTop   los_priqueue.o
+    0x00002bf0   0x0000007c   Code   RO          697    i.LOS_QueueCreate   los_queue.o
+    0x00002c6c   0x000000b0   Code   RO          698    i.LOS_QueueDelete   los_queue.o
+    0x00002d1c   0x00000130   Code   RO          699    i.LOS_QueueRead     los_queue.o
+    0x00002e4c   0x0000013c   Code   RO          700    i.LOS_QueueWrite    los_queue.o
+    0x00002f88   0x00000040   Code   RO         1110    i.LOS_Schedule      los_hw.o
+    0x00002fc8   0x0000006c   Code   RO          804    i.LOS_SemCreate     los_sem.o
+    0x00003034   0x00000060   Code   RO          805    i.LOS_SemDelete     los_sem.o
+    0x00003094   0x00000100   Code   RO          806    i.LOS_SemPend       los_sem.o
+    0x00003194   0x000000b8   Code   RO          807    i.LOS_SemPost       los_sem.o
+    0x0000324c   0x0000000c   Code   RO         1141    i.LOS_SetTickSycle  los_hw_tick.o
+    0x00003258   0x0000000c   Code   RO         1226    i.LOS_Start         los_config.o
+    0x00003264   0x0000008c   Code   RO          111    i.LOS_SwtmrCreate   los_swtmr.o
+    0x000032f0   0x00000084   Code   RO          112    i.LOS_SwtmrDelete   los_swtmr.o
+    0x00003374   0x00000084   Code   RO          113    i.LOS_SwtmrStart    los_swtmr.o
+    0x000033f8   0x00000080   Code   RO          114    i.LOS_SwtmrStop     los_swtmr.o
+    0x00003478   0x0000009c   Code   RO          325    i.LOS_TaskCreate    los_task.o
+    0x00003514   0x00000184   Code   RO          326    i.LOS_TaskCreateOnly  los_task.o
+    0x00003698   0x00000080   Code   RO          327    i.LOS_TaskDelay     los_task.o
+    0x00003718   0x00000168   Code   RO          328    i.LOS_TaskDelete    los_task.o
+    0x00003880   0x00000020   Code   RO          329    i.LOS_TaskLock      los_task.o
+    0x000038a0   0x000000b0   Code   RO          332    i.LOS_TaskResume    los_task.o
+    0x00003950   0x000000e4   Code   RO          333    i.LOS_TaskSuspend   los_task.o
+    0x00003a34   0x0000003c   Code   RO          334    i.LOS_TaskUnlock    los_task.o
+    0x00003a70   0x00000084   Code   RO          335    i.LOS_TaskYield     los_task.o
+    0x00003af4   0x0000000c   Code   RO          252    i.LOS_TickCountGet  los_sys.o
+    0x00003b00   0x00000038   Code   RO         1142    i.LOS_TickHandler   los_hw_tick.o
+    0x00003b38   0x00000002   Code   RO         1623    i.LosAdapIntInit    los_bsp_adapter.o
+    0x00003b3a   0x00000008   Code   RO         1626    i.SysTick_Handler   los_bsp_adapter.o
+    0x00003b42   0x00000002   PAD
+    0x00003b44   0x00000010   Code   RO         2487    i.SystemCoreClockUpdate  system_nrf52840.o
+    0x00003b54   0x00000214   Code   RO         2488    i.SystemInit        system_nrf52840.o
+    0x00003d68   0x00000050   Code   RO         2342    i.Timer1_Callback   los_api_timer.o
+    0x00003db8   0x00000058   Code   RO         2343    i.Timer2_Callback   los_api_timer.o
+    0x00003e10   0x00000020   Code   RO         2836    i.__0printf         mc_w.l(printfa.o)
+    0x00003e30   0x0000000e   Code   RO         2936    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x00003e3e   0x00000002   Code   RO         2937    i.__scatterload_null  mc_w.l(handlers.o)
+    0x00003e40   0x0000000e   Code   RO         2938    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x00003e4e   0x00000002   PAD
+    0x00003e50   0x00000164   Code   RO         2843    i._fp_digits        mc_w.l(printfa.o)
+    0x00003fb4   0x000006dc   Code   RO         2844    i._printf_core      mc_w.l(printfa.o)
+    0x00004690   0x00000024   Code   RO         2845    i._printf_post_padding  mc_w.l(printfa.o)
+    0x000046b4   0x0000002e   Code   RO         2846    i._printf_pre_padding  mc_w.l(printfa.o)
+    0x000046e2   0x00000002   PAD
+    0x000046e4   0x00000034   Code   RO         1813    i.bsp_board_button_state_get  los_bsp_key.o
+    0x00004718   0x0000004c   Code   RO         1814    i.bsp_board_buttons_init  los_bsp_key.o
+    0x00004764   0x00000014   Code   RO         1874    i.bsp_board_led_off  los_bsp_led.o
+    0x00004778   0x00000014   Code   RO         1875    i.bsp_board_led_on  los_bsp_led.o
+    0x0000478c   0x00000054   Code   RO         1876    i.bsp_board_leds_init  los_bsp_led.o
+    0x000047e0   0x00000014   Code   RO         1877    i.bsp_board_leds_off  los_bsp_led.o
+    0x000047f4   0x0000001c   Code   RO         2489    i.errata_103        system_nrf52840.o
+    0x00004810   0x0000001c   Code   RO         2490    i.errata_115        system_nrf52840.o
+    0x0000482c   0x0000001c   Code   RO         2491    i.errata_120        system_nrf52840.o
+    0x00004848   0x0000001c   Code   RO         2492    i.errata_36         system_nrf52840.o
+    0x00004864   0x0000001c   Code   RO         2493    i.errata_66         system_nrf52840.o
+    0x00004880   0x0000001c   Code   RO         2494    i.errata_98         system_nrf52840.o
+    0x0000489c   0x00000010   Code   RO         1952    i.fputc             los_bsp_uart.o
+    0x000048ac   0x00000050   Code   RO         2864    i.free              mc_w.l(malloc.o)
+    0x000048fc   0x00000022   Code   RO         2559    i.main              main.o
+    0x0000491e   0x00000002   PAD
+    0x00004920   0x00000038   Code   RO         1953    i.nrf_gpio_cfg      los_bsp_uart.o
+    0x00004958   0x00000020   Code   RO         1815    i.nrf_gpio_pin_port_decode  los_bsp_key.o
+    0x00004978   0x00000020   Code   RO         1879    i.nrf_gpio_pin_port_decode  los_bsp_led.o
+    0x00004998   0x00000042   Code   RO         1880    i.nrf_gpio_pin_write  los_bsp_led.o
+    0x000049da   0x00000008   Code   RO         1170    i.osHwiDefaultHandler  los_hwi.o
+    0x000049e2   0x00000002   PAD
+    0x000049e4   0x00000024   Code   RO         1171    i.osHwiInit         los_hwi.o
+    0x00004a08   0x00000004   Code   RO          336    i.osIdleTask        los_task.o
+    0x00004a0c   0x0000004c   Code   RO          337    i.osIdleTaskCreate  los_task.o
+    0x00004a58   0x0000000c   Code   RO         1172    i.osIntNumGet       los_hwi.o
+    0x00004a64   0x00000070   Code   RO         1229    i.osMain            los_config.o
+    0x00004ad4   0x0000005c   Code   RO          909    i.osMemAllocWithCheck  los_memory.o
+    0x00004b30   0x00000098   Code   RO          910    i.osMemCheckUsedNode  los_memory.o
+    0x00004bc8   0x00000050   Code   RO          911    i.osMemFindSuitableFreeBlock  los_memory.o
+    0x00004c18   0x000000b2   Code   RO          912    i.osMemFreeNode     los_memory.o
+    0x00004cca   0x0000003e   Code   RO          913    i.osMemIsNodeValid  los_memory.o
+    0x00004d08   0x00000024   Code   RO          914    i.osMemMergeNode    los_memory.o
+    0x00004d2c   0x00000020   Code   RO          915    i.osMemSetMagicNumAndTaskid  los_memory.o
+    0x00004d4c   0x0000005c   Code   RO          916    i.osMemSpitNode     los_memory.o
+    0x00004da8   0x00000024   Code   RO          917    i.osMemSystemInit   los_memory.o
+    0x00004dcc   0x0000005c   Code   RO          629    i.osMuxInit         los_mux.o
+    0x00004e28   0x00000048   Code   RO            6    i.osPriqueueInit    los_priqueue.o
+    0x00004e70   0x00000070   Code   RO          701    i.osQueueCreate     los_queue.o
+    0x00004ee0   0x00000038   Code   RO          702    i.osQueueInit       los_queue.o
+    0x00004f18   0x00000084   Code   RO          705    i.osQueuePend       los_queue.o
+    0x00004f9c   0x0000005a   Code   RO          706    i.osQueueWakeUp     los_queue.o
+    0x00004ff6   0x00000002   PAD
+    0x00004ff8   0x0000001c   Code   RO         1230    i.osRegister        los_config.o
+    0x00005014   0x00000008   Code   RO         1111    i.osSchedule        los_hw.o
+    0x0000501c   0x00000058   Code   RO          808    i.osSemInit         los_sem.o
+    0x00005074   0x000000ac   Code   RO          117    i.osSwTmrInit       los_swtmr.o
+    0x00005120   0x00000060   Code   RO          118    i.osSwTmrStart      los_swtmr.o
+    0x00005180   0x00000050   Code   RO          119    i.osSwTmrTask       los_swtmr.o
+    0x000051d0   0x00000048   Code   RO          120    i.osSwTmrTaskCreate  los_swtmr.o
+    0x00005218   0x0000008c   Code   RO          121    i.osSwTmrTimeoutHandle  los_swtmr.o
+    0x000052a4   0x00000014   Code   RO          122    i.osSwtmrDelete     los_swtmr.o
+    0x000052b8   0x00000024   Code   RO          123    i.osSwtmrScan       los_swtmr.o
+    0x000052dc   0x00000048   Code   RO          124    i.osSwtmrStop       los_swtmr.o
+    0x00005324   0x000000c0   Code   RO          338    i.osTaskAdd2TimerList  los_task.o
+    0x000053e4   0x000000a4   Code   RO          339    i.osTaskEntry       los_task.o
+    0x00005488   0x00000008   Code   RO         1112    i.osTaskExit        los_hw.o
+    0x00005490   0x00000128   Code   RO          340    i.osTaskInit        los_task.o
+    0x000055b8   0x00000034   Code   RO         1027    i.osTaskMemUsedDec  los_memstat.o
+    0x000055ec   0x0000003c   Code   RO         1028    i.osTaskMemUsedInc  los_memstat.o
+    0x00005628   0x00000038   Code   RO          341    i.osTaskPriModify   los_task.o
+    0x00005660   0x000000dc   Code   RO          342    i.osTaskScan        los_task.o
+    0x0000573c   0x000000fc   Code   RO          343    i.osTaskSelfDelete  los_task.o
+    0x00005838   0x00000028   Code   RO          520    i.osTickHandler     los_tick.o
+    0x00005860   0x0000006c   Code   RO         1627    i.osTickStart       los_bsp_adapter.o
+    0x000058cc   0x00000048   Code   RO          344    i.osTimerListDelete  los_task.o
+    0x00005914   0x0000004c   Code   RO          548    i.osTimesliceCheck  los_timeslice.o
+    0x00005960   0x00000010   Code   RO          549    i.osTimesliceInit   los_timeslice.o
+    0x00005970   0x00000140   Code   RO         1113    i.osTskStackInit    los_hw.o
+    0x00005ab0   0x000000cc   Code   RO         2169    i.recv_Entry        los_api_msgqueue.o
+    0x00005b7c   0x00000074   Code   RO         2170    i.send_Entry        los_api_msgqueue.o
+    0x00005bf0   0x00000070   Code   RO         1955    i.uart_init         los_bsp_uart.o
+    0x00005c60   0x00000020   Code   RO         1956    i.uart_send         los_bsp_uart.o
+    0x00005c80   0x00000009   Data   RO         1628    .constdata          los_bsp_adapter.o
+    0x00005c89   0x00000004   Data   RO         1816    .constdata          los_bsp_key.o
+    0x00005c8d   0x00000004   Data   RO         1881    .constdata          los_bsp_led.o
+    0x00005c91   0x00000003   PAD
+    0x00005c94   0x00000042   Data   RO         2231    .conststring        los_api_sem.o
+    0x00005cd6   0x00000002   PAD
+    0x00005cd8   0x00000020   Data   RO         2934    Region$$Table       anon$$obj.o
 
 
     Execution Region RW_IRAM1 (Base: 0x20000000, Size: 0x0000a910, Max: 0x00040000, ABSOLUTE, COMPRESSED[0x000000a4])
@@ -2256,7 +2256,7 @@ Image component sizes
        400         22          0          0          0       3378   los_hw.o
         68         10          0          4          0       1597   los_hw_tick.o
         56         10          0       1028          0       5530   los_hwi.o
-       832        356          0        168          0       5223   los_inspect_entry.o
+       836        356          0        168          0       5223   los_inspect_entry.o
        384         10          0          0          0       4936   los_membox.o
       1210         14          0          0      32768      17060   los_memory.o
        112         24          0          0         64       2241   los_memstat.o
@@ -2275,7 +2275,7 @@ Image component sizes
        716         94          0          4          0      32386   system_nrf52840.o
 
     ----------------------------------------------------------------------
-     19336       4212        632       1428      41844     329136   Object Totals
+     19340       4212        632       1428      41844     329136   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         10          0          5          2          0          0   (incl. Padding)
 
@@ -2333,15 +2333,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     23164       4322        632       1436      41844     312964   Grand Totals
-     23164       4322        632        164      41844     312964   ELF Image Totals (compressed)
-     23164       4322        632        164          0          0   ROM Totals
+     23168       4322        632       1436      41844     312964   Grand Totals
+     23168       4322        632        164      41844     312964   ELF Image Totals (compressed)
+     23168       4322        632        164          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                23796 (  23.24kB)
+    Total RO  Size (Code + RO Data)                23800 (  23.24kB)
     Total RW  Size (RW Data + ZI Data)             43280 (  42.27kB)
-    Total ROM Size (Code + RO Data + RW Data)      23960 (  23.40kB)
+    Total ROM Size (Code + RO Data + RW Data)      23964 (  23.40kB)
 
 ==============================================================================
 

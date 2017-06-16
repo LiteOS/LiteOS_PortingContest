@@ -405,7 +405,7 @@ F (..\..\platform\NRF52840-PDK\los_bsp_adapter.c)(0x5940AB18)(--c99 -c --cpu Cor
 I (E:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x56FE42DE)
 I (E:\Keil_v5\ARM\ARMCC\include\string.h)(0x56FE42DE)
 I (..\..\platform\NRF52840-PDK\los_bsp_adapter.h)(0x593F77AC)
-I (..\..\platform\NRF52840-PDK\los_bsp_key.h)(0x593FAF92)
+I (..\..\platform\NRF52840-PDK\los_bsp_key.h)(0x5943C9C5)
 I (..\..\platform\NRF52840-PDK\los_bsp_led.h)(0x593FF0D2)
 I (..\..\platform\NRF52840-PDK\components\drivers_nrf\hal\nrf_gpio.h)(0x58C295C0)
 I (E:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.12.0\Device\Include\nrf.h)(0x58AD0DD4)
@@ -448,8 +448,8 @@ I (..\..\kernel\include\los_sys.h)(0x593F77AC)
 I (..\..\kernel\cpu\arm\cortex-m4\los_hwi.h)(0x593F77AC)
 I (..\..\kernel\include\los_event.h)(0x593F77AC)
 I (..\..\kernel\include\los_swtmr.h)(0x593F77AC)
-F (..\..\platform\NRF52840-PDK\los_bsp_key.c)(0x5940CB54)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\cmsis -I ..\..\kernel\config -I ..\..\kernel\cpu\arm\cortex-m4 -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\example\include -I ..\..\platform\NRF52840-PDK -I ..\..\platform\NRF52840-PDK\config -I ..\..\platform\NRF52840-PDK\components\drivers_nrf\hal -I ..\..\platform\NRF52840-PDK\components\libraries\util -I ..\..\platform\NRF52840-PDK\components\drivers_nrf\nrf_soc_nosd-I C:\Users\Taogal\Desktop\code\PortingContest\PortingContest_NRF52840-PDK-ÔøºúÌÎ\LiteOS_Kernel\projects\NRF52840-PDK-KEIL\RTE-I E:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I E:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.12.0\Device\Include-D__UVISION_VERSION="520" -D_RTE_ -DNRF52840_XXAA -DLOS_NRF52840 -DNRF52840_XXAA -DCONFIG_GPIO_AS_PINRESET-o .\objects\los_bsp_key.o --omf_browse .\objects\los_bsp_key.crf --depend .\objects\los_bsp_key.d)
-I (..\..\platform\NRF52840-PDK\los_bsp_key.h)(0x593FAF92)
+F (..\..\platform\NRF52840-PDK\los_bsp_key.c)(0x5943C997)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\cmsis -I ..\..\kernel\config -I ..\..\kernel\cpu\arm\cortex-m4 -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\example\include -I ..\..\platform\NRF52840-PDK -I ..\..\platform\NRF52840-PDK\config -I ..\..\platform\NRF52840-PDK\components\drivers_nrf\hal -I ..\..\platform\NRF52840-PDK\components\libraries\util -I ..\..\platform\NRF52840-PDK\components\drivers_nrf\nrf_soc_nosd-I C:\Users\Taogal\Desktop\code\PortingContest\PortingContest_NRF52840-PDK-ÔøºúÌÎ\LiteOS_Kernel\projects\NRF52840-PDK-KEIL\RTE-I E:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I E:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.12.0\Device\Include-D__UVISION_VERSION="520" -D_RTE_ -DNRF52840_XXAA -DLOS_NRF52840 -DNRF52840_XXAA -DCONFIG_GPIO_AS_PINRESET-o .\objects\los_bsp_key.o --omf_browse .\objects\los_bsp_key.crf --depend .\objects\los_bsp_key.d)
+I (..\..\platform\NRF52840-PDK\los_bsp_key.h)(0x5943C9C5)
 I (..\..\platform\NRF52840-PDK\components\drivers_nrf\hal\nrf_gpio.h)(0x58C295C0)
 I (E:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.12.0\Device\Include\nrf.h)(0x58AD0DD4)
 I (E:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.12.0\Device\Include\nrf52840.h)(0x58AD0DD6)
@@ -504,7 +504,7 @@ I (..\..\platform\NRF52840-PDK\config\sdk_config.h)(0x58C295C0)
 I (..\..\platform\NRF52840-PDK\components\libraries\util\nordic_common.h)(0x58C295C0)
 I (..\..\platform\NRF52840-PDK\components\libraries\util\app_error_weak.h)(0x58C295C0)
 I (E:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x56FE42DE)
-F (..\..\platform\NRF52840-PDK\los_bsp_uart.c)(0x5940FB3C)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\cmsis -I ..\..\kernel\config -I ..\..\kernel\cpu\arm\cortex-m4 -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\example\include -I ..\..\platform\NRF52840-PDK -I ..\..\platform\NRF52840-PDK\config -I ..\..\platform\NRF52840-PDK\components\drivers_nrf\hal -I ..\..\platform\NRF52840-PDK\components\libraries\util -I ..\..\platform\NRF52840-PDK\components\drivers_nrf\nrf_soc_nosd-I C:\Users\Taogal\Desktop\code\PortingContest\PortingContest_NRF52840-PDK-ÔøºúÌÎ\LiteOS_Kernel\projects\NRF52840-PDK-KEIL\RTE-I E:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I E:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.12.0\Device\Include-D__UVISION_VERSION="520" -D_RTE_ -DNRF52840_XXAA -DLOS_NRF52840 -DNRF52840_XXAA -DCONFIG_GPIO_AS_PINRESET-o .\objects\los_bsp_uart.o --omf_browse .\objects\los_bsp_uart.crf --depend .\objects\los_bsp_uart.d)
+F (..\..\platform\NRF52840-PDK\los_bsp_uart.c)(0x5943CA6F)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\cmsis -I ..\..\kernel\config -I ..\..\kernel\cpu\arm\cortex-m4 -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\example\include -I ..\..\platform\NRF52840-PDK -I ..\..\platform\NRF52840-PDK\config -I ..\..\platform\NRF52840-PDK\components\drivers_nrf\hal -I ..\..\platform\NRF52840-PDK\components\libraries\util -I ..\..\platform\NRF52840-PDK\components\drivers_nrf\nrf_soc_nosd-I C:\Users\Taogal\Desktop\code\PortingContest\PortingContest_NRF52840-PDK-ÔøºúÌÎ\LiteOS_Kernel\projects\NRF52840-PDK-KEIL\RTE-I E:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I E:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.12.0\Device\Include-D__UVISION_VERSION="520" -D_RTE_ -DNRF52840_XXAA -DLOS_NRF52840 -DNRF52840_XXAA -DCONFIG_GPIO_AS_PINRESET-o .\objects\los_bsp_uart.o --omf_browse .\objects\los_bsp_uart.crf --depend .\objects\los_bsp_uart.d)
 I (E:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x56FE42DE)
 I (E:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x56FE42DE)
 I (E:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x56FE42E0)
@@ -612,7 +612,7 @@ I (..\..\platform\NRF52840-PDK\config\sdk_config.h)(0x58C295C0)
 I (..\..\platform\NRF52840-PDK\components\libraries\util\nordic_common.h)(0x58C295C0)
 I (..\..\platform\NRF52840-PDK\components\libraries\util\app_error_weak.h)(0x58C295C0)
 I (E:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x56FE42DE)
-I (..\..\platform\NRF52840-PDK\los_bsp_key.h)(0x593FAF92)
+I (..\..\platform\NRF52840-PDK\los_bsp_key.h)(0x5943C9C5)
 I (..\..\platform\NRF52840-PDK\los_bsp_uart.h)(0x5940C88A)
 F (..\..\example\api\los_api_interrupt.c)(0x593F77AC)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\cmsis -I ..\..\kernel\config -I ..\..\kernel\cpu\arm\cortex-m4 -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\example\include -I ..\..\platform\NRF52840-PDK -I ..\..\platform\NRF52840-PDK\config -I ..\..\platform\NRF52840-PDK\components\drivers_nrf\hal -I ..\..\platform\NRF52840-PDK\components\libraries\util -I ..\..\platform\NRF52840-PDK\components\drivers_nrf\nrf_soc_nosd-I C:\Users\Taogal\Desktop\code\PortingContest\PortingContest_NRF52840-PDK-ÔøºúÌÎ\LiteOS_Kernel\projects\NRF52840-PDK-KEIL\RTE-I E:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I E:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.12.0\Device\Include-D__UVISION_VERSION="520" -D_RTE_ -DNRF52840_XXAA -DLOS_NRF52840 -DNRF52840_XXAA -DCONFIG_GPIO_AS_PINRESET-o .\objects\los_api_interrupt.o --omf_browse .\objects\los_api_interrupt.crf --depend .\objects\los_api_interrupt.d)
 I (..\..\kernel\cpu\arm\cortex-m4\los_hwi.h)(0x593F77AC)
@@ -848,7 +848,7 @@ I (..\..\platform\NRF52840-PDK\config\sdk_config.h)(0x58C295C0)
 I (..\..\platform\NRF52840-PDK\components\libraries\util\nordic_common.h)(0x58C295C0)
 I (..\..\platform\NRF52840-PDK\components\libraries\util\app_error_weak.h)(0x58C295C0)
 I (E:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x56FE42DE)
-I (..\..\platform\NRF52840-PDK\los_bsp_key.h)(0x593FAF92)
+I (..\..\platform\NRF52840-PDK\los_bsp_key.h)(0x5943C9C5)
 I (..\..\platform\NRF52840-PDK\los_bsp_uart.h)(0x5940C88A)
 I (..\..\example\include\los_api_task.h)(0x593F77AC)
 I (..\..\example\include\los_api_dynamic_mem.h)(0x593F77AC)
@@ -918,7 +918,7 @@ I (..\..\platform\NRF52840-PDK\config\sdk_config.h)(0x58C295C0)
 I (..\..\platform\NRF52840-PDK\components\libraries\util\nordic_common.h)(0x58C295C0)
 I (..\..\platform\NRF52840-PDK\components\libraries\util\app_error_weak.h)(0x58C295C0)
 I (E:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x56FE42DE)
-I (..\..\platform\NRF52840-PDK\los_bsp_key.h)(0x593FAF92)
+I (..\..\platform\NRF52840-PDK\los_bsp_key.h)(0x5943C9C5)
 I (..\..\platform\NRF52840-PDK\los_bsp_uart.h)(0x5940C88A)
 I (E:\Keil_v5\ARM\ARMCC\include\string.h)(0x56FE42DE)
 I (..\..\example\include\los_inspect_entry.h)(0x593F77AC)
