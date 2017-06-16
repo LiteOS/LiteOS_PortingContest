@@ -557,16 +557,16 @@ notice：注意一定要添加CONFIG_GPIO_AS_PINRESET宏，此宏是配置板卡
 		{
 		#ifdef LOS_NRF52840
 
-				if (cmd == LED_ON)
-				{
-						//add you code here.
-						bsp_board_led_on(index);   /* LED on */
-				}
-				else
-				{
-						//add you code here.
-						bsp_board_led_off(index);  /* LED off */
-				}
+			if (cmd == LED_ON)
+			{
+					//add you code here.
+					bsp_board_led_on(index);   /* LED on */
+			}
+			else
+			{
+					//add you code here.
+					bsp_board_led_off(index);  /* LED off */
+			}
 				
 		#endif
 			return;
@@ -626,39 +626,39 @@ notice：注意一定要添加CONFIG_GPIO_AS_PINRESET宏，此宏是配置板卡
 
 		void uart_init(void)
 		{
-					nrf_gpio_cfg_output(TX_PIN_NUMBER);   
-					nrf_gpio_cfg_input(RX_PIN_NUMBER, NRF_GPIO_PIN_NOPULL);
+			nrf_gpio_cfg_output(TX_PIN_NUMBER);   
+			nrf_gpio_cfg_input(RX_PIN_NUMBER, NRF_GPIO_PIN_NOPULL);
 
-					NRF_UART0->PSELTXD =TX_PIN_NUMBER;
-					NRF_UART0->PSELRXD =RX_PIN_NUMBER;
-		 
-					NRF_UART0->BAUDRATE         = (UART_BAUDRATE_BAUDRATE_Baud115200 << UART_BAUDRATE_BAUDRATE_Pos);   
-					NRF_UART0->ENABLE           = (UART_ENABLE_ENABLE_Enabled << UART_ENABLE_ENABLE_Pos);           
-					NRF_UART0->TASKS_STARTTX    = 1;
-					NRF_UART0->TASKS_STARTRX    = 1;
-					NRF_UART0->EVENTS_RXDRDY    = 0;
+			NRF_UART0->PSELTXD =TX_PIN_NUMBER;
+			NRF_UART0->PSELRXD =RX_PIN_NUMBER;
+ 
+			NRF_UART0->BAUDRATE         = (UART_BAUDRATE_BAUDRATE_Baud115200 << UART_BAUDRATE_BAUDRATE_Pos);   
+			NRF_UART0->ENABLE           = (UART_ENABLE_ENABLE_Enabled << UART_ENABLE_ENABLE_Pos);           
+			NRF_UART0->TASKS_STARTTX    = 1;
+			NRF_UART0->TASKS_STARTRX    = 1;
+			NRF_UART0->EVENTS_RXDRDY    = 0;
 		}
 		   
 		void uart_send(unsigned char  tx)  
 		{
-		  NRF_UART0->TXD = tx;
+			NRF_UART0->TXD = tx;
 
-		  while (NRF_UART0->EVENTS_TXDRDY!=1)
-		  {
+			while (NRF_UART0->EVENTS_TXDRDY!=1)
+			{
 			// Wait for TXD data to be sent
-		  }
+			}
 
-		  NRF_UART0->EVENTS_TXDRDY=0;
+			NRF_UART0->EVENTS_TXDRDY=0;
 		}
 
 		unsigned char uart_get(void)  
 		{
-		  while (NRF_UART0->EVENTS_RXDRDY != 1)
-		  {
-			// Wait for RXD data to be received
-		  }
-		  NRF_UART0->EVENTS_RXDRDY = 0;
-		  return (uint8_t)NRF_UART0->RXD;
+			while (NRF_UART0->EVENTS_RXDRDY != 1)
+			{
+				// Wait for RXD data to be received
+			}
+			NRF_UART0->EVENTS_RXDRDY = 0;
+			return (uint8_t)NRF_UART0->RXD;
 		}
 		#endif
 
@@ -706,7 +706,7 @@ notice：注意一定要添加CONFIG_GPIO_AS_PINRESET宏，此宏是配置板卡
 		{
 			//add you code here.    
 		#ifdef LOS_NRF52840
-				*c =uart_get();	
+			*c =uart_get();	
 		#endif
 			return ;
 		}
@@ -749,7 +749,7 @@ notice：注意一定要添加CONFIG_GPIO_AS_PINRESET宏，此宏是配置板卡
 		#ifdef LOS_NRF52840
 			while (*str)
 			{				
-						uart_send(*str);
+				uart_send(*str);
 				str++;
 			}
 		#endif
