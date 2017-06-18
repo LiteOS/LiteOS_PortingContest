@@ -3,6 +3,7 @@
 
 #define LED_ON      (0)
 #define LED_OFF     (1)
+
 #define LOS_LED1    (0)
 #define LOS_LED2    (1)
 #define LOS_LED3    (2)

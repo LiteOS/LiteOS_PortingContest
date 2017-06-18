@@ -1,6 +1,6 @@
 #include "los_bsp_led.h"
 
-#ifdef LOS_MM32F103
+#ifdef LOS_MM32L073PF
 #include "led.h"
 #endif
 
@@ -20,14 +20,14 @@
 void LOS_EvbLedInit(void)
 {
     //add you code here.
-#ifdef LOS_MM32F103
+#ifdef LOS_MM32L073PF
     LED_Init();
 #endif
     return;
 }
 
 /******************************************************************************
- Function   £ºLOS_EvbLedControl
+ Function   ¡êoLOS_EvbLedControl
  Discription: Control led on or off
  Input      : index Led's index
               cmd   Led on or off
@@ -40,32 +40,48 @@ void LOS_EvbLedControl(unsigned int index, unsigned int cmd)
         case LOS_LED1:
         {
             //add you code here.
-            #ifdef LOS_MM32F103
-                LED1 = cmd;
+            #ifdef LOS_MM32L073PF
+							if(cmd == LED_ON) {
+								LED1_ON();
+							} else {
+								LED1_OFF();
+							}
             #endif
             break;
         }
         case LOS_LED2:
         {
             //add you code here.
-            #ifdef LOS_MM32F103
-                LED2 = cmd;
-            #endif
+            #ifdef LOS_MM32L073PF
+							if(cmd == LED_ON) {
+								LED2_ON();
+							} else {
+								LED2_OFF();
+							}
+						#endif
             break;
         }
         case LOS_LED3:
         {
             //add you code here.
-            #ifdef LOS_MM32F103
-                LED3 = cmd;
+            #ifdef LOS_MM32L073PF
+							if(cmd == LED_ON) {
+								LED3_ON();
+							} else {
+								LED3_OFF();
+							}
             #endif
             break;
         }
         case LOS_LED4:
         {
             //add you code here.
-            #ifdef LOS_MM32F103
-                LED4 = cmd;
+            #ifdef LOS_MM32L073PF
+							if(cmd == LED_ON) {
+								LED4_ON();
+							} else {
+								LED4_OFF();
+							}
             #endif
             break;
         }

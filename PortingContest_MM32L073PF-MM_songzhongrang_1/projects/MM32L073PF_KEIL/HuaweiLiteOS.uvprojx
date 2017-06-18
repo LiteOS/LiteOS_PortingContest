@@ -335,7 +335,7 @@
               <MiscControls></MiscControls>
               <Define>RAM_SIZE_LEVEL_0 LOS_MM32L073PF</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\kernel\base\include;..\..\kernel\include;..\..\kernel\cmsis;..\..\kernel\config;..\..\kernel\cpu\arm\cortex-m0;..\..\kernel\link\keil;..\..\example\include;..\..\platform\MM32L073PF;..\..\platform\MM32L073PF\uart;..\..\platform\MM32L073PF\include;;..\..\platform\MM32L073PF\sysclk</IncludePath>
+              <IncludePath>..\..\kernel\base\include;..\..\kernel\include;..\..\kernel\cmsis;..\..\kernel\config;..\..\kernel\cpu\arm\cortex-m0;..\..\kernel\link\keil;..\..\example\include;..\..\platform\MM32L073PF;..\..\platform\MM32L073PF\uart;..\..\platform\MM32L073PF\include;..\..\platform\MM32L073PF\sysclk;..\..\platform\MM32L073PF\key;..\..\platform\MM32L073PF\led</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -618,6 +618,16 @@
               <FileName>system_MM32L0xx.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\platform\MM32L073PF\sysclk\system_MM32L0xx.c</FilePath>
+            </File>
+            <File>
+              <FileName>key.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\platform\MM32L073PF\key\key.c</FilePath>
+            </File>
+            <File>
+              <FileName>led.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\platform\MM32L073PF\led\led.c</FilePath>
             </File>
           </Files>
         </Group>

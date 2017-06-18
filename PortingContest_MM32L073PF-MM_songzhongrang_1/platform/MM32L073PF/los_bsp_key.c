@@ -1,8 +1,7 @@
 #include "los_bsp_key.h"
 
-#ifdef LOS_MM32F103 
+#ifdef LOS_MM32L073PF 
 #include "key.h"
-#include "exti.h"
 #endif
 /******************************************************************************
     here include some special hearder file you need
@@ -21,10 +20,8 @@
 void LOS_EvbKeyInit(void)
 {   
     //add you code here.
-#ifdef LOS_MM32F103 
+#ifdef LOS_MM32L073PF 
     KEY_Init();
-
-    EXTIX_Init();
 #endif  
     return ;
 }
@@ -41,7 +38,7 @@ unsigned int LOS_EvbGetKeyVal(int KeyNum)
     unsigned int KeyVal = LOS_GPIO_ERR;
     
     //add you code here.
-#ifdef LOS_MM32F103
+#ifdef LOS_MM32L073PF
     switch (KeyNum)
     {
         case KEY_1:
@@ -73,20 +70,3 @@ unsigned int LOS_EvbGetKeyVal(int KeyNum)
     
     return KeyVal;
 }
-
-/*****************************************************************************
- Function    : EXTIxxx_IRQHandler
- Description : EXT xxx IRQ Handler detail,change the function name 
- Input       : None
- Output      : None
- Return      : None
- *****************************************************************************/
-void EXTIxxx_IRQHandler(void)
-{
-    //add you code here.
-    
-    return;
-}
-
-
-
