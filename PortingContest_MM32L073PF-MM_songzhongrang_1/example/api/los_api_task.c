@@ -86,7 +86,7 @@ UINT32 Example_TaskHi(VOID)
     /*删除任务*/
     if(LOS_OK != LOS_TaskDelete(g_uwTskHiID))
     {
-        dprintf("TaskHi delete failed .\n");
+        dprintf("TaskHi delete failed .\r\n");
         return LOS_NOK;
     }
     
@@ -122,7 +122,7 @@ UINT32 Example_TaskLo(VOID)
     /*删除任务*/
     if(LOS_OK != LOS_TaskDelete(g_uwTskLoID))
     {
-        dprintf("TaskLo delete failed .\n");
+        dprintf("TaskLo delete failed .\r\n");
         
         return LOS_NOK;
     }
@@ -170,7 +170,7 @@ UINT32 Example_TskCaseEntry(VOID)
         /*删除任务*/
         if(LOS_OK != LOS_TaskDelete(g_uwTskHiID))
         {
-            dprintf("TaskHi delete failed .\n");
+            dprintf("TaskHi delete failed .\r\n");
         }
             
         LOS_TaskUnlock();

@@ -66,17 +66,17 @@ VOID Example_Event(VOID)
 
     /*超时 等待方式读事件,超时时间为100 Tick
     若100 Tick 后未读取到指定事件，读事件超时，任务直接唤醒*/
-    dprintf("Example_Event wait event 0x%x \n",event_wait);
+    dprintf("Example_Event wait event 0x%x \r\n",event_wait);
 
     uwEvent = LOS_EventRead(&example_event, event_wait, LOS_WAITMODE_AND, 100);
     if(uwEvent == event_wait)
     {
-        dprintf("Example_Event,read event :0x%x\n",uwEvent);
+        dprintf("Example_Event,read event :0x%x\r\n",uwEvent);
         LOS_InspectStatusSetByID(LOS_INSPECT_EVENT,LOS_INSPECT_STU_SUCCESS);
     }
     else
     {
-        dprintf("Example_Event,read event timeout\n");
+        dprintf("Example_Event,read event timeout\r\n");
         LOS_InspectStatusSetByID(LOS_INSPECT_EVENT,LOS_INSPECT_STU_ERROR);
     }
     return;
@@ -91,7 +91,7 @@ UINT32 Example_SndRcvEvent(VOID)
     uwRet = LOS_EventInit(&example_event);
     if(uwRet != LOS_OK)
     {
-        dprintf("init event failed .\n");
+        dprintf("init event failed .\r\n");
         return LOS_NOK;
     }
 
@@ -104,30 +104,30 @@ UINT32 Example_SndRcvEvent(VOID)
     uwRet = LOS_TaskCreate(&g_TestTaskID, &stTask1);
     if(uwRet != LOS_OK)
     {
-        dprintf("task create failed .\n");
+        dprintf("task create failed .\r\n");
         return LOS_NOK;
     }
 
     /*写用例任务等待的事件类型*/
-    dprintf("Example_TaskEntry_Event write event .\n");
+    dprintf("Example_TaskEntry_Event write event .\r\n");
 
     uwRet = LOS_EventWrite(&example_event, event_wait);
     if(uwRet != LOS_OK)
     {
-        dprintf("event write failed .\n");
+        dprintf("event write failed .\r\n");
         return LOS_NOK;
     }
 
     /*清标志位*/
-    dprintf("EventMask:%d\n",example_event.uwEventID);
+    dprintf("EventMask:%d \r\n",example_event.uwEventID);
     LOS_EventClear(&example_event, ~example_event.uwEventID);
-    dprintf("EventMask:%d\n",example_event.uwEventID);
+    dprintf("EventMask:%d \r\n",example_event.uwEventID);
 
     /*删除任务*/
     uwRet = LOS_TaskDelete(g_TestTaskID);
     if(uwRet != LOS_OK)
     {
-        dprintf("task delete failed .\n");
+        dprintf("task delete failed .\r\n");
         return LOS_NOK;
     }
 

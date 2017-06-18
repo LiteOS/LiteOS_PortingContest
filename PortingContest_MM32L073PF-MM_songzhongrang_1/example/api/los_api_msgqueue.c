@@ -73,7 +73,7 @@ void *send_Entry(UINT32 uwParam1,
         uwRet = LOS_QueueWrite(g_uwQueue, abuf, uwlen, 0);
         if(uwRet != LOS_OK)
         {
-            dprintf("send message failure,error:%x\n",uwRet);
+            dprintf("send message failure,error:%x\r\n",uwRet);
         }
 
         LOS_TaskDelay(5);
@@ -98,12 +98,12 @@ void *recv_Entry(UINT32 uwParam1,
         uwRet = LOS_QueueRead(g_uwQueue, &uwReadbuf, 24, 0);
         if(uwRet != LOS_OK)
         {
-            dprintf("recv message failure,error:%x\n",uwRet);
+            dprintf("recv message failure,error:%x\r\n",uwRet);
             break;
         }
         else
         {
-            dprintf("recv message:%s\n", (char *)uwReadbuf);
+            dprintf("recv message:%s\r\n", (char *)uwReadbuf);
             uwMsgCount++;
         }
         
@@ -115,7 +115,7 @@ void *recv_Entry(UINT32 uwParam1,
         LOS_TaskDelay(1);
     }
         
-    dprintf("delete the queue success!\n");
+    dprintf("delete the queue success!\r\n");
         
     if(API_MSG_NUM == uwMsgCount)
     {
@@ -145,7 +145,7 @@ UINT32 Example_MsgQueue(void)
     uwRet = LOS_TaskCreate(&uwTask1, &stInitParam1);
     if(uwRet != LOS_OK)
     {
-        dprintf("create task1 failed!,error:%x\n",uwRet);
+        dprintf("create task1 failed!,error:%x\r\n",uwRet);
         return uwRet;
     }
 
@@ -154,7 +154,7 @@ UINT32 Example_MsgQueue(void)
     uwRet = LOS_TaskCreate(&uwTask2, &stInitParam1);
     if(uwRet != LOS_OK)
     {
-        dprintf("create task2 failed!,error:%x\n",uwRet);
+        dprintf("create task2 failed!,error:%x\r\n",uwRet);
         return uwRet;
     }
 
@@ -162,10 +162,10 @@ UINT32 Example_MsgQueue(void)
     uwRet = LOS_QueueCreate("queue", 5, &g_uwQueue, 0, 24);
     if(uwRet != LOS_OK)
     {
-        dprintf("create queue failure!,error:%x\n",uwRet);
+        dprintf("create queue failure!,error:%x\r\n",uwRet);
     }
 
-    dprintf("create the queue success!\n");
+    dprintf("create the queue success!\r\n");
     LOS_TaskUnlock();//解锁任务，只有队列创建后才开始任务调度
     
     return LOS_OK;

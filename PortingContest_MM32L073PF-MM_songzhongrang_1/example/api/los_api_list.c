@@ -55,19 +55,19 @@ extern "C" {
 UINT32 Example_list(VOID)
 {
     /*初始化，判断是否为空*/
-    dprintf("initial......\n");
+    dprintf("initial......\r\n");
     LOS_DL_LIST* head;
     head = (LOS_DL_LIST*)LOS_MemAlloc(m_aucSysMem0, sizeof(LOS_DL_LIST));
 
     LOS_ListInit(head);
     if (!LOS_ListEmpty(head))
     {
-        dprintf("initial failed\n");
+        dprintf("initial failed\r\n");
         return LOS_NOK;
     }
     
     /*增加一个节点，在尾端插入一个节点*/
-    dprintf("node add and tail add......\n");
+    dprintf("node add and tail add......\r\n");
 
         LOS_DL_LIST* node1 = (LOS_DL_LIST*)LOS_MemAlloc(m_aucSysMem0, sizeof(LOS_DL_LIST));
     LOS_DL_LIST* node2 = (LOS_DL_LIST*)LOS_MemAlloc(m_aucSysMem0, sizeof(LOS_DL_LIST));
@@ -77,27 +77,27 @@ UINT32 Example_list(VOID)
     LOS_ListAdd(node1,node2);
     if((node1->pstPrev == head) || (node2->pstPrev == node1))
     {
-        dprintf("add node success\n");
+        dprintf("add node success\r\n");
     }
     
     LOS_ListTailInsert(head,tail);
     if(tail->pstPrev == node2)
     {
-        dprintf("add tail success\n");
+        dprintf("add tail success\r\n");
     }
 
     /*删除双向链表节点*/
-    dprintf("delete node......\n");
+    dprintf("delete node......\r\n");
     LOS_ListDelete(node1);
     free(node1);
     if(head->pstNext == node2)
     {
-        dprintf("delete node success\n");
+        dprintf("delete node success\r\n");
         LOS_InspectStatusSetByID(LOS_INSPECT_LIST,LOS_INSPECT_STU_SUCCESS);
     }
     else
     {
-        dprintf("delete node error\n");
+        dprintf("delete node error\r\n");
         LOS_InspectStatusSetByID(LOS_INSPECT_LIST,LOS_INSPECT_STU_ERROR);
     }
     
