@@ -440,7 +440,7 @@ notice：注意一定要添加CONFIG_GPIO_AS_PINRESET宏，此宏是配置板卡
 		}
 - 修改los_bsp_key.h代码如下
 
-		#define LOS_KEY_PRESS   0
+		#define LOS_KEY_PRESS   1
 
 		#define USER_KEY        0
 
@@ -796,7 +796,7 @@ notice：注意一定要添加CONFIG_GPIO_AS_PINRESET宏，此宏是配置板卡
 
 ### 编译运行
 
-经过以上步骤，完成了代码的初步移植，接下来可以编译代码,连接串口线（事先安装串口驱动）并在串口调试工具中打开相应串口，设置波特率为115200，调试运行时可看到串口会打印输出内核巡检结果，按开发板上的Button1键，LED1灯点，串口输出“Inspect Key success”，松开按键LED1熄灭。
+经过以上步骤，完成了代码的初步移植，接下来可以编译代码,连接串口线（事先安装串口驱动）并在串口调试工具中打开相应串口，设置波特率为115200，调试运行时可看到串口会打印输出内核巡检结果，按开发板上的Button1键，LED1灯点亮，串口输出“Inspect Key success”，松开按键LED1熄灭。
 
 LOG显示
 
