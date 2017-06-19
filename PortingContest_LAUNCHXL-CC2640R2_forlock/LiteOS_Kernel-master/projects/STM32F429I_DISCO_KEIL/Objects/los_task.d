@@ -1,0 +1,29 @@
+los_task.o: ..\..\kernel\base\core\los_task.c
+los_task.o: ..\..\kernel\base\core\los_task.inc
+los_task.o: ..\..\kernel\base\include\los_task.ph
+los_task.o: ..\..\kernel\include\los_task.h
+los_task.o: ..\..\kernel\include\los_base.h
+los_task.o: ..\..\kernel\link\keil\los_builddef.h
+los_task.o: ..\..\kernel\include\los_typedef.h
+los_task.o: ..\..\kernel\config\los_config.h
+los_task.o: ..\..\kernel\include\los_printf.h
+los_task.o: D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\Bin\..\include\stdio.h
+los_task.o: ..\..\kernel\include\los_list.h
+los_task.o: ..\..\kernel\include\los_base.h
+los_task.o: ..\..\kernel\include\los_errno.h
+los_task.o: ..\..\kernel\include\los_sys.h
+los_task.o: ..\..\kernel\cpu\arm\cortex-m4\los_hwi.h
+los_task.o: ..\..\kernel\include\los_sys.h
+los_task.o: ..\..\kernel\include\los_tick.h
+los_task.o: ..\..\kernel\include\los_event.h
+los_task.o: ..\..\kernel\base\include\los_base.ph
+los_task.o: ..\..\kernel\base\include\los_memory.ph
+los_task.o: ..\..\kernel\include\los_memory.h
+los_task.o: ..\..\kernel\base\include\los_priqueue.ph
+los_task.o: ..\..\kernel\include\los_priqueue.h
+los_task.o: ..\..\kernel\base\include\los_sem.ph
+los_task.o: ..\..\kernel\include\los_sem.h
+los_task.o: ..\..\kernel\base\include\los_mux.ph
+los_task.o: ..\..\kernel\include\los_mux.h
+los_task.o: ..\..\kernel\cpu\arm\cortex-m4\los_hw.h
+los_task.o: D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\Bin\..\include\string.h
