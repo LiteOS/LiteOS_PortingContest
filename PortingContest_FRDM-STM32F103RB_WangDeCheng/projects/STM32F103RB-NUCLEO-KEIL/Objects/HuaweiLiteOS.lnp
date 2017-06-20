@@ -26,7 +26,7 @@
 ".\objects\los_bsp_key.o"
 ".\objects\los_bsp_led.o"
 ".\objects\los_bsp_uart.o"
-".\objects\startup_stm32f10x_md.o"
+".\objects\startup_stm32f10x_md_1.o"
 ".\objects\main.o"
 ".\objects\misc.o"
 ".\objects\stm32f10x_adc.o"
@@ -66,7 +66,7 @@
 ".\objects\los_cmsis_main.o"
 ".\objects\los_demo_entry.o"
 ".\objects\los_inspect_entry.o"
---library_type=microlib --strict --scatter "..\..\platform\LOS_EXPAND_XXX\local\Huawei_LiteOS.sct"
+--library_type=microlib --strict --scatter "..\..\platform\STM32F103RB-NUCLEO\local\Huawei_LiteOS.sct"
 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
 --list ".\Listings\HuaweiLiteOS.map" -o .\Objects\HuaweiLiteOS.axf

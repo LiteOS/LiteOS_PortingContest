@@ -335,7 +335,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_MD,USE_STDPERIPH_DRIVER,RAM_SIZE_LEVEL_1</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\kernel\base\include;..\..\kernel\include;..\..\kernel\config;..\..\kernel\cmsis;..\..\kernel\cpu\arm\cortex-m3;..\..\kernel\link\keil;..\..\platform\LOS_EXPAND_XXX;..\..\platform\LOS_EXPAND_XXX\Libraries\FWlib\inc;..\..\platform\LOS_EXPAND_XXX\Libraries\CMSIS;..\..\platform\LOS_EXPAND_XXX\local;..\..\example\include;..\..\kernel\cpu\arm\cortex-m3</IncludePath>
+              <IncludePath>..\..\kernel\base\include;..\..\kernel\include;..\..\kernel\config;..\..\kernel\cmsis;..\..\kernel\cpu\arm\cortex-m3;..\..\kernel\link\keil;..\..\platform\STM32F103RB-NUCLEO;..\..\platform\STM32F103RB-NUCLEO\Libraries\FWlib\inc;..\..\platform\STM32F103RB-NUCLEO\Libraries\CMSIS;..\..\platform\STM32F103RB-NUCLEO\local;..\..\example\include;..\..\kernel\cpu\arm\cortex-m3</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -366,7 +366,7 @@
             <TextAddressRange>0x08000000</TextAddressRange>
             <DataAddressRange>0x20000000</DataAddressRange>
             <pXoBase></pXoBase>
-            <ScatterFile>..\..\platform\LOS_EXPAND_XXX\local\Huawei_LiteOS.sct</ScatterFile>
+            <ScatterFile>..\..\platform\STM32F103RB-NUCLEO\local\Huawei_LiteOS.sct</ScatterFile>
             <IncludeLibs></IncludeLibs>
             <IncludeLibsPath></IncludeLibsPath>
             <Misc></Misc>
@@ -502,52 +502,37 @@
             <File>
               <FileName>core_cm3.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\platform\LOS_EXPAND_XXX\Libraries\CMSIS\core_cm3.c</FilePath>
+              <FilePath>..\..\platform\STM32F103RB-NUCLEO\Libraries\CMSIS\core_cm3.c</FilePath>
             </File>
             <File>
               <FileName>system_stm32f10x.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\platform\LOS_EXPAND_XXX\Libraries\CMSIS\system_stm32f10x.c</FilePath>
-            </File>
-            <File>
-              <FileName>core_cm3.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\..\platform\LOS_EXPAND_XXX\Libraries\CMSIS\core_cm3.h</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\..\platform\LOS_EXPAND_XXX\Libraries\CMSIS\stm32f10x.h</FilePath>
-            </File>
-            <File>
-              <FileName>system_stm32f10x.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\..\platform\LOS_EXPAND_XXX\Libraries\CMSIS\system_stm32f10x.h</FilePath>
+              <FilePath>..\..\platform\STM32F103RB-NUCLEO\Libraries\CMSIS\system_stm32f10x.c</FilePath>
             </File>
           </Files>
         </Group>
         <Group>
-          <GroupName>platfom/expand_xxx</GroupName>
+          <GroupName>platfom/STM32F103RB</GroupName>
           <Files>
             <File>
               <FileName>los_bsp_adapter.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\platform\LOS_EXPAND_XXX\los_bsp_adapter.c</FilePath>
+              <FilePath>..\..\platform\STM32F103RB-NUCLEO\los_bsp_adapter.c</FilePath>
             </File>
             <File>
               <FileName>los_bsp_key.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\platform\LOS_EXPAND_XXX\los_bsp_key.c</FilePath>
+              <FilePath>..\..\platform\STM32F103RB-NUCLEO\los_bsp_key.c</FilePath>
             </File>
             <File>
               <FileName>los_bsp_led.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\platform\LOS_EXPAND_XXX\los_bsp_led.c</FilePath>
+              <FilePath>..\..\platform\STM32F103RB-NUCLEO\los_bsp_led.c</FilePath>
             </File>
             <File>
               <FileName>los_bsp_uart.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\platform\LOS_EXPAND_XXX\los_bsp_uart.c</FilePath>
+              <FilePath>..\..\platform\STM32F103RB-NUCLEO\los_bsp_uart.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -557,7 +542,7 @@
             <File>
               <FileName>startup_stm32f10x_md.s</FileName>
               <FileType>2</FileType>
-              <FilePath>..\..\platform\LOS_EXPAND_XXX\Libraries\CMSIS\startup\startup_stm32f10x_md.s</FilePath>
+              <FilePath>..\..\platform\STM32F103RB-NUCLEO\Libraries\CMSIS\startup\startup_stm32f10x_md.s</FilePath>
             </File>
           </Files>
         </Group>
@@ -569,11 +554,6 @@
               <FileType>1</FileType>
               <FilePath>..\..\user\main.c</FilePath>
             </File>
-            <File>
-              <FileName>stm32f10x_conf.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\..\platform\LOS_EXPAND_XXX\local\stm32f10x_conf.h</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>
@@ -582,117 +562,117 @@
             <File>
               <FileName>misc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\platform\LOS_EXPAND_XXX\Libraries\FWlib\src\misc.c</FilePath>
+              <FilePath>..\..\platform\STM32F103RB-NUCLEO\Libraries\FWlib\src\misc.c</FilePath>
             </File>
             <File>
               <FileName>stm32f10x_adc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\platform\LOS_EXPAND_XXX\Libraries\FWlib\src\stm32f10x_adc.c</FilePath>
+              <FilePath>..\..\platform\STM32F103RB-NUCLEO\Libraries\FWlib\src\stm32f10x_adc.c</FilePath>
             </File>
             <File>
               <FileName>stm32f10x_bkp.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\platform\LOS_EXPAND_XXX\Libraries\FWlib\src\stm32f10x_bkp.c</FilePath>
+              <FilePath>..\..\platform\STM32F103RB-NUCLEO\Libraries\FWlib\src\stm32f10x_bkp.c</FilePath>
             </File>
             <File>
               <FileName>stm32f10x_can.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\platform\LOS_EXPAND_XXX\Libraries\FWlib\src\stm32f10x_can.c</FilePath>
+              <FilePath>..\..\platform\STM32F103RB-NUCLEO\Libraries\FWlib\src\stm32f10x_can.c</FilePath>
             </File>
             <File>
               <FileName>stm32f10x_cec.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\platform\LOS_EXPAND_XXX\Libraries\FWlib\src\stm32f10x_cec.c</FilePath>
+              <FilePath>..\..\platform\STM32F103RB-NUCLEO\Libraries\FWlib\src\stm32f10x_cec.c</FilePath>
             </File>
             <File>
               <FileName>stm32f10x_crc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\platform\LOS_EXPAND_XXX\Libraries\FWlib\src\stm32f10x_crc.c</FilePath>
+              <FilePath>..\..\platform\STM32F103RB-NUCLEO\Libraries\FWlib\src\stm32f10x_crc.c</FilePath>
             </File>
             <File>
               <FileName>stm32f10x_dac.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\platform\LOS_EXPAND_XXX\Libraries\FWlib\src\stm32f10x_dac.c</FilePath>
+              <FilePath>..\..\platform\STM32F103RB-NUCLEO\Libraries\FWlib\src\stm32f10x_dac.c</FilePath>
             </File>
             <File>
               <FileName>stm32f10x_dbgmcu.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\platform\LOS_EXPAND_XXX\Libraries\FWlib\src\stm32f10x_dbgmcu.c</FilePath>
+              <FilePath>..\..\platform\STM32F103RB-NUCLEO\Libraries\FWlib\src\stm32f10x_dbgmcu.c</FilePath>
             </File>
             <File>
               <FileName>stm32f10x_dma.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\platform\LOS_EXPAND_XXX\Libraries\FWlib\src\stm32f10x_dma.c</FilePath>
+              <FilePath>..\..\platform\STM32F103RB-NUCLEO\Libraries\FWlib\src\stm32f10x_dma.c</FilePath>
             </File>
             <File>
               <FileName>stm32f10x_exti.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\platform\LOS_EXPAND_XXX\Libraries\FWlib\src\stm32f10x_exti.c</FilePath>
+              <FilePath>..\..\platform\STM32F103RB-NUCLEO\Libraries\FWlib\src\stm32f10x_exti.c</FilePath>
             </File>
             <File>
               <FileName>stm32f10x_flash.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\platform\LOS_EXPAND_XXX\Libraries\FWlib\src\stm32f10x_flash.c</FilePath>
+              <FilePath>..\..\platform\STM32F103RB-NUCLEO\Libraries\FWlib\src\stm32f10x_flash.c</FilePath>
             </File>
             <File>
               <FileName>stm32f10x_fsmc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\platform\LOS_EXPAND_XXX\Libraries\FWlib\src\stm32f10x_fsmc.c</FilePath>
+              <FilePath>..\..\platform\STM32F103RB-NUCLEO\Libraries\FWlib\src\stm32f10x_fsmc.c</FilePath>
             </File>
             <File>
               <FileName>stm32f10x_gpio.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\platform\LOS_EXPAND_XXX\Libraries\FWlib\src\stm32f10x_gpio.c</FilePath>
+              <FilePath>..\..\platform\STM32F103RB-NUCLEO\Libraries\FWlib\src\stm32f10x_gpio.c</FilePath>
             </File>
             <File>
               <FileName>stm32f10x_i2c.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\platform\LOS_EXPAND_XXX\Libraries\FWlib\src\stm32f10x_i2c.c</FilePath>
+              <FilePath>..\..\platform\STM32F103RB-NUCLEO\Libraries\FWlib\src\stm32f10x_i2c.c</FilePath>
             </File>
             <File>
               <FileName>stm32f10x_iwdg.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\platform\LOS_EXPAND_XXX\Libraries\FWlib\src\stm32f10x_iwdg.c</FilePath>
+              <FilePath>..\..\platform\STM32F103RB-NUCLEO\Libraries\FWlib\src\stm32f10x_iwdg.c</FilePath>
             </File>
             <File>
               <FileName>stm32f10x_pwr.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\platform\LOS_EXPAND_XXX\Libraries\FWlib\src\stm32f10x_pwr.c</FilePath>
+              <FilePath>..\..\platform\STM32F103RB-NUCLEO\Libraries\FWlib\src\stm32f10x_pwr.c</FilePath>
             </File>
             <File>
               <FileName>stm32f10x_rcc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\platform\LOS_EXPAND_XXX\Libraries\FWlib\src\stm32f10x_rcc.c</FilePath>
+              <FilePath>..\..\platform\STM32F103RB-NUCLEO\Libraries\FWlib\src\stm32f10x_rcc.c</FilePath>
             </File>
             <File>
               <FileName>stm32f10x_rtc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\platform\LOS_EXPAND_XXX\Libraries\FWlib\src\stm32f10x_rtc.c</FilePath>
+              <FilePath>..\..\platform\STM32F103RB-NUCLEO\Libraries\FWlib\src\stm32f10x_rtc.c</FilePath>
             </File>
             <File>
               <FileName>stm32f10x_sdio.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\platform\LOS_EXPAND_XXX\Libraries\FWlib\src\stm32f10x_sdio.c</FilePath>
+              <FilePath>..\..\platform\STM32F103RB-NUCLEO\Libraries\FWlib\src\stm32f10x_sdio.c</FilePath>
             </File>
             <File>
               <FileName>stm32f10x_spi.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\platform\LOS_EXPAND_XXX\Libraries\FWlib\src\stm32f10x_spi.c</FilePath>
+              <FilePath>..\..\platform\STM32F103RB-NUCLEO\Libraries\FWlib\src\stm32f10x_spi.c</FilePath>
             </File>
             <File>
               <FileName>stm32f10x_tim.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\platform\LOS_EXPAND_XXX\Libraries\FWlib\src\stm32f10x_tim.c</FilePath>
+              <FilePath>..\..\platform\STM32F103RB-NUCLEO\Libraries\FWlib\src\stm32f10x_tim.c</FilePath>
             </File>
             <File>
               <FileName>stm32f10x_usart.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\platform\LOS_EXPAND_XXX\Libraries\FWlib\src\stm32f10x_usart.c</FilePath>
+              <FilePath>..\..\platform\STM32F103RB-NUCLEO\Libraries\FWlib\src\stm32f10x_usart.c</FilePath>
             </File>
             <File>
               <FileName>stm32f10x_wwdg.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\platform\LOS_EXPAND_XXX\Libraries\FWlib\src\stm32f10x_wwdg.c</FilePath>
+              <FilePath>..\..\platform\STM32F103RB-NUCLEO\Libraries\FWlib\src\stm32f10x_wwdg.c</FilePath>
             </File>
           </Files>
         </Group>
