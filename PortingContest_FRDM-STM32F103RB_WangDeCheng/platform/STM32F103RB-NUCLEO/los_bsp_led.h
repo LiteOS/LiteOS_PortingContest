@@ -16,12 +16,12 @@
 #define LED1_GPIO_PIN		GPIO_Pin_5			        /* 连接到SCL时钟线的GPIO */
 
 // G-绿色
-#define LED2_GPIO_PORT    	GPIOB			            /* GPIO端口 */
+#define LED2_GPIO_PORT    	GPIOA			            /* GPIO端口 */
 #define LED2_GPIO_CLK 	    RCC_APB2Periph_GPIOB		/* GPIO端口时钟 */
-#define LED2_GPIO_PIN		GPIO_Pin_0			        /* 连接到SCL时钟线的GPIO */
+#define LED2_GPIO_PIN		GPIO_Pin_5			        /* 连接到SCL时钟线的GPIO */
 
 // B-蓝色
-#define LED3_GPIO_PORT    	GPIOB			            /* GPIO端口 */
+#define LED3_GPIO_PORT    	GPIOA		            /* GPIO端口 */
 #define LED3_GPIO_CLK 	    RCC_APB2Periph_GPIOB		/* GPIO端口时钟 */
 #define LED3_GPIO_PIN		GPIO_Pin_1			        /* 连接到SCL时钟线的GPIO */
 

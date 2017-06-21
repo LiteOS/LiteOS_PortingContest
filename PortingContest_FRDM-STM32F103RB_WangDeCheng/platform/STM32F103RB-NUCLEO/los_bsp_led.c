@@ -91,13 +91,13 @@ void LOS_EvbLedControl(int index, int cmd)
         {
             //add you code here.
             /*led2 on */
-            GPIO_SetBits(LED2_GPIO_PORT, LED2_GPIO_PIN);
+            GPIO_SetBits(LED1_GPIO_PORT, LED1_GPIO_PIN);
         }
         else
         {
             //add you code here.
             /*led2 off */
-            GPIO_ResetBits(LED2_GPIO_PORT, LED2_GPIO_PIN);
+            GPIO_ResetBits(LED1_GPIO_PORT, LED1_GPIO_PIN);
         }
         break;
     }

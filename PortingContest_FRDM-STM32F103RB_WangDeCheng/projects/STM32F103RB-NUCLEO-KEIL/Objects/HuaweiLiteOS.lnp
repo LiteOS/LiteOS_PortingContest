@@ -29,14 +29,7 @@
 ".\objects\startup_stm32f10x_md_1.o"
 ".\objects\main.o"
 ".\objects\misc.o"
-".\objects\stm32f10x_adc.o"
-".\objects\stm32f10x_bkp.o"
-".\objects\stm32f10x_can.o"
-".\objects\stm32f10x_cec.o"
-".\objects\stm32f10x_crc.o"
-".\objects\stm32f10x_dac.o"
 ".\objects\stm32f10x_dbgmcu.o"
-".\objects\stm32f10x_dma.o"
 ".\objects\stm32f10x_exti.o"
 ".\objects\stm32f10x_flash.o"
 ".\objects\stm32f10x_fsmc.o"
@@ -47,7 +40,6 @@
 ".\objects\stm32f10x_rcc.o"
 ".\objects\stm32f10x_rtc.o"
 ".\objects\stm32f10x_sdio.o"
-".\objects\stm32f10x_spi.o"
 ".\objects\stm32f10x_tim.o"
 ".\objects\stm32f10x_usart.o"
 ".\objects\stm32f10x_wwdg.o"
@@ -66,7 +58,7 @@
 ".\objects\los_cmsis_main.o"
 ".\objects\los_demo_entry.o"
 ".\objects\los_inspect_entry.o"
---library_type=microlib --strict --scatter "..\..\platform\STM32F103RB-NUCLEO\local\Huawei_LiteOS.sct"
+--library_type=microlib --strict --scatter ".\Objects\HuaweiLiteOS.sct"
 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
 --list ".\Listings\HuaweiLiteOS.map" -o .\Objects\HuaweiLiteOS.axf

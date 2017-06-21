@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\HuaweiLiteOS.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\HuaweiLiteOS.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060422: Last Updated: Tue Jun 20 22:28:20 2017
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060422: Last Updated: Wed Jun 21 10:04:17 2017
 <BR><P>
 <H3>Maximum Stack Usage =        288 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -19,7 +19,7 @@ Functions with no stack information
  <LI><a href="#[11a]">LOS_IntUnLock</a>
  <LI><a href="#[a4]">LOS_IntRestore</a>
  <LI><a href="#[ca]">osTaskSchedule</a>
- <LI><a href="#[2]">PendSV_Handler</a>
+ <LI><a href="#[c]">PendSV_Handler</a>
 </UL>
 </UL>
 <P>
@@ -57,23 +57,23 @@ Function Pointers
  <LI><a href="#[1e]">EXTI3_IRQHandler</a> from startup_stm32f10x_md_1.o(.text) referenced from startup_stm32f10x_md_1.o(RESET)
  <LI><a href="#[1f]">EXTI4_IRQHandler</a> from startup_stm32f10x_md_1.o(.text) referenced from startup_stm32f10x_md_1.o(RESET)
  <LI><a href="#[2c]">EXTI9_5_IRQHandler</a> from startup_stm32f10x_md_1.o(.text) referenced from startup_stm32f10x_md_1.o(RESET)
- <LI><a href="#[d]">Example_Dyn_Mem</a> from los_api_dynamic_mem.o(i.Example_Dyn_Mem) referenced 2 times from los_inspect_entry.o(.data)
+ <LI><a href="#[9]">Example_Dyn_Mem</a> from los_api_dynamic_mem.o(i.Example_Dyn_Mem) referenced 2 times from los_inspect_entry.o(.data)
  <LI><a href="#[49]">Example_Event</a> from los_api_event.o(i.Example_Event) referenced from los_api_event.o(i.Example_SndRcvEvent)
- <LI><a href="#[9]">Example_GetTick</a> from los_api_systick.o(i.Example_GetTick) referenced 2 times from los_inspect_entry.o(.data)
- <LI><a href="#[6]">Example_MsgQueue</a> from los_api_msgqueue.o(i.Example_MsgQueue) referenced 2 times from los_inspect_entry.o(.data)
- <LI><a href="#[8]">Example_MutexLock</a> from los_api_mutex.o(i.Example_MutexLock) referenced 2 times from los_inspect_entry.o(.data)
+ <LI><a href="#[5]">Example_GetTick</a> from los_api_systick.o(i.Example_GetTick) referenced 2 times from los_inspect_entry.o(.data)
+ <LI><a href="#[2]">Example_MsgQueue</a> from los_api_msgqueue.o(i.Example_MsgQueue) referenced 2 times from los_inspect_entry.o(.data)
+ <LI><a href="#[4]">Example_MutexLock</a> from los_api_mutex.o(i.Example_MutexLock) referenced 2 times from los_inspect_entry.o(.data)
  <LI><a href="#[45]">Example_MutexTask1</a> from los_api_mutex.o(i.Example_MutexTask1) referenced from los_api_mutex.o(i.Example_MutexLock)
  <LI><a href="#[46]">Example_MutexTask2</a> from los_api_mutex.o(i.Example_MutexTask2) referenced from los_api_mutex.o(i.Example_MutexLock)
  <LI><a href="#[47]">Example_SemTask1</a> from los_api_sem.o(i.Example_SemTask1) referenced from los_api_sem.o(i.Example_Semphore)
  <LI><a href="#[48]">Example_SemTask2</a> from los_api_sem.o(i.Example_SemTask2) referenced from los_api_sem.o(i.Example_Semphore)
- <LI><a href="#[7]">Example_Semphore</a> from los_api_sem.o(i.Example_Semphore) referenced 2 times from los_inspect_entry.o(.data)
- <LI><a href="#[5]">Example_SndRcvEvent</a> from los_api_event.o(i.Example_SndRcvEvent) referenced 2 times from los_inspect_entry.o(.data)
- <LI><a href="#[c]">Example_StaticMem</a> from los_api_static_mem.o(i.Example_StaticMem) referenced 2 times from los_inspect_entry.o(.data)
+ <LI><a href="#[3]">Example_Semphore</a> from los_api_sem.o(i.Example_Semphore) referenced 2 times from los_inspect_entry.o(.data)
+ <LI><a href="#[1]">Example_SndRcvEvent</a> from los_api_event.o(i.Example_SndRcvEvent) referenced 2 times from los_inspect_entry.o(.data)
+ <LI><a href="#[8]">Example_StaticMem</a> from los_api_static_mem.o(i.Example_StaticMem) referenced 2 times from los_inspect_entry.o(.data)
  <LI><a href="#[4a]">Example_TaskHi</a> from los_api_task.o(i.Example_TaskHi) referenced from los_api_task.o(i.Example_TskCaseEntry)
  <LI><a href="#[4b]">Example_TaskLo</a> from los_api_task.o(i.Example_TaskLo) referenced from los_api_task.o(i.Example_TskCaseEntry)
- <LI><a href="#[4]">Example_TskCaseEntry</a> from los_api_task.o(i.Example_TskCaseEntry) referenced 2 times from los_inspect_entry.o(.data)
- <LI><a href="#[b]">Example_list</a> from los_api_list.o(i.Example_list) referenced 2 times from los_inspect_entry.o(.data)
- <LI><a href="#[a]">Example_swTimer</a> from los_api_timer.o(i.Example_swTimer) referenced 2 times from los_inspect_entry.o(.data)
+ <LI><a href="#[0]">Example_TskCaseEntry</a> from los_api_task.o(i.Example_TskCaseEntry) referenced 2 times from los_inspect_entry.o(.data)
+ <LI><a href="#[7]">Example_list</a> from los_api_list.o(i.Example_list) referenced 2 times from los_inspect_entry.o(.data)
+ <LI><a href="#[6]">Example_swTimer</a> from los_api_timer.o(i.Example_swTimer) referenced 2 times from los_inspect_entry.o(.data)
  <LI><a href="#[19]">FLASH_IRQHandler</a> from startup_stm32f10x_md_1.o(.text) referenced from startup_stm32f10x_md_1.o(RESET)
  <LI><a href="#[f]">HardFault_Handler</a> from startup_stm32f10x_md_1.o(.text) referenced from startup_stm32f10x_md_1.o(RESET)
  <LI><a href="#[35]">I2C1_ER_IRQHandler</a> from startup_stm32f10x_md_1.o(.text) referenced from startup_stm32f10x_md_1.o(RESET)
@@ -84,18 +84,18 @@ Function Pointers
  <LI><a href="#[10]">MemManage_Handler</a> from startup_stm32f10x_md_1.o(.text) referenced from startup_stm32f10x_md_1.o(RESET)
  <LI><a href="#[e]">NMI_Handler</a> from startup_stm32f10x_md_1.o(.text) referenced from startup_stm32f10x_md_1.o(RESET)
  <LI><a href="#[16]">PVD_IRQHandler</a> from startup_stm32f10x_md_1.o(.text) referenced from startup_stm32f10x_md_1.o(RESET)
- <LI><a href="#[2]">PendSV_Handler</a> from los_dispatch_keil.o(KERNEL) referenced 2 times from los_hwi.o(.vector.bss)
- <LI><a href="#[2]">PendSV_Handler</a> from los_dispatch_keil.o(KERNEL) referenced from startup_stm32f10x_md_1.o(RESET)
+ <LI><a href="#[c]">PendSV_Handler</a> from los_dispatch_keil.o(KERNEL) referenced 2 times from los_hwi.o(.vector.bss)
+ <LI><a href="#[c]">PendSV_Handler</a> from los_dispatch_keil.o(KERNEL) referenced from startup_stm32f10x_md_1.o(RESET)
  <LI><a href="#[1a]">RCC_IRQHandler</a> from startup_stm32f10x_md_1.o(.text) referenced from startup_stm32f10x_md_1.o(RESET)
  <LI><a href="#[3e]">RTCAlarm_IRQHandler</a> from startup_stm32f10x_md_1.o(.text) referenced from startup_stm32f10x_md_1.o(RESET)
  <LI><a href="#[18]">RTC_IRQHandler</a> from startup_stm32f10x_md_1.o(.text) referenced from startup_stm32f10x_md_1.o(RESET)
- <LI><a href="#[0]">Reset_Handler</a> from startup_stm32f10x_md_1.o(.text) referenced 2 times from los_hwi.o(.vector.bss)
- <LI><a href="#[0]">Reset_Handler</a> from startup_stm32f10x_md_1.o(.text) referenced from startup_stm32f10x_md_1.o(RESET)
+ <LI><a href="#[a]">Reset_Handler</a> from startup_stm32f10x_md_1.o(.text) referenced 2 times from los_hwi.o(.vector.bss)
+ <LI><a href="#[a]">Reset_Handler</a> from startup_stm32f10x_md_1.o(.text) referenced from startup_stm32f10x_md_1.o(RESET)
  <LI><a href="#[38]">SPI1_IRQHandler</a> from startup_stm32f10x_md_1.o(.text) referenced from startup_stm32f10x_md_1.o(RESET)
  <LI><a href="#[39]">SPI2_IRQHandler</a> from startup_stm32f10x_md_1.o(.text) referenced from startup_stm32f10x_md_1.o(RESET)
  <LI><a href="#[13]">SVC_Handler</a> from startup_stm32f10x_md_1.o(.text) referenced from startup_stm32f10x_md_1.o(RESET)
- <LI><a href="#[3]">SysTick_Handler</a> from los_bsp_adapter.o(i.SysTick_Handler) referenced 2 times from los_hwi.o(.vector.bss)
- <LI><a href="#[3]">SysTick_Handler</a> from los_bsp_adapter.o(i.SysTick_Handler) referenced from startup_stm32f10x_md_1.o(RESET)
+ <LI><a href="#[d]">SysTick_Handler</a> from los_bsp_adapter.o(i.SysTick_Handler) referenced 2 times from los_hwi.o(.vector.bss)
+ <LI><a href="#[d]">SysTick_Handler</a> from los_bsp_adapter.o(i.SysTick_Handler) referenced from startup_stm32f10x_md_1.o(RESET)
  <LI><a href="#[41]">SystemInit</a> from system_stm32f10x.o(i.SystemInit) referenced from startup_stm32f10x_md_1.o(.text)
  <LI><a href="#[17]">TAMPER_IRQHandler</a> from startup_stm32f10x_md_1.o(.text) referenced from startup_stm32f10x_md_1.o(RESET)
  <LI><a href="#[2d]">TIM1_BRK_IRQHandler</a> from startup_stm32f10x_md_1.o(.text) referenced from startup_stm32f10x_md_1.o(RESET)
@@ -118,8 +118,8 @@ Function Pointers
  <LI><a href="#[42]">__main</a> from entry.o(.ARM.Collect$$$$00000000) referenced from startup_stm32f10x_md_1.o(.text)
  <LI><a href="#[4f]">fputc</a> from los_bsp_uart.o(i.fputc) referenced from printfa.o(i.__0printf)
  <LI><a href="#[40]">main</a> from main.o(i.main) referenced from entry9a.o(.ARM.Collect$$$$0000000B)
- <LI><a href="#[1]">osHwiDefaultHandler</a> from los_hwi.o(i.osHwiDefaultHandler) referenced 14 times from los_hwi.o(.vector.bss)
- <LI><a href="#[1]">osHwiDefaultHandler</a> from los_hwi.o(i.osHwiDefaultHandler) referenced from los_hwi.o(i.osHwiInit)
+ <LI><a href="#[b]">osHwiDefaultHandler</a> from los_hwi.o(i.osHwiDefaultHandler) referenced 14 times from los_hwi.o(.vector.bss)
+ <LI><a href="#[b]">osHwiDefaultHandler</a> from los_hwi.o(i.osHwiDefaultHandler) referenced from los_hwi.o(i.osHwiInit)
  <LI><a href="#[50]">osIdleTask</a> from los_task.o(i.osIdleTask) referenced from los_task.o(i.osIdleTaskCreate)
  <LI><a href="#[51]">osSwTmrTask</a> from los_swtmr.o(i.osSwTmrTask) referenced from los_swtmr.o(i.osSwTmrTaskCreate)
  <LI><a href="#[53]">osTaskEntry</a> from los_task.o(i.osTaskEntry) referenced from los_hw.o(i.osTskStackInit)
@@ -134,7 +134,7 @@ Global Symbols
 <P><STRONG><a name="[42]"></a>__main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry.o(.ARM.Collect$$$$00000000))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_md_1.o(.text)
 </UL>
-<P><STRONG><a name="[109]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry3.o(.ARM.Collect$$$$00000002))
+<P><STRONG><a name="[109]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
 
 <P><STRONG><a name="[54]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
 <BR><BR>[Calls]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
@@ -158,7 +158,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Start
 </UL>
 
-<P><STRONG><a name="[0]"></a>Reset_Handler</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, startup_stm32f10x_md_1.o(.text))
+<P><STRONG><a name="[a]"></a>Reset_Handler</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, startup_stm32f10x_md_1.o(.text))
 <BR>[Address Reference Count : 2]<UL><LI> los_hwi.o(.vector.bss)
 <LI> startup_stm32f10x_md_1.o(RESET)
 </UL>
@@ -375,9 +375,9 @@ Global Symbols
 <LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueInit
 <LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueCreate
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Inspect_Entry
-<LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_Semphore
-<LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_MutexLock
-<LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_SndRcvEvent
+<LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_Semphore
+<LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_MutexLock
+<LI><a href="#[1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_SndRcvEvent
 </UL>
 
 <P><STRONG><a name="[111]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
@@ -586,11 +586,11 @@ Global Symbols
 <LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Schedule
 </UL>
 
-<P><STRONG><a name="[2]"></a>PendSV_Handler</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, los_dispatch_keil.o(KERNEL))
+<P><STRONG><a name="[c]"></a>PendSV_Handler</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, los_dispatch_keil.o(KERNEL))
 <BR>[Address Reference Count : 2]<UL><LI> los_hwi.o(.vector.bss)
 <LI> startup_stm32f10x_md_1.o(RESET)
 </UL>
-<P><STRONG><a name="[d]"></a>Example_Dyn_Mem</STRONG> (Thumb, 134 bytes, Stack size 16 bytes, los_api_dynamic_mem.o(i.Example_Dyn_Mem))
+<P><STRONG><a name="[9]"></a>Example_Dyn_Mem</STRONG> (Thumb, 134 bytes, Stack size 16 bytes, los_api_dynamic_mem.o(i.Example_Dyn_Mem))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120 + Unknown Stack Size
 <LI>Call Chain = Example_Dyn_Mem &rArr; LOS_MemAlloc &rArr; osMemAllocWithCheck &rArr; osMemSpitNode &rArr; LOS_DLnkMultiHead
 </UL>
@@ -612,7 +612,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> los_api_event.o(i.Example_SndRcvEvent)
 </UL>
-<P><STRONG><a name="[9]"></a>Example_GetTick</STRONG> (Thumb, 126 bytes, Stack size 24 bytes, los_api_systick.o(i.Example_GetTick))
+<P><STRONG><a name="[5]"></a>Example_GetTick</STRONG> (Thumb, 126 bytes, Stack size 24 bytes, los_api_systick.o(i.Example_GetTick))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88 + Unknown Stack Size
 <LI>Call Chain = Example_GetTick &rArr; LOS_TaskDelay &rArr; osTaskAdd2TimerList &rArr; LOS_ListTailInsert
 </UL>
@@ -624,7 +624,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> los_inspect_entry.o(.data)
 </UL>
-<P><STRONG><a name="[6]"></a>Example_MsgQueue</STRONG> (Thumb, 130 bytes, Stack size 56 bytes, los_api_msgqueue.o(i.Example_MsgQueue))
+<P><STRONG><a name="[2]"></a>Example_MsgQueue</STRONG> (Thumb, 130 bytes, Stack size 56 bytes, los_api_msgqueue.o(i.Example_MsgQueue))
 <BR><BR>[Stack]<UL><LI>Max Depth = 240 + Unknown Stack Size
 <LI>Call Chain = Example_MsgQueue &rArr; LOS_TaskCreate &rArr; LOS_TaskCreateOnly &rArr; LOS_MemAllocAlign &rArr; osMemAllocWithCheck &rArr; osMemSpitNode &rArr; LOS_DLnkMultiHead
 </UL>
@@ -636,7 +636,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> los_inspect_entry.o(.data)
 </UL>
-<P><STRONG><a name="[8]"></a>Example_MutexLock</STRONG> (Thumb, 184 bytes, Stack size 80 bytes, los_api_mutex.o(i.Example_MutexLock))
+<P><STRONG><a name="[4]"></a>Example_MutexLock</STRONG> (Thumb, 184 bytes, Stack size 80 bytes, los_api_mutex.o(i.Example_MutexLock))
 <BR><BR>[Stack]<UL><LI>Max Depth = 264 + Unknown Stack Size
 <LI>Call Chain = Example_MutexLock &rArr; LOS_TaskCreate &rArr; LOS_TaskCreateOnly &rArr; LOS_MemAllocAlign &rArr; osMemAllocWithCheck &rArr; osMemSpitNode &rArr; LOS_DLnkMultiHead
 </UL>
@@ -696,7 +696,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> los_api_sem.o(i.Example_Semphore)
 </UL>
-<P><STRONG><a name="[7]"></a>Example_Semphore</STRONG> (Thumb, 204 bytes, Stack size 80 bytes, los_api_sem.o(i.Example_Semphore))
+<P><STRONG><a name="[3]"></a>Example_Semphore</STRONG> (Thumb, 204 bytes, Stack size 80 bytes, los_api_sem.o(i.Example_Semphore))
 <BR><BR>[Stack]<UL><LI>Max Depth = 264 + Unknown Stack Size
 <LI>Call Chain = Example_Semphore &rArr; LOS_TaskCreate &rArr; LOS_TaskCreateOnly &rArr; LOS_MemAllocAlign &rArr; osMemAllocWithCheck &rArr; osMemSpitNode &rArr; LOS_DLnkMultiHead
 </UL>
@@ -713,7 +713,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> los_inspect_entry.o(.data)
 </UL>
-<P><STRONG><a name="[5]"></a>Example_SndRcvEvent</STRONG> (Thumb, 162 bytes, Stack size 48 bytes, los_api_event.o(i.Example_SndRcvEvent))
+<P><STRONG><a name="[1]"></a>Example_SndRcvEvent</STRONG> (Thumb, 162 bytes, Stack size 48 bytes, los_api_event.o(i.Example_SndRcvEvent))
 <BR><BR>[Stack]<UL><LI>Max Depth = 232 + Unknown Stack Size
 <LI>Call Chain = Example_SndRcvEvent &rArr; LOS_TaskCreate &rArr; LOS_TaskCreateOnly &rArr; LOS_MemAllocAlign &rArr; osMemAllocWithCheck &rArr; osMemSpitNode &rArr; LOS_DLnkMultiHead
 </UL>
@@ -727,7 +727,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> los_inspect_entry.o(.data)
 </UL>
-<P><STRONG><a name="[c]"></a>Example_StaticMem</STRONG> (Thumb, 144 bytes, Stack size 24 bytes, los_api_static_mem.o(i.Example_StaticMem))
+<P><STRONG><a name="[8]"></a>Example_StaticMem</STRONG> (Thumb, 144 bytes, Stack size 24 bytes, los_api_static_mem.o(i.Example_StaticMem))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64 + Unknown Stack Size
 <LI>Call Chain = Example_StaticMem &rArr; LOS_InspectStatusSetByID &rArr; __2printf
 </UL>
@@ -764,7 +764,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> los_api_task.o(i.Example_TskCaseEntry)
 </UL>
-<P><STRONG><a name="[4]"></a>Example_TskCaseEntry</STRONG> (Thumb, 152 bytes, Stack size 48 bytes, los_api_task.o(i.Example_TskCaseEntry))
+<P><STRONG><a name="[0]"></a>Example_TskCaseEntry</STRONG> (Thumb, 152 bytes, Stack size 48 bytes, los_api_task.o(i.Example_TskCaseEntry))
 <BR><BR>[Stack]<UL><LI>Max Depth = 232 + Unknown Stack Size
 <LI>Call Chain = Example_TskCaseEntry &rArr; LOS_TaskCreate &rArr; LOS_TaskCreateOnly &rArr; LOS_MemAllocAlign &rArr; osMemAllocWithCheck &rArr; osMemSpitNode &rArr; LOS_DLnkMultiHead
 </UL>
@@ -776,7 +776,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> los_inspect_entry.o(.data)
 </UL>
-<P><STRONG><a name="[b]"></a>Example_list</STRONG> (Thumb, 232 bytes, Stack size 24 bytes, los_api_list.o(i.Example_list))
+<P><STRONG><a name="[7]"></a>Example_list</STRONG> (Thumb, 232 bytes, Stack size 24 bytes, los_api_list.o(i.Example_list))
 <BR><BR>[Stack]<UL><LI>Max Depth = 128 + Unknown Stack Size
 <LI>Call Chain = Example_list &rArr; LOS_MemAlloc &rArr; osMemAllocWithCheck &rArr; osMemSpitNode &rArr; LOS_DLnkMultiHead
 </UL>
@@ -788,7 +788,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> los_inspect_entry.o(.data)
 </UL>
-<P><STRONG><a name="[a]"></a>Example_swTimer</STRONG> (Thumb, 148 bytes, Stack size 16 bytes, los_api_timer.o(i.Example_swTimer))
+<P><STRONG><a name="[6]"></a>Example_swTimer</STRONG> (Thumb, 148 bytes, Stack size 16 bytes, los_api_timer.o(i.Example_swTimer))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80 + Unknown Stack Size
 <LI>Call Chain = Example_swTimer &rArr; LOS_TaskDelay &rArr; osTaskAdd2TimerList &rArr; LOS_ListTailInsert
 </UL>
@@ -827,7 +827,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[6c]"></a>LOS_CyclePerTickGet</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, los_sys.o(i.LOS_CyclePerTickGet))
-<BR><BR>[Called By]<UL><LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_GetTick
+<BR><BR>[Called By]<UL><LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_GetTick
 </UL>
 
 <P><STRONG><a name="[ba]"></a>LOS_DLnkInitMultiHead</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, los_multipledlinkhead.o(i.LOS_DLnkInitMultiHead))
@@ -932,11 +932,11 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
 <LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
 </UL>
-<BR>[Called By]<UL><LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_SndRcvEvent
+<BR>[Called By]<UL><LI><a href="#[1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_SndRcvEvent
 </UL>
 
 <P><STRONG><a name="[7d]"></a>LOS_EventInit</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, los_event.o(i.LOS_EventInit))
-<BR><BR>[Called By]<UL><LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_SndRcvEvent
+<BR><BR>[Called By]<UL><LI><a href="#[1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_SndRcvEvent
 </UL>
 
 <P><STRONG><a name="[a5]"></a>LOS_EventPoll</STRONG> (Thumb, 80 bytes, Stack size 24 bytes, los_event.o(i.LOS_EventPoll))
@@ -973,7 +973,7 @@ Global Symbols
 <LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
 <LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_PriqueueEnqueue
 </UL>
-<BR>[Called By]<UL><LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_SndRcvEvent
+<BR>[Called By]<UL><LI><a href="#[1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_SndRcvEvent
 </UL>
 
 <P><STRONG><a name="[ab]"></a>LOS_InspectByID</STRONG> (Thumb, 204 bytes, Stack size 24 bytes, los_inspect_entry.o(i.LOS_InspectByID))
@@ -994,14 +994,14 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer2_Callback
 <LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_TaskLo
 <LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_TaskHi
-<LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_GetTick
-<LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_StaticMem
+<LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_GetTick
+<LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_StaticMem
 <LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_SemTask1
 <LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_MutexTask1
 <LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;recv_Entry
-<LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_list
+<LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_list
 <LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_Event
-<LI><a href="#[d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_Dyn_Mem
+<LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_Dyn_Mem
 </UL>
 
 <P><STRONG><a name="[ac]"></a>LOS_Inspect_Entry</STRONG> (Thumb, 52 bytes, Stack size 48 bytes, los_inspect_entry.o(i.LOS_Inspect_Entry))
@@ -1049,8 +1049,8 @@ Global Symbols
 <LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSemInit
 <LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueInit
 <LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueCreate
-<LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_list
-<LI><a href="#[d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_Dyn_Mem
+<LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_list
+<LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_Dyn_Mem
 </UL>
 
 <P><STRONG><a name="[b7]"></a>LOS_MemAllocAlign</STRONG> (Thumb, 108 bytes, Stack size 40 bytes, los_memory.o(i.LOS_MemAllocAlign))
@@ -1076,7 +1076,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskDelete
 <LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_TaskCreateOnly
 <LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_QueueDelete
-<LI><a href="#[d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_Dyn_Mem
+<LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_Dyn_Mem
 </UL>
 
 <P><STRONG><a name="[66]"></a>LOS_MemInit</STRONG> (Thumb, 166 bytes, Stack size 32 bytes, los_memory.o(i.LOS_MemInit))
@@ -1091,7 +1091,7 @@ Global Symbols
 <LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListAdd
 </UL>
 <BR>[Called By]<UL><LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMemSystemInit
-<LI><a href="#[d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_Dyn_Mem
+<LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_Dyn_Mem
 </UL>
 
 <P><STRONG><a name="[81]"></a>LOS_MemboxAlloc</STRONG> (Thumb, 60 bytes, Stack size 24 bytes, los_membox.o(i.LOS_MemboxAlloc))
@@ -1102,7 +1102,7 @@ Global Symbols
 <LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
 </UL>
 <BR>[Called By]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrTimeoutHandle
-<LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_StaticMem
+<LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_StaticMem
 </UL>
 
 <P><STRONG><a name="[82]"></a>LOS_MemboxClr</STRONG> (Thumb, 28 bytes, Stack size 16 bytes, los_membox.o(i.LOS_MemboxClr))
@@ -1110,7 +1110,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_StaticMem
+<BR>[Called By]<UL><LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_StaticMem
 </UL>
 
 <P><STRONG><a name="[83]"></a>LOS_MemboxFree</STRONG> (Thumb, 158 bytes, Stack size 32 bytes, los_membox.o(i.LOS_MemboxFree))
@@ -1122,7 +1122,7 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrTask
 <LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrTimeoutHandle
-<LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_StaticMem
+<LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_StaticMem
 </UL>
 
 <P><STRONG><a name="[80]"></a>LOS_MemboxInit</STRONG> (Thumb, 128 bytes, Stack size 32 bytes, los_membox.o(i.LOS_MemboxInit))
@@ -1133,7 +1133,7 @@ Global Symbols
 <LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
 </UL>
 <BR>[Called By]<UL><LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrInit
-<LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_StaticMem
+<LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_StaticMem
 </UL>
 
 <P><STRONG><a name="[73]"></a>LOS_MuxCreate</STRONG> (Thumb, 90 bytes, Stack size 24 bytes, los_mux.o(i.LOS_MuxCreate))
@@ -1146,7 +1146,7 @@ Global Symbols
 <LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
 <LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_MutexLock
+<BR>[Called By]<UL><LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_MutexLock
 </UL>
 
 <P><STRONG><a name="[75]"></a>LOS_MuxDelete</STRONG> (Thumb, 90 bytes, Stack size 16 bytes, los_mux.o(i.LOS_MuxDelete))
@@ -1158,7 +1158,7 @@ Global Symbols
 <LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
 <LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_MutexLock
+<BR>[Called By]<UL><LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_MutexLock
 </UL>
 
 <P><STRONG><a name="[77]"></a>LOS_MuxPend</STRONG> (Thumb, 308 bytes, Stack size 32 bytes, los_mux.o(i.LOS_MuxPend))
@@ -1243,7 +1243,7 @@ Global Symbols
 <LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osQueueCreate
 </UL>
 <BR>[Called By]<UL><LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrInit
-<LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_MsgQueue
+<LI><a href="#[2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_MsgQueue
 </UL>
 
 <P><STRONG><a name="[c3]"></a>LOS_QueueDelete</STRONG> (Thumb, 162 bytes, Stack size 24 bytes, los_queue.o(i.LOS_QueueDelete))
@@ -1324,7 +1324,7 @@ Global Symbols
 <LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListEmpty
 <LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListDelete
 </UL>
-<BR>[Called By]<UL><LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_Semphore
+<BR>[Called By]<UL><LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_Semphore
 </UL>
 
 <P><STRONG><a name="[7c]"></a>LOS_SemDelete</STRONG> (Thumb, 82 bytes, Stack size 16 bytes, los_sem.o(i.LOS_SemDelete))
@@ -1336,7 +1336,7 @@ Global Symbols
 <LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListEmpty
 <LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListAdd
 </UL>
-<BR>[Called By]<UL><LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_Semphore
+<BR>[Called By]<UL><LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_Semphore
 </UL>
 
 <P><STRONG><a name="[79]"></a>LOS_SemPend</STRONG> (Thumb, 236 bytes, Stack size 32 bytes, los_sem.o(i.LOS_SemPend))
@@ -1367,7 +1367,7 @@ Global Symbols
 <LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_ListDelete
 </UL>
 <BR>[Called By]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskEntry
-<LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_Semphore
+<LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_Semphore
 <LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_SemTask2
 <LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_SemTask1
 </UL>
@@ -1392,7 +1392,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
 <LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_swTimer
+<BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_swTimer
 </UL>
 
 <P><STRONG><a name="[8b]"></a>LOS_SwtmrDelete</STRONG> (Thumb, 118 bytes, Stack size 24 bytes, los_swtmr.o(i.LOS_SwtmrDelete))
@@ -1404,7 +1404,7 @@ Global Symbols
 <LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwtmrStop
 <LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwtmrDelete
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_swTimer
+<BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_swTimer
 </UL>
 
 <P><STRONG><a name="[89]"></a>LOS_SwtmrStart</STRONG> (Thumb, 118 bytes, Stack size 24 bytes, los_swtmr.o(i.LOS_SwtmrStart))
@@ -1416,7 +1416,7 @@ Global Symbols
 <LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwtmrStop
 <LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrStart
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_swTimer
+<BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_swTimer
 </UL>
 
 <P><STRONG><a name="[8a]"></a>LOS_SwtmrStop</STRONG> (Thumb, 116 bytes, Stack size 24 bytes, los_swtmr.o(i.LOS_SwtmrStop))
@@ -1427,7 +1427,7 @@ Global Symbols
 <LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
 <LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwtmrStop
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_swTimer
+<BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_swTimer
 </UL>
 
 <P><STRONG><a name="[70]"></a>LOS_TaskCreate</STRONG> (Thumb, 140 bytes, Stack size 24 bytes, los_task.o(i.LOS_TaskCreate))
@@ -1444,11 +1444,11 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osIdleTaskCreate
 <LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSwTmrTaskCreate
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Inspect_Entry
-<LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_TskCaseEntry
-<LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_Semphore
-<LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_MutexLock
-<LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_MsgQueue
-<LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_SndRcvEvent
+<LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_TskCaseEntry
+<LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_Semphore
+<LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_MutexLock
+<LI><a href="#[2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_MsgQueue
+<LI><a href="#[1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_SndRcvEvent
 </UL>
 
 <P><STRONG><a name="[d3]"></a>LOS_TaskCreateOnly</STRONG> (Thumb, 368 bytes, Stack size 40 bytes, los_task.o(i.LOS_TaskCreateOnly))
@@ -1481,14 +1481,14 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_InspectByID
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Inspect_KeyAndLed
-<LI><a href="#[a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_swTimer
+<LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_swTimer
 <LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_TaskLo
 <LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_TaskHi
-<LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_GetTick
-<LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_Semphore
+<LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_GetTick
+<LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_Semphore
 <LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_SemTask2
 <LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_MutexTask2
-<LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_MutexLock
+<LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_MutexLock
 <LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_Entry
 <LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;recv_Entry
 </UL>
@@ -1508,12 +1508,12 @@ Global Symbols
 <LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_PriqueueTop
 <LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_PriqueueDequeue
 </UL>
-<BR>[Called By]<UL><LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_TskCaseEntry
+<BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_TskCaseEntry
 <LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_TaskLo
 <LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_TaskHi
-<LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_Semphore
-<LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_MutexLock
-<LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_SndRcvEvent
+<LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_Semphore
+<LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_MutexLock
+<LI><a href="#[1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_SndRcvEvent
 </UL>
 
 <P><STRONG><a name="[6f]"></a>LOS_TaskLock</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, los_task.o(i.LOS_TaskLock))
@@ -1524,10 +1524,10 @@ Global Symbols
 <LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
 </UL>
 <BR>[Called By]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskEntry
-<LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_TskCaseEntry
-<LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_Semphore
-<LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_MutexLock
-<LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_MsgQueue
+<LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_TskCaseEntry
+<LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_Semphore
+<LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_MutexLock
+<LI><a href="#[2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_MsgQueue
 </UL>
 
 <P><STRONG><a name="[85]"></a>LOS_TaskResume</STRONG> (Thumb, 158 bytes, Stack size 24 bytes, los_task.o(i.LOS_TaskResume))
@@ -1564,10 +1564,10 @@ Global Symbols
 <LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
 </UL>
 <BR>[Called By]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osTaskEntry
-<LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_TskCaseEntry
-<LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_Semphore
-<LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_MutexLock
-<LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_MsgQueue
+<LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_TskCaseEntry
+<LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_Semphore
+<LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_MutexLock
+<LI><a href="#[2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_MsgQueue
 </UL>
 
 <P><STRONG><a name="[d9]"></a>LOS_TaskYield</STRONG> (Thumb, 118 bytes, Stack size 16 bytes, los_task.o(i.LOS_TaskYield))
@@ -1588,7 +1588,7 @@ Global Symbols
 <P><STRONG><a name="[6d]"></a>LOS_TickCountGet</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, los_sys.o(i.LOS_TickCountGet))
 <BR><BR>[Called By]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer2_Callback
 <LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer1_Callback
-<LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_GetTick
+<LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_GetTick
 </UL>
 
 <P><STRONG><a name="[db]"></a>LOS_TickHandler</STRONG> (Thumb, 52 bytes, Stack size 8 bytes, los_hw_tick.o(i.LOS_TickHandler))
@@ -1599,7 +1599,7 @@ Global Symbols
 <LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntRestore
 <LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntLock
 </UL>
-<BR>[Called By]<UL><LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Handler
+<BR>[Called By]<UL><LI><a href="#[d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Handler
 </UL>
 
 <P><STRONG><a name="[dd]"></a>LosAdapIntInit</STRONG> (Thumb, 42 bytes, Stack size 8 bytes, los_bsp_adapter.o(i.LosAdapIntInit))
@@ -1636,7 +1636,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Init
 </UL>
 
-<P><STRONG><a name="[3]"></a>SysTick_Handler</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, los_bsp_adapter.o(i.SysTick_Handler))
+<P><STRONG><a name="[d]"></a>SysTick_Handler</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, los_bsp_adapter.o(i.SysTick_Handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 168 + Unknown Stack Size
 <LI>Call Chain = SysTick_Handler &rArr; LOS_TickHandler &rArr; osTickHandler &rArr; osSwtmrScan &rArr; osSwTmrTimeoutHandle &rArr; LOS_QueueWrite &rArr; osQueuePend &rArr; osTaskAdd2TimerList &rArr; LOS_ListTailInsert
 </UL>
@@ -1709,37 +1709,31 @@ Global Symbols
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_Inspect_KeyAndLed
 <LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer2_Callback
 <LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer1_Callback
-<LI><a href="#[a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_swTimer
-<LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_TskCaseEntry
+<LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_swTimer
+<LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_TskCaseEntry
 <LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_TaskLo
 <LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_TaskHi
-<LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_GetTick
-<LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_StaticMem
-<LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_Semphore
+<LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_GetTick
+<LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_StaticMem
+<LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_Semphore
 <LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_SemTask2
 <LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_SemTask1
 <LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_MutexTask2
 <LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_MutexTask1
-<LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_MutexLock
+<LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_MutexLock
 <LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_Entry
 <LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;recv_Entry
-<LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_MsgQueue
-<LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_list
-<LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_SndRcvEvent
+<LI><a href="#[2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_MsgQueue
+<LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_list
+<LI><a href="#[1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_SndRcvEvent
 <LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_Event
 <LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_InspectStatusSetByID
-<LI><a href="#[d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_Dyn_Mem
+<LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_Dyn_Mem
 </UL>
 
 <P><STRONG><a name="[11c]"></a>__c89printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf), UNUSED)
 
 <P><STRONG><a name="[11d]"></a>printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf), UNUSED)
-
-<P><STRONG><a name="[87]"></a>free</STRONG> (Thumb, 76 bytes, Stack size 8 bytes, malloc1.o(i.__free$1region))
-<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = free
-</UL>
-<BR>[Called By]<UL><LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_list
-</UL>
 
 <P><STRONG><a name="[11e]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
 
@@ -1754,6 +1748,12 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> printfa.o(i.__0printf)
 </UL>
+<P><STRONG><a name="[87]"></a>free</STRONG> (Thumb, 76 bytes, Stack size 8 bytes, malloc.o(i.free))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = free
+</UL>
+<BR>[Called By]<UL><LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_list
+</UL>
+
 <P><STRONG><a name="[40]"></a>main</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, main.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 288 + Unknown Stack Size
 <LI>Call Chain = main &rArr; LOS_KernelInit &rArr; osMain &rArr; osSwTmrInit &rArr; osSwTmrTaskCreate &rArr; LOS_TaskCreate &rArr; LOS_TaskCreateOnly &rArr; LOS_MemAllocAlign &rArr; osMemAllocWithCheck &rArr; osMemSpitNode &rArr; LOS_DLnkMultiHead
@@ -1770,7 +1770,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LosAdapIntInit
 </UL>
 
-<P><STRONG><a name="[1]"></a>osHwiDefaultHandler</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, los_hwi.o(i.osHwiDefaultHandler))
+<P><STRONG><a name="[b]"></a>osHwiDefaultHandler</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, los_hwi.o(i.osHwiDefaultHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8 + Unknown Stack Size
 <LI>Call Chain = osHwiDefaultHandler &rArr; osIntNumGet
 </UL>
@@ -1806,7 +1806,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOS_IntNumGet
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osHwiDefaultHandler
+<BR>[Called By]<UL><LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osHwiDefaultHandler
 </UL>
 
 <P><STRONG><a name="[af]"></a>osMain</STRONG> (Thumb, 108 bytes, Stack size 8 bytes, los_config.o(i.osMain))
@@ -2380,7 +2380,7 @@ Local Symbols
 </UL>
 
 <P><STRONG><a name="[86]"></a>LOS_ListAdd</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, los_api_list.o(i.LOS_ListAdd))
-<BR><BR>[Called By]<UL><LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_list
+<BR><BR>[Called By]<UL><LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Example_list
 </UL>
 
 <P><STRONG><a name="[ad]"></a>LOS_Inspect_KeyAndLed</STRONG> (Thumb, 76 bytes, Stack size 16 bytes, los_inspect_entry.o(i.LOS_Inspect_KeyAndLed))

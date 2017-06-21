@@ -335,7 +335,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_MD,USE_STDPERIPH_DRIVER,RAM_SIZE_LEVEL_1</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\kernel\base\include;..\..\kernel\include;..\..\kernel\config;..\..\kernel\cmsis;..\..\kernel\cpu\arm\cortex-m3;..\..\kernel\link\keil;..\..\platform\STM32F103RB-NUCLEO;..\..\platform\STM32F103RB-NUCLEO\Libraries\FWlib\inc;..\..\platform\STM32F103RB-NUCLEO\Libraries\CMSIS;..\..\platform\STM32F103RB-NUCLEO\local;..\..\example\include;..\..\kernel\cpu\arm\cortex-m3</IncludePath>
+              <IncludePath>..\..\kernel\base\include;..\..\kernel\include;..\..\kernel\config;..\..\kernel\cmsis;..\..\kernel\cpu\arm\cortex-m3;..\..\kernel\link\keil;..\..\example\include;..\..\platform\STM32F103RB-NUCLEO;..\..\platform\STM32F103RB-NUCLEO\Libraries\FWlib\inc;..\..\platform\STM32F103RB-NUCLEO\Libraries\CMSIS;..\..\platform\STM32F103RB-NUCLEO\local</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -357,7 +357,7 @@
             </VariousControls>
           </Aads>
           <LDads>
-            <umfTarg>0</umfTarg>
+            <umfTarg>1</umfTarg>
             <Ropi>0</Ropi>
             <Rwpi>0</Rwpi>
             <noStLib>0</noStLib>
@@ -565,44 +565,9 @@
               <FilePath>..\..\platform\STM32F103RB-NUCLEO\Libraries\FWlib\src\misc.c</FilePath>
             </File>
             <File>
-              <FileName>stm32f10x_adc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\platform\STM32F103RB-NUCLEO\Libraries\FWlib\src\stm32f10x_adc.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_bkp.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\platform\STM32F103RB-NUCLEO\Libraries\FWlib\src\stm32f10x_bkp.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_can.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\platform\STM32F103RB-NUCLEO\Libraries\FWlib\src\stm32f10x_can.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_cec.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\platform\STM32F103RB-NUCLEO\Libraries\FWlib\src\stm32f10x_cec.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_crc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\platform\STM32F103RB-NUCLEO\Libraries\FWlib\src\stm32f10x_crc.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_dac.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\platform\STM32F103RB-NUCLEO\Libraries\FWlib\src\stm32f10x_dac.c</FilePath>
-            </File>
-            <File>
               <FileName>stm32f10x_dbgmcu.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\platform\STM32F103RB-NUCLEO\Libraries\FWlib\src\stm32f10x_dbgmcu.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_dma.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\platform\STM32F103RB-NUCLEO\Libraries\FWlib\src\stm32f10x_dma.c</FilePath>
             </File>
             <File>
               <FileName>stm32f10x_exti.c</FileName>
@@ -653,11 +618,6 @@
               <FileName>stm32f10x_sdio.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\platform\STM32F103RB-NUCLEO\Libraries\FWlib\src\stm32f10x_sdio.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_spi.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\platform\STM32F103RB-NUCLEO\Libraries\FWlib\src\stm32f10x_spi.c</FilePath>
             </File>
             <File>
               <FileName>stm32f10x_tim.c</FileName>

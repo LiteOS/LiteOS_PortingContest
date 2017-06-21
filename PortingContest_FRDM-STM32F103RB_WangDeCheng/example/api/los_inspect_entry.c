@@ -278,7 +278,7 @@ void LOS_Inspect_TskDeal(void)
             gInspectErrCnt++;
             
             /* turn on LED2 */
-            LOS_EvbLedControl(LOS_LED1,LED_ON);
+            LOS_EvbLedControl(LOS_LED2,LED_ON);
         }
     }
      
