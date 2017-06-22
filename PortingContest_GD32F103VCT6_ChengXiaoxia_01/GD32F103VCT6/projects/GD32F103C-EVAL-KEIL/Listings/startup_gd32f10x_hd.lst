@@ -1,0 +1,1482 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000         ;/**
+    2 00000000         ;  *****************************************************
+                       *************************
+    3 00000000         ;  * @file    startup_gd32f10x_hd.s
+    4 00000000         ;  * @author  MCU SD
+    5 00000000         ;  * @version V1.0.0
+    6 00000000         ;  * @date    26-Dec-2014
+    7 00000000         ;  * @brief   GD32F10X startup code.
+    8 00000000         ;  *****************************************************
+                       *************************
+    9 00000000         ;  */
+   10 00000000         
+   11 00000000         ;/* <<< Use Configuration Wizard in Context Menu >>>    
+                                                                           */
+   12 00000000         
+   13 00000000         ; Amount of memory (in bytes) allocated for Stack and He
+                       ap
+   14 00000000         ; Tailor those values to your application needs
+   15 00000000         ;// <h> Stack Configuration
+   16 00000000         ;//   <o> Stack Size (in Bytes) <0-8192:8>
+   17 00000000         ;// </h>
+   18 00000000 00000400 
+                       Stack_Size
+                               EQU              0x400
+   19 00000000         
+   20 00000000                 AREA             STACK, NOINIT, READWRITE, ALIGN
+ = 3
+   21 00000000         Stack_Mem
+                               SPACE            Stack_Size
+   22 00000400         __initial_sp
+   23 00000400         
+   24 00000400         ;// <h> Heap Configuration
+   25 00000400         ;//   <o>  Heap Size (in Bytes) <0-4096:8>
+   26 00000400         ;// </h>
+   27 00000400 00000200 
+                       Heap_Size
+                               EQU              0x200
+   28 00000400         
+   29 00000400                 AREA             HEAP, NOINIT, READWRITE, ALIGN 
+= 3
+   30 00000000         __heap_base
+   31 00000000         Heap_Mem
+                               SPACE            Heap_Size
+   32 00000200         __heap_limit
+   33 00000200         
+   34 00000200         
+   35 00000200                 PRESERVE8
+   36 00000200                 THUMB
+   37 00000200         
+   38 00000200         ; Vector table entries with the exceptions ISR address
+   39 00000200                 AREA             RESET, DATA, READONLY
+   40 00000000                 EXPORT           __Vectors
+   41 00000000                 EXPORT           __Vectors_End
+   42 00000000                 EXPORT           __Vectors_Size
+   43 00000000         
+   44 00000000 00000000 
+                       __Vectors
+                               DCD              __initial_sp ; Top of Stack
+   45 00000004 00000000        DCD              Reset_Handler ; Vector Number 1
+
+
+
+ARM Macro Assembler    Page 2 
+
+
+                                                            ,Reset Handler
+   46 00000008 00000000        DCD              NMI_Handler ; Vector Number 2,N
+                                                            MI Handler
+   47 0000000C 00000000        DCD              HardFault_Handler ; Vector Numb
+                                                            er 3,Hard Fault Han
+                                                            dler
+   48 00000010 00000000        DCD              MemManage_Handler ; Vector Numb
+                                                            er 4,MPU Fault Hand
+                                                            ler
+   49 00000014 00000000        DCD              BusFault_Handler ; Vector Numbe
+                                                            r 5,Bus Fault Handl
+                                                            er
+   50 00000018 00000000        DCD              UsageFault_Handler ; Vector Num
+                                                            ber 6,Usage Fault H
+                                                            andler
+   51 0000001C 00000000        DCD              0           ; Reserved
+   52 00000020 00000000        DCD              0           ; Reserved
+   53 00000024 00000000        DCD              0           ; Reserved
+   54 00000028 00000000        DCD              0           ; Reserved
+   55 0000002C 00000000        DCD              SVC_Handler ; Vector Number 11,
+                                                            SVCall Handler
+   56 00000030 00000000        DCD              DebugMon_Handler ; Vector Numbe
+                                                            r 12,Debug Monitor 
+                                                            Handler
+   57 00000034 00000000        DCD              0           ; Reserved
+   58 00000038 00000000        DCD              PendSV_Handler ; Vector Number 
+                                                            14,PendSV Handler
+   59 0000003C 00000000        DCD              SysTick_Handler ; Vector Number
+                                                             15,SysTick Handler
+                                                            
+   60 00000040         
+   61 00000040         ; External Interrupts
+   62 00000040 00000000        DCD              WWDG_IRQHandler ; Vector Number
+                                                             16,Window Watchdog
+                                                            
+   63 00000044 00000000        DCD              LVD_IRQHandler ; Vector Number 
+                                                            17,LVD through EXTI
+                                                             Line detect
+   64 00000048 00000000        DCD              TAMPER_IRQHandler ; Vector Numb
+                                                            er 18,Tamper Interr
+                                                            upt   
+   65 0000004C 00000000        DCD              RTC_IRQHandler ; Vector Number 
+                                                            19,RTC through EXTI
+                                                             Line
+   66 00000050 00000000        DCD              FMC_IRQHandler ; Vector Number 
+                                                            20,FMC
+   67 00000054 00000000        DCD              RCC_IRQHandler ; Vector Number 
+                                                            21,RCC
+   68 00000058 00000000        DCD              EXTI0_IRQHandler ; Vector Numbe
+                                                            r 22,EXTI Line 0
+   69 0000005C 00000000        DCD              EXTI1_IRQHandler ; Vector Numbe
+                                                            r 23,EXTI Line 1
+   70 00000060 00000000        DCD              EXTI2_IRQHandler ; Vector Numbe
+                                                            r 24,EXTI Line 2
+   71 00000064 00000000        DCD              EXTI3_IRQHandler ; Vector Numbe
+                                                            r 25,EXTI Line 3
+   72 00000068 00000000        DCD              EXTI4_IRQHandler ; Vector Numbe
+                                                            r 26,EXTI Line 4
+   73 0000006C 00000000        DCD              DMA1_Channel1_IRQHandler ; Vect
+
+
+
+ARM Macro Assembler    Page 3 
+
+
+                                                            or Number 27,DMA1 C
+                                                            hannel 1
+   74 00000070 00000000        DCD              DMA1_Channel2_IRQHandler ; Vect
+                                                            or Number 28,DMA1 C
+                                                            hannel 2
+   75 00000074 00000000        DCD              DMA1_Channel3_IRQHandler ; Vect
+                                                            or Number 29,DMA1 C
+                                                            hannel 3
+   76 00000078 00000000        DCD              DMA1_Channel4_IRQHandler ; Vect
+                                                            or Number 30,DMA1 C
+                                                            hannel 4
+   77 0000007C 00000000        DCD              DMA1_Channel5_IRQHandler ; Vect
+                                                            or Number 31,DMA1 C
+                                                            hannel 5
+   78 00000080 00000000        DCD              DMA1_Channel6_IRQHandler ; Vect
+                                                            or Number 32,DMA1 C
+                                                            hannel 6 
+   79 00000084 00000000        DCD              DMA1_Channel7_IRQHandler ; Vect
+                                                            or Number 33,DMA1 C
+                                                            hannel 7
+   80 00000088 00000000        DCD              ADC1_2_IRQHandler ; Vector Numb
+                                                            er 34,ADC1 and ADC2
+                                                            
+   81 0000008C 00000000        DCD              USB_HP_CAN1_TX_IRQHandler ; Vec
+                                                            tor Number 35,USB D
+                                                            evice High Priority
+                                                             or CAN1 TX
+   82 00000090 00000000        DCD              USB_LP_CAN1_RX0_IRQHandler ; Ve
+                                                            ctor Number 36,USB 
+                                                            Device Low Priority
+                                                             or CAN1 RX0
+   83 00000094 00000000        DCD              CAN1_RX1_IRQHandler ; Vector Nu
+                                                            mber 37,CAN1 RX1
+   84 00000098 00000000        DCD              CAN1_SCE_IRQHandler ; Vector Nu
+                                                            mber 38,CAN1 SCE
+   85 0000009C 00000000        DCD              EXTI9_5_IRQHandler ; Vector Num
+                                                            ber 39,EXTI Line 9.
+                                                            .5
+   86 000000A0 00000000        DCD              TIMER1_BRK_IRQHandler ; Vector 
+                                                            Number 40,TIMER1 Br
+                                                            eak
+   87 000000A4 00000000        DCD              TIMER1_UP_IRQHandler ; Vector N
+                                                            umber 41,TIMER1 Upd
+                                                            ate
+   88 000000A8 00000000        DCD              TIMER1_TRG_COM_IRQHandler ; Vec
+                                                            tor Number 42,TIMER
+                                                            1 Break, Update, Tr
+                                                            igger and Commutati
+                                                            on
+   89 000000AC 00000000        DCD              TIMER1_CC_IRQHandler ; Vector N
+                                                            umber 43,TIMER1 Cap
+                                                            ture Compare
+   90 000000B0 00000000        DCD              TIMER2_IRQHandler ; Vector Numb
+                                                            er 44,TIMER2
+   91 000000B4 00000000        DCD              TIMER3_IRQHandler ; Vector Numb
+                                                            er 45,TIMER3
+   92 000000B8 00000000        DCD              TIMER4_IRQHandler ; Vector Numb
+                                                            er 46,TIMER4
+   93 000000BC 00000000        DCD              I2C1_EV_IRQHandler ; Vector Num
+
+
+
+ARM Macro Assembler    Page 4 
+
+
+                                                            ber 47,I2C1 Event
+   94 000000C0 00000000        DCD              I2C1_ER_IRQHandler ; Vector Num
+                                                            ber 48,I2C1 Error
+   95 000000C4 00000000        DCD              I2C2_EV_IRQHandler ; Vector Num
+                                                            ber 49,I2C2 Event
+   96 000000C8 00000000        DCD              I2C2_ER_IRQHandler ; Vector Num
+                                                            ber 50,I2C1 Error
+   97 000000CC 00000000        DCD              SPI1_IRQHandler ; Vector Number
+                                                             51,SPI1
+   98 000000D0 00000000        DCD              SPI2_IRQHandler ; Vector Number
+                                                             52,SPI2
+   99 000000D4 00000000        DCD              USART1_IRQHandler ; Vector Numb
+                                                            er 53,USART1
+  100 000000D8 00000000        DCD              USART2_IRQHandler ; Vector Numb
+                                                            er 54,USART2
+  101 000000DC 00000000        DCD              USART3_IRQHandler ; Vector Numb
+                                                            er 55,USART3
+  102 000000E0 00000000        DCD              EXTI15_10_IRQHandler ; Vector N
+                                                            umber 56,External L
+                                                            ine[15:10]
+  103 000000E4 00000000        DCD              RTCAlarm_IRQHandler ; Vector Nu
+                                                            mber 57,RTC Alarm t
+                                                            hrough EXTI Line
+  104 000000E8 00000000        DCD              USBWakeUp_IRQHandler ; Vector N
+                                                            umber 58,USB Device
+                                                             WakeUp from suspen
+                                                            d through EXTI Line
+                                                            
+  105 000000EC 00000000        DCD              TIMER8_BRK_IRQHandler ; Vector 
+                                                            Number 59,TIMER8 Br
+                                                            eak
+  106 000000F0 00000000        DCD              TIMER8_UP_IRQHandler ; Vector N
+                                                            umber 60,TIMER8 Upd
+                                                            ate
+  107 000000F4 00000000        DCD              TIMER8_TRG_COM_IRQHandler ; Vec
+                                                            tor Number 61,TIMER
+                                                            8 Trigger and Commu
+                                                            tation
+  108 000000F8 00000000        DCD              TIMER8_CC_IRQHandler ; Vector N
+                                                            umber 62,TIMER8 Cap
+                                                            ture Compare
+  109 000000FC 00000000        DCD              ADC3_IRQHandler ; Vector Number
+                                                             63,ADC3
+  110 00000100 00000000        DCD              EXMC_IRQHandler ; Vector Number
+                                                             64,EXMC 
+  111 00000104 00000000        DCD              SDIO_IRQHandler ; Vector Number
+                                                             65,SDIO
+  112 00000108 00000000        DCD              TIMER5_IRQHandler ; Vector Numb
+                                                            er 66,TIMER5
+  113 0000010C 00000000        DCD              SPI3_IRQHandler ; Vector Number
+                                                             67,SPI3
+  114 00000110 00000000        DCD              UART4_IRQHandler ; Vector Numbe
+                                                            r 68,UART4
+  115 00000114 00000000        DCD              UART5_IRQHandler ; Vector Numbe
+                                                            r 69,UART5
+  116 00000118 00000000        DCD              TIMER6_IRQHandler ; Vector Numb
+                                                            er 70,TIMER6
+  117 0000011C 00000000        DCD              TIMER7_IRQHandler ; Vector Numb
+                                                            er 71,TIMER7
+
+
+
+ARM Macro Assembler    Page 5 
+
+
+  118 00000120 00000000        DCD              DMA2_Channel1_IRQHandler ; Vect
+                                                            or Number 72,DMA2 C
+                                                            hannel1
+  119 00000124 00000000        DCD              DMA2_Channel2_IRQHandler ; Vect
+                                                            or Number 73,DMA2 C
+                                                            hannel2
+  120 00000128 00000000        DCD              DMA2_Channel3_IRQHandler ; Vect
+                                                            or Number 74,DMA2 C
+                                                            hannel3
+  121 0000012C 00000000        DCD              DMA2_Channel4_5_IRQHandler ; Ve
+                                                            ctor Number 75,DMA2
+                                                             Channel4 and Chann
+                                                            el5
+  122 00000130         
+  123 00000130         
+  124 00000130         
+  125 00000130         __Vectors_End
+  126 00000130         
+  127 00000130 00000130 
+                       __Vectors_Size
+                               EQU              __Vectors_End - __Vectors
+  128 00000130         
+  129 00000130                 AREA             |.text|, CODE, READONLY
+  130 00000000         
+  131 00000000         ; Reset handler routine
+  132 00000000         Reset_Handler
+                               PROC
+  133 00000000                 EXPORT           Reset_Handler                  
+   [WEAK]
+  134 00000000                 IMPORT           __main
+  135 00000000                 IMPORT           SystemInit
+  136 00000000 4806            LDR              R0, =SystemInit
+  137 00000002 4780            BLX              R0
+  138 00000004 4806            LDR              R0, =__main
+  139 00000006 4700            BX               R0
+  140 00000008                 ENDP
+  141 00000008         
+  142 00000008         ; Dummy Exception Handlers
+  143 00000008         NMI_Handler
+                               PROC
+  144 00000008                 EXPORT           NMI_Handler                    
+     [WEAK]
+  145 00000008 E7FE            B                .
+  146 0000000A                 ENDP
+  147 0000000A         
+  148 0000000A         HardFault_Handler
+                               PROC
+  149 0000000A                 EXPORT           HardFault_Handler              
+     [WEAK]
+  150 0000000A E7FE            B                .
+  151 0000000C                 ENDP
+  152 0000000C         
+  153 0000000C         MemManage_Handler
+                               PROC
+  154 0000000C                 EXPORT           MemManage_Handler              
+     [WEAK]
+  155 0000000C E7FE            B                .
+  156 0000000E                 ENDP
+  157 0000000E         
+
+
+
+ARM Macro Assembler    Page 6 
+
+
+  158 0000000E         BusFault_Handler
+                               PROC
+  159 0000000E                 EXPORT           BusFault_Handler               
+     [WEAK]
+  160 0000000E E7FE            B                .
+  161 00000010                 ENDP
+  162 00000010         
+  163 00000010         UsageFault_Handler
+                               PROC
+  164 00000010                 EXPORT           UsageFault_Handler             
+     [WEAK]
+  165 00000010 E7FE            B                .
+  166 00000012                 ENDP
+  167 00000012         
+  168 00000012         SVC_Handler
+                               PROC
+  169 00000012                 EXPORT           SVC_Handler                    
+     [WEAK]
+  170 00000012 E7FE            B                .
+  171 00000014                 ENDP
+  172 00000014         
+  173 00000014         DebugMon_Handler
+                               PROC
+  174 00000014                 EXPORT           DebugMon_Handler               
+     [WEAK]
+  175 00000014 E7FE            B                .
+  176 00000016                 ENDP
+  177 00000016         
+  178 00000016         PendSV_Handler
+                               PROC
+  179 00000016                 EXPORT           PendSV_Handler                 
+     [WEAK]
+  180 00000016 E7FE            B                .
+  181 00000018                 ENDP
+  182 00000018         
+  183 00000018         SysTick_Handler
+                               PROC
+  184 00000018                 EXPORT           SysTick_Handler                
+     [WEAK]
+  185 00000018 E7FE            B                .
+  186 0000001A                 ENDP
+  187 0000001A         
+  188 0000001A         Default_Handler
+                               PROC
+  189 0000001A                 EXPORT           WWDG_IRQHandler                
+     [WEAK]
+  190 0000001A                 EXPORT           LVD_IRQHandler                 
+     [WEAK]
+  191 0000001A                 EXPORT           TAMPER_IRQHandler              
+     [WEAK]
+  192 0000001A                 EXPORT           RTC_IRQHandler                 
+     [WEAK]
+  193 0000001A                 EXPORT           FMC_IRQHandler                 
+     [WEAK]
+  194 0000001A                 EXPORT           RCC_IRQHandler                 
+     [WEAK]
+  195 0000001A                 EXPORT           EXTI0_IRQHandler               
+     [WEAK]
+  196 0000001A                 EXPORT           EXTI1_IRQHandler               
+
+
+
+ARM Macro Assembler    Page 7 
+
+
+     [WEAK]
+  197 0000001A                 EXPORT           EXTI2_IRQHandler               
+     [WEAK]
+  198 0000001A                 EXPORT           EXTI3_IRQHandler               
+     [WEAK]
+  199 0000001A                 EXPORT           EXTI4_IRQHandler               
+     [WEAK]
+  200 0000001A                 EXPORT           DMA1_Channel1_IRQHandler       
+     [WEAK]
+  201 0000001A                 EXPORT           DMA1_Channel2_IRQHandler       
+     [WEAK]
+  202 0000001A                 EXPORT           DMA1_Channel3_IRQHandler       
+     [WEAK]
+  203 0000001A                 EXPORT           DMA1_Channel4_IRQHandler       
+     [WEAK]
+  204 0000001A                 EXPORT           DMA1_Channel5_IRQHandler       
+     [WEAK]
+  205 0000001A                 EXPORT           DMA1_Channel6_IRQHandler       
+     [WEAK]
+  206 0000001A                 EXPORT           DMA1_Channel7_IRQHandler       
+     [WEAK]
+  207 0000001A                 EXPORT           ADC1_2_IRQHandler              
+     [WEAK]
+  208 0000001A                 EXPORT           USB_HP_CAN1_TX_IRQHandler      
+     [WEAK]
+  209 0000001A                 EXPORT           USB_LP_CAN1_RX0_IRQHandler     
+     [WEAK]
+  210 0000001A                 EXPORT           CAN1_RX1_IRQHandler            
+     [WEAK]
+  211 0000001A                 EXPORT           CAN1_SCE_IRQHandler            
+     [WEAK]
+  212 0000001A                 EXPORT           EXTI9_5_IRQHandler             
+     [WEAK]
+  213 0000001A                 EXPORT           TIMER1_BRK_IRQHandler          
+     [WEAK]
+  214 0000001A                 EXPORT           TIMER1_UP_IRQHandler           
+     [WEAK]
+  215 0000001A                 EXPORT           TIMER1_TRG_COM_IRQHandler      
+     [WEAK]
+  216 0000001A                 EXPORT           TIMER1_CC_IRQHandler           
+     [WEAK]
+  217 0000001A                 EXPORT           TIMER2_IRQHandler              
+     [WEAK]
+  218 0000001A                 EXPORT           TIMER3_IRQHandler              
+     [WEAK]
+  219 0000001A                 EXPORT           TIMER4_IRQHandler              
+     [WEAK]
+  220 0000001A                 EXPORT           I2C1_EV_IRQHandler             
+     [WEAK]
+  221 0000001A                 EXPORT           I2C1_ER_IRQHandler             
+     [WEAK]
+  222 0000001A                 EXPORT           I2C2_EV_IRQHandler             
+     [WEAK]
+  223 0000001A                 EXPORT           I2C2_ER_IRQHandler             
+     [WEAK]
+  224 0000001A                 EXPORT           SPI1_IRQHandler                
+     [WEAK]
+  225 0000001A                 EXPORT           SPI2_IRQHandler                
+     [WEAK]
+
+
+
+ARM Macro Assembler    Page 8 
+
+
+  226 0000001A                 EXPORT           USART1_IRQHandler              
+     [WEAK]
+  227 0000001A                 EXPORT           USART2_IRQHandler              
+     [WEAK]
+  228 0000001A                 EXPORT           USART3_IRQHandler              
+     [WEAK]
+  229 0000001A                 EXPORT           EXTI15_10_IRQHandler           
+     [WEAK]
+  230 0000001A                 EXPORT           RTCAlarm_IRQHandler            
+     [WEAK]
+  231 0000001A                 EXPORT           USBWakeUp_IRQHandler           
+     [WEAK]
+  232 0000001A                 EXPORT           TIMER8_BRK_IRQHandler          
+     [WEAK]
+  233 0000001A                 EXPORT           TIMER8_UP_IRQHandler           
+     [WEAK]
+  234 0000001A                 EXPORT           TIMER8_TRG_COM_IRQHandler      
+     [WEAK]
+  235 0000001A                 EXPORT           TIMER8_CC_IRQHandler           
+     [WEAK]
+  236 0000001A                 EXPORT           ADC3_IRQHandler                
+     [WEAK]
+  237 0000001A                 EXPORT           EXMC_IRQHandler                
+     [WEAK]
+  238 0000001A                 EXPORT           SDIO_IRQHandler                
+     [WEAK]
+  239 0000001A                 EXPORT           TIMER5_IRQHandler              
+     [WEAK]
+  240 0000001A                 EXPORT           SPI3_IRQHandler                
+     [WEAK]
+  241 0000001A                 EXPORT           UART4_IRQHandler               
+     [WEAK]
+  242 0000001A                 EXPORT           UART5_IRQHandler               
+     [WEAK]
+  243 0000001A                 EXPORT           TIMER6_IRQHandler              
+     [WEAK]
+  244 0000001A                 EXPORT           TIMER7_IRQHandler              
+     [WEAK]
+  245 0000001A                 EXPORT           DMA2_Channel1_IRQHandler       
+     [WEAK]
+  246 0000001A                 EXPORT           DMA2_Channel2_IRQHandler       
+     [WEAK]
+  247 0000001A                 EXPORT           DMA2_Channel3_IRQHandler       
+     [WEAK]
+  248 0000001A                 EXPORT           DMA2_Channel4_5_IRQHandler     
+     [WEAK]
+  249 0000001A         
+  250 0000001A         
+  251 0000001A         WWDG_IRQHandler
+  252 0000001A         LVD_IRQHandler
+  253 0000001A         TAMPER_IRQHandler
+  254 0000001A         RTC_IRQHandler
+  255 0000001A         FMC_IRQHandler
+  256 0000001A         RCC_IRQHandler
+  257 0000001A         EXTI0_IRQHandler
+  258 0000001A         EXTI1_IRQHandler
+  259 0000001A         EXTI2_IRQHandler
+  260 0000001A         EXTI3_IRQHandler
+  261 0000001A         EXTI4_IRQHandler
+
+
+
+ARM Macro Assembler    Page 9 
+
+
+  262 0000001A         DMA1_Channel1_IRQHandler
+  263 0000001A         DMA1_Channel2_IRQHandler
+  264 0000001A         DMA1_Channel3_IRQHandler
+  265 0000001A         DMA1_Channel4_IRQHandler
+  266 0000001A         DMA1_Channel5_IRQHandler
+  267 0000001A         DMA1_Channel6_IRQHandler
+  268 0000001A         DMA1_Channel7_IRQHandler
+  269 0000001A         ADC1_2_IRQHandler
+  270 0000001A         USB_HP_CAN1_TX_IRQHandler
+  271 0000001A         USB_LP_CAN1_RX0_IRQHandler
+  272 0000001A         CAN1_RX1_IRQHandler
+  273 0000001A         CAN1_SCE_IRQHandler
+  274 0000001A         EXTI9_5_IRQHandler
+  275 0000001A         TIMER1_BRK_IRQHandler
+  276 0000001A         TIMER1_UP_IRQHandler
+  277 0000001A         TIMER1_TRG_COM_IRQHandler
+  278 0000001A         TIMER1_CC_IRQHandler
+  279 0000001A         TIMER2_IRQHandler
+  280 0000001A         TIMER3_IRQHandler
+  281 0000001A         TIMER4_IRQHandler
+  282 0000001A         I2C1_EV_IRQHandler
+  283 0000001A         I2C1_ER_IRQHandler
+  284 0000001A         I2C2_EV_IRQHandler
+  285 0000001A         I2C2_ER_IRQHandler
+  286 0000001A         SPI1_IRQHandler
+  287 0000001A         SPI2_IRQHandler
+  288 0000001A         USART1_IRQHandler
+  289 0000001A         USART2_IRQHandler
+  290 0000001A         USART3_IRQHandler
+  291 0000001A         EXTI15_10_IRQHandler
+  292 0000001A         RTCAlarm_IRQHandler
+  293 0000001A         USBWakeUp_IRQHandler
+  294 0000001A         TIMER8_BRK_IRQHandler
+  295 0000001A         TIMER8_UP_IRQHandler
+  296 0000001A         TIMER8_TRG_COM_IRQHandler
+  297 0000001A         TIMER8_CC_IRQHandler
+  298 0000001A         ADC3_IRQHandler
+  299 0000001A         EXMC_IRQHandler
+  300 0000001A         SDIO_IRQHandler
+  301 0000001A         TIMER5_IRQHandler
+  302 0000001A         SPI3_IRQHandler
+  303 0000001A         UART4_IRQHandler
+  304 0000001A         UART5_IRQHandler
+  305 0000001A         TIMER6_IRQHandler
+  306 0000001A         TIMER7_IRQHandler
+  307 0000001A         DMA2_Channel1_IRQHandler
+  308 0000001A         DMA2_Channel2_IRQHandler
+  309 0000001A         DMA2_Channel3_IRQHandler
+  310 0000001A         DMA2_Channel4_5_IRQHandler
+  311 0000001A E7FE            B                .
+  312 0000001C                 ENDP
+  313 0000001C         
+  314 0000001C                 ALIGN
+  315 0000001C         
+  316 0000001C         ;*******************************************************
+                       ************************
+  317 0000001C         ; User Stack and Heap initialization
+  318 0000001C         ;*******************************************************
+                       ************************
+
+
+
+ARM Macro Assembler    Page 10 
+
+
+  319 0000001C                 IF               :DEF:__MICROLIB
+  320 0000001C         
+  321 0000001C                 EXPORT           __initial_sp
+  322 0000001C                 EXPORT           __heap_base
+  323 0000001C                 EXPORT           __heap_limit
+  324 0000001C         
+  325 0000001C                 ELSE
+  340                          ENDIF
+  341 0000001C         
+  342 0000001C                 END
+              00000000 
+              00000000 
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
+ork --depend=.\objects\startup_gd32f10x_hd.d -o.\objects\startup_gd32f10x_hd.o 
+-IE:\开发项目\GD32F103VCT6\projects\GD32F130C-EVAL-KEIL\RTE -IC:\Keil_v5\ARM\PA
+CK\Keil\GD32F1xx_DFP\1.1.0\Device\GD32F10x\Include -IC:\Keil_v5\ARM\CMSIS\Inclu
+de --predefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SETA 520" --p
+redefine="GD32F10X_HD SETA 1" --list=.\listings\startup_gd32f10x_hd.lst ..\..\p
+latform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+STACK 00000000
+
+Symbol: STACK
+   Definitions
+      At line 20 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      None
+Comment: STACK unused
+Stack_Mem 00000000
+
+Symbol: Stack_Mem
+   Definitions
+      At line 21 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      None
+Comment: Stack_Mem unused
+__initial_sp 00000400
+
+Symbol: __initial_sp
+   Definitions
+      At line 22 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 44 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 321 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+3 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+HEAP 00000000
+
+Symbol: HEAP
+   Definitions
+      At line 29 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      None
+Comment: HEAP unused
+Heap_Mem 00000000
+
+Symbol: Heap_Mem
+   Definitions
+      At line 31 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      None
+Comment: Heap_Mem unused
+__heap_base 00000000
+
+Symbol: __heap_base
+   Definitions
+      At line 30 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 322 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+Comment: __heap_base used once
+__heap_limit 00000200
+
+Symbol: __heap_limit
+   Definitions
+      At line 32 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 323 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+Comment: __heap_limit used once
+4 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 39 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      None
+Comment: RESET unused
+__Vectors 00000000
+
+Symbol: __Vectors
+   Definitions
+      At line 44 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 40 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 127 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+__Vectors_End 00000130
+
+Symbol: __Vectors_End
+   Definitions
+      At line 125 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 41 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 127 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+3 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+.text 00000000
+
+Symbol: .text
+   Definitions
+      At line 129 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      None
+Comment: .text unused
+ADC1_2_IRQHandler 0000001A
+
+Symbol: ADC1_2_IRQHandler
+   Definitions
+      At line 269 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 80 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 207 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+ADC3_IRQHandler 0000001A
+
+Symbol: ADC3_IRQHandler
+   Definitions
+      At line 298 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 109 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 236 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+BusFault_Handler 0000000E
+
+Symbol: BusFault_Handler
+   Definitions
+      At line 158 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 49 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 159 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+CAN1_RX1_IRQHandler 0000001A
+
+Symbol: CAN1_RX1_IRQHandler
+   Definitions
+      At line 272 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 83 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 210 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+CAN1_SCE_IRQHandler 0000001A
+
+Symbol: CAN1_SCE_IRQHandler
+   Definitions
+      At line 273 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 84 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 211 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+DMA1_Channel1_IRQHandler 0000001A
+
+Symbol: DMA1_Channel1_IRQHandler
+   Definitions
+      At line 262 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+
+
+
+ARM Macro Assembler    Page 2 Alphabetic symbol ordering
+Relocatable symbols
+
+      At line 73 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 200 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+DMA1_Channel2_IRQHandler 0000001A
+
+Symbol: DMA1_Channel2_IRQHandler
+   Definitions
+      At line 263 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 74 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 201 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+DMA1_Channel3_IRQHandler 0000001A
+
+Symbol: DMA1_Channel3_IRQHandler
+   Definitions
+      At line 264 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 75 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 202 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+DMA1_Channel4_IRQHandler 0000001A
+
+Symbol: DMA1_Channel4_IRQHandler
+   Definitions
+      At line 265 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 76 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 203 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+DMA1_Channel5_IRQHandler 0000001A
+
+Symbol: DMA1_Channel5_IRQHandler
+   Definitions
+      At line 266 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 77 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 204 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+DMA1_Channel6_IRQHandler 0000001A
+
+Symbol: DMA1_Channel6_IRQHandler
+   Definitions
+      At line 267 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 78 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 205 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+DMA1_Channel7_IRQHandler 0000001A
+
+Symbol: DMA1_Channel7_IRQHandler
+   Definitions
+      At line 268 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 79 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 206 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+DMA2_Channel1_IRQHandler 0000001A
+
+
+
+
+ARM Macro Assembler    Page 3 Alphabetic symbol ordering
+Relocatable symbols
+
+Symbol: DMA2_Channel1_IRQHandler
+   Definitions
+      At line 307 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 118 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 245 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+DMA2_Channel2_IRQHandler 0000001A
+
+Symbol: DMA2_Channel2_IRQHandler
+   Definitions
+      At line 308 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 119 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 246 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+DMA2_Channel3_IRQHandler 0000001A
+
+Symbol: DMA2_Channel3_IRQHandler
+   Definitions
+      At line 309 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 120 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 247 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+DMA2_Channel4_5_IRQHandler 0000001A
+
+Symbol: DMA2_Channel4_5_IRQHandler
+   Definitions
+      At line 310 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 121 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 248 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+DebugMon_Handler 00000014
+
+Symbol: DebugMon_Handler
+   Definitions
+      At line 173 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 56 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 174 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+Default_Handler 0000001A
+
+Symbol: Default_Handler
+   Definitions
+      At line 188 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      None
+Comment: Default_Handler unused
+EXMC_IRQHandler 0000001A
+
+Symbol: EXMC_IRQHandler
+   Definitions
+      At line 299 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 110 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 237 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+
+
+ARM Macro Assembler    Page 4 Alphabetic symbol ordering
+Relocatable symbols
+
+
+EXTI0_IRQHandler 0000001A
+
+Symbol: EXTI0_IRQHandler
+   Definitions
+      At line 257 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 68 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 195 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+EXTI15_10_IRQHandler 0000001A
+
+Symbol: EXTI15_10_IRQHandler
+   Definitions
+      At line 291 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 102 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 229 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+EXTI1_IRQHandler 0000001A
+
+Symbol: EXTI1_IRQHandler
+   Definitions
+      At line 258 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 69 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 196 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+EXTI2_IRQHandler 0000001A
+
+Symbol: EXTI2_IRQHandler
+   Definitions
+      At line 259 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 70 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 197 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+EXTI3_IRQHandler 0000001A
+
+Symbol: EXTI3_IRQHandler
+   Definitions
+      At line 260 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 71 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 198 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+EXTI4_IRQHandler 0000001A
+
+Symbol: EXTI4_IRQHandler
+   Definitions
+      At line 261 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 72 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 199 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+EXTI9_5_IRQHandler 0000001A
+
+Symbol: EXTI9_5_IRQHandler
+   Definitions
+
+
+
+ARM Macro Assembler    Page 5 Alphabetic symbol ordering
+Relocatable symbols
+
+      At line 274 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 85 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 212 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+FMC_IRQHandler 0000001A
+
+Symbol: FMC_IRQHandler
+   Definitions
+      At line 255 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 66 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 193 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+HardFault_Handler 0000000A
+
+Symbol: HardFault_Handler
+   Definitions
+      At line 148 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 47 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 149 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+I2C1_ER_IRQHandler 0000001A
+
+Symbol: I2C1_ER_IRQHandler
+   Definitions
+      At line 283 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 94 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 221 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+I2C1_EV_IRQHandler 0000001A
+
+Symbol: I2C1_EV_IRQHandler
+   Definitions
+      At line 282 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 93 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 220 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+I2C2_ER_IRQHandler 0000001A
+
+Symbol: I2C2_ER_IRQHandler
+   Definitions
+      At line 285 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 96 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 223 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+I2C2_EV_IRQHandler 0000001A
+
+Symbol: I2C2_EV_IRQHandler
+   Definitions
+      At line 284 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 95 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 222 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+
+
+
+ARM Macro Assembler    Page 6 Alphabetic symbol ordering
+Relocatable symbols
+
+LVD_IRQHandler 0000001A
+
+Symbol: LVD_IRQHandler
+   Definitions
+      At line 252 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 63 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 190 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+MemManage_Handler 0000000C
+
+Symbol: MemManage_Handler
+   Definitions
+      At line 153 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 48 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 154 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+NMI_Handler 00000008
+
+Symbol: NMI_Handler
+   Definitions
+      At line 143 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 46 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 144 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+PendSV_Handler 00000016
+
+Symbol: PendSV_Handler
+   Definitions
+      At line 178 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 58 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 179 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+RCC_IRQHandler 0000001A
+
+Symbol: RCC_IRQHandler
+   Definitions
+      At line 256 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 67 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 194 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+RTCAlarm_IRQHandler 0000001A
+
+Symbol: RTCAlarm_IRQHandler
+   Definitions
+      At line 292 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 103 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 230 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+RTC_IRQHandler 0000001A
+
+Symbol: RTC_IRQHandler
+   Definitions
+      At line 254 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+
+
+ARM Macro Assembler    Page 7 Alphabetic symbol ordering
+Relocatable symbols
+
+   Uses
+      At line 65 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 192 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+Reset_Handler 00000000
+
+Symbol: Reset_Handler
+   Definitions
+      At line 132 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 45 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 133 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+SDIO_IRQHandler 0000001A
+
+Symbol: SDIO_IRQHandler
+   Definitions
+      At line 300 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 111 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 238 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+SPI1_IRQHandler 0000001A
+
+Symbol: SPI1_IRQHandler
+   Definitions
+      At line 286 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 97 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 224 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+SPI2_IRQHandler 0000001A
+
+Symbol: SPI2_IRQHandler
+   Definitions
+      At line 287 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 98 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 225 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+SPI3_IRQHandler 0000001A
+
+Symbol: SPI3_IRQHandler
+   Definitions
+      At line 302 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 113 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 240 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+SVC_Handler 00000012
+
+Symbol: SVC_Handler
+   Definitions
+      At line 168 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 55 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 169 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+SysTick_Handler 00000018
+
+
+
+ARM Macro Assembler    Page 8 Alphabetic symbol ordering
+Relocatable symbols
+
+
+Symbol: SysTick_Handler
+   Definitions
+      At line 183 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 59 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 184 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+TAMPER_IRQHandler 0000001A
+
+Symbol: TAMPER_IRQHandler
+   Definitions
+      At line 253 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 64 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 191 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+TIMER1_BRK_IRQHandler 0000001A
+
+Symbol: TIMER1_BRK_IRQHandler
+   Definitions
+      At line 275 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 86 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 213 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+TIMER1_CC_IRQHandler 0000001A
+
+Symbol: TIMER1_CC_IRQHandler
+   Definitions
+      At line 278 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 89 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 216 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+TIMER1_TRG_COM_IRQHandler 0000001A
+
+Symbol: TIMER1_TRG_COM_IRQHandler
+   Definitions
+      At line 277 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 88 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 215 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+TIMER1_UP_IRQHandler 0000001A
+
+Symbol: TIMER1_UP_IRQHandler
+   Definitions
+      At line 276 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 87 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 214 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+TIMER2_IRQHandler 0000001A
+
+Symbol: TIMER2_IRQHandler
+   Definitions
+      At line 279 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+
+
+
+ARM Macro Assembler    Page 9 Alphabetic symbol ordering
+Relocatable symbols
+
+      At line 90 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 217 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+TIMER3_IRQHandler 0000001A
+
+Symbol: TIMER3_IRQHandler
+   Definitions
+      At line 280 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 91 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 218 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+TIMER4_IRQHandler 0000001A
+
+Symbol: TIMER4_IRQHandler
+   Definitions
+      At line 281 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 92 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 219 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+TIMER5_IRQHandler 0000001A
+
+Symbol: TIMER5_IRQHandler
+   Definitions
+      At line 301 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 112 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 239 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+TIMER6_IRQHandler 0000001A
+
+Symbol: TIMER6_IRQHandler
+   Definitions
+      At line 305 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 116 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 243 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+TIMER7_IRQHandler 0000001A
+
+Symbol: TIMER7_IRQHandler
+   Definitions
+      At line 306 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 117 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 244 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+TIMER8_BRK_IRQHandler 0000001A
+
+Symbol: TIMER8_BRK_IRQHandler
+   Definitions
+      At line 294 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 105 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 232 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+TIMER8_CC_IRQHandler 0000001A
+
+
+
+
+ARM Macro Assembler    Page 10 Alphabetic symbol ordering
+Relocatable symbols
+
+Symbol: TIMER8_CC_IRQHandler
+   Definitions
+      At line 297 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 108 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 235 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+TIMER8_TRG_COM_IRQHandler 0000001A
+
+Symbol: TIMER8_TRG_COM_IRQHandler
+   Definitions
+      At line 296 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 107 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 234 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+TIMER8_UP_IRQHandler 0000001A
+
+Symbol: TIMER8_UP_IRQHandler
+   Definitions
+      At line 295 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 106 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 233 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+UART4_IRQHandler 0000001A
+
+Symbol: UART4_IRQHandler
+   Definitions
+      At line 303 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 114 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 241 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+UART5_IRQHandler 0000001A
+
+Symbol: UART5_IRQHandler
+   Definitions
+      At line 304 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 115 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 242 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+USART1_IRQHandler 0000001A
+
+Symbol: USART1_IRQHandler
+   Definitions
+      At line 288 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 99 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 226 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+USART2_IRQHandler 0000001A
+
+Symbol: USART2_IRQHandler
+   Definitions
+      At line 289 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 100 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+
+
+ARM Macro Assembler    Page 11 Alphabetic symbol ordering
+Relocatable symbols
+
+      At line 227 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+USART3_IRQHandler 0000001A
+
+Symbol: USART3_IRQHandler
+   Definitions
+      At line 290 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 101 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 228 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+USBWakeUp_IRQHandler 0000001A
+
+Symbol: USBWakeUp_IRQHandler
+   Definitions
+      At line 293 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 104 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 231 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+USB_HP_CAN1_TX_IRQHandler 0000001A
+
+Symbol: USB_HP_CAN1_TX_IRQHandler
+   Definitions
+      At line 270 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 81 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 208 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+USB_LP_CAN1_RX0_IRQHandler 0000001A
+
+Symbol: USB_LP_CAN1_RX0_IRQHandler
+   Definitions
+      At line 271 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 82 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 209 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+UsageFault_Handler 00000010
+
+Symbol: UsageFault_Handler
+   Definitions
+      At line 163 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 50 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 164 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+WWDG_IRQHandler 0000001A
+
+Symbol: WWDG_IRQHandler
+   Definitions
+      At line 251 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 62 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+      At line 189 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+
+72 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Absolute symbols
+
+Heap_Size 00000200
+
+Symbol: Heap_Size
+   Definitions
+      At line 27 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 31 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+Comment: Heap_Size used once
+Stack_Size 00000400
+
+Symbol: Stack_Size
+   Definitions
+      At line 18 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 21 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+Comment: Stack_Size used once
+__Vectors_Size 00000130
+
+Symbol: __Vectors_Size
+   Definitions
+      At line 127 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 42 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+Comment: __Vectors_Size used once
+3 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+External symbols
+
+SystemInit 00000000
+
+Symbol: SystemInit
+   Definitions
+      At line 135 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 136 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+Comment: SystemInit used once
+__main 00000000
+
+Symbol: __main
+   Definitions
+      At line 134 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+   Uses
+      At line 138 in file ..\..\platform\GD32F103VCT6\startup_gd32f10x_hd.s
+Comment: __main used once
+2 symbols
+422 symbols in table
