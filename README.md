@@ -1,4 +1,4 @@
-![](./readme/PortingContest.png)
+![](./readme/PortingContest_2.png)
 
 本仓库将作为移植活动的代码及文档提交仓库。
 
@@ -6,9 +6,9 @@
 
 ## 活动主题：寻找移植英雄
 
-活动提供10款开发板（详见论坛帖），开发者自行选择要移植的开发板，将LiteOS成功移植并上传源码和文档到此工程，审核通过即可获得超级大礼！
+活动提供15款开发板（详见论坛帖），开发者自行选择要移植的开发板，将LiteOS成功移植并上传源码和文档到此工程，审核通过即可获得超级大礼！
 
-活动细则请参考论坛帖：http://developer.huawei.com/ict/forum/forum.php?mod=viewthread&tid=536&extra=page%3D1
+活动细则请参考论坛帖：http://developer.huawei.com/ict/forum/thread-21237.html
 
 ## 获取LiteOS源码
 
@@ -22,21 +22,24 @@
 
 ## 移植说明
 
+### 开发工具使用
+
+请使用 Keil 5.18 以上版本进行移植开发
+
+
 ### 移植指南文档
 
 源码中的文档都存放在doc目录下，也可在github上直接查看：
 
 https://github.com/LITEOS/LiteOS_Kernel/tree/master/doc
 
-- IAR工程：参考doc目录下的《<a href="https://github.com/LITEOS/LiteOS_Kernel/blob/master/doc/LiteOS_Migration_Guide_IAR.md">LiteOS_Migration_Guide_IAR.md</a>》文档
+- Keil工程移植指南：参考doc目录下的《<a href="https://github.com/LITEOS/LiteOS_Kernel/blob/master/doc/LiteOS_Migration_Guide_Keil.md">LiteOS_Migration_Guide_Keil.md</a>》文档
 
-- Keil工程：参考doc目录下的《<a href="https://github.com/LITEOS/LiteOS_Kernel/blob/master/doc/LiteOS_Migration_Guide_keil.md">LiteOS_Migration_Guide_Keil.md</a>》文档
-
-- 驱动代码适配：参考doc目录下任意已适配的开发板移植指南文档即可
+- 驱动代码适配指南：参考doc目录下任意已适配开发板的移植指南文档，比如《<a href="https://github.com/LITEOS/LiteOS_Kernel/blob/master/doc/LiteOS_Migration_Guide_stm32f411_Keil.md">LiteOS_Migration_Guide_stm32f411_Keil.md</a>》文档
 
 参赛者需要适配Key、Led、Uart等基本驱动代码到移植的工程。
 
-参赛者编写开发板移植指南文档时可参考以上文档，移植文档需要体现出具体的移植过程，可增加必要的相关说明。
+**参赛者编写开发板移植指南文档时可参考以上文档，移植文档需要体现出具体的移植过程，可增加必要的相关说明。**
 
 ### 命名规则
 
@@ -201,4 +204,4 @@ LiteOS提供了综合功能测试代码，移植后可以通过调用los_inspect
 
 如您对活动有任何疑问，欢迎在论坛发帖提问或在活动帖中留言
 
-http://developer.huawei.com/ict/forum/forum.php?mod=forumdisplay&fid=156
+http://developer.huawei.com/ict/forum/forum.php?mod=forumdisplay&fid=400045
