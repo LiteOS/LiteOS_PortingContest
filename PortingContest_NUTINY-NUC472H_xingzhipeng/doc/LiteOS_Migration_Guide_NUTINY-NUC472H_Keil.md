@@ -315,9 +315,10 @@ Keil工具需要开发者自行购买，ST-Link的驱动程序可以从st官网�
 ![](./meta/keil/nuc472h/add_file_3.png)
 
 将以上代码都拷到一个文件夹，命名Library。
+
 新建MKD5工程，将驱动拷贝到工程，新建Library目录，添加需要的文件。
  
-![](./meta/keil/nuc472h/add_file_4.png)
+![](./meta/keil/nuc472h/add_file4.png)
 
 添加启动代码，在\Keil_v5_MDK\ARM\PACK\Nuvoton\NuMicro_DFP\1.0.9\Device\NUC400\Source\ARM文件夹下startup_NUC472_442.s文件
 
@@ -335,6 +336,7 @@ Keil工具需要开发者自行购买，ST-Link的驱动程序可以从st官网�
 ### 代码修改适配
 
 - 修改main文件
+
 在main文件中添加系统时钟初始化，这段代码参考了官方提供的例程
 
 ![](./meta/keil/nuc472h/code_sys1.png)
@@ -342,11 +344,13 @@ Keil工具需要开发者自行购买，ST-Link的驱动程序可以从st官网�
 ![](./meta/keil/nuc472h/code_sys2.png)
 
 - 修改los_bsp_adapter文件
+
 在此文件中需要提供时钟配置，时钟配置为84MHz
 
 ![](./meta/keil/nuc472h/code_clk.png)
 		
 - 修改los_bsp_key文件
+
 开发板上没有按键，所以引出一个PH12脚作为按键。配置默认内部上拉，通过和地短接模拟按键。
 
 ![](./meta/keil/nuc472h/code_key1.png)
@@ -360,8 +364,8 @@ Keil工具需要开发者自行购买，ST-Link的驱动程序可以从st官网�
 ![](./meta/keil/nuc472h/code_led2.png)
 
 - 修改los_bsp_uart文件
-板载的仿真器NU-LINK-ME是V2.0版本，官方说明V3.0版本才加入虚拟串口功能。所以采用引出UART口，外接USB转UART模块的方式打印信息。
-UART调用底层驱动，实现初始化配置和发送功能。
+
+板载的仿真器NU-LINK-ME是V2.0版本，官方说明V3.0版本才加入虚拟串口功能。所以采用引出UART口，外接USB转UART模块的方式打印信息。UART调用底层驱动，实现初始化配置和发送功能。
 
 ![](./meta/keil/nuc472h/code_uart1.png)
 
