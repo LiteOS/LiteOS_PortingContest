@@ -41,17 +41,11 @@
 
 ## 2前言
 ### 目的
-
-本文档介如何移植Huawei LiteOS到第三方开发板，并成功运行基础示例。
-
+本文档介绍基于Huawei LiteOS如何移植到第三方开发板，并成功运行基础示例。
 ### 读者对象
-
-本文档主要适用于使用Huawei LiteOS Kernel进行开发的开发者。
-
+本文档主要适用于Huawei LiteOS Kernel的开发者。
 本文档主要适用于以下对象：
-
 - 物联网端软件开发工程师
-
 - 物联网架构设计师
 
 ### 符号约定
@@ -79,22 +73,17 @@
 	<td>描述</td>
 	</tr>
 	<tr>
-	<td>2017年01月17日</td>
+	<td>2017年05月03日</td>
 	<td>1.0</td>
 	<td>完成初稿</td>
 	</tr>
-    </tr>
-    <td>2017年03月10日</td>
-	<td>1.1</td>
-	<td>更新为通用移植指南，并增加移植相关注意事项及说明</td>
-	</tr>
 </table>
 
-## 3概述
+## 3 概述
 
-目前在github上已开源的Huawei LiteOS_Kernel源码已适配好STM32F412、STM32F429、STM32L476、GD32F450、GD32F190等芯片的keil示例工程，如果您使用的芯片(开发板)未在其中，可以参照本文档从零开始创建自己的发开工程，并验证移植的结果。
+目前在github上的Huawei LiteOS内核源码已适配好部分芯片的内核工程，本手册将以STM32F411RET6芯片为例，介绍基于Cortex M4核芯片的驱动移植过程。
 
-## 4环境准备
+## 4 环境准备
 基于Huawei LiteOS Kernel开发前，我们首先需要准备好单板运行的环境，包括软件环
 境和硬件环境。
 硬件环境：
@@ -105,16 +94,16 @@
 	<td>描述</td>
 	</tr>
 	<tr>
-	<td>开发板</td>
-	<td>基于Cortex-M3或Cortex-M4内核的芯片开发板</td>
+	<td>STM32 NUCLEO-F411RE单板</td>
+	<td>STM32开发板(芯片型号STM32F411RET6)</td>
 	</tr>
 	<tr>
 	<td>PC机</td>
 	<td>用于编译、加载并调试镜像</td>
 	</tr>
 	<tr>
-	<td>电源</td>
-	<td>开发板供电</td>
+	<td>电源（5v）</td>
+	<td>开发板供电(使用Mini USB连接线)</td>
 	</tr>
 </table>
 
@@ -128,34 +117,36 @@
 	</tr>
 	<tr>
 	<td>Window 7 操作系统</td>
-	<td>安装Keil和相关调试驱动的操作系统</td>
+	<td>安装Keil和st-link的操作系统</td>
 	</tr>
 	<tr>
-	<td>Keil(5.18以上版本)</td>
+	<td>Keil(5.21以上版本)</td>
 	<td>用于编译、链接、调试程序代码
-	uVision V5.18.0.0 MDK-Lite</td>
+	uVision V5.21.1.0 MDK-Lite uVersion:5.21a</td>
 	</tr>
 	<tr>
-	<td>Link驱动</td>
+	<td>stsw-link009</td>
 	<td>开发板与pc连接的驱动程序，用户加载及调试程序代码</td>
 	</tr>
 </table>
 
 **说明**
 
-Keil工具需要开发者自行购买，Link驱动程序需根据具体使用的开发板芯片来确定，开发板配套的资料中会提供，或者在使用的芯片官网下载。
+Keil工具需要开发者自行购买，ST-Link的驱动程序可以从st官网获取。
+
 
 ## 5获取Huawei LiteOS 源码
 
-首先下载Huawei LiteOS开发包，步骤如下：
+首先我们需要通过网络下载获取Huawei LiteOS开发包。目前Huawei LiteOS的代码已经
+开源，可以直接从网络上获取，步骤如下：
 
-- 仓库地址：https://github.com/LITEOS/LiteOS_Kernel.git 
+- 仓库地址是https://github.com/LITEOS/LiteOS_Kernel.git 
 ![](./meta/keil/git_down.png)
 
 - 点击”clone or download”按钮,下载源代码
 
 
-- 目录结构如下：
+- 目录结构如下：Huawei LiteOS的源代码目录的各子目录包含的内容如下：
 ![](./meta/keil/catal.png)
 
 
@@ -229,6 +220,11 @@ Keil工具需要开发者自行购买，Link驱动程序需根据具体使用的
 </tr>
 <tr>
 	<td></td>
+	<td>STM32F411RE-NUCLEO</td>
+	<td>STM32F411开发板systick以及led、uart、key驱动bsp适配代码</td>
+</tr>
+<tr>
+	<td></td>
 	<td>STM32F429I_DISCO</td>
 	<td>STM32F429开发板systick以及led、uart、key驱动bsp适配代码</td>
 </tr>
@@ -239,26 +235,6 @@ Keil工具需要开发者自行购买，Link驱动程序需根据具体使用的
 </tr>
 <tr>
 	<td></td>
-	<td>LPC824_LITE</td>
-	<td>LPC824Lite开发板systick及驱动相关代码</td>
-</tr>
-<tr>
-	<td></td>
-	<td>LPC54110_BOARD</td>
-	<td>LPC54110开发板systick及驱动相关代码</td>
-</tr>
-<tr>
-	<td></td>
-	<td>MM32F103_MINI</td>
-	<td>MM32F103开发板systick及驱动相关代码</td>
-</tr>
-<tr>
-	<td></td>
-	<td>STM32F746ZG_NUCLEO</td>
-	<td>STM32F746ZG开发板systick以及led、uart、key驱动bsp适配代码</td>
-</tr>
-<tr>
-	<td></td>
 	<td>LOS_EXPAND_XXX</td>
 	<td>用于新扩展的开发板systick以及led、uart、key驱动bsp适配代码</td>
 </tr>
@@ -266,6 +242,11 @@ Keil工具需要开发者自行购买，Link驱动程序需根据具体使用的
 	<td>projects</td>
 	<td>STM32F412ZG-NUCLEO-KEIL</td>
 	<td>stm32f412开发板的keil工程目录</td>
+</tr>
+<tr>
+	<td></td>
+	<td>STM32F411RE-NUCLEO-KEIL</td>
+	<td>stm32f411开发板的keil工程目录</td>
 </tr>
 <tr>
 	<td></td>
@@ -293,305 +274,234 @@ Keil工具需要开发者自行购买，Link驱动程序需根据具体使用的
 	<td>gd32f450开发板的keil工程目录</td>
 </tr>
 <tr>
-	<td></td>
-	<td>LPC824_LITE_KEIL</td>
-	<td>lpc824Lite开发板的keil工程目录</td>
-</tr>
-<tr>
-	<td></td>
-	<td>LPC54110_BOARD_KEIL</td>
-	<td>lpc54110开发板的keil工程目录</td>
-</tr>
-<tr>
-	<td></td>
-	<td>MM32F103_MINI_KEIL</td>
-	<td>MindMotion MM32 MiniBoard开发板的keil工程目录</td>
-</tr>
-<tr>
-	<td></td>
-	<td>STM32F746ZG-NUCLEO-KEIL</td>
-	<td>NUCLEO-F746ZG 开发板的keil工程目录</td>
-</tr>
-<tr>
 	<td>user</td>
 	<td></td>
-	<td>此目录存放用户测试代码，LiteOS的初始化和使用示例在main.c文件中</td>
+	<td>此目录存放用户测试代码，LiteOS的初始化和使用示例在main.c中</td>
 </tr>
 </table>
 
-获取Huawei LiteOS源代码之后，我们就可以开始创建自己的project开发工程了，详细内容请参考后续各章节。
 
+获取Huawei LiteOS源代码之后，我们可以将自己本地已有工程的代码适配到LiteOS内核工程中进行应用开发。
 
-## 6创建Huawei LiteOS 工程
+## 6如何适配LiteOS内核工程开发
+本章节描述的内容以stm32cubef4开发包中的UART_Printf示例工程为基础，适配到LiteOS的STM32F411RE-NUCLEO-KEIL工程中，演示串口输出、按键检测及LED点亮功能。
 
-### 6.1 创建工程
+### 获取STM32开发资料获取
 
-获取到LiteOS内核代码后，如果您本地有开发板相关的驱动代码，可以先将您本地的驱动代码库拷贝到platform\LOS_EXPAND_XXX目录下，以便添加到工程中。
+- 从ST官网搜索“stm32cubef4”，获取相应的开发包资料，网址为：http://www.st.com/content/st_com/en/products/embedded-software/mcus-embedded-software/stm32-embedded-software/stm32cube-embedded-software/stm32cubef4.html
 
-![](./meta/keil/expand/copy_file.png)
+- 从keil官网下载PACK包，网址为：http://www.keil.com/dd2/stmicroelectronics/stm32f411retx/
 
+- 下载STSW-LINK009驱动，网址为：http://www.st.com/content/st_com/en/products/embedded-software/development-tool-software/stsw-link009.html
 
-在安装好Keil等开发工具后，我们使用Keil集成开发环境创建Huawei LiteOS工程，步骤如下：
+### pack包及驱动安装
 
-- 打开Keil uVision5， 然后点击project->New uVision Project...创建一个新的工程
+- 安装Keil.STM32F4xx_DFP.2.11.0.pack或者更高版本的pack文件到keil安装目录
+ 
+- 解压en.stsw-link009.zip文件，点击stlink_winusb_install.bat，安装st-link驱动
 
-![](./meta/keil/expand/create_project.png)
+### 添加驱动代码到LiteOS工程中
+
+下载后解压缩开发包，找到\STM32Cube_FW_F4_V1.14.0\Projects\STM32F411RE-Nucleo\Examples\UART\UART_Printf\MDK-ARM下面的工程文件并打开，做为STM32F411的驱动代码移植的参考。
+
+分析STM32F411的源代码工程主要包含两个部分的内容：
+
+- STM32Cube_FW_F4_V1.14.0目录下的驱动代码
+
+![](./meta/keil/stm32f411/bsp_src1.png)
+
+- STM32Cube_FW_F4_V1.14.0\Projects\STM32F411RE-Nucleo\Examples\UART\UART_Printf工程目录下的应用适配程序
+
+![](./meta/keil/stm32f411/bsp_src2.png)
+
+将上面截图的这两部分代码拷贝到LiteOS_Kernel\platform\STM32F411RE-NUCLEO目录下，拷贝完成后如下图所示
+
+![](./meta/keil/stm32f411/bsp_src3.png)
+
+完成驱动代码拷贝后，开始添加驱动代码到工程,新建drivers目录，添加如下文件
+
+![](./meta/keil/stm32f411/bsp_src4.png)
+
+使用Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm目录下的startup_stm32f411xe.s文件替换工程startup目录下的los_startup_keil.s文件
+
+![](./meta/keil/stm32f411/bsp_src5.png)
+
+替换LiteOS工程启动文件后，使用中断时不需再使用LiteOS中断注册接口进行注册。
+
+
+**添加头文件搜索路径**
+
+![](./meta/keil/stm32f411/folder_setup.png)
+
+**添加编译宏选项**
+
+![](./meta/keil/stm32f411/add_macro.png)
+
+### 代码修改适配
+
+- 在main.c文件中添加代码如下
+
+		#include "stm32f4xx_hal.h"	
+		
+		/**
+		  * @brief  This function is executed in case of error occurrence.
+		  * @param  None
+		  * @retval None
+		  */
+		static void Error_Handler(void)
+		{
+		  /* Turn LED2 on */
+		  BSP_LED_On(LED2);
+		  while(1)
+		  {
+		  }
+		}
+		
+		/**
+		  * @brief  System Clock Configuration
+		  *         The system Clock is configured as follow : 
+		  *            System Clock source            = PLL (HSI)
+		  *            SYSCLK(Hz)                     = 100000000
+		  *            HCLK(Hz)                       = 100000000
+		  *            AHB Prescaler                  = 1
+		  *            APB1 Prescaler                 = 2
+		  *            APB2 Prescaler                 = 1
+		  *            HSI Frequency(Hz)              = 16000000
+		  *            PLL_M                          = 16
+		  *            PLL_N                          = 400
+		  *            PLL_P                          = 4
+		  *            PLL_Q                          = 7
+		  *            VDD(V)                         = 3.3
+		  *            Main regulator output voltage  = Scale2 mode
+		  *            Flash Latency(WS)              = 3
+		  * @param  None
+		  * @retval None
+		  */
+		static void SystemClock_Config(void)
+		{
+		  RCC_ClkInitTypeDef RCC_ClkInitStruct;
+		  RCC_OscInitTypeDef RCC_OscInitStruct;
+		
+		  /* Enable Power Control clock */
+		  __HAL_RCC_PWR_CLK_ENABLE();
+		  
+		  /* The voltage scaling allows optimizing the power consumption when the device is 
+		     clocked below the maximum system frequency, to update the voltage scaling value 
+		     regarding system frequency refer to product datasheet.  */
+		  __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE2);
+		  
+		  /* Enable HSI Oscillator and activate PLL with HSI as source */
+		  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
+		  RCC_OscInitStruct.HSIState = RCC_HSI_ON;
+		  RCC_OscInitStruct.HSICalibrationValue = 0x10;
+		  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+		  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
+		  RCC_OscInitStruct.PLL.PLLM = 16;
+		  RCC_OscInitStruct.PLL.PLLN = 400;
+		  RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV4;
+		  RCC_OscInitStruct.PLL.PLLQ = 7;
+		  if(HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+		  {
+		    Error_Handler();
+		  }
+		  
+		  /* Select PLL as system clock source and configure the HCLK, PCLK1 and PCLK2 
+		     clocks dividers */
+		  RCC_ClkInitStruct.ClockType = (RCC_CLOCKTYPE_SYSCLK | RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2);
+		  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
+		  RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+		  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;  
+		  RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;  
+		  if(HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_3) != HAL_OK)
+		  {
+		    Error_Handler();
+		  }
+		}
+
+- 修改main.c文件中main()函数
+
+		/*****************************************************************************
+		Function    : main
+		Description : Main function entry
+		Input       : None
+		Output      : None
+		Return      : None
+		 *****************************************************************************/
+		LITE_OS_SEC_TEXT_INIT
+		int main(void)
+		{
+		    UINT32 uwRet;
+		    /*
+		        add you hardware init code here
+		        for example flash, i2c , system clock ....
+		    */
+		    HAL_Init();
+		    SystemClock_Config();
+		
+		    /*Init LiteOS kernel */
+		    uwRet = LOS_KernelInit();
+		    if (uwRet != LOS_OK) {
+		        return LOS_NOK;
+		    }
+
+		    /* Enable LiteOS system tick interrupt */
+		    LOS_EnableTick();
+		
+		    /*
+		        Notice: add your code here
+		        here you can create task for your function 
+		        do some hw init that need after systemtick init
+		     */
+		    LOS_EvbSetup();//init the device on the dev baord
+		
+		    //LOS_Demo_Entry();
+		
+		    LOS_Inspect_Entry();
+		
+		    //LOS_BoadExampleEntry();
+		
+		    /* Kernel start to run */
+		    LOS_Start();
+		    for (;;);
+		    /* Replace the dots (...) with your own code. */
+		}
+
+- 修改los_bsp_adapter.c文件中的sys_clk_freq变量值与实际配置的系统时钟一致
+
+	    const unsigned int sys_clk_freq = 100000000;
+
+### 编译运行
+
+经过以上步骤，完成了代码的初步移植，接下来可以编译代码,连接串口线（事先安装串口驱动）并在串口调试工具中打开相应串口，设置波特率为115200，调试运行时可看到串口会打印输出内核巡检结果，按开发板上的USER键，LED2灯点，串口输出“Key test example”，松开按键LED2熄灭。
+
+**关于串口输出乱码说明**
+
+部分USB转串口连接后会出现打印乱码的现象，建议更换较短或其他型号的串口线调试。
+
+## 7 其他说明
+
+###如何使用LiteOS 开发###
+
+LiteOS中提供的功能包括如下内容： 任务创建与删除、任务同步（信号量、互斥锁）、动态中断注册机制等等内容，详细内容请参考《HuaweiLiteOSKernelDevGuide》。
+
+###从零开始创建LiteOS工程###
+
+目前在LiteOS的源代码的projects目录下已附带一些开发板的内核示例工程，用户可以直接使用，如果您所使用的开发板（芯片型号）与在示例工程中找不到，您可以从零开始创建LiteOS工程，创建流程请参考《LiteOS_Migration_Guide_Keil》。
+
+###关于中断向量位置选择###
+
+如果您需要使用LiteOS的中断注册机制，详细内容请参考《LiteOS_Migration_Guide_Keil》。
+
+### kernel API测试代码 ###
+
+如果您需要测试LiteOS内核工程运行情况，详细内容请参考《LiteOS_Migration_Guide_Keil》。
 
-- 新建保存工程的文件夹LiteOS_xxx_Expand,保存工程名，比如HuaweiLiteOS
 
-![](./meta/keil/expand/save_project.png)
 
-- 保存后会立即弹出芯片型号选择的窗口，根据实际的开发板的芯片进行选择，比如您使用的是stm32f429zi芯片。
-![](./meta/keil/select_device.png)
 
-- 然后选择要包含的开发基础库，比如CMSIS、DEVICE两个选项可以选择平台提供的支持包和启动汇编文件，目前LiteOS有提供的启动文件是配合中断动态注册功能使用的，如果您不需要进行中断动态注册，可以勾选startup，也可以在工程建好后手动添加启动文件，此处选择"OK"直接跳过。
 
-![](./meta/keil/expand/time_environment.png)
 
-至此，我们的工程已经创建完成，如下图所示：
 
-![](./meta/keil/expand/create_finish.png)
 
 
-完成上面的芯片和支持包选择之后，可以将内核源代码添加到工程中。
 
-### 6.2 添加kernel代码到工程
-
-- 创建LiteOS的相关目录层级
-
-![](./meta/keil/expand/add_catal.png)
-
-创建完成目录树之后我们添加源代码到目录树中，最终添加完成的内容如下：
-
-- 将kernel/base目录下的所有C文件添加到工程中的kernel下
-- 将kernel/cmsis目录下的所有C文件添加到工程中的cmsis下。
-- 将platform\LOS_EXPAND_XXX目录下的所有C文件添加到工程中的platform/expand_xxx下(expand_xxx文件夹名字可自行修改)
-- 根据芯片内核型号，将kernel\cpu\arm\cortex-m4（或者cortex-m3）目录下的所有C文件以及汇编代码添加到工程中的cpu/m4（cpu/m3）下
-- 将kernel\config目录下的所有C文件添加到工程中的config下
-- 将user目录下的所有C文件添加到工程中的user下
-- 如果需要使用中断动态注册功能或者本地没有可用的启动文件，可以将platform\LOS_EXPAND_XXX目录下的los_startup_keil.s汇编文件添加到工程中的startup目录下，或者添加芯片官方提供的启动文件，比如您使用的是stm32f429zi芯片，可添加startup_stm32f429xx.s文件
-- 将\platform\LOS_EXPAND_XXX\Library目录下的驱动文件添加到工程的library目录下
-- 添加example/api目录下的所有C文件到工程的example目录下
-
-完成代码添加后的工程目录如下图
-
-![](./meta/keil/expand/add_file.png)
-
-
-### 6.3 配置工程属性
-
-- 配置target，如果需要调试log输出（printf）到IDE，可以选择Use MicroLib。
-
-![](./meta/keil/use_microlib.png)
-
-- 编译C/C++设置中勾选C99选项
-
-![](./meta/keil/select_c99.png)
-
-- 配置头文件搜索路径,可参考图片中所示内容
-
-..\..\kernel\base\include;
-
-..\..\kernel\include;
-
-..\..\kernel\config;
-
-..\..\kernel\cmsis;
-
-..\..\kernel\link\keil;
-
-..\..\kernel\cpu\arm\cortex-m4;
-
-..\..\example\include;
-
-..\..\platform\LOS_EXPAND_XXX;
-
-..\..\platform\LOS_EXPAND_XXX_Library;
-
-![](./meta/keil/expand/folder_setup.png)
-
-说明：添加kernel\cpu\arm\cortex-m4（或cortex-m3），需要根据实际使用的cpu型号来添加。
-
-- 配置分散加载文件
-
-![](./meta/keil/expand/conf_sct.png)
-
-如果您需要使用中断动态注册功能，则需要配套使用分散机制。本示例中未使用分散加载机制，可参考源码中其他工程的分散加载文件自己编写。
-
-其他适配工程中的分散加载文件存放在platform目录下每个开发板自己的文件夹中，比如：\platform\STM32F429I_DISCO\STM32F429I-LiteOS.sct
-
-stm32f429的配置文件内容如下：
-
-![](./meta/keil/sct_file.png)
-
-说明：分散配置文件中增加的是vector（中断向量表）的内容，LiteOS的中断向量表定义的是0x400大小。如果不了解分散加载文件可以参考IDE的help中有关sct文件的说明，或者baidu、google分散加载文件相关内容。
-
-- 配置debug使用的驱动，比如您使用的是stm32f429zi芯片，则使用选择ST-Link。
-
-![](./meta/keil/conf_debug.png)
-
-
-- 如果需要使用printf输出调试log，可以使用软件仿真的方式。
-
-![](./meta/keil/conf_debug_sim.png)
-
-
-## 7适配驱动代码
-
-如果您不需要适配驱动代码到工程，可忽略此章。
-
-- 内核代码中提供了bsp适配的框架代码，存放在LOS_EXPAND_XXX文件夹下
-
-![](./meta/keil/expand/add_src_Expand.png)
-
-- 前面已经完成了驱动适配代码及驱动代码的添加(驱动代码可根据您需要使用的具体功能来添加)，祥见下图
-
-![](./meta/keil/expand/add_src_platform.png)
-
-- 根据本地Library代码提供的接口函数，来实现LiteOS中相关的bsp接口函数
-
-（1）修改los_bsp_adapter.c文件，配置系统时钟及SysTick，适配sysTick_Handler函数；
-
-（2）实现los_bsp_led.c、los_bsp_key.c、los_bsp_uart.c等文件中提供的空函数。
-
-- 空函数的具体实现可参考源码中已适配的其他工程中同名的文件，如有其他需要增加的驱动功能，可以在同级目录下添加相关文件。
-  
-- 将驱动代码添加到内核工程更详细的过程可参考源码doc目录下其他开发板的移植指南文档。
-
-## 8如何验证移植后的工程
-
-如果您需要验证移植后的LiteOS内核功能，可以参考本章内容。
-
-### 8.1 API测试代码使用
-
-- 目前LiteOS提供了单独测试每个功能的api代码，可在main()函数中调用los_demo_entry.c文件中的LOS_Demo_Entry()函数，并放开相应的宏定义。
-
-- 如果需要一次测试内核所有的功能，则可调用los_inspect_entry.c文件中的LOS_Inspect_Entry()函数。
-
-- LiteOS最小需要占用8K的RAM,使用Inspect巡检功能需要再增加1k RAM，不满足此要求的芯片请使用API单项测试功能。
-
-![](./meta/keil/expand/add_src_example.png) 
-
-示例代码如下：
-
-    extern void LOS_Demo_Entry(void)；
-    int main(void)
-    {
-        UINT32 uwRet;
-        /*
-    		add you hardware init code here
-    		for example flash, i2c , system clock ....
-        */
-    	//HAL_init();....
-    	
-    	/*Init LiteOS kernel */
-        uwRet = LOS_KernelInit();
-        if (uwRet != LOS_OK) {
-            return LOS_NOK;
-        }
-    	/* Enable LiteOS system tick interrupt */
-        LOS_EnableTick();
-    	
-        /* 
-            Notice: add your code here
-            here you can create task for your function 
-            do some hw init that need after systemtick init
-        */
-        LOS_EvbSetup(); 
-    
-        LOS_Demo_Entry();	
-        
-        //LOS_Inspect_Entry();
-        
-    	//LOS_BoadExampleEntry();	
-    		
-        /* Kernel start to run */
-        LOS_Start();
-        for (;;);
-        /* Replace the dots (...) with your own code.  */
-    }
-
-**如何选择测试的功能：**
-
-- 在example\include\los_demo_entry.h 打开要测试的功能的宏开关LOS_KERNEL_TEST_xxx，比如测试task调度打开 LOS_KERNEL_TEST_TASK 即可（//#define LOS_KERNEL_TEST_TASK 修改为 #define LOS_KERNEL_TEST_TASK）
-
-- 中断测试无法在软件仿真的情况下测试, 如需进行中断功能测试，请自行添加中断初始化相关内容到Example_Exti0_Init函数。
-
-**在keil中使用printf打印的方法**
-
-- 将printf重定向到uart输出，需要uart驱动支持，如果没有适配串口驱动代码，则不建议使用该方法。
-
-- 使用软件仿真的方式在keil IDE的debug printf view中查看，将los_demo_debug.h中的LOS_KERNEL_DEBUG_OUT及LOS_KERNEL_TEST_KEIL_SWSIMU宏定义打开（如果是在IAR工程中则不需要打开LOS_KERNEL_TEST_KEIL_SWSIMU）。
-
-### 8.2 编译调试
-- 打开工程后，菜单栏Project→Clean Targets、Build target、Rebuild All target files，可编译文件。点击Rebuild All target file，编译全部文件
-
-![](./meta/keil/target_build.png)
-
-- 调试运行代码，查看测试结果输出：
-
-(1)如果调用LOS_Demo_Entry()函数进行测试，可根据《HuaweiLiteOSKernelDevGuide》文档中列出每项API功能测试结果来进行对比判断。
-
-(2)如果调用LOS_Inspect_Entry()函数进行功能巡检，gInspectErrCnt值为0则代表移植成功。
-
-![](./meta/keil/expand/inspect_result.png)
-
-## 9如何使用LiteOS 开发
-
-LiteOS中提供的功能包括如下内容： 任务创建与删除、任务同步（信号量、互斥锁）、动态中断注册机制 等等内容，更详细的内容可以参考“HuaweiLiteOSKernelDevGuide”中描述的相关内容。下面章节将对任务和中断进行说明。
-
-### 9.1 创建任务
-
-- 用户使用LOS_TaskCreate(...)等接口来进行任务的创建。具体可以参考example/api/los_api_task.c中的使用方法来创建管理任务。
-
-### 9.2 中断处理
-#### Huawei LiteOS 的中断使用
-在驱动开发的过程中我们通常会使用到中断，Huawei LiteOS有一套自己的中断的逻辑，在使用每个中断前需要为其注册相关的中断处理程序。
-
-- OS启动后，RAM起始地址是0x20000000到0x20000400，用来存放中断向量表，系统启动的汇编代码中只将reset功能写入到了对应的区域，系统使用一个全局的m_pstHwiForm[ ]来管理中断。m3以及m4核的前16个异常处理程序都是直接写入m_pstHwiForm[]这个数组的。
-
-- 开发者需要使用某些中断(m3以及m4中非前16个异常)时，可以通过LOS_HwiCreate (…)接口来注册自己的中断处理函数。如果驱动卸载还可以通过LOS_HwiDelete(….)来删除已注册的中断处理函数。系统还提供了LOS_IntLock()关中断及LOS_IntRestore()恢复到中断前状态等接口。详细的使用方法可以参考LiteOS中已经使用的地方。
-
-- LiteOS中断机制会额外地使用2K的RAM，跟大部分开发板bsp代码包中的机制不一样。如果没有动态修改中断处理函数的需要，用户可以选择不使用该中断机制，简单的方法是在los_bsp_adapter.c中将g_use_ram_vect变量设置为0，并且在配置工程时不配置分散加载文件。这样就可以使用demo板bsp包中提供的中断方式。
-
-- 如果使用LiteOS的中断机制，那么在启动LiteOS之前，请先将所有用到的中断都用LOS_HwiCreate()完成注册，否则在完成中断注册前就初始化了相关的硬件以及中断会直接进入osHwiDefaultHandler()导致程序无法正常运行。
-- los_bsp_adapter.c中LosAdapIntInit() LosAdapIrpEnable() LosAdapIrqDisable（）等接口都可以调用BSP包中的接口实现。
-
-
-**关于中断向量位置选择**
-
-- 在los_bsp_adapter.c中，g_use_ram_vect变量控制了LiteOS中是否使用vector向量表（中断向量表）重定向功能。如果g_use_ram_vect设置为 1 ，则需要在配置分散加载文件，如果配置为0，则不配置分散加载文件（即在上面的配置步骤中可以不进行分散加载文件配置），系统启动后默认中断向量表在Rom的0x00000000地址。
-
-###  9.3 系统tick中断配置修改
-
-- los_bsp_adapter.c中修改后的osTickStart()函数，比如在该函数中直接调用BSP包中的接口配置system tick，在stm32中可以调用SysTick_Config(g_ucycle_per_tick);
-- 根据实际配置的system clock 修改sys_clk_freq的值，工程中给出的值都是默认时钟频率。比如stm32f429的默认时钟是16M HZ。
-
-### 9.4 LiteOS资源配置
-
-- 对于嵌入式系统来说，内存都是比较宝贵的资源，因此一般的程序都会严格管理内存使用，LiteOS也一样。在LiteOS中系统资源使用g_ucMemStart[OS_SYS_MEM_SIZE]作为内存池，来管理任务、信号量等等资源的创建，总共是32K。而留给用户创建的task的的个数则是LOSCFG_BASE_CORE_TSK_LIMIT（15）.
-
-- LiteOS中的内存使用都是在los_config.h中进行配置的，需要使用多大的内存，可以根据实际的task个数、信号量、互斥锁、timer、消息队列、链表等内容的个数来决定的（根据各自的结构体大小以及个数计算），总的内存池的大小是OS_SYS_MEM_SIZE来定义的。
-
-- LiteOS的中断机制，目前使用了2K的内存。
-
-###  9.5 移植cortex-m3/m4以外其他内核的芯片
-
-- 移植LiteOS到其他内核的芯片时，需要在kernel\cpu下去添加一个芯片所属系列的目录，并且在该新增加的目录下添加los_dispatch，los_hw.c、los_hw_tick、los_hwi这些文件。dispatch文件主要实现task调度相关的处理以及开关中断获取中断号等内容，los_hw.c中实现的task调度时需要保存的寄存器等内容，los_hwi则是中断的相关内容，los_hw_tick则是系统tick中断处理以及获取tick等的实现。
-
-
-## 其他说明
-
-- 对于RAM较小的芯片，请参照los_config.h文件中的注释，在工程中定义相关的编译宏，否则会出现编译失败（RAM大于32k可不定义）。
-
-		/* default LiteOS ram size level 
-			RAM_SIZE_LEVEL_0 means kernel ram < 8k  , 
-			RAM_SIZE_LEVEL_1 means kernel ram < 16k, 
-			RAM_SIZE_LEVEL_2 means means kernel ram>=32k 
-		*/
-
-- 目前在LiteOS的源代码中有一些已经创建好了的工程，移植到新的开发板(芯片)时可参考源码中的这些工程。
-
-- 详细的应用编程API请参考《HuaweiLiteOSKernelDevGuide》。
-
-- FatFs文件系统移植请参考《LiteOS_Migration_Guide_FatFs_Keil.md》。
