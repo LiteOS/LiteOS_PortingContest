@@ -380,11 +380,11 @@ UART调用底层驱动，实现初始化配置和发送功能。
 
 不按按键
 
- ![](./meta/keil/nuc472h/LEDOFF.png)
+ ![](./meta/keil/nuc472h/LEDOFF.JPG)
  
 按下按键
 
-![](./meta/keil/nuc472h/LEDON.png)
+![](./meta/keil/nuc472h/LEDON.JPG)
 
 **关于串口输出乱码说明**
 
