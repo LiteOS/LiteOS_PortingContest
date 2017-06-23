@@ -284,195 +284,107 @@ Keil工具需要开发者自行购买，ST-Link的驱动程序可以从st官网�
 获取Huawei LiteOS源代码之后，我们可以将自己本地已有工程的代码适配到LiteOS内核工程中进行应用开发。
 
 ## 6如何适配LiteOS内核工程开发
-本章节描述的内容以stm32cubef4开发包中的UART_Printf示例工程为基础，适配到LiteOS的STM32F411RE-NUCLEO-KEIL工程中，演示串口输出、按键检测及LED点亮功能。
+本章节描述的内容以NUC400开发包中的GPIO示例工程为基础，适配到LiteOS的NUTINY-NUC472H-KEIL工程中，演示串口输出、按键检测及LED点亮功能。
 
-### 获取STM32开发资料获取
+### 获取NUTINY开发资料获取
 
-- 从ST官网搜索“stm32cubef4”，获取相应的开发包资料，网址为：http://www.st.com/content/st_com/en/products/embedded-software/mcus-embedded-software/stm32-embedded-software/stm32cube-embedded-software/stm32cubef4.html
+- 登录nuvoton官网获取相应的开发包资料，网址为：http://www.nuvoton.com.cn/hq/support/tool-and-software/development-tool-hardware/development-kit/?__locale=zh 找到NuTiny-SDK-NUC472H
+ 
+- 从keil官网下载PACK包，网址为：http://www.keil.com/dd2/nuvoton/nuc472hi8ae/
 
-- 从keil官网下载PACK包，网址为：http://www.keil.com/dd2/stmicroelectronics/stm32f411retx/
-
-- 下载STSW-LINK009驱动，网址为：http://www.st.com/content/st_com/en/products/embedded-software/development-tool-software/stsw-link009.html
-
+- 下载Nu-Link驱动，网址为：http://www.nuvoton.com.cn/opencms/products/microcontrollers/arm-cortex-m4-mcus/nuc442-472-series/Software/?__locale=zh&resourcePage=Y 找到Nu-Link_Keil_Driver_V2.01.6592
+ 
 ### pack包及驱动安装
 
-- 安装Keil.STM32F4xx_DFP.2.11.0.pack或者更高版本的pack文件到keil安装目录
+- 安装Nuvoton.NuMicro_DFP.1.0.9.pack或者更高版本的pack文件到keil安装目录
  
-- 解压en.stsw-link009.zip文件，点击stlink_winusb_install.bat，安装st-link驱动
+- 解压Nu-Link_Keil_Driver_V2.01.6592.zip文件，点击Nu-Link_Keil_Driver 2.01.6592.exe，安装Nu-Link驱动
 
 ### 添加驱动代码到LiteOS工程中
 
-下载后解压缩开发包，找到\STM32Cube_FW_F4_V1.14.0\Projects\STM32F411RE-Nucleo\Examples\UART\UART_Printf\MDK-ARM下面的工程文件并打开，做为STM32F411的驱动代码移植的参考。
+安装完PACK包，找到\Keil_v5_MDK\ARM\PACK\Nuvoton\NuMicro_DFP\1.0.9\Boards\NUC400\StdDriver下面的GPIO工程文件并打开，做为NUC472的驱动代码移植的参考。
 
-分析STM32F411的源代码工程主要包含两个部分的内容：
+![](./meta/keil/nuc472h/add_file_1.png)
 
-- STM32Cube_FW_F4_V1.14.0目录下的驱动代码
+\Keil_v5_MDK\ARM\PACK\Nuvoton\NuMicro_DFP\1.0.9\Device\NUC400路径下3个文件夹为底层驱动文件。
 
-![](./meta/keil/stm32f411/bsp_src1.png)
+![](./meta/keil/nuc472h/add_file_2.png)
 
-- STM32Cube_FW_F4_V1.14.0\Projects\STM32F411RE-Nucleo\Examples\UART\UART_Printf工程目录下的应用适配程序
+\Keil_v5_MDK\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include为底层驱动包含的系统文件。
+ 
+![](./meta/keil/nuc472h/add_file_3.png)
 
-![](./meta/keil/stm32f411/bsp_src2.png)
+将以上代码都拷到一个文件夹，命名Library。
+新建MKD5工程，将驱动拷贝到工程，新建Library目录，添加需要的文件。
+ 
+![](./meta/keil/nuc472h/add_file_4.png)
 
-将上面截图的这两部分代码拷贝到LiteOS_Kernel\platform\STM32F411RE-NUCLEO目录下，拷贝完成后如下图所示
-
-![](./meta/keil/stm32f411/bsp_src3.png)
-
-完成驱动代码拷贝后，开始添加驱动代码到工程,新建drivers目录，添加如下文件
-
-![](./meta/keil/stm32f411/bsp_src4.png)
-
-使用Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm目录下的startup_stm32f411xe.s文件替换工程startup目录下的los_startup_keil.s文件
-
-![](./meta/keil/stm32f411/bsp_src5.png)
+添加启动代码，在\Keil_v5_MDK\ARM\PACK\Nuvoton\NuMicro_DFP\1.0.9\Device\NUC400\Source\ARM文件夹下startup_NUC472_442.s文件
 
 替换LiteOS工程启动文件后，使用中断时不需再使用LiteOS中断注册接口进行注册。
 
 
 **添加头文件搜索路径**
 
-![](./meta/keil/stm32f411/folder_setup.png)
+![](./meta/keil/nuc472h/keil_set2.png)
 
 **添加编译宏选项**
 
-![](./meta/keil/stm32f411/add_macro.png)
+![](./meta/keil/nuc472h/keil_set1.png)
 
 ### 代码修改适配
 
-- 在main.c文件中添加代码如下
+- 修改main文件
+在main文件中添加系统时钟初始化，这段代码参考了官方提供的例程
 
-		#include "stm32f4xx_hal.h"	
+![](./meta/keil/nuc472h/code_sys1.png)
 		
-		/**
-		  * @brief  This function is executed in case of error occurrence.
-		  * @param  None
-		  * @retval None
-		  */
-		static void Error_Handler(void)
-		{
-		  /* Turn LED2 on */
-		  BSP_LED_On(LED2);
-		  while(1)
-		  {
-		  }
-		}
-		
-		/**
-		  * @brief  System Clock Configuration
-		  *         The system Clock is configured as follow : 
-		  *            System Clock source            = PLL (HSI)
-		  *            SYSCLK(Hz)                     = 100000000
-		  *            HCLK(Hz)                       = 100000000
-		  *            AHB Prescaler                  = 1
-		  *            APB1 Prescaler                 = 2
-		  *            APB2 Prescaler                 = 1
-		  *            HSI Frequency(Hz)              = 16000000
-		  *            PLL_M                          = 16
-		  *            PLL_N                          = 400
-		  *            PLL_P                          = 4
-		  *            PLL_Q                          = 7
-		  *            VDD(V)                         = 3.3
-		  *            Main regulator output voltage  = Scale2 mode
-		  *            Flash Latency(WS)              = 3
-		  * @param  None
-		  * @retval None
-		  */
-		static void SystemClock_Config(void)
-		{
-		  RCC_ClkInitTypeDef RCC_ClkInitStruct;
-		  RCC_OscInitTypeDef RCC_OscInitStruct;
-		
-		  /* Enable Power Control clock */
-		  __HAL_RCC_PWR_CLK_ENABLE();
-		  
-		  /* The voltage scaling allows optimizing the power consumption when the device is 
-		     clocked below the maximum system frequency, to update the voltage scaling value 
-		     regarding system frequency refer to product datasheet.  */
-		  __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE2);
-		  
-		  /* Enable HSI Oscillator and activate PLL with HSI as source */
-		  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
-		  RCC_OscInitStruct.HSIState = RCC_HSI_ON;
-		  RCC_OscInitStruct.HSICalibrationValue = 0x10;
-		  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
-		  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
-		  RCC_OscInitStruct.PLL.PLLM = 16;
-		  RCC_OscInitStruct.PLL.PLLN = 400;
-		  RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV4;
-		  RCC_OscInitStruct.PLL.PLLQ = 7;
-		  if(HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
-		  {
-		    Error_Handler();
-		  }
-		  
-		  /* Select PLL as system clock source and configure the HCLK, PCLK1 and PCLK2 
-		     clocks dividers */
-		  RCC_ClkInitStruct.ClockType = (RCC_CLOCKTYPE_SYSCLK | RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2);
-		  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
-		  RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
-		  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;  
-		  RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;  
-		  if(HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_3) != HAL_OK)
-		  {
-		    Error_Handler();
-		  }
-		}
+![](./meta/keil/nuc472h/code_sys2.png)
 
-- 修改main.c文件中main()函数
+- 修改los_bsp_adapter文件
+在此文件中需要提供时钟配置，时钟配置为84MHz
 
-		/*****************************************************************************
-		Function    : main
-		Description : Main function entry
-		Input       : None
-		Output      : None
-		Return      : None
-		 *****************************************************************************/
-		LITE_OS_SEC_TEXT_INIT
-		int main(void)
-		{
-		    UINT32 uwRet;
-		    /*
-		        add you hardware init code here
-		        for example flash, i2c , system clock ....
-		    */
-		    HAL_Init();
-		    SystemClock_Config();
+![](./meta/keil/nuc472h/code_clk.png)
 		
-		    /*Init LiteOS kernel */
-		    uwRet = LOS_KernelInit();
-		    if (uwRet != LOS_OK) {
-		        return LOS_NOK;
-		    }
+- 修改los_bsp_key文件
+开发板上没有按键，所以引出一个PH12脚作为按键。配置默认内部上拉，通过和地短接模拟按键。
 
-		    /* Enable LiteOS system tick interrupt */
-		    LOS_EnableTick();
-		
-		    /*
-		        Notice: add your code here
-		        here you can create task for your function 
-		        do some hw init that need after systemtick init
-		     */
-		    LOS_EvbSetup();//init the device on the dev baord
-		
-		    //LOS_Demo_Entry();
-		
-		    LOS_Inspect_Entry();
-		
-		    //LOS_BoadExampleEntry();
-		
-		    /* Kernel start to run */
-		    LOS_Start();
-		    for (;;);
-		    /* Replace the dots (...) with your own code. */
-		}
+![](./meta/keil/nuc472h/code_key1.png)
 
-- 修改los_bsp_adapter.c文件中的sys_clk_freq变量值与实际配置的系统时钟一致
+![](./meta/keil/nuc472h/code_key2.png)
 
-	    const unsigned int sys_clk_freq = 100000000;
+- 修改los_bsp_led文件
+
+![](./meta/keil/nuc472h/code_led1.png)
+
+![](./meta/keil/nuc472h/code_led2.png)
+
+- 修改los_bsp_uart文件
+板载的仿真器NU-LINK-ME是V2.0版本，官方说明V3.0版本才加入虚拟串口功能。所以采用引出UART口，外接USB转UART模块的方式打印信息。
+UART调用底层驱动，实现初始化配置和发送功能。
+
+![](./meta/keil/nuc472h/code_uart1.png)
+
+![](./meta/keil/nuc472h/code_uart2.png)
+
+![](./meta/keil/nuc472h/code_uart3.png)
 
 ### 编译运行
 
-经过以上步骤，完成了代码的初步移植，接下来可以编译代码,连接串口线（事先安装串口驱动）并在串口调试工具中打开相应串口，设置波特率为115200，调试运行时可看到串口会打印输出内核巡检结果，按开发板上的USER键，LED2灯点，串口输出“Key test example”，松开按键LED2熄灭。
+经过以上步骤，完成了代码的初步移植，接下来可以编译代码,连接串口线（事先安装串口驱动）并在串口调试工具中打开相应串口，设置波特率为115200，调试运行时可看到串口会打印输出内核巡检结果，按下按键，LED点亮，串口输出“Key test example”，松开按键LED熄灭。
+打印信息
+
+![](./meta/keil/nuc472h/uart_printf1.png)
+
+![](./meta/keil/nuc472h/uart_printf2.png)
+
+不按按键
+
+ ![](./meta/keil/nuc472h/LEDOFF.png)
+ 
+按下按键
+
+![](./meta/keil/nuc472h/LEDON.png)
 
 **关于串口输出乱码说明**
 
