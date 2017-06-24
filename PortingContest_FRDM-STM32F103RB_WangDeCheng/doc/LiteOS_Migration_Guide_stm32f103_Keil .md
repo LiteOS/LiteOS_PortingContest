@@ -81,7 +81,7 @@
 
 ## 3 概述
 
-目前在github上的Huawei LiteOS内核源码已适配好部分芯片的内核工程，本手册将以stm32F103RBT6芯片为例，介绍基于Cortex M4核芯片的驱动移植过程。
+目前在github上的Huawei LiteOS内核源码已适配好部分芯片的内核工程，本手册将以stm32F103RBT6芯片为例，介绍基于Cortex M3核芯片的驱动移植过程。
 
 ## 4 环境准备
 基于Huawei LiteOS Kernel开发前，我们首先需要准备好单板运行的环境，包括软件环
@@ -94,7 +94,7 @@
 	<td>描述</td>
 	</tr>
 	<tr>
-	<td>STM32 NUCLEO-F103Rb单板</td>
+	<td>STM32 NUCLEO-F103RB单板</td>
 	<td>STM32开发板(芯片型号STM32F103RBT6)</td>
 	</tr>
 	<tr>
@@ -102,7 +102,7 @@
 	<td>用于编译、加载并调试镜像</td>
 	</tr>
 	<tr>
-	<td>电源（5v）</td>
+	<td>电源（5V）</td>
 	<td>开发板供电(使用Mini USB连接线)</td>
 	</tr>
 </table>
@@ -116,7 +116,7 @@
 	<td>描述</td>
 	</tr>
 	<tr>
-	<td>Window 7 操作系统</td>
+	<td>Window 10 操作系统</td>
 	<td>安装Keil和st-link的操作系统</td>
 	</tr>
 	<tr>
@@ -309,6 +309,7 @@ Keil工具需要开发者自行购买，ST-Link的驱动程序可以从st官网�
 
 在platform目录下新建文件夹STM32F103RB-NUCLEO将platform\LOS_EXPAND_XXX目录下的所有文件拷贝到platform\STM32F103RB-NUCLEO目录下，然后在platform\STM32F103RB-NUCLEO目录下创建Labaries文件夹和local文件夹
 ![](./meta/keil/stm32f103/bsp_folder.png)
+
 将STM32F1xx的驱动文件拷贝到Labaries/FWlib文件夹下,将启动文件startup_stm32f10x_md.s拷贝到Labaries/CMSIS/startup文件夹下
 ![](./meta/keil/stm32f103/bsp_libaries.png)
 ![](./meta/keil/stm32f103/bsp_fwlibinc.png)
@@ -338,7 +339,6 @@ Keil工具需要开发者自行购买，ST-Link的驱动程序可以从st官网�
 至此，我们的工程已经创建完成，如下图所示：
 
 ![](./meta/keil/expand/create_finish.png)
-
 
 完成上面的芯片和支持包选择之后，可以将内核源代码添加到工程中。
 
@@ -417,23 +417,22 @@ stm32f103的配置文件内容如下：
 
 ![](./meta/keil/stm32f103/bsp_debug.png)
 
-
 - 如果需要使用printf输出调试log，可以使用软件仿真的方式。
 
 ![](./meta/keil/stm32f103/conf_debug_sim.png)
 
-- 配置宏定义，根据ram和flah容量定义STM32F10x_MD，RAM_SIZE_LEVEL_1
+- 配置宏定义，根据RAM和flah容量定义 _STM32F10x_MD_， _RAM_SIZE_LEVEL_1_ , 在9.5节描述了小容量MCU如何选择宏定义的内容
 
 ![](./meta/keil/stm32f103/proj_def.png)
 
-## 7适配驱动代码
 
+## 7适配驱动代码
 
 - 根据本地Library代码提供的接口函数，来实现LiteOS中相关的bsp接口函数
 
-（1）修改 _los_bsp_adapter_.c文件，配置系统时钟及SysTick，适配sysTick_Handler函数；具体如下：
+（1）修改 _los_bsp_adapter_.c文件，配置系统时钟及 _SysTick_，适配 _sysTick_Handler_ 函数；具体如下：
 
--	修改sys_clk_freq为72MHz：
+-	修改 _sys_clk_freq_ 为72MHz：
 	const unsigned int sys_clk_freq = 72000000;
 
 -	使用SysTick_Config(g_ucycle_per_tick)，使用该函数需要包含core_cm3.h头文件
@@ -616,7 +615,7 @@ stm32f103的配置文件内容如下：
         /* Replace the dots (...) with your own code.  */
     }
 
-移植成功输出信息如下：
+移植成功串口输出信息如下：
 	
 	Los Inspect start.
 	LOS_TaskLock() Success!
@@ -724,6 +723,7 @@ stm32f103的配置文件内容如下：
 	Los Key example: please press the UserKey key 
 
 按下按键led点亮，输出信息：
+	
 	Key test example 
 
 **如何选择测试的功能：**
