@@ -1,16 +1,21 @@
 #include "los_bsp_led.h"
 
-#ifdef EFM32HG322F64
-#include "bsp.h"
+#ifdef LAUNCHXL_CC3220SF
+
 #endif
 
 void LOS_EvbLedInit(void)
 {
 
-#ifdef EFM32HG322F64
-    /* Initialize LED driver */
-    BSP_LedsInit();
-    BSP_LedClear(1);
+#ifdef LAUNCHXL_CC3220SF
+    *((volatile unsigned long *)(0x44025058))  = 0x01;       /* Enable clock  */
+    *((volatile unsigned long *)(0x40005400)) |= 0x0E;       /* Set as output */
+
+    *((volatile unsigned long *)(0x4402E0C4))  = 0x20;       /* Set output current as 2mA */
+    *((volatile unsigned long *)(0x4402E0C8))  = 0x20;       /* Set output current as 2mA */
+    *((volatile unsigned long *)(0x4402E0CC))  = 0x20;       /* Set output current as 2mA */
+  
+    *((volatile unsigned long *)(0x40005038))  = 0x00;      /* Turn OFF all LEDs */
 #endif
 
     return ;
@@ -18,33 +23,22 @@ void LOS_EvbLedInit(void)
 
 void LOS_EvbLedControl(int index, int cmd)
 {
-#ifdef EFM32HG322F64
+#ifdef LAUNCHXL_CC3220SF
     switch (index)
     {
         case LOS_LED1:
         {
             if (cmd == LED_ON)
             {
-                BSP_LedSet(0);   /* led1 on */
+                *((volatile unsigned long *)(0x40005038)) = 0x08;   /* led1 on */
             }
             else
             {
-                BSP_LedClear(0); /* led1 off */
+                *((volatile unsigned long *)(0x40005038)) = 0x00;    /* led1 off */
             }
             break;
         }
         case LOS_LED2:
-        {
-            if (cmd == LED_ON)
-            {
-                BSP_LedSet(1);   /* led2 on */
-            }
-            else
-            {
-                BSP_LedClear(1); /* led2 off */
-            }
-            break;
-        }
         default:
         {
             break;

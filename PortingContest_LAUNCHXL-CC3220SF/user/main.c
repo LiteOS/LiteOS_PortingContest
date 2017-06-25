@@ -11,6 +11,8 @@
 
 #include <string.h>
 
+static volatile int SW = 0;
+
 extern void LOS_EvbSetup(void);
 
 static UINT32 g_uwboadTaskID;
@@ -60,6 +62,12 @@ int main(void)
         for example flash, i2c , system clock ....
      */
     //HAL_init();....
+	*((volatile unsigned long *)(0xE000ED08)) = 0x01000800;
+	  while(1)
+    {
+		    if (!SW) 
+					break;
+		}
 
     /*Init LiteOS kernel */
     uwRet = LOS_KernelInit();

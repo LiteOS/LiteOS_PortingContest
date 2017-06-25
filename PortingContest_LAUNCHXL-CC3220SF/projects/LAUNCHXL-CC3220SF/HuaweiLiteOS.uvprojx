@@ -10,6 +10,7 @@
       <TargetName>LiteOS</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
+      <pCCUsed>5060422::V5.06 update 4 (build 422)::ARMCC</pCCUsed>
       <TargetOption>
         <TargetCommonOption>
           <Device>ARMCM4_FP</Device>
@@ -50,13 +51,13 @@
           <OutputName>HuaweiLiteOS</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
-          <CreateHexFile>0</CreateHexFile>
+          <CreateHexFile>1</CreateHexFile>
           <DebugInformation>1</DebugInformation>
           <BrowseInformation>1</BrowseInformation>
           <ListingPath>.\Listings\</ListingPath>
           <HexFormatSelection>1</HexFormatSelection>
           <Merge32K>0</Merge32K>
-          <CreateBatchFile>0</CreateBatchFile>
+          <CreateBatchFile>1</CreateBatchFile>
           <BeforeCompile>
             <RunUserProg1>0</RunUserProg1>
             <RunUserProg2>0</RunUserProg2>
@@ -131,12 +132,12 @@
             <UseExternalTool>0</UseExternalTool>
             <RunIndependent>0</RunIndependent>
             <UpdateFlashBeforeDebugging>1</UpdateFlashBeforeDebugging>
-            <Capability>0</Capability>
-            <DriverSelection>-1</DriverSelection>
+            <Capability>1</Capability>
+            <DriverSelection>4096</DriverSelection>
           </Flash1>
           <bUseTDR>1</bUseTDR>
           <Flash2>BIN\UL2CM3.DLL</Flash2>
-          <Flash3></Flash3>
+          <Flash3>"" ()</Flash3>
           <Flash4></Flash4>
           <pFcarmOut></pFcarmOut>
           <pFcarmGrp></pFcarmGrp>
@@ -181,11 +182,11 @@
             <hadIRAM>1</hadIRAM>
             <hadXRAM>0</hadXRAM>
             <uocXRam>0</uocXRam>
-            <RvdsVP>2</RvdsVP>
+            <RvdsVP>1</RvdsVP>
             <hadIRAM2>0</hadIRAM2>
             <hadIROM2>0</hadIROM2>
             <StupSel>8</StupSel>
-            <useUlib>0</useUlib>
+            <useUlib>1</useUlib>
             <EndSel>1</EndSel>
             <uLtcg>0</uLtcg>
             <nSecure>0</nSecure>
@@ -202,7 +203,7 @@
             <Ro2Chk>0</Ro2Chk>
             <Ro3Chk>0</Ro3Chk>
             <Ir1Chk>1</Ir1Chk>
-            <Ir2Chk>0</Ir2Chk>
+            <Ir2Chk>1</Ir2Chk>
             <Ra1Chk>0</Ra1Chk>
             <Ra2Chk>0</Ra2Chk>
             <Ra3Chk>0</Ra3Chk>
@@ -271,13 +272,13 @@
               </OCR_RVCT3>
               <OCR_RVCT4>
                 <Type>1</Type>
-                <StartAddress>0x0</StartAddress>
-                <Size>0x40000</Size>
+                <StartAddress>0x1000000</StartAddress>
+                <Size>0x800</Size>
               </OCR_RVCT4>
               <OCR_RVCT5>
                 <Type>1</Type>
-                <StartAddress>0x0</StartAddress>
-                <Size>0x0</Size>
+                <StartAddress>0x1000800</StartAddress>
+                <Size>0xff800</Size>
               </OCR_RVCT5>
               <OCR_RVCT6>
                 <Type>0</Type>
@@ -297,7 +298,7 @@
               <OCR_RVCT9>
                 <Type>0</Type>
                 <StartAddress>0x20000000</StartAddress>
-                <Size>0x20000</Size>
+                <Size>0x40000</Size>
               </OCR_RVCT9>
               <OCR_RVCT10>
                 <Type>0</Type>
@@ -332,9 +333,9 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define></Define>
+              <Define>LAUNCHXL_CC3220SF</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\kernel\base\include;..\..\kernel\include;..\..\kernel\link\keil;..\..\kernel\config;..\..\kernel\cmsis;..\..\kernel\cpu\arm\cortex-m4;..\..\example\include;..\..\platform\LAUNCHXL-CC3220SF</IncludePath>
+              <IncludePath>..\..\kernel\base\include;..\..\kernel\include;..\..\kernel\link\keil;..\..\kernel\config;..\..\kernel\cmsis;..\..\kernel\cpu\arm\cortex-m3;..\..\example\include;..\..\platform\LAUNCHXL-CC3220SF</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -356,7 +357,7 @@
             </VariousControls>
           </Aads>
           <LDads>
-            <umfTarg>1</umfTarg>
+            <umfTarg>0</umfTarg>
             <Ropi>0</Ropi>
             <Rwpi>0</Rwpi>
             <noStLib>0</noStLib>
@@ -365,7 +366,7 @@
             <TextAddressRange>0x00000000</TextAddressRange>
             <DataAddressRange>0x20000000</DataAddressRange>
             <pXoBase></pXoBase>
-            <ScatterFile></ScatterFile>
+            <ScatterFile>.\Objects\HuaweiLiteOS.sct</ScatterFile>
             <IncludeLibs></IncludeLibs>
             <IncludeLibsPath></IncludeLibsPath>
             <Misc></Misc>
@@ -459,29 +460,61 @@
           <GroupName>cpu/m4</GroupName>
           <Files>
             <File>
+              <FileName>los_dispatch_keil.s</FileName>
+              <FileType>2</FileType>
+              <FilePath>..\..\kernel\cpu\arm\cortex-m3\los_dispatch_keil.s</FilePath>
+            </File>
+            <File>
               <FileName>los_hw.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\kernel\cpu\arm\cortex-m4\los_hw.c</FilePath>
+              <FilePath>..\..\kernel\cpu\arm\cortex-m3\los_hw.c</FilePath>
+            </File>
+            <File>
+              <FileName>los_hw.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\kernel\cpu\arm\cortex-m3\los_hw.h</FilePath>
             </File>
             <File>
               <FileName>los_hw_tick.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\kernel\cpu\arm\cortex-m4\los_hw_tick.c</FilePath>
+              <FilePath>..\..\kernel\cpu\arm\cortex-m3\los_hw_tick.c</FilePath>
             </File>
             <File>
               <FileName>los_hwi.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\kernel\cpu\arm\cortex-m4\los_hwi.c</FilePath>
+              <FilePath>..\..\kernel\cpu\arm\cortex-m3\los_hwi.c</FilePath>
             </File>
             <File>
-              <FileName>los_dispatch_keil.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>..\..\kernel\cpu\arm\cortex-m4\los_dispatch_keil.s</FilePath>
+              <FileName>los_hwi.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\kernel\cpu\arm\cortex-m3\los_hwi.h</FilePath>
             </File>
           </Files>
         </Group>
         <Group>
           <GroupName>platform/LAUNCHXL-CC3220SF</GroupName>
+          <Files>
+            <File>
+              <FileName>los_bsp_adapter.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\platform\LAUNCHXL-CC3220SF\los_bsp_adapter.c</FilePath>
+            </File>
+            <File>
+              <FileName>los_bsp_key.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\platform\LAUNCHXL-CC3220SF\los_bsp_key.c</FilePath>
+            </File>
+            <File>
+              <FileName>los_bsp_led.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\platform\LAUNCHXL-CC3220SF\los_bsp_led.c</FilePath>
+            </File>
+            <File>
+              <FileName>los_bsp_uart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\platform\LAUNCHXL-CC3220SF\los_bsp_uart.c</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>config</GroupName>
@@ -594,7 +627,7 @@
             <File>
               <FileName>los_startup_keil.s</FileName>
               <FileType>2</FileType>
-              <FilePath>..\..\platform\LAUNCHXL-CC3220SF\los_startup_keil.s</FilePath>
+              <FilePath>..\..\platform\STM32F429I_DISCO\los_startup_keil.s</FilePath>
             </File>
           </Files>
         </Group>

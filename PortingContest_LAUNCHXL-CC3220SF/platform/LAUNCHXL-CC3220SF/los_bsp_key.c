@@ -1,10 +1,7 @@
 #include "los_bsp_key.h"
 
-#ifdef EFM32HG322F64
-#include "em_cmu.h"
-#include "em_gpio.h"
-#include "core_cm0plus.h"
-#include "bspconfig.h"
+#ifdef LAUNCHXL_CC3220SF
+
 #endif
 
 /*****************************************************************************
@@ -16,13 +13,10 @@
  *****************************************************************************/
 void LOS_EvbKeyInit(void)
 {
-#ifdef EFM32HG322F64
-    /* Enable GPIO clock */
-    CMU_ClockEnable(cmuClock_GPIO, true);
-
-    // Configure PB0, PB1 as inputs
-    GPIO_PinModeSet(BSP_GPIO_PB0_PORT, BSP_GPIO_PB0_PIN, gpioModeInput, 0);
-    GPIO_PinModeSet(BSP_GPIO_PB1_PORT, BSP_GPIO_PB1_PIN, gpioModeInput, 0);
+#ifdef LAUNCHXL_CC3220SF
+    *((volatile unsigned long *)(0x44025060))  = 0x01;       /* Enable gpio2 clock */
+	  *((volatile unsigned long *)(0x40006400)) &= ~0x40;   /* input */
+    *((volatile unsigned long *)(0x4402E0F8)) = 0x00;	
 #endif
 
     return ;
@@ -38,12 +32,11 @@ void LOS_EvbKeyInit(void)
  *****************************************************************************/
 uint8_t LOS_EvbGetKeyVal(int KeyNum)
 {
-#ifdef EFM32HG322F64
+#ifdef LAUNCHXL_CC3220SF
     switch(KeyNum) {
         case 0:
-            return GPIO_PinInGet(BSP_GPIO_PB0_PORT, BSP_GPIO_PB0_PIN);
-        case 1:
-            return GPIO_PinInGet(BSP_GPIO_PB1_PORT, BSP_GPIO_PB1_PIN);
+		    case 1:
+            return !(*((volatile unsigned long *)(0x400063FC)) & 0x40);
         default:
             break;
     }

@@ -74,7 +74,14 @@ int fputc(int ch, FILE *f)
 }
 
 #endif  
-    
+ 
+int fputc(int ch, FILE *f) 
+{ 
+	  while(*((volatile unsigned long *)(0x4000C018)) &0x20);
+    *((volatile unsigned long *)(0x4000C000))  = ch;      /*Send data              */
+    return(ch);
+}
+
     
 LITE_OS_SEC_TEXT VOID LOS_Demo_Tskfunc(VOID)
 {

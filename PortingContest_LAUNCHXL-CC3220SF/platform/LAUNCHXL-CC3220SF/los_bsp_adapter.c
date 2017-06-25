@@ -4,9 +4,8 @@
 #include <stdio.h>
 #include <string.h>
 
-#ifdef EFM32HG322F64
-#include "em_device.h"
-#include "core_cm0plus.h"
+#ifdef LAUNCHXL_CC3220SF
+
 #endif
 
 /*
@@ -72,9 +71,7 @@ unsigned int osTickStart(void)
       Note: here can be replaced by some function , for example in Stm32 bsp
       you can just call SysTick_Config(sys_clk_freq/tick_per_second);
     */
-#ifdef EFM32HG322F64
-    SysTick_Config(g_ucycle_per_tick);
-#else
+#ifdef LAUNCHXL_CC3220SF
     *(volatile UINT32 *)OS_SYSTICK_RELOAD_REG = g_ucycle_per_tick - 1;
     *((volatile UINT8 *)OS_NVIC_EXCPRI_BASE + (((UINT32)(-1) & 0xF) - 4)) = ((7 << 4) & 0xff);
     *(volatile UINT32 *)OS_SYSTICK_CURRENT_REG = 0;
@@ -145,7 +142,7 @@ void LosAdapIntInit(void)
  Output      : None
  Return      : None
  *****************************************************************************/
-void LosAdapIrpEnable(unsigned int irqnum, unsigned short prior)
+void LosAdapIrqEnable(unsigned int irqnum, unsigned short prior)
 {
     /*
         enable irq , for example in stm32 bsp you can use 
@@ -207,6 +204,10 @@ void LOS_EvbTrace(const char *str)
     LOS_EvbUartWriteStr(str);
     return ;
 }
+
+__attribute__((at(0x01000000)))
+const int a[3] = {0x5aa5a55a,0x000ff800,0xefa3247d};
+#pragma arm section
 
 /* End of file */
 

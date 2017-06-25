@@ -1,0 +1,6 @@
+--cpu Cortex-M4 --li -g --apcs=interwork --pd "__MICROLIB SETA 1"
+-I.\RTE\_LiteOS
+-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\Device\ARM\ARMCM4\Include
+-IC:\Keil_v5\ARM\CMSIS\Include
+--pd "__UVISION_VERSION SETA 523" --pd "ARMCM4_FP SETA 1"
+--list .\listings\startup.lst --xref -o .\objects\startup.o --depend .\objects\startup.d "STARTUP.s"
