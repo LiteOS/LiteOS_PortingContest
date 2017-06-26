@@ -465,7 +465,7 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>cpu</GroupName>
+          <GroupName>cpu/cm3</GroupName>
           <Files>
             <File>
               <FileName>los_hw.c</FileName>
