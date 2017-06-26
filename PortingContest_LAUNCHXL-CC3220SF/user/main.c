@@ -11,7 +11,7 @@
 
 #include <string.h>
 
-static volatile int SW = 0;
+static volatile int SW = 0;  /* 0:No waiting; 1:Wait at beginning */
 
 extern void LOS_EvbSetup(void);
 
@@ -62,10 +62,11 @@ int main(void)
         for example flash, i2c , system clock ....
      */
     //HAL_init();....
-	*((volatile unsigned long *)(0xE000ED08)) = 0x01000800;
+	
+	  /* Wait for debugging */
 	  while(1)
     {
-		    if (!SW) 
+		    if (!SW)    /* Change the value of SW to continue debugging */
 					break;
 		}
 
@@ -84,11 +85,8 @@ int main(void)
      */
     LOS_EvbSetup();//init the device on the dev baord
 
-    //LOS_Demo_Entry();
-
     LOS_Inspect_Entry();
 
-    //LOS_BoadExampleEntry();
 
     /* Kernel start to run */
     LOS_Start();

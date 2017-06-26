@@ -113,6 +113,7 @@ void SysTick_Handler(void)
  *****************************************************************************/
 void LosAdapIntInit(void)
 {
+	  *((volatile unsigned long *)(0xE000ED08)) = 0x01000800;  /* Re-map the vector table */
     /* 
         1:ReLoad vector table address at ram . if do nothing , vector table is
         located in rom 0x00000000
@@ -205,8 +206,9 @@ void LOS_EvbTrace(const char *str)
     return ;
 }
 
+/* Header zone for on-chip RAM of CC3220SF */
 __attribute__((at(0x01000000)))
-const int a[3] = {0x5aa5a55a,0x000ff800,0xefa3247d};
+const int a[3] = {0x5AA5A55A,0x000FF800,0xEFA3247D};   /* Necessary cheat code */
 #pragma arm section
 
 /* End of file */

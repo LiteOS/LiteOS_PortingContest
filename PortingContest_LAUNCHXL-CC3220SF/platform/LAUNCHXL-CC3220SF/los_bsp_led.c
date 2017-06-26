@@ -15,7 +15,7 @@ void LOS_EvbLedInit(void)
     *((volatile unsigned long *)(0x4402E0C8))  = 0x20;       /* Set output current as 2mA */
     *((volatile unsigned long *)(0x4402E0CC))  = 0x20;       /* Set output current as 2mA */
   
-    *((volatile unsigned long *)(0x40005038))  = 0x00;      /* Turn OFF all LEDs */
+    *((volatile unsigned long *)(0x40005038))  = 0x00;       /* Turn OFF all LEDs */
 #endif
 
     return ;
@@ -30,11 +30,11 @@ void LOS_EvbLedControl(int index, int cmd)
         {
             if (cmd == LED_ON)
             {
-                *((volatile unsigned long *)(0x40005038)) = 0x08;   /* led1 on */
+							*((volatile unsigned long *)(0x40005038)) = 0x0E;      /* Led ON  */
             }
             else
             {
-                *((volatile unsigned long *)(0x40005038)) = 0x00;    /* led1 off */
+                *((volatile unsigned long *)(0x40005038)) = 0x00;    /* LED OFF */
             }
             break;
         }

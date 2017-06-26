@@ -88,8 +88,8 @@ LOS_StartToRun
     LDMFD   R12!, {R0-R7}
     ADD     R12, R12, #72
     MSR     PSP, R12
-;    VPUSH   S0;
-;    VPOP    S0;
+    VPUSH   S0;
+    VPOP    S0;
 
     MOV     LR, R5
    ;MSR     xPSR, R7
@@ -140,7 +140,7 @@ TaskSwitch
     MRS     R0, PSP
 
     STMFD   R0!, {R4-R12}
-  ;  VSTMDB  R0!, {D8-D15}
+    VSTMDB  R0!, {D8-D15}
 
     LDR     R5, =g_stLosTask
     LDR     R6, [R5]
@@ -164,7 +164,7 @@ TaskSwitch
     STRH    R7,  [R0 , #4]
 
     LDR     R1,   [R0]
-;    VLDMIA  R1!, {D8-D15}
+    VLDMIA  R1!, {D8-D15}
     LDMFD   R1!, {R4-R12}
     MSR     PSP,  R1
 
