@@ -215,7 +215,7 @@ Keil工具需要开发者自行购买，Nu-Link的驱动程序可以从nuvoton�
 </tr>
 <tr>
 	<td></td>
-	<td>NUTINY-NUC472H/td>
+	<td>NUTINY-NUC472H</td>
 	<td>NUC472H开发板systick以及led、uart、key驱动bsp适配代码</td>
 </tr>
 <tr>
@@ -245,11 +245,11 @@ Keil工具需要开发者自行购买，Nu-Link的驱动程序可以从nuvoton�
 </tr>
 <tr>
 	<td>projects</td>
-	<td>NUTINY-NUC472H_KEILI</td>
+	<td>NUTINY-NUC472H-KEIL</td>
 	<td>NUC472H开发板的keil工程目录</td>
 </tr>
 <tr>
-	<td>projects</td>
+	<td></td>
 	<td>STM32F412ZG-NUCLEO-KEIL</td>
 	<td>stm32f412开发板的keil工程目录</td>
 </tr>
