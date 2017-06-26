@@ -421,7 +421,7 @@ I (..\..\platform\STM32F103RB-NUCLEO\Libraries\FWlib\inc\stm32f10x_tim.h)(0x57C7
 I (..\..\platform\STM32F103RB-NUCLEO\Libraries\FWlib\inc\stm32f10x_usart.h)(0x57C78855)
 I (..\..\platform\STM32F103RB-NUCLEO\Libraries\FWlib\inc\stm32f10x_wwdg.h)(0x57C78855)
 I (..\..\platform\STM32F103RB-NUCLEO\Libraries\FWlib\inc\misc.h)(0x57C78855)
-F (..\..\platform\STM32F103RB-NUCLEO\los_bsp_adapter.c)(0x594386FC)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m3 -I ..\..\kernel\link\keil -I ..\..\example\include -I ..\..\platform\STM32F103RB-NUCLEO -I ..\..\platform\STM32F103RB-NUCLEO\Libraries\FWlib\inc -I ..\..\platform\STM32F103RB-NUCLEO\Libraries\CMSIS -I ..\..\platform\STM32F103RB-NUCLEO\local-I.\RTE\_LiteOS-I"D:\Program Files (x86)\Keil5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include"-I"D:\Program Files (x86)\Keil5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32F10X_MD -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DRAM_SIZE_LEVEL_1-o .\objects\los_bsp_adapter.o --omf_browse .\objects\los_bsp_adapter.crf --depend .\objects\los_bsp_adapter.d)
+F (..\..\platform\STM32F103RB-NUCLEO\los_bsp_adapter.c)(0x594DE800)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m3 -I ..\..\kernel\link\keil -I ..\..\example\include -I ..\..\platform\STM32F103RB-NUCLEO -I ..\..\platform\STM32F103RB-NUCLEO\Libraries\FWlib\inc -I ..\..\platform\STM32F103RB-NUCLEO\Libraries\CMSIS -I ..\..\platform\STM32F103RB-NUCLEO\local-I.\RTE\_LiteOS-I"D:\Program Files (x86)\Keil5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include"-I"D:\Program Files (x86)\Keil5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32F10X_MD -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DRAM_SIZE_LEVEL_1-o .\objects\los_bsp_adapter.o --omf_browse .\objects\los_bsp_adapter.crf --depend .\objects\los_bsp_adapter.d)
 I (D:\Program Files (x86)\Keil5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (D:\Program Files (x86)\Keil5\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (..\..\platform\STM32F103RB-NUCLEO\los_bsp_adapter.h)(0x5942B60A)
@@ -445,22 +445,7 @@ I (..\..\platform\STM32F103RB-NUCLEO\Libraries\FWlib\inc\stm32f10x_tim.h)(0x57C7
 I (..\..\platform\STM32F103RB-NUCLEO\Libraries\FWlib\inc\stm32f10x_usart.h)(0x57C78855)
 I (..\..\platform\STM32F103RB-NUCLEO\Libraries\FWlib\inc\stm32f10x_wwdg.h)(0x57C78855)
 I (..\..\platform\STM32F103RB-NUCLEO\Libraries\FWlib\inc\misc.h)(0x57C78855)
-I (..\..\kernel\base\include\los_tick.ph)(0x593E5BDA)
-I (..\..\kernel\include\los_tick.h)(0x593E5BDA)
-I (..\..\kernel\include\los_errno.h)(0x593E5BDA)
-I (..\..\kernel\include\los_typedef.h)(0x593E5BDA)
-I (..\..\kernel\link\keil\los_builddef.h)(0x593E5BDA)
-I (..\..\kernel\include\los_base.h)(0x593E5BDA)
-I (..\..\kernel\config\los_config.h)(0x5943889A)
-I (..\..\kernel\include\los_printf.h)(0x593E5BDA)
-I (..\..\kernel\include\los_list.h)(0x593E5BDA)
-I (..\..\kernel\base\include\los_task.ph)(0x593E5BDA)
-I (..\..\kernel\include\los_task.h)(0x593E5BDA)
-I (..\..\kernel\include\los_sys.h)(0x593E5BDA)
-I (..\..\kernel\cpu\arm\cortex-m3\los_hwi.h)(0x593E5BDA)
-I (..\..\kernel\include\los_event.h)(0x593E5BDA)
-I (..\..\kernel\include\los_swtmr.h)(0x593E5BDA)
-F (..\..\platform\STM32F103RB-NUCLEO\los_bsp_key.c)(0x59424FBF)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m3 -I ..\..\kernel\link\keil -I ..\..\example\include -I ..\..\platform\STM32F103RB-NUCLEO -I ..\..\platform\STM32F103RB-NUCLEO\Libraries\FWlib\inc -I ..\..\platform\STM32F103RB-NUCLEO\Libraries\CMSIS -I ..\..\platform\STM32F103RB-NUCLEO\local-I.\RTE\_LiteOS-I"D:\Program Files (x86)\Keil5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include"-I"D:\Program Files (x86)\Keil5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32F10X_MD -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DRAM_SIZE_LEVEL_1-o .\objects\los_bsp_key.o --omf_browse .\objects\los_bsp_key.crf --depend .\objects\los_bsp_key.d)
+F (..\..\platform\STM32F103RB-NUCLEO\los_bsp_key.c)(0x594DE674)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m3 -I ..\..\kernel\link\keil -I ..\..\example\include -I ..\..\platform\STM32F103RB-NUCLEO -I ..\..\platform\STM32F103RB-NUCLEO\Libraries\FWlib\inc -I ..\..\platform\STM32F103RB-NUCLEO\Libraries\CMSIS -I ..\..\platform\STM32F103RB-NUCLEO\local-I.\RTE\_LiteOS-I"D:\Program Files (x86)\Keil5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include"-I"D:\Program Files (x86)\Keil5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32F10X_MD -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DRAM_SIZE_LEVEL_1-o .\objects\los_bsp_key.o --omf_browse .\objects\los_bsp_key.crf --depend .\objects\los_bsp_key.d)
 I (..\..\platform\STM32F103RB-NUCLEO\los_bsp_key.h)(0x59424FC1)
 I (..\..\kernel\include\los_typedef.h)(0x593E5BDA)
 I (..\..\kernel\link\keil\los_builddef.h)(0x593E5BDA)

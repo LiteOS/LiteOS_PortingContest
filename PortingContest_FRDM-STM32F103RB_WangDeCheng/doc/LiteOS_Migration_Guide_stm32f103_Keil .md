@@ -421,7 +421,7 @@ stm32f103的配置文件内容如下：
 
 ![](./meta/keil/stm32f103/conf_debug_sim.png)
 
-- 配置宏定义，根据RAM和flah容量定义 _STM32F10x_MD_， _RAM_SIZE_LEVEL_1_ , 在9.5节描述了小容量MCU如何选择宏定义的内容
+- 配置宏定义，根据RAM和flah容量定义 _STM32F10x_MD_， _RAM_SIZE_LEVEL_1_ , 在第10节描述了小容量MCU如何选择宏定义的内容
 
 ![](./meta/keil/stm32f103/proj_def.png)
 
@@ -779,8 +779,8 @@ LiteOS中提供的功能包括如下内容： 任务创建与删除、任务同�
 
 ###  9.3 系统tick中断配置修改
 
-- los_bsp_adapter.c中修改后的osTickStart()函数，比如在该函数中直接调用BSP包中的接口配置system tick，在stm32中可以调用SysTick_Config(g_ucycle_per_tick);
-- 根据实际配置的system clock 修改sys_clk_freq的值，工程中给出的值都是默认时钟频率。比如stm32f429的默认时钟是16M HZ。
+- los_bsp_adapter.c中修改后的osTickStart()函数，在此处调用SysTick_Config(g_ucycle_per_tick);
+- 根据实际配置的system clock 修改sys_clk_freq的值，此处配置为72M。
 
 ### 9.4 LiteOS资源配置
 
@@ -795,7 +795,7 @@ LiteOS中提供的功能包括如下内容： 任务创建与删除、任务同�
 - 移植LiteOS到其他内核的芯片时，需要在kernel\cpu下去添加一个芯片所属系列的目录，并且在该新增加的目录下添加los_dispatch，los_hw.c、los_hw_tick、los_hwi这些文件。dispatch文件主要实现task调度相关的处理以及开关中断获取中断号等内容，los_hw.c中实现的task调度时需要保存的寄存器等内容，los_hwi则是中断的相关内容，los_hw_tick则是系统tick中断处理以及获取tick等的实现。
 
 
-## 其他说明
+### 10 其他说明
 
 - 对于RAM较小的芯片，请参照los_config.h文件中的注释，在工程中定义相关的编译宏，否则会出现编译失败（RAM大于32k可不定义）。
 
@@ -804,8 +804,6 @@ LiteOS中提供的功能包括如下内容： 任务创建与删除、任务同�
 			RAM_SIZE_LEVEL_1 means kernel ram < 16k, 
 			RAM_SIZE_LEVEL_2 means means kernel ram>=32k 
 		*/
-
-- 目前在LiteOS的源代码中有一些已经创建好了的工程，移植到新的开发板(芯片)时可参考源码中的这些工程。
 
 - 详细的应用编程API请参考《HuaweiLiteOSKernelDevGuide》。
 

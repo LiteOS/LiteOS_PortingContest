@@ -8,16 +8,21 @@
 #include "los_bsp_led.h"
 #include "los_bsp_uart.h"
 
-/* while use bsp code to start system tick, don't use LOS header */
-#define INCLUDE_LOS_HEADER
+/* while use bsp code to start systxem tick, don't use LOS header */
+//#define INCLUDE_LOS_HEADER
+#define STM32F103
 #ifdef INCLUDE_LOS_HEADER
 #include "los_tick.ph"
 #include "los_base.h"
 #include "los_task.ph"
 #include "los_swtmr.h"
 #include "los_hwi.h"
+#else
+#include "stm32f10x.h"
 #endif
-
+#ifndef OS_NVIC_AIRCR_PRIGROUP
+#define OS_NVIC_AIRCR_PRIGROUP		7
+#endif
 /******************************************************************************
     here include some special hearder file you need
 ******************************************************************************/
@@ -128,13 +133,17 @@ void LosAdapIntInit(void)
         you can just call SCB->VTOR = osGetVectorAddr(); and
         NVIC_SetPriorityGrouping(OS_NVIC_AIRCR_PRIGROUP);
     */
-		SCB->VTOR = osGetVectorAddr();
-    NVIC_SetPriorityGrouping(OS_NVIC_AIRCR_PRIGROUP);
+	#ifdef STM32F103
+			SCB->VTOR = osGetVectorAddr();
+			NVIC_SetPriorityGrouping(7);
+	#else
+
     if (g_use_ram_vect)
     {
         *(volatile UINT32 *)OS_NVIC_VTOR = osGetVectorAddr();
         *(volatile UINT32 *)OS_NVIC_AIRCR = (0x05FA0000 | OS_NVIC_AIRCR_PRIGROUP << 8);
     }
+		#endif
 
     return;
 }
