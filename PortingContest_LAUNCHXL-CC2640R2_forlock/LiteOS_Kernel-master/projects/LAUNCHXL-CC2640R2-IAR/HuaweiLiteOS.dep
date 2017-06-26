@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <fileVersion>2</fileVersion>
+    <fileChecksum>1229259395</fileChecksum>
+    <configuration>
+        <name>Debug</name>
+        <outputs />
+    </configuration>
+    <configuration>
+        <name>Release</name>
+        <outputs />
+    </configuration>
+</project>
