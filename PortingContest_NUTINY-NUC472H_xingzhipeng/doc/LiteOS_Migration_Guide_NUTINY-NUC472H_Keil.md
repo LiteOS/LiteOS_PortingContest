@@ -81,7 +81,7 @@
 
 ## 3 概述
 
-目前在github上的Huawei LiteOS内核源码已适配好部分芯片的内核工程，本手册将以STM32F411RET6芯片为例，介绍基于Cortex M4核芯片的驱动移植过程。
+目前在github上的Huawei LiteOS内核源码已适配好部分芯片的内核工程，本手册将以NUTINY-NUC472H芯片为例，介绍基于Cortex M4核芯片的驱动移植过程。
 
 ## 4 环境准备
 基于Huawei LiteOS Kernel开发前，我们首先需要准备好单板运行的环境，包括软件环
@@ -94,8 +94,8 @@
 	<td>描述</td>
 	</tr>
 	<tr>
-	<td>STM32 NUCLEO-F411RE单板</td>
-	<td>STM32开发板(芯片型号STM32F411RET6)</td>
+	<td>NUTINY-NUC472H单板</td>
+	<td>NUTINY开发板(芯片型号NUC472HI8AE)</td>
 	</tr>
 	<tr>
 	<td>PC机</td>
@@ -117,7 +117,7 @@
 	</tr>
 	<tr>
 	<td>Window 7 操作系统</td>
-	<td>安装Keil和st-link的操作系统</td>
+	<td>安装Keil和Nu-link的操作系统</td>
 	</tr>
 	<tr>
 	<td>Keil(5.21以上版本)</td>
@@ -132,7 +132,7 @@
 
 **说明**
 
-Keil工具需要开发者自行购买，ST-Link的驱动程序可以从st官网获取。
+Keil工具需要开发者自行购买，Nu-Link的驱动程序可以从nuvoton官网获取。
 
 
 ## 5获取Huawei LiteOS 源码
@@ -215,6 +215,11 @@ Keil工具需要开发者自行购买，ST-Link的驱动程序可以从st官网�
 </tr>
 <tr>
 	<td></td>
+	<td>NUTINY-NUC472H/td>
+	<td>NUC472H开发板systick以及led、uart、key驱动bsp适配代码</td>
+</tr>
+<tr>
+	<td></td>
 	<td>STM32F412ZG-NUCLEO</td>
 	<td>STM32F412开发板systick以及led、uart、key驱动bsp适配代码</td>
 </tr>
@@ -237,6 +242,11 @@ Keil工具需要开发者自行购买，ST-Link的驱动程序可以从st官网�
 	<td></td>
 	<td>LOS_EXPAND_XXX</td>
 	<td>用于新扩展的开发板systick以及led、uart、key驱动bsp适配代码</td>
+</tr>
+<tr>
+	<td>projects</td>
+	<td>NUTINY-NUC472H_KEILI</td>
+	<td>NUC472H开发板的keil工程目录</td>
 </tr>
 <tr>
 	<td>projects</td>
@@ -396,15 +406,15 @@ Keil工具需要开发者自行购买，ST-Link的驱动程序可以从st官网�
 
 ## 7 其他说明
 
-###如何使用LiteOS 开发###
+### 如何使用LiteOS 开发
 
 LiteOS中提供的功能包括如下内容： 任务创建与删除、任务同步（信号量、互斥锁）、动态中断注册机制等等内容，详细内容请参考《HuaweiLiteOSKernelDevGuide》。
 
-###从零开始创建LiteOS工程###
+### 从零开始创建LiteOS工程
 
 目前在LiteOS的源代码的projects目录下已附带一些开发板的内核示例工程，用户可以直接使用，如果您所使用的开发板（芯片型号）与在示例工程中找不到，您可以从零开始创建LiteOS工程，创建流程请参考《LiteOS_Migration_Guide_Keil》。
 
-###关于中断向量位置选择###
+### 关于中断向量位置选择
 
 如果您需要使用LiteOS的中断注册机制，详细内容请参考《LiteOS_Migration_Guide_Keil》。
 
