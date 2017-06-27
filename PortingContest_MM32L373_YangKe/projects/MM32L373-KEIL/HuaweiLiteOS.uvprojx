@@ -335,7 +335,7 @@
               <MiscControls></MiscControls>
               <Define>RAM_SIZE_LEVEL_1,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\platform\MM32L373\SYSTEM\delay;..\..\platform\MM32L373\HARDWARE\LED;..\..\platform\MM32L373\HARDWARE\KEY;..\..\platform\MM32L373\HARDWARE\EXTI;..\..\platform\MM32L373\HARDWARE\UART;..\..\platform\MM32L373\Device\CMSIS\KEIL_CORE;..\..\platform\MM32L373\Device\MM32L3xx\HAL_lib\inc;..\..\platform\MM32L373\Device\MM32L3xx\Include;..\..\kernel\base\include;..\..\kernel\include;..\..\kernel\link\keil;..\..\kernel\config;..\..\kernel\cmsis;..\..\kernel\cpu\arm\cortex-m3;..\..\example\include;..\..\platform\MM32L373;..\..\example\include;..\..\platform\MM32L373\SYSTEM\sys</IncludePath>
+              <IncludePath>..\..\platform\MM32L373\SYSTEM\delay;..\..\platform\MM32L373\HARDWARE\LED;..\..\platform\MM32L373\HARDWARE\KEY;..\..\platform\MM32L373\HARDWARE\EXTI;..\..\platform\MM32L373\HARDWARE\UART;..\..\platform\MM32L373\Device\CMSIS\KEIL_CORE;..\..\platform\MM32L373\Device\MM32L3xx\HAL_lib\inc;..\..\platform\MM32L373\Device\MM32L3xx\Include;..\..\kernel\base\include;..\..\kernel\include;..\..\kernel\link\keil;..\..\kernel\config;..\..\kernel\cmsis;..\..\kernel\cpu\arm\cortex-m3;..\..\example\include;..\..\platform\MM32L373;..\..\platform\MM32L373\SYSTEM\sys</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
