@@ -342,7 +342,7 @@ Keil工具需要开发者自行购买,MM32L373开发板的调试器是J-LINK，�
 
 - 保存后会立即弹出芯片型号选择的窗口，根据实际的开发板的芯片进行选择，我们使用的是mm32l373ps芯片。
 
-- 然后选择要包含的开发基础库，比如CMSIS、DEVICE两个选项可以选择平台提供的支持包和启动汇编文件，目前LiteOS有提供的启动文件是配合中断动态注册功能使用的，我们不需要进行中断动态注册，所以勾选startup。
+- 然后选择要包含的开发基础库，比如CMSIS、DEVICE两个选项可以选择平台提供的支持包和启动汇编文件，目前LiteOS有提供的启动文件是配合中断动态注册功能使用的，我们不需要进行中断动态注册，这里也不勾选startup，我们在后续步骤里手动添加启动文件。
 
 
 ![](./meta/keil//mm32l373/run_time_set.png)
@@ -362,17 +362,18 @@ Keil工具需要开发者自行购买,MM32L373开发板的调试器是J-LINK，�
 
 创建完成目录树之后我们添加源代码到目录树中，最终添加完成的内容如下：
 
-- 将kernel/base目录下的所有C文件添加到工程中的kernel下
+- 将kernel/base目录下的所有C文件添加到工程中的kernel下。
 - 将kernel/cmsis目录下的所有C文件添加到工程中的cmsis下。
-- 将platform\MM32L373目录下的所有C文件添加到工程中的platform/mm32l373下
-- 将kernel\cpu\arm\cortex-m3目录下的所有C文件以及汇编代码添加到工程中的cpu/m3下
-- 将kernel\config目录下的所有C文件添加到工程中的config下
-- 将user目录下的所有C文件添加到工程中的user下
-- 将\platform\MM32L373\Device\MM32L3xx\HAL_lib\src目录下的芯片函数库C文件添加到工程的hal_lib目录下
-- 将\platform\MM32L373\HARDWARE目录下led、key和uart外设C文件添加到工程的hardware目录下
-- 将\platform\MM32L373\SYSTEM目录下delay.c文件添加到工程的system目录下
-- 将\platform\MM32L373\Device\MM32L3xx\Source目录下的system_MM32L3xx.c文件添加到工程的system目录下
-- 添加example/api目录下的所有C文件到工程的example目录下
+- 将platform\MM32L373目录下的所有C文件添加到工程中的platform/mm32l373下。
+- 将kernel\cpu\arm\cortex-m3目录下的所有C文件以及汇编代码添加到工程中的cpu/m3下。
+- 将kernel\config目录下的所有C文件添加到工程中的config下。
+- 将user目录下的所有C文件添加到工程中的user下。
+- 将\platform\MM32L373\Device\MM32L3xx\HAL_lib\src目录下的芯片函数库C文件添加到工程的hal_lib目录下。
+- 将\platform\MM32L373\HARDWARE目录下led、key和uart外设C文件添加到工程的hardware目录下。
+- 将\platform\MM32L373\SYSTEM目录下delay.c文件添加到工程的system目录下。
+- 将\platform\MM32L373\Device\MM32L3xx\Source目录下的system_MM32L3xx.c文件添加到工程的system目录下。
+- 添加example/api目录下的所有C文件到工程的example目录下。
+- 将\platform\MM32L373\Device\MM32L3xx\Source\KEIL_StartAsm下的启动文件startup_MM32L3xx.s添加到startup目录下。
 
 ### 7.3 配置工程属性
 
