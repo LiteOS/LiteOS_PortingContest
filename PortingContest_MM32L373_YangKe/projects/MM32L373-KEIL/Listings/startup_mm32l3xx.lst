@@ -434,9 +434,9 @@ Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
 ork --depend=.\objects\startup_mm32l3xx.d -o.\objects\startup_mm32l3xx.o -I.\RT
 E\_LiteOS -Id:\Keil_v5\ARM\PACK\MindMotion\MM32L3xx_DFP\1.0.1\Device\MM32L3xx\I
 nclude -Id:\Keil_v5\ARM\CMSIS\Include --predefine="__MICROLIB SETA 1" --predefi
-ne="__UVISION_VERSION SETA 523" --predefine="MM32L373PS SETA 1" --predefine="MM
-32L373PS SETA 1" --list=.\listings\startup_mm32l3xx.lst ..\..\platform\MM32L373
-\Device\MM32L3xx\Source\KEIL_StartAsm\startup_MM32L3xx.s
+ne="__UVISION_VERSION SETA 523" --predefine="MM32L373PS SETA 1" --list=.\listin
+gs\startup_mm32l3xx.lst ..\..\platform\MM32L373\Device\MM32L3xx\Source\KEIL_Sta
+rtAsm\startup_MM32L3xx.s
 
 
 
