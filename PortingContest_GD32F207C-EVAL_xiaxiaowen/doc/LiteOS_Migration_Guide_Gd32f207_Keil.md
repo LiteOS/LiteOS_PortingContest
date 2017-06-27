@@ -438,7 +438,7 @@ Keil工具需要开发者自行购买，开发板的调试器是GD-Link,也可�
 
 **添加代码到LiteOS工程**
 
-在LiteOS内核代码目录中新建GD32F207_Library文件夹，将相关的代码拷贝到其中。
+在platform/GD32F207C-EVAL文件夹中新建GD32F207_Library文件夹，将相关的代码拷贝到其中。
 ![](./meta/keil/gd32f207/add_file_0.png)
 
 复制GD32F20x_Firmware_Library_V2.0.0目录下的CMSIS和GD32F20x_standard_peripheral两个文件夹到GD32F207_Library文件夹中。
