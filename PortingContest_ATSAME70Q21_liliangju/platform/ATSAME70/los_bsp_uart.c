@@ -93,3 +93,4 @@ int fputc(int ch, FILE *f)
 	LOS_EvbUartWriteByte(ch);
 	return (ch);
 }
+

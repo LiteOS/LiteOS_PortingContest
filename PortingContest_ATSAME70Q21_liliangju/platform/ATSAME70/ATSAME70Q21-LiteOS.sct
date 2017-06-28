@@ -12,7 +12,7 @@ LR_IROM1 0x00400000 0x00200000  {    ; load region size_region
 	* (.vector.bss)
   }
 
-  RW_IRAM1 0x20400400 0x005d800  {  ; RW data;RW_IRAM1 0x20010800 0x0003F800  {  ; RW data
+  RW_IRAM1 0x20400400 0x005fa00  {  ; RW data;RW_IRAM1 0x20010800 0x0003F800  {  ; RW data
    .ANY (+RW +ZI)
    * (.data, .bss)
   }
