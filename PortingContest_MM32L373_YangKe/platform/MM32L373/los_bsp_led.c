@@ -39,12 +39,12 @@ void LOS_EvbLedControl(int index, int cmd)
             if (cmd == LED_ON)
             {
                 //add you code here.
-                LED1 = 0;        /*led1 on */
+                LED1 = 1;        /*led1 on */
             }
             else
             {
                 //add you code here.
-                LED1 = 1;        /*led1 off */
+                LED1 = 0;        /*led1 off */
             }
             break;
         }
@@ -53,12 +53,12 @@ void LOS_EvbLedControl(int index, int cmd)
             if (cmd == LED_ON)
             {
                 //add you code here.
-                LED2 = 0;        /*led2 on */
+                LED2 = 1;        /*led2 on */
             }
             else
             {
                 //add you code here.
-                LED2 = 1;         /*led2 off */
+                LED2 = 0;         /*led2 off */
             }
             break;
         }
