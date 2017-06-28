@@ -18,9 +18,9 @@ void LOS_EvbUartInit(void)
     *((volatile unsigned long *)(0x4402E0A4))  =  0x63;          /* PIN as UART0_TX          */ 
     *((volatile unsigned long *)(0x4402E0A8))  =  0x63;          /* PIN as UART0_RX          */ 		
     *((volatile unsigned long *)(0x4000C024))  =  0x2B;          /* Set 115200               */ 		 
-	  *((volatile unsigned long *)(0x4000C028))  =  0x1A;          /* Set 115200               */ 		 		 
-	  *((volatile unsigned long *)(0x4000C02C))  =  0x00000060;    /* 8-bit ,1-stop ,no parity */ 		 		 
-	  *((volatile unsigned long *)(0x4000C030))  =  0x00000301;    /* Enable Uart              */
+    *((volatile unsigned long *)(0x4000C028))  =  0x1A;          /* Set 115200               */ 		 		 
+    *((volatile unsigned long *)(0x4000C02C))  =  0x00000060;    /* 8-bit ,1-stop ,no parity */ 		 		 
+    *((volatile unsigned long *)(0x4000C030))  =  0x00000301;    /* Enable Uart              */
 #endif
     
     return ;
@@ -79,7 +79,7 @@ void LOS_EvbUartPrintf(char* fmt, ...)
 
 int fputc(int ch, FILE *f) 
 { 
-	  LOS_EvbUartWriteByte(ch);
+    LOS_EvbUartWriteByte(ch);
     return(ch);
 }
 

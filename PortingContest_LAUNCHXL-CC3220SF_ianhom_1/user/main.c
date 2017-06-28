@@ -62,13 +62,13 @@ int main(void)
         for example flash, i2c , system clock ....
      */
     *((volatile unsigned long *)(0xE000ED08)) = 0x01000800;  /* Re-map the vector table */
-	
-	  /* Wait for debugging */
-	  while(1)
+    
+    /* Wait for debugging */
+    while(1)
     {
-		    if (!SW)    /* Change the value of SW to continue debugging */
-					break;
-		}
+        if(!SW)    /* Change the value of SW to continue debugging */
+            break;
+    }
 
     /*Init LiteOS kernel */
     uwRet = LOS_KernelInit();

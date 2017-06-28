@@ -30,7 +30,7 @@ void LOS_EvbLedControl(int index, int cmd)
         {
             if (cmd == LED_ON)
             {
-							*((volatile unsigned long *)(0x40005038)) = 0x0E;      /* Led ON  */
+                *((volatile unsigned long *)(0x40005038)) = 0x0E;    /* Led ON  */
             }
             else
             {
