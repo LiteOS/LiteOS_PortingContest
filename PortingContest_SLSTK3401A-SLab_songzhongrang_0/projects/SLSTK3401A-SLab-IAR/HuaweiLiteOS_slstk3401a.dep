@@ -1,0 +1,1845 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <fileVersion>2</fileVersion>
+    <fileChecksum>1393912923</fileChecksum>
+    <configuration>
+        <name>Debug</name>
+        <outputs>
+            <file>$PROJ_DIR$\..\..\kernel\cpu\arm\cortex-m4\los_hw.c</file>
+            <file>$PROJ_DIR$\..\..\kernel\cpu\arm\cortex-m4\los_hwi.c</file>
+            <file>$PROJ_DIR$\..\..\example\api\los_api_interrupt.c</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\driver\displayls013b7dh03.c</file>
+            <file>$PROJ_DIR$\..\..\example\api\los_api_list.c</file>
+            <file>$PROJ_DIR$\..\..\example\api\los_api_event.c</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\driver\udelay.c</file>
+            <file>$PROJ_DIR$\..\..\kernel\cpu\arm\cortex-m4\los_hw_tick.c</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\driver\textdisplay.c</file>
+            <file>$PROJ_DIR$\..\..\kernel\config\los_config.c</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\emlib\src\em_system.c</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\emlib\src\em_int.c</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\bsp\bsp_stk_leds.c</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\driver\displaypalemlib.c</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\emlib\src\em_emu.c</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\emlib\src\em_cmu.c</file>
+            <file>$PROJ_DIR$\..\..\example\api\los_api_dynamic_mem.c</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\driver\display.c</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\driver\retargetio.c</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\driver\retargetserial.c</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\emlib\src\em_gpio.c</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\driver\retargettextdisplay.c</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\emlib\src\em_assert.c</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\emlib\src\em_prs.c</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\emlib\src\em_rtcc.c</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\emlib\src\em_usart.c</file>
+            <file>$PROJ_DIR$\..\..\kernel\cpu\arm\cortex-m4\los_dispatch_iar.s</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\los_bsp_led.c</file>
+            <file>$PROJ_DIR$\..\..\example\api\los_api_mutex.c</file>
+            <file>$PROJ_DIR$\..\..\example\api\los_api_msgqueue.c</file>
+            <file>$PROJ_DIR$\..\..\example\api\los_cmsis_main.c</file>
+            <file>$PROJ_DIR$\..\..\kernel\base\misc\los_misc.c</file>
+            <file>$PROJ_DIR$\..\..\kernel\base\ipc\los_mux.c</file>
+            <file>$PROJ_DIR$\..\..\kernel\base\ipc\los_sem.c</file>
+            <file>$PROJ_DIR$\..\..\kernel\base\ipc\los_event.c</file>
+            <file>$PROJ_DIR$\..\..\kernel\base\core\los_swtmr.c</file>
+            <file>$PROJ_DIR$\..\..\kernel\base\mem\los_memstat.c</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\los_bsp_lcd.c</file>
+            <file>$PROJ_DIR$\..\..\kernel\base\mem\los_membox.c</file>
+            <file>$PROJ_DIR$\..\..\kernel\base\ipc\los_queue.c</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\los_bsp_uart.c</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\startup_efm32pg1b.s</file>
+            <file>$PROJ_DIR$\..\..\kernel\base\mem\los_memory.c</file>
+            <file>$PROJ_DIR$\..\..\kernel\base\mem\los_multipledlinkhead.c</file>
+            <file>$PROJ_DIR$\..\..\kernel\base\core\los_task.c</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\los_bsp_adapter.c</file>
+            <file>$PROJ_DIR$\..\..\example\api\los_api_sem.c</file>
+            <file>$PROJ_DIR$\..\..\example\api\los_api_systick.c</file>
+            <file>$PROJ_DIR$\..\..\example\api\los_demo_entry.c</file>
+            <file>$PROJ_DIR$\..\..\example\api\los_inspect_entry.c</file>
+            <file>$PROJ_DIR$\..\..\kernel\base\core\los_priqueue.c</file>
+            <file>$PROJ_DIR$\..\..\kernel\base\core\los_sys.c</file>
+            <file>$PROJ_DIR$\..\..\example\api\los_api_static_mem.c</file>
+            <file>$PROJ_DIR$\..\..\example\api\los_api_timer.c</file>
+            <file>$PROJ_DIR$\..\..\kernel\base\core\los_tick.c</file>
+            <file>$PROJ_DIR$\..\..\kernel\base\core\los_timeslice.c</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\los_bsp_key.c</file>
+            <file>$PROJ_DIR$\..\..\example\api\los_api_task.c</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\driver\display.h</file>
+            <file>$PROJ_DIR$\..\..\kernel\base\include\los_memstat.ph</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_event.pbi</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\driver\textdisplay.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\em_cmu.pbi</file>
+            <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\driver\retargettextdisplayconfig.h</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\displayconfig.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_sem.o</file>
+            <file>$PROJ_DIR$\..\..\kernel\base\include\los_event.ph</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_inspect_entry.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\em_rtcc.o</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\driver\displayconfigapp.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\display.pbi</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\driver\displaybackend.h</file>
+            <file>$PROJ_DIR$\..\..\kernel\base\mem\los_memstat.inc</file>
+            <file>$PROJ_DIR$\Debug\Obj\em_emu.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_task.o</file>
+            <file>$PROJ_DIR$\..\..\kernel\include\los_sys.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdbool.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdlib.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_api_dynamic_mem.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\em_prs.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\kernel\base\mem\los_memory.inc</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\driver\emstatus.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\ctype.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\textdisplay.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\em_assert.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_inspect_entry.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\textdisplay.pbi</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\textdisplayconfig.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\em_gpio.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\displayls013b7dh03.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\em_int.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_bsp_led.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_priqueue.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\retargettextdisplay.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_api_event.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\udelay.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_api_event.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\em_rtcc.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_cmsis_main.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_hw_tick.pbi</file>
+            <file>$PROJ_DIR$\..\..\kernel\base\mem\los_multipledlinkhead.inc</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_bsp_led.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\displayls013b7dh03.o</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\driver\displayls013b7dh03config.h</file>
+            <file>$PROJ_DIR$\..\..\kernel\include\los_event.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\em_rtcc.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\display.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\system_efm32pg1b.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_api_static_mem.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\displaypalemlib.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_demo_entry.pbi</file>
+            <file>$PROJ_DIR$\..\..\kernel\base\ipc\los_queue.inc</file>
+            <file>$PROJ_DIR$\..\..\kernel\base\mem\los_membox.inc</file>
+            <file>$PROJ_DIR$\Debug\Obj\udelay.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\textdisplay.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\displayls013b7dh03.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\driver\displaypalconfig.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_bsp_lcd.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\driver\displayls013b7dh03.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_api_dynamic_mem.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_bsp_uart.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_bsp_uart.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\los_bsp_adapter.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_swtmr.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_event.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
+            <file>$PROJ_DIR$\..\..\kernel\include\los_queue.h</file>
+            <file>$PROJ_DIR$\..\..\example\include\los_api_systick.h</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\efm32pg1b_ldma.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_task.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_multipledlinkhead.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_multipledlinkhead.o</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\core_cmSimd.h</file>
+            <file>$TOOLKIT_DIR$\lib\m7M_tls.a</file>
+            <file>$PROJ_DIR$\Debug\List\HuaweiLiteOS_slstk3401a.map</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\efm32pg1b200f256gm48.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\retargetio.pbi</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+            <file>$PROJ_DIR$\..\..\kernel\config\los_config.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\startup_efm32pg1b.o</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\efm32pg1b_timer.h</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\efm32pg1b_leuart.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_dispatch_iar.o</file>
+            <file>$PROJ_DIR$\..\..\kernel\base\include\los_tick.ph</file>
+            <file>$TOOLKIT_DIR$\inc\c\time.h</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\efm32pg1b_dmareq.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_api_interrupt.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\efm32pg1b_devinfo.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_memory.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\los_bsp_key.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_bsp_key.pbi</file>
+            <file>$PROJ_DIR$\..\..\example\include\los_api_task.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\em_system.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\efm32pg1b_prs.h</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\bsp\bsp_bcp.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_hw_tick.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\kernel\link\iar\los_builddef.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\retargetio.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\efm32pg1b_msc.h</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\efm32pg1b_cmu.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_bsp_lcd.pbi</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\core_cmInstr.h</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\efm32pg1b_i2c.h</file>
+            <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\efm32pg1b_prs_signals.h</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\efm32pg1b_rmu.h</file>
+            <file>$PROJ_DIR$\..\..\kernel\include\los_base.h</file>
+            <file>$PROJ_DIR$\..\..\kernel\include\los_errno.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_queue.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_sem.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\driver\displayfont8x8.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\bsp_stk_leds.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\main.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_sys.pbi</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\efm32pg1b_af_pins.h</file>
+            <file>$PROJ_DIR$\..\..\kernel\include\los_printf.h</file>
+            <file>$PROJ_DIR$\..\..\kernel\base\core\los_priqueue.inc</file>
+            <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\EFM32PG1B200F256.icf</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_membox.o</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\core_cmFunc.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_api_list.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\em_prs.o</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\efm32pg1b_af_ports.h</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\driver\displayconfigall.h</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\bspconfig.h</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\emlib\inc\em_bus.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\em_assert.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\em_cmu.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_swtmr.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_sem.pbi</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\emlib\inc\em_chip.h</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\los_bsp_led.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\bsp_stk_leds.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_misc.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\em_emu.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\retargetserial.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_tick.pbi</file>
+            <file>$PROJ_DIR$\..\..\kernel\base\ipc\los_event.inc</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\efm32pg1b_wdog.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\displaypalemlib.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_hwi.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_misc.o</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\emlib\inc\em_usart.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\em_emu.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\em_usart.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\em_system.o</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\efm32pg1b_usart.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\retargettextdisplay.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\em_assert.pbi</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\emlib\inc\em_gpio.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\bsp_stk_leds.pbi</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\efm32pg1b_crypto.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\em_usart.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\efm32pg1b_gpio_p.h</file>
+            <file>$PROJ_DIR$\..\..\kernel\include\los_mux.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\yfuns.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\LowLevelIOInterface.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_demo_entry.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\em_gpio.o</file>
+            <file>$PROJ_DIR$\..\..\kernel\base\ipc\los_mux.inc</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\efm32pg1b_ldma_ch.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\retargetio.o</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\emlib\inc\em_assert.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\retargettextdisplay.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\em_system.pbi</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\emlib\inc\em_prs.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\em_prs.pbi</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\emlib\inc\em_rtcc.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\retargetserial.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_inspect_entry.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\inc\c\limits.h</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\core_cm4.h</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\bsp\bsp.h</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\emlib\inc\em_cmu.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_bsp_adapter.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_bsp_lcd.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\retargetserial.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\example\include\los_inspect_entry.h</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\emlib\inc\em_int.h</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\emlib\inc\em_common.h</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\retargetserialconfig.h</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\efm32pg1b_emu.h</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\driver\retargettextdisplay.h</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\emlib\inc\em_system.h</file>
+            <file>$PROJ_DIR$\..\..\kernel\include\los_task.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\em_cmu.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\kernel\include\los_typedef.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\em_int.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_demo_entry.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_priqueue.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\inc\c\string.h</file>
+            <file>$PROJ_DIR$\..\..\example\include\los_api_static_mem.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_tick.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\kernel\base\include\los_task.ph</file>
+            <file>$PROJ_DIR$\..\..\example\include\los_api_mutex.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_api_timer.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\system_efm32pg1b.pbi</file>
+            <file>$PROJ_DIR$\..\..\kernel\include\los_swtmr.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_mux.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_api_task.pbi</file>
+            <file>$PROJ_DIR$\..\..\example\include\los_api_sem.h</file>
+            <file>$PROJ_DIR$\..\..\kernel\include\los_list.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_membox.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\inc\c\stddef.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\display.o</file>
+            <file>$PROJ_DIR$\..\..\kernel\base\include\los_typedef.ph</file>
+            <file>$PROJ_DIR$\Debug\Obj\em_int.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_api_task.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_tick.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_misc.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\example\include\los_demo_debug.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_api_list.o</file>
+            <file>$PROJ_DIR$\..\..\kernel\base\core\los_tick.inc</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_timeslice.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_api_event.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_api_timer.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\kernel\include\los_membox.h</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\system_efm32pg1b.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_api_task.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_api_dynamic_mem.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\inc\c\cmsis_iar.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_hw.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Exe\HuaweiLiteOS_slstk3401a.bin</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\efm32pg1b_fpueh.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_sys.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\main.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_hw.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_bsp_uart.pbi</file>
+            <file>$PROJ_DIR$\..\..\example\include\los_api_event.h</file>
+            <file>$PROJ_DIR$\..\..\example\include\los_api_timer.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_hw_tick.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\time32.h</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\efm32pg1b_gpio.h</file>
+            <file>$PROJ_DIR$\..\..\kernel\include\los_tick.h</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\efm32pg1b_romtable.h</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\efm32pg1b_rtcc_cc.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_hwi.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_api_systick.o</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\efm32pg1b_prs_ch.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_hw.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_bsp_adapter.o</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\efm32pg1b_idac.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_config.pbi</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\efm32pg1b_cryotimer.h</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\efm32pg1b_gpcrc.h</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\efm32pg1b_timer_cc.h</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\efm32pg1b_adc.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_sys.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\kernel\base\core\los_task.inc</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_api_sem.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_priqueue.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\HuaweiLiteOS_slstk3401a.pbd</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_bsp_key.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_api_mutex.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_bsp_led.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\kernel\base\include\los_base.ph</file>
+            <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\los_bsp_lcd.h</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\efm32pg1b_dma_descriptor.h</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\efm32pg1b_wdog_pch.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\displaypalemlib.pbi</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\driver\retargetserial.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_api_static_mem.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\kernel\base\core\los_swtmr.inc</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_config.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\emlib\inc\em_emu.h</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\los_bsp_uart.h</file>
+            <file>$PROJ_DIR$\..\..\kernel\base\include\los_sys.ph</file>
+            <file>$PROJ_DIR$\..\..\kernel\base\include\los_queue.ph</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\em_device.h</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\efm32pg1b_acmp.h</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\driver\em_types.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_task.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\udelay.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\em_gpio.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\example\include\los_demo_entry.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\em_usart.pbi</file>
+            <file>$PROJ_DIR$\..\..\kernel\base\include\los_timeslice.ph</file>
+            <file>$PROJ_DIR$\..\..\kernel\base\core\los_sys.inc</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\driver\udelay.h</file>
+            <file>$PROJ_DIR$\..\..\kernel\include\los_memory.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_float_setup.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_memstat.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\efm32pg1b_letimer.h</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\efm32pg1b_pcnt.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_cmsis_main.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_api_systick.pbi</file>
+            <file>$PROJ_DIR$\..\..\example\include\los_api_dynamic_mem.h</file>
+            <file>$PROJ_DIR$\..\..\example\include\los_api_msgqueue.h</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\driver\displaypal.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_queue.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_cmsis_main.o</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\system_efm32pg1b.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_api_msgqueue.o</file>
+            <file>$PROJ_DIR$\..\..\kernel\base\include\los_memory.ph</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_api_mutex.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_memory.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_memstat.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_api_systick.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdio.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_api_mutex.pbi</file>
+            <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_api_msgqueue.pbi</file>
+            <file>$PROJ_DIR$\..\..\kernel\include\los_multipledlinkhead.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_mux.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_api_list.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_api_interrupt.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_mux.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_api_timer.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_api_static_mem.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_memstat.pbi</file>
+            <file>$PROJ_DIR$\..\..\example\include\los_api_interrupt.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\math.h</file>
+            <file>$PROJ_DIR$\..\..\user\main.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_api_sem.o</file>
+            <file>$PROJ_DIR$\..\..\kernel\base\include\los_membox.ph</file>
+            <file>$PROJ_DIR$\..\..\kernel\base\include\los_swtmr.ph</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_api_interrupt.o</file>
+            <file>$PROJ_DIR$\..\..\kernel\cpu\arm\cortex-m4\los_hw.h</file>
+            <file>$PROJ_DIR$\..\..\kernel\base\include\los_sem.ph</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_timeslice.pbi</file>
+            <file>$TOOLKIT_DIR$\lib\dl7M_tln.a</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_bsp_key.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\example\include\los_api_list.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_hwi.o</file>
+            <file>$PROJ_DIR$\..\..\kernel\base\include\los_priqueue.ph</file>
+            <file>$PROJ_DIR$\..\..\kernel\base\ipc\los_sem.inc</file>
+            <file>$PROJ_DIR$\..\..\kernel\base\include\los_multipledlinkhead.ph</file>
+            <file>$PROJ_DIR$\Debug\Exe\HuaweiLiteOS_slstk3401a.out</file>
+            <file>$PROJ_DIR$\..\..\kernel\cmsis\cmsis_os.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_timeslice.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\kernel\cpu\arm\cortex-m4\los_hwi.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_swtmr.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_membox.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_multipledlinkhead.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_config.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_api_sem.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\system_efm32pg1b.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_event.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\efm32pg1b_rtcc_ret.h</file>
+            <file>$PROJ_DIR$\..\..\kernel\include\los_sem.h</file>
+            <file>$PROJ_DIR$\..\..\kernel\base\include\los_mux.ph</file>
+            <file>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\efm32pg1b_rtcc.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_bsp_adapter.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_memory.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_queue.pbi</file>
+            <file>$PROJ_DIR$\..\..\kernel\include\los_priqueue.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\los_api_msgqueue.__cstat.et</file>
+        </outputs>
+        <file>
+            <name>[ROOT_NODE]</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 394 135</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\kernel\cpu\arm\cortex-m4\los_hw.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 304</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 290</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 285</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 167 157 248 139 176 365 367 254 314 126 138 63 265 168 256 246 76 397 298 105 384 333 321 391 413</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\kernel\cpu\arm\cortex-m4\los_hwi.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 390</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 301</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 202</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 397 167 157 248 139 176 365 367 254 314 126 138 63 265 168 76</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\example\api\los_api_interrupt.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 383</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 372</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 147</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 397 167 157 248 139 176 365 367 254 314 126 138 63 265 168 76 377 274 252 262 239</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\driver\displayls013b7dh03.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 103</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 90</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 116</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 295 367 254 314 126 138 77 365 63 78 252 262 211 335 136 233 162 284 322 181 133 281 159 243 166 160 213 215 297 303 154 222 129 287 309 310 141 208 142 349 308 350 163 311 336 306 300 406 409 325 200 324 148 299 165 146 184 175 187 224 185 117 65 70 104 119 82 337 88 64 355 72 58</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 159 70 77 136 142 295 65 72 154 300 252 314 367 63 213 309 163 200 175 185 365 138 254 262 224 233 166 297 129 141 308 336 409 148 165 181 284 88 78 211 355 119 335 187 281 243 160 215 303 222 287 310 208 349 350 311 306 406 325 324 299 146 184 162 133 322 104 82 117 64 337 58</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\example\api\los_api_list.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 275</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 371</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 182</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 265 167 157 248 139 176 365 367 254 314 126 138 63 168 78 346 389 274 252 262 239</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\example\api\los_api_event.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 278</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 97</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 95</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 105 167 157 248 139 176 365 367 254 314 126 138 63 265 168 246 76 397 298 292 274 252 262 239</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\driver\udelay.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 114</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 339</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 96</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 335 136 233 295 367 254 314 126 138 162 284 322 181 133 281 159 243 166 160 213 215 297 303 154 222 129 287 309 310 141 208 142 349 308 350 163 311 336 306 300 406 409 325 200 324 148 299 165 146 184 175 235 77 224 187 240 229 345</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\kernel\cpu\arm\cortex-m4\los_hw_tick.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 294</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 100</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 156</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 144 298 168 248 157 167 139 176 365 367 254 314 126 138 63 265 256 246 76 397 105 260</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\driver\textdisplay.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 84</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 87</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 115</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 295 367 254 314 126 138 77 78 63 365 252 262 83 185 117 65 70 104 119 82 337 88 64 58 61 171</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 254 70 295 61 117 65 252 63 337 78 185 171 367 82 77 365 83 58 314 138 64 104 262 88 119</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\kernel\config\los_config.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 401</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 307</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 330</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 76 167 157 248 139 176 365 367 254 314 126 138 63 265 168 397 298 256 246 105</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\emlib\src\em_system.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 207</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 226</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 153</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 245 77 335 136 233 295 367 254 314 126 138 162 284 322 181 133 281 159 243 166 160 213 215 297 303 154 222 129 287 309 310 141 208 142 349 308 350 163 311 336 306 300 406 409 325 200 324 148 299 165 146 184 175 224</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\emlib\src\em_int.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 249</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 270</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 91</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 295 367 254 314 126 138 240 335 136 233 162 284 322 181 133 281 159 243 166 160 213 215 297 303 154 222 129 287 309 310 141 208 142 349 308 350 163 311 336 306 300 406 409 325 200 324 148 299 165 146 184 175</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\bsp\bsp_stk_leds.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 172</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 212</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 194</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 335 136 233 295 367 254 314 126 138 162 284 322 181 133 281 159 243 166 160 213 215 297 303 154 222 129 287 309 310 141 208 142 349 308 350 163 311 336 306 300 406 409 325 200 324 148 299 165 146 184 175 235 77 224 187 211 234 186 155 204</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 129 409 295 166 308 165 322 233 297 141 336 148 181 335 211 136 159 213 154 309 142 163 300 200 175 367 254 284 224 187 155 235 234 281 243 160 215 303 222 287 310 208 349 350 311 306 406 325 324 299 146 184 162 133 314 138 77 186 204</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\driver\displaypalemlib.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 110</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 326</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 201</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 295 367 254 314 126 138 77 365 63 78 252 262 335 136 233 162 284 322 181 133 281 159 243 166 160 213 215 297 303 154 222 129 287 309 310 141 208 142 349 308 350 163 311 336 306 300 406 409 325 200 324 148 299 165 146 184 175 235 224 187 211 204 234 186 155 345 185 117 65 70 104 119 82 337 88 64 355 229 227</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 299 281 133 254 367 208 204 303 306 284 252 355 160 287 350 325 146 184 77 104 119 82 365 235 345 63 243 215 222 310 349 311 406 324 162 322 295 335 155 78 211 234 185 229 227 314 138 262 136 233 159 166 213 297 154 129 309 141 142 308 163 336 300 409 200 148 165 175 181 224 65 88 70 187 186 117 64 337</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\emlib\src\em_emu.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 205</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 74</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 196</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 232 367 254 314 126 138 331 335 136 233 295 162 284 322 181 133 281 159 243 166 160 213 215 297 303 154 222 129 287 309 310 141 208 142 349 308 350 163 311 336 306 300 406 409 325 200 324 148 299 165 146 184 175 77 187 235 224 245 241</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\emlib\src\em_cmu.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 189</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 62</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 247</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 235 335 136 233 295 367 254 314 126 138 162 284 322 181 133 281 159 243 166 160 213 215 297 303 154 222 129 287 309 310 141 208 142 349 308 350 163 311 336 306 300 406 409 325 200 324 148 299 165 146 184 175 77 224 187 267 63 232 331 245 241</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\example\api\los_api_dynamic_mem.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 120</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 79</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 283</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 78 367 254 314 126 138 63 139 248 157 176 365 346 167 265 168 353 274 252 262 239</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\driver\display.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 268</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 71</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 107</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 295 367 254 314 126 138 77 252 63 262 185 117 65 70 104 119 82 337 88 64 58 72</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 254 65 70 58 138 295 252 88 82 77 185 72 367 314 104 119 63 262 117 64 337</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\driver\retargetio.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 223</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 137</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 158</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 217 218 63 367 254 314 126 138 295</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 218 295 63 254 217 367 314 138</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\driver\retargetserial.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 230</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 197</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 238</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 365 367 254 314 126 138 63 335 136 233 295 162 284 322 181 133 281 159 243 166 160 213 215 297 303 154 222 129 287 309 310 141 208 142 349 308 350 163 311 336 306 300 406 409 325 200 324 148 299 165 146 184 175 235 77 224 187 240 211 327 242 234 186 155 204</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 159 254 136 142 295 314 367 154 300 284 187 234 211 213 309 163 200 175 224 235 138 233 166 297 129 141 308 336 409 148 165 181 322 335 240 327 204 63 281 243 160 215 303 222 287 310 208 349 350 311 306 406 325 324 299 146 184 162 133 242 77 155 365 186</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\emlib\src\em_gpio.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 220</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 89</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 340</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 211 335 136 233 295 367 254 314 126 138 162 284 322 181 133 281 159 243 166 160 213 215 297 303 154 222 129 287 309 310 141 208 142 349 308 350 163 311 336 306 300 406 409 325 200 324 148 299 165 146 184 175 77 187 224</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\driver\retargettextdisplay.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 94</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 225</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 209</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 365 367 254 314 126 138 63 295 185 117 65 70 104 119 82 337 88 64 58 77 61 244</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 70 117 65 337 185 254 295 58 367 63 64 104 365 61 314 138 88 119 82 77 244</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\emlib\src\em_assert.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 85</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 210</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 188</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 224 77</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\emlib\src\em_prs.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 183</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 228</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 80</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 227 335 136 233 295 367 254 314 126 138 162 284 322 181 133 281 159 243 166 160 213 215 297 303 154 222 129 287 309 310 141 208 142 349 308 350 163 311 336 306 300 406 409 325 200 324 148 299 165 146 184 175 224</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\emlib\src\em_rtcc.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 69</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 98</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 106</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 229 335 136 233 295 367 254 314 126 138 162 284 322 181 133 281 159 243 166 160 213 215 297 303 154 222 129 287 309 310 141 208 142 349 308 350 163 311 336 306 300 406 409 325 200 324 148 299 165 146 184 175 77 224 187</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\emlib\src\em_usart.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 206</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 342</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 214</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 204 335 136 233 295 367 254 314 126 138 162 284 322 181 133 281 159 243 166 160 213 215 297 303 154 222 129 287 309 310 141 208 142 349 308 350 163 311 336 306 300 406 409 325 200 324 148 299 165 146 184 175 77 235 224 187</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\kernel\cpu\arm\cortex-m4\los_dispatch_iar.s</name>
+            <outputs>
+                <tool>
+                    <name>AARM</name>
+                    <file> 143</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\los_bsp_led.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 102</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 92</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 320</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 193 234 77 186 155 295 367 254 314 126 138 204 335 136 233 162 284 322 181 133 281 159 243 166 160 213 215 297 303 154 222 129 287 309 310 141 208 142 349 308 350 163 311 336 306 300 406 409 325 200 324 148 299 165 146 184 175</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\example\api\los_api_mutex.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 361</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 366</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 319</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 216 167 157 248 139 176 365 367 254 314 126 138 63 265 168 76 397 246 298 105 257 274 252 262 239</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\example\api\los_api_msgqueue.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 359</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 368</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 414</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 167 157 248 139 176 365 367 254 314 126 138 63 265 168 246 76 397 298 105 260 127 354 274 252 262 239</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\example\api\los_cmsis_main.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 357</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 99</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 351</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 395 295 367 254 314 126 138 267 63</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\kernel\base\misc\los_misc.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 203</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 195</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 273</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 321 167 157 248 139 176 365 367 254 314 126 138 63 265 168 333 76 397 256 246 298 105</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\kernel\base\ipc\los_mux.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 370</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 373</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 261</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 221 408 256 246 167 157 248 139 176 365 367 254 314 126 138 63 265 168 76 397 298 105 216 360 346 391 413 384</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\kernel\base\ipc\los_sem.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 66</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 191</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 170</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 392 385 407 167 157 248 139 176 365 367 254 314 126 138 63 265 168 246 76 397 298 105 321 360 346 391 413 333 256 384</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\kernel\base\ipc\los_event.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 404</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 60</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 125</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 199 67 105 167 157 248 139 176 365 367 254 314 126 138 63 265 168 391 413 256 246 76 397 298 384</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\kernel\base\core\los_swtmr.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 190</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 398</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 124</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 329 382 260 167 157 248 139 176 365 367 254 314 126 138 63 265 168 246 76 397 298 105 321 381 280 360 346 334 127 256 252 262</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\kernel\base\mem\los_memstat.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 363</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 376</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 348</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 73 59 248 157 256 246 167 139 176 365 367 254 314 126 138 63 265 168 76 397 298 105</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\los_bsp_lcd.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 237</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 161</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 118</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 323 234 77 186 155 295 367 254 314 126 138 204 335 136 233 162 284 322 181 133 281 159 243 166 160 213 215 297 303 154 222 129 287 309 310 141 208 142 349 308 350 163 311 336 306 300 406 409 325 200 324 148 299 165 146 184 175 58 82 337 185 117 65 70 104 119 88 64 61 244 365 63</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\kernel\base\mem\los_membox.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 180</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 399</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 266</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 113 381 280 139 248 157 176 365 367 254 314 126 138 63 321 167 265 168 397 76 252 262</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\kernel\base\ipc\los_queue.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 356</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 412</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 169</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 112 334 127 167 157 248 139 176 365 367 254 314 126 138 63 265 168 381 280 360 346 391 413 256 246 76 397 298 105 384 252 262</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\los_bsp_uart.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 121</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 291</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 122</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 332 327 242 234 77 186 155 295 367 254 314 126 138 204 335 136 233 162 284 322 181 133 281 159 243 166 160 213 215 297 303 154 222 129 287 309 310 141 208 142 349 308 350 163 311 336 306 300 406 409 325 200 324 148 299 165 146 184 175</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\startup_efm32pg1b.s</name>
+            <outputs>
+                <tool>
+                    <name>AARM</name>
+                    <file> 140</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\kernel\base\mem\los_memory.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 411</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 362</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 149</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 81 360 346 167 157 248 139 176 365 367 254 314 126 138 63 265 168 393 369 59 256 246 76 397 298 105 252 262</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\kernel\base\mem\los_multipledlinkhead.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 132</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 400</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 131</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 101 393 369 167 157 248 139 176 365 367 254 314 126 138 63 265 168</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\kernel\base\core\los_task.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 75</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 338</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 130</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 313 256 246 167 157 248 139 176 365 367 254 314 126 138 63 265 168 76 397 298 105 321 360 346 391 413 385 407 408 216 384 252 262</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\los_bsp_adapter.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 305</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 410</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 236</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 365 367 254 314 126 138 63 252 262 335 136 233 295 162 284 322 181 133 281 159 243 166 160 213 215 297 303 154 222 129 287 309 310 141 208 142 349 308 350 163 311 336 306 300 406 409 325 200 324 148 299 165 146 184 175 123 193 150 332 144 298 168 248 157 167 139 176 265 256 246 76 397 105 260</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\example\api\los_api_sem.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 380</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 402</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 315</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 407 167 157 248 139 176 365 367 254 314 126 138 63 265 168 246 76 397 298 105 321 264 274 252 262 239</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\example\api\los_api_systick.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 302</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 352</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 364</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 76 167 157 248 139 176 365 367 254 314 126 138 63 265 168 397 246 298 105 128 274 252 262 239</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\example\api\los_demo_entry.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 250</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 111</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 219</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 341 248 157 274 252 367 254 314 126 138 63 262 152 353 253 377 354 292 257 264 293 128 389 246 167 139 176 365 265 168 76 397 298 105</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\example\api\los_inspect_entry.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 86</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 68</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 231</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 252 367 254 314 126 138 63 262 239 248 157 246 167 139 176 365 265 168 76 397 298 105 274 123 193 150 295 332 152 353 253 377 354 292 257 264 293 128 389</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\kernel\base\core\los_priqueue.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 93</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 316</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 251</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 177 391 413 265 167 157 248 139 176 365 367 254 314 126 138 63 168 321 256 246 76 397 298 105 346</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\kernel\base\core\los_sys.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 288</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 174</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 312</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 344 333 321 167 157 248 139 176 365 367 254 314 126 138 63 265 168 76 397 144 298</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\example\api\los_api_static_mem.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 109</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 375</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 328</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 365 367 254 314 126 138 63 280 139 248 157 176 253 274 252 262 239</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\example\api\los_api_timer.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 374</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 258</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 279</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 365 367 254 314 126 138 63 260 167 157 248 139 176 265 168 246 76 397 298 105 145 296 293 274 252 262 239</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\kernel\base\core\los_tick.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 272</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 198</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 255</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 276 144 298 168 248 157 321 167 139 176 365 367 254 314 126 138 63 265 382 260 246 76 397 105 256 343</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\kernel\base\core\los_timeslice.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 277</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 386</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 396</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 333 321 167 157 248 139 176 365 367 254 314 126 138 63 265 168 76 397 256 246 298 105 144 269</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\los_bsp_key.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 318</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 151</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 388</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 150 295 367 254 314 126 138 235 335 136 233 162 284 322 181 133 281 159 243 166 160 213 215 297 303 154 222 129 287 309 310 141 208 142 349 308 350 163 311 336 306 300 406 409 325 200 324 148 299 165 146 184 175 77 224 187 211 186 155</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\example\api\los_api_task.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 271</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 263</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 282</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 378 367 254 314 126 138 347 145 63 296 246 167 157 248 139 176 365 265 168 76 397 298 105 152 274 252 262 239</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\platform\SLSTK3401A-SLab\system_efm32pg1b.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 403</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 259</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 108</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 295 367 254 314 126 138 335 136 233 162 284 322 181 133 281 159 243 166 160 213 215 297 303 154 222 129 287 309 310 141 208 142 349 308 350 163 311 336 306 300 406 409 325 200 324 148 299 165 146 184 175</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\user\main.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 173</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 405</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 289</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 76 167 157 248 139 176 365 367 254 314 126 138 63 265 168 397 298 256 246 105 193 150 295 332 335 136 233 162 284 322 181 133 281 159 243 166 160 213 215 297 303 154 222 129 287 309 310 141 208 142 349 308 350 163 311 336 306 300 406 409 325 200 324 148 299 165 146 184 175 192 245 77 211 187 224 235 331 234 186 155 204 239 252 262 58 82 337 185 117 65 70 104 119 88 64 61 244</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Debug\Exe\HuaweiLiteOS_slstk3401a.out</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 135</file>
+                </tool>
+                <tool>
+                    <name>OBJCOPY</name>
+                    <file> 286</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 179 172 268 103 110 85 189 205 220 249 183 69 207 206 120 278 383 275 359 361 380 109 302 271 374 305 318 237 102 121 357 401 250 143 404 304 294 390 86 180 411 363 203 132 370 93 356 66 190 288 75 272 277 173 223 230 94 140 403 84 114 164 178 134 387</file>
+                </tool>
+            </inputs>
+        </file>
+    </configuration>
+    <configuration>
+        <name>Release</name>
+        <outputs />
+        <forcedrebuild>
+            <name>[MULTI_TOOL]</name>
+            <tool>ILINK</tool>
+        </forcedrebuild>
+    </configuration>
+</project>
