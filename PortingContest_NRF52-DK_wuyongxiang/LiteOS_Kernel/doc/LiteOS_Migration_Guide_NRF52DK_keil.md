@@ -289,17 +289,17 @@ Keil工具需要开发者自行购买，Link在keil5.18安装以后就有，开�
   - 实现key功能，预留初始化函数里设置开发板button1 对应的gpio 13 为输入，获取key状态的函数里添加button1 对应gpio 读函数。这里需注意一点，gpio需配置下拉，不然有时候按键释放LED灯还会亮。具体如下图：
     
  
-![](https://github.com/wucool/LiteOSPorting/raw/master/pictures/7-1-3.png) 
+![](https://github.com/wucool/LiteOSPorting/raw/master/pictures/7-1-5.png) 
   
-![](https://github.com/wucool/LiteOSPorting/raw/master/pictures/7-1-4.png) 
+![](https://github.com/wucool/LiteOSPorting/raw/master/pictures/7-1-6.png) 
  
 
 
   - 实现led功能，预留初始化函数配置开发板led1对应的gpio 17为输出，获取led 亮灭的函数里使用gpio操作函数置1或置0。具体如下图：
  
-![](https://github.com/wucool/LiteOSPorting/raw/master/pictures/7-1-5.png) 
+![](https://github.com/wucool/LiteOSPorting/raw/master/pictures/7-1-3.png) 
   
-![](https://github.com/wucool/LiteOSPorting/raw/master/pictures/7-1-6.png) 
+![](https://github.com/wucool/LiteOSPorting/raw/master/pictures/7-1-4.png) 
  
          
 
