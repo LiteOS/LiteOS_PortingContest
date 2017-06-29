@@ -38,10 +38,10 @@ void LOS_EvbLedControl(int index, int cmd)
         return;
     
     if(cmd == LED_ON)
-        gpioCtrl = gpio_bit_set;
+        gpioCtrl = gpio_bit_reset;
 
     if(cmd == LED_OFF)
-        gpioCtrl = gpio_bit_reset;
+        gpioCtrl = gpio_bit_set;
 
     switch (index)
     {
