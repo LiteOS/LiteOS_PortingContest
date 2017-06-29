@@ -7,8 +7,8 @@
 #define KEY_3       3
 #define KEY_4       4
 
-#define LOS_KEY_PRESS       0
-#define USER_KEY            KEY_4
+#define LOS_KEY_PRESS       1
+#define USER_KEY            KEY_2
 #define LOS_GPIO_ERR        0xFF
 
 extern void LOS_EvbKeyInit(void);
