@@ -398,7 +398,7 @@
   </Group>
 
   <Group>
-    <GroupName>cpu</GroupName>
+    <GroupName>cpu/cm3</GroupName>
     <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>

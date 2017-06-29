@@ -247,13 +247,13 @@ ARM Macro Assembler    Page 4
               00000000 
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
-ork --depend=.\objects\los_dispatch_keil.d -o.\objects\los_dispatch_keil.o -ID:
-\GitHub\liteos\PortingContest\PortingContest\PortingContest_GD32F103VCT6_ChengX
-iaoxia_01\GD32F103VCT6\RTE -IC:\Keil_v5\ARM\PACK\Keil\GD32F1xx_DFP\1.1.0\Device
-\GD32F10x\Include -IC:\Keil_v5\ARM\CMSIS\Include --predefine="__MICROLIB SETA 1
-" --predefine="__UVISION_VERSION SETA 520" --predefine="GD32F10X_HD SETA 1" --l
-ist=.\listings\los_dispatch_keil.lst kernel\cpu\arm\cortex-m3\los_dispatch_keil
-.s
+ork --depend=..\..\objects\los_dispatch_keil.d -o..\..\objects\los_dispatch_kei
+l.o -ID:\GitHub\liteos\PortingContest\PortingContest\PortingContest_GD32F103VCT
+6_ChengXiaoxia_01\GD32F103VCT6\projects\GD32F103C-EVAL-KEIL\RTE -IC:\Keil_v5\AR
+M\PACK\Keil\GD32F1xx_DFP\1.1.0\Device\GD32F10x\Include -IC:\Keil_v5\ARM\CMSIS\I
+nclude --predefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SETA 520"
+ --predefine="GD32F10X_HD SETA 1" --list=..\..\listings\los_dispatch_keil.lst .
+.\..\kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
 
 
 
@@ -264,7 +264,7 @@ Relocatable symbols
 
 Symbol: .text
    Definitions
-      At line 56 in file kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
+      At line 56 in file ..\..\kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
    Uses
       None
 Comment: .text unused
@@ -272,9 +272,9 @@ LOS_StartToRun 00000000
 
 Symbol: LOS_StartToRun
    Definitions
-      At line 60 in file kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
+      At line 60 in file ..\..\kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
    Uses
-      At line 40 in file kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
+      At line 40 in file ..\..\kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
 Comment: LOS_StartToRun used once
 2 symbols
 
@@ -287,7 +287,7 @@ KERNEL 00000000
 
 Symbol: KERNEL
    Definitions
-      At line 102 in file kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
+      At line 102 in file ..\..\kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
    Uses
       None
 Comment: KERNEL unused
@@ -295,49 +295,49 @@ LOS_IntLock 0000000A
 
 Symbol: LOS_IntLock
    Definitions
-      At line 113 in file kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
+      At line 113 in file ..\..\kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
    Uses
-      At line 37 in file kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
+      At line 37 in file ..\..\kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
 Comment: LOS_IntLock used once
 LOS_IntNumGet 00000000
 
 Symbol: LOS_IntNumGet
    Definitions
-      At line 105 in file kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
+      At line 105 in file ..\..\kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
    Uses
-      At line 43 in file kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
+      At line 43 in file ..\..\kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
 Comment: LOS_IntNumGet used once
 LOS_IntRestore 0000001A
 
 Symbol: LOS_IntRestore
    Definitions
-      At line 123 in file kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
+      At line 123 in file ..\..\kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
    Uses
-      At line 39 in file kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
+      At line 39 in file ..\..\kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
 Comment: LOS_IntRestore used once
 LOS_IntUnLock 00000012
 
 Symbol: LOS_IntUnLock
    Definitions
-      At line 118 in file kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
+      At line 118 in file ..\..\kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
    Uses
-      At line 38 in file kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
+      At line 38 in file ..\..\kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
 Comment: LOS_IntUnLock used once
 PendSV_Handler 0000002A
 
 Symbol: PendSV_Handler
    Definitions
-      At line 133 in file kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
+      At line 133 in file ..\..\kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
    Uses
-      At line 42 in file kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
+      At line 42 in file ..\..\kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
 Comment: PendSV_Handler used once
 TaskSwitch 0000003E
 
 Symbol: TaskSwitch
    Definitions
-      At line 144 in file kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
+      At line 144 in file ..\..\kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
    Uses
-      At line 139 in file kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
+      At line 139 in file ..\..\kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
 Comment: TaskSwitch used once
 osDisableIRQ 00000006
 
@@ -349,17 +349,17 @@ ARM Macro Assembler    Page 2 Alphabetic symbol ordering
 Relocatable symbols
 
    Definitions
-      At line 109 in file kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
+      At line 109 in file ..\..\kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
    Uses
-      At line 44 in file kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
+      At line 44 in file ..\..\kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
 Comment: osDisableIRQ used once
 osTaskSchedule 00000020
 
 Symbol: osTaskSchedule
    Definitions
-      At line 127 in file kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
+      At line 127 in file ..\..\kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
    Uses
-      At line 41 in file kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
+      At line 41 in file ..\..\kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
 Comment: osTaskSchedule used once
 9 symbols
 
@@ -372,43 +372,43 @@ OS_NVIC_INT_CTRL E000ED04
 
 Symbol: OS_NVIC_INT_CTRL
    Definitions
-      At line 50 in file kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
+      At line 50 in file ..\..\kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
    Uses
-      At line 128 in file kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
+      At line 128 in file ..\..\kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
 Comment: OS_NVIC_INT_CTRL used once
 OS_NVIC_PENDSVSET 10000000
 
 Symbol: OS_NVIC_PENDSVSET
    Definitions
-      At line 53 in file kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
+      At line 53 in file ..\..\kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
    Uses
-      At line 129 in file kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
+      At line 129 in file ..\..\kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
 Comment: OS_NVIC_PENDSVSET used once
 OS_NVIC_PENDSV_PRI F0F00000
 
 Symbol: OS_NVIC_PENDSV_PRI
    Definitions
-      At line 52 in file kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
+      At line 52 in file ..\..\kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
    Uses
-      At line 62 in file kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
+      At line 62 in file ..\..\kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
 Comment: OS_NVIC_PENDSV_PRI used once
 OS_NVIC_SYSPRI2 E000ED20
 
 Symbol: OS_NVIC_SYSPRI2
    Definitions
-      At line 51 in file kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
+      At line 51 in file ..\..\kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
    Uses
-      At line 61 in file kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
+      At line 61 in file ..\..\kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
 Comment: OS_NVIC_SYSPRI2 used once
 OS_TASK_STATUS_RUNNING 00000010
 
 Symbol: OS_TASK_STATUS_RUNNING
    Definitions
-      At line 54 in file kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
+      At line 54 in file ..\..\kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
    Uses
-      At line 81 in file kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
-      At line 156 in file kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
-      At line 167 in file kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
+      At line 81 in file ..\..\kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
+      At line 156 in file ..\..\kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
+      At line 167 in file ..\..\kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
 
 5 symbols
 
@@ -421,29 +421,29 @@ g_bTaskScheduled 00000000
 
 Symbol: g_bTaskScheduled
    Definitions
-      At line 48 in file kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
+      At line 48 in file ..\..\kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
    Uses
-      At line 65 in file kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
+      At line 65 in file ..\..\kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
 Comment: g_bTaskScheduled used once
 g_pfnTskSwitchHook 00000000
 
 Symbol: g_pfnTskSwitchHook
    Definitions
-      At line 47 in file kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
+      At line 47 in file ..\..\kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
    Uses
-      At line 137 in file kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
+      At line 137 in file ..\..\kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
 Comment: g_pfnTskSwitchHook used once
 g_stLosTask 00000000
 
 Symbol: g_stLosTask
    Definitions
-      At line 46 in file kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
+      At line 46 in file ..\..\kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
    Uses
-      At line 73 in file kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
-      At line 75 in file kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
-      At line 78 in file kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
-      At line 150 in file kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
-      At line 161 in file kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
+      At line 73 in file ..\..\kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
+      At line 75 in file ..\..\kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
+      At line 78 in file ..\..\kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
+      At line 150 in file ..\..\kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
+      At line 161 in file ..\..\kernel\cpu\arm\cortex-m3\los_dispatch_keil.s
 
 3 symbols
 356 symbols in table
