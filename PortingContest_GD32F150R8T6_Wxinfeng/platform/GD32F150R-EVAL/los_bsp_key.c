@@ -9,9 +9,9 @@ void LOS_EvbKeyInit(void)
 {
 #ifdef GD32F150R8
     /* configure User key */
-    gd_eval_keyinit(KEY_TAMPER, KEY_MODE_GPIO);
+    gd_eval_keyinit(KEY_USER, KEY_MODE_GPIO);
     
-    gd_eval_ledinit(LED2);
+    gd_eval_ledinit(LED1);
 #endif
 
     return;
@@ -47,7 +47,7 @@ unsigned int LOS_EvbGetKeyVal(int KeyNum)
     unsigned int KeyVal = LOS_GPIO_ERR;
     
     //add you code here.
-		KeyVal = gd_eval_keygetstate(1);
+		KeyVal = gd_eval_keygetstate(USER_KEY);
     
     return KeyVal;
 }
