@@ -4,8 +4,8 @@
 #include <stdio.h>
 #include <string.h>
 
-#ifdef GD32F150R8
-//#include "gd32f1x0.h"
+#ifdef GD32F190R8
+#include "gd32f1x0.h"
 #include "system_gd32f1x0.h"
 #include "systick.h"
 #endif

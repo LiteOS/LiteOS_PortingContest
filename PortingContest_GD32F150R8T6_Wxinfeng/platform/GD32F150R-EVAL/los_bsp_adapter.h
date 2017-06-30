@@ -5,6 +5,7 @@
 #include <string.h>
 #include "gd32f1x0.h"
 
+
 extern void LOS_EvbSetup(void);
 extern void LOS_EvbTrace(const char *str);
 
