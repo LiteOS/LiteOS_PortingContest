@@ -405,7 +405,7 @@ KEIL工具需要开发者自行购买，LAUNCHXL_CC3220SF自带板载XDS-110仿�
 
 
 ### 修改main.c文件
-- 在main.c中添加修改中断向量表位置，CC3220SF用户flash起始位置为**0x01000800**，调用LOS_Inspect_Entry()巡检程序以检查移植是否正确。
+- 在main.c中添加修改中断向量表位置，CC3220SF用户flash起始位置为**0x01000800**，调用LOS_Inspect_Entry()巡检程序以检查移植是否正确。    
 ![](./meta/keil/LAUNCHXL_CC3220SF/code_main.jpg)
 
 
