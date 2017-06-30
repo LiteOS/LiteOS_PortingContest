@@ -9,6 +9,7 @@
 #define LOS_LED4    (3)
 #define LOS_LEDX    (4)
 
+#define GD32F103VCT6
 
 void LOS_EvbLedInit(void);
 void LOS_EvbLedControl(int index, int cmd);

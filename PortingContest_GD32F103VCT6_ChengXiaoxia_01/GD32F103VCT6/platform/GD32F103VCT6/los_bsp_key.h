@@ -5,6 +5,8 @@
 
 #define USER_KEY    1
 
+#define GD32F103VCT6
+
 extern void LOS_EvbKeyInit(void);
 
 unsigned int LOS_EvbGetKeyVal(int KeyNum);

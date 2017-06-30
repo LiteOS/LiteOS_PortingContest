@@ -1,5 +1,9 @@
 #include "los_bsp_led.h"
+
+#ifdef GD32F103VCT6
 #include "gd32f10x.h"
+#endif
+
 /******************************************************************************
     here include some special hearder file you need
 ******************************************************************************/
@@ -16,6 +20,7 @@
 void LOS_EvbLedInit(void)
 {
     //add you code here.
+	  #ifdef GD32F103VCT6
     GPIO_InitPara GPIO_InitStructure;
     
     /* Enable GPIOC,GPIOE clock */
@@ -30,6 +35,7 @@ void LOS_EvbLedInit(void)
     GPIO_InitStructure.GPIO_Speed = GPIO_SPEED_50MHZ;
     GPIO_InitStructure.GPIO_Mode  = GPIO_MODE_OUT_PP;
     GPIO_Init(GPIOE,&GPIO_InitStructure);
+	  #endif
     return ;
 }
 
@@ -44,6 +50,7 @@ void LOS_EvbLedInit(void)
 **************************************************************************************************/
 void LOS_EvbLedControl(int index, int cmd)
 {
+	 #ifdef GD32F103VCT6
     switch (index)
     {
         case LOS_LED1:
@@ -93,6 +100,7 @@ void LOS_EvbLedControl(int index, int cmd)
             break;
         }
     }
+		#endif
     return;
 }
 

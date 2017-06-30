@@ -3,7 +3,11 @@
 #include <stdarg.h>
 #include "los_bsp_uart.h"
 #include "los_demo_debug.h"
+
+#ifdef GD32F103VCT6
 #include "gd32f10x.h"
+#endif
+
 static char _buffer[128];
 /******************************************************************************
     here include some special hearder file you need
@@ -21,6 +25,7 @@ static char _buffer[128];
 void LOS_EvbUartInit(void)
 {
     //add you code here.
+	  #ifdef GD32F103VCT6
 		    /* Enable GPIOA clock */
     RCC_APB2PeriphClock_Enable( RCC_APB2PERIPH_GPIOA  , ENABLE );
     
@@ -64,7 +69,7 @@ void LOS_EvbUartInit(void)
     transfers and it is set by hardware when the one frame transmission complete */
     while ( USART_GetBitState( USART2 , USART_FLAG_TC  ) == RESET )
     {}
-  
+    #endif
     return;
 }
 
@@ -78,12 +83,14 @@ void LOS_EvbUartInit(void)
 void LOS_EvbUartWriteByte(const char c)
 {
     //add you code here.
+	  #ifdef GD32F103VCT6
         /* e.g. write a character to the USART */
     USART_DataSend( USART2 , (uint8_t) c );
 
     /* Loop until transmit data register is empty */
     while ( USART_GetBitState( USART2 , USART_FLAG_TBE ) == RESET)
     {}
+		#endif
     return;
 }
 
@@ -97,8 +104,10 @@ void LOS_EvbUartWriteByte(const char c)
 void LOS_EvbUartReadByte(char* c)
 {
     //add you code here.
+	  #ifdef GD32F103VCT6
      while (RESET == USART_GetBitState(USART2,USART_FLAG_RBNE));
     *c = (USART_DataReceive(USART2));
+	  #endif
     return;
 }
 
@@ -112,12 +121,13 @@ void LOS_EvbUartReadByte(char* c)
 void LOS_EvbUartPrintf(char* fmt, ...)
 {
     //add you code here.
+	  #ifdef GD32F103VCT6
     int i;
     va_list ap;
     va_start(ap, fmt);
     vsprintf(_buffer, fmt, ap);
     va_end(ap);
-
+    
     for (i = 0; _buffer[i] != '\0'; i++)
     {
         LOS_EvbUartWriteByte(_buffer[i]);
@@ -125,6 +135,7 @@ void LOS_EvbUartPrintf(char* fmt, ...)
         
     while(RESET == USART_GetBitState(USART2, USART_FLAG_TC))
 		{ }
+		#endif
     return;
 }
 
