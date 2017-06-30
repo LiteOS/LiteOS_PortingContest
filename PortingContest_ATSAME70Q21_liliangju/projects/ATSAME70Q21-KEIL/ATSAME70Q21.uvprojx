@@ -186,7 +186,7 @@
             <hadIRAM2>0</hadIRAM2>
             <hadIROM2>1</hadIROM2>
             <StupSel>16</StupSel>
-            <useUlib>0</useUlib>
+            <useUlib>1</useUlib>
             <EndSel>0</EndSel>
             <uLtcg>0</uLtcg>
             <nSecure>0</nSecure>
@@ -357,7 +357,7 @@
             </VariousControls>
           </Aads>
           <LDads>
-            <umfTarg>1</umfTarg>
+            <umfTarg>0</umfTarg>
             <Ropi>0</Ropi>
             <Rwpi>0</Rwpi>
             <noStLib>0</noStLib>
@@ -528,11 +528,6 @@
               <FileName>pmc.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\platform\ATSAME70\BSP\Libraries\libchip\source\pmc.c</FilePath>
-            </File>
-            <File>
-              <FileName>uart.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\platform\ATSAME70\BSP\Libraries\libchip\source\uart.c</FilePath>
             </File>
             <File>
               <FileName>system_SAME70.c</FileName>

@@ -1,18 +1,10 @@
 #include "sam.h"
 #include "los_bsp_uart.h"
-#include "uart.h"
 #include "Board_LED.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
-
-extern void UART_Configure(Uart *uart,
-					uint32_t mode,
-					uint32_t baudrate,
-					uint32_t masterClock);
-
-extern uint8_t UART_GetChar(Uart *uart);
-extern void UART_PutChar(Uart *uart, uint8_t c);
+#include "los_demo_debug.h"
 
 void Error_Handler(void)
 {
@@ -26,7 +18,29 @@ void Error_Handler(void)
 
 void LOS_EvbUartInit(void)
 {
-	UART_Configure(UART0,4,115200,30000000);
+	uint32_t ul_sr;
+	PMC->PMC_WPMR = 0x504D4300;             /* Disable write protect            */
+	PMC->PMC_PCER0 = ((1UL << ID_PIOA ) | (1UL << ID_UART0));      /* enable UART0 clock                */
+
+	  /* Configure UART0 Pins (PA10 = TX, PA9 = RX). */
+  PIOA->PIO_IDR        =  (PIO_PA9A_URXD0 | PIO_PA10A_UTXD0);
+	
+	ul_sr = PIOA->PIO_ABCDSR[0];
+	PIOA->PIO_ABCDSR[0] &= (~(PIO_PA9A_URXD0 | PIO_PA10A_UTXD0) & ul_sr);
+	ul_sr = PIOA->PIO_ABCDSR[1];
+	PIOA->PIO_ABCDSR[1] &= (~(PIO_PA9A_URXD0 | PIO_PA10A_UTXD0) & ul_sr);
+
+  PIOA->PIO_PDR        =  (PIO_PA9A_URXD0 | PIO_PA10A_UTXD0);
+	PIOA->PIO_PUDR       =  (PIO_PA9A_URXD0 | PIO_PA10A_UTXD0);
+	
+  /* Configure UART0 for 115200 baud. */
+  UART0->UART_CR   = (UART_CR_RSTRX | UART_CR_RSTTX) |
+                     (UART_CR_RXDIS | UART_CR_TXDIS);
+	UART0->UART_BRGR = (SystemCoreClock / 115200) / 16;
+  UART0->UART_MR   =  (0x4u <<  9);        /* (UART) No Parity                 */
+  UART0->UART_CR   = UART_CR_RXEN | UART_CR_TXEN;
+	
+	PMC->PMC_WPMR = 0x504D4301;             /* Enable write protect             */
 	return ;
 }
 
@@ -39,8 +53,8 @@ void LOS_EvbUartInit(void)
  *************************************************************************************************/
 void LOS_EvbUartWriteByte(char c)
 {
-	UART_PutChar(UART0, c);
-	return ;
+	while (!(UART0->UART_SR & UART_SR_TXRDY));
+	UART0->UART_THR = c;
 }
 
 /*************************************************************************************************
@@ -53,7 +67,7 @@ void LOS_EvbUartWriteStr(const char* str)
 {
     while (*str)
     {
-			UART_PutChar(UART0, *str++);
+			LOS_EvbUartWriteByte(*str++);
     }
 	return ;
 }
@@ -67,8 +81,8 @@ void LOS_EvbUartWriteStr(const char* str)
  *************************************************************************************************/
 void LOS_EvbUartReadByte(char* c)
 {
-	UART_GetChar(UART0);
-	return ;
+    while((UART0->UART_SR & UART_SR_RXRDY) == 0);
+    *c = UART0->UART_RHR;
 }
 
 
@@ -88,9 +102,14 @@ void LOS_EvbUartPrintf(char* fmt, ...)
 	return ;
 }
 
+#ifndef LOS_KERNEL_TEST_KEIL_SWSIMU
+///重定向c库函数printf到串口，重定向后可使用printf函数
 int fputc(int ch, FILE *f)
 {
-	LOS_EvbUartWriteByte(ch);
-	return (ch);
+		/* 发送一个字节数据到串口USART */
+		LOS_EvbUartWriteByte(ch);	
+	
+		return (ch);
 }
+#endif
 

@@ -47,7 +47,7 @@ extern "C" {
                             CKGR_PLLAR_PLLACOUNT(0x3fU) | CKGR_PLLAR_DIVA(0x1U))
 #define SYS_BOARD_MCKR      (PMC_MCKR_PRES_CLK_2 | PMC_MCKR_CSS_PLLA_CLK | (1<<8))
 
-uint32_t SystemCoreClock = CHIP_FREQ_MAINCK_RC_4MHZ;
+uint32_t SystemCoreClock = CHIP_FREQ_XTAL_12M;
 
 /**
  * \brief Setup the microcontroller system.

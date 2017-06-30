@@ -75,7 +75,7 @@
 
 #include "chip.h"
 
-#include <assert.h>
+//#include <assert.h>
 
 /*----------------------------------------------------------------------------
  *        Local definitions
@@ -155,7 +155,7 @@ static void _PMC_SetMckPrescaler(uint32_t prescaler)
  */
 void PMC_EnablePeripheral(uint32_t dwId)
 {
-	assert(dwId < 63);
+	//assert(dwId < 63);
 
 	if (dwId < 32) {
 		if ((PMC->PMC_PCSR0 & ((uint32_t)1 << dwId)) == ((uint32_t)1 << dwId)) {
@@ -184,7 +184,7 @@ void PMC_EnablePeripheral(uint32_t dwId)
  */
 void PMC_DisablePeripheral(uint32_t dwId)
 {
-	assert(dwId < 63);
+	//assert(dwId < 63);
 
 	if (dwId < 32) {
 		if ((PMC->PMC_PCSR0 & ((uint32_t)1 << dwId)) != ((uint32_t)1 << dwId)) {
@@ -242,7 +242,7 @@ void PMC_DisableAllPeripherals(void)
  */
 uint32_t PMC_IsPeriphEnabled(uint32_t dwId)
 {
-	assert(dwId < ID_PERIPH_COUNT);
+	//assert(dwId < ID_PERIPH_COUNT);
 
 	if (dwId < 32)
 		return (PMC->PMC_PCSR0 & (1 << dwId));

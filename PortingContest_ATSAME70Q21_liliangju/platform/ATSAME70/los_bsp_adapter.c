@@ -8,6 +8,8 @@
 */
 //#include "cmsis_os.h"
 
+#include "sam.h"
+
 #include "los_bsp_adapter.h"
 #include "los_bsp_led.h"
 #include "los_bsp_key.h"
@@ -72,18 +74,13 @@ unsigned int osTickStart(void)
       Note: here can be replaced by some function , for example in Stm32 bsp
       you can just call SysTick_Config(sys_clk_freq/tick_per_second);
     */
-#ifdef LOS_STM32F746ZG
+	
 		SysTick_Config(g_ucycle_per_tick);
-#else
-    *(volatile UINT32 *)OS_SYSTICK_RELOAD_REG = g_ucycle_per_tick - 1;
-    *((volatile UINT8 *)OS_NVIC_EXCPRI_BASE + (((UINT32)(-1) & 0xF) - 4)) = ((7 << 4) & 0xff);
-    *(volatile UINT32 *)OS_SYSTICK_CURRENT_REG = 0;
-    *(volatile UINT32 *)OS_SYSTICK_CONTROL_REG = (1 << 2) | (1 << 1) | (1 << 0);
-#endif
-  
     return uwRet;
 
 }
+
+volatile uint32_t msTicks; /* counts 1ms timeTicks */
 
 /*****************************************************************************
  Function    : SysTick_Handler
@@ -101,9 +98,7 @@ void SysTick_Handler(void)
     LOS_TickHandler();
 	
     /*add your code here */
-#ifdef LOS_STM32F746ZG
-	  HAL_IncTick();
-#endif
+	  // msTicks++;    
     return ;
 }
 
