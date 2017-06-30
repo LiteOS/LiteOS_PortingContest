@@ -293,12 +293,13 @@ Keil工具需要开发者自行购买，ST-Link的驱动程序可以从st官网�
 ### 6.1 获取STM32开发资料获取
 
 - 从ST官网搜索“stm32cubef1”，获取相应的开发包资料，网址为：
-http://www.st.com/content/st_com/zh/products/embedded-software/mcus-embedded-software/stm32-embedded-software/stm32cube-embedded-software/stm32cubef1.html
+	http://www.st.com/content/st_com/zh/products/embedded-software/mcus-embedded-software/stm32-embedded-software/stm32cube-embedded-software/stm32cubef1.html
 
 - 从keil官网下载PACK包，网址为：
-http://www.keil.com/dd2/Pack/#/eula-container
+	http://www.keil.com/dd2/Pack/#/eula-container
 
-- 下载STSW-LINK009驱动，网址为：http://www.st.com/content/st_com/en/products/embedded-software/development-tool-software/stsw-link009.html
+- 下载STSW-LINK009驱动，网址为：
+	http://www.st.com/content/st_com/en/products/embedded-software/development-tool-software/stsw-link009.html
 
 ### pack包及驱动安装
 
@@ -332,7 +333,7 @@ http://www.keil.com/dd2/Pack/#/eula-container
 
 ![](./meta/keil/expand/create_project.png)
 
-- 新建保存工程的文件夹,保存工程名，比如HuaweiLiteOS
+- 新建保存工程的文件夹PortingContest_STM32F103RB-Nucleo_WangDeCheng，保存工程名，比如HuaweiLiteOS
 
 ![](./meta/keil/expand/save_project.png)
 
@@ -429,7 +430,7 @@ stm32f103的配置文件内容如下：
 
 ![](./meta/keil/stm32f103/conf_debug_sim.png)
 
-- 配置宏定义，根据RAM和flah容量定义 _STM32F10x_MD_， _RAM_SIZE_LEVEL_1_ , 在第10节描述了小容量MCU如何选择宏定义的内容，
+- 配置宏定义，根据RAM和flah容量定义 _STM32F10x_MD_， _RAM_SIZE_LEVEL_1_ , 在第10节描述了小容量MCU如何选择宏定义的内容
 
 ![](./meta/keil/stm32f103/proj_def.png)
 
@@ -565,13 +566,12 @@ stm32f103的配置文件内容如下：
 		#endif
 	
 
-
 - 根据你使用的模版不同可能需要添加相关的驱动文件，可以在同级目录下添加相关文件，并把这些文件添加到工程中，包含头文件。
 
 
 ## 8验证移植后的工程
 
-本章描述如何验证是否正确移植
+本章描述如何验证内核是否正确移植
 
 ### 8.1 API测试代码使用
 
