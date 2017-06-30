@@ -26,7 +26,7 @@
 ".\objects\los_bsp_key.o"
 ".\objects\los_bsp_led.o"
 ".\objects\los_bsp_uart.o"
-".\objects\startup_stm32f10x_md_1.o"
+".\objects\startup_stm32f10x_md.o"
 ".\objects\main.o"
 ".\objects\misc.o"
 ".\objects\stm32f10x_dbgmcu.o"
