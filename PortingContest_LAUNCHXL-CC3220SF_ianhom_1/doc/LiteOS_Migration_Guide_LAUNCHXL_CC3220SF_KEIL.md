@@ -279,13 +279,9 @@ KEIL工具需要开发者自行购买，LAUNCHXL_CC3220SF自带板载XDS-110仿�
 
 获取Huawei LiteOS源代码之后，我们可以将自己本地已有工程的代码适配到LiteOS内核工程中进行应用开发。
 
-## 6 如何适配LiteOS内核工程开发
-本章节将描述如何将LiteOS通过KEIL移植到CC3220SF，并演示串口输出、按键中断及LED点亮功能。
-
-### 获取LAUNCHXL_CC3220SF开发板相关工具和SDK
-
-- 登录TI官网下载[uniFlash](http://software-dl.ti.com/ccs/esd/uniflash/uniflash_sl.4.1.1329.exe)和[SDK](http://www.ti.com/tool/download/SIMPLELINK-CC3220-SDK)并安装。 
-
+## 6 KEIL开发环境搭建
+本章节将描述如何搭建CC3220SF的KEIL开发环境。
+ 
 ### 在KEIL上建立CC3220SF开发环境
 - 因为KEIL不支持CC3220SF，所以没有便捷的开发包使用，需要自行搭建开发环境。
 - 首先，先建立一个KEIL工程，点击option选项，在Device标签页中选择**ARM -> ARM Cortex M4 -> ARMCM4**   
@@ -336,12 +332,24 @@ KEIL工具需要开发者自行购买，LAUNCHXL_CC3220SF自带板载XDS-110仿�
 
 ![](./meta/keil/LAUNCHXL_CC3220SF/option_debug_flash_FLM.jpg)    
 
-- 至此，KEIL的CC3220SF的基本开发环境就完成了，对目前版本的KEIL有几点限制需要说明：
-  - **不支持LAUNCHXL_CC3220SF板载仿真器XDS110,无法识别仿真器**
-  - **不支持CMSIS-DAP Debugger的JTAG，无法识别芯片**
-  - **CMSIS-DAP Debugger的SWD模式仿真无法复位芯片**    
+- 至此，KEIL的CC3220SF的基本开发环境就完成了。
 
-### 调试准备
+### 使用限制    
+    
+- 对目前版本的KEIL有几点限制需要说明：
+  - **不支持LAUNCHXL_CC3220SF板载仿真器XDS110,无法识别仿真器**    
+  - **不支持CMSIS-DAP Debugger的JTAG，无法识别芯片**    
+  - **CMSIS-DAP Debugger的SWD模式仿真无法复位芯片**     
+ 
+
+## 7 调试准备工作    
+本章节将描述在使用KEIL开发仿真之前，需要对LAUNCHXL_CC3220SF开发板所做的准备工作。    
+
+### 获取LAUNCHXL_CC3220SF开发板相关工具和SDK    
+
+- 登录TI官网下载[uniFlash](http://software-dl.ti.com/ccs/esd/uniflash/uniflash_sl.4.1.1329.exe)和[SDK](http://www.ti.com/tool/download/SIMPLELINK-CC3220-SDK)并安装。    
+
+### 调试前准备
 - CC3220SF的启动流程：片内64K ROM的中的BootLoader会比较片外flash和片内flash中的内容，如果不一致将会把片外flash的程序覆盖片内的flash，这样的方式不便于调试，所以选择将片外flash中的程序清空，然后直接在片内flash中进行编程调试。
 - 将开发板的SOP设置为010，上电，打开uniflash，点击如图选项：
 
@@ -359,9 +367,11 @@ KEIL工具需要开发者自行购买，LAUNCHXL_CC3220SF自带板载XDS-110仿�
 
 ![](./meta/keil/LAUNCHXL_CC3220SF/uniflash_clean.jpg)  
 
+## 8 移植LiteOS源码   
+- 本章节将描述如何添加和修改LiteOS源码。
 
-### 添加LiteOS源码
-- 下载LiteOS源码后，根据[KEIL移植指南中添加内核代码](https://github.com/LITEOS/LiteOS_Kernel/blob/master/doc/LiteOS_Migration_Guide_Keil.md)的说明，添加LiteOS**源码**及**包含路径**   
+
+- 请参考第5章节下载LiteOS源码，根据[KEIL移植指南中添加内核代码](https://github.com/LITEOS/LiteOS_Kernel/blob/master/doc/LiteOS_Migration_Guide_Keil.md)的说明，添加LiteOS**源码**及**包含路径**   
 
 ### 选用cpu/M3/下文件
 - CC3220SF没有FPU,所以不支持相关的汇编指令，在这里选择复用M3内核下的文件
@@ -407,7 +417,6 @@ KEIL工具需要开发者自行购买，LAUNCHXL_CC3220SF自带板载XDS-110仿�
 ### 修改main.c文件
 - 在main.c中添加修改中断向量表位置，CC3220SF用户flash起始位置为**0x01000800**，调用LOS_Inspect_Entry()巡检程序以检查移植是否正确。    
 ![](./meta/keil/LAUNCHXL_CC3220SF/code_main.jpg)
-
 
 
 ### 移植成功后巡检结果
@@ -537,7 +546,7 @@ KEIL工具需要开发者自行购买，LAUNCHXL_CC3220SF自带板载XDS-110仿�
 
 ![](./meta/keil/LAUNCHXL_CC3220SF/code_wait.jpg) 
 
-## 7 其他说明
+## 9 其他说明
 
 ### 如何使用LiteOS 开发
 
