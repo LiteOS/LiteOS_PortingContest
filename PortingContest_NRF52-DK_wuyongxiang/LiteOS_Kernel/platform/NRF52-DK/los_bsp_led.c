@@ -16,7 +16,7 @@
 void LOS_EvbLedInit(void)
 {
     //add you code here.
-   nrf_gpio_cfg_output(17);
+    nrf_gpio_cfg_output(17);
 	 
     return ;
 }
@@ -38,14 +38,15 @@ void LOS_EvbLedControl(int index, int cmd)
         {
             if (cmd == LED_ON)
             {
-							nrf_gpio_pin_write(17,0);
+                
                 //add you code here.
+                nrf_gpio_pin_write(17,0);
                         /*led1 on */
             }
             else
             {
                 //add you code here.
-							nrf_gpio_pin_write(17,1);
+                nrf_gpio_pin_write(17,1);
                         /*led1 off */
             }
             break;

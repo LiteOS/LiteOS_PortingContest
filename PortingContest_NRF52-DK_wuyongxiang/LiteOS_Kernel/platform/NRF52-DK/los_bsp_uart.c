@@ -91,7 +91,7 @@ int fputc(int ch, FILE *f)
 {
     /* 发送一个字节数据到串口USART */
     if(ch=='\n')
-      LOS_EvbUartWriteByte('\r');
+        LOS_EvbUartWriteByte('\r');
     LOS_EvbUartWriteByte((char)ch);
 
     return (ch);
