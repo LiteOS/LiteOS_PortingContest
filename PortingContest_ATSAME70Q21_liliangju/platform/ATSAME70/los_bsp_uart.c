@@ -6,16 +6,6 @@
 #include <stdarg.h>
 #include "los_demo_debug.h"
 
-void Error_Handler(void)
-{
-  /* Turn LED4 on */
-  LED_On(0);
-  while(1)
-  {
-  }
-}
-
-
 void LOS_EvbUartInit(void)
 {
 	uint32_t ul_sr;
