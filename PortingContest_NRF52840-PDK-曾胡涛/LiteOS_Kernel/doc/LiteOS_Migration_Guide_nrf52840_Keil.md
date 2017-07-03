@@ -567,13 +567,13 @@ notice：注意一定要添加CONFIG_GPIO_AS_PINRESET宏，此宏是配置板卡
 
 			if (cmd == LED_ON)
 			{
-					//add you code here.
-					bsp_board_led_on(index);   /* LED on */
+				//add you code here.
+				bsp_board_led_on(index);   /* LED on */
 			}
 			else
 			{
-					//add you code here.
-					bsp_board_led_off(index);  /* LED off */
+				//add you code here.
+				bsp_board_led_off(index);  /* LED off */
 			}
 				
 		#endif

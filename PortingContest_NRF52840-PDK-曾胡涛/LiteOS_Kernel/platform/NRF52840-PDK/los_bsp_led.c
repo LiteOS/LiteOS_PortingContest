@@ -85,16 +85,16 @@ void LOS_EvbLedControl(int index, int cmd)
 {
 #ifdef LOS_NRF52840
 
-		if (cmd == LED_ON)
-		{
-			//add you code here.
-			bsp_board_led_on(index);   /* LED on */
-		}
-		else
-		{
-			//add you code here.
-			bsp_board_led_off(index);  /* LED off */
-		}
+	if (cmd == LED_ON)
+	{
+		//add you code here.
+		bsp_board_led_on(index);   /* LED on */
+	}
+	else
+	{
+		//add you code here.
+		bsp_board_led_off(index);  /* LED off */
+	}
 		
 #endif
     return;
