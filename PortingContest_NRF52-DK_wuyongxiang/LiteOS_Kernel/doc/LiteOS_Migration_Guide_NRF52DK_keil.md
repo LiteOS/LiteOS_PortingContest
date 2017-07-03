@@ -295,7 +295,7 @@ Keil工具需要开发者自行购买，Link在keil5.18安装以后就有，开�
  
 
 
-  - 实现led功能，预留初始化函数配置开发板led1对应的gpio 17为输出，获取led 亮灭的函数里使用gpio操作函数置1或置0。具体如下图：
+  - 实现led功能，预留初始化函数配置开发板led1对应的gpio 17为输出，控制led 亮灭的函数里使用gpio操作函数置1或置0。具体如下图：
  
 ![](https://github.com/wucool/LiteOSPorting/raw/master/pictures/7-1-3.png) 
   
