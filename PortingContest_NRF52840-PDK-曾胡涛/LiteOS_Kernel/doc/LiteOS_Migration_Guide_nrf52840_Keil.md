@@ -349,7 +349,7 @@ Keil工具需要开发者自行购买，JLink的驱动程序可以从官网获�
 
 ![](./meta/keil/nrf52840/add_macro.png)
 
-notice：注意一定要添加CONFIG_GPIO_AS_PINRESET宏，此宏是配置板卡reset按钮的功能，不然将hex文件拷入Jlink的磁盘时需要重新上电才能跑代码;官方用户手册有详情说明：http://infocenter.nordicsemi.com/pdf/nRF52_DK_User_Guide_v1.2.pdf
+notice：注意一定要添加CONFIG_GPIO_AS_PINRESET宏，此宏是配置板卡reset按钮的功能，不然将hex文件拷入Jlink的磁盘时需要重新上电才能跑代码;官方用户手册有详情说明：http://infocenter.nordicsemi.com/pdf/nRF52840_PDK_User_Guide_v1.1.pdf
 
 ![](./meta/keil/nrf52840/notice.png)
 
