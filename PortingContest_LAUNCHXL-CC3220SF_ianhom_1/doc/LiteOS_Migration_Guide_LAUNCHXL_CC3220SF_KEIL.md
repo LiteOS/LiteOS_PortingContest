@@ -277,7 +277,7 @@ KEIL工具需要开发者自行购买，LAUNCHXL_CC3220SF自带板载XDS-110仿�
 </table>
 
 
-获取Huawei LiteOS源代码之后，我们可以将自己本地已有工程的代码适配到LiteOS内核工程中进行应用开发。
+获取Huawei LiteOS源代码之后，我们就可以开始创建自己的project开发工程了，详细内容请参考后续各章节。    
 
 ## 6 KEIL开发环境搭建
 本章节将描述如何搭建CC3220SF的KEIL开发环境。
