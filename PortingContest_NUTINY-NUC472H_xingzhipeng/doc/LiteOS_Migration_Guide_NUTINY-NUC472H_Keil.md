@@ -205,83 +205,13 @@ Keil工具需要开发者自行购买，Nu-Link的驱动程序可以从nuvoton�
 </tr>
 <tr>
 	<td>platform</td>
-	<td>GD32F190R-EVAL</td>
-	<td>GD190开发板systick以及led、uart、key驱动bsp适配代码</td>
-</tr>
-<tr>
-	<td></td>
-	<td>GD32F450i-EVAL</td>
-	<td>GD450开发板systick以及led、uart、key驱动bsp适配代码</td>
-</tr>
-<tr>
-	<td></td>
 	<td>NUTINY-NUC472H</td>
 	<td>NUC472H开发板systick以及led、uart、key驱动bsp适配代码</td>
-</tr>
-<tr>
-	<td></td>
-	<td>STM32F412ZG-NUCLEO</td>
-	<td>STM32F412开发板systick以及led、uart、key驱动bsp适配代码</td>
-</tr>
-<tr>
-	<td></td>
-	<td>STM32F411RE-NUCLEO</td>
-	<td>STM32F411开发板systick以及led、uart、key驱动bsp适配代码</td>
-</tr>
-<tr>
-	<td></td>
-	<td>STM32F429I_DISCO</td>
-	<td>STM32F429开发板systick以及led、uart、key驱动bsp适配代码</td>
-</tr>
-<tr>
-	<td></td>
-	<td>STM32L476RG_NUCLEO</td>
-	<td>STM32L476开发板systick以及led、uart、key驱动bsp适配代码</td>
-</tr>
-<tr>
-	<td></td>
-	<td>LOS_EXPAND_XXX</td>
-	<td>用于新扩展的开发板systick以及led、uart、key驱动bsp适配代码</td>
 </tr>
 <tr>
 	<td>projects</td>
 	<td>NUTINY-NUC472H-KEIL</td>
 	<td>NUC472H开发板的keil工程目录</td>
-</tr>
-<tr>
-	<td></td>
-	<td>STM32F412ZG-NUCLEO-KEIL</td>
-	<td>stm32f412开发板的keil工程目录</td>
-</tr>
-<tr>
-	<td></td>
-	<td>STM32F411RE-NUCLEO-KEIL</td>
-	<td>stm32f411开发板的keil工程目录</td>
-</tr>
-<tr>
-	<td></td>
-	<td>STM32F429I_DISCO_IAR</td>
-	<td>stm32f429开发板的iar工程目录</td>
-</tr>
-<tr>
-	<td></td>
-	<td>STM32F429I_DISCO_KEIL</td>
-	<td>stm32f429开发板的keil工程目录</td>
-</tr>
-<tr>
-	<td></td>
-	<td>STM32L476R-NUCLEO-KEIL</td>
-	<td>stm32l476开发板的keil工程目录</td>
-</tr>
-<tr>
-	<td></td>
-	<td>GD32F190R-EVAL-KEIL</td>
-	<td>gd32f190开发板的keil工程目录</td>
-</tr>
-<tr>
-	<td></td>
-	<td>GD32F450i-EVAL-KEIL</td>
-	<td>gd32f450开发板的keil工程目录</td>
 </tr>
 <tr>
 	<td>user</td>
@@ -291,7 +221,7 @@ Keil工具需要开发者自行购买，Nu-Link的驱动程序可以从nuvoton�
 </table>
 
 
-获取Huawei LiteOS源代码之后，我们可以将自己本地已有工程的代码适配到LiteOS内核工程中进行应用开发。
+获取Huawei LiteOS源代码之后，我们可以将自己本地已有工程的代码适配到LiteOS源码中进行应用开发。
 
 ## 6如何适配LiteOS内核工程开发
 本章节描述的内容以NUC400开发包中的GPIO示例工程为基础，适配到LiteOS的NUTINY-NUC472H-KEIL工程中，演示串口输出、按键检测及LED点亮功能。
