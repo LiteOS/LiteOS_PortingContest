@@ -274,9 +274,9 @@ Keil工具需要开发者自行购买，开发板的调试器是GD-Link，GD-Lin
 </tr>
 </table>
 
-获取Huawei LiteOS源代码之后，我们可以将自己本地已有工程的代码适配到LiteOS内核工程中进行应用开发。
+获取Huawei LiteOS源代码之后，我们可以将自己本地已有工程的代码适配到LiteOS的GD32F190R-EVAL-KEIL工程中进行应用开发。
 
-## 6如何适配LiteOS内核工程开发
+## 6如何适配LiteOS的GD32F190R-EVAL-KEIL工程开发
 本章节描述的内容以GD32F190R-EVAL开发板光盘资料中的04_USART_Printf示例工程为基础，适配到LiteOS的GD32F190R-EVAL-KEIL工程中，演示串口输出、按键中断及LED点亮功能。
 
 ### GD32的开发资料获取
