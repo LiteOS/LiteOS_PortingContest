@@ -41,11 +41,11 @@ void LOS_EvbLedControl(unsigned int index, unsigned int cmd)
         {
             //add you code here.
             #ifdef LOS_MM32L073PF
-							if(cmd == LED_ON) {
-								LED1_ON();
-							} else {
-								LED1_OFF();
-							}
+			if(cmd == LED_ON) {
+				LED1_ON();
+			} else {
+				LED1_OFF();
+			}
             #endif
             break;
         }
@@ -53,23 +53,23 @@ void LOS_EvbLedControl(unsigned int index, unsigned int cmd)
         {
             //add you code here.
             #ifdef LOS_MM32L073PF
-							if(cmd == LED_ON) {
-								LED2_ON();
-							} else {
-								LED2_OFF();
-							}
-						#endif
+			if(cmd == LED_ON) {
+				LED2_ON();
+			} else {
+				LED2_OFF();
+			}
+            #endif
             break;
         }
         case LOS_LED3:
         {
             //add you code here.
             #ifdef LOS_MM32L073PF
-							if(cmd == LED_ON) {
-								LED3_ON();
-							} else {
-								LED3_OFF();
-							}
+			if(cmd == LED_ON) {
+				LED3_ON();
+			} else {
+				LED3_OFF();
+			}
             #endif
             break;
         }
@@ -77,11 +77,11 @@ void LOS_EvbLedControl(unsigned int index, unsigned int cmd)
         {
             //add you code here.
             #ifdef LOS_MM32L073PF
-							if(cmd == LED_ON) {
-								LED4_ON();
-							} else {
-								LED4_OFF();
-							}
+			if(cmd == LED_ON) {
+				LED4_ON();
+			} else {
+				LED4_OFF();
+			}
             #endif
             break;
         }
