@@ -149,14 +149,12 @@ Keil工具需要开发者自行购买，Link驱动程序需根据具体使用的
 首先下载Huawei LiteOS开发包，步骤如下：
 
 - 仓库地址：https://github.com/LITEOS/LiteOS_Kernel.git 
-
 ![](./meta/keil/git_down.png)
 
 - 点击”clone or download”按钮,下载源代码
 
 
 - 目录结构如下：
-
 ![](./meta/keil/catal.png)
 
 
@@ -327,11 +325,8 @@ Keil工具需要开发者自行购买，Link驱动程序需根据具体使用的
 
 ### 获取并安装NANO130KE3BN软件开发包
 - 获取NANO130KE3BN的BSP开发包及Nu-Link_Keil_Drive驱动包，链接：http://www.nuvoton.com.cn/hq/products/microcontrollers/arm-cortex-m0-mcus/nano130-advanced-series/nano130ke3bn/?__locale=en，点图中红色框中按钮下载。解压并安装即可。
-
 ![](./meta/keil/NANO130KE3BN/nano130_bsp_link_download.png)
-
 - 获取NANO130KE3BN的Keil支持包，链接：http://www.keil.com/dd2/nuvoton/nano130ke3bn/，点图中红色框中按钮下载。点击下载的文件安装即可。
-
 ![](./meta/keil/NANO130KE3BN/nano130_keil_download.jpg)
 
 ### 6.1 创建工程
@@ -536,7 +531,7 @@ LED使用PA0引脚，接线图如下：
 ![](./meta/keil/NANO130KE3BN/com_out.png)
 
 
-## 9 其他说明
+## 8 其他说明
 
 - Nano130K的RAM较小，只有16M，请参照los_config.h文件中的注释，在工程中定义相关的编译宏，否则会出现编译失败（RAM大于32k可不定义）。
 
