@@ -55,7 +55,7 @@ void LOS_BoadExampleEntry(void)
  *****************************************************************************/
 LITE_OS_SEC_TEXT_INIT
 int main(void)
-`{
+{
     UINT32 uwRet;
     /*
 		add you hardware init code here

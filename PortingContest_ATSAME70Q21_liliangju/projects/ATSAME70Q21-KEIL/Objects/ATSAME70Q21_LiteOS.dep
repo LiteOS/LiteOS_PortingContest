@@ -1,0 +1,1823 @@
+Dependencies for Project 'ATSAME70Q21', Target 'LiteOS': (DO NOT MODIFY !)
+F (..\..\kernel\base\core\los_priqueue.c)(0x58F1BF41)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m7 -I ..\..\platform\ATSAME70\BSP\Libraries\include -I ..\..\example\include -I ..\..\platform\ATSAME70 -I ..\..\platform\ATSAME70\BSP\Libraries\include\component -I ..\..\platform\ATSAME70\BSP\Libraries\libchip\include -I ..\..\platform\ATSAME70\BSP\Libraries\include\instance -I ..\..\platform\ATSAME70\BSP\Libraries\include\pio -I ..\..\platform\ATSAME70\BSP\Libraries\libstoragemedia\include\sdmmc -I ..\..\platform\ATSAME70\BSP\Libraries\libusb\include -I ..\..\platform\ATSAME70\BSP\Libraries\libchip -I ..\..\platform\ATSAME70\BSP -I ..\..\platform\ATSAME70\BSP\include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\SAM-E_DFP\2.1.0\include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -D__SAME70Q21__-o .\objects\los_priqueue.o --omf_browse .\objects\los_priqueue.crf --depend .\objects\los_priqueue.d)
+I (..\..\kernel\base\core\los_priqueue.inc)(0x58F1BF41)
+I (..\..\kernel\base\include\los_priqueue.ph)(0x58F1BF41)
+I (..\..\kernel\include\los_priqueue.h)(0x58F1BF41)
+I (..\..\kernel\include\los_list.h)(0x58F1BF41)
+I (..\..\kernel\include\los_base.h)(0x58F1BF41)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58F1BF41)
+I (..\..\kernel\include\los_typedef.h)(0x58F1BF41)
+I (..\..\kernel\config\los_config.h)(0x59008824)
+I (..\..\kernel\include\los_printf.h)(0x58F1BF41)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (..\..\kernel\include\los_errno.h)(0x58F1BF41)
+I (..\..\kernel\base\include\los_base.ph)(0x58F1BF41)
+I (..\..\kernel\base\include\los_task.ph)(0x58F1BF41)
+I (..\..\kernel\include\los_task.h)(0x58F1BF41)
+I (..\..\kernel\include\los_sys.h)(0x58F1BF41)
+I (..\..\kernel\cpu\arm\cortex-m7\los_hwi.h)(0x58DB526B)
+I (..\..\kernel\include\los_tick.h)(0x58F1BF41)
+I (..\..\kernel\include\los_event.h)(0x58F1BF41)
+I (..\..\kernel\include\los_memory.h)(0x58F1BF41)
+F (..\..\kernel\base\core\los_swtmr.c)(0x590AF051)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m7 -I ..\..\platform\ATSAME70\BSP\Libraries\include -I ..\..\example\include -I ..\..\platform\ATSAME70 -I ..\..\platform\ATSAME70\BSP\Libraries\include\component -I ..\..\platform\ATSAME70\BSP\Libraries\libchip\include -I ..\..\platform\ATSAME70\BSP\Libraries\include\instance -I ..\..\platform\ATSAME70\BSP\Libraries\include\pio -I ..\..\platform\ATSAME70\BSP\Libraries\libstoragemedia\include\sdmmc -I ..\..\platform\ATSAME70\BSP\Libraries\libusb\include -I ..\..\platform\ATSAME70\BSP\Libraries\libchip -I ..\..\platform\ATSAME70\BSP -I ..\..\platform\ATSAME70\BSP\include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\SAM-E_DFP\2.1.0\include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -D__SAME70Q21__-o .\objects\los_swtmr.o --omf_browse .\objects\los_swtmr.crf --depend .\objects\los_swtmr.d)
+I (..\..\kernel\base\core\los_swtmr.inc)(0x58F1BF41)
+I (..\..\kernel\base\include\los_swtmr.ph)(0x58F1BF41)
+I (..\..\kernel\include\los_swtmr.h)(0x58F1BF41)
+I (..\..\kernel\include\los_base.h)(0x58F1BF41)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58F1BF41)
+I (..\..\kernel\include\los_typedef.h)(0x58F1BF41)
+I (..\..\kernel\config\los_config.h)(0x59008824)
+I (..\..\kernel\include\los_printf.h)(0x58F1BF41)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (..\..\kernel\include\los_list.h)(0x58F1BF41)
+I (..\..\kernel\include\los_errno.h)(0x58F1BF41)
+I (..\..\kernel\include\los_task.h)(0x58F1BF41)
+I (..\..\kernel\include\los_sys.h)(0x58F1BF41)
+I (..\..\kernel\cpu\arm\cortex-m7\los_hwi.h)(0x58DB526B)
+I (..\..\kernel\include\los_tick.h)(0x58F1BF41)
+I (..\..\kernel\include\los_event.h)(0x58F1BF41)
+I (..\..\kernel\base\include\los_base.ph)(0x58F1BF41)
+I (..\..\kernel\base\include\los_membox.ph)(0x58F1BF41)
+I (..\..\kernel\include\los_membox.h)(0x58F1BF41)
+I (..\..\kernel\base\include\los_memory.ph)(0x58F1BF41)
+I (..\..\kernel\include\los_memory.h)(0x58F1BF41)
+I (..\..\kernel\base\include\los_queue.ph)(0x58F1BF41)
+I (..\..\kernel\include\los_queue.h)(0x58F1BF41)
+I (..\..\kernel\base\include\los_task.ph)(0x58F1BF41)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+F (..\..\kernel\base\core\los_sys.c)(0x58F1BF41)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m7 -I ..\..\platform\ATSAME70\BSP\Libraries\include -I ..\..\example\include -I ..\..\platform\ATSAME70 -I ..\..\platform\ATSAME70\BSP\Libraries\include\component -I ..\..\platform\ATSAME70\BSP\Libraries\libchip\include -I ..\..\platform\ATSAME70\BSP\Libraries\include\instance -I ..\..\platform\ATSAME70\BSP\Libraries\include\pio -I ..\..\platform\ATSAME70\BSP\Libraries\libstoragemedia\include\sdmmc -I ..\..\platform\ATSAME70\BSP\Libraries\libusb\include -I ..\..\platform\ATSAME70\BSP\Libraries\libchip -I ..\..\platform\ATSAME70\BSP -I ..\..\platform\ATSAME70\BSP\include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\SAM-E_DFP\2.1.0\include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -D__SAME70Q21__-o .\objects\los_sys.o --omf_browse .\objects\los_sys.crf --depend .\objects\los_sys.d)
+I (..\..\kernel\base\core\los_sys.inc)(0x58F1BF41)
+I (..\..\kernel\base\include\los_sys.ph)(0x58F1BF41)
+I (..\..\kernel\base\include\los_base.ph)(0x58F1BF41)
+I (..\..\kernel\include\los_base.h)(0x58F1BF41)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58F1BF41)
+I (..\..\kernel\include\los_typedef.h)(0x58F1BF41)
+I (..\..\kernel\config\los_config.h)(0x59008824)
+I (..\..\kernel\include\los_printf.h)(0x58F1BF41)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (..\..\kernel\include\los_list.h)(0x58F1BF41)
+I (..\..\kernel\include\los_errno.h)(0x58F1BF41)
+I (..\..\kernel\include\los_sys.h)(0x58F1BF41)
+I (..\..\kernel\cpu\arm\cortex-m7\los_hwi.h)(0x58DB526B)
+I (..\..\kernel\base\include\los_tick.ph)(0x58F1BF41)
+I (..\..\kernel\include\los_tick.h)(0x58F1BF41)
+F (..\..\kernel\base\core\los_task.c)(0x58F1BF41)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m7 -I ..\..\platform\ATSAME70\BSP\Libraries\include -I ..\..\example\include -I ..\..\platform\ATSAME70 -I ..\..\platform\ATSAME70\BSP\Libraries\include\component -I ..\..\platform\ATSAME70\BSP\Libraries\libchip\include -I ..\..\platform\ATSAME70\BSP\Libraries\include\instance -I ..\..\platform\ATSAME70\BSP\Libraries\include\pio -I ..\..\platform\ATSAME70\BSP\Libraries\libstoragemedia\include\sdmmc -I ..\..\platform\ATSAME70\BSP\Libraries\libusb\include -I ..\..\platform\ATSAME70\BSP\Libraries\libchip -I ..\..\platform\ATSAME70\BSP -I ..\..\platform\ATSAME70\BSP\include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\SAM-E_DFP\2.1.0\include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -D__SAME70Q21__-o .\objects\los_task.o --omf_browse .\objects\los_task.crf --depend .\objects\los_task.d)
+I (..\..\kernel\base\core\los_task.inc)(0x58F1BF41)
+I (..\..\kernel\base\include\los_task.ph)(0x58F1BF41)
+I (..\..\kernel\include\los_task.h)(0x58F1BF41)
+I (..\..\kernel\include\los_base.h)(0x58F1BF41)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58F1BF41)
+I (..\..\kernel\include\los_typedef.h)(0x58F1BF41)
+I (..\..\kernel\config\los_config.h)(0x59008824)
+I (..\..\kernel\include\los_printf.h)(0x58F1BF41)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (..\..\kernel\include\los_list.h)(0x58F1BF41)
+I (..\..\kernel\include\los_errno.h)(0x58F1BF41)
+I (..\..\kernel\include\los_sys.h)(0x58F1BF41)
+I (..\..\kernel\cpu\arm\cortex-m7\los_hwi.h)(0x58DB526B)
+I (..\..\kernel\include\los_tick.h)(0x58F1BF41)
+I (..\..\kernel\include\los_event.h)(0x58F1BF41)
+I (..\..\kernel\base\include\los_base.ph)(0x58F1BF41)
+I (..\..\kernel\base\include\los_memory.ph)(0x58F1BF41)
+I (..\..\kernel\include\los_memory.h)(0x58F1BF41)
+I (..\..\kernel\base\include\los_priqueue.ph)(0x58F1BF41)
+I (..\..\kernel\include\los_priqueue.h)(0x58F1BF41)
+I (..\..\kernel\base\include\los_sem.ph)(0x58F1BF41)
+I (..\..\kernel\include\los_sem.h)(0x58F1BF41)
+I (..\..\kernel\base\include\los_mux.ph)(0x58F1BF41)
+I (..\..\kernel\include\los_mux.h)(0x58F1BF41)
+I (..\..\kernel\cpu\arm\cortex-m7\los_hw.h)(0x58DB526B)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+F (..\..\kernel\base\core\los_tick.c)(0x58F1BF41)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m7 -I ..\..\platform\ATSAME70\BSP\Libraries\include -I ..\..\example\include -I ..\..\platform\ATSAME70 -I ..\..\platform\ATSAME70\BSP\Libraries\include\component -I ..\..\platform\ATSAME70\BSP\Libraries\libchip\include -I ..\..\platform\ATSAME70\BSP\Libraries\include\instance -I ..\..\platform\ATSAME70\BSP\Libraries\include\pio -I ..\..\platform\ATSAME70\BSP\Libraries\libstoragemedia\include\sdmmc -I ..\..\platform\ATSAME70\BSP\Libraries\libusb\include -I ..\..\platform\ATSAME70\BSP\Libraries\libchip -I ..\..\platform\ATSAME70\BSP -I ..\..\platform\ATSAME70\BSP\include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\SAM-E_DFP\2.1.0\include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -D__SAME70Q21__-o .\objects\los_tick.o --omf_browse .\objects\los_tick.crf --depend .\objects\los_tick.d)
+I (..\..\kernel\base\core\los_tick.inc)(0x58F1BF41)
+I (..\..\kernel\base\include\los_tick.ph)(0x58F1BF41)
+I (..\..\kernel\include\los_tick.h)(0x58F1BF41)
+I (..\..\kernel\include\los_errno.h)(0x58F1BF41)
+I (..\..\kernel\include\los_typedef.h)(0x58F1BF41)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58F1BF41)
+I (..\..\kernel\base\include\los_base.ph)(0x58F1BF41)
+I (..\..\kernel\include\los_base.h)(0x58F1BF41)
+I (..\..\kernel\config\los_config.h)(0x59008824)
+I (..\..\kernel\include\los_printf.h)(0x58F1BF41)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (..\..\kernel\include\los_list.h)(0x58F1BF41)
+I (..\..\kernel\base\include\los_swtmr.ph)(0x58F1BF41)
+I (..\..\kernel\include\los_swtmr.h)(0x58F1BF41)
+I (..\..\kernel\include\los_task.h)(0x58F1BF41)
+I (..\..\kernel\include\los_sys.h)(0x58F1BF41)
+I (..\..\kernel\cpu\arm\cortex-m7\los_hwi.h)(0x58DB526B)
+I (..\..\kernel\include\los_event.h)(0x58F1BF41)
+I (..\..\kernel\base\include\los_task.ph)(0x58F1BF41)
+I (..\..\kernel\base\include\los_timeslice.ph)(0x58F1BF41)
+F (..\..\kernel\base\core\los_timeslice.c)(0x58F1BF41)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m7 -I ..\..\platform\ATSAME70\BSP\Libraries\include -I ..\..\example\include -I ..\..\platform\ATSAME70 -I ..\..\platform\ATSAME70\BSP\Libraries\include\component -I ..\..\platform\ATSAME70\BSP\Libraries\libchip\include -I ..\..\platform\ATSAME70\BSP\Libraries\include\instance -I ..\..\platform\ATSAME70\BSP\Libraries\include\pio -I ..\..\platform\ATSAME70\BSP\Libraries\libstoragemedia\include\sdmmc -I ..\..\platform\ATSAME70\BSP\Libraries\libusb\include -I ..\..\platform\ATSAME70\BSP\Libraries\libchip -I ..\..\platform\ATSAME70\BSP -I ..\..\platform\ATSAME70\BSP\include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\SAM-E_DFP\2.1.0\include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -D__SAME70Q21__-o .\objects\los_timeslice.o --omf_browse .\objects\los_timeslice.crf --depend .\objects\los_timeslice.d)
+I (..\..\kernel\base\include\los_sys.ph)(0x58F1BF41)
+I (..\..\kernel\base\include\los_base.ph)(0x58F1BF41)
+I (..\..\kernel\include\los_base.h)(0x58F1BF41)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58F1BF41)
+I (..\..\kernel\include\los_typedef.h)(0x58F1BF41)
+I (..\..\kernel\config\los_config.h)(0x59008824)
+I (..\..\kernel\include\los_printf.h)(0x58F1BF41)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (..\..\kernel\include\los_list.h)(0x58F1BF41)
+I (..\..\kernel\include\los_errno.h)(0x58F1BF41)
+I (..\..\kernel\include\los_sys.h)(0x58F1BF41)
+I (..\..\kernel\cpu\arm\cortex-m7\los_hwi.h)(0x58DB526B)
+I (..\..\kernel\base\include\los_task.ph)(0x58F1BF41)
+I (..\..\kernel\include\los_task.h)(0x58F1BF41)
+I (..\..\kernel\include\los_tick.h)(0x58F1BF41)
+I (..\..\kernel\include\los_event.h)(0x58F1BF41)
+I (..\..\kernel\base\include\los_tick.ph)(0x58F1BF41)
+I (..\..\kernel\base\include\los_typedef.ph)(0x58F1BF41)
+F (..\..\kernel\base\ipc\los_event.c)(0x58F1BF41)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m7 -I ..\..\platform\ATSAME70\BSP\Libraries\include -I ..\..\example\include -I ..\..\platform\ATSAME70 -I ..\..\platform\ATSAME70\BSP\Libraries\include\component -I ..\..\platform\ATSAME70\BSP\Libraries\libchip\include -I ..\..\platform\ATSAME70\BSP\Libraries\include\instance -I ..\..\platform\ATSAME70\BSP\Libraries\include\pio -I ..\..\platform\ATSAME70\BSP\Libraries\libstoragemedia\include\sdmmc -I ..\..\platform\ATSAME70\BSP\Libraries\libusb\include -I ..\..\platform\ATSAME70\BSP\Libraries\libchip -I ..\..\platform\ATSAME70\BSP -I ..\..\platform\ATSAME70\BSP\include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\SAM-E_DFP\2.1.0\include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -D__SAME70Q21__-o .\objects\los_event.o --omf_browse .\objects\los_event.crf --depend .\objects\los_event.d)
+I (..\..\kernel\base\ipc\los_event.inc)(0x58F1BF41)
+I (..\..\kernel\base\include\los_event.ph)(0x58F1BF41)
+I (..\..\kernel\include\los_event.h)(0x58F1BF41)
+I (..\..\kernel\include\los_base.h)(0x58F1BF41)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58F1BF41)
+I (..\..\kernel\include\los_typedef.h)(0x58F1BF41)
+I (..\..\kernel\config\los_config.h)(0x59008824)
+I (..\..\kernel\include\los_printf.h)(0x58F1BF41)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (..\..\kernel\include\los_list.h)(0x58F1BF41)
+I (..\..\kernel\include\los_errno.h)(0x58F1BF41)
+I (..\..\kernel\base\include\los_priqueue.ph)(0x58F1BF41)
+I (..\..\kernel\include\los_priqueue.h)(0x58F1BF41)
+I (..\..\kernel\base\include\los_task.ph)(0x58F1BF41)
+I (..\..\kernel\include\los_task.h)(0x58F1BF41)
+I (..\..\kernel\include\los_sys.h)(0x58F1BF41)
+I (..\..\kernel\cpu\arm\cortex-m7\los_hwi.h)(0x58DB526B)
+I (..\..\kernel\include\los_tick.h)(0x58F1BF41)
+I (..\..\kernel\cpu\arm\cortex-m7\los_hw.h)(0x58DB526B)
+F (..\..\kernel\base\ipc\los_mux.c)(0x58F1BF41)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m7 -I ..\..\platform\ATSAME70\BSP\Libraries\include -I ..\..\example\include -I ..\..\platform\ATSAME70 -I ..\..\platform\ATSAME70\BSP\Libraries\include\component -I ..\..\platform\ATSAME70\BSP\Libraries\libchip\include -I ..\..\platform\ATSAME70\BSP\Libraries\include\instance -I ..\..\platform\ATSAME70\BSP\Libraries\include\pio -I ..\..\platform\ATSAME70\BSP\Libraries\libstoragemedia\include\sdmmc -I ..\..\platform\ATSAME70\BSP\Libraries\libusb\include -I ..\..\platform\ATSAME70\BSP\Libraries\libchip -I ..\..\platform\ATSAME70\BSP -I ..\..\platform\ATSAME70\BSP\include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\SAM-E_DFP\2.1.0\include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -D__SAME70Q21__-o .\objects\los_mux.o --omf_browse .\objects\los_mux.crf --depend .\objects\los_mux.d)
+I (..\..\kernel\base\ipc\los_mux.inc)(0x58F1BF41)
+I (..\..\kernel\base\include\los_mux.ph)(0x58F1BF41)
+I (..\..\kernel\base\include\los_task.ph)(0x58F1BF41)
+I (..\..\kernel\include\los_task.h)(0x58F1BF41)
+I (..\..\kernel\include\los_base.h)(0x58F1BF41)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58F1BF41)
+I (..\..\kernel\include\los_typedef.h)(0x58F1BF41)
+I (..\..\kernel\config\los_config.h)(0x59008824)
+I (..\..\kernel\include\los_printf.h)(0x58F1BF41)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (..\..\kernel\include\los_list.h)(0x58F1BF41)
+I (..\..\kernel\include\los_errno.h)(0x58F1BF41)
+I (..\..\kernel\include\los_sys.h)(0x58F1BF41)
+I (..\..\kernel\cpu\arm\cortex-m7\los_hwi.h)(0x58DB526B)
+I (..\..\kernel\include\los_tick.h)(0x58F1BF41)
+I (..\..\kernel\include\los_event.h)(0x58F1BF41)
+I (..\..\kernel\include\los_mux.h)(0x58F1BF41)
+I (..\..\kernel\base\include\los_memory.ph)(0x58F1BF41)
+I (..\..\kernel\include\los_memory.h)(0x58F1BF41)
+I (..\..\kernel\base\include\los_priqueue.ph)(0x58F1BF41)
+I (..\..\kernel\include\los_priqueue.h)(0x58F1BF41)
+I (..\..\kernel\cpu\arm\cortex-m7\los_hw.h)(0x58DB526B)
+F (..\..\kernel\base\ipc\los_queue.c)(0x58F1BF41)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m7 -I ..\..\platform\ATSAME70\BSP\Libraries\include -I ..\..\example\include -I ..\..\platform\ATSAME70 -I ..\..\platform\ATSAME70\BSP\Libraries\include\component -I ..\..\platform\ATSAME70\BSP\Libraries\libchip\include -I ..\..\platform\ATSAME70\BSP\Libraries\include\instance -I ..\..\platform\ATSAME70\BSP\Libraries\include\pio -I ..\..\platform\ATSAME70\BSP\Libraries\libstoragemedia\include\sdmmc -I ..\..\platform\ATSAME70\BSP\Libraries\libusb\include -I ..\..\platform\ATSAME70\BSP\Libraries\libchip -I ..\..\platform\ATSAME70\BSP -I ..\..\platform\ATSAME70\BSP\include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\SAM-E_DFP\2.1.0\include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -D__SAME70Q21__-o .\objects\los_queue.o --omf_browse .\objects\los_queue.crf --depend .\objects\los_queue.d)
+I (..\..\kernel\base\ipc\los_queue.inc)(0x58F1BF41)
+I (..\..\kernel\base\include\los_queue.ph)(0x58F1BF41)
+I (..\..\kernel\include\los_queue.h)(0x58F1BF41)
+I (..\..\kernel\include\los_base.h)(0x58F1BF41)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58F1BF41)
+I (..\..\kernel\include\los_typedef.h)(0x58F1BF41)
+I (..\..\kernel\config\los_config.h)(0x59008824)
+I (..\..\kernel\include\los_printf.h)(0x58F1BF41)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (..\..\kernel\include\los_list.h)(0x58F1BF41)
+I (..\..\kernel\include\los_errno.h)(0x58F1BF41)
+I (..\..\kernel\base\include\los_membox.ph)(0x58F1BF41)
+I (..\..\kernel\include\los_membox.h)(0x58F1BF41)
+I (..\..\kernel\base\include\los_memory.ph)(0x58F1BF41)
+I (..\..\kernel\include\los_memory.h)(0x58F1BF41)
+I (..\..\kernel\base\include\los_priqueue.ph)(0x58F1BF41)
+I (..\..\kernel\include\los_priqueue.h)(0x58F1BF41)
+I (..\..\kernel\base\include\los_task.ph)(0x58F1BF41)
+I (..\..\kernel\include\los_task.h)(0x58F1BF41)
+I (..\..\kernel\include\los_sys.h)(0x58F1BF41)
+I (..\..\kernel\cpu\arm\cortex-m7\los_hwi.h)(0x58DB526B)
+I (..\..\kernel\include\los_tick.h)(0x58F1BF41)
+I (..\..\kernel\include\los_event.h)(0x58F1BF41)
+I (..\..\kernel\cpu\arm\cortex-m7\los_hw.h)(0x58DB526B)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+F (..\..\kernel\base\ipc\los_sem.c)(0x58F1BF41)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m7 -I ..\..\platform\ATSAME70\BSP\Libraries\include -I ..\..\example\include -I ..\..\platform\ATSAME70 -I ..\..\platform\ATSAME70\BSP\Libraries\include\component -I ..\..\platform\ATSAME70\BSP\Libraries\libchip\include -I ..\..\platform\ATSAME70\BSP\Libraries\include\instance -I ..\..\platform\ATSAME70\BSP\Libraries\include\pio -I ..\..\platform\ATSAME70\BSP\Libraries\libstoragemedia\include\sdmmc -I ..\..\platform\ATSAME70\BSP\Libraries\libusb\include -I ..\..\platform\ATSAME70\BSP\Libraries\libchip -I ..\..\platform\ATSAME70\BSP -I ..\..\platform\ATSAME70\BSP\include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\SAM-E_DFP\2.1.0\include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -D__SAME70Q21__-o .\objects\los_sem.o --omf_browse .\objects\los_sem.crf --depend .\objects\los_sem.d)
+I (..\..\kernel\base\ipc\los_sem.inc)(0x58F1BF41)
+I (..\..\kernel\base\include\los_sem.ph)(0x58F1BF41)
+I (..\..\kernel\include\los_sem.h)(0x58F1BF41)
+I (..\..\kernel\include\los_base.h)(0x58F1BF41)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58F1BF41)
+I (..\..\kernel\include\los_typedef.h)(0x58F1BF41)
+I (..\..\kernel\config\los_config.h)(0x59008824)
+I (..\..\kernel\include\los_printf.h)(0x58F1BF41)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (..\..\kernel\include\los_list.h)(0x58F1BF41)
+I (..\..\kernel\include\los_errno.h)(0x58F1BF41)
+I (..\..\kernel\include\los_task.h)(0x58F1BF41)
+I (..\..\kernel\include\los_sys.h)(0x58F1BF41)
+I (..\..\kernel\cpu\arm\cortex-m7\los_hwi.h)(0x58DB526B)
+I (..\..\kernel\include\los_tick.h)(0x58F1BF41)
+I (..\..\kernel\include\los_event.h)(0x58F1BF41)
+I (..\..\kernel\base\include\los_base.ph)(0x58F1BF41)
+I (..\..\kernel\base\include\los_memory.ph)(0x58F1BF41)
+I (..\..\kernel\include\los_memory.h)(0x58F1BF41)
+I (..\..\kernel\base\include\los_priqueue.ph)(0x58F1BF41)
+I (..\..\kernel\include\los_priqueue.h)(0x58F1BF41)
+I (..\..\kernel\base\include\los_sys.ph)(0x58F1BF41)
+I (..\..\kernel\base\include\los_task.ph)(0x58F1BF41)
+I (..\..\kernel\cpu\arm\cortex-m7\los_hw.h)(0x58DB526B)
+F (..\..\kernel\base\mem\los_membox.c)(0x58F1BF41)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m7 -I ..\..\platform\ATSAME70\BSP\Libraries\include -I ..\..\example\include -I ..\..\platform\ATSAME70 -I ..\..\platform\ATSAME70\BSP\Libraries\include\component -I ..\..\platform\ATSAME70\BSP\Libraries\libchip\include -I ..\..\platform\ATSAME70\BSP\Libraries\include\instance -I ..\..\platform\ATSAME70\BSP\Libraries\include\pio -I ..\..\platform\ATSAME70\BSP\Libraries\libstoragemedia\include\sdmmc -I ..\..\platform\ATSAME70\BSP\Libraries\libusb\include -I ..\..\platform\ATSAME70\BSP\Libraries\libchip -I ..\..\platform\ATSAME70\BSP -I ..\..\platform\ATSAME70\BSP\include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\SAM-E_DFP\2.1.0\include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -D__SAME70Q21__-o .\objects\los_membox.o --omf_browse .\objects\los_membox.crf --depend .\objects\los_membox.d)
+I (..\..\kernel\base\mem\los_membox.inc)(0x58F1BF41)
+I (..\..\kernel\base\include\los_membox.ph)(0x58F1BF41)
+I (..\..\kernel\include\los_membox.h)(0x58F1BF41)
+I (..\..\kernel\config\los_config.h)(0x59008824)
+I (..\..\kernel\include\los_typedef.h)(0x58F1BF41)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58F1BF41)
+I (..\..\kernel\include\los_printf.h)(0x58F1BF41)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (..\..\kernel\base\include\los_base.ph)(0x58F1BF41)
+I (..\..\kernel\include\los_base.h)(0x58F1BF41)
+I (..\..\kernel\include\los_list.h)(0x58F1BF41)
+I (..\..\kernel\include\los_errno.h)(0x58F1BF41)
+I (..\..\kernel\cpu\arm\cortex-m7\los_hwi.h)(0x58DB526B)
+I (..\..\kernel\include\los_sys.h)(0x58F1BF41)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+F (..\..\kernel\base\mem\los_memory.c)(0x58F1BF41)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m7 -I ..\..\platform\ATSAME70\BSP\Libraries\include -I ..\..\example\include -I ..\..\platform\ATSAME70 -I ..\..\platform\ATSAME70\BSP\Libraries\include\component -I ..\..\platform\ATSAME70\BSP\Libraries\libchip\include -I ..\..\platform\ATSAME70\BSP\Libraries\include\instance -I ..\..\platform\ATSAME70\BSP\Libraries\include\pio -I ..\..\platform\ATSAME70\BSP\Libraries\libstoragemedia\include\sdmmc -I ..\..\platform\ATSAME70\BSP\Libraries\libusb\include -I ..\..\platform\ATSAME70\BSP\Libraries\libchip -I ..\..\platform\ATSAME70\BSP -I ..\..\platform\ATSAME70\BSP\include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\SAM-E_DFP\2.1.0\include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -D__SAME70Q21__-o .\objects\los_memory.o --omf_browse .\objects\los_memory.crf --depend .\objects\los_memory.d)
+I (..\..\kernel\base\mem\los_memory.inc)(0x58F1BF41)
+I (..\..\kernel\base\include\los_memory.ph)(0x58F1BF41)
+I (..\..\kernel\include\los_memory.h)(0x58F1BF41)
+I (..\..\kernel\include\los_base.h)(0x58F1BF41)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58F1BF41)
+I (..\..\kernel\include\los_typedef.h)(0x58F1BF41)
+I (..\..\kernel\config\los_config.h)(0x59008824)
+I (..\..\kernel\include\los_printf.h)(0x58F1BF41)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (..\..\kernel\include\los_list.h)(0x58F1BF41)
+I (..\..\kernel\include\los_errno.h)(0x58F1BF41)
+I (..\..\kernel\base\include\los_multipledlinkhead.ph)(0x58F1BF41)
+I (..\..\kernel\include\los_multipledlinkhead.h)(0x58F1BF41)
+I (..\..\kernel\base\include\los_memstat.ph)(0x58F1BF41)
+I (..\..\kernel\base\include\los_task.ph)(0x58F1BF41)
+I (..\..\kernel\include\los_task.h)(0x58F1BF41)
+I (..\..\kernel\include\los_sys.h)(0x58F1BF41)
+I (..\..\kernel\cpu\arm\cortex-m7\los_hwi.h)(0x58DB526B)
+I (..\..\kernel\include\los_tick.h)(0x58F1BF41)
+I (..\..\kernel\include\los_event.h)(0x58F1BF41)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+F (..\..\kernel\base\mem\los_memstat.c)(0x58F1BF41)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m7 -I ..\..\platform\ATSAME70\BSP\Libraries\include -I ..\..\example\include -I ..\..\platform\ATSAME70 -I ..\..\platform\ATSAME70\BSP\Libraries\include\component -I ..\..\platform\ATSAME70\BSP\Libraries\libchip\include -I ..\..\platform\ATSAME70\BSP\Libraries\include\instance -I ..\..\platform\ATSAME70\BSP\Libraries\include\pio -I ..\..\platform\ATSAME70\BSP\Libraries\libstoragemedia\include\sdmmc -I ..\..\platform\ATSAME70\BSP\Libraries\libusb\include -I ..\..\platform\ATSAME70\BSP\Libraries\libchip -I ..\..\platform\ATSAME70\BSP -I ..\..\platform\ATSAME70\BSP\include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\SAM-E_DFP\2.1.0\include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -D__SAME70Q21__-o .\objects\los_memstat.o --omf_browse .\objects\los_memstat.crf --depend .\objects\los_memstat.d)
+I (..\..\kernel\base\mem\los_memstat.inc)(0x58F1BF41)
+I (..\..\kernel\base\include\los_memstat.ph)(0x58F1BF41)
+I (..\..\kernel\include\los_typedef.h)(0x58F1BF41)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58F1BF41)
+I (..\..\kernel\base\include\los_task.ph)(0x58F1BF41)
+I (..\..\kernel\include\los_task.h)(0x58F1BF41)
+I (..\..\kernel\include\los_base.h)(0x58F1BF41)
+I (..\..\kernel\config\los_config.h)(0x59008824)
+I (..\..\kernel\include\los_printf.h)(0x58F1BF41)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (..\..\kernel\include\los_list.h)(0x58F1BF41)
+I (..\..\kernel\include\los_errno.h)(0x58F1BF41)
+I (..\..\kernel\include\los_sys.h)(0x58F1BF41)
+I (..\..\kernel\cpu\arm\cortex-m7\los_hwi.h)(0x58DB526B)
+I (..\..\kernel\include\los_tick.h)(0x58F1BF41)
+I (..\..\kernel\include\los_event.h)(0x58F1BF41)
+F (..\..\kernel\base\mem\los_multipledlinkhead.c)(0x58F1BF41)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m7 -I ..\..\platform\ATSAME70\BSP\Libraries\include -I ..\..\example\include -I ..\..\platform\ATSAME70 -I ..\..\platform\ATSAME70\BSP\Libraries\include\component -I ..\..\platform\ATSAME70\BSP\Libraries\libchip\include -I ..\..\platform\ATSAME70\BSP\Libraries\include\instance -I ..\..\platform\ATSAME70\BSP\Libraries\include\pio -I ..\..\platform\ATSAME70\BSP\Libraries\libstoragemedia\include\sdmmc -I ..\..\platform\ATSAME70\BSP\Libraries\libusb\include -I ..\..\platform\ATSAME70\BSP\Libraries\libchip -I ..\..\platform\ATSAME70\BSP -I ..\..\platform\ATSAME70\BSP\include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\SAM-E_DFP\2.1.0\include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -D__SAME70Q21__-o .\objects\los_multipledlinkhead.o --omf_browse .\objects\los_multipledlinkhead.crf --depend .\objects\los_multipledlinkhead.d)
+I (..\..\kernel\base\mem\los_multipledlinkhead.inc)(0x58F1BF41)
+I (..\..\kernel\base\include\los_multipledlinkhead.ph)(0x58F1BF41)
+I (..\..\kernel\include\los_multipledlinkhead.h)(0x58F1BF41)
+I (..\..\kernel\include\los_base.h)(0x58F1BF41)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58F1BF41)
+I (..\..\kernel\include\los_typedef.h)(0x58F1BF41)
+I (..\..\kernel\config\los_config.h)(0x59008824)
+I (..\..\kernel\include\los_printf.h)(0x58F1BF41)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (..\..\kernel\include\los_list.h)(0x58F1BF41)
+I (..\..\kernel\include\los_errno.h)(0x58F1BF41)
+F (..\..\kernel\base\misc\los_misc.c)(0x58F1BF41)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m7 -I ..\..\platform\ATSAME70\BSP\Libraries\include -I ..\..\example\include -I ..\..\platform\ATSAME70 -I ..\..\platform\ATSAME70\BSP\Libraries\include\component -I ..\..\platform\ATSAME70\BSP\Libraries\libchip\include -I ..\..\platform\ATSAME70\BSP\Libraries\include\instance -I ..\..\platform\ATSAME70\BSP\Libraries\include\pio -I ..\..\platform\ATSAME70\BSP\Libraries\libstoragemedia\include\sdmmc -I ..\..\platform\ATSAME70\BSP\Libraries\libusb\include -I ..\..\platform\ATSAME70\BSP\Libraries\libchip -I ..\..\platform\ATSAME70\BSP -I ..\..\platform\ATSAME70\BSP\include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\SAM-E_DFP\2.1.0\include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -D__SAME70Q21__-o .\objects\los_misc.o --omf_browse .\objects\los_misc.crf --depend .\objects\los_misc.d)
+I (..\..\kernel\base\include\los_base.ph)(0x58F1BF41)
+I (..\..\kernel\include\los_base.h)(0x58F1BF41)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58F1BF41)
+I (..\..\kernel\include\los_typedef.h)(0x58F1BF41)
+I (..\..\kernel\config\los_config.h)(0x59008824)
+I (..\..\kernel\include\los_printf.h)(0x58F1BF41)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (..\..\kernel\include\los_list.h)(0x58F1BF41)
+I (..\..\kernel\include\los_errno.h)(0x58F1BF41)
+I (..\..\kernel\base\include\los_sys.ph)(0x58F1BF41)
+I (..\..\kernel\include\los_sys.h)(0x58F1BF41)
+I (..\..\kernel\cpu\arm\cortex-m7\los_hwi.h)(0x58DB526B)
+I (..\..\kernel\base\include\los_task.ph)(0x58F1BF41)
+I (..\..\kernel\include\los_task.h)(0x58F1BF41)
+I (..\..\kernel\include\los_tick.h)(0x58F1BF41)
+I (..\..\kernel\include\los_event.h)(0x58F1BF41)
+F (..\..\kernel\cpu\arm\cortex-m7\los_dispatch_keil.s)(0x58DB526B)(--cpu Cortex-M7.fp.dp -g --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\SAM-E_DFP\2.1.0\include-ID:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 523" --pd "__SAME70Q21__ SETA 1"--list .\listings\los_dispatch_keil.lst --xref -o .\objects\los_dispatch_keil.o --depend .\objects\los_dispatch_keil.d)
+F (..\..\kernel\cpu\arm\cortex-m7\los_hw.c)(0x58DB526B)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m7 -I ..\..\platform\ATSAME70\BSP\Libraries\include -I ..\..\example\include -I ..\..\platform\ATSAME70 -I ..\..\platform\ATSAME70\BSP\Libraries\include\component -I ..\..\platform\ATSAME70\BSP\Libraries\libchip\include -I ..\..\platform\ATSAME70\BSP\Libraries\include\instance -I ..\..\platform\ATSAME70\BSP\Libraries\include\pio -I ..\..\platform\ATSAME70\BSP\Libraries\libstoragemedia\include\sdmmc -I ..\..\platform\ATSAME70\BSP\Libraries\libusb\include -I ..\..\platform\ATSAME70\BSP\Libraries\libchip -I ..\..\platform\ATSAME70\BSP -I ..\..\platform\ATSAME70\BSP\include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\SAM-E_DFP\2.1.0\include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -D__SAME70Q21__-o .\objects\los_hw.o --omf_browse .\objects\los_hw.crf --depend .\objects\los_hw.d)
+I (..\..\kernel\include\los_base.h)(0x58F1BF41)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58F1BF41)
+I (..\..\kernel\include\los_typedef.h)(0x58F1BF41)
+I (..\..\kernel\config\los_config.h)(0x59008824)
+I (..\..\kernel\include\los_printf.h)(0x58F1BF41)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (..\..\kernel\include\los_list.h)(0x58F1BF41)
+I (..\..\kernel\include\los_errno.h)(0x58F1BF41)
+I (..\..\kernel\base\include\los_task.ph)(0x58F1BF41)
+I (..\..\kernel\include\los_task.h)(0x58F1BF41)
+I (..\..\kernel\include\los_sys.h)(0x58F1BF41)
+I (..\..\kernel\cpu\arm\cortex-m7\los_hwi.h)(0x58DB526B)
+I (..\..\kernel\include\los_tick.h)(0x58F1BF41)
+I (..\..\kernel\include\los_event.h)(0x58F1BF41)
+I (..\..\kernel\cpu\arm\cortex-m7\los_hw.h)(0x58DB526B)
+I (..\..\kernel\base\include\los_sys.ph)(0x58F1BF41)
+I (..\..\kernel\base\include\los_base.ph)(0x58F1BF41)
+I (..\..\kernel\base\include\los_priqueue.ph)(0x58F1BF41)
+I (..\..\kernel\include\los_priqueue.h)(0x58F1BF41)
+F (..\..\kernel\cpu\arm\cortex-m7\los_hw_tick.c)(0x58DB526B)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m7 -I ..\..\platform\ATSAME70\BSP\Libraries\include -I ..\..\example\include -I ..\..\platform\ATSAME70 -I ..\..\platform\ATSAME70\BSP\Libraries\include\component -I ..\..\platform\ATSAME70\BSP\Libraries\libchip\include -I ..\..\platform\ATSAME70\BSP\Libraries\include\instance -I ..\..\platform\ATSAME70\BSP\Libraries\include\pio -I ..\..\platform\ATSAME70\BSP\Libraries\libstoragemedia\include\sdmmc -I ..\..\platform\ATSAME70\BSP\Libraries\libusb\include -I ..\..\platform\ATSAME70\BSP\Libraries\libchip -I ..\..\platform\ATSAME70\BSP -I ..\..\platform\ATSAME70\BSP\include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\SAM-E_DFP\2.1.0\include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -D__SAME70Q21__-o .\objects\los_hw_tick.o --omf_browse .\objects\los_hw_tick.crf --depend .\objects\los_hw_tick.d)
+I (..\..\kernel\base\include\los_tick.ph)(0x58F1BF41)
+I (..\..\kernel\include\los_tick.h)(0x58F1BF41)
+I (..\..\kernel\include\los_errno.h)(0x58F1BF41)
+I (..\..\kernel\include\los_typedef.h)(0x58F1BF41)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58F1BF41)
+I (..\..\kernel\include\los_base.h)(0x58F1BF41)
+I (..\..\kernel\config\los_config.h)(0x59008824)
+I (..\..\kernel\include\los_printf.h)(0x58F1BF41)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (..\..\kernel\include\los_list.h)(0x58F1BF41)
+I (..\..\kernel\base\include\los_task.ph)(0x58F1BF41)
+I (..\..\kernel\include\los_task.h)(0x58F1BF41)
+I (..\..\kernel\include\los_sys.h)(0x58F1BF41)
+I (..\..\kernel\cpu\arm\cortex-m7\los_hwi.h)(0x58DB526B)
+I (..\..\kernel\include\los_event.h)(0x58F1BF41)
+I (..\..\kernel\include\los_swtmr.h)(0x58F1BF41)
+F (..\..\kernel\cpu\arm\cortex-m7\los_hwi.c)(0x58DB526B)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m7 -I ..\..\platform\ATSAME70\BSP\Libraries\include -I ..\..\example\include -I ..\..\platform\ATSAME70 -I ..\..\platform\ATSAME70\BSP\Libraries\include\component -I ..\..\platform\ATSAME70\BSP\Libraries\libchip\include -I ..\..\platform\ATSAME70\BSP\Libraries\include\instance -I ..\..\platform\ATSAME70\BSP\Libraries\include\pio -I ..\..\platform\ATSAME70\BSP\Libraries\libstoragemedia\include\sdmmc -I ..\..\platform\ATSAME70\BSP\Libraries\libusb\include -I ..\..\platform\ATSAME70\BSP\Libraries\libchip -I ..\..\platform\ATSAME70\BSP -I ..\..\platform\ATSAME70\BSP\include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\SAM-E_DFP\2.1.0\include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -D__SAME70Q21__-o .\objects\los_hwi.o --omf_browse .\objects\los_hwi.crf --depend .\objects\los_hwi.d)
+I (..\..\kernel\cpu\arm\cortex-m7\los_hwi.h)(0x58DB526B)
+I (..\..\kernel\include\los_base.h)(0x58F1BF41)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58F1BF41)
+I (..\..\kernel\include\los_typedef.h)(0x58F1BF41)
+I (..\..\kernel\config\los_config.h)(0x59008824)
+I (..\..\kernel\include\los_printf.h)(0x58F1BF41)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (..\..\kernel\include\los_list.h)(0x58F1BF41)
+I (..\..\kernel\include\los_errno.h)(0x58F1BF41)
+I (..\..\kernel\include\los_sys.h)(0x58F1BF41)
+F (..\..\platform\ATSAME70\los_bsp_adapter.c)(0x59550161)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m7 -I ..\..\platform\ATSAME70\BSP\Libraries\include -I ..\..\example\include -I ..\..\platform\ATSAME70 -I ..\..\platform\ATSAME70\BSP\Libraries\include\component -I ..\..\platform\ATSAME70\BSP\Libraries\libchip\include -I ..\..\platform\ATSAME70\BSP\Libraries\include\instance -I ..\..\platform\ATSAME70\BSP\Libraries\include\pio -I ..\..\platform\ATSAME70\BSP\Libraries\libstoragemedia\include\sdmmc -I ..\..\platform\ATSAME70\BSP\Libraries\libusb\include -I ..\..\platform\ATSAME70\BSP\Libraries\libchip -I ..\..\platform\ATSAME70\BSP -I ..\..\platform\ATSAME70\BSP\include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\SAM-E_DFP\2.1.0\include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -D__SAME70Q21__-o .\objects\los_bsp_adapter.o --omf_browse .\objects\los_bsp_adapter.crf --depend .\objects\los_bsp_adapter.d)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\sam.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\same70q21.h)(0x56FB4A6A)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\core_cm7.h)(0x58669CFF)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\core_cmInstr.h)(0x58669CFF)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\cmsis_armcc.h)(0x58669CFF)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\core_cmFunc.h)(0x58669CFF)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\core_cmSimd.h)(0x58669CFF)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\system_same70.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/acc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/aes.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/afec.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/chipid.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/dacc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/efc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/gmac.h)(0x56FB4A6A)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/gpbr.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/hsmci.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/icm.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/isi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/matrix.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/mcan.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/pio.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/pmc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/pwm.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/qspi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/rstc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/rswdt.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/rtc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/rtt.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/sdramc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/smc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/spi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/ssc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/supc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/tc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/trng.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/twihs.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/uart.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/usart.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/usbhs.h)(0x56FB4A6A)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/utmi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/wdt.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/xdmac.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/hsmci.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/ssc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/spi0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/tc0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/tc1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/tc2.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/twihs0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/twihs1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/pwm0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/usart0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/usart1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/usart2.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/mcan0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/mcan1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/usbhs.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/afec0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/dacc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/acc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/icm.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/isi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/gmac.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/tc3.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/spi1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/pwm1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/twihs2.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/afec1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/aes.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/trng.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/xdmac.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/qspi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/smc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/sdramc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/matrix.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/utmi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/pmc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/uart0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/chipid.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/uart1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/efc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/pioa.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/piob.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/pioc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/piod.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/pioe.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/rstc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/supc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/rtt.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/wdt.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/rtc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/gpbr.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/rswdt.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/uart2.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/uart3.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/uart4.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\pio/same70q21.h)(0x560B4012)
+I (..\..\platform\ATSAME70\los_bsp_adapter.h)(0x58DB526B)
+I (..\..\platform\ATSAME70\los_bsp_led.h)(0x58DB526B)
+I (..\..\platform\ATSAME70\los_bsp_key.h)(0x595201CE)
+I (..\..\platform\ATSAME70\los_bsp_uart.h)(0x59550081)
+I (..\..\kernel\base\include\los_tick.ph)(0x58F1BF41)
+I (..\..\kernel\include\los_tick.h)(0x58F1BF41)
+I (..\..\kernel\include\los_errno.h)(0x58F1BF41)
+I (..\..\kernel\include\los_typedef.h)(0x58F1BF41)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58F1BF41)
+I (..\..\kernel\include\los_base.h)(0x58F1BF41)
+I (..\..\kernel\config\los_config.h)(0x59008824)
+I (..\..\kernel\include\los_printf.h)(0x58F1BF41)
+I (..\..\kernel\include\los_list.h)(0x58F1BF41)
+I (..\..\kernel\base\include\los_task.ph)(0x58F1BF41)
+I (..\..\kernel\include\los_task.h)(0x58F1BF41)
+I (..\..\kernel\include\los_sys.h)(0x58F1BF41)
+I (..\..\kernel\cpu\arm\cortex-m7\los_hwi.h)(0x58DB526B)
+I (..\..\kernel\include\los_event.h)(0x58F1BF41)
+I (..\..\kernel\include\los_swtmr.h)(0x58F1BF41)
+F (..\..\platform\ATSAME70\los_bsp_key.c)(0x5950BCE8)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m7 -I ..\..\platform\ATSAME70\BSP\Libraries\include -I ..\..\example\include -I ..\..\platform\ATSAME70 -I ..\..\platform\ATSAME70\BSP\Libraries\include\component -I ..\..\platform\ATSAME70\BSP\Libraries\libchip\include -I ..\..\platform\ATSAME70\BSP\Libraries\include\instance -I ..\..\platform\ATSAME70\BSP\Libraries\include\pio -I ..\..\platform\ATSAME70\BSP\Libraries\libstoragemedia\include\sdmmc -I ..\..\platform\ATSAME70\BSP\Libraries\libusb\include -I ..\..\platform\ATSAME70\BSP\Libraries\libchip -I ..\..\platform\ATSAME70\BSP -I ..\..\platform\ATSAME70\BSP\include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\SAM-E_DFP\2.1.0\include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -D__SAME70Q21__-o .\objects\los_bsp_key.o --omf_browse .\objects\los_bsp_key.crf --depend .\objects\los_bsp_key.d)
+I (..\..\platform\ATSAME70\los_bsp_key.h)(0x595201CE)
+I (..\..\platform\ATSAME70\BSP\Board_Buttons.h)(0x5950B605)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+F (..\..\platform\ATSAME70\los_bsp_led.c)(0x59491DF3)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m7 -I ..\..\platform\ATSAME70\BSP\Libraries\include -I ..\..\example\include -I ..\..\platform\ATSAME70 -I ..\..\platform\ATSAME70\BSP\Libraries\include\component -I ..\..\platform\ATSAME70\BSP\Libraries\libchip\include -I ..\..\platform\ATSAME70\BSP\Libraries\include\instance -I ..\..\platform\ATSAME70\BSP\Libraries\include\pio -I ..\..\platform\ATSAME70\BSP\Libraries\libstoragemedia\include\sdmmc -I ..\..\platform\ATSAME70\BSP\Libraries\libusb\include -I ..\..\platform\ATSAME70\BSP\Libraries\libchip -I ..\..\platform\ATSAME70\BSP -I ..\..\platform\ATSAME70\BSP\include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\SAM-E_DFP\2.1.0\include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -D__SAME70Q21__-o .\objects\los_bsp_led.o --omf_browse .\objects\los_bsp_led.crf --depend .\objects\los_bsp_led.d)
+I (..\..\platform\ATSAME70\los_bsp_led.h)(0x58DB526B)
+I (..\..\platform\ATSAME70\BSP\Board_LED.h)(0x5950B5C0)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+F (..\..\platform\ATSAME70\los_bsp_uart.c)(0x595BB839)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m7 -I ..\..\platform\ATSAME70\BSP\Libraries\include -I ..\..\example\include -I ..\..\platform\ATSAME70 -I ..\..\platform\ATSAME70\BSP\Libraries\include\component -I ..\..\platform\ATSAME70\BSP\Libraries\libchip\include -I ..\..\platform\ATSAME70\BSP\Libraries\include\instance -I ..\..\platform\ATSAME70\BSP\Libraries\include\pio -I ..\..\platform\ATSAME70\BSP\Libraries\libstoragemedia\include\sdmmc -I ..\..\platform\ATSAME70\BSP\Libraries\libusb\include -I ..\..\platform\ATSAME70\BSP\Libraries\libchip -I ..\..\platform\ATSAME70\BSP -I ..\..\platform\ATSAME70\BSP\include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\SAM-E_DFP\2.1.0\include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -D__SAME70Q21__-o .\objects\los_bsp_uart.o --omf_browse .\objects\los_bsp_uart.crf --depend .\objects\los_bsp_uart.d)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\sam.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\same70q21.h)(0x56FB4A6A)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\core_cm7.h)(0x58669CFF)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\core_cmInstr.h)(0x58669CFF)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\cmsis_armcc.h)(0x58669CFF)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\core_cmFunc.h)(0x58669CFF)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\core_cmSimd.h)(0x58669CFF)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\system_same70.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/acc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/aes.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/afec.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/chipid.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/dacc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/efc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/gmac.h)(0x56FB4A6A)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/gpbr.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/hsmci.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/icm.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/isi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/matrix.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/mcan.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/pio.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/pmc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/pwm.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/qspi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/rstc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/rswdt.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/rtc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/rtt.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/sdramc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/smc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/spi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/ssc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/supc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/tc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/trng.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/twihs.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/uart.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/usart.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/usbhs.h)(0x56FB4A6A)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/utmi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/wdt.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/xdmac.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/hsmci.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/ssc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/spi0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/tc0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/tc1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/tc2.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/twihs0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/twihs1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/pwm0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/usart0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/usart1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/usart2.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/mcan0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/mcan1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/usbhs.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/afec0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/dacc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/acc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/icm.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/isi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/gmac.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/tc3.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/spi1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/pwm1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/twihs2.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/afec1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/aes.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/trng.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/xdmac.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/qspi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/smc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/sdramc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/matrix.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/utmi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/pmc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/uart0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/chipid.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/uart1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/efc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/pioa.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/piob.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/pioc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/piod.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/pioe.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/rstc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/supc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/rtt.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/wdt.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/rtc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/gpbr.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/rswdt.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/uart2.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/uart3.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/uart4.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\pio/same70q21.h)(0x560B4012)
+I (..\..\platform\ATSAME70\los_bsp_uart.h)(0x59550081)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+I (..\..\platform\ATSAME70\BSP\Board_LED.h)(0x5950B5C0)
+I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
+I (D:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
+I (..\..\example\include\los_demo_debug.h)(0x595B8141)
+I (..\..\kernel\include\los_typedef.h)(0x58F1BF41)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58F1BF41)
+I (..\..\platform\ATSAME70\BSP\include\dbg_console.h)(0x564ED7B4)
+F (..\..\platform\ATSAME70\BSP\Buttons_SAME70-XPLD.c)(0x5950B47B)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m7 -I ..\..\platform\ATSAME70\BSP\Libraries\include -I ..\..\example\include -I ..\..\platform\ATSAME70 -I ..\..\platform\ATSAME70\BSP\Libraries\include\component -I ..\..\platform\ATSAME70\BSP\Libraries\libchip\include -I ..\..\platform\ATSAME70\BSP\Libraries\include\instance -I ..\..\platform\ATSAME70\BSP\Libraries\include\pio -I ..\..\platform\ATSAME70\BSP\Libraries\libstoragemedia\include\sdmmc -I ..\..\platform\ATSAME70\BSP\Libraries\libusb\include -I ..\..\platform\ATSAME70\BSP\Libraries\libchip -I ..\..\platform\ATSAME70\BSP -I ..\..\platform\ATSAME70\BSP\include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\SAM-E_DFP\2.1.0\include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -D__SAME70Q21__-o .\objects\buttons_same70-xpld.o --omf_browse .\objects\buttons_same70-xpld.crf --depend .\objects\buttons_same70-xpld.d)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\sam.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\same70q21.h)(0x56FB4A6A)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\core_cm7.h)(0x58669CFF)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\core_cmInstr.h)(0x58669CFF)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\cmsis_armcc.h)(0x58669CFF)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\core_cmFunc.h)(0x58669CFF)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\core_cmSimd.h)(0x58669CFF)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\system_same70.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/acc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/aes.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/afec.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/chipid.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/dacc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/efc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/gmac.h)(0x56FB4A6A)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/gpbr.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/hsmci.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/icm.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/isi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/matrix.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/mcan.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/pio.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/pmc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/pwm.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/qspi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/rstc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/rswdt.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/rtc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/rtt.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/sdramc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/smc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/spi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/ssc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/supc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/tc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/trng.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/twihs.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/uart.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/usart.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/usbhs.h)(0x56FB4A6A)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/utmi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/wdt.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/xdmac.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/hsmci.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/ssc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/spi0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/tc0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/tc1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/tc2.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/twihs0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/twihs1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/pwm0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/usart0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/usart1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/usart2.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/mcan0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/mcan1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/usbhs.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/afec0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/dacc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/acc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/icm.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/isi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/gmac.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/tc3.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/spi1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/pwm1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/twihs2.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/afec1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/aes.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/trng.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/xdmac.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/qspi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/smc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/sdramc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/matrix.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/utmi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/pmc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/uart0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/chipid.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/uart1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/efc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/pioa.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/piob.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/pioc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/piod.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/pioe.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/rstc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/supc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/rtt.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/wdt.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/rtc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/gpbr.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/rswdt.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/uart2.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/uart3.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/uart4.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\pio/same70q21.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Board_Buttons.h)(0x5950B605)
+F (..\..\platform\ATSAME70\BSP\LED_SAME70-XPLD.c)(0x57037AA2)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m7 -I ..\..\platform\ATSAME70\BSP\Libraries\include -I ..\..\example\include -I ..\..\platform\ATSAME70 -I ..\..\platform\ATSAME70\BSP\Libraries\include\component -I ..\..\platform\ATSAME70\BSP\Libraries\libchip\include -I ..\..\platform\ATSAME70\BSP\Libraries\include\instance -I ..\..\platform\ATSAME70\BSP\Libraries\include\pio -I ..\..\platform\ATSAME70\BSP\Libraries\libstoragemedia\include\sdmmc -I ..\..\platform\ATSAME70\BSP\Libraries\libusb\include -I ..\..\platform\ATSAME70\BSP\Libraries\libchip -I ..\..\platform\ATSAME70\BSP -I ..\..\platform\ATSAME70\BSP\include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\SAM-E_DFP\2.1.0\include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -D__SAME70Q21__-o .\objects\led_same70-xpld.o --omf_browse .\objects\led_same70-xpld.crf --depend .\objects\led_same70-xpld.d)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\sam.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\same70q21.h)(0x56FB4A6A)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\core_cm7.h)(0x58669CFF)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\core_cmInstr.h)(0x58669CFF)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\cmsis_armcc.h)(0x58669CFF)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\core_cmFunc.h)(0x58669CFF)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\core_cmSimd.h)(0x58669CFF)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\system_same70.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/acc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/aes.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/afec.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/chipid.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/dacc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/efc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/gmac.h)(0x56FB4A6A)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/gpbr.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/hsmci.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/icm.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/isi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/matrix.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/mcan.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/pio.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/pmc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/pwm.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/qspi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/rstc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/rswdt.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/rtc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/rtt.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/sdramc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/smc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/spi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/ssc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/supc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/tc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/trng.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/twihs.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/uart.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/usart.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/usbhs.h)(0x56FB4A6A)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/utmi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/wdt.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/xdmac.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/hsmci.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/ssc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/spi0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/tc0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/tc1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/tc2.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/twihs0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/twihs1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/pwm0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/usart0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/usart1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/usart2.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/mcan0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/mcan1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/usbhs.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/afec0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/dacc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/acc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/icm.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/isi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/gmac.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/tc3.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/spi1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/pwm1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/twihs2.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/afec1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/aes.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/trng.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/xdmac.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/qspi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/smc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/sdramc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/matrix.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/utmi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/pmc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/uart0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/chipid.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/uart1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/efc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/pioa.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/piob.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/pioc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/piod.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/pioe.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/rstc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/supc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/rtt.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/wdt.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/rtc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/gpbr.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/rswdt.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/uart2.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/uart3.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/uart4.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\pio/same70q21.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Board_LED.h)(0x5950B5C0)
+F (..\..\platform\ATSAME70\BSP\Libraries\libchip\source\pio.c)(0x569C80B6)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m7 -I ..\..\platform\ATSAME70\BSP\Libraries\include -I ..\..\example\include -I ..\..\platform\ATSAME70 -I ..\..\platform\ATSAME70\BSP\Libraries\include\component -I ..\..\platform\ATSAME70\BSP\Libraries\libchip\include -I ..\..\platform\ATSAME70\BSP\Libraries\include\instance -I ..\..\platform\ATSAME70\BSP\Libraries\include\pio -I ..\..\platform\ATSAME70\BSP\Libraries\libstoragemedia\include\sdmmc -I ..\..\platform\ATSAME70\BSP\Libraries\libusb\include -I ..\..\platform\ATSAME70\BSP\Libraries\libchip -I ..\..\platform\ATSAME70\BSP -I ..\..\platform\ATSAME70\BSP\include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\SAM-E_DFP\2.1.0\include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -D__SAME70Q21__-o .\objects\pio.o --omf_browse .\objects\pio.crf --depend .\objects\pio.d)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\chip.h)(0x56AB1686)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\compiler.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\sam.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\same70q21.h)(0x56FB4A6A)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\core_cm7.h)(0x58669CFF)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\core_cmInstr.h)(0x58669CFF)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\cmsis_armcc.h)(0x58669CFF)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\core_cmFunc.h)(0x58669CFF)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\core_cmSimd.h)(0x58669CFF)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\system_same70.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/acc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/aes.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/afec.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/chipid.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/dacc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/efc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/gmac.h)(0x56FB4A6A)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/gpbr.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/hsmci.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/icm.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/isi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/matrix.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/mcan.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/pio.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/pmc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/pwm.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/qspi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/rstc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/rswdt.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/rtc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/rtt.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/sdramc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/smc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/spi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/ssc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/supc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/tc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/trng.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/twihs.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/uart.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/usart.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/usbhs.h)(0x56FB4A6A)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/utmi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/wdt.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/xdmac.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/hsmci.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/ssc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/spi0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/tc0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/tc1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/tc2.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/twihs0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/twihs1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/pwm0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/usart0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/usart1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/usart2.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/mcan0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/mcan1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/usbhs.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/afec0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/dacc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/acc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/icm.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/isi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/gmac.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/tc3.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/spi1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/pwm1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/twihs2.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/afec1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/aes.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/trng.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/xdmac.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/qspi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/smc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/sdramc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/matrix.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/utmi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/pmc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/uart0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/chipid.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/uart1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/efc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/pioa.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/piob.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/pioc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/piod.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/pioe.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/rstc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/supc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/rtt.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/wdt.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/rtc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/gpbr.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/rswdt.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/uart2.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/uart3.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/uart4.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\pio/same70q21.h)(0x560B4012)
+I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
+I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
+I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/acc.h)(0x569C80B6)
+I (D:\Keil_v5\ARM\ARMCC\include\assert.h)(0x57F606B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/aes.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/afec.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/efc.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/pio.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/pio_it.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/rstc.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/mpu.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/gmac.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/gmacd.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/video.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/icm.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/isi.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/exceptions.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/pio_capture.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/rtc.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/rtt.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/tc.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/timetick.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/twi.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/flashd.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/pmc.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/pwmc.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/mcan.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/supc.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/usart.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/uart.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/hsmci.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/ssc.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/trng.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/wdt.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/spi.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/qspi.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/trace.h)(0x569C80B6)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/xdmac.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/utility.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/xdma_hardware_interface.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/xdmad.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/mcid.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/twid.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/spi_dma.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/qspi_dma.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/uart_dma.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/usart_dma.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/afe_dma.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/dac_dma.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/usbhs.h)(0x569C80B6)
+F (..\..\platform\ATSAME70\BSP\Libraries\libchip\source\pmc.c)(0x5954C417)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m7 -I ..\..\platform\ATSAME70\BSP\Libraries\include -I ..\..\example\include -I ..\..\platform\ATSAME70 -I ..\..\platform\ATSAME70\BSP\Libraries\include\component -I ..\..\platform\ATSAME70\BSP\Libraries\libchip\include -I ..\..\platform\ATSAME70\BSP\Libraries\include\instance -I ..\..\platform\ATSAME70\BSP\Libraries\include\pio -I ..\..\platform\ATSAME70\BSP\Libraries\libstoragemedia\include\sdmmc -I ..\..\platform\ATSAME70\BSP\Libraries\libusb\include -I ..\..\platform\ATSAME70\BSP\Libraries\libchip -I ..\..\platform\ATSAME70\BSP -I ..\..\platform\ATSAME70\BSP\include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\SAM-E_DFP\2.1.0\include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -D__SAME70Q21__-o .\objects\pmc.o --omf_browse .\objects\pmc.crf --depend .\objects\pmc.d)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\chip.h)(0x56AB1686)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\compiler.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\sam.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\same70q21.h)(0x56FB4A6A)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\core_cm7.h)(0x58669CFF)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\core_cmInstr.h)(0x58669CFF)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\cmsis_armcc.h)(0x58669CFF)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\core_cmFunc.h)(0x58669CFF)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\core_cmSimd.h)(0x58669CFF)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\system_same70.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/acc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/aes.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/afec.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/chipid.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/dacc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/efc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/gmac.h)(0x56FB4A6A)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/gpbr.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/hsmci.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/icm.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/isi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/matrix.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/mcan.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/pio.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/pmc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/pwm.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/qspi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/rstc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/rswdt.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/rtc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/rtt.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/sdramc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/smc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/spi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/ssc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/supc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/tc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/trng.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/twihs.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/uart.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/usart.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/usbhs.h)(0x56FB4A6A)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/utmi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/wdt.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/xdmac.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/hsmci.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/ssc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/spi0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/tc0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/tc1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/tc2.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/twihs0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/twihs1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/pwm0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/usart0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/usart1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/usart2.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/mcan0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/mcan1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/usbhs.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/afec0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/dacc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/acc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/icm.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/isi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/gmac.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/tc3.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/spi1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/pwm1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/twihs2.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/afec1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/aes.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/trng.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/xdmac.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/qspi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/smc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/sdramc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/matrix.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/utmi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/pmc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/uart0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/chipid.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/uart1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/efc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/pioa.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/piob.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/pioc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/piod.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/pioe.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/rstc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/supc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/rtt.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/wdt.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/rtc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/gpbr.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/rswdt.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/uart2.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/uart3.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/uart4.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\pio/same70q21.h)(0x560B4012)
+I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
+I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
+I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/acc.h)(0x569C80B6)
+I (D:\Keil_v5\ARM\ARMCC\include\assert.h)(0x57F606B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/aes.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/afec.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/efc.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/pio.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/pio_it.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/rstc.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/mpu.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/gmac.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/gmacd.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/video.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/icm.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/isi.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/exceptions.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/pio_capture.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/rtc.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/rtt.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/tc.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/timetick.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/twi.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/flashd.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/pmc.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/pwmc.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/mcan.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/supc.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/usart.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/uart.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/hsmci.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/ssc.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/trng.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/wdt.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/spi.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/qspi.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/trace.h)(0x569C80B6)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/xdmac.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/utility.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/xdma_hardware_interface.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/xdmad.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/mcid.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/twid.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/spi_dma.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/qspi_dma.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/uart_dma.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/usart_dma.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/afe_dma.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/dac_dma.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/usbhs.h)(0x569C80B6)
+F (..\..\platform\ATSAME70\BSP\system_SAME70.c)(0x59560F8E)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m7 -I ..\..\platform\ATSAME70\BSP\Libraries\include -I ..\..\example\include -I ..\..\platform\ATSAME70 -I ..\..\platform\ATSAME70\BSP\Libraries\include\component -I ..\..\platform\ATSAME70\BSP\Libraries\libchip\include -I ..\..\platform\ATSAME70\BSP\Libraries\include\instance -I ..\..\platform\ATSAME70\BSP\Libraries\include\pio -I ..\..\platform\ATSAME70\BSP\Libraries\libstoragemedia\include\sdmmc -I ..\..\platform\ATSAME70\BSP\Libraries\libusb\include -I ..\..\platform\ATSAME70\BSP\Libraries\libchip -I ..\..\platform\ATSAME70\BSP -I ..\..\platform\ATSAME70\BSP\include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\SAM-E_DFP\2.1.0\include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -D__SAME70Q21__-o .\objects\system_same70.o --omf_browse .\objects\system_same70.crf --depend .\objects\system_same70.d)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\sam.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\same70q21.h)(0x56FB4A6A)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\core_cm7.h)(0x58669CFF)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\core_cmInstr.h)(0x58669CFF)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\cmsis_armcc.h)(0x58669CFF)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\core_cmFunc.h)(0x58669CFF)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\core_cmSimd.h)(0x58669CFF)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\system_same70.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/acc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/aes.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/afec.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/chipid.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/dacc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/efc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/gmac.h)(0x56FB4A6A)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/gpbr.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/hsmci.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/icm.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/isi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/matrix.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/mcan.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/pio.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/pmc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/pwm.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/qspi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/rstc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/rswdt.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/rtc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/rtt.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/sdramc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/smc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/spi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/ssc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/supc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/tc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/trng.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/twihs.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/uart.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/usart.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/usbhs.h)(0x56FB4A6A)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/utmi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/wdt.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/xdmac.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/hsmci.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/ssc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/spi0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/tc0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/tc1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/tc2.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/twihs0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/twihs1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/pwm0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/usart0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/usart1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/usart2.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/mcan0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/mcan1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/usbhs.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/afec0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/dacc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/acc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/icm.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/isi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/gmac.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/tc3.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/spi1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/pwm1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/twihs2.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/afec1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/aes.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/trng.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/xdmac.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/qspi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/smc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/sdramc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/matrix.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/utmi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/pmc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/uart0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/chipid.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/uart1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/efc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/pioa.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/piob.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/pioc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/piod.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/pioe.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/rstc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/supc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/rtt.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/wdt.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/rtc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/gpbr.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/rswdt.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/uart2.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/uart3.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/uart4.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\pio/same70q21.h)(0x560B4012)
+F (..\..\platform\ATSAME70\BSP\source\dbg_console.c)(0x595BB833)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m7 -I ..\..\platform\ATSAME70\BSP\Libraries\include -I ..\..\example\include -I ..\..\platform\ATSAME70 -I ..\..\platform\ATSAME70\BSP\Libraries\include\component -I ..\..\platform\ATSAME70\BSP\Libraries\libchip\include -I ..\..\platform\ATSAME70\BSP\Libraries\include\instance -I ..\..\platform\ATSAME70\BSP\Libraries\include\pio -I ..\..\platform\ATSAME70\BSP\Libraries\libstoragemedia\include\sdmmc -I ..\..\platform\ATSAME70\BSP\Libraries\libusb\include -I ..\..\platform\ATSAME70\BSP\Libraries\libchip -I ..\..\platform\ATSAME70\BSP -I ..\..\platform\ATSAME70\BSP\include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\SAM-E_DFP\2.1.0\include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -D__SAME70Q21__-o .\objects\dbg_console.o --omf_browse .\objects\dbg_console.crf --depend .\objects\dbg_console.d)
+I (..\..\platform\ATSAME70\BSP\board.h)(0x595B594B)
+I (..\..\platform\ATSAME70\BSP\board_e70_xpld.h)(0x564C4C08)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\chip.h)(0x56AB1686)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\compiler.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\sam.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\same70q21.h)(0x56FB4A6A)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\core_cm7.h)(0x58669CFF)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\core_cmInstr.h)(0x58669CFF)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\cmsis_armcc.h)(0x58669CFF)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\core_cmFunc.h)(0x58669CFF)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\core_cmSimd.h)(0x58669CFF)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\system_same70.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/acc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/aes.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/afec.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/chipid.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/dacc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/efc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/gmac.h)(0x56FB4A6A)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/gpbr.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/hsmci.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/icm.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/isi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/matrix.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/mcan.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/pio.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/pmc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/pwm.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/qspi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/rstc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/rswdt.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/rtc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/rtt.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/sdramc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/smc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/spi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/ssc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/supc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/tc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/trng.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/twihs.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/uart.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/usart.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/usbhs.h)(0x56FB4A6A)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/utmi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/wdt.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/xdmac.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/hsmci.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/ssc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/spi0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/tc0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/tc1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/tc2.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/twihs0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/twihs1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/pwm0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/usart0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/usart1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/usart2.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/mcan0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/mcan1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/usbhs.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/afec0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/dacc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/acc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/icm.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/isi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/gmac.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/tc3.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/spi1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/pwm1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/twihs2.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/afec1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/aes.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/trng.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/xdmac.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/qspi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/smc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/sdramc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/matrix.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/utmi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/pmc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/uart0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/chipid.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/uart1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/efc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/pioa.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/piob.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/pioc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/piod.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/pioe.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/rstc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/supc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/rtt.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/wdt.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/rtc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/gpbr.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/rswdt.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/uart2.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/uart3.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/uart4.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\pio/same70q21.h)(0x560B4012)
+I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
+I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
+I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/acc.h)(0x569C80B6)
+I (D:\Keil_v5\ARM\ARMCC\include\assert.h)(0x57F606B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/aes.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/afec.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/efc.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/pio.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/pio_it.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/rstc.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/mpu.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/gmac.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/gmacd.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/video.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/icm.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/isi.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/exceptions.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/pio_capture.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/rtc.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/rtt.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/tc.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/timetick.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/twi.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/flashd.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/pmc.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/pwmc.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/mcan.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/supc.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/usart.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/uart.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/hsmci.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/ssc.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/trng.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/wdt.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/spi.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/qspi.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/trace.h)(0x569C80B6)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/xdmac.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/utility.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/xdma_hardware_interface.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/xdmad.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/mcid.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/twid.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/spi_dma.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/qspi_dma.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/uart_dma.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/usart_dma.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/afe_dma.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/dac_dma.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/usbhs.h)(0x569C80B6)
+I (..\..\platform\ATSAME70\BSP\include/board_lowlevel.h)(0x564C4C08)
+I (..\..\platform\ATSAME70\BSP\include/board_memories.h)(0x564C4C08)
+I (..\..\platform\ATSAME70\BSP\include/led.h)(0x564C4C08)
+I (..\..\platform\ATSAME70\BSP\include/gmii.h)(0x564C4C08)
+I (..\..\platform\ATSAME70\BSP\include/gmacb_phy.h)(0x564C4C08)
+I (..\..\platform\ATSAME70\BSP\include/dbg_console.h)(0x564ED7B4)
+I (..\..\platform\ATSAME70\BSP\include/bmp.h)(0x564C4C08)
+I (..\..\platform\ATSAME70\BSP\include/lcdd.h)(0x564C4C08)
+I (..\..\platform\ATSAME70\BSP\include/ili9488.h)(0x564C4C08)
+I (..\..\platform\ATSAME70\BSP\include/ili9488_reg.h)(0x564C4C08)
+I (..\..\platform\ATSAME70\BSP\include/ili9488_spi.h)(0x564C4C08)
+I (..\..\platform\ATSAME70\BSP\include/ili9488_ebi.h)(0x564C4C08)
+I (..\..\platform\ATSAME70\BSP\include/ili9488_dma.h)(0x564ED7B4)
+I (..\..\platform\ATSAME70\BSP\include/ili9488_spi_dma.h)(0x564C4C08)
+I (..\..\platform\ATSAME70\BSP\include/ili9488_ebi_dma.h)(0x564C4C08)
+I (..\..\platform\ATSAME70\BSP\include/frame_buffer.h)(0x564C4C08)
+I (..\..\platform\ATSAME70\BSP\include/lcd_color.h)(0x564C4C08)
+I (..\..\platform\ATSAME70\BSP\include/lcd_draw.h)(0x564C4C08)
+I (..\..\platform\ATSAME70\BSP\include/lcd_gimp_image.h)(0x564ED7B4)
+I (..\..\platform\ATSAME70\BSP\include/lcd_font10x14.h)(0x564C4C08)
+I (..\..\platform\ATSAME70\BSP\include/lcd_font.h)(0x564C4C08)
+I (..\..\platform\ATSAME70\BSP\include/rtc_calib.h)(0x564C4C08)
+I (..\..\platform\ATSAME70\BSP\include/cs2100.h)(0x564C4C08)
+I (..\..\platform\ATSAME70\BSP\include/s25fl1.h)(0x564C4C08)
+I (..\..\platform\ATSAME70\BSP\include/image_sensor_inf.h)(0x564ED7B4)
+I (..\..\platform\ATSAME70\BSP\Libraries\libchip\include/iso7816_4.h)(0x569C80B6)
+F (..\..\kernel\config\los_config.c)(0x58F1BF41)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m7 -I ..\..\platform\ATSAME70\BSP\Libraries\include -I ..\..\example\include -I ..\..\platform\ATSAME70 -I ..\..\platform\ATSAME70\BSP\Libraries\include\component -I ..\..\platform\ATSAME70\BSP\Libraries\libchip\include -I ..\..\platform\ATSAME70\BSP\Libraries\include\instance -I ..\..\platform\ATSAME70\BSP\Libraries\include\pio -I ..\..\platform\ATSAME70\BSP\Libraries\libstoragemedia\include\sdmmc -I ..\..\platform\ATSAME70\BSP\Libraries\libusb\include -I ..\..\platform\ATSAME70\BSP\Libraries\libchip -I ..\..\platform\ATSAME70\BSP -I ..\..\platform\ATSAME70\BSP\include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\SAM-E_DFP\2.1.0\include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -D__SAME70Q21__-o .\objects\los_config.o --omf_browse .\objects\los_config.crf --depend .\objects\los_config.d)
+I (..\..\kernel\include\los_sys.h)(0x58F1BF41)
+I (..\..\kernel\include\los_base.h)(0x58F1BF41)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58F1BF41)
+I (..\..\kernel\include\los_typedef.h)(0x58F1BF41)
+I (..\..\kernel\config\los_config.h)(0x59008824)
+I (..\..\kernel\include\los_printf.h)(0x58F1BF41)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (..\..\kernel\include\los_list.h)(0x58F1BF41)
+I (..\..\kernel\include\los_errno.h)(0x58F1BF41)
+I (..\..\kernel\cpu\arm\cortex-m7\los_hwi.h)(0x58DB526B)
+I (..\..\kernel\include\los_tick.h)(0x58F1BF41)
+I (..\..\kernel\base\include\los_task.ph)(0x58F1BF41)
+I (..\..\kernel\include\los_task.h)(0x58F1BF41)
+I (..\..\kernel\include\los_event.h)(0x58F1BF41)
+F (..\..\kernel\cmsis\cmsis_liteos.c)(0x58F1BF41)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m7 -I ..\..\platform\ATSAME70\BSP\Libraries\include -I ..\..\example\include -I ..\..\platform\ATSAME70 -I ..\..\platform\ATSAME70\BSP\Libraries\include\component -I ..\..\platform\ATSAME70\BSP\Libraries\libchip\include -I ..\..\platform\ATSAME70\BSP\Libraries\include\instance -I ..\..\platform\ATSAME70\BSP\Libraries\include\pio -I ..\..\platform\ATSAME70\BSP\Libraries\libstoragemedia\include\sdmmc -I ..\..\platform\ATSAME70\BSP\Libraries\libusb\include -I ..\..\platform\ATSAME70\BSP\Libraries\libchip -I ..\..\platform\ATSAME70\BSP -I ..\..\platform\ATSAME70\BSP\include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\SAM-E_DFP\2.1.0\include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -D__SAME70Q21__-o .\objects\cmsis_liteos.o --omf_browse .\objects\cmsis_liteos.crf --depend .\objects\cmsis_liteos.d)
+I (..\..\kernel\cmsis\cmsis_os.h)(0x58F1BF41)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
+I (..\..\kernel\include\los_event.h)(0x58F1BF41)
+I (..\..\kernel\include\los_base.h)(0x58F1BF41)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58F1BF41)
+I (..\..\kernel\include\los_typedef.h)(0x58F1BF41)
+I (..\..\kernel\config\los_config.h)(0x59008824)
+I (..\..\kernel\include\los_printf.h)(0x58F1BF41)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (..\..\kernel\include\los_list.h)(0x58F1BF41)
+I (..\..\kernel\include\los_errno.h)(0x58F1BF41)
+I (..\..\kernel\include\los_membox.h)(0x58F1BF41)
+I (..\..\kernel\cpu\arm\cortex-m7\los_hwi.h)(0x58DB526B)
+I (..\..\kernel\include\los_sys.h)(0x58F1BF41)
+I (..\..\kernel\base\include\los_mux.ph)(0x58F1BF41)
+I (..\..\kernel\base\include\los_task.ph)(0x58F1BF41)
+I (..\..\kernel\include\los_task.h)(0x58F1BF41)
+I (..\..\kernel\include\los_tick.h)(0x58F1BF41)
+I (..\..\kernel\include\los_mux.h)(0x58F1BF41)
+I (..\..\kernel\base\include\los_queue.ph)(0x58F1BF41)
+I (..\..\kernel\include\los_queue.h)(0x58F1BF41)
+I (..\..\kernel\base\include\los_sem.ph)(0x58F1BF41)
+I (..\..\kernel\include\los_sem.h)(0x58F1BF41)
+I (..\..\kernel\base\include\los_swtmr.ph)(0x58F1BF41)
+I (..\..\kernel\include\los_swtmr.h)(0x58F1BF41)
+I (..\..\kernel\base\include\los_sys.ph)(0x58F1BF41)
+I (..\..\kernel\base\include\los_base.ph)(0x58F1BF41)
+I (..\..\kernel\base\include\los_tick.ph)(0x58F1BF41)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+F (..\..\example\api\los_api_dynamic_mem.c)(0x58F1BF41)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m7 -I ..\..\platform\ATSAME70\BSP\Libraries\include -I ..\..\example\include -I ..\..\platform\ATSAME70 -I ..\..\platform\ATSAME70\BSP\Libraries\include\component -I ..\..\platform\ATSAME70\BSP\Libraries\libchip\include -I ..\..\platform\ATSAME70\BSP\Libraries\include\instance -I ..\..\platform\ATSAME70\BSP\Libraries\include\pio -I ..\..\platform\ATSAME70\BSP\Libraries\libstoragemedia\include\sdmmc -I ..\..\platform\ATSAME70\BSP\Libraries\libusb\include -I ..\..\platform\ATSAME70\BSP\Libraries\libchip -I ..\..\platform\ATSAME70\BSP -I ..\..\platform\ATSAME70\BSP\include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\SAM-E_DFP\2.1.0\include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -D__SAME70Q21__-o .\objects\los_api_dynamic_mem.o --omf_browse .\objects\los_api_dynamic_mem.crf --depend .\objects\los_api_dynamic_mem.d)
+I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
+I (..\..\kernel\config\los_config.h)(0x59008824)
+I (..\..\kernel\include\los_typedef.h)(0x58F1BF41)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58F1BF41)
+I (..\..\kernel\include\los_printf.h)(0x58F1BF41)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (..\..\kernel\include\los_memory.h)(0x58F1BF41)
+I (..\..\kernel\include\los_base.h)(0x58F1BF41)
+I (..\..\kernel\include\los_list.h)(0x58F1BF41)
+I (..\..\kernel\include\los_errno.h)(0x58F1BF41)
+I (..\..\example\include\los_api_dynamic_mem.h)(0x58F1BF41)
+I (..\..\example\include\los_demo_debug.h)(0x595B8141)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+I (..\..\example\include\los_inspect_entry.h)(0x58F1BF41)
+F (..\..\example\api\los_api_event.c)(0x58F1BF41)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m7 -I ..\..\platform\ATSAME70\BSP\Libraries\include -I ..\..\example\include -I ..\..\platform\ATSAME70 -I ..\..\platform\ATSAME70\BSP\Libraries\include\component -I ..\..\platform\ATSAME70\BSP\Libraries\libchip\include -I ..\..\platform\ATSAME70\BSP\Libraries\include\instance -I ..\..\platform\ATSAME70\BSP\Libraries\include\pio -I ..\..\platform\ATSAME70\BSP\Libraries\libstoragemedia\include\sdmmc -I ..\..\platform\ATSAME70\BSP\Libraries\libusb\include -I ..\..\platform\ATSAME70\BSP\Libraries\libchip -I ..\..\platform\ATSAME70\BSP -I ..\..\platform\ATSAME70\BSP\include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\SAM-E_DFP\2.1.0\include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -D__SAME70Q21__-o .\objects\los_api_event.o --omf_browse .\objects\los_api_event.crf --depend .\objects\los_api_event.d)
+I (..\..\kernel\include\los_event.h)(0x58F1BF41)
+I (..\..\kernel\include\los_base.h)(0x58F1BF41)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58F1BF41)
+I (..\..\kernel\include\los_typedef.h)(0x58F1BF41)
+I (..\..\kernel\config\los_config.h)(0x59008824)
+I (..\..\kernel\include\los_printf.h)(0x58F1BF41)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (..\..\kernel\include\los_list.h)(0x58F1BF41)
+I (..\..\kernel\include\los_errno.h)(0x58F1BF41)
+I (..\..\kernel\include\los_task.h)(0x58F1BF41)
+I (..\..\kernel\include\los_sys.h)(0x58F1BF41)
+I (..\..\kernel\cpu\arm\cortex-m7\los_hwi.h)(0x58DB526B)
+I (..\..\kernel\include\los_tick.h)(0x58F1BF41)
+I (..\..\example\include\los_api_event.h)(0x58F1BF41)
+I (..\..\example\include\los_demo_debug.h)(0x595B8141)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+I (..\..\example\include\los_inspect_entry.h)(0x58F1BF41)
+F (..\..\example\api\los_api_interrupt.c)(0x58F1BF41)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m7 -I ..\..\platform\ATSAME70\BSP\Libraries\include -I ..\..\example\include -I ..\..\platform\ATSAME70 -I ..\..\platform\ATSAME70\BSP\Libraries\include\component -I ..\..\platform\ATSAME70\BSP\Libraries\libchip\include -I ..\..\platform\ATSAME70\BSP\Libraries\include\instance -I ..\..\platform\ATSAME70\BSP\Libraries\include\pio -I ..\..\platform\ATSAME70\BSP\Libraries\libstoragemedia\include\sdmmc -I ..\..\platform\ATSAME70\BSP\Libraries\libusb\include -I ..\..\platform\ATSAME70\BSP\Libraries\libchip -I ..\..\platform\ATSAME70\BSP -I ..\..\platform\ATSAME70\BSP\include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\SAM-E_DFP\2.1.0\include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -D__SAME70Q21__-o .\objects\los_api_interrupt.o --omf_browse .\objects\los_api_interrupt.crf --depend .\objects\los_api_interrupt.d)
+I (..\..\kernel\cpu\arm\cortex-m7\los_hwi.h)(0x58DB526B)
+I (..\..\kernel\include\los_base.h)(0x58F1BF41)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58F1BF41)
+I (..\..\kernel\include\los_typedef.h)(0x58F1BF41)
+I (..\..\kernel\config\los_config.h)(0x59008824)
+I (..\..\kernel\include\los_printf.h)(0x58F1BF41)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (..\..\kernel\include\los_list.h)(0x58F1BF41)
+I (..\..\kernel\include\los_errno.h)(0x58F1BF41)
+I (..\..\kernel\include\los_sys.h)(0x58F1BF41)
+I (..\..\example\include\los_api_interrupt.h)(0x58F1BF41)
+I (..\..\example\include\los_demo_debug.h)(0x595B8141)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+I (..\..\example\include\los_inspect_entry.h)(0x58F1BF41)
+F (..\..\example\api\los_api_list.c)(0x58F1BF41)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m7 -I ..\..\platform\ATSAME70\BSP\Libraries\include -I ..\..\example\include -I ..\..\platform\ATSAME70 -I ..\..\platform\ATSAME70\BSP\Libraries\include\component -I ..\..\platform\ATSAME70\BSP\Libraries\libchip\include -I ..\..\platform\ATSAME70\BSP\Libraries\include\instance -I ..\..\platform\ATSAME70\BSP\Libraries\include\pio -I ..\..\platform\ATSAME70\BSP\Libraries\libstoragemedia\include\sdmmc -I ..\..\platform\ATSAME70\BSP\Libraries\libusb\include -I ..\..\platform\ATSAME70\BSP\Libraries\libchip -I ..\..\platform\ATSAME70\BSP -I ..\..\platform\ATSAME70\BSP\include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\SAM-E_DFP\2.1.0\include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -D__SAME70Q21__-o .\objects\los_api_list.o --omf_browse .\objects\los_api_list.crf --depend .\objects\los_api_list.d)
+I (..\..\kernel\include\los_list.h)(0x58F1BF41)
+I (..\..\kernel\include\los_base.h)(0x58F1BF41)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58F1BF41)
+I (..\..\kernel\include\los_typedef.h)(0x58F1BF41)
+I (..\..\kernel\config\los_config.h)(0x59008824)
+I (..\..\kernel\include\los_printf.h)(0x58F1BF41)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (..\..\kernel\include\los_errno.h)(0x58F1BF41)
+I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
+I (..\..\kernel\include\los_memory.h)(0x58F1BF41)
+I (..\..\example\include\los_api_list.h)(0x58F1BF41)
+I (..\..\example\include\los_demo_debug.h)(0x595B8141)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+I (..\..\example\include\los_inspect_entry.h)(0x58F1BF41)
+F (..\..\example\api\los_api_msgqueue.c)(0x58F1BF41)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m7 -I ..\..\platform\ATSAME70\BSP\Libraries\include -I ..\..\example\include -I ..\..\platform\ATSAME70 -I ..\..\platform\ATSAME70\BSP\Libraries\include\component -I ..\..\platform\ATSAME70\BSP\Libraries\libchip\include -I ..\..\platform\ATSAME70\BSP\Libraries\include\instance -I ..\..\platform\ATSAME70\BSP\Libraries\include\pio -I ..\..\platform\ATSAME70\BSP\Libraries\libstoragemedia\include\sdmmc -I ..\..\platform\ATSAME70\BSP\Libraries\libusb\include -I ..\..\platform\ATSAME70\BSP\Libraries\libchip -I ..\..\platform\ATSAME70\BSP -I ..\..\platform\ATSAME70\BSP\include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\SAM-E_DFP\2.1.0\include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -D__SAME70Q21__-o .\objects\los_api_msgqueue.o --omf_browse .\objects\los_api_msgqueue.crf --depend .\objects\los_api_msgqueue.d)
+I (..\..\kernel\include\los_base.h)(0x58F1BF41)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58F1BF41)
+I (..\..\kernel\include\los_typedef.h)(0x58F1BF41)
+I (..\..\kernel\config\los_config.h)(0x59008824)
+I (..\..\kernel\include\los_printf.h)(0x58F1BF41)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (..\..\kernel\include\los_list.h)(0x58F1BF41)
+I (..\..\kernel\include\los_errno.h)(0x58F1BF41)
+I (..\..\kernel\include\los_task.h)(0x58F1BF41)
+I (..\..\kernel\include\los_sys.h)(0x58F1BF41)
+I (..\..\kernel\cpu\arm\cortex-m7\los_hwi.h)(0x58DB526B)
+I (..\..\kernel\include\los_tick.h)(0x58F1BF41)
+I (..\..\kernel\include\los_event.h)(0x58F1BF41)
+I (..\..\kernel\include\los_swtmr.h)(0x58F1BF41)
+I (..\..\kernel\include\los_queue.h)(0x58F1BF41)
+I (..\..\example\include\los_api_msgqueue.h)(0x58F1BF41)
+I (..\..\example\include\los_demo_debug.h)(0x595B8141)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+I (..\..\example\include\los_inspect_entry.h)(0x58F1BF41)
+F (..\..\example\api\los_api_mutex.c)(0x58F1BF41)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m7 -I ..\..\platform\ATSAME70\BSP\Libraries\include -I ..\..\example\include -I ..\..\platform\ATSAME70 -I ..\..\platform\ATSAME70\BSP\Libraries\include\component -I ..\..\platform\ATSAME70\BSP\Libraries\libchip\include -I ..\..\platform\ATSAME70\BSP\Libraries\include\instance -I ..\..\platform\ATSAME70\BSP\Libraries\include\pio -I ..\..\platform\ATSAME70\BSP\Libraries\libstoragemedia\include\sdmmc -I ..\..\platform\ATSAME70\BSP\Libraries\libusb\include -I ..\..\platform\ATSAME70\BSP\Libraries\libchip -I ..\..\platform\ATSAME70\BSP -I ..\..\platform\ATSAME70\BSP\include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\SAM-E_DFP\2.1.0\include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -D__SAME70Q21__-o .\objects\los_api_mutex.o --omf_browse .\objects\los_api_mutex.crf --depend .\objects\los_api_mutex.d)
+I (..\..\kernel\include\los_mux.h)(0x58F1BF41)
+I (..\..\kernel\include\los_base.h)(0x58F1BF41)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58F1BF41)
+I (..\..\kernel\include\los_typedef.h)(0x58F1BF41)
+I (..\..\kernel\config\los_config.h)(0x59008824)
+I (..\..\kernel\include\los_printf.h)(0x58F1BF41)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (..\..\kernel\include\los_list.h)(0x58F1BF41)
+I (..\..\kernel\include\los_errno.h)(0x58F1BF41)
+I (..\..\kernel\include\los_sys.h)(0x58F1BF41)
+I (..\..\kernel\cpu\arm\cortex-m7\los_hwi.h)(0x58DB526B)
+I (..\..\kernel\include\los_task.h)(0x58F1BF41)
+I (..\..\kernel\include\los_tick.h)(0x58F1BF41)
+I (..\..\kernel\include\los_event.h)(0x58F1BF41)
+I (..\..\example\include\los_api_mutex.h)(0x58F1BF41)
+I (..\..\example\include\los_demo_debug.h)(0x595B8141)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+I (..\..\example\include\los_inspect_entry.h)(0x58F1BF41)
+F (..\..\example\api\los_api_sem.c)(0x58F1BF41)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m7 -I ..\..\platform\ATSAME70\BSP\Libraries\include -I ..\..\example\include -I ..\..\platform\ATSAME70 -I ..\..\platform\ATSAME70\BSP\Libraries\include\component -I ..\..\platform\ATSAME70\BSP\Libraries\libchip\include -I ..\..\platform\ATSAME70\BSP\Libraries\include\instance -I ..\..\platform\ATSAME70\BSP\Libraries\include\pio -I ..\..\platform\ATSAME70\BSP\Libraries\libstoragemedia\include\sdmmc -I ..\..\platform\ATSAME70\BSP\Libraries\libusb\include -I ..\..\platform\ATSAME70\BSP\Libraries\libchip -I ..\..\platform\ATSAME70\BSP -I ..\..\platform\ATSAME70\BSP\include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\SAM-E_DFP\2.1.0\include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -D__SAME70Q21__-o .\objects\los_api_sem.o --omf_browse .\objects\los_api_sem.crf --depend .\objects\los_api_sem.d)
+I (..\..\kernel\include\los_sem.h)(0x58F1BF41)
+I (..\..\kernel\include\los_base.h)(0x58F1BF41)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58F1BF41)
+I (..\..\kernel\include\los_typedef.h)(0x58F1BF41)
+I (..\..\kernel\config\los_config.h)(0x59008824)
+I (..\..\kernel\include\los_printf.h)(0x58F1BF41)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (..\..\kernel\include\los_list.h)(0x58F1BF41)
+I (..\..\kernel\include\los_errno.h)(0x58F1BF41)
+I (..\..\kernel\include\los_task.h)(0x58F1BF41)
+I (..\..\kernel\include\los_sys.h)(0x58F1BF41)
+I (..\..\kernel\cpu\arm\cortex-m7\los_hwi.h)(0x58DB526B)
+I (..\..\kernel\include\los_tick.h)(0x58F1BF41)
+I (..\..\kernel\include\los_event.h)(0x58F1BF41)
+I (..\..\kernel\base\include\los_base.ph)(0x58F1BF41)
+I (..\..\example\include\los_api_sem.h)(0x58F1BF41)
+I (..\..\example\include\los_demo_debug.h)(0x595B8141)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+I (..\..\example\include\los_inspect_entry.h)(0x58F1BF41)
+F (..\..\example\api\los_api_static_mem.c)(0x58F1BF41)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m7 -I ..\..\platform\ATSAME70\BSP\Libraries\include -I ..\..\example\include -I ..\..\platform\ATSAME70 -I ..\..\platform\ATSAME70\BSP\Libraries\include\component -I ..\..\platform\ATSAME70\BSP\Libraries\libchip\include -I ..\..\platform\ATSAME70\BSP\Libraries\include\instance -I ..\..\platform\ATSAME70\BSP\Libraries\include\pio -I ..\..\platform\ATSAME70\BSP\Libraries\libstoragemedia\include\sdmmc -I ..\..\platform\ATSAME70\BSP\Libraries\libusb\include -I ..\..\platform\ATSAME70\BSP\Libraries\libchip -I ..\..\platform\ATSAME70\BSP -I ..\..\platform\ATSAME70\BSP\include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\SAM-E_DFP\2.1.0\include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -D__SAME70Q21__-o .\objects\los_api_static_mem.o --omf_browse .\objects\los_api_static_mem.crf --depend .\objects\los_api_static_mem.d)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (..\..\kernel\include\los_membox.h)(0x58F1BF41)
+I (..\..\kernel\config\los_config.h)(0x59008824)
+I (..\..\kernel\include\los_typedef.h)(0x58F1BF41)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58F1BF41)
+I (..\..\kernel\include\los_printf.h)(0x58F1BF41)
+I (..\..\example\include\los_api_static_mem.h)(0x58F1BF41)
+I (..\..\example\include\los_demo_debug.h)(0x595B8141)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+I (..\..\example\include\los_inspect_entry.h)(0x58F1BF41)
+F (..\..\example\api\los_api_systick.c)(0x58F1BF41)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m7 -I ..\..\platform\ATSAME70\BSP\Libraries\include -I ..\..\example\include -I ..\..\platform\ATSAME70 -I ..\..\platform\ATSAME70\BSP\Libraries\include\component -I ..\..\platform\ATSAME70\BSP\Libraries\libchip\include -I ..\..\platform\ATSAME70\BSP\Libraries\include\instance -I ..\..\platform\ATSAME70\BSP\Libraries\include\pio -I ..\..\platform\ATSAME70\BSP\Libraries\libstoragemedia\include\sdmmc -I ..\..\platform\ATSAME70\BSP\Libraries\libusb\include -I ..\..\platform\ATSAME70\BSP\Libraries\libchip -I ..\..\platform\ATSAME70\BSP -I ..\..\platform\ATSAME70\BSP\include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\SAM-E_DFP\2.1.0\include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -D__SAME70Q21__-o .\objects\los_api_systick.o --omf_browse .\objects\los_api_systick.crf --depend .\objects\los_api_systick.d)
+I (..\..\kernel\include\los_sys.h)(0x58F1BF41)
+I (..\..\kernel\include\los_base.h)(0x58F1BF41)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58F1BF41)
+I (..\..\kernel\include\los_typedef.h)(0x58F1BF41)
+I (..\..\kernel\config\los_config.h)(0x59008824)
+I (..\..\kernel\include\los_printf.h)(0x58F1BF41)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (..\..\kernel\include\los_list.h)(0x58F1BF41)
+I (..\..\kernel\include\los_errno.h)(0x58F1BF41)
+I (..\..\kernel\cpu\arm\cortex-m7\los_hwi.h)(0x58DB526B)
+I (..\..\kernel\include\los_task.h)(0x58F1BF41)
+I (..\..\kernel\include\los_tick.h)(0x58F1BF41)
+I (..\..\kernel\include\los_event.h)(0x58F1BF41)
+I (..\..\example\include\los_api_systick.h)(0x58F1BF41)
+I (..\..\example\include\los_demo_debug.h)(0x595B8141)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+I (..\..\example\include\los_inspect_entry.h)(0x58F1BF41)
+F (..\..\example\api\los_api_task.c)(0x5954ECED)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m7 -I ..\..\platform\ATSAME70\BSP\Libraries\include -I ..\..\example\include -I ..\..\platform\ATSAME70 -I ..\..\platform\ATSAME70\BSP\Libraries\include\component -I ..\..\platform\ATSAME70\BSP\Libraries\libchip\include -I ..\..\platform\ATSAME70\BSP\Libraries\include\instance -I ..\..\platform\ATSAME70\BSP\Libraries\include\pio -I ..\..\platform\ATSAME70\BSP\Libraries\libstoragemedia\include\sdmmc -I ..\..\platform\ATSAME70\BSP\Libraries\libusb\include -I ..\..\platform\ATSAME70\BSP\Libraries\libchip -I ..\..\platform\ATSAME70\BSP -I ..\..\platform\ATSAME70\BSP\include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\SAM-E_DFP\2.1.0\include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -D__SAME70Q21__-o .\objects\los_api_task.o --omf_browse .\objects\los_api_task.crf --depend .\objects\los_api_task.d)
+I (..\..\platform\ATSAME70\BSP\include\math.h)(0x595B5A94)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (D:\Keil_v5\ARM\ARMCC\include\time.h)(0x57F606B8)
+I (..\..\kernel\include\los_task.h)(0x58F1BF41)
+I (..\..\kernel\include\los_base.h)(0x58F1BF41)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58F1BF41)
+I (..\..\kernel\include\los_typedef.h)(0x58F1BF41)
+I (..\..\kernel\config\los_config.h)(0x59008824)
+I (..\..\kernel\include\los_printf.h)(0x58F1BF41)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (..\..\kernel\include\los_list.h)(0x58F1BF41)
+I (..\..\kernel\include\los_errno.h)(0x58F1BF41)
+I (..\..\kernel\include\los_sys.h)(0x58F1BF41)
+I (..\..\kernel\cpu\arm\cortex-m7\los_hwi.h)(0x58DB526B)
+I (..\..\kernel\include\los_tick.h)(0x58F1BF41)
+I (..\..\kernel\include\los_event.h)(0x58F1BF41)
+I (..\..\example\include\los_api_task.h)(0x58F1BF41)
+I (..\..\example\include\los_demo_debug.h)(0x595B8141)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+I (..\..\example\include\los_inspect_entry.h)(0x58F1BF41)
+F (..\..\example\api\los_api_timer.c)(0x58F1BF41)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m7 -I ..\..\platform\ATSAME70\BSP\Libraries\include -I ..\..\example\include -I ..\..\platform\ATSAME70 -I ..\..\platform\ATSAME70\BSP\Libraries\include\component -I ..\..\platform\ATSAME70\BSP\Libraries\libchip\include -I ..\..\platform\ATSAME70\BSP\Libraries\include\instance -I ..\..\platform\ATSAME70\BSP\Libraries\include\pio -I ..\..\platform\ATSAME70\BSP\Libraries\libstoragemedia\include\sdmmc -I ..\..\platform\ATSAME70\BSP\Libraries\libusb\include -I ..\..\platform\ATSAME70\BSP\Libraries\libchip -I ..\..\platform\ATSAME70\BSP -I ..\..\platform\ATSAME70\BSP\include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\SAM-E_DFP\2.1.0\include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -D__SAME70Q21__-o .\objects\los_api_timer.o --omf_browse .\objects\los_api_timer.crf --depend .\objects\los_api_timer.d)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (..\..\kernel\include\los_swtmr.h)(0x58F1BF41)
+I (..\..\kernel\include\los_base.h)(0x58F1BF41)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58F1BF41)
+I (..\..\kernel\include\los_typedef.h)(0x58F1BF41)
+I (..\..\kernel\config\los_config.h)(0x59008824)
+I (..\..\kernel\include\los_printf.h)(0x58F1BF41)
+I (..\..\kernel\include\los_list.h)(0x58F1BF41)
+I (..\..\kernel\include\los_errno.h)(0x58F1BF41)
+I (..\..\kernel\include\los_task.h)(0x58F1BF41)
+I (..\..\kernel\include\los_sys.h)(0x58F1BF41)
+I (..\..\kernel\cpu\arm\cortex-m7\los_hwi.h)(0x58DB526B)
+I (..\..\kernel\include\los_tick.h)(0x58F1BF41)
+I (..\..\kernel\include\los_event.h)(0x58F1BF41)
+I (D:\Keil_v5\ARM\ARMCC\include\time.h)(0x57F606B8)
+I (..\..\example\include\los_api_timer.h)(0x58F1BF41)
+I (..\..\example\include\los_demo_debug.h)(0x595B8141)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+I (..\..\example\include\los_inspect_entry.h)(0x58F1BF41)
+F (..\..\example\api\los_cmsis_main.c)(0x58F1BF41)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m7 -I ..\..\platform\ATSAME70\BSP\Libraries\include -I ..\..\example\include -I ..\..\platform\ATSAME70 -I ..\..\platform\ATSAME70\BSP\Libraries\include\component -I ..\..\platform\ATSAME70\BSP\Libraries\libchip\include -I ..\..\platform\ATSAME70\BSP\Libraries\include\instance -I ..\..\platform\ATSAME70\BSP\Libraries\include\pio -I ..\..\platform\ATSAME70\BSP\Libraries\libstoragemedia\include\sdmmc -I ..\..\platform\ATSAME70\BSP\Libraries\libusb\include -I ..\..\platform\ATSAME70\BSP\Libraries\libchip -I ..\..\platform\ATSAME70\BSP -I ..\..\platform\ATSAME70\BSP\include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\SAM-E_DFP\2.1.0\include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -D__SAME70Q21__-o .\objects\los_cmsis_main.o --omf_browse .\objects\los_cmsis_main.crf --depend .\objects\los_cmsis_main.d)
+I (..\..\kernel\cmsis\cmsis_os.h)(0x58F1BF41)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
+F (..\..\example\api\los_demo_entry.c)(0x59017B3D)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m7 -I ..\..\platform\ATSAME70\BSP\Libraries\include -I ..\..\example\include -I ..\..\platform\ATSAME70 -I ..\..\platform\ATSAME70\BSP\Libraries\include\component -I ..\..\platform\ATSAME70\BSP\Libraries\libchip\include -I ..\..\platform\ATSAME70\BSP\Libraries\include\instance -I ..\..\platform\ATSAME70\BSP\Libraries\include\pio -I ..\..\platform\ATSAME70\BSP\Libraries\libstoragemedia\include\sdmmc -I ..\..\platform\ATSAME70\BSP\Libraries\libusb\include -I ..\..\platform\ATSAME70\BSP\Libraries\libchip -I ..\..\platform\ATSAME70\BSP -I ..\..\platform\ATSAME70\BSP\include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\SAM-E_DFP\2.1.0\include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -D__SAME70Q21__-o .\objects\los_demo_entry.o --omf_browse .\objects\los_demo_entry.crf --depend .\objects\los_demo_entry.d)
+I (..\..\example\include\los_demo_entry.h)(0x5959A280)
+I (..\..\kernel\include\los_typedef.h)(0x58F1BF41)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58F1BF41)
+I (..\..\example\include\los_demo_debug.h)(0x595B8141)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+I (..\..\example\include\los_api_task.h)(0x58F1BF41)
+I (..\..\example\include\los_api_dynamic_mem.h)(0x58F1BF41)
+I (..\..\example\include\los_api_static_mem.h)(0x58F1BF41)
+I (..\..\example\include\los_api_interrupt.h)(0x58F1BF41)
+I (..\..\example\include\los_api_msgqueue.h)(0x58F1BF41)
+I (..\..\example\include\los_api_event.h)(0x58F1BF41)
+I (..\..\example\include\los_api_mutex.h)(0x58F1BF41)
+I (..\..\example\include\los_api_sem.h)(0x58F1BF41)
+I (..\..\example\include\los_api_timer.h)(0x58F1BF41)
+I (..\..\example\include\los_api_systick.h)(0x58F1BF41)
+I (..\..\example\include\los_api_list.h)(0x58F1BF41)
+I (..\..\kernel\include\los_task.h)(0x58F1BF41)
+I (..\..\kernel\include\los_base.h)(0x58F1BF41)
+I (..\..\kernel\config\los_config.h)(0x59008824)
+I (..\..\kernel\include\los_printf.h)(0x58F1BF41)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (..\..\kernel\include\los_list.h)(0x58F1BF41)
+I (..\..\kernel\include\los_errno.h)(0x58F1BF41)
+I (..\..\kernel\include\los_sys.h)(0x58F1BF41)
+I (..\..\kernel\cpu\arm\cortex-m7\los_hwi.h)(0x58DB526B)
+I (..\..\kernel\include\los_tick.h)(0x58F1BF41)
+I (..\..\kernel\include\los_event.h)(0x58F1BF41)
+F (..\..\example\api\los_inspect_entry.c)(0x59520275)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m7 -I ..\..\platform\ATSAME70\BSP\Libraries\include -I ..\..\example\include -I ..\..\platform\ATSAME70 -I ..\..\platform\ATSAME70\BSP\Libraries\include\component -I ..\..\platform\ATSAME70\BSP\Libraries\libchip\include -I ..\..\platform\ATSAME70\BSP\Libraries\include\instance -I ..\..\platform\ATSAME70\BSP\Libraries\include\pio -I ..\..\platform\ATSAME70\BSP\Libraries\libstoragemedia\include\sdmmc -I ..\..\platform\ATSAME70\BSP\Libraries\libusb\include -I ..\..\platform\ATSAME70\BSP\Libraries\libchip -I ..\..\platform\ATSAME70\BSP -I ..\..\platform\ATSAME70\BSP\include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\SAM-E_DFP\2.1.0\include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -D__SAME70Q21__-o .\objects\los_inspect_entry.o --omf_browse .\objects\los_inspect_entry.crf --depend .\objects\los_inspect_entry.d)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+I (..\..\example\include\los_inspect_entry.h)(0x58F1BF41)
+I (..\..\kernel\include\los_typedef.h)(0x58F1BF41)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58F1BF41)
+I (..\..\kernel\include\los_task.h)(0x58F1BF41)
+I (..\..\kernel\include\los_base.h)(0x58F1BF41)
+I (..\..\kernel\config\los_config.h)(0x59008824)
+I (..\..\kernel\include\los_printf.h)(0x58F1BF41)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (..\..\kernel\include\los_list.h)(0x58F1BF41)
+I (..\..\kernel\include\los_errno.h)(0x58F1BF41)
+I (..\..\kernel\include\los_sys.h)(0x58F1BF41)
+I (..\..\kernel\cpu\arm\cortex-m7\los_hwi.h)(0x58DB526B)
+I (..\..\kernel\include\los_tick.h)(0x58F1BF41)
+I (..\..\kernel\include\los_event.h)(0x58F1BF41)
+I (..\..\example\include\los_demo_debug.h)(0x595B8141)
+I (..\..\platform\ATSAME70\los_bsp_adapter.h)(0x58DB526B)
+I (..\..\platform\ATSAME70\los_bsp_led.h)(0x58DB526B)
+I (..\..\platform\ATSAME70\los_bsp_key.h)(0x595201CE)
+I (..\..\platform\ATSAME70\los_bsp_uart.h)(0x59550081)
+I (..\..\example\include\los_api_task.h)(0x58F1BF41)
+I (..\..\example\include\los_api_dynamic_mem.h)(0x58F1BF41)
+I (..\..\example\include\los_api_static_mem.h)(0x58F1BF41)
+I (..\..\example\include\los_api_interrupt.h)(0x58F1BF41)
+I (..\..\example\include\los_api_msgqueue.h)(0x58F1BF41)
+I (..\..\example\include\los_api_event.h)(0x58F1BF41)
+I (..\..\example\include\los_api_mutex.h)(0x58F1BF41)
+I (..\..\example\include\los_api_sem.h)(0x58F1BF41)
+I (..\..\example\include\los_api_timer.h)(0x58F1BF41)
+I (..\..\example\include\los_api_systick.h)(0x58F1BF41)
+I (..\..\example\include\los_api_list.h)(0x58F1BF41)
+F (..\..\platform\ATSAME70\startup_SAME70.s)(0x5954E91E)(--cpu Cortex-M7.fp.dp -g --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\SAM-E_DFP\2.1.0\include-ID:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 523" --pd "__SAME70Q21__ SETA 1"--list .\listings\startup_same70.lst --xref -o .\objects\startup_same70.o --depend .\objects\startup_same70.d)
+F (..\..\user\main.c)(0x5959F9B2)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m7 -I ..\..\platform\ATSAME70\BSP\Libraries\include -I ..\..\example\include -I ..\..\platform\ATSAME70 -I ..\..\platform\ATSAME70\BSP\Libraries\include\component -I ..\..\platform\ATSAME70\BSP\Libraries\libchip\include -I ..\..\platform\ATSAME70\BSP\Libraries\include\instance -I ..\..\platform\ATSAME70\BSP\Libraries\include\pio -I ..\..\platform\ATSAME70\BSP\Libraries\libstoragemedia\include\sdmmc -I ..\..\platform\ATSAME70\BSP\Libraries\libusb\include -I ..\..\platform\ATSAME70\BSP\Libraries\libchip -I ..\..\platform\ATSAME70\BSP -I ..\..\platform\ATSAME70\BSP\include-I.\RTE\_LiteOS-ID:\Keil_v5\ARM\PACK\Keil\SAM-E_DFP\2.1.0\include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -D__SAME70Q21__-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+I (..\..\kernel\include\los_sys.h)(0x58F1BF41)
+I (..\..\kernel\include\los_base.h)(0x58F1BF41)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58F1BF41)
+I (..\..\kernel\include\los_typedef.h)(0x58F1BF41)
+I (..\..\kernel\config\los_config.h)(0x59008824)
+I (..\..\kernel\include\los_printf.h)(0x58F1BF41)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (..\..\kernel\include\los_list.h)(0x58F1BF41)
+I (..\..\kernel\include\los_errno.h)(0x58F1BF41)
+I (..\..\kernel\cpu\arm\cortex-m7\los_hwi.h)(0x58DB526B)
+I (..\..\kernel\include\los_tick.h)(0x58F1BF41)
+I (..\..\kernel\base\include\los_task.ph)(0x58F1BF41)
+I (..\..\kernel\include\los_task.h)(0x58F1BF41)
+I (..\..\kernel\include\los_event.h)(0x58F1BF41)
+I (..\..\platform\ATSAME70\los_bsp_led.h)(0x58DB526B)
+I (..\..\platform\ATSAME70\los_bsp_key.h)(0x595201CE)
+I (..\..\platform\ATSAME70\los_bsp_uart.h)(0x59550081)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+I (..\..\example\include\los_inspect_entry.h)(0x58F1BF41)
+I (..\..\example\include\los_demo_entry.h)(0x5959A280)
+I (..\..\example\include\los_demo_debug.h)(0x595B8141)
+I (..\..\example\include\los_api_task.h)(0x58F1BF41)
+I (..\..\example\include\los_api_dynamic_mem.h)(0x58F1BF41)
+I (..\..\example\include\los_api_static_mem.h)(0x58F1BF41)
+I (..\..\example\include\los_api_interrupt.h)(0x58F1BF41)
+I (..\..\example\include\los_api_msgqueue.h)(0x58F1BF41)
+I (..\..\example\include\los_api_event.h)(0x58F1BF41)
+I (..\..\example\include\los_api_mutex.h)(0x58F1BF41)
+I (..\..\example\include\los_api_sem.h)(0x58F1BF41)
+I (..\..\example\include\los_api_timer.h)(0x58F1BF41)
+I (..\..\example\include\los_api_systick.h)(0x58F1BF41)
+I (..\..\example\include\los_api_list.h)(0x58F1BF41)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\sam.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\same70q21.h)(0x56FB4A6A)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\core_cm7.h)(0x58669CFF)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\core_cmInstr.h)(0x58669CFF)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\cmsis_armcc.h)(0x58669CFF)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\core_cmFunc.h)(0x58669CFF)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\core_cmSimd.h)(0x58669CFF)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\system_same70.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/acc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/aes.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/afec.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/chipid.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/dacc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/efc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/gmac.h)(0x56FB4A6A)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/gpbr.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/hsmci.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/icm.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/isi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/matrix.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/mcan.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/pio.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/pmc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/pwm.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/qspi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/rstc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/rswdt.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/rtc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/rtt.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/sdramc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/smc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/spi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/ssc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/supc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/tc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/trng.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/twihs.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/uart.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/usart.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/usbhs.h)(0x56FB4A6A)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/utmi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/wdt.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\component/xdmac.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/hsmci.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/ssc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/spi0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/tc0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/tc1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/tc2.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/twihs0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/twihs1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/pwm0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/usart0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/usart1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/usart2.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/mcan0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/mcan1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/usbhs.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/afec0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/dacc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/acc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/icm.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/isi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/gmac.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/tc3.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/spi1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/pwm1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/twihs2.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/afec1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/aes.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/trng.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/xdmac.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/qspi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/smc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/sdramc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/matrix.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/utmi.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/pmc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/uart0.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/chipid.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/uart1.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/efc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/pioa.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/piob.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/pioc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/piod.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/pioe.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/rstc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/supc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/rtt.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/wdt.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/rtc.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/gpbr.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/rswdt.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/uart2.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/uart3.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\instance/uart4.h)(0x560B4012)
+I (..\..\platform\ATSAME70\BSP\Libraries\include\pio/same70q21.h)(0x560B4012)

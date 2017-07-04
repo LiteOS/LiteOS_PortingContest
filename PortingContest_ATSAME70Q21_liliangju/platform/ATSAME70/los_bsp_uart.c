@@ -5,9 +5,11 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include "los_demo_debug.h"
+#include "dbg_console.h"
 
 void LOS_EvbUartInit(void)
 {
+#if 0
 	uint32_t ul_sr;
 	PMC->PMC_WPMR = 0x504D4300;             /* Disable write protect            */
 	PMC->PMC_PCER0 = (1UL << ID_PIOA );      /* enable UART3 clock                */
@@ -32,6 +34,9 @@ void LOS_EvbUartInit(void)
   UART3->UART_CR   = UART_CR_RXEN | UART_CR_TXEN;
 	
 	PMC->PMC_WPMR = 0x504D4301;             /* Enable write protect             */
+#endif	
+//usart1 EDBUG
+	DBG_Configure(115200,150000000);
 	return ;
 }
 
@@ -44,8 +49,7 @@ void LOS_EvbUartInit(void)
  *************************************************************************************************/
 void LOS_EvbUartWriteByte(char c)
 {
-	while (!(UART3->UART_SR & UART_SR_TXRDY));
-	UART3->UART_THR = c;
+	DBG_PutChar((uint8_t)c);
 }
 
 /*************************************************************************************************
@@ -72,8 +76,7 @@ void LOS_EvbUartWriteStr(const char* str)
  *************************************************************************************************/
 void LOS_EvbUartReadByte(char* c)
 {
-    while((UART3->UART_SR & UART_SR_RXRDY) == 0);
-    *c = UART3->UART_RHR;
+    *c = (char)DBG_GetChar();
 }
 
 

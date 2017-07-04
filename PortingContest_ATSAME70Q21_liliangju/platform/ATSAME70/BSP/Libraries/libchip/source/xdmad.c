@@ -62,7 +62,6 @@
  *----------------------------------------------------------------------------*/
 
 #include "chip.h"
-#include <assert.h>
 #include <string.h>
 
 #define MAX_INSTANCES 0x18
@@ -170,7 +169,6 @@ void XDMAD_Initialize(sXdmad *pXdmad, uint8_t bPollingMode)
 	uint32_t j;
 	uint32_t volatile timer = 0x7FF;
 
-	assert(pXdmad);
 	LockMutex(pXdmad->xdmaMutex, timer);
 
 	if (xDmad_Initialized) {
@@ -234,7 +232,6 @@ eXdmadRC XDMAD_FreeChannel(sXdmad *pXdmad,
 							uint32_t dwChannel)
 {
 	uint8_t iChannel    = (dwChannel) & 0xFF;
-	assert(pXdmad != NULL);
 
 	if (iChannel >= pXdmad->numChannels) return XDMAD_ERROR;
 
@@ -268,7 +265,6 @@ eXdmadRC XDMAD_SetCallback(sXdmad *pXdmad,
 {
 
 	uint8_t iChannel    = (dwChannel) & 0xFF;
-	assert(pXdmad != NULL);
 
 	if (iChannel >= pXdmad->numChannels) return XDMAD_ERROR;
 
@@ -297,7 +293,6 @@ eXdmadRC XDMAD_PrepareChannel(sXdmad *pXdmad, uint32_t dwChannel)
 	uint8_t iChannel    = (dwChannel) & 0xFF;
 	Xdmac *pXdmac = pXdmad->pXdmacs;
 
-	assert(pXdmad != NULL);
 
 	if (iChannel >= pXdmad->numChannels) return XDMAD_ERROR;
 
@@ -339,7 +334,6 @@ void XDMAD_Handler(sXdmad *pDmad)
 	uint32_t xdmaChannelIntStatus, xdmaGlobaIntStatus, xdmaGlobalChStatus;
 	uint8_t bExec = 0;
 	uint8_t _iChannel;
-	assert(pDmad != NULL);
 
 	pXdmac = pDmad->pXdmacs;
 	xdmaGlobaIntStatus = XDMAC_GetGIsr(pXdmac);
@@ -416,7 +410,6 @@ eXdmadRC XDMAD_IsTransferDone(sXdmad *pXdmad, uint32_t dwChannel)
 {
 	uint8_t iChannel = (dwChannel) & 0xFF;
 	uint8_t state;
-	assert(pXdmad != NULL);
 
 	if (iChannel >= pXdmad->numChannels)
 		return XDMAD_ERROR;
@@ -450,8 +443,6 @@ eXdmadRC XDMAD_ConfigureTransfer(sXdmad *pXdmad,
 {
 	uint8_t iChannel    = (dwChannel) & 0xFF;
   Xdmac *pXdmac = pXdmad->pXdmacs;
-
-	assert(pXdmad != NULL);
 
 	if (iChannel >= pXdmad->numChannels)
 		return XDMAD_ERROR;
@@ -506,7 +497,6 @@ eXdmadRC XDMAD_StartTransfer(sXdmad *pXdmad, uint32_t dwChannel)
 {
 	uint8_t iChannel    = (dwChannel) & 0xFF;
 	Xdmac *pXdmac;	
-	assert(pXdmad != NULL);
 
 	if (iChannel >= pXdmad->numChannels) return XDMAD_ERROR;
 
@@ -540,7 +530,6 @@ eXdmadRC XDMAD_StopTransfer(sXdmad *pXdmad, uint32_t dwChannel)
 {
 	uint8_t _iChannel    = (dwChannel) & 0xFF;
 	Xdmac *pXdmac;
-	assert(pXdmad != NULL);
 
 	if (_iChannel >= pXdmad->numChannels) return XDMAD_ERROR;
 
