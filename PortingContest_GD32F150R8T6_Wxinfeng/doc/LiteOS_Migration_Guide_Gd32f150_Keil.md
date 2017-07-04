@@ -274,7 +274,7 @@ Keil工具需要开发者自行购买，开发板的调试器是GD-Link，GD-Lin
 </tr>
 </table>
 
-获取Huawei LiteOS源代码之后，我们可以将自己本地已有工程的代码适配到LiteOS内核工程中进行应用开发。
+获取Huawei LiteOS源代码之后，我们可以将LiteOS内核源码适配到本地已有的工程中进行应用开发。
 
 ## 6如何适配LiteOS内核工程开发
 本章节描述的内容以GD32F150R-EVAL开发板光盘资料中的04_USART_Printf示例工程为基础，适配到LiteOS的GD32F150R-EVAL-KEIL工程中，演示串口输出、按键中断及LED点亮功能。
@@ -325,10 +325,6 @@ GD示例工程启动文件startup_gd32f1x0.s,由于在工程生成向导里启�
 - GD工程中SYStemSystemInit函数会调用system_clock_config()函数配置系统时钟，我们需要修改los_bsp_adapter.c文件中的sys_clk_freq变量值与实际配置的系统时钟一致。
 
 	    const unsigned int sys_clk_freq = 72000000;
-
-- 在los_bsp_adapter.c文件中的SysTick_Handler()函数中添加如下代码。
-  
- ![](./meta/keil/gd32f150/add_code.jpg)
 
 经过以上步骤的修改，完成了代码的初步移植，然后可以编译代码,连接串口线（事先安装相关驱动）并在串口调试工具中打开相应串口，调试运行时可看到串口打印输出，按demo板上的Tamper键，可以调试按键中断及LED。
 
