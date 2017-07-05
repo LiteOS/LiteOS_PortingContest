@@ -198,10 +198,10 @@ extern void DBG_PutChar(uint8_t c)
 	Usart *pUsart = CONSOLE_Usart;
 
 	//if (!_ucIsConsoleInitialized)
-		DBG_Configure(CONSOLE_BAUDRATE, BOARD_MCK);
+		//DBG_Configure(CONSOLE_BAUDRATE, BOARD_MCK);
 
 	// Wait for the transmitter to be ready
-	//while ((pUsart->US_CSR & US_CSR_TXEMPTY) == 0);
+	while ((pUsart->US_CSR & US_CSR_TXEMPTY) == 0);
 
 	// Send character
 	pUsart->US_THR = c;

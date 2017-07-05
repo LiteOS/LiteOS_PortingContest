@@ -335,7 +335,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\kernel\base\include;..\..\kernel\include;..\..\kernel\link\keil;..\..\kernel\config;..\..\kernel\cmsis;..\..\kernel\cpu\arm\cortex-m7;..\..\platform\ATSAME70\BSP\Libraries\include;..\..\example\include;..\..\platform\ATSAME70;..\..\platform\ATSAME70\BSP\Libraries\include\component;..\..\platform\ATSAME70\BSP\Libraries\libchip\include;..\..\platform\ATSAME70\BSP\Libraries\include\instance;..\..\platform\ATSAME70\BSP\Libraries\include\pio;..\..\platform\ATSAME70\BSP\Libraries\libstoragemedia\include\sdmmc;..\..\platform\ATSAME70\BSP\Libraries\libusb\include;..\..\platform\ATSAME70\BSP\Libraries\libchip;..\..\platform\ATSAME70\BSP</IncludePath>
+              <IncludePath>..\..\kernel\base\include;..\..\kernel\include;..\..\kernel\link\keil;..\..\kernel\config;..\..\kernel\cmsis;..\..\kernel\cpu\arm\cortex-m7;..\..\platform\ATSAME70\BSP\Libraries\include;..\..\example\include;..\..\platform\ATSAME70;..\..\platform\ATSAME70\BSP\Libraries\include\component;..\..\platform\ATSAME70\BSP\Libraries\libchip\include;..\..\platform\ATSAME70\BSP\Libraries\include\instance;..\..\platform\ATSAME70\BSP\Libraries\include\pio;..\..\platform\ATSAME70\BSP\Libraries\libstoragemedia\include\sdmmc;..\..\platform\ATSAME70\BSP\Libraries\libusb\include;..\..\platform\ATSAME70\BSP\Libraries\libchip;..\..\platform\ATSAME70\BSP;..\..\platform\ATSAME70\BSP\include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -533,6 +533,11 @@
               <FileName>system_SAME70.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\platform\ATSAME70\BSP\system_SAME70.c</FilePath>
+            </File>
+            <File>
+              <FileName>dbg_console.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\platform\ATSAME70\BSP\source\dbg_console.c</FilePath>
             </File>
           </Files>
         </Group>
