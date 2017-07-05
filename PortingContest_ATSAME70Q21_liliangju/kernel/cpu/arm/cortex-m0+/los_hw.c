@@ -32,195 +32,123 @@
  * applicable export control laws and regulations.
  *---------------------------------------------------------------------------*/
 
-#include "los_sys.h"
-#include "los_tick.h"
+#include "los_base.h"
 #include "los_task.ph"
-#include "los_config.h"
+#include "los_hw.h"
+#include "los_sys.ph"
+#include "los_priqueue.ph"
 
 
 #ifdef __cplusplus
 #if __cplusplus
 extern "C" {
-#endif /* __cpluscplus */
-#endif /* __cpluscplus */
-#ifdef LOS_PACK_ALIGN_8_IAR
-#pragma data_alignment=8
-#endif
-#ifdef LOS_PACK_ALIGN_8_KEIL
-#pragma pack(8)
-#endif
-#ifdef LOS_PACK_ALIGN_8_GCC
-__attribute__ ((aligned (8)))
-#endif
-UINT8 *m_aucSysMem0;
-UINT32 g_sys_mem_addr_end = 0;
-extern UINT8 g_ucMemStart[];
-extern UINT32 osTickInit(UINT32 uwSystemClock, UINT32 uwTickPerSecond);
-extern UINT32   g_uwTskMaxNum;
+#endif /* __cplusplus */
+#endif /* __cplusplus */
 
-extern const unsigned char g_use_ram_vect;
-	
-void osEnableFPU(void)
-{
-    *(volatile UINT32 *)0xE000ED88 |= ((3UL << 10*2)|(3UL << 11*2));
-    //SCB->CPACR |= ((3UL << 10*2)|(3UL << 11*2));
-}
 /*****************************************************************************
- Function    : osRegister
- Description : Configuring the maximum number of tasks
+ Function    : osSchedule
+ Description : task scheduling
  Input       : None
  Output      : None
  Return      : None
  *****************************************************************************/
-LITE_OS_SEC_TEXT_INIT VOID osRegister(VOID)
+VOID osSchedule(VOID)
 {
-    g_uwTskMaxNum = LOSCFG_BASE_CORE_TSK_LIMIT + 1; /* Reserved 1 for IDLE */
-    g_sys_mem_addr_end = (UINT32)g_ucMemStart + OS_SYS_MEM_SIZE;
-    return;
+    osTaskSchedule();
 }
 
 /*****************************************************************************
- Function    : LOS_EnableTick
- Description : enable system  start function
+ Function    : LOS_Schedule
+ Description : Function to determine whether task scheduling is required
  Input       : None
  Output      : None
- Return      : LOS_OK
+ Return      : None
  *****************************************************************************/
-LITE_OS_SEC_TEXT_INIT UINT32 LOS_EnableTick(void)
+VOID LOS_Schedule(VOID)
 {
-    UINT32 uwRet;
+    UINTPTR uvIntSave;
+    uvIntSave = LOS_IntLock();
 
-    uwRet = osTickStart();
+    /* Find the highest task */
+    g_stLosTask.pstNewTask = LOS_DL_LIST_ENTRY(LOS_PriqueueTop(), LOS_TASK_CB, stPendList);
 
-    if (uwRet != LOS_OK)
+    /* In case that running is not highest then reschedule */
+    if (g_stLosTask.pstRunTask != g_stLosTask.pstNewTask)
     {
-        PRINT_ERR("osTickStart error\n");
-        return uwRet;
+        if ((!g_usLosTaskLock))
+        {
+            (VOID)LOS_IntRestore(uvIntSave);
+
+            osTaskSchedule();
+
+            return;
+        }
     }
-		
-    return uwRet;
-}
-/*****************************************************************************
- Function    : LOS_Start
- Description : Task start function
- Input       : None
- Output      : None
- Return      : LOS_OK
- *****************************************************************************/
-LITE_OS_SEC_TEXT_INIT UINT32 LOS_Start(void)
-{
-    UINT32 uwRet = LOS_OK;
 
-    LOS_StartToRun();
-
-    return uwRet;
+    (VOID)LOS_IntRestore(uvIntSave);
 }
 
 /*****************************************************************************
- Function    : osMain
- Description : System kernel initialization function, configure all system modules
+ Function    : osTaskExit
+ Description : Task exit function
  Input       : None
  Output      : None
- Return      : LOS_OK
+ Return      : None
  *****************************************************************************/
-LITE_OS_SEC_TEXT_INIT int osMain(void)
+LITE_OS_SEC_TEXT_MINOR VOID osTaskExit(VOID)
 {
-    UINT32 uwRet;
-
-    osRegister();
-
-    uwRet = osMemSystemInit();
-    if (uwRet != LOS_OK)
-    {
-        PRINT_ERR("osMemSystemInit error %d\n", uwRet);
-        return uwRet;
-    }
-
-#if (LOSCFG_PLATFORM_HWI == YES)
-    {
-        if (g_use_ram_vect)
-        {
-            osHwiInit();
-        }
-    }
-#endif
-
-    uwRet =osTaskInit();
-    if (uwRet != LOS_OK)
-    {
-        PRINT_ERR("osTaskInit error\n");
-        return uwRet;
-    }
-
-#if (LOSCFG_BASE_IPC_SEM == YES)
-    {
-        uwRet = osSemInit();
-        if (uwRet != LOS_OK)
-        {
-            return uwRet;
-        }
-    }
-#endif
-
-#if (LOSCFG_BASE_IPC_MUX == YES)
-    {
-        uwRet = osMuxInit();
-        if (uwRet != LOS_OK)
-        {
-            return uwRet;
-        }
-    }
-#endif
-
-#if (LOSCFG_BASE_IPC_QUEUE == YES)
-    {
-        uwRet = osQueueInit();
-        if (uwRet != LOS_OK)
-        {
-            PRINT_ERR("osQueueInit error\n");
-            return uwRet;
-        }
-    }
-#endif
-
-#if (LOSCFG_BASE_CORE_SWTMR == YES)
-    {
-        uwRet = osSwTmrInit();
-        if (uwRet != LOS_OK)
-        {
-            PRINT_ERR("osSwTmrInit error\n");
-            return uwRet;
-        }
-    }
-#endif
-
-    #if(LOSCFG_BASE_CORE_TIMESLICE == YES)
-    osTimesliceInit();
-    #endif
-
-    uwRet = osIdleTaskCreate();
-    if (uwRet != LOS_OK) {
-        return uwRet;
-    }
-
-    return LOS_OK;
+    osDisableIRQ();
+    while(1);
 }
 
-LITE_OS_SEC_TEXT_INIT int LOS_KernelInit(void)
+/*****************************************************************************
+ Function    : osTskStackInit
+ Description : Task stack initialization function
+ Input       : uwTaskID     --- TaskID
+               uwStackSize  --- Total size of the stack
+               pTopStack    --- Top of task's stack
+ Output      : None
+ Return      : Context pointer
+ *****************************************************************************/
+LITE_OS_SEC_TEXT_INIT VOID *osTskStackInit(UINT32 uwTaskID, UINT32 uwStackSize, VOID *pTopStack)
 {
-    UINT32 uwRet;
-    uwRet = osMain();
-    if (uwRet != LOS_OK) {
-        return LOS_NOK;
+    UINT32 uwIdx;
+    TSK_CONTEXT_S  *pstContext;
+
+    /*initialize the task stack, write magic num to stack top*/
+    for (uwIdx = 1; uwIdx < (uwStackSize/sizeof(UINT32)); uwIdx++)
+    {
+        *((UINT32 *)pTopStack + uwIdx) = OS_TASK_STACK_INIT;
     }
-		return LOS_OK;
+    *((UINT32 *)(pTopStack)) = OS_TASK_MAGIC_WORD;
+
+    pstContext    = (TSK_CONTEXT_S *)(((UINT32)pTopStack + uwStackSize) - sizeof(TSK_CONTEXT_S));
+
+    pstContext->uwR4  = 0x04040404L;
+    pstContext->uwR5  = 0x05050505L;
+    pstContext->uwR6  = 0x06060606L;
+    pstContext->uwR7  = 0x07070707L;
+    pstContext->uwR8  = 0x08080808L;
+    pstContext->uwR9  = 0x09090909L;
+    pstContext->uwR10 = 0x10101010L;
+    pstContext->uwR11 = 0x11111111L;
+    pstContext->uwPriMask = 0;
+    pstContext->uwR0  = uwTaskID;
+    pstContext->uwR1  = 0x01010101L;
+    pstContext->uwR2  = 0x02020202L;
+    pstContext->uwR3  = 0x03030303L;
+    pstContext->uwR12 = 0x12121212L;
+    pstContext->uwLR  = (UINT32)osTaskExit;
+    pstContext->uwPC  = (UINT32)osTaskEntry;
+    pstContext->uwxPSR = 0x01000000L;
+
+    return (VOID *)pstContext;
 }
-
-
-void osBackTrace(VOID){}
 
 #ifdef __cplusplus
 #if __cplusplus
 }
-#endif /* __cpluscplus */
-#endif /* __cpluscplus */
+#endif /* __cplusplus */
+#endif /* __cplusplus */
+
+

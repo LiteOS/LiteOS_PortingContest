@@ -335,6 +335,7 @@
 ### 修改los_bsp_uart.c文件
 
 - uart.c提供可调用的uart控制API。然后在los_bsp_uart.c中调用，具体调用请参考源代码。
+- uart使用的是板子上自带的EDBUG虚拟串口。这个虚拟串口调用的是下层的dbg_console.c文件中的API函数。可以参考源代码。
 
 ![](./meta/keil/atsame70q21/11.png)
 

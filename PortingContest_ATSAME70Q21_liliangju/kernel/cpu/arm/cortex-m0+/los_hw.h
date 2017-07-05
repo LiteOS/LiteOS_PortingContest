@@ -32,12 +32,14 @@
  * applicable export control laws and regulations.
  *---------------------------------------------------------------------------*/
 
-#include "los_tick.inc"
+ /**@defgroup los_hw hardware
+   *@ingroup kernel
+ */
 
-#include "los_base.ph"
-#include "los_swtmr.ph"
-#include "los_task.ph"
-#include "los_timeslice.ph"
+#ifndef _LOS_HW_H
+#define _LOS_HW_H
+
+#include "los_base.h"
 
 #ifdef __cplusplus
 #if __cplusplus
@@ -45,38 +47,122 @@ extern "C" {
 #endif /* __cplusplus */
 #endif /* __cplusplus */
 
+/**
+ * @ingroup los_hw
+ * The initialization value of stack space.
+ */
+#define EMPTY_STACK                 0xCACA
 
-LITE_OS_SEC_BSS UINT64      g_ullTickCount;
-LITE_OS_SEC_BSS UINT32      g_uwTicksPerSec;
-LITE_OS_SEC_BSS UINT32      g_uwCyclePerSec;
+/**
+ * @ingroup los_hw
+ * Trigger a task.
+ */
+#define osTaskTrap()                asm("   TRAP    #31")
 
-/*****************************************************************************
- Description : Tick interruption handler
- Input       : None
- Output      : None
- Return      : None
- *****************************************************************************/
-extern void hal_clock_irqclear(void);
-LITE_OS_SEC_TEXT VOID osTickHandler(VOID)
+/**
+ * @ingroup los_hw
+ * Check task schedule.
+ */
+#define LOS_CHECK_SCHEDULE          ((!g_usLosTaskLock))
+
+/**
+ * @ingroup los_hw
+ * Define the type of a task context control block.
+ */
+typedef struct tagTskContext
 {
-    g_ullTickCount ++;
+    UINT32 uwR4;
+    UINT32 uwR5;
+    UINT32 uwR6;
+    UINT32 uwR7;
+    UINT32 uwR8;
+    UINT32 uwR9;
+    UINT32 uwR10;
+    UINT32 uwR11;
+    UINT32 uwPriMask;
+    UINT32 uwR0;
+    UINT32 uwR1;
+    UINT32 uwR2;
+    UINT32 uwR3;
+    UINT32 uwR12;
+    UINT32 uwLR;
+    UINT32 uwPC;
+    UINT32 uwxPSR;
+} TSK_CONTEXT_S;
 
-    #if(LOSCFG_BASE_CORE_TIMESLICE == YES)
-    osTimesliceCheck();
-    #endif
 
-    osTaskScan();   //task timeout scan
 
-    #if (LOSCFG_BASE_CORE_SWTMR == YES)
-    if (osSwtmrScan() != LOS_OK){
-        PRINT_ERR("%s, %d\n", __FUNCTION__, __LINE__);
-    }
-    #endif
-}
+/**
+ * @ingroup  los_hw
+ * @brief: Task stack initialization.
+ *
+ * @par Description:
+ * This API is used to initialize the task stack.
+ *
+ * @attention:
+ * <ul><li>None.</li></ul>
+ *
+ * @param  uwTaskID     [IN] Type#UINT32: TaskID.
+ * @param  uwStackSize  [IN] Type#UINT32: Total size of the stack.
+ * @param  pTopStack    [IN] Type#VOID *: Top of task's stack.
+ *
+ * @retval: pstContext Type#TSK_CONTEXT_S *.
+ * @par Dependency:
+ * <ul><li>los_hw.h: the header file that contains the API declaration.</li></ul>
+ * @see None.
+ * @since Huawei LiteOS V100R001C00
+ */
+extern VOID * osTskStackInit(UINT32 uwTaskID, UINT32 uwStackSize, VOID *pTopStack);
 
+
+
+/**
+ * @ingroup  los_hw
+ * @brief: Task scheduling Function.
+ *
+ * @par Description:
+ * This API is used to scheduling task.
+ *
+ * @attention:
+ * <ul><li>None.</li></ul>
+ *
+ * @param  None.
+ *
+ * @retval: None.
+ * @par Dependency:
+ * <ul><li>los_hw.h: the header file that contains the API declaration.</li></ul>
+ * @see None.
+ * @since Huawei LiteOS V100R001C00
+ */
+extern VOID osSchedule(VOID);
+
+
+/**
+ * @ingroup  los_hw
+ * @brief: Function to determine whether task scheduling is required.
+ *
+ * @par Description:
+ * This API is used to Judge and entry task scheduling.
+ *
+ * @attention:
+ * <ul><li>None.</li></ul>
+ *
+ * @param  None.
+ *
+ * @retval: None.
+ * @par Dependency:
+ * <ul><li>los_hw.h: the header file that contains the API declaration.</li></ul>
+ * @see None.
+ * @since Huawei LiteOS V100R001C00
+ */
+extern VOID LOS_Schedule(VOID);
 
 #ifdef __cplusplus
 #if __cplusplus
 }
 #endif /* __cplusplus */
 #endif /* __cplusplus */
+
+
+#endif /* _LOS_HW_H */
+

@@ -32,51 +32,99 @@
  * applicable export control laws and regulations.
  *---------------------------------------------------------------------------*/
 
-#include "los_tick.inc"
+#include "los_tick.ph"
 
-#include "los_base.ph"
-#include "los_swtmr.ph"
+#include "los_base.h"
 #include "los_task.ph"
-#include "los_timeslice.ph"
+#include "los_swtmr.h"
+#include "los_hwi.h"
 
 #ifdef __cplusplus
 #if __cplusplus
 extern "C" {
-#endif /* __cplusplus */
-#endif /* __cplusplus */
+#endif /* __cpluscplus */
+#endif /* __cpluscplus */
 
+LITE_OS_SEC_BSS UINT32  g_uwCyclesPerTick;
 
-LITE_OS_SEC_BSS UINT64      g_ullTickCount;
-LITE_OS_SEC_BSS UINT32      g_uwTicksPerSec;
-LITE_OS_SEC_BSS UINT32      g_uwCyclePerSec;
-
+/*lint -save -e40 -e10 -e26 -e1013*/
 /*****************************************************************************
- Description : Tick interruption handler
- Input       : None
- Output      : None
- Return      : None
- *****************************************************************************/
-extern void hal_clock_irqclear(void);
-LITE_OS_SEC_TEXT VOID osTickHandler(VOID)
+Function   : LOS_TickHandler
+Description: los system tick handler 
+Input   : none
+output  : none
+return  : none
+*****************************************************************************/
+void LOS_TickHandler(void)
 {
-    g_ullTickCount ++;
+    UINT32 uwIntSave;
 
-    #if(LOSCFG_BASE_CORE_TIMESLICE == YES)
-    osTimesliceCheck();
-    #endif
+    uwIntSave = LOS_IntLock();
+    g_vuwIntCount++;
+    LOS_IntRestore(uwIntSave);
 
-    osTaskScan();   //task timeout scan
-
-    #if (LOSCFG_BASE_CORE_SWTMR == YES)
-    if (osSwtmrScan() != LOS_OK){
-        PRINT_ERR("%s, %d\n", __FUNCTION__, __LINE__);
-    }
-    #endif
+    osTickHandler();
+	
+    uwIntSave = LOS_IntLock();
+    g_vuwIntCount--;
+    LOS_IntRestore(uwIntSave);
+	
+    return ;
 }
 
+/*****************************************************************************
+Function   : LOS_SetTickSycle
+Description: set g_uwCyclesPerTick value
+Input   : ticks, the cpu Sycles per tick
+output  : none
+return  : none
+*****************************************************************************/
+void LOS_SetTickSycle(UINT32 ticks)
+{
+	g_uwCyclesPerTick = ticks;
+	return ;
+}
 
+/*****************************************************************************
+Function   : LOS_GetCpuCycle
+Description: Get System cycle count
+Input   : none
+output  : puwCntHi  --- CpuTick High 4 byte
+          puwCntLo  --- CpuTick Low 4 byte
+return  : none
+*****************************************************************************/
+LITE_OS_SEC_TEXT_MINOR VOID LOS_GetCpuCycle(UINT32 *puwCntHi, UINT32 *puwCntLo)
+{
+    UINT64 ullSwTick;
+    UINT64 ullCycle;
+    UINT32 uwIntSta;
+    UINT32 uwHwCycle;
+    UINTPTR uwIntSave;
+
+    uwIntSave = LOS_IntLock();
+
+    ullSwTick = g_ullTickCount;
+
+    uwHwCycle = *(volatile UINT32*)OS_SYSTICK_CURRENT_REG;
+    uwIntSta  = *(volatile UINT32*)OS_NVIC_INT_CTRL;
+
+    /*tick has come, but may interrupt environment, not counting the Tick interrupt response, to do +1 */
+    if (((uwIntSta & 0x4000000) != 0))
+    {
+        uwHwCycle = *(volatile UINT32*)OS_SYSTICK_CURRENT_REG;
+        ullSwTick++;
+    }
+
+    ullCycle = (((ullSwTick) * g_uwCyclesPerTick) + (g_uwCyclesPerTick - uwHwCycle));
+    *puwCntHi = ullCycle >> 32;
+    *puwCntLo = ullCycle & 0xFFFFFFFFU;
+
+    LOS_IntRestore(uwIntSave);
+
+    return;
+}
 #ifdef __cplusplus
 #if __cplusplus
 }
-#endif /* __cplusplus */
-#endif /* __cplusplus */
+#endif /* __cpluscplus */
+#endif /* __cpluscplus */

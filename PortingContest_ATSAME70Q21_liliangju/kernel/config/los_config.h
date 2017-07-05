@@ -54,7 +54,7 @@ extern "C" {
  * @ingroup los_config
  * System clock (unit: HZ)
  */
-#define OS_SYS_CLOCK                                    48000000
+#define OS_SYS_CLOCK                                    16000000
 /**
 * @ingroup los_config
 * limit addr range when search for  'func local(frame pointer)' or 'func name'
@@ -65,9 +65,9 @@ extern char __bss_start;
 #define OS_SYS_FUNC_ADDR_END                            &__data_end
 
 /* default LiteOS ram size level 
-	RAM_SIZE_LEVEL_0 means kernel ram < 8k  , 
-	RAM_SIZE_LEVEL_1 means kernel ram < 16k, 
-	RAM_SIZE_LEVEL_2 means means kernel ram>=32k 
+    RAM_SIZE_LEVEL_0 means kernel ram < 8k  , 
+    RAM_SIZE_LEVEL_1 means kernel ram < 16k, 
+    RAM_SIZE_LEVEL_2 means means kernel ram>=32k 
 */
 
 /**
@@ -252,13 +252,13 @@ extern char __bss_start;
  * Maximum supported number of software timers rather than the number of usable software timers
  */
 #if defined (RAM_SIZE_LEVEL_0)
-#define LOSCFG_BASE_CORE_SWTMR_LIMIT                    4					// the max SWTMR numb
+#define LOSCFG_BASE_CORE_SWTMR_LIMIT                    4                   // the max SWTMR numb
 #elif defined (RAM_SIZE_LEVEL_1)
-#define LOSCFG_BASE_CORE_SWTMR_LIMIT                    7					// the max SWTMR numb
+#define LOSCFG_BASE_CORE_SWTMR_LIMIT                    7                   // the max SWTMR numb
 #elif defined (RAM_SIZE_LEVEL_2)
-#define LOSCFG_BASE_CORE_SWTMR_LIMIT                    16					// the max SWTMR numb
+#define LOSCFG_BASE_CORE_SWTMR_LIMIT                    16                  // the max SWTMR numb
 #else
-#define LOSCFG_BASE_CORE_SWTMR_LIMIT                    16					// the max SWTMR numb
+#define LOSCFG_BASE_CORE_SWTMR_LIMIT                    16                  // the max SWTMR numb
 #endif
 /**
  * @ingroup los_config
@@ -299,11 +299,11 @@ extern char _PT0_END;
  * Memory size
  */
 #if defined (RAM_SIZE_LEVEL_0)
-#define OS_SYS_MEM_SIZE                                     0x00001800          // 1A00
+#define OS_SYS_MEM_SIZE                                     0x00001650          // 1A00
 #elif defined (RAM_SIZE_LEVEL_1)
 #define OS_SYS_MEM_SIZE                                     0x00002800          // size
 #elif defined (RAM_SIZE_LEVEL_2)
-#define OS_SYS_MEM_SIZE                                     0x00008000          // size
+#define OS_SYS_MEM_SIZE                                     0x00007400          // size
 #else
 #define OS_SYS_MEM_SIZE                                     0x00008000          // size
 #endif

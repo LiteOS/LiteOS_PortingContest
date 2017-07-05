@@ -101,7 +101,7 @@
 //#define LOS_KERNEL_TEST_LIST
 
 /* test ALL */
-#define LOS_KERNEL_TEST_ALL
+//#define LOS_KERNEL_TEST_ALL
 
 
 extern void LOS_Demo_Entry(void);

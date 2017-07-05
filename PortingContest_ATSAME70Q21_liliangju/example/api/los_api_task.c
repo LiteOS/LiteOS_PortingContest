@@ -57,10 +57,10 @@ UINT32 Example_TaskHi(VOID)
 {
     UINT32 uwRet;
 
-     dprintf("Enter TaskHi Handler.\r\n");
+    dprintf("Enter TaskHi Handler.\r\n");
 
-    /*延时2个Tick，延时后该任务会挂起，执行剩余任务中就高优先级的任务(g_uwTskLoID任务)*/
-    uwRet = LOS_TaskDelay(2);
+    /*延时5个Tick，延时后该任务会挂起，执行剩余任务中就高优先级的任务(g_uwTskLoID任务)*/
+    uwRet = LOS_TaskDelay(5);
     if (uwRet != LOS_OK)
     {
         dprintf("Delay Task Failed.\r\n");
@@ -75,21 +75,21 @@ UINT32 Example_TaskHi(VOID)
     if (uwRet != LOS_OK)
     {
         dprintf("Suspend TaskHi Failed.\r\n");
-		LOS_InspectStatusSetByID(LOS_INSPECT_TASK,LOS_INSPECT_STU_ERROR);
+        LOS_InspectStatusSetByID(LOS_INSPECT_TASK,LOS_INSPECT_STU_ERROR);
         return LOS_NOK;
     }
-		
+    
     dprintf("TaskHi LOS_TaskResume Success.\r\n");
-		
-	LOS_InspectStatusSetByID(LOS_INSPECT_TASK,LOS_INSPECT_STU_SUCCESS);
-		
-	/*删除任务*/
+        
+    LOS_InspectStatusSetByID(LOS_INSPECT_TASK,LOS_INSPECT_STU_SUCCESS);
+    
+    /*删除任务*/
     if(LOS_OK != LOS_TaskDelete(g_uwTskHiID))
     {
         dprintf("TaskHi delete failed .\n");
         return LOS_NOK;
     }
-		 
+    
     return LOS_OK;
 }
 
@@ -100,8 +100,8 @@ UINT32 Example_TaskLo(VOID)
 
     dprintf("Enter TaskLo Handler.\r\n");
 
-    /*延时2个Tick，延时后该任务会挂起，执行剩余任务中就高优先级的任务(背景任务)*/
-    uwRet = LOS_TaskDelay(2);
+    /*延时10个Tick，延时后该任务会挂起，执行剩余任务中就高优先级的任务(背景任务)*/
+    uwRet = LOS_TaskDelay(10);
     if (uwRet != LOS_OK)
     {
         dprintf("Delay TaskLo Failed.\r\n");
@@ -115,18 +115,18 @@ UINT32 Example_TaskLo(VOID)
     if (uwRet != LOS_OK)
     {
         dprintf("Resume TaskHi Failed.\r\n");
-		LOS_InspectStatusSetByID(LOS_INSPECT_TASK,LOS_INSPECT_STU_ERROR);
+        LOS_InspectStatusSetByID(LOS_INSPECT_TASK,LOS_INSPECT_STU_ERROR);
         return LOS_NOK;
-    }	
-		
-	/*删除任务*/
+    }
+    
+    /*删除任务*/
     if(LOS_OK != LOS_TaskDelete(g_uwTskLoID))
     {
-    	dprintf("TaskLo delete failed .\n");
-			  
-		return LOS_NOK;
+        dprintf("TaskLo delete failed .\n");
+        
+        return LOS_NOK;
     }
-		
+    
     return LOS_OK;
 }
 
@@ -144,7 +144,7 @@ UINT32 Example_TskCaseEntry(VOID)
     stInitParam.pfnTaskEntry = (TSK_ENTRY_FUNC)Example_TaskHi;
     stInitParam.usTaskPrio = TSK_PRIOR_HI;
     stInitParam.pcName = "HIGH_NAME";
-    stInitParam.uwStackSize = 0x400;
+    stInitParam.uwStackSize = 0x200;
     stInitParam.uwResved   = LOS_TASK_STATUS_DETACHED;
     /*创建高优先级任务，由于锁任务调度，任务创建成功后不会马上执行*/
     uwRet = LOS_TaskCreate(&g_uwTskHiID, &stInitParam);
@@ -161,22 +161,22 @@ UINT32 Example_TskCaseEntry(VOID)
     stInitParam.pfnTaskEntry = (TSK_ENTRY_FUNC)Example_TaskLo;
     stInitParam.usTaskPrio = TSK_PRIOR_LO;
     stInitParam.pcName = "LOW_NAME";
-    stInitParam.uwStackSize = 0x400;
+    stInitParam.uwStackSize = 0x200;
     stInitParam.uwResved   = LOS_TASK_STATUS_DETACHED;
     /*创建低优先级任务，由于锁任务调度，任务创建成功后不会马上执行*/
     uwRet = LOS_TaskCreate(&g_uwTskLoID, &stInitParam);
     if (uwRet != LOS_OK)
     {
-			  /*删除任务*/
-				if(LOS_OK != LOS_TaskDelete(g_uwTskHiID))
-				{
-					dprintf("TaskHi delete failed .\n");
-				}
-			
+        /*删除任务*/
+        if(LOS_OK != LOS_TaskDelete(g_uwTskHiID))
+        {
+            dprintf("TaskHi delete failed .\n");
+        }
+            
         LOS_TaskUnlock();
 
         dprintf("Example_TaskLo create Failed!\r\n");
-			
+        
         return LOS_NOK;
     }
 
@@ -184,7 +184,7 @@ UINT32 Example_TskCaseEntry(VOID)
 
     /*解锁任务调度，此时会发生任务调度，执行就绪列表中最高优先级任务*/
     LOS_TaskUnlock();
-		
+    
     return uwRet;
 
 }

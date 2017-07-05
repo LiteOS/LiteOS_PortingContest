@@ -32,12 +32,13 @@
  * applicable export control laws and regulations.
  *---------------------------------------------------------------------------*/
 
-#include "los_tick.inc"
+/**@defgroup los_config System configuration items
+ * @ingroup kernel
+ */
 
-#include "los_base.ph"
-#include "los_swtmr.ph"
-#include "los_task.ph"
-#include "los_timeslice.ph"
+#ifndef _LOS_API_FS_H
+#define _LOS_API_FS_H
+
 
 #ifdef __cplusplus
 #if __cplusplus
@@ -45,34 +46,9 @@ extern "C" {
 #endif /* __cplusplus */
 #endif /* __cplusplus */
 
+#include "los_typedef.h"
 
-LITE_OS_SEC_BSS UINT64      g_ullTickCount;
-LITE_OS_SEC_BSS UINT32      g_uwTicksPerSec;
-LITE_OS_SEC_BSS UINT32      g_uwCyclePerSec;
-
-/*****************************************************************************
- Description : Tick interruption handler
- Input       : None
- Output      : None
- Return      : None
- *****************************************************************************/
-extern void hal_clock_irqclear(void);
-LITE_OS_SEC_TEXT VOID osTickHandler(VOID)
-{
-    g_ullTickCount ++;
-
-    #if(LOSCFG_BASE_CORE_TIMESLICE == YES)
-    osTimesliceCheck();
-    #endif
-
-    osTaskScan();   //task timeout scan
-
-    #if (LOSCFG_BASE_CORE_SWTMR == YES)
-    if (osSwtmrScan() != LOS_OK){
-        PRINT_ERR("%s, %d\n", __FUNCTION__, __LINE__);
-    }
-    #endif
-}
+extern UINT32 Example_FsEntry(void);
 
 
 #ifdef __cplusplus
@@ -80,3 +56,7 @@ LITE_OS_SEC_TEXT VOID osTickHandler(VOID)
 }
 #endif /* __cplusplus */
 #endif /* __cplusplus */
+
+
+#endif /* _LOS_API_FS_H */
+
