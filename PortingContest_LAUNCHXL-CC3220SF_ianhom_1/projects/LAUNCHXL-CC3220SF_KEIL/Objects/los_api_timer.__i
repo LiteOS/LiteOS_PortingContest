@@ -1,6 +1,0 @@
---c99 -c --cpu Cortex-M4 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I ..\..\kernel\base\include -I ..\..\kernel\include -I ..\..\kernel\link\keil -I ..\..\kernel\config -I ..\..\kernel\cmsis -I ..\..\kernel\cpu\arm\cortex-m3 -I ..\..\example\include -I ..\..\platform\LAUNCHXL-CC3220SF
--I.\RTE\_LiteOS
--IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\Device\ARM\ARMCM4\Include
--IC:\Keil_v5\ARM\CMSIS\Include
--D__UVISION_VERSION="523" -DARMCM4 -DLAUNCHXL_CC3220SF
--o .\objects\los_api_timer.o --omf_browse .\objects\los_api_timer.crf --depend .\objects\los_api_timer.d "..\..\example\api\los_api_timer.c"
