@@ -28,7 +28,7 @@ void LOS_EvbUartWriteByte(char c)
  *************************************************************************************************/
 void LOS_EvbUartWriteStr(const char* str)
 {
-	usart_write_buffer_wait(str, sizeof(str));
+	usart_write_buffer_wait((const unsigned char *)str, sizeof(str));
 	return ;
 }
 
