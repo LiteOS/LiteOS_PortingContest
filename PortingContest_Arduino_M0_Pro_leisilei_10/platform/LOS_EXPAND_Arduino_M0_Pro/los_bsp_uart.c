@@ -108,8 +108,8 @@ void LOS_EvbUartWriteStr(const char* str)
 	
 }
 
-//#ifndef LOS_KERNEL_TEST_KEIL_SWSIMU
-/////重定向c库函数printf到串口，重定向后可使用printf函数
+#ifndef LOS_KERNEL_TEST_KEIL_SWSIMU
+//重定向c库函数printf到串口，重定向后可使用printf函数
 int fputc(int ch, FILE *f)
 {
 		/* 发送一个字节数据到串口USART */
@@ -117,5 +117,5 @@ int fputc(int ch, FILE *f)
 	
 		return (ch);
 }
-//#endif
+#endif
 
