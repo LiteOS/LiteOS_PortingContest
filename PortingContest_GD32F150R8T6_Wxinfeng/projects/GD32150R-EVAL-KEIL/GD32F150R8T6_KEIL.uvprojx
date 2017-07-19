@@ -10,13 +10,13 @@
       <TargetName>HuaweiLiteOS</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>5060422::V5.06 update 4 (build 422)::ARMCC</pCCUsed>
+      <pCCUsed>5060061::V5.06 update 1 (build 61)::ARMCC</pCCUsed>
       <TargetOption>
         <TargetCommonOption>
           <Device>GD32F150R8</Device>
           <Vendor>GigaDevice</Vendor>
-          <PackID>GigaDevice.GD32F1x0_DFP.3.0.2</PackID>
-          <PackURL>http://gd32mcu.21ic.com/data/documents/yingyongruanjian/</PackURL>
+          <PackID>Keil.GD32F1xx_DFP.1.1.0</PackID>
+          <PackURL>http://www.keil.com/pack/</PackURL>
           <Cpu>IRAM(0x20000000,0x02000) IROM(0x08000000,0x10000) CPUTYPE("Cortex-M3") CLOCK(12000000) ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile></StartupFile>
@@ -328,14 +328,11 @@
             <v6LangP>1</v6LangP>
             <vShortEn>1</vShortEn>
             <vShortWch>1</vShortWch>
-            <v6Lto>0</v6Lto>
-            <v6WtE>0</v6WtE>
-            <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define>RAM_SIZE_LEVEL_0,GD32F130_150,GD32F150R8</Define>
               <Undefine></Undefine>
-              <IncludePath>..\kernel\base\include;..\kernel\cmsis;..\kernel\config;..\kernel\include;..\kernel\link\keil;..\kernel\cpu\arm\cortex-m3;..\example\include;..\platform\GD32F150R-EVAL;..\user</IncludePath>
+              <IncludePath>..\..\kernel\base\include;..\..\kernel\cmsis;..\..\kernel\config;..\..\kernel\include;..\..\kernel\link\keil;..\..\kernel\cpu\arm\cortex-m3;..\..\example\include;..\..\platform\GD32F150R-EVAL;..\..\user</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -348,7 +345,6 @@
             <NoWarn>0</NoWarn>
             <uSurpInc>0</uSurpInc>
             <useXO>0</useXO>
-            <uClangAs>0</uClangAs>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define></Define>
@@ -382,77 +378,77 @@
             <File>
               <FileName>los_priqueue.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\kernel\base\core\los_priqueue.c</FilePath>
+              <FilePath>..\..\kernel\base\core\los_priqueue.c</FilePath>
             </File>
             <File>
               <FileName>los_swtmr.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\kernel\base\core\los_swtmr.c</FilePath>
+              <FilePath>..\..\kernel\base\core\los_swtmr.c</FilePath>
             </File>
             <File>
               <FileName>los_sys.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\kernel\base\core\los_sys.c</FilePath>
+              <FilePath>..\..\kernel\base\core\los_sys.c</FilePath>
             </File>
             <File>
               <FileName>los_task.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\kernel\base\core\los_task.c</FilePath>
+              <FilePath>..\..\kernel\base\core\los_task.c</FilePath>
             </File>
             <File>
               <FileName>los_tick.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\kernel\base\core\los_tick.c</FilePath>
+              <FilePath>..\..\kernel\base\core\los_tick.c</FilePath>
             </File>
             <File>
               <FileName>los_timeslice.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\kernel\base\core\los_timeslice.c</FilePath>
+              <FilePath>..\..\kernel\base\core\los_timeslice.c</FilePath>
             </File>
             <File>
               <FileName>los_event.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\kernel\base\ipc\los_event.c</FilePath>
+              <FilePath>..\..\kernel\base\ipc\los_event.c</FilePath>
             </File>
             <File>
               <FileName>los_mux.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\kernel\base\ipc\los_mux.c</FilePath>
+              <FilePath>..\..\kernel\base\ipc\los_mux.c</FilePath>
             </File>
             <File>
               <FileName>los_queue.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\kernel\base\ipc\los_queue.c</FilePath>
+              <FilePath>..\..\kernel\base\ipc\los_queue.c</FilePath>
             </File>
             <File>
               <FileName>los_sem.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\kernel\base\ipc\los_sem.c</FilePath>
+              <FilePath>..\..\kernel\base\ipc\los_sem.c</FilePath>
             </File>
             <File>
               <FileName>los_membox.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\kernel\base\mem\los_membox.c</FilePath>
+              <FilePath>..\..\kernel\base\mem\los_membox.c</FilePath>
             </File>
             <File>
               <FileName>los_memory.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\kernel\base\mem\los_memory.c</FilePath>
+              <FilePath>..\..\kernel\base\mem\los_memory.c</FilePath>
             </File>
             <File>
               <FileName>los_memstat.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\kernel\base\mem\los_memstat.c</FilePath>
+              <FilePath>..\..\kernel\base\mem\los_memstat.c</FilePath>
             </File>
             <File>
               <FileName>los_multipledlinkhead.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\kernel\base\mem\los_multipledlinkhead.c</FilePath>
+              <FilePath>..\..\kernel\base\mem\los_multipledlinkhead.c</FilePath>
             </File>
             <File>
               <FileName>los_misc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\kernel\base\misc\los_misc.c</FilePath>
+              <FilePath>..\..\kernel\base\misc\los_misc.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -462,22 +458,22 @@
             <File>
               <FileName>los_hw.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\kernel\cpu\arm\cortex-m3\los_hw.c</FilePath>
+              <FilePath>..\..\kernel\cpu\arm\cortex-m3\los_hw.c</FilePath>
             </File>
             <File>
               <FileName>los_hw_tick.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\kernel\cpu\arm\cortex-m3\los_hw_tick.c</FilePath>
+              <FilePath>..\..\kernel\cpu\arm\cortex-m3\los_hw_tick.c</FilePath>
             </File>
             <File>
               <FileName>los_hwi.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\kernel\cpu\arm\cortex-m3\los_hwi.c</FilePath>
+              <FilePath>..\..\kernel\cpu\arm\cortex-m3\los_hwi.c</FilePath>
             </File>
             <File>
               <FileName>los_dispatch_keil.s</FileName>
               <FileType>2</FileType>
-              <FilePath>..\kernel\cpu\arm\cortex-m3\los_dispatch_keil.s</FilePath>
+              <FilePath>..\..\kernel\cpu\arm\cortex-m3\los_dispatch_keil.s</FilePath>
             </File>
           </Files>
         </Group>
@@ -487,7 +483,7 @@
             <File>
               <FileName>los_config.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\kernel\config\los_config.c</FilePath>
+              <FilePath>..\..\kernel\config\los_config.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -497,7 +493,7 @@
             <File>
               <FileName>cmsis_liteos.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\kernel\cmsis\cmsis_liteos.c</FilePath>
+              <FilePath>..\..\kernel\cmsis\cmsis_liteos.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -507,77 +503,77 @@
             <File>
               <FileName>los_api_dynamic_mem.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\example\api\los_api_dynamic_mem.c</FilePath>
+              <FilePath>..\..\example\api\los_api_dynamic_mem.c</FilePath>
             </File>
             <File>
               <FileName>los_api_event.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\example\api\los_api_event.c</FilePath>
+              <FilePath>..\..\example\api\los_api_event.c</FilePath>
             </File>
             <File>
               <FileName>los_api_fs.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\example\api\los_api_fs.c</FilePath>
+              <FilePath>..\..\example\api\los_api_fs.c</FilePath>
             </File>
             <File>
               <FileName>los_api_interrupt.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\example\api\los_api_interrupt.c</FilePath>
+              <FilePath>..\..\example\api\los_api_interrupt.c</FilePath>
             </File>
             <File>
               <FileName>los_api_list.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\example\api\los_api_list.c</FilePath>
+              <FilePath>..\..\example\api\los_api_list.c</FilePath>
             </File>
             <File>
               <FileName>los_api_msgqueue.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\example\api\los_api_msgqueue.c</FilePath>
+              <FilePath>..\..\example\api\los_api_msgqueue.c</FilePath>
             </File>
             <File>
               <FileName>los_api_mutex.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\example\api\los_api_mutex.c</FilePath>
+              <FilePath>..\..\example\api\los_api_mutex.c</FilePath>
             </File>
             <File>
               <FileName>los_api_sem.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\example\api\los_api_sem.c</FilePath>
+              <FilePath>..\..\example\api\los_api_sem.c</FilePath>
             </File>
             <File>
               <FileName>los_api_static_mem.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\example\api\los_api_static_mem.c</FilePath>
+              <FilePath>..\..\example\api\los_api_static_mem.c</FilePath>
             </File>
             <File>
               <FileName>los_api_systick.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\example\api\los_api_systick.c</FilePath>
+              <FilePath>..\..\example\api\los_api_systick.c</FilePath>
             </File>
             <File>
               <FileName>los_api_task.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\example\api\los_api_task.c</FilePath>
+              <FilePath>..\..\example\api\los_api_task.c</FilePath>
             </File>
             <File>
               <FileName>los_api_timer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\example\api\los_api_timer.c</FilePath>
+              <FilePath>..\..\example\api\los_api_timer.c</FilePath>
             </File>
             <File>
               <FileName>los_cmsis_main.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\example\api\los_cmsis_main.c</FilePath>
+              <FilePath>..\..\example\api\los_cmsis_main.c</FilePath>
             </File>
             <File>
               <FileName>los_demo_entry.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\example\api\los_demo_entry.c</FilePath>
+              <FilePath>..\..\example\api\los_demo_entry.c</FilePath>
             </File>
             <File>
               <FileName>los_inspect_entry.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\example\api\los_inspect_entry.c</FilePath>
+              <FilePath>..\..\example\api\los_inspect_entry.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -587,22 +583,22 @@
             <File>
               <FileName>los_bsp_adapter.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\platform\GD32F150R-EVAL\los_bsp_adapter.c</FilePath>
+              <FilePath>..\..\platform\GD32F150R-EVAL\los_bsp_adapter.c</FilePath>
             </File>
             <File>
               <FileName>los_bsp_key.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\platform\GD32F150R-EVAL\los_bsp_key.c</FilePath>
+              <FilePath>..\..\platform\GD32F150R-EVAL\los_bsp_key.c</FilePath>
             </File>
             <File>
               <FileName>los_bsp_led.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\platform\GD32F150R-EVAL\los_bsp_led.c</FilePath>
+              <FilePath>..\..\platform\GD32F150R-EVAL\los_bsp_led.c</FilePath>
             </File>
             <File>
               <FileName>los_bsp_uart.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\platform\GD32F150R-EVAL\los_bsp_uart.c</FilePath>
+              <FilePath>..\..\platform\GD32F150R-EVAL\los_bsp_uart.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -615,7 +611,7 @@
             <File>
               <FileName>main.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\user\main.c</FilePath>
+              <FilePath>..\..\user\main.c</FilePath>
             </File>
           </Files>
         </Group>
