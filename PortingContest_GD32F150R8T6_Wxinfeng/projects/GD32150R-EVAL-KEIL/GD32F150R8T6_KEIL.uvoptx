@@ -78,6 +78,23 @@
         <IsCurrentTarget>1</IsCurrentTarget>
       </OPTFL>
       <CpuCode>255</CpuCode>
+      <Books>
+        <Book>
+          <Number>0</Number>
+          <Title>GD32150C-START Schematics (GD32150C-START)</Title>
+          <Path>d:\Keil_v5\ARM\PACK\GigaDevice\GD32F1x0_DFP\3.0.2\Boards\GigaDevice\GD32150C-START\Documents\GD32150C-START.pdf</Path>
+        </Book>
+        <Book>
+          <Number>1</Number>
+          <Title>GD32150C-START Schematics (GD321x0C-START)</Title>
+          <Path>d:\Keil_v5\ARM\PACK\Keil\GD32F1xx_DFP\1.1.0\Boards\GigaDevice\GD321x0C-START\Documents\GD32150C-START.pdf</Path>
+        </Book>
+        <Book>
+          <Number>2</Number>
+          <Title>GD32150C -START Board (GD32150C-START)</Title>
+          <Path>http://www.gigadevice.com</Path>
+        </Book>
+      </Books>
       <DebugOpt>
         <uSim>0</uSim>
         <uTrg>1</uTrg>
@@ -100,8 +117,7 @@
         <tRSysVw>1</tRSysVw>
         <sRunDeb>0</sRunDeb>
         <sLrtime>0</sLrtime>
-        <bEvRecOn>1</bEvRecOn>
-        <nTsel>2</nTsel>
+        <nTsel>12</nTsel>
         <sDll></sDll>
         <sDllPa></sDllPa>
         <sDlgDll></sDlgDll>
@@ -159,12 +175,9 @@
       <LintExecutable></LintExecutable>
       <LintConfigFile></LintConfigFile>
       <bLintAuto>0</bLintAuto>
-      <bAutoGenD>0</bAutoGenD>
-      <LntExFlags>0</LntExFlags>
-      <pMisraName></pMisraName>
-      <pszMrule></pszMrule>
-      <pSingCmds></pSingCmds>
-      <pMultCmds></pMultCmds>
+      <Lin2Executable></Lin2Executable>
+      <Lin2ConfigFile></Lin2ConfigFile>
+      <bLin2Auto>0</bLin2Auto>
     </TargetOption>
   </Target>
 
@@ -181,7 +194,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\kernel\base\core\los_priqueue.c</PathWithFileName>
+      <PathWithFileName>..\..\kernel\base\core\los_priqueue.c</PathWithFileName>
       <FilenameWithoutPath>los_priqueue.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -193,7 +206,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\kernel\base\core\los_swtmr.c</PathWithFileName>
+      <PathWithFileName>..\..\kernel\base\core\los_swtmr.c</PathWithFileName>
       <FilenameWithoutPath>los_swtmr.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -205,7 +218,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\kernel\base\core\los_sys.c</PathWithFileName>
+      <PathWithFileName>..\..\kernel\base\core\los_sys.c</PathWithFileName>
       <FilenameWithoutPath>los_sys.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -217,7 +230,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\kernel\base\core\los_task.c</PathWithFileName>
+      <PathWithFileName>..\..\kernel\base\core\los_task.c</PathWithFileName>
       <FilenameWithoutPath>los_task.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -229,7 +242,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\kernel\base\core\los_tick.c</PathWithFileName>
+      <PathWithFileName>..\..\kernel\base\core\los_tick.c</PathWithFileName>
       <FilenameWithoutPath>los_tick.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -241,7 +254,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\kernel\base\core\los_timeslice.c</PathWithFileName>
+      <PathWithFileName>..\..\kernel\base\core\los_timeslice.c</PathWithFileName>
       <FilenameWithoutPath>los_timeslice.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -253,7 +266,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\kernel\base\ipc\los_event.c</PathWithFileName>
+      <PathWithFileName>..\..\kernel\base\ipc\los_event.c</PathWithFileName>
       <FilenameWithoutPath>los_event.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -265,7 +278,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\kernel\base\ipc\los_mux.c</PathWithFileName>
+      <PathWithFileName>..\..\kernel\base\ipc\los_mux.c</PathWithFileName>
       <FilenameWithoutPath>los_mux.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -277,7 +290,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\kernel\base\ipc\los_queue.c</PathWithFileName>
+      <PathWithFileName>..\..\kernel\base\ipc\los_queue.c</PathWithFileName>
       <FilenameWithoutPath>los_queue.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -289,7 +302,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\kernel\base\ipc\los_sem.c</PathWithFileName>
+      <PathWithFileName>..\..\kernel\base\ipc\los_sem.c</PathWithFileName>
       <FilenameWithoutPath>los_sem.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -301,7 +314,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\kernel\base\mem\los_membox.c</PathWithFileName>
+      <PathWithFileName>..\..\kernel\base\mem\los_membox.c</PathWithFileName>
       <FilenameWithoutPath>los_membox.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -313,7 +326,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\kernel\base\mem\los_memory.c</PathWithFileName>
+      <PathWithFileName>..\..\kernel\base\mem\los_memory.c</PathWithFileName>
       <FilenameWithoutPath>los_memory.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -325,7 +338,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\kernel\base\mem\los_memstat.c</PathWithFileName>
+      <PathWithFileName>..\..\kernel\base\mem\los_memstat.c</PathWithFileName>
       <FilenameWithoutPath>los_memstat.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -337,7 +350,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\kernel\base\mem\los_multipledlinkhead.c</PathWithFileName>
+      <PathWithFileName>..\..\kernel\base\mem\los_multipledlinkhead.c</PathWithFileName>
       <FilenameWithoutPath>los_multipledlinkhead.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -349,7 +362,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\kernel\base\misc\los_misc.c</PathWithFileName>
+      <PathWithFileName>..\..\kernel\base\misc\los_misc.c</PathWithFileName>
       <FilenameWithoutPath>los_misc.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -369,7 +382,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\kernel\cpu\arm\cortex-m3\los_hw.c</PathWithFileName>
+      <PathWithFileName>..\..\kernel\cpu\arm\cortex-m3\los_hw.c</PathWithFileName>
       <FilenameWithoutPath>los_hw.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -381,7 +394,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\kernel\cpu\arm\cortex-m3\los_hw_tick.c</PathWithFileName>
+      <PathWithFileName>..\..\kernel\cpu\arm\cortex-m3\los_hw_tick.c</PathWithFileName>
       <FilenameWithoutPath>los_hw_tick.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -393,7 +406,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\kernel\cpu\arm\cortex-m3\los_hwi.c</PathWithFileName>
+      <PathWithFileName>..\..\kernel\cpu\arm\cortex-m3\los_hwi.c</PathWithFileName>
       <FilenameWithoutPath>los_hwi.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -405,7 +418,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\kernel\cpu\arm\cortex-m3\los_dispatch_keil.s</PathWithFileName>
+      <PathWithFileName>..\..\kernel\cpu\arm\cortex-m3\los_dispatch_keil.s</PathWithFileName>
       <FilenameWithoutPath>los_dispatch_keil.s</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -425,7 +438,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\kernel\config\los_config.c</PathWithFileName>
+      <PathWithFileName>..\..\kernel\config\los_config.c</PathWithFileName>
       <FilenameWithoutPath>los_config.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -445,7 +458,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\kernel\cmsis\cmsis_liteos.c</PathWithFileName>
+      <PathWithFileName>..\..\kernel\cmsis\cmsis_liteos.c</PathWithFileName>
       <FilenameWithoutPath>cmsis_liteos.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -465,7 +478,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\example\api\los_api_dynamic_mem.c</PathWithFileName>
+      <PathWithFileName>..\..\example\api\los_api_dynamic_mem.c</PathWithFileName>
       <FilenameWithoutPath>los_api_dynamic_mem.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -477,7 +490,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\example\api\los_api_event.c</PathWithFileName>
+      <PathWithFileName>..\..\example\api\los_api_event.c</PathWithFileName>
       <FilenameWithoutPath>los_api_event.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -489,7 +502,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\example\api\los_api_fs.c</PathWithFileName>
+      <PathWithFileName>..\..\example\api\los_api_fs.c</PathWithFileName>
       <FilenameWithoutPath>los_api_fs.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -501,7 +514,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\example\api\los_api_interrupt.c</PathWithFileName>
+      <PathWithFileName>..\..\example\api\los_api_interrupt.c</PathWithFileName>
       <FilenameWithoutPath>los_api_interrupt.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -513,7 +526,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\example\api\los_api_list.c</PathWithFileName>
+      <PathWithFileName>..\..\example\api\los_api_list.c</PathWithFileName>
       <FilenameWithoutPath>los_api_list.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -525,7 +538,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\example\api\los_api_msgqueue.c</PathWithFileName>
+      <PathWithFileName>..\..\example\api\los_api_msgqueue.c</PathWithFileName>
       <FilenameWithoutPath>los_api_msgqueue.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -537,7 +550,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\example\api\los_api_mutex.c</PathWithFileName>
+      <PathWithFileName>..\..\example\api\los_api_mutex.c</PathWithFileName>
       <FilenameWithoutPath>los_api_mutex.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -549,7 +562,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\example\api\los_api_sem.c</PathWithFileName>
+      <PathWithFileName>..\..\example\api\los_api_sem.c</PathWithFileName>
       <FilenameWithoutPath>los_api_sem.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -561,7 +574,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\example\api\los_api_static_mem.c</PathWithFileName>
+      <PathWithFileName>..\..\example\api\los_api_static_mem.c</PathWithFileName>
       <FilenameWithoutPath>los_api_static_mem.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -573,7 +586,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\example\api\los_api_systick.c</PathWithFileName>
+      <PathWithFileName>..\..\example\api\los_api_systick.c</PathWithFileName>
       <FilenameWithoutPath>los_api_systick.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -585,7 +598,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\example\api\los_api_task.c</PathWithFileName>
+      <PathWithFileName>..\..\example\api\los_api_task.c</PathWithFileName>
       <FilenameWithoutPath>los_api_task.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -597,7 +610,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\example\api\los_api_timer.c</PathWithFileName>
+      <PathWithFileName>..\..\example\api\los_api_timer.c</PathWithFileName>
       <FilenameWithoutPath>los_api_timer.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -609,7 +622,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\example\api\los_cmsis_main.c</PathWithFileName>
+      <PathWithFileName>..\..\example\api\los_cmsis_main.c</PathWithFileName>
       <FilenameWithoutPath>los_cmsis_main.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -621,7 +634,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\example\api\los_demo_entry.c</PathWithFileName>
+      <PathWithFileName>..\..\example\api\los_demo_entry.c</PathWithFileName>
       <FilenameWithoutPath>los_demo_entry.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -633,7 +646,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\example\api\los_inspect_entry.c</PathWithFileName>
+      <PathWithFileName>..\..\example\api\los_inspect_entry.c</PathWithFileName>
       <FilenameWithoutPath>los_inspect_entry.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -642,7 +655,7 @@
 
   <Group>
     <GroupName>platform/gd32f150r</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -653,7 +666,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\platform\GD32F150R-EVAL\los_bsp_adapter.c</PathWithFileName>
+      <PathWithFileName>..\..\platform\GD32F150R-EVAL\los_bsp_adapter.c</PathWithFileName>
       <FilenameWithoutPath>los_bsp_adapter.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -665,7 +678,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\platform\GD32F150R-EVAL\los_bsp_key.c</PathWithFileName>
+      <PathWithFileName>..\..\platform\GD32F150R-EVAL\los_bsp_key.c</PathWithFileName>
       <FilenameWithoutPath>los_bsp_key.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -677,7 +690,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\platform\GD32F150R-EVAL\los_bsp_led.c</PathWithFileName>
+      <PathWithFileName>..\..\platform\GD32F150R-EVAL\los_bsp_led.c</PathWithFileName>
       <FilenameWithoutPath>los_bsp_led.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -689,7 +702,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\platform\GD32F150R-EVAL\los_bsp_uart.c</PathWithFileName>
+      <PathWithFileName>..\..\platform\GD32F150R-EVAL\los_bsp_uart.c</PathWithFileName>
       <FilenameWithoutPath>los_bsp_uart.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -717,7 +730,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\user\main.c</PathWithFileName>
+      <PathWithFileName>..\..\user\main.c</PathWithFileName>
       <FilenameWithoutPath>main.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>

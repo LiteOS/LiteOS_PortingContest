@@ -47,7 +47,7 @@ unsigned int LOS_EvbGetKeyVal(int KeyNum)
     unsigned int KeyVal = LOS_GPIO_ERR;
     
     //add you code here.
-		KeyVal = gd_eval_keygetstate(USER_KEY);
+	KeyVal = gd_eval_keygetstate(USER_KEY);
     
     return KeyVal;
 }
