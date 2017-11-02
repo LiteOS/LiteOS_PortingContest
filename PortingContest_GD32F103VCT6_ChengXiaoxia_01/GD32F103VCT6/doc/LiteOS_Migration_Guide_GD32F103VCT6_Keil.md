@@ -1,4 +1,4 @@
-## 1关于本文档的开源协议说明
+﻿## 1关于本文档的开源协议说明
 **您可以自由地：**
 
 **分享** 
@@ -76,20 +76,15 @@
 	<td>描述</td>
 	</tr>
 	<tr>
-	<td>2017年02月14日</td>
+	<td>2017年06月26日</td>
 	<td>1.0</td>
 	<td>完成初稿</td>
-	</tr>
-    <tr>
-	<td>2017年03月09日</td>
-	<td>1.1</td>
-	<td>根据新增代码及修改代码同步更新</td>
 	</tr>
 </table>
 
 ## 3概述
 
-目前在github上已开源的Huawei LiteOS内核源码已适配好STM32F412、STM32F429、STM32L476、GD32F450、GD32F190芯片，本手册将以GD32F190R8T6芯片为例，介绍基于Cortex M3核芯片的移植过程
+目前在github上已开源的Huawei LiteOS内核源码已适配好STM32F412、STM32F429、STM32L476、GD32F450、gd32f103芯片，本手册将以GD32F103VCT6芯片为例，介绍基于Cortex M3核芯片的移植过程
 
 ## 4环境准备
 基于Huawei LiteOS Kernel开发前，我们首先需要准备好单板运行的环境，包括软件环
@@ -102,8 +97,8 @@
 	<td>描述</td>
 	</tr>
 	<tr>
-	<td>GD32F190R-EVAL单板</td>
-	<td>GD32开发板(芯片型号GD32F190R8T6)</td>
+	<td>GD32F103C-EVAL单板</td>
+	<td>GD32开发板(芯片型号GD32F103VCT6)</td>
 	</tr>
 	<tr>
 	<td>PC机</td>
@@ -209,63 +204,8 @@ Keil工具需要开发者自行购买，开发板的调试器是GD-Link，GD-Lin
 </tr>
 <tr>
 	<td>platform</td>
-	<td>GD32F190R-EVAL</td>
+	<td>GD32F103VCT6</td>
 	<td>GD190开发板systick及驱动相关代码</td>
-</tr>
-<tr>
-	<td></td>
-	<td>GD32F450i-EVAL</td>
-	<td>GD450开发板systick及驱动相关代码</td>
-</tr>
-<tr>
-	<td></td>
-	<td>STM32F412ZG-NUCLEO</td>
-	<td>STM32F412开发板systick及驱动相关代码</td>
-</tr>
-<tr>
-	<td></td>
-	<td>STM32F429I_DISCO</td>
-	<td>STM32F429开发板systick及驱动相关代码</td>
-</tr>
-<tr>
-	<td></td>
-	<td>STM32L476RG_NUCLEO</td>
-	<td>STM32L476开发板systick及驱动相关代码</td>
-</tr>
-<tr>
-	<td></td>
-	<td>LOS_EXPAND_XXX</td>
-	<td>用于新扩展的开发板systick以及led、uart、key驱动bsp适配代码</td>
-</tr>
-<tr>
-	<td>projects</td>
-	<td>STM32F412ZG-NUCLEO-KEIL</td>
-	<td>stm32f412开发板的keil工程目录</td>
-</tr>
-<tr>
-	<td></td>
-	<td>STM32F429I_DISCO_IAR</td>
-	<td>stm32f429开发板的iar工程目录</td>
-</tr>
-<tr>
-	<td></td>
-	<td>STM32F429I_DISCO_KEIL</td>
-	<td>stm32f429开发板的keil工程目录</td>
-</tr>
-<tr>
-	<td></td>
-	<td>STM32L476R-NUCLEO-KEIL</td>
-	<td>stm32l476开发板的keil工程目录</td>
-</tr>
-<tr>
-	<td></td>
-	<td>GD32F190R-EVAL-KEIL</td>
-	<td>gd32f190开发板的keil工程目录</td>
-</tr>
-<tr>
-	<td></td>
-	<td>GD32F450i-EVAL-KEIL</td>
-	<td>gd32f450开发板的keil工程目录</td>
 </tr>
 <tr>
 	<td>user</td>
@@ -274,10 +214,10 @@ Keil工具需要开发者自行购买，开发板的调试器是GD-Link，GD-Lin
 </tr>
 </table>
 
-获取Huawei LiteOS源代码之后，我们可以将自己本地已有工程的代码适配到LiteOS的GD32F190R-EVAL-KEIL工程中进行应用开发。
+获取Huawei LiteOS源代码之后，我们可以将自己本地已有工程的代码适配到LiteOS内核工程中进行应用开发。
 
-## 6如何适配LiteOS的GD32F190R-EVAL-KEIL工程开发
-本章节描述的内容以GD32F190R-EVAL开发板光盘资料中的04_USART_Printf示例工程为基础，适配到LiteOS的GD32F190R-EVAL-KEIL工程中，演示串口输出、按键中断及LED点亮功能。
+## 6如何适配LiteOS内核工程开发
+本章节描述的内容以GD32F103C-EVAL开发板光盘资料中的04_USART_Printf示例工程为基础，适配到LiteOS的GD32F103C-EVAL-KEIL工程中，演示串口输出、按键中断及LED点亮功能。
 
 ### GD32的开发资料获取
 - 从http://gd32mcu.21ic.com/下载相关的开发包
@@ -287,63 +227,74 @@ Keil工具需要开发者自行购买，开发板的调试器是GD-Link，GD-Lin
 
 ### GD32的开发工具安装
 - 安装keil 5.18或者以上版本
-- 安装Keil.GD32F1x0_DFP.2.0.0.pack或者更高版本的pack文件到keil安装目录
-- 安装MDK-ARM_AddOn_GD32F1x0-V3.0.0到keil安装目录
+- 安装Keil.GD32F1xx_DFP.1.1.0.pack或者更高版本的pack文件到keil安装目录
+- 安装MDK-ARM_AddOn_GD32F10x-V1.0.0到keil安装目录
 
 **添加代码到LiteOS工程**
+新建GD示例工程代码目录结构如下图
 
-在LiteOS内核代码目录中新建GD32f190R_Library文件夹，将GD示例工程中使用到的代码拷贝到其中。
-![](./meta/keil/gd32f190/add_file_0.png)
+![](./meta/keil/gd32f103/add_file_1.png)
 
-拷贝GD示例工程Library文件夹下的子文件夹到GD32f190R_Library文件夹中。
+将GD示例工程中使用到的代码及LiteOS_Kernel\platform\GD32F190R-EVAL中的代码拷贝到Library文件夹中。
+拷贝完成后的Library文件夹内容如下图
 
-![](./meta/keil/gd32f190/add_file_1.png)
+![](./meta/keil/gd32f103/add_file_2.png)
 
-拷贝GD示例工程04_USART_Printf文件夹下列文件到GD32f190R_Library文件夹中。
+在LiteOS工程添加kernel目录，内核源码位于Huawei_LiteOS\kernel\base目录下，把子目录core、ipc、mem、misc目录下的c文件全部添加进来添加到kernel目录下。
 
-![](./meta/keil/gd32f190/add_file_2.png)
+![](./meta/keil/gd32f103/add_file_8.png)
 
-拷贝完成后的GD32f190R_Library文件夹内容如下图
+在LiteOS工程添加config目录，内核源码位于Huawei_LiteOS\kernel\config目录下，把该目录所有.c文件添加到config目录下。
 
-![](./meta/keil/gd32f190/add_file_3.png)
+![](./meta/keil/gd32f103/add_file_9.png)
 
-GD示例工程代码目录结构
+在LiteOS工程添加cpu目录，内核源码位于Huawei_LiteOS\kernel\cpu\arm\cortex-m3目录下，把该目录所有.c文件添加到cpu目录下。
 
-![](./meta/keil/gd32f190/add_file_4.png)
+![](./meta/keil/gd32f103/add_file_10.png)
 
-在LiteOS工程添加library目录，将GD示例工程中的源代码文件（main.c、startup_gd32f1x0.s文件除外）添加到library文件夹下。
+在LiteOS工程添加cmsis目录，内核源码位于Huawei_LiteOS\kernel\cmsis目录下，把该目录所有.c文件添加到cmsis目录下。
 
-![](./meta/keil/gd32f190/add_file_5.png)
+![](./meta/keil/gd32f103/add_file_11.png)
 
-GD示例工程启动文件startup_gd32f1x0.s
+在LiteOS工程添加platform目录，平台源码位于platform\GD32F103VCT6目录下，把该目录los_bsp_adapter.c,los_bsp_flash.c,los_bsp_key.c,los_bsp_uart.c文件添加到cmsis目录下。
 
-![](./meta/keil/gd32f190/add_file_6.png)
+![](./meta/keil/gd32f103/add_file_12.png)
 
-添加GD示例工程中startup_gd32f1x0.s文件到LiteOS工程startup文件夹下。
+在LiteOS工程添加startup目录，将GD32F103VCT6\platform\GD32F103VCT6\Library\Firmware中的源代码文件startup_gd32f10x_hd.s添加到startup目录下。
 
-![](./meta/keil/gd32f190/add_file_7.png)
+![](./meta/keil/gd32f103/add_file_13.png)
+
+在LiteOS工程添加user目录，将main.c源代码添加到startup目录下。
+
+![](./meta/keil/gd32f103/add_file_14.png)
+
+在LiteOS工程添加library目录，将GD32F103VCT6\platform\GD32F103VCT6\Library\Firmware\Peripherals\inc中的所有.c文件添加到library目录下。
+
+![](./meta/keil/gd32f103/add_file_15.png)
+
+在LiteOS工程添加example目录，将GD32F103VCT6\example\api中的所有.c文件添加到example目录下。
+
+![](./meta/keil/gd32f103/add_file_16.png)
 
 **添加头文件搜索路径**
 
-![](./meta/keil/gd32f190/folder_setup.png)
+![](./meta/keil/gd32f103/folder_setup.png)
 
 **添加编译宏选项**
 
-![](./meta/keil/gd32f190/add_macro.png)
+![](./meta/keil/gd32f103/add_macro.png)
 
 LiteOS可直接使用GD示例工程中的启动文件，这样工程中要使用的中断及中断服务函数就注册好了，不需再使用LiteOS接口进行动态注册。在完成了代码添加及工程配置后，开始修改代码，步骤如下：
 
 - 注释掉gd32f1x0_it.c中的PendSV_Handler()及SysTick_Handler()函数，以免重复定义。
 
-![](./meta/keil/gd32f190/code_shield.png)
+![](./meta/keil/gd32f103/code_shield.png)
 
 - GD工程中SYStemSystemInit函数会调用system_clock_config()函数配置系统时钟，我们需要修改los_bsp_adapter.c文件中的sys_clk_freq变量值与实际配置的系统时钟一致。
 
 	    const unsigned int sys_clk_freq = 72000000;
-
-- 将注释掉的SysTick_Handler()函数中的代码添加到los_bsp_adapter.c文件中的SysTick_Handler()函数。
   
- ![](./meta/keil/gd32f190/add_code.png)
+ ![](./meta/keil/gd32f103/add_code.png)
 
 经过以上步骤的修改，完成了代码的初步移植，然后可以编译代码,连接串口线（事先安装相关驱动）并在串口调试工具中打开相应串口，调试运行时可看到串口打印输出，按demo板上的Tamper键，可以调试按键中断及LED。
 
